@@ -1,0 +1,191 @@
+{
+  "schema_version": "ct12-current-revision-applicability-v2",
+  "captured_at": "2026-08-23T12:05:39.344Z",
+  "product": {
+    "revision": "5a33d28be383b7651a4b0d6156534aa12cc423fa",
+    "tree": "d106d3bb40a84184e7ee26c919134b01e4748679",
+    "parent_product_revision": "e1299af1bd06f7438f5010c6f6c030760c5a1dfb",
+    "loaded_asset": "assets/index-W0ZGkz-8.js"
+  },
+  "delta": {
+    "issue": "CT-124",
+    "files": [
+      "apps/web/src/issues.tsx",
+      "apps/web/src/saved-views.tsx",
+      "apps/web/tests/board-accessibility.test.ts",
+      "apps/web/tests/table-semantics.test.ts"
+    ],
+    "semantic_only": true,
+    "visual_geometry_changed": false,
+    "api_changed": false,
+    "sqlite_changed": false,
+    "schema_changed": false,
+    "owner_scope_changed": false,
+    "transfer_changed": false
+  },
+  "automated": {
+    "focused": {
+      "files": 2,
+      "passed": 13,
+      "failed": 0
+    },
+    "complete": {
+      "files": 73,
+      "passed": 481,
+      "failed": 0
+    },
+    "typecheck_workspaces": 8,
+    "release_audit": {
+      "passed": 10,
+      "failed": 0
+    },
+    "build": {
+      "modules": 1953,
+      "warnings": 0
+    }
+  },
+  "chrome": {
+    "browser": "Chrome",
+    "url": "http://127.0.0.1:4284/",
+    "appearance": "System",
+    "viewport": "1654x875@2x",
+    "issue_board": {
+      "regions": 1,
+      "property_collections": 10,
+      "nested_named_property_groups": 0,
+      "alerts": 0
+    },
+    "saved_views": {
+      "named_action_groups": 1,
+      "redundant_hidden_action_labels": 0,
+      "buttons": [
+        "Edit Release readiness",
+        "Archive Release readiness"
+      ],
+      "alerts": 0
+    },
+    "visual_geometry_findings": 0
+  },
+  "applicability": {
+    "P-T18": "independent corrective-tranche review passed; exact 5a33d28 composite workflow evidence is accepted for the declared local surface",
+    "P-T19": "complete e1299af matrix remains applicable through exact 5a33d28 engine delta; independent corrective-tranche review passed",
+    "P-T20": "the complete e1299af pixel matrix and 53.0ms p75 protected performance are applicable through exact changed-surface deltas and unchanged protected paths; live System Light and Dark directions pass and macOS is restored to Auto/System",
+    "P-T21": "independent exact-current qualification passed for 5a33d28; source, artifact, and clean-runtime receipts are bound"
+  },
+  "exact_accessibility_delta": {
+    "engine": "axe-core 4.12.1",
+    "reference_revision": "e1299af1bd06f7438f5010c6f6c030760c5a1dfb",
+    "states": 6,
+    "surfaces": [
+      "issues-board",
+      "saved-views-library"
+    ],
+    "appearances": [
+      "System",
+      "Light",
+      "Dark"
+    ],
+    "violations": 0,
+    "incomplete": 0,
+    "pass_nodes": 2979,
+    "product_alerts": 0,
+    "tracked_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/accessibility-delta-5a33d28.json",
+    "private_ref": ".control-tower/evidence/CT-12/axe-delta-5a33d28/axe-delta-5a33d28.json",
+    "private_sha256": "812459aa0ded0b3029faf5feb0a734d8788cf19bf261a44463240ea0e8885d99"
+  },
+  "exact_visual_delta": {
+    "reference_revision": "e1299af1bd06f7438f5010c6f6c030760c5a1dfb",
+    "fixture_bytes": 253952,
+    "fixture_sha256": "38a291ebe617adef1f56a021e3ef66a2d3d88c0856e40a13f478241eb0df3a3d",
+    "viewport": "1440x900@1x",
+    "screens": [
+      "issues-board",
+      "saved-views-library"
+    ],
+    "appearances": [
+      "Light",
+      "Dark"
+    ],
+    "pairs": 4,
+    "byte_identical_pairs": 4,
+    "visual_findings": 0,
+    "accepted_alerts": 0,
+    "expected_semantic_delta_observed": true,
+    "tracked_manifest_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/5a33d28/manifest.json",
+    "private_receipt_ref": ".control-tower/evidence/CT-12/delta-5a33d28/receipt.json",
+    "private_receipt_sha256": "4a0807ef4019e31c790760724cee689f26b8d034446f45ba5a3073d46e4760bf"
+  },
+  "runtime_rehearsal": {
+    "verdict": "PASSED_INDEPENDENT_EXACT_REVISION_5A33D28",
+    "independent": true,
+    "structured_checks_passed": 21,
+    "runner_contract_tests_passed": 4,
+    "guarded_phases": 6,
+    "network_audit_records": 11,
+    "outbound_or_subprocess_attempts": 0,
+    "artifact": {
+      "files": 111,
+      "bytes": 2053719,
+      "sha256": "858750ef2bce49e39a028419a23646200207f58fd5394a20f812c207889c1e7c"
+    },
+    "evidence_ref": ".control-tower/evidence/CT-82/qualification-5a33d28.json",
+    "actor": "codex-independent-testing-ct82-5a33d28",
+    "session": "CT82-INDEPENDENT-20260823T114800Z",
+    "evidence_sha256": "7d392f18bf3e5933a954334bf83e452907d41a2889ed87ef842790bbcee00f16",
+    "source_sha256": "456fc149dffc711e87f372f2f71af937e6a3ba4db984201af84000e2cb659c2a"
+  },
+  "open_reviews": [],
+  "live_system": {
+    "status": "passed",
+    "evidence_ref": ".control-tower/evidence/CT-12/system-appearance-5a33d28.json",
+    "evidence_sha256": "8b5100e77ecffb93fcff10e235cc9a52fbcfd37210235d7fdd13ddaf2e0acc03",
+    "light_alerts": 0,
+    "dark_alerts": 0,
+    "restored_to_system": true
+  },
+  "ct82": "Done@19",
+  "ct12_task_reconciliation": {
+    "authority": "project-local-v0.8",
+    "action": "issue-update",
+    "expected_revision": 98,
+    "readback_revision": 99,
+    "readback_status": "Done",
+    "evidence_commit": "5a33d28",
+    "backup_ref": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-23T12-01-26-669Z-885cca3f-fe87-4575-9f0b-be5ab9886415.json",
+    "backup_bytes": 494472,
+    "backup_package_sha256": "c7428cc6a001c6c4b179e0bf8147c46e981d1c031a60d522e64531ed6e31e23f",
+    "backup_file_sha256": "130adf44ae08e81bb66d0b43df92e29994899b54cbd7e323689cf4dd0f28ec9a",
+    "backup_mode": "0600",
+    "provider_projection": "disabled",
+    "projection_state": "not_synced",
+    "counts": {
+      "active": 4,
+      "completed": 120,
+      "trash": 0
+    },
+    "raw_readback_ref": ".control-tower/evidence/CT-12/task-reconciliation-done-5a33d28.json",
+    "raw_readback_bytes": 524330,
+    "raw_readback_mode": "0600",
+    "raw_readback_sha256": "039db0f209998d0b90f57ceb32006e06c4c39805540cbfdc03ffea561f0fcf57"
+  },
+  "ct12_acceptance_claimed": true,
+  "release_claimed": false,
+  "outcomes_claimed": [],
+  "independent_review": {
+    "status": "accepted",
+    "independent": true,
+    "authorized_by": "ct82-independent-test-authority",
+    "scope": "CT-117 through CT-124 corrective-tranche review plus P-T21 exact 5a33d28 local runtime qualification",
+    "required_product_revision": "5a33d28be383b7651a4b0d6156534aa12cc423fa",
+    "required_product_tree": "d106d3bb40a84184e7ee26c919134b01e4748679",
+    "closeout_actor": "codex-independent-closeout-review-ct117-124",
+    "closeout_session": "CT117-124-INDEPENDENT-20260823T113057Z",
+    "closeout_evidence_ref": ".control-tower/evidence/CT-124/independent-closeout-review-5a33d28.json",
+    "closeout_evidence_sha256": "5aa09f82fcd11a47206df1f56687323495dcfaf381e12b12ff14ca13fb0edca8",
+    "runtime_actor": "codex-independent-testing-ct82-5a33d28",
+    "runtime_session": "CT82-INDEPENDENT-20260823T114800Z",
+    "runtime_evidence_ref": ".control-tower/evidence/CT-82/qualification-5a33d28.json",
+    "runtime_evidence_sha256": "7d392f18bf3e5933a954334bf83e452907d41a2889ed87ef842790bbcee00f16",
+    "self_acceptance": false
+  }
+}

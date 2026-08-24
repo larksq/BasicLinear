@@ -1,0 +1,53 @@
+{
+  "schema_version": "ct61-browser-status-v1",
+  "recorded_at": "2026-08-20T17:48:09Z",
+  "status": "deferred_permission_denied",
+  "planned_targets": {
+    "status_grouped": "http://127.0.0.1:4186/?workspace=20000000-0000-4000-8000-000000000023&view=issues&fixture=issue-view&layout=list&group=status&properties=priority,assignee,milestone,dueDate&collapsed=status:40000000-0000-4000-8000-000000000023",
+    "priority_grouped": "http://127.0.0.1:4186/?workspace=20000000-0000-4000-8000-000000000023&view=issues&fixture=issue-view&layout=list&group=priority&properties=priority,project,milestone&collapsed=priority:medium",
+    "assignee_grouped": "http://127.0.0.1:4186/?workspace=20000000-0000-4000-8000-000000000023&view=issues&fixture=issue-view&layout=list&group=assignee&properties=assignee,project,dueDate&collapsed=assignee:10000000-0000-4000-8000-000000000023",
+    "milestone_grouped": "http://127.0.0.1:4186/?workspace=20000000-0000-4000-8000-000000000023&view=issues&fixture=issue-view&layout=board&group=milestone&properties=priority,milestone,dueDate&collapsed=milestone:52000000-0000-4000-8000-000000000023",
+    "minimal_properties": "http://127.0.0.1:4186/?workspace=20000000-0000-4000-8000-000000000023&view=issues&fixture=issue-view&layout=list&group=none&properties=none",
+    "invalid_state": "http://127.0.0.1:4186/?workspace=20000000-0000-4000-8000-000000000023&view=issues&fixture=issue-view&layout=list&group=status&properties=priority,owner&collapsed=priority:high"
+  },
+  "synthetic_fixture": true,
+  "fixture_process": {
+    "port": 4186,
+    "build": "production",
+    "managed_session": 68382,
+    "initial_sandbox_launch": "failed_listen_eperm",
+    "managed_launch": "passed"
+  },
+  "host_attempts": [
+    {
+      "attempt": 1,
+      "status": "passed_host_network",
+      "checks_attempted": 6,
+      "checks_passed": 6,
+      "observations": {
+        "application_html_status": 200,
+        "session_status": 200,
+        "team_count": 2,
+        "issue_count": 3,
+        "product_quality_issue_count": 2,
+        "engineering_systems_issue_count": 1
+      }
+    }
+  ],
+  "browser_attempted": false,
+  "browser_captures": 0,
+  "rendered_assertions": 0,
+  "policy_reason": "The active security policy denies the approved browser surface. Alternate browser surfaces were not used.",
+  "acceptance_pending": [
+    "desktop tablet and mobile grouped Issues rendering",
+    "property and collapse controls with URL reload history and saved-view restoration",
+    "none status priority assignee project and milestone grouping",
+    "collapse and expand semantics counts and focus recovery",
+    "all and minimal property header data and loading alignment",
+    "workspace team search filter archive order and density composition",
+    "row keyboard selection context menu and direct-detail boundaries",
+    "horizontal data-region reachability without page overflow",
+    "owner member and guest capability presentation",
+    "empty loading offline error duplicate-ID and console checks"
+  ]
+}

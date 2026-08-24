@@ -1,0 +1,44 @@
+{
+  "schema_version": "ct99-implementation-result-v1",
+  "captured_at": "2026-08-22T03:29:40Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING",
+  "issue": {
+    "identifier": "CT-99",
+    "id": "fb12f4b7-7cf6-4390-93c4-60cd96a90fa9",
+    "created_revision": 1,
+    "implementation_scope_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "resolution": {
+    "document_content_width_px": 920,
+    "page_title_size_px": 20,
+    "project_title_size_px": 24,
+    "accepted_ux_values_bound": true,
+    "overview_only_width_cap": true,
+    "work_views_remain_fluid": true,
+    "responsive_heading_override_remaining": false,
+    "application_backdrop_filter_remaining": false,
+    "dialog_dimming_changed": false,
+    "api_database_schema_or_transfer_changed": false
+  },
+  "checks": {
+    "focused_test_files": 3,
+    "focused_tests_passed": 14,
+    "complete_test_files": 66,
+    "complete_tests_passed": 440,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1948,
+    "dist_files": 105,
+    "dist_bytes": 1890845,
+    "build_warnings": 0,
+    "release_audit_tests_passed": 6,
+    "release_audit_tests_failed": 0,
+    "loopback_readiness": "ready",
+    "served_candidate_current": true,
+    "rendered_browser_captures": 0
+  },
+  "browser_acceptance_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

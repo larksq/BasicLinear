@@ -1,0 +1,93 @@
+{
+  "schema_version": "ct20-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "passed",
+  "operating_profile": "project-local-v0.8",
+  "authority": {"task_store":".control-tower/tasks-v0.8.sqlite3","provider_projection":"disabled","linear_used":false},
+  "issues": [{
+    "issue_id":"CT-20",
+    "stable_id":"00e7a13b-f2cf-4a37-b975-3d6c053c7814",
+    "revision":2,
+    "accepted":true,
+    "blocked":false,
+    "status":"output_done",
+    "requirement_refs":["R-010","R-104","R-110"],
+    "acceptance_refs":["R-010","R-104","R-110"],
+    "outcome_refs":["O-002","O-003"],
+    "allowed_mutation_paths":["apps/web/src/App.tsx","apps/web/src/styles.css","docs/product/versions/v0.1.0/30-implementation/CT-20"]
+  }],
+  "sessions": [
+    {
+      "session_id":"CT20-IMPL-20260819T230517Z",
+      "actor_id":"codex-mobile-accessibility-remediation",
+      "issue_id":"CT-20",
+      "mode":"code_mutating",
+      "allowed_paths":["apps/web/src/App.tsx","apps/web/src/styles.css"],
+      "output_refs":["apps/web/src/App.tsx","apps/web/src/styles.css"],
+      "validation_refs":["docs/product/versions/v0.1.0/30-implementation/CT-20/result.json","docs/product/versions/v0.1.0/30-implementation/CT-20/evidence.md"]
+    },
+    {
+      "session_id":"CT20-REVIEW-20260819T230813Z",
+      "actor_id":"mobile-accessibility-reviewer",
+      "issue_id":"CT-20",
+      "mode":"review_only",
+      "allowed_paths":["docs/product/versions/v0.1.0/30-implementation/CT-20"],
+      "output_refs":[
+        "docs/product/versions/v0.1.0/30-implementation/CT-20/changed-files.txt",
+        "docs/product/versions/v0.1.0/30-implementation/CT-20/evidence.md",
+        "docs/product/versions/v0.1.0/30-implementation/CT-20/evidence/mobile-navigation-closed-390x844.jpg",
+        "docs/product/versions/v0.1.0/30-implementation/CT-20/evidence/mobile-navigation-open-390x844.jpg",
+        "docs/product/versions/v0.1.0/30-implementation/CT-20/handoff.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-20/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-20/session.md"
+      ],
+      "validation_refs":["docs/product/versions/v0.1.0/30-implementation/CT-20/result.json","docs/product/versions/v0.1.0/30-implementation/CT-20/evidence.md"]
+    }
+  ],
+  "changed_files": [
+    {"path":"apps/web/src/App.tsx","issue_id":"CT-20","mutation_type":"code","ai_session_id":"CT20-IMPL-20260819T230517Z","risk_level":"high","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-20/evidence.md#verification","test_refs":["CT20-MOBILE","CT20-REGRESSION"]},
+    {"path":"apps/web/src/styles.css","issue_id":"CT-20","mutation_type":"code","ai_session_id":"CT20-IMPL-20260819T230517Z","risk_level":"high","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-20/evidence.md#verification","test_refs":["CT20-MOBILE","CT20-DESKTOP","CT20-REGRESSION"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-20/changed-files.txt","issue_id":"CT-20","mutation_type":"docs","ai_session_id":"CT20-REVIEW-20260819T230813Z","risk_level":"low","test_refs":["CT20-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-20/evidence.md","issue_id":"CT-20","mutation_type":"docs","ai_session_id":"CT20-REVIEW-20260819T230813Z","risk_level":"low","test_refs":["CT20-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-20/evidence/mobile-navigation-closed-390x844.jpg","issue_id":"CT-20","mutation_type":"artifact","ai_session_id":"CT20-REVIEW-20260819T230813Z","risk_level":"low","test_refs":["CT20-MOBILE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-20/evidence/mobile-navigation-open-390x844.jpg","issue_id":"CT-20","mutation_type":"artifact","ai_session_id":"CT20-REVIEW-20260819T230813Z","risk_level":"low","test_refs":["CT20-MOBILE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-20/handoff.json","issue_id":"CT-20","mutation_type":"docs","ai_session_id":"CT20-REVIEW-20260819T230813Z","risk_level":"low","test_refs":["CT20-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-20/result.json","issue_id":"CT-20","mutation_type":"docs","ai_session_id":"CT20-REVIEW-20260819T230813Z","risk_level":"low","test_refs":["CT20-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-20/session.md","issue_id":"CT-20","mutation_type":"docs","ai_session_id":"CT20-REVIEW-20260819T230813Z","risk_level":"low","test_refs":["CT20-EVIDENCE"]}
+  ],
+  "checks": [
+    {"check_id":"CT20-MOBILE","issue_id":"CT-20","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-20/evidence.md"},
+    {"check_id":"CT20-DESKTOP","issue_id":"CT-20","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-20/result.json"},
+    {"check_id":"CT20-REGRESSION","issue_id":"CT-20","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-20/result.json"},
+    {"check_id":"CT20-EVIDENCE","issue_id":"CT-20","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-20/evidence.md"}
+  ],
+  "reviews": [{
+    "issue_id":"CT-20",
+    "status":"passed",
+    "independent":true,
+    "review_actor_id":"mobile-accessibility-reviewer",
+    "review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-20/evidence.md#verification",
+    "basis":"The deployed browser independently exercised closed and open accessibility state, Escape, keyboard and pointer closure, focus restoration, 390px geometry, desktop geometry, screenshots, and diagnostic delta after mutation checks completed."
+  }],
+  "testing_handoff": {
+    "acceptance_refs":["R-010","R-104","R-110"],
+    "changed_file_refs":[
+      "apps/web/src/App.tsx",
+      "apps/web/src/styles.css",
+      "docs/product/versions/v0.1.0/30-implementation/CT-20/changed-files.txt",
+      "docs/product/versions/v0.1.0/30-implementation/CT-20/evidence.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-20/evidence/mobile-navigation-closed-390x844.jpg",
+      "docs/product/versions/v0.1.0/30-implementation/CT-20/evidence/mobile-navigation-open-390x844.jpg",
+      "docs/product/versions/v0.1.0/30-implementation/CT-20/handoff.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-20/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-20/session.md"
+    ],
+    "regression_areas":["closed mobile focus order","mobile accessibility tree","mobile menu open and closure","focus recovery","desktop sidebar","responsive overflow"],
+    "evidence_refs":["docs/product/versions/v0.1.0/30-implementation/CT-20/result.json","docs/product/versions/v0.1.0/30-implementation/CT-20/evidence.md","docs/product/versions/v0.1.0/30-implementation/CT-20/evidence/mobile-navigation-closed-390x844.jpg","docs/product/versions/v0.1.0/30-implementation/CT-20/evidence/mobile-navigation-open-390x844.jpg"],
+    "implementation_actor_ids":["codex-mobile-accessibility-remediation","mobile-accessibility-reviewer"],
+    "implementation_session_ids":["CT20-IMPL-20260819T230517Z","CT20-REVIEW-20260819T230813Z"]
+  },
+  "outcomes":[{"outcome_id":"O-002","status":"pending"},{"outcome_id":"O-003","status":"pending"}],
+  "blockers":[],
+  "next":{"skill":"ct-test-sprint","issues":["CT-12"],"reason":"Return CT-20 to the independent responsive and assistive-technology acceptance session that found the hidden-focus defect."}
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "ct86-audit-summary-v1",
+  "captured_at": "2026-08-21T08:27:29Z",
+  "verdict": "NOT_READY",
+  "summary": {
+    "pass": 5,
+    "fail": 3,
+    "blocked": 6
+  },
+  "checks": {
+    "source_revision": "BLOCKED",
+    "public_identity_decision": "BLOCKED",
+    "working_codename_removal": "BLOCKED",
+    "project_license": "BLOCKED",
+    "dependency_metadata_inventory": "PASS",
+    "third_party_notices": "FAIL",
+    "private_path_controls": "PASS",
+    "private_artifact_scan": "PASS",
+    "asset_provenance": "FAIL",
+    "copy_provenance": "FAIL",
+    "contribution_and_security_policy": "PASS",
+    "reproducible_build_inputs": "PASS",
+    "clean_host_network_denied_runtime": "BLOCKED",
+    "accountable_release_review": "BLOCKED"
+  },
+  "reproducible_build_inputs": {
+    "manifest": "ops/release/reproducible-build.json",
+    "status": "inputs_pinned_revision_pending",
+    "mismatches": []
+  },
+  "expected_process_exit": 1,
+  "release_claimed": false
+}

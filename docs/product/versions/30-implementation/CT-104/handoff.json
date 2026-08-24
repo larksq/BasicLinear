@@ -1,0 +1,33 @@
+{
+  "schema_version": "ct104-implementation-handoff-v1",
+  "stage": "implementation.testing-handoff",
+  "status": "implementation_complete_browser_evidence_recorded",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issue": {
+    "identifier": "CT-104",
+    "stable_id": "12f9f96d-3b45-4c44-9566-53816f4a43b7",
+    "created_revision": 1,
+    "completion_revision": 2
+  },
+  "source": {
+    "revision": "6d2f330e15cc714b2e131d0fd693bc1d4cdcff78",
+    "tree": "46e18c123fb4f20786e014165e726d6d338df506"
+  },
+  "changed_files_ref": "docs/product/versions/v0.1.0/30-implementation/CT-104/changed-files.txt",
+  "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-104/evidence/verification-summary.json",
+  "next": {
+    "skill": "ct-test-sprint",
+    "issue": "CT-12",
+    "scope": "continue the unfinished P-T18, P-T19, and P-T20 matrices; treat the four CT-104 Chrome captures as bounded current-build issue-detail evidence only"
+  },
+  "blockers": [
+    "The complete integrated workflow, accessibility, responsive, golden, and performance matrices remain unfinished.",
+    "CT-3 public identity and qualified clean-room review remains open.",
+    "CT-13 accountable release acceptance remains open."
+  ],
+  "outcomes_claimed": []
+}

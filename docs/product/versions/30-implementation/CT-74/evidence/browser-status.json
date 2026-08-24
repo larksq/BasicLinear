@@ -1,0 +1,73 @@
+{
+  "schema_version": "ct74-browser-status-v1",
+  "recorded_at": "2026-08-21T02:00:02Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4200/?workspace=20000000-0000-4000-8000-000000000023&view=workflow&fixture=workflow-status-reorder",
+  "synthetic_fixture": true,
+  "fixture_process": {
+    "port": 4200,
+    "build": "production",
+    "managed_session": 16349,
+    "initial_sandbox_launch": "failed_listen_eperm",
+    "managed_launch": "passed_clean_fixture_restart"
+  },
+  "host_attempts": [
+    {
+      "attempt": 1,
+      "status": "rejected_harness_envelope_assumption",
+      "checks_attempted": 0,
+      "checks_passed": 0
+    },
+    {
+      "attempt": 2,
+      "status": "rejected_incomplete_matrix",
+      "checks_attempted": 43,
+      "checks_passed": 43,
+      "reason": "Unique-ID assertions were absent and a synthetic fixture collision was subsequently corrected."
+    },
+    {
+      "attempt": 3,
+      "status": "passed_clean_host_network",
+      "checks_attempted": 45,
+      "checks_passed": 45
+    },
+    {
+      "attempt": 4,
+      "status": "rejected_nonclean_fixture_precondition",
+      "checks_attempted": 33,
+      "checks_passed": 33,
+      "reason": "The already-mutated long-lived fixture correctly rejected a semantic no-op before the remaining checks."
+    },
+    {
+      "attempt": 5,
+      "status": "passed_clean_host_network_after_restart",
+      "port": 4200,
+      "checks_attempted": 45,
+      "checks_passed": 45,
+      "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-74/evidence/host-matrix.json"
+    }
+  ],
+  "browser_attempted": false,
+  "browser_captures": 0,
+  "rendered_assertions": 0,
+  "policy_reason": "The active security policy denies the approved browser surface. Alternate browser surfaces were not used.",
+  "required_viewports": [
+    { "width": 1440, "height": 900 },
+    { "width": 1024, "height": 768 },
+    { "width": 390, "height": 844 }
+  ],
+  "required_assertions": [
+    "owner and admin reorder controls match their capabilities while member and guest surfaces remain read-only",
+    "mouse touch and pen pickup respect the six-pixel threshold and pointer capture",
+    "before and after targets produce the announced order without transient layout shift",
+    "first middle last and adjacent moves honor boundaries and semantic no-op behavior",
+    "pointer cancellation and capture loss preserve the confirmed order and restore focus",
+    "opening baselines do not silently rebase after background query changes",
+    "stale malformed missing-scope and unavailable-readback failures preserve confirmed order and recovery context",
+    "create edit and reorder interactions serialize",
+    "Move up and Move down controls provide complete keyboard parity and boundary disabling",
+    "pending conflict cancel commit and readback announcements are accurate",
+    "success cancellation rejection and recovery restore focus to the moved row or recovery control",
+    "long names and ordered-row controls remain contained with zero overlap clipped focus page-level positive overflow duplicate IDs console warnings and console errors"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "ct116-verification-summary-v1",
+  "captured_at": "2026-08-22T19:10:35Z",
+  "issue": "CT-116",
+  "source": {
+    "revision": "f7c362562fdf0657114a862331b893e470b824c0",
+    "tree": "7b5f5af4d6f0b5ead0f403f69d4695b82779194c",
+    "parent_revision": "7a55d5c60bde8bf23d83fb12a470a98c996fa517",
+    "changed_file_count": 8,
+    "changed_file_manifest_sha256": "1bb4ad20abcff23d1104fb3903528811d99337b86102e7f3896558766c6e001d"
+  },
+  "resolution": {
+    "shared_buffered_native_date_input": true,
+    "surfaces": ["issue_due_date", "project_start", "project_target", "milestone_target"],
+    "focused_dirty_segments_preserved": true,
+    "safe_authority_sync": true,
+    "valid_or_clear_commit_on_blur": true,
+    "invalid_or_stale_restore": true,
+    "escape_restore": true,
+    "enter_routes_through_blur": true,
+    "api_schema_scope_or_transfer_changed": false
+  },
+  "checks": {
+    "implementation_focused": {"files": 4, "passed": 35, "failed": 0},
+    "independent_focused": {"files": 5, "passed": 42, "failed": 0},
+    "complete": {"files": 72, "passed": 475, "failed": 0},
+    "typecheck_workspaces": 8,
+    "release_audit": {"passed": 10, "failed": 0},
+    "build": {"modules": 1952, "warnings": 0},
+    "git_diff_check": "passed",
+    "independent_application_review": "passed"
+  },
+  "chrome": {
+    "family": "Chrome",
+    "major_version": 151,
+    "viewport": {"width": 1440, "height": 900, "device_pixel_ratio": 1},
+    "appearance": "Light",
+    "bounded_checks_passed": 10,
+    "bounded_checks_failed": 0,
+    "independent_from_implementation": false,
+    "tracked_capture": {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/project-milestone-restart-readback-1440x900.jpg",
+      "media_type": "image/jpeg",
+      "bytes": 71715,
+      "sha256": "af6b63319d604955d0b382561908f015178f854ff80acd6760f6fa0478356c9d"
+    },
+    "raw_receipt": {
+      "path": ".control-tower/evidence/CT-116/browser-uat-f7c3625.json",
+      "mode": "0600",
+      "sha256": "a70dafd294c6e1dee1577f24938f794be9cd18cc3e41667c4b9d26bb90121721"
+    }
+  },
+  "browser_acceptance_claimed": false,
+  "p_t21_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

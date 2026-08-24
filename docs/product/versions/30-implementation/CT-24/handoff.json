@@ -1,0 +1,112 @@
+{
+  "schema_version": "ct24-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "passed",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-24",
+      "stable_id": "3a9b2a07-82bf-4fba-a873-86065f6b299e",
+      "revision": 2,
+      "accepted": true,
+      "blocked": false,
+      "status": "output_done",
+      "requirement_refs": ["R-010", "R-011", "R-104", "R-110"],
+      "acceptance_refs": ["R-010", "R-011", "R-104", "R-110"],
+      "outcome_refs": ["O-001", "O-002", "O-003"],
+      "allowed_mutation_paths": [
+        "apps/web/src/App.tsx",
+        "apps/web/src/layout-preferences.ts",
+        "apps/web/src/styles.css",
+        "apps/web/tests/layout-contract.test.ts",
+        "apps/web/tests/layout-preferences.test.ts",
+        "docs/product/versions/v0.1.0/30-implementation/CT-24"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT24-IMPL-20260820T012837Z",
+      "actor_id": "codex-tablet-navigation",
+      "issue_id": "CT-24",
+      "mode": "code_mutating",
+      "output_refs": [
+        "apps/web/src/App.tsx",
+        "apps/web/src/layout-preferences.ts",
+        "apps/web/src/styles.css",
+        "apps/web/tests/layout-contract.test.ts",
+        "apps/web/tests/layout-preferences.test.ts"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-24/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence.md"
+      ]
+    },
+    {
+      "session_id": "CT24-REVIEW-20260820T013510Z",
+      "actor_id": "codex-tablet-navigation-reviewer",
+      "issue_id": "CT-24",
+      "mode": "review_only",
+      "output_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-24/changed-files.txt",
+        "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence.md",
+        "docs/product/versions/v0.1.0/30-implementation/CT-24/handoff.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-24/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-24/session.md"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-24/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence.md"
+      ]
+    }
+  ],
+  "checks": [
+    {"check_id":"CT24-FOCUSED","issue_id":"CT-24","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-24/result.json"},
+    {"check_id":"CT24-BROWSER","issue_id":"CT-24","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-24/evidence.md"},
+    {"check_id":"CT24-REGRESSION","issue_id":"CT-24","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-24/result.json"},
+    {"check_id":"CT24-EVIDENCE","issue_id":"CT-24","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-24/evidence.md"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-24",
+      "status": "passed",
+      "independent": true,
+      "review_actor_id": "codex-tablet-navigation-reviewer",
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence.md#verification",
+      "basis": "A separate review-only pass inspected the affected state, CSS, and tests, then repeated exact breakpoint, persistence, live resize, visibility, screenshot, and console checks against the rebuilt production bundle."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["R-010", "R-011", "R-104", "R-110"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-24/changed-files.txt",
+    "regression_areas": [
+      "desktop and tablet workspace navigation",
+      "mobile navigation drawer visibility and focus",
+      "responsive issue-detail overlays",
+      "rail preference persistence",
+      "live viewport transitions"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-24/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence.md"
+    ],
+    "implementation_actor_ids": ["codex-tablet-navigation", "codex-tablet-navigation-reviewer"],
+    "implementation_session_ids": ["CT24-IMPL-20260820T012837Z", "CT24-REVIEW-20260820T013510Z"]
+  },
+  "outcomes": [
+    {"outcome_id":"O-001","status":"pending"},
+    {"outcome_id":"O-002","status":"pending"},
+    {"outcome_id":"O-003","status":"pending"}
+  ],
+  "blockers": [],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issues": ["CT-12"],
+    "reason": "Attach the responsive navigation addendum while retaining the separate CT-21/P-T21 clean-host blocker."
+  }
+}

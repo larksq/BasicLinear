@@ -1,0 +1,121 @@
+{
+  "schema_version": "ct49-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-49",
+      "stable_id": "4ff15472-ea6e-4ef8-acc8-9eda80e9c0b2",
+      "revision": 5,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_browser_verification",
+      "requirement_refs": ["R-002", "R-003", "R-004", "R-005", "R-008", "R-012", "R-101", "R-104", "R-110"],
+      "acceptance_refs": ["P-T04", "P-T06", "P-T07", "P-T09", "P-T11", "P-T13", "P-T16", "P-T18", "P-T19"],
+      "outcome_refs": ["O-001", "O-002", "O-003", "O-004"],
+      "allowed_mutation_paths": [
+        "packages/domain/src/index.ts",
+        "packages/domain/tests/domain.test.ts",
+        "apps/web/src/App.tsx",
+        "apps/web/src/projects.tsx",
+        "apps/web/src/issues.tsx",
+        "apps/web/tests/global-shortcuts.test.ts",
+        "apps/web/tests/local-keyboard-actions.test.ts",
+        "apps/web/tests/project-row-interactions.test.ts",
+        "apps/web/tests/table-semantics.test.ts",
+        "apps/web/tests/workspace-capabilities.test.ts",
+        "scripts/serve-visual-fixture.mjs",
+        "docs/product/versions/v0.1.0/30-implementation/CT-49",
+        "docs/product/versions/v0.1.0/30-implementation/CT-12",
+        "docs/product/versions/v0.1.0/30-implementation/CT-13",
+        "ops/release/current-candidate.json",
+        "ops/release/current-candidate-source-manifest.json"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT49-IMPL-20260820T104422Z",
+      "actor_id": "codex-workspace-capabilities",
+      "issue_id": "CT-49",
+      "mode": "code_mutating",
+      "output_refs": [
+        "packages/domain/src/index.ts",
+        "apps/web/src/App.tsx",
+        "apps/web/src/projects.tsx",
+        "apps/web/src/issues.tsx",
+        "apps/web/tests/workspace-capabilities.test.ts",
+        "scripts/serve-visual-fixture.mjs"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-49/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-49/evidence.md"
+      ]
+    }
+  ],
+  "checks": [
+    {"check_id": "CT49-CAPABILITY-CONTRACT", "issue_id": "CT-49", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-49/result.json"},
+    {"check_id": "CT49-REGRESSION", "issue_id": "CT-49", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-49/result.json"},
+    {"check_id": "CT49-TYPECHECK", "issue_id": "CT-49", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-49/result.json"},
+    {"check_id": "CT49-BUILD", "issue_id": "CT-49", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-49/result.json"},
+    {"check_id": "CT49-FIXTURE-HOST", "issue_id": "CT-49", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-49/evidence/browser-status.json"},
+    {"check_id": "CT49-DATABASE-RUNNER", "issue_id": "CT-49", "status": "skipped", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-49/evidence.md#automated-verification"},
+    {"check_id": "CT49-BROWSER", "issue_id": "CT-49", "status": "blocked", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-49/evidence/browser-status.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-49",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-49/evidence.md",
+      "basis": "Focused and complete regression, typecheck, production build, capability source review, keyboard and stale-state corrections, and owner/guest fixture host checks pass. Rendered desktop, tablet, and mobile verification remains unexecuted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["P-T04", "P-T06", "P-T07", "P-T09", "P-T11", "P-T13", "P-T16", "P-T18", "P-T19"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-49/changed-files.txt",
+    "regression_areas": [
+      "workspace team membership and status administration",
+      "project and milestone mutation controls context menus selection and bulk actions",
+      "issue title description properties relations resources comments archive and purge",
+      "label and saved-view ownership mutations",
+      "global issue-create shortcut and command-palette keyboard traversal",
+      "workspace and role transitions with open dialogs or pending drafts",
+      "owner admin member and guest role matrix",
+      "desktop tablet and mobile focus geometry and accessibility"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-49/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-49/evidence.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-49/evidence/browser-status.json"
+    ],
+    "implementation_actor_ids": ["codex-workspace-capabilities"],
+    "implementation_session_ids": ["CT49-IMPL-20260820T104422Z"]
+  },
+  "outcomes": [
+    {"outcome_id": "O-001", "status": "pending"},
+    {"outcome_id": "O-002", "status": "pending"},
+    {"outcome_id": "O-003", "status": "pending"},
+    {"outcome_id": "O-004", "status": "pending"}
+  ],
+  "blockers": [
+    {
+      "id": "CT49-BROWSER-PERMISSION",
+      "description": "The approved local browser surface is unavailable under the active security policy; final owner/guest desktop, tablet, and mobile capability, keyboard, accessibility, and responsive geometry verification remains required."
+    }
+  ],
+  "environment_notes": [
+    "The PostgreSQL integration runner skipped seven files and 17 tests because TEST_MIGRATION_DATABASE_URL and TEST_APP_PASSWORD are absent. CT-49 changes no persistence schema or service authorization path."
+  ],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issues": ["CT-49"],
+    "reason": "Run the bounded owner/admin/member/guest desktop, tablet, and mobile capability matrix when the approved browser surface is available."
+  }
+}

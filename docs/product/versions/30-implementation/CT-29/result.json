@@ -1,0 +1,56 @@
+{
+  "schema_version": "ct29-implementation-result-v1",
+  "captured_at": "2026-08-20T03:40:30Z",
+  "verdict": "OUTPUT_DONE_FOR_CT12",
+  "issue": {
+    "identifier": "CT-29",
+    "id": "d40b4fc5-45b8-4aad-8563-7de227c50120",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "checks": {
+    "focused_test_files": 2,
+    "focused_tests_passed": 22,
+    "complete_test_files": 12,
+    "complete_tests_passed": 67,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1916,
+    "css_bytes": 63366,
+    "projects_chunk_bytes": 28638,
+    "index_chunk_bytes": 276199,
+    "issues_chunk_bytes": 490607,
+    "fixture_syntax_passed": true,
+    "remaining_read_spinner_matches": 0,
+    "browser_captures": 10,
+    "named_busy_statuses_observed": 14,
+    "focusable_skeleton_nodes": 0,
+    "positive_horizontal_overflow_px": 0,
+    "duplicate_ids": 0,
+    "fresh_bundle_console_warnings": 0,
+    "fresh_bundle_console_errors": 0
+  },
+  "source_hashes": {
+    "apps/web/src/components.tsx": "7baa8c1d2c6b36e8442068d558d8206ec7b087e36835b3df80fa8c27a06e957e",
+    "apps/web/src/App.tsx": "252599fe08d07da30e64c2737f2c4b8a0a74a9f01e1fefa3fce6d8f8a6a4bec7",
+    "apps/web/src/projects.tsx": "7df9666192bfdc3439487f56b38827b6b2c3248da46f2e72981a576d2d8fb417",
+    "apps/web/src/issues.tsx": "4e2b03f18850ffd15f97e6fd6a75fcc728f61496b003641f2b2e4663523494bc",
+    "apps/web/src/styles.css": "309ef06b27f57075ccfc187d328fce073099c1737b48b7ff1bb44a8311837ac3",
+    "apps/web/tests/loading-skeleton.test.ts": "338266d7d5385e14be65164724ac56fdf3d8bef99698af0ff6ebd43ad77d88b7",
+    "apps/web/tests/layout-contract.test.ts": "74163b710c355ac98078b00a9f6fb1aec519edebd0e1ecf045736d74218378f4",
+    "scripts/serve-visual-fixture.mjs": "b055451b4d386040562358adad15894928e8490b77485947abd38cdb54ff3c84"
+  },
+  "screenshot_hashes": {
+    "ct29-issue-sections-loading-desktop-1440x900.png": "993f534f47ea6277a8d29afd0991d518949de1c9508294c9fabb049c30003bbe",
+    "ct29-issue-sections-loading-mobile-390x844.png": "b1e0c59da94c009e19a72bd75dc8c5b65acf54774df95500e532f27159fcc136",
+    "ct29-milestones-loading-desktop-1440x900.png": "b9292f6d8c1a24535ae2569fb237ee7cdd0905f50ebee151fe6d8e3c1924e3d2",
+    "ct29-project-activity-loading-desktop-1440x900.png": "705c0f6cda2a95b99fd378efe1270505646052d9ae1e2ceb2d5e4319f1328071",
+    "ct29-project-detail-loading-desktop-1440x900.png": "376d120419843927d915e52ce9a6888645ca076be0ab0b642e5d4c0d2e9096d6",
+    "ct29-project-detail-loading-mobile-390x844.png": "c12402f2bf009cfe03a78de4fd846ee65a7648cd414ef5ce0f98e9d224e9772f",
+    "ct29-teams-loading-mobile-390x844.png": "155155372aabcd25ffa9024e56f4793e91b8cf2ad5a140cfe712f002e3cc6595",
+    "ct29-workflow-loading-desktop-1440x900.png": "fc163e91d27c1daa22fb772e6633f8a0e086d6616f367f0f599e027b832cd0ce",
+    "ct29-workflow-loading-mobile-390x844.png": "f79df60bc5126e63ed7831763d1da8e457a3ddc494fdd6f9ee07dc3ef8370548",
+    "ct29-workspace-loading-desktop-1440x900.png": "8b9a18413162590dca02ec76f0a2216af2630c04ce1fb9f95707c3ebd6f11863"
+  },
+  "outcomes_claimed": []
+}

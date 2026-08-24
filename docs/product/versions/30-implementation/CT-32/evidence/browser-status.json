@@ -1,0 +1,24 @@
+{
+  "schema_version": "ct32-browser-status-v1",
+  "recorded_at": "2026-08-20T04:27:18Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4180/",
+  "synthetic_fixture": true,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "Access to the local browser surface was denied by the active security policy before CT-32 implementation. The denied browser outcome was not retried through another surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 390, "height": 844}
+  ],
+  "required_assertions": [
+    "one named Search dialog and one expanded combobox",
+    "aria-controls resolves to the listbox",
+    "aria-activedescendant resolves to the selected option after Arrow Up and Arrow Down",
+    "Enter and pointer activation preserve existing command routing",
+    "active option scrolls into view for long results",
+    "focus remains on the combobox input during keyboard navigation",
+    "zero positive horizontal overflow and zero duplicate IDs",
+    "zero console warnings and errors"
+  ]
+}

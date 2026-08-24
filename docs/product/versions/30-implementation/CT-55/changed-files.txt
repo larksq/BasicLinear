@@ -1,0 +1,15 @@
+apps/web/src/App.tsx
+apps/web/src/issues.tsx
+apps/web/src/issue-scope.ts
+apps/web/src/workspace-navigation.ts
+apps/web/src/command-palette.ts
+apps/web/tests/issue-scope.test.ts
+apps/web/tests/workspace-navigation.test.ts
+apps/web/tests/command-palette.test.ts
+apps/web/tests/layout-contract.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-55/session.md
+docs/product/versions/v0.1.0/30-implementation/CT-55/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-55/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-55/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-55/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-55/evidence/browser-status.json

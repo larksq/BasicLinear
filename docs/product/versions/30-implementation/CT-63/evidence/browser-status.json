@@ -1,0 +1,70 @@
+{
+  "schema_version": "ct63-browser-status-v1",
+  "recorded_at": "2026-08-20T18:53:06Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4188/?workspace=20000000-0000-4000-8000-000000000023&view=issues&fixture=issue-board-move&layout=board&group=status",
+  "synthetic_fixture": true,
+  "fixture_process": {
+    "port": 4188,
+    "build": "production",
+    "managed_session": 79465,
+    "initial_sandbox_launch": "failed_listen_eperm",
+    "managed_launch": "passed"
+  },
+  "host_attempts": [
+    {
+      "attempt": 1,
+      "status": "sandbox_network_denied",
+      "checks_attempted": 5,
+      "checks_passed": 0,
+      "reason": "The sandbox could not connect to the managed localhost fixture; this environment result was rejected as product evidence."
+    },
+    {
+      "attempt": 2,
+      "status": "passed_host_network",
+      "checks_attempted": 15,
+      "checks_passed": 15,
+      "observations": {
+        "application_html_status": 200,
+        "session_status": 200,
+        "projects_count": 2,
+        "milestones_count": 2,
+        "initial_issue_count": 2,
+        "initial_issue_revision": 3,
+        "status_move_revision": 4,
+        "status_query_readback": true,
+        "cross_project_milestone_revision": 5,
+        "cross_project_milestone_readback": true,
+        "stale_revision_status": 409,
+        "stale_revision_code": "REVISION_CONFLICT",
+        "project_only_clear_revision": 4,
+        "project_only_milestone_cleared": true,
+        "invalid_assignment_status": 422,
+        "invalid_assignment_code": "INVALID_ASSIGNMENT",
+        "rejected_state_unchanged": true
+      }
+    }
+  ],
+  "browser_attempted": false,
+  "browser_captures": 0,
+  "rendered_assertions": 0,
+  "policy_reason": "The active security policy denies the approved browser surface. Alternate browser surfaces were not used.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_assertions": [
+    "mouse touch and pen gestures require the accepted threshold and use one captured primary pointer",
+    "status priority assignee project and milestone targets accept only valid same-team transitions",
+    "no project no milestone grouping-none archived read-only and pending states follow the intended boundaries",
+    "sub-threshold non-primary canceled lost-capture invalid-target and same-group gestures do not mutate",
+    "valid drops persist after query and detail readback while stale and invalid requests retain committed state",
+    "pickup target cancellation commit and failure produce the intended polite announcements",
+    "focus returns to a virtualized moved card or the named board when the current filter removes it",
+    "Shift+F10 Edit properties remains a complete keyboard alternative for all movable properties",
+    "drag grip selection open context-menu and issue-action controls do not interfere",
+    "target feedback does not shift card or column geometry at desktop tablet or mobile widths",
+    "zero overlap clipped focus page-level positive overflow duplicate IDs console warnings and console errors"
+  ]
+}

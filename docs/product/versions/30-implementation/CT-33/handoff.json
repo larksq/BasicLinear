@@ -1,0 +1,63 @@
+{
+  "schema_version": "ct33-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {"task_store":".control-tower/tasks-v0.8.sqlite3","provider_projection":"disabled","linear_used":false},
+  "issues": [
+    {
+      "issue_id": "CT-33",
+      "stable_id": "459cf377-d8c9-43e8-9066-9d1834a86099",
+      "revision": 2,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_browser_verification",
+      "requirement_refs": ["R-010", "R-104", "R-110"],
+      "acceptance_refs": ["R-010", "R-104", "R-110"],
+      "outcome_refs": ["O-001", "O-002", "O-003"],
+      "allowed_mutation_paths": ["apps/web/src/App.tsx", "apps/web/src/issues.tsx", "apps/web/src/projects.tsx", "apps/web/tests/table-semantics.test.ts", "docs/product/versions/v0.1.0/30-implementation/CT-33"]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT33-IMPL-20260820T043021Z",
+      "actor_id": "codex-dense-table-accessibility",
+      "issue_id": "CT-33",
+      "mode": "code_mutating",
+      "output_refs": ["apps/web/src/App.tsx", "apps/web/src/issues.tsx", "apps/web/src/projects.tsx", "apps/web/tests/table-semantics.test.ts"],
+      "validation_refs": ["docs/product/versions/v0.1.0/30-implementation/CT-33/result.json", "docs/product/versions/v0.1.0/30-implementation/CT-33/evidence.md"]
+    }
+  ],
+  "checks": [
+    {"check_id":"CT33-TABLE-CONTRACT","issue_id":"CT-33","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-33/result.json"},
+    {"check_id":"CT33-REGRESSION","issue_id":"CT-33","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-33/result.json"},
+    {"check_id":"CT33-TYPECHECK","issue_id":"CT-33","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-33/result.json"},
+    {"check_id":"CT33-BUILD","issue_id":"CT-33","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-33/result.json"},
+    {"check_id":"CT33-BROWSER","issue_id":"CT-33","status":"blocked","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-33/evidence/browser-status.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-33",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-33/evidence.md#pending-browser-matrix",
+      "basis": "Source contracts, complete regression, typecheck, and production build pass. Final accessibility-tree and responsive-browser behavior are not yet asserted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["R-010", "R-104", "R-110"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-33/changed-files.txt",
+    "regression_areas": ["project table semantics", "issue table semantics", "team table semantics", "member table semantics", "responsive data reachability"],
+    "evidence_refs": ["docs/product/versions/v0.1.0/30-implementation/CT-33/result.json", "docs/product/versions/v0.1.0/30-implementation/CT-33/evidence.md", "docs/product/versions/v0.1.0/30-implementation/CT-33/evidence/browser-status.json"],
+    "implementation_actor_ids": ["codex-dense-table-accessibility"],
+    "implementation_session_ids": ["CT33-IMPL-20260820T043021Z"]
+  },
+  "outcomes": [{"outcome_id":"O-001","status":"pending"}, {"outcome_id":"O-002","status":"pending"}, {"outcome_id":"O-003","status":"pending"}],
+  "blockers": [
+    {
+      "id": "CT33-BROWSER-PERMISSION",
+      "description": "The approved local browser surface is unavailable under the active security policy; final desktop/mobile browser verification remains required."
+    }
+  ],
+  "next": {"skill":"ct-test-sprint","issues":["CT-33"],"reason":"Run the bounded synthetic desktop/mobile table accessibility matrix when the local browser surface is approved."}
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "ct105-implementation-result-v1",
+  "captured_at": "2026-08-22T09:40:37Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_BROWSER_EVIDENCE_RECORDED",
+  "issue": {
+    "identifier": "CT-105",
+    "id": "37c2ad0d-911b-4d06-8f55-21b81f590f6c",
+    "created_revision": 1,
+    "completion_revision": 2
+  },
+  "source": {
+    "revision": "cf99bb834f544633ad820328817dcc2320d09744",
+    "tree": "5bb99828de1171fa47137fe497b062212248f454"
+  },
+  "resolution": {
+    "direct_focus_visible_outline": true,
+    "contained_offset": true,
+    "parent_focus_within_retained": true,
+    "editor_behavior_changed": false
+  },
+  "checks": {
+    "focused_tests_passed": 4,
+    "complete_test_files": 70,
+    "complete_tests_passed": 461,
+    "workspaces_typechecked": 8,
+    "release_audit_tests_passed": 10,
+    "vite_modules": 1949,
+    "build_warnings": 0,
+    "independent_application_review": "passed",
+    "current_chrome_capture": true,
+    "P-T21": "pending_requalification_for_current_product_revision"
+  },
+  "browser_acceptance_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

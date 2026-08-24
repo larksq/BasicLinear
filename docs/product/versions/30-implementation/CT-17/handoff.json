@@ -1,0 +1,34 @@
+{
+  "schema_version":"ct17-implementation-handoff-v1",
+  "stage":"implementation.checkpoint-handoff",
+  "status":"passed",
+  "operating_profile":"project-local-v0.8",
+  "authority":{"task_store":".control-tower/tasks-v0.8.sqlite3","provider_projection":"disabled","linear_used":false},
+  "issues":[{"issue_id":"CT-17","stable_id":"61630f6b-e6bf-45fa-a0ac-67644257bcb7","revision":2,"accepted":true,"blocked":false,"status":"output_done","requirement_refs":["R-102","R-106"],"acceptance_refs":["R-102","R-106"],"outcome_refs":["O-001","O-004"],"allowed_mutation_paths":["apps/api/tests","packages/db","docs/product/versions/v0.1.0/30-implementation/CT-17"]}],
+  "sessions":[
+    {"session_id":"CT17-IMPL-20260819T215815Z","actor_id":"codex-implementation-remediation","issue_id":"CT-17","mode":"code_mutating","allowed_paths":["apps/api/tests","packages/db"],"output_refs":["apps/api/tests/ct11-security.integration.test.ts","packages/db/src/issue-repository.ts","packages/db/src/project-repository.ts","packages/db/src/repository.ts","packages/db/src/view-repository.ts"],"validation_refs":["docs/product/versions/v0.1.0/30-implementation/CT-17/result.json","docs/product/versions/v0.1.0/30-implementation/CT-17/evidence.md"]},
+    {"session_id":"CT17-REVIEW-20260819T222432Z","actor_id":"immutable-artifact-reviewer","issue_id":"CT-17","mode":"review_only","allowed_paths":["docs/product/versions/v0.1.0/30-implementation/CT-17"],"output_refs":["docs/product/versions/v0.1.0/30-implementation/CT-17/changed-files.txt","docs/product/versions/v0.1.0/30-implementation/CT-17/evidence.md","docs/product/versions/v0.1.0/30-implementation/CT-17/handoff.json","docs/product/versions/v0.1.0/30-implementation/CT-17/result.json","docs/product/versions/v0.1.0/30-implementation/CT-17/session.md"],"validation_refs":["docs/product/versions/v0.1.0/30-implementation/CT-17/result.json","docs/product/versions/v0.1.0/30-implementation/CT-17/evidence.md"]}
+  ],
+  "changed_files":[
+    {"path":"apps/api/tests/ct11-security.integration.test.ts","issue_id":"CT-17","mutation_type":"test","ai_session_id":"CT17-IMPL-20260819T215815Z","risk_level":"high","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-17/evidence.md#verification","test_refs":["CT17-CONCURRENCY","CT17-IMMUTABLE"]},
+    {"path":"packages/db/src/issue-repository.ts","issue_id":"CT-17","mutation_type":"code","ai_session_id":"CT17-IMPL-20260819T215815Z","risk_level":"high","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-17/evidence.md#verification","test_refs":["CT17-CONCURRENCY","CT17-IMMUTABLE"]},
+    {"path":"packages/db/src/project-repository.ts","issue_id":"CT-17","mutation_type":"code","ai_session_id":"CT17-IMPL-20260819T215815Z","risk_level":"high","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-17/evidence.md#verification","test_refs":["CT17-CONCURRENCY","CT17-IMMUTABLE"]},
+    {"path":"packages/db/src/repository.ts","issue_id":"CT-17","mutation_type":"code","ai_session_id":"CT17-IMPL-20260819T215815Z","risk_level":"high","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-17/evidence.md#verification","test_refs":["CT17-CONCURRENCY","CT17-IMMUTABLE"]},
+    {"path":"packages/db/src/view-repository.ts","issue_id":"CT-17","mutation_type":"code","ai_session_id":"CT17-IMPL-20260819T215815Z","risk_level":"high","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-17/evidence.md#verification","test_refs":["CT17-CONCURRENCY","CT17-IMMUTABLE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-17/changed-files.txt","issue_id":"CT-17","mutation_type":"docs","ai_session_id":"CT17-REVIEW-20260819T222432Z","risk_level":"low","test_refs":["CT17-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-17/evidence.md","issue_id":"CT-17","mutation_type":"docs","ai_session_id":"CT17-REVIEW-20260819T222432Z","risk_level":"low","test_refs":["CT17-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-17/handoff.json","issue_id":"CT-17","mutation_type":"docs","ai_session_id":"CT17-REVIEW-20260819T222432Z","risk_level":"low","test_refs":["CT17-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-17/result.json","issue_id":"CT-17","mutation_type":"docs","ai_session_id":"CT17-REVIEW-20260819T222432Z","risk_level":"low","test_refs":["CT17-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-17/session.md","issue_id":"CT-17","mutation_type":"docs","ai_session_id":"CT17-REVIEW-20260819T222432Z","risk_level":"low","test_refs":["CT17-EVIDENCE"]}
+  ],
+  "checks":[
+    {"check_id":"CT17-CONCURRENCY","issue_id":"CT-17","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-17/result.json"},
+    {"check_id":"CT17-IMMUTABLE","issue_id":"CT-17","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-17/result.json"},
+    {"check_id":"CT17-EVIDENCE","issue_id":"CT-17","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-17/evidence.md"}
+  ],
+  "reviews":[{"issue_id":"CT-17","status":"passed","independent":true,"review_actor_id":"immutable-artifact-reviewer","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-17/evidence.md#verification","basis":"Source-frozen database artifacts were exercised against disposable PostgreSQL databases outside the code-mutating session."}],
+  "testing_handoff":{"acceptance_refs":["R-102","R-106"],"changed_file_refs":["apps/api/tests/ct11-security.integration.test.ts","packages/db/src/issue-repository.ts","packages/db/src/project-repository.ts","packages/db/src/repository.ts","packages/db/src/view-repository.ts","docs/product/versions/v0.1.0/30-implementation/CT-17/changed-files.txt","docs/product/versions/v0.1.0/30-implementation/CT-17/evidence.md","docs/product/versions/v0.1.0/30-implementation/CT-17/handoff.json","docs/product/versions/v0.1.0/30-implementation/CT-17/result.json","docs/product/versions/v0.1.0/30-implementation/CT-17/session.md"],"regression_areas":["concurrent entity writes","committed revision conflict hints","activity/outbox cardinality","sequential stale writes","idempotent create retries"],"evidence_refs":["docs/product/versions/v0.1.0/30-implementation/CT-17/result.json","docs/product/versions/v0.1.0/30-implementation/CT-17/evidence.md"],"implementation_actor_ids":["codex-implementation-remediation","immutable-artifact-reviewer"],"implementation_session_ids":["CT17-IMPL-20260819T215815Z","CT17-REVIEW-20260819T222432Z"]},
+  "outcomes":[{"outcome_id":"O-001","status":"pending"},{"outcome_id":"O-004","status":"pending"}],
+  "blockers":[],
+  "next":{"skill":"ct-test-sprint","issues":["CT-11"],"reason":"Return CT-17 to the independent P-T17 acceptance session."}
+}

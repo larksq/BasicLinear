@@ -1,0 +1,200 @@
+{
+  "schema_version": "ct10-implementation-handoff-v2",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "passed",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-10",
+      "stable_id": "fdb1ad84-8628-4ae8-8939-9b61f56a164d",
+      "revision": 2,
+      "accepted": true,
+      "blocked": false,
+      "status": "output_done",
+      "requirement_refs": ["R-013", "R-014", "R-106", "R-107", "R-109"],
+      "acceptance_refs": ["R-013", "R-014", "R-106", "R-107", "R-109"],
+      "outcome_refs": ["O-001", "O-004"],
+      "allowed_mutation_paths": [
+        ".env.example",
+        ".gitignore",
+        "README.md",
+        "docs/operations",
+        "docs/product/versions/v0.1.0/30-implementation/CT-10",
+        "ops",
+        "package-lock.json",
+        "package.json",
+        "packages"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "ct10-implementation-1",
+      "actor_id": "codex-implementation",
+      "issue_id": "CT-10",
+      "mode": "code_mutating",
+      "allowed_paths": [
+        ".env.example",
+        ".gitignore",
+        "README.md",
+        "docs/operations",
+        "ops",
+        "package-lock.json",
+        "package.json",
+        "packages"
+      ],
+      "output_refs": [
+        ".env.example",
+        ".gitignore",
+        "README.md",
+        "docs/operations/recovery.md",
+        "ops/cli/src/index.ts",
+        "ops/compose/docker-compose.yml",
+        "package-lock.json",
+        "package.json",
+        "packages/config/tests/foundation-static.test.ts",
+        "packages/contracts/src/index.ts",
+        "packages/contracts/src/transfer.ts",
+        "packages/db/package.json",
+        "packages/db/src/canonical.ts",
+        "packages/db/src/index.ts",
+        "packages/db/src/transfer.ts",
+        "packages/db/tests/canonical.test.ts",
+        "packages/db/tests/transfer.integration.test.ts"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-10/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md"
+      ]
+    },
+    {
+      "session_id": "ct10-final-image-review-1",
+      "actor_id": "isolated-final-image-verifier",
+      "issue_id": "CT-10",
+      "mode": "review_only",
+      "allowed_paths": ["docs/product/versions/v0.1.0/30-implementation/CT-10"],
+      "output_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-10/changed-files.txt",
+        "docs/product/versions/v0.1.0/30-implementation/CT-10/decision.md",
+        "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md",
+        "docs/product/versions/v0.1.0/30-implementation/CT-10/handoff.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-10/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-10/session.md"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-10/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md"
+      ]
+    }
+  ],
+  "changed_files": [
+    { "path": ".env.example", "issue_id": "CT-10", "mutation_type": "config", "ai_session_id": "ct10-implementation-1", "risk_level": "medium", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md#verification", "test_refs": ["CT10-BUILD-RUNTIME", "CT10-OPERATOR-SECURITY"] },
+    { "path": ".gitignore", "issue_id": "CT-10", "mutation_type": "config", "ai_session_id": "ct10-implementation-1", "risk_level": "low", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md#verification", "test_refs": ["CT10-OPERATOR-SECURITY"] },
+    { "path": "README.md", "issue_id": "CT-10", "mutation_type": "docs", "ai_session_id": "ct10-implementation-1", "risk_level": "low", "test_refs": ["CT10-EVIDENCE"] },
+    { "path": "docs/operations/recovery.md", "issue_id": "CT-10", "mutation_type": "docs", "ai_session_id": "ct10-implementation-1", "risk_level": "medium", "test_refs": ["CT10-OPERATOR-SECURITY", "CT10-RECOVERY-RESTART"] },
+    { "path": "ops/cli/src/index.ts", "issue_id": "CT-10", "mutation_type": "code", "ai_session_id": "ct10-implementation-1", "risk_level": "high", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md#verification", "test_refs": ["CT10-TYPECHECK-UNIT", "CT10-INTEGRATION", "CT10-OPERATOR-SECURITY"] },
+    { "path": "ops/compose/docker-compose.yml", "issue_id": "CT-10", "mutation_type": "config", "ai_session_id": "ct10-implementation-1", "risk_level": "high", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md#verification", "test_refs": ["CT10-BUILD-RUNTIME", "CT10-RECOVERY-RESTART", "CT10-OPERATOR-SECURITY"] },
+    { "path": "package-lock.json", "issue_id": "CT-10", "mutation_type": "config", "ai_session_id": "ct10-implementation-1", "risk_level": "medium", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md#verification", "test_refs": ["CT10-BUILD-RUNTIME", "CT10-INTEGRATION"] },
+    { "path": "package.json", "issue_id": "CT-10", "mutation_type": "config", "ai_session_id": "ct10-implementation-1", "risk_level": "medium", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md#verification", "test_refs": ["CT10-BUILD-RUNTIME", "CT10-OPERATOR-SECURITY"] },
+    { "path": "packages/config/tests/foundation-static.test.ts", "issue_id": "CT-10", "mutation_type": "test", "ai_session_id": "ct10-implementation-1", "risk_level": "medium", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md#verification", "test_refs": ["CT10-TYPECHECK-UNIT", "CT10-BUILD-RUNTIME"] },
+    { "path": "packages/contracts/src/index.ts", "issue_id": "CT-10", "mutation_type": "code", "ai_session_id": "ct10-implementation-1", "risk_level": "high", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md#verification", "test_refs": ["CT10-TYPECHECK-UNIT", "CT10-INTEGRATION"] },
+    { "path": "packages/contracts/src/transfer.ts", "issue_id": "CT-10", "mutation_type": "code", "ai_session_id": "ct10-implementation-1", "risk_level": "high", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md#verification", "test_refs": ["CT10-TYPECHECK-UNIT", "CT10-INTEGRATION", "CT10-OPERATOR-SECURITY"] },
+    { "path": "packages/db/package.json", "issue_id": "CT-10", "mutation_type": "config", "ai_session_id": "ct10-implementation-1", "risk_level": "medium", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md#verification", "test_refs": ["CT10-BUILD-RUNTIME", "CT10-INTEGRATION"] },
+    { "path": "packages/db/src/canonical.ts", "issue_id": "CT-10", "mutation_type": "code", "ai_session_id": "ct10-implementation-1", "risk_level": "high", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md#verification", "test_refs": ["CT10-TYPECHECK-UNIT", "CT10-INTEGRATION", "CT10-OPERATOR-SECURITY"] },
+    { "path": "packages/db/src/index.ts", "issue_id": "CT-10", "mutation_type": "code", "ai_session_id": "ct10-implementation-1", "risk_level": "medium", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md#verification", "test_refs": ["CT10-TYPECHECK-UNIT", "CT10-INTEGRATION"] },
+    { "path": "packages/db/src/transfer.ts", "issue_id": "CT-10", "mutation_type": "code", "ai_session_id": "ct10-implementation-1", "risk_level": "high", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md#verification", "test_refs": ["CT10-TYPECHECK-UNIT", "CT10-INTEGRATION", "CT10-RECOVERY-RESTART", "CT10-OPERATOR-SECURITY"] },
+    { "path": "packages/db/tests/canonical.test.ts", "issue_id": "CT-10", "mutation_type": "test", "ai_session_id": "ct10-implementation-1", "risk_level": "medium", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md#verification", "test_refs": ["CT10-TYPECHECK-UNIT", "CT10-OPERATOR-SECURITY"] },
+    { "path": "packages/db/tests/transfer.integration.test.ts", "issue_id": "CT-10", "mutation_type": "test", "ai_session_id": "ct10-implementation-1", "risk_level": "high", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md#verification", "test_refs": ["CT10-INTEGRATION", "CT10-RECOVERY-RESTART", "CT10-OPERATOR-SECURITY"] },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-10/changed-files.txt", "issue_id": "CT-10", "mutation_type": "docs", "ai_session_id": "ct10-final-image-review-1", "risk_level": "low", "test_refs": ["CT10-EVIDENCE"] },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-10/decision.md", "issue_id": "CT-10", "mutation_type": "docs", "ai_session_id": "ct10-final-image-review-1", "risk_level": "low", "test_refs": ["CT10-EVIDENCE"] },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md", "issue_id": "CT-10", "mutation_type": "docs", "ai_session_id": "ct10-final-image-review-1", "risk_level": "low", "test_refs": ["CT10-EVIDENCE"] },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-10/handoff.json", "issue_id": "CT-10", "mutation_type": "docs", "ai_session_id": "ct10-final-image-review-1", "risk_level": "low", "test_refs": ["CT10-EVIDENCE"] },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-10/result.json", "issue_id": "CT-10", "mutation_type": "docs", "ai_session_id": "ct10-final-image-review-1", "risk_level": "low", "test_refs": ["CT10-EVIDENCE"] },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-10/session.md", "issue_id": "CT-10", "mutation_type": "docs", "ai_session_id": "ct10-final-image-review-1", "risk_level": "low", "test_refs": ["CT10-EVIDENCE"] }
+  ],
+  "checks": [
+    { "check_id": "CT10-TYPECHECK-UNIT", "issue_id": "CT-10", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-10/result.json" },
+    { "check_id": "CT10-INTEGRATION", "issue_id": "CT-10", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-10/result.json" },
+    { "check_id": "CT10-BUILD-RUNTIME", "issue_id": "CT-10", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-10/result.json" },
+    { "check_id": "CT10-RECOVERY-RESTART", "issue_id": "CT-10", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md" },
+    { "check_id": "CT10-OPERATOR-SECURITY", "issue_id": "CT-10", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md" },
+    { "check_id": "CT10-EVIDENCE", "issue_id": "CT-10", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-10/result.json" }
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-10",
+      "status": "passed",
+      "independent": true,
+      "review_actor_id": "isolated-final-image-verifier",
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md#verification",
+      "basis": "Source-frozen image files, real disposable PostgreSQL databases, restart recovery, canonical readback, live artifact comparison, and browser/runtime inspection were executed outside the code-mutating session."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["R-013", "R-014", "R-106", "R-107", "R-109"],
+    "changed_file_refs": [
+      ".env.example",
+      ".gitignore",
+      "README.md",
+      "docs/operations/recovery.md",
+      "ops/cli/src/index.ts",
+      "ops/compose/docker-compose.yml",
+      "package-lock.json",
+      "package.json",
+      "packages/config/tests/foundation-static.test.ts",
+      "packages/contracts/src/index.ts",
+      "packages/contracts/src/transfer.ts",
+      "packages/db/package.json",
+      "packages/db/src/canonical.ts",
+      "packages/db/src/index.ts",
+      "packages/db/src/transfer.ts",
+      "packages/db/tests/canonical.test.ts",
+      "packages/db/tests/transfer.integration.test.ts",
+      "docs/product/versions/v0.1.0/30-implementation/CT-10/changed-files.txt",
+      "docs/product/versions/v0.1.0/30-implementation/CT-10/decision.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-10/handoff.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-10/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-10/session.md"
+    ],
+    "regression_areas": [
+      "workspace export authorization and existence-hiding failures",
+      "canonical field allowlists, ordering, relation closure, and digest stability",
+      "import replacement confirmation, explicit identifiers, sequence reset, and projection rebuild",
+      "credential-bearing backup permissions, session exclusion, tamper rejection, and current-state verification",
+      "restore empty-target, PostgreSQL-major, migration-manifest, credential, and readback invariants",
+      "clean migration and populated-upgrade backup enforcement",
+      "operator structured errors, secret redaction, atomic file writes, and confirmation flags",
+      "Compose tools profile, named backup volume, internal networking, and restart persistence",
+      "clean-host full-Compose startup on a current Docker engine"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-10/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-10/evidence.md"
+    ],
+    "implementation_actor_ids": ["codex-implementation", "isolated-final-image-verifier"],
+    "implementation_session_ids": ["ct10-implementation-1", "ct10-final-image-review-1"]
+  },
+  "outcomes": [
+    { "outcome_id": "O-001", "status": "pending" },
+    { "outcome_id": "O-004", "status": "pending" }
+  ],
+  "blockers": [],
+  "deferred": [
+    "Independent security and concurrency acceptance remain CT-11 scope.",
+    "Clean-host full-Compose, integrated assistive-technology, fidelity, performance, and recovery acceptance remain CT-12 scope.",
+    "Public release approval remains CT-13 scope.",
+    "O-001 and O-004 observation and decision remain CT-14 scope."
+  ],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issues": ["CT-10"],
+    "parallel_acceptance_issue": "CT-11",
+    "reason": "CT-10 output is complete and dependency-ready for integrated CT-12 testing once CT-11 closes."
+  }
+}

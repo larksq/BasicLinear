@@ -1,0 +1,10 @@
+scripts/audit-public-release.mjs
+scripts/tests/audit-public-release.test.mjs
+ops/release/reproducible-build.json
+docs/product/versions/v0.1.0/30-implementation/CT-86/session.md
+docs/product/versions/v0.1.0/30-implementation/CT-86/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-86/evidence/audit-summary.json
+docs/product/versions/v0.1.0/30-implementation/CT-86/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-86/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-86/changed-files.txt
+docs/product/versions/v0.1.0/50-outcome-review/CT-13/result.json

@@ -1,0 +1,34 @@
+{
+  "schema_version": "ct111-implementation-handoff-v1",
+  "stage": "implementation.review-gate",
+  "status": "implementation_complete_review_pending",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issue": {
+    "identifier": "CT-111",
+    "stable_id": "448bd793-c0f7-4d72-b4cb-fcea8016c926",
+    "created_revision": 1,
+    "evidence_revision": 2,
+    "status": "In Progress"
+  },
+  "source": {
+    "revision": "1e960558bba51413657f75391478e56ddbdac275",
+    "tree": "6255242228edfa41f8bcef7fb8d0d3bc959e35d9"
+  },
+  "changed_files_ref": "docs/product/versions/v0.1.0/30-implementation/CT-111/changed-files.txt",
+  "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-111/evidence/verification-summary.json",
+  "next": {
+    "skill": "ct-implement-sprint",
+    "issue": "CT-111",
+    "scope": "obtain a distinct application review of semantic empty-draft comparison; enter CT-12 testing only after review passes"
+  },
+  "blockers": [
+    "Distinct application review is pending.",
+    "CT-12 P-T18 and P-T19 remain incomplete.",
+    "P-T21 qualification is stale for product revision 7665027."
+  ],
+  "outcomes_claimed": []
+}

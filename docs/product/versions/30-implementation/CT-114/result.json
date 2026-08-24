@@ -1,0 +1,59 @@
+{
+  "schema_version": "ct114-implementation-result-v1",
+  "captured_at": "2026-08-22T17:44:06Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_REVIEW_PASSED",
+  "issue": {
+    "identifier": "CT-114",
+    "id": "0d73dd36-7bd4-4249-922c-839c5198422a",
+    "created_revision": 1,
+    "evidence_revision": 2,
+    "completed_revision": 3,
+    "status": "Done"
+  },
+  "source": {
+    "revision": "3a09041dc58086ebe44d1a547419ce8853ea65e8",
+    "tree": "722605485351b1fce693d03416929ae989830aaf"
+  },
+  "resolution": {
+    "separate_solid_danger_token": true,
+    "normal_text_contrast_at_least_4_5": true,
+    "foreground_danger_token_preserved": true,
+    "project_confirmation_verified": true,
+    "milestone_confirmation_verified": true,
+    "fixture_restored": true
+  },
+  "checks": {
+    "focused_tests_passed": 5,
+    "complete_test_files": 71,
+    "complete_tests_passed": 470,
+    "workspaces_typechecked": 8,
+    "release_audit_tests_passed": 10,
+    "vite_modules": 1950,
+    "build_warnings": 0,
+    "chrome_theme_surface_states_passed": 4,
+    "chrome_audit_failures": 0,
+    "independent_application_review": "passed",
+    "P-T21": "pending_requalification_for_3a09041"
+  },
+  "independent_review": {
+    "actor": "codex-independent-application-review-ct114-ct115",
+    "session": "CT115-INDEPENDENT-REVIEW-20260822T170318Z",
+    "verdict": "PASSED_DISTINCT_APPLICATION_REVIEW",
+    "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-114/evidence/independent-review.json",
+    "raw_sha256": "0c33fcaf8271112cd9650dddf79ede2183c199285ebba0b292cfbbfd501319b4"
+  },
+  "task_reconciliation": {
+    "authority": "project-local-v0.8",
+    "expected_revision": 2,
+    "readback_revision": 3,
+    "readback_status": "Done",
+    "provider_projection": "disabled",
+    "projection_state": "not_synced",
+    "backup_ref": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-22T17-44-06-438Z-8248747b-e5bc-4cd6-9d76-5becfebb0163.json",
+    "backup_bytes": 464043,
+    "backup_sha256": "59a534fd8966341f0d338115d223656e6f3074209c8bfd09d76b69a18bbbb60a"
+  },
+  "browser_acceptance_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

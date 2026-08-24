@@ -1,0 +1,78 @@
+{
+  "schema_version": "ct30-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "passed",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-30",
+      "stable_id": "b035a8dc-ca3a-4dcc-941f-158a4a4996f4",
+      "revision": 2,
+      "accepted": true,
+      "blocked": false,
+      "status": "output_done",
+      "requirement_refs": ["R-004", "R-005", "R-010"],
+      "acceptance_refs": ["R-004", "R-005", "R-010"],
+      "outcome_refs": ["O-001", "O-002"],
+      "allowed_mutation_paths": [
+        "apps/web/src/issue-scope.ts",
+        "apps/web/src/issues.tsx",
+        "apps/web/tests/issue-scope.test.ts",
+        "apps/web/tests/layout-contract.test.ts",
+        "scripts/serve-visual-fixture.mjs",
+        "docs/product/versions/v0.1.0/30-implementation/CT-30"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT30-IMPL-20260820T035412Z",
+      "actor_id": "codex-milestone-context",
+      "issue_id": "CT-30",
+      "mode": "code_mutating",
+      "output_refs": ["apps/web/src/issue-scope.ts", "apps/web/src/issues.tsx", "apps/web/tests/issue-scope.test.ts", "apps/web/tests/layout-contract.test.ts", "scripts/serve-visual-fixture.mjs"],
+      "validation_refs": ["docs/product/versions/v0.1.0/30-implementation/CT-30/result.json", "docs/product/versions/v0.1.0/30-implementation/CT-30/evidence.md"]
+    },
+    {
+      "session_id": "CT30-REVIEW-20260820T040657Z",
+      "actor_id": "codex-milestone-context-reviewer",
+      "issue_id": "CT-30",
+      "mode": "review_only",
+      "output_refs": ["docs/product/versions/v0.1.0/30-implementation/CT-30/changed-files.txt", "docs/product/versions/v0.1.0/30-implementation/CT-30/evidence.md", "docs/product/versions/v0.1.0/30-implementation/CT-30/evidence/browser-matrix.json", "docs/product/versions/v0.1.0/30-implementation/CT-30/handoff.json", "docs/product/versions/v0.1.0/30-implementation/CT-30/result.json", "docs/product/versions/v0.1.0/30-implementation/CT-30/session.md"],
+      "validation_refs": ["docs/product/versions/v0.1.0/30-implementation/CT-30/result.json", "docs/product/versions/v0.1.0/30-implementation/CT-30/evidence/browser-matrix.json"]
+    }
+  ],
+  "checks": [
+    {"check_id":"CT30-CONTEXT-UNIT","issue_id":"CT-30","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-30/result.json"},
+    {"check_id":"CT30-REGRESSION","issue_id":"CT-30","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-30/result.json"},
+    {"check_id":"CT30-TYPECHECK","issue_id":"CT-30","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-30/result.json"},
+    {"check_id":"CT30-BUILD","issue_id":"CT-30","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-30/result.json"},
+    {"check_id":"CT30-BROWSER","issue_id":"CT-30","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-30/evidence/browser-matrix.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-30",
+      "status": "passed",
+      "independent": true,
+      "review_actor_id": "codex-milestone-context-reviewer",
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-30/evidence.md#final-bundle-browser-matrix",
+      "basis": "A separately identified review-only pass checked active, missing, archived, project-only, and global scope behavior; full regression and build output; exact fixture submission; desktop/mobile geometry; visual overlap; duplicate IDs; and console diagnostics."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["R-004", "R-005", "R-010"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-30/changed-files.txt",
+    "regression_areas": ["milestone-scoped creation", "archived milestone context", "project-only creation", "global creation", "responsive dialog behavior"],
+    "evidence_refs": ["docs/product/versions/v0.1.0/30-implementation/CT-30/result.json", "docs/product/versions/v0.1.0/30-implementation/CT-30/evidence.md", "docs/product/versions/v0.1.0/30-implementation/CT-30/evidence/browser-matrix.json"],
+    "implementation_actor_ids": ["codex-milestone-context", "codex-milestone-context-reviewer"],
+    "implementation_session_ids": ["CT30-IMPL-20260820T035412Z", "CT30-REVIEW-20260820T040657Z"]
+  },
+  "outcomes": [{"outcome_id":"O-001","status":"pending"}, {"outcome_id":"O-002","status":"pending"}],
+  "blockers": [],
+  "next": {"skill":"ct-test-sprint","issues":["CT-12"],"reason":"Integrate the CT-30 addendum while preserving CT-12's separate CT-21/P-T21 clean-host gate."}
+}

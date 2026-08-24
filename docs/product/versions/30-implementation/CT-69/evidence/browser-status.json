@@ -1,0 +1,40 @@
+{
+  "schema_version": "ct69-browser-status-v1",
+  "recorded_at": "2026-08-20T22:41:20Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4195/?workspace=20000000-0000-4000-8000-000000000023&view=projects&fixture=milestone-inline-edit&project=50000000-0000-4000-8000-000000000023",
+  "synthetic_fixture": true,
+  "fixture_process": {
+    "port": 4195,
+    "build": "production",
+    "managed_session": 48361,
+    "initial_sandbox_launch": "failed_listen_eperm",
+    "managed_launch": "passed"
+  },
+  "host_attempts": [
+    {"attempt": 1, "status": "sandbox_bind_and_connect_denied", "checks_attempted": 0, "checks_passed": 0, "reason": "The sandbox could not bind or connect to the local fixture; these environment results were rejected as product evidence."},
+    {"attempt": 2, "status": "passed_host_network", "port": 4195, "checks_attempted": 31, "checks_passed": 31, "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-69/evidence/host-matrix.json"}
+  ],
+  "browser_attempted": false,
+  "browser_captures": 0,
+  "rendered_assertions": 0,
+  "policy_reason": "The active security policy denies the approved browser surface. Alternate browser surfaces were not used.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_assertions": [
+    "owner and member can edit milestones while guest controls remain read-only",
+    "milestone edits inside its ordered row and the old edit-milestone dialog is absent",
+    "name description and target date submit only changed normalized values",
+    "a draft remains bound to its opening revision across background readback",
+    "conflict and validation failures restore authoritative state while retaining the rejected draft",
+    "retry draft and use server values require explicit user intent",
+    "edit archive restore reorder create and drag controls serialize without draft loss",
+    "Escape submit retry reset and issue drill-down retain correct focus and keyboard behavior",
+    "pending error and confirmed-revision feedback retain stable desktop tablet and mobile geometry",
+    "accessible names states live announcements and focus order remain correct",
+    "zero overlap clipped focus page-level positive overflow duplicate IDs console warnings and console errors"
+  ]
+}

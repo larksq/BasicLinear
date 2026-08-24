@@ -1,0 +1,40 @@
+{
+  "schema_version": "ct30-browser-matrix-v1",
+  "captured_at": "2026-08-20T04:06:57Z",
+  "browser": "Codex in-app browser",
+  "target": "http://127.0.0.1:4180/?fixture=milestone-create",
+  "synthetic_fixture": true,
+  "global_assertions": {
+    "expected_milestone": "Interaction acceptance",
+    "expected_milestone_id": "52000000-0000-4000-8000-000000000023",
+    "positive_horizontal_overflow_px": 0,
+    "duplicate_ids": 0,
+    "visual_overlap_observed": false,
+    "console_warnings": 0,
+    "console_errors": 0
+  },
+  "captures": [
+    {
+      "viewport": {"width": 1440, "height": 900},
+      "dialog": {"count": 1, "accessible_name": "New issue for Interaction acceptance", "width": 680, "height": 722, "x": 372.5, "y": 89},
+      "selected_options": ["Product Quality", "In progress", "No priority", "Unassigned", "Desktop density controls", "Interaction acceptance"],
+      "screenshot": "ct30-milestone-create-desktop-1440x900.jpg",
+      "screenshot_sha256": "0cd827e3b688936c1af2b3cb00ebe914d6c416809f382b58ff1b602717960da0"
+    },
+    {
+      "viewport": {"width": 390, "height": 844},
+      "dialog": {"count": 1, "accessible_name": "New issue for Interaction acceptance", "width": 341, "height": 814, "x": 17, "y": 15},
+      "selected_options": ["Product Quality", "In progress", "No priority", "Unassigned", "Desktop density controls", "Interaction acceptance"],
+      "screenshot": "ct30-milestone-create-mobile-390x844.jpg",
+      "screenshot_sha256": "d2a6240e6787fd43c8e62a0de0b057509104fd6c3ae98a780208ac249a447cf9"
+    }
+  ],
+  "submission": {
+    "title": "Verify milestone context after dialog labeling",
+    "fixture_requires_exact_milestone": true,
+    "dialog_count_after_submit": 0,
+    "response_opened": true,
+    "response_id": "QA-1",
+    "response_id_reuse_is_fixture_design": true
+  }
+}

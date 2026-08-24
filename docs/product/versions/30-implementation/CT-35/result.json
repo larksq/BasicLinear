@@ -1,0 +1,33 @@
+{
+  "schema_version": "ct35-implementation-result-v1",
+  "captured_at": "2026-08-20T04:55:27Z",
+  "verdict": "IMPLEMENTED_AWAITING_BROWSER_VERIFICATION",
+  "issue": {
+    "identifier": "CT-35",
+    "id": "d266f22e-39ef-43a8-8c69-753eb860c76a",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "checks": {
+    "focused_test_files": 1,
+    "focused_tests_passed": 4,
+    "combined_focused_test_files": 4,
+    "combined_focused_tests_passed": 16,
+    "complete_test_files": 16,
+    "complete_tests_passed": 89,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1917,
+    "css_bytes": 63366,
+    "projects_chunk_bytes": 28758,
+    "index_chunk_bytes": 277599,
+    "issues_chunk_bytes": 492048,
+    "browser_captures": 0,
+    "browser_verification": "deferred_permission_denied"
+  },
+  "source_hashes": {
+    "apps/web/src/issues.tsx": "5f554ced74edb433d63f7c06c3c9d4a118e61244784cf113f46c01a24b46013c",
+    "apps/web/tests/board-accessibility.test.ts": "0ad686501378572000df6c9ef8a5f69c0ac1b1117aed9dcedb6c97332e763ddf"
+  },
+  "outcomes_claimed": []
+}

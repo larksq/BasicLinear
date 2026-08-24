@@ -1,0 +1,42 @@
+{
+  "schema_version": "ct116-implementation-result-v1",
+  "captured_at": "2026-08-22T19:10:35Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_REVIEW_PASSED",
+  "issue": {
+    "identifier": "CT-116",
+    "id": "a0267e95-cffb-4dd2-ae3d-01dcc646f638",
+    "created_revision": 1,
+    "evidence_revision": 2,
+    "completion_revision": 3,
+    "status": "Done"
+  },
+  "source": {
+    "revision": "f7c362562fdf0657114a862331b893e470b824c0",
+    "tree": "7b5f5af4d6f0b5ead0f403f69d4695b82779194c"
+  },
+  "resolution": {
+    "shared_date_buffer": true,
+    "focused_partial_drafts_preserved": true,
+    "invalid_and_stale_drafts_restored": true,
+    "single_commit_boundary": true,
+    "issue_due_date_regression_preserved": true,
+    "project_and_milestone_bindings_complete": true,
+    "api_schema_scope_or_transfer_changed": false
+  },
+  "checks": {
+    "independent_focused_test_files": 5,
+    "independent_focused_tests_passed": 42,
+    "complete_test_files": 72,
+    "complete_tests_passed": 475,
+    "workspaces_typechecked": 8,
+    "release_audit_tests_passed": 10,
+    "vite_modules": 1952,
+    "build_warnings": 0,
+    "chrome_bounded_checks_passed": 10,
+    "independent_application_review": "passed",
+    "P-T21": "pending_requalification_for_f7c3625"
+  },
+  "browser_acceptance_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

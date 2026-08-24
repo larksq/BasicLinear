@@ -1,0 +1,36 @@
+{
+  "schema_version": "ct55-browser-status-v1",
+  "recorded_at": "2026-08-20T14:35:06Z",
+  "status": "deferred_permission_denied",
+  "planned_targets": {
+    "owner": "http://127.0.0.1:4181/?view=my-work&fixture=my-work",
+    "guest": "http://127.0.0.1:4181/?view=my-work&fixture=guest-readonly"
+  },
+  "synthetic_fixture": true,
+  "host_checks": 5,
+  "host_checks_passed": 5,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "The exact production bundle, owner and guest session contracts, and scoped issue query are reachable from the host, but access to the approved browser surface remains denied by the active security policy. The denied browser outcome was not retried through another browser surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": [
+    "Owner My work direct route list board search filters and detail",
+    "Owner Issues to My work rail command and history transitions",
+    "Owner My work create bulk quick-edit archive restore and saved-view boundary",
+    "Guest My work read-only list board search filters and detail",
+    "Workspace identity role offline loading empty and error transitions"
+  ],
+  "required_assertions": [
+    "every My work result is assigned to the signed-in user and general Issues remains unscoped",
+    "user filters cannot remove replace or contradict the fixed assignee scope",
+    "direct URLs reload back forward detail close and related navigation preserve the named destination and return context",
+    "My work creation defaults to the signed-in assignee while global creation retains general behavior",
+    "one current navigation item heading applied scope and enabled command active descendant are exposed",
+    "guest controls remain read-only and workspace or role transitions expose no stale rows or mutation state",
+    "desktop tablet and mobile layouts have zero overlap unintended wrapping clipped focus positive overflow duplicate IDs console warnings and console errors"
+  ]
+}

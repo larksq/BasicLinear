@@ -1,0 +1,110 @@
+{
+  "schema_version": "ct60-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-60",
+      "stable_id": "88178577-b499-496d-9f08-df3ae1da6902",
+      "starting_revision": 2,
+      "expected_checkpoint_revision": 3,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_browser_verification",
+      "requirement_refs": ["R-003", "R-010", "R-011", "R-104", "R-110"],
+      "acceptance_refs": ["P-T06", "P-T11", "P-T18", "P-T19"],
+      "outcome_refs": ["O-001", "O-002", "O-003"],
+      "allowed_mutation_paths": [
+        "apps/web/src/projects.tsx",
+        "apps/web/src/project-navigation.ts",
+        "apps/web/src/project-view-configuration.ts",
+        "apps/web/src/styles.css",
+        "apps/web/tests/project-navigation.test.ts",
+        "apps/web/tests/project-view-configuration.test.ts",
+        "apps/web/tests/layout-contract.test.ts",
+        "apps/web/tests/table-semantics.test.ts",
+        "scripts/serve-visual-fixture.mjs",
+        "docs/product/versions/v0.1.0/30-implementation/CT-60",
+        "docs/product/versions/v0.1.0/40-testing/CT-12",
+        "docs/product/versions/v0.1.0/50-outcome-review/CT-13",
+        "ops/release current-candidate provenance manifests"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT60-IMPL-20260820T170334Z",
+      "actor_id": "codex-project-view-configuration",
+      "issue_id": "CT-60",
+      "mode": "code_mutating",
+      "output_refs": [
+        "apps/web/src/projects.tsx",
+        "apps/web/src/project-navigation.ts",
+        "apps/web/src/project-view-configuration.ts",
+        "apps/web/src/styles.css",
+        "scripts/serve-visual-fixture.mjs"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-60/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-60/evidence.md",
+        "docs/product/versions/v0.1.0/30-implementation/CT-60/evidence/browser-status.json"
+      ]
+    }
+  ],
+  "checks": [
+    {"check_id": "CT60-PROJECT-VIEW-STATE", "issue_id": "CT-60", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-60/result.json"},
+    {"check_id": "CT60-PROJECT-GROUPING", "issue_id": "CT-60", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-60/result.json"},
+    {"check_id": "CT60-REGRESSION", "issue_id": "CT-60", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-60/result.json"},
+    {"check_id": "CT60-TYPECHECK", "issue_id": "CT-60", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-60/result.json"},
+    {"check_id": "CT60-BUILD", "issue_id": "CT-60", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-60/result.json"},
+    {"check_id": "CT60-FIXTURE-HOST", "issue_id": "CT-60", "status": "passed_after_environment_retry", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-60/evidence/browser-status.json"},
+    {"check_id": "CT60-BROWSER", "issue_id": "CT-60", "status": "blocked", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-60/evidence/browser-status.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-60",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-60/evidence.md",
+      "basis": "Focused and complete regression, all-workspace typecheck, fixture syntax, production build, source review, route/group/property contracts, and the two-team three-project HTTP matrix pass. Rendered desktop, tablet, and mobile verification remains unexecuted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["P-T06", "P-T11", "P-T18", "P-T19"],
+    "status": "blocked_pending_browser_surface",
+    "risk_areas": [
+      "URL restoration and history across group property and collapse state",
+      "semantic group ordering and collapse counts",
+      "expanded-row roving focus and menu recovery",
+      "conditional header data and loading alignment",
+      "responsive horizontal reachability and page containment",
+      "workspace and team scope preservation"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-60/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-60/evidence/browser-status.json"
+    ]
+  },
+  "outcomes": {
+    "claimed": [],
+    "pending": ["O-001", "O-002", "O-003"]
+  },
+  "blockers": [
+    "Approved browser access is unavailable for the required rendered desktop, tablet, mobile, accessibility, interaction, geometry, and UAT matrix."
+  ],
+  "stale_downstream_state": [
+    "CT-12 must include CT-60 automated evidence and retain the browser blocker.",
+    "CT-13 must audit the refreshed hash-bound release candidate after CT-60 and CT-12 reconciliation."
+  ],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issue": "CT-60",
+    "reason": "Run the bounded synthetic desktop, tablet, and mobile browser matrix before accepting or closing CT-60."
+  }
+}

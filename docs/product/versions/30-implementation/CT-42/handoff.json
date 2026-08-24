@@ -1,0 +1,127 @@
+{
+  "schema_version": "ct42-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-42",
+      "stable_id": "1c62e1a2-93eb-46aa-a8f1-40b52d22cd82",
+      "revision": 2,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_browser_verification",
+      "requirement_refs": ["R-004", "R-010", "R-104", "R-110"],
+      "acceptance_refs": ["R-004", "R-010", "R-104", "R-110"],
+      "outcome_refs": ["O-001", "O-002", "O-003"],
+      "allowed_mutation_paths": [
+        "apps/web/src/milestone-interactions.ts",
+        "apps/web/src/projects.tsx",
+        "apps/web/src/styles.css",
+        "apps/web/tests/milestone-interactions.test.ts",
+        "docs/product/versions/v0.1.0/30-implementation/CT-42"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT42-IMPL-20260820T065901Z",
+      "actor_id": "codex-milestone-inline-reorder",
+      "issue_id": "CT-42",
+      "mode": "code_mutating",
+      "output_refs": [
+        "apps/web/src/milestone-interactions.ts",
+        "apps/web/src/projects.tsx",
+        "apps/web/src/styles.css",
+        "apps/web/tests/milestone-interactions.test.ts"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-42/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-42/evidence.md"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "CT42-MILESTONE-INTERACTIONS",
+      "issue_id": "CT-42",
+      "status": "passed",
+      "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-42/result.json"
+    },
+    {
+      "check_id": "CT42-REGRESSION",
+      "issue_id": "CT-42",
+      "status": "passed",
+      "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-42/result.json"
+    },
+    {
+      "check_id": "CT42-TYPECHECK",
+      "issue_id": "CT-42",
+      "status": "passed",
+      "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-42/result.json"
+    },
+    {
+      "check_id": "CT42-BUILD",
+      "issue_id": "CT-42",
+      "status": "passed",
+      "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-42/result.json"
+    },
+    {
+      "check_id": "CT42-BROWSER",
+      "issue_id": "CT-42",
+      "status": "blocked",
+      "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-42/evidence/browser-status.json"
+    }
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-42",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-42/evidence.md#pending-browser-matrix",
+      "basis": "Focused interaction tests, the combined semantic regression, complete regression, typecheck, and production build pass. Final rendered inline-editor focus, ordered-row announcements, reorder focus recovery, error behavior, geometry, and responsive reachability are not yet asserted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["R-004", "R-010", "R-104", "R-110"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-42/changed-files.txt",
+    "regression_areas": [
+      "milestone inline creation",
+      "milestone ordered-list semantics",
+      "milestone keyboard reordering",
+      "milestone live announcements",
+      "milestone focus recovery",
+      "milestone archive visibility",
+      "project overview geometry",
+      "project overview responsive behavior"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-42/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-42/evidence.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-42/evidence/browser-status.json"
+    ],
+    "implementation_actor_ids": ["codex-milestone-inline-reorder"],
+    "implementation_session_ids": ["CT42-IMPL-20260820T065901Z"]
+  },
+  "outcomes": [
+    {"outcome_id": "O-001", "status": "pending"},
+    {"outcome_id": "O-002", "status": "pending"},
+    {"outcome_id": "O-003", "status": "pending"}
+  ],
+  "blockers": [
+    {
+      "id": "CT42-BROWSER-PERMISSION",
+      "description": "The approved local browser surface is unavailable under the active security policy; final desktop, tablet, and mobile milestone editor, reorder, focus, announcement, error, geometry, and assistive-technology verification remains required."
+    }
+  ],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issues": ["CT-42"],
+    "reason": "Run the bounded synthetic desktop, tablet, and mobile milestone inline-create and keyboard-reorder matrix when the local browser surface is approved."
+  }
+}

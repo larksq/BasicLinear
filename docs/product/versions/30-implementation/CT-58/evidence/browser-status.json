@@ -1,0 +1,57 @@
+{
+  "schema_version": "ct58-browser-status-v1",
+  "recorded_at": "2026-08-20T16:16:23Z",
+  "status": "deferred_permission_denied",
+  "planned_targets": {
+    "qa_issues": "http://127.0.0.1:4183/?workspace=20000000-0000-4000-8000-000000000023&view=issues&team=30000000-0000-4000-8000-000000000023&fixture=team-route",
+    "engineering_projects": "http://127.0.0.1:4183/?workspace=20000000-0000-4000-8000-000000000023&view=projects&team=30000000-0000-4000-8000-000000000025&fixture=team-route",
+    "cross_team_project": "http://127.0.0.1:4183/?workspace=20000000-0000-4000-8000-000000000023&view=projects&team=30000000-0000-4000-8000-000000000023&project=50000000-0000-4000-8000-000000000024&projectTab=overview&fixture=team-route",
+    "cross_team_issue": "http://127.0.0.1:4183/?workspace=20000000-0000-4000-8000-000000000023&view=issues&team=30000000-0000-4000-8000-000000000025&issue=70000000-0000-4000-8000-000000000023&fixture=team-route",
+    "invalid_team": "http://127.0.0.1:4183/?workspace=20000000-0000-4000-8000-000000000023&view=issues&team=90000000-0000-4000-8000-000000000099&issue=70000000-0000-4000-8000-000000000023&fixture=team-route"
+  },
+  "synthetic_fixture": true,
+  "fixture_process": {
+    "port": 4183,
+    "build": "production",
+    "managed_session": 19578,
+    "initial_sandbox_launch": "failed_listen_eperm",
+    "managed_launch": "passed"
+  },
+  "host_attempts": [
+    {
+      "attempt": 1,
+      "status": "failed_sandbox_network_namespace",
+      "checks_attempted": 6,
+      "connection_failures": 6,
+      "accepted_as_product_evidence": false
+    },
+    {
+      "attempt": 2,
+      "status": "passed_host_network",
+      "checks_attempted": 6,
+      "checks_passed": 6,
+      "observations": {
+        "application_html_status": 200,
+        "team_count": 2,
+        "qa_project_count": 1,
+        "engineering_project_count": 1,
+        "qa_issue_count": 2,
+        "engineering_issue_count": 1
+      }
+    }
+  ],
+  "browser_attempted": false,
+  "browser_captures": 0,
+  "rendered_assertions": 0,
+  "policy_reason": "The active security policy denies the approved browser surface. Alternate browser surfaces were not used.",
+  "acceptance_pending": [
+    "desktop tablet and mobile route rendering",
+    "sidebar and segmented-switcher pointer and keyboard operation",
+    "Back Forward reload and global scope escape",
+    "invalid removed and cross-team route cleanup without stale content",
+    "contextual issue and project creation locks",
+    "saved-view filter conflict handling",
+    "owner member and guest capability presentation",
+    "focus accessibility overflow responsive geometry and console checks"
+  ]
+}

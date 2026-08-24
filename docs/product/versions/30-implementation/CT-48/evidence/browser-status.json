@@ -1,0 +1,30 @@
+{
+  "schema_version": "ct48-browser-status-v1",
+  "recorded_at": "2026-08-20T10:21:56Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4181/",
+  "synthetic_fixture": true,
+  "host_checks": 4,
+  "host_checks_passed": 4,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "The deterministic fixture and API are reachable from the host, but access to the approved browser surface remains denied by the active security policy. The denied browser outcome was not retried through another browser surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": [
+    "Provider-disabled local sign in",
+    "Provider-enabled sign in and static failure state",
+    "Workspace authentication settings",
+    "Linked identity row and unlink confirmation"
+  ],
+  "required_assertions": [
+    "local password sign in remains visible and operable with the provider enabled or unavailable",
+    "link initiation requires the explicit same-origin authenticated command",
+    "success and static error states are announced without exposing claims or provider response details",
+    "long provider issuer and subject values truncate without changing control geometry",
+    "link and unlink controls have visible focus and accessible names",
+    "desktop and mobile layouts have zero overlap uncontained overflow duplicate IDs hidden focus console warnings and console errors"
+  ]
+}

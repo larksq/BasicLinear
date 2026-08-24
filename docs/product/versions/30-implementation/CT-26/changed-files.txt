@@ -1,0 +1,13 @@
+apps/web/src/issue-detail-route.ts
+apps/web/src/issues.tsx
+apps/web/src/styles.css
+apps/web/tests/issue-detail-route.test.ts
+apps/web/tests/layout-contract.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-26/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-26/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-26/evidence/ct26-contextual-desktop-1440x900.png
+docs/product/versions/v0.1.0/30-implementation/CT-26/evidence/ct26-direct-desktop-1440x900.png
+docs/product/versions/v0.1.0/30-implementation/CT-26/evidence/ct26-direct-mobile-390x844.png
+docs/product/versions/v0.1.0/30-implementation/CT-26/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-26/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-26/session.md

@@ -1,0 +1,14 @@
+{
+  "schema_version": "ct123-implementation-result-v1",
+  "captured_at": "2026-08-23T00:49:00Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_REVIEW_PENDING",
+  "issue": {"identifier": "CT-123", "id": "3b42279b-8221-4cd2-bcb9-50d00f97c34d", "revision": 2, "status": "In Progress"},
+  "source": {"commit": "e1299af1bd06f7438f5010c6f6c030760c5a1dfb", "candidate_tree": "ce6e21f1b0436e6afa1d11b1fc3f6ff471903bb3"},
+  "resolution": {"contextual_reset_passed": true, "direct_reset_passed": true, "canonical_list_state_restored": true, "issue_parameter_removed": true, "retained_draft_reopened": true, "fixture_restored": true, "api_or_persistence_changed": false},
+  "checks": {"focused": {"files": 3, "passed": 23}, "complete": {"files": 73, "passed": 481}, "typecheck_workspaces": 8, "release_audit_passed": 10, "build_modules": 1953, "build_warnings": 0, "direct_and_contextual_chrome_checks": 2},
+  "evidence": {"private_tranche_receipt": ".control-tower/evidence/CT-118-123/implementation-e1299af.json", "private_tranche_sha256": "3e2a81e8c0c03ad756af56591d5dedf10c772a47696de7ba5235693db38082a9", "accessibility_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/accessibility-current.json"},
+  "task_reconciliation": {"expected_revision": 1, "readback_revision": 2, "readback_status": "In Progress", "milestone": "S3 — Implementation", "store_health": "ready", "projection": "disabled_not_synced", "backup_ref": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-23T01-04-27-357Z-cd36db21-0de4-45ab-bc36-265e236a2aa1.json", "backup_bytes": 484907, "backup_package_sha256": "5f2c355d823e9f9301507bfcdcffb94f22fdf084ac8312f04351336bc8505cf3", "backup_file_sha256": "668a3d2f28dd071b28ce1068884c60970e7f1e7eaccba93595328ba092bd3f90", "backup_mode": "0600"},
+  "independent_application_review": "pending",
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

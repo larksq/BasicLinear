@@ -1,0 +1,121 @@
+{
+  "schema_version": "ct74-host-matrix-v1",
+  "captured_at": "2026-08-21T02:00:02Z",
+  "target": "http://127.0.0.1:4200/?workspace=20000000-0000-4000-8000-000000000023&view=workflow&fixture=workflow-status-reorder",
+  "synthetic_fixture": true,
+  "checks_attempted": 45,
+  "checks_passed": 45,
+  "checks_failed": 0,
+  "checks": [
+    "shell.status",
+    "shell.root",
+    "session.status",
+    "session.owner",
+    "teams.status",
+    "teams.two_scopes",
+    "initial.status",
+    "initial.main_count",
+    "initial.other_count",
+    "initial.unique_ids",
+    "initial.positions",
+    "initial.other_position",
+    "first.status",
+    "first.order",
+    "first.positions",
+    "first.revisions",
+    "first.persisted",
+    "first.other_unchanged",
+    "noop.status",
+    "noop.code",
+    "stale.status",
+    "stale.code",
+    "stale.current_revision",
+    "incomplete.status",
+    "duplicate.status",
+    "invalid_revision.status",
+    "cross_team.status",
+    "missing_team.status",
+    "cross_workspace.status",
+    "malformed.status",
+    "second.status",
+    "second.order",
+    "second.positions",
+    "concurrent_patch.status",
+    "concurrent_patch.revision",
+    "concurrent_reorder.status",
+    "concurrent_reorder.revision",
+    "conflict.order_unchanged",
+    "conflict.patch_persisted",
+    "final.status",
+    "final.order",
+    "final.positions",
+    "final.persisted",
+    "final.other_unchanged",
+    "final.unique_ids"
+  ],
+  "final_state": {
+    "main": [
+      {
+        "id": "40000000-0000-4000-8000-000000000027",
+        "name": "Ready for review",
+        "position": 100,
+        "revision": 4
+      },
+      {
+        "id": "40000000-0000-4000-8000-000000000023",
+        "name": "Changed elsewhere",
+        "position": 200,
+        "revision": 6
+      },
+      {
+        "id": "40000000-0000-4000-8000-000000000024",
+        "name": "Done",
+        "position": 300,
+        "revision": 4
+      }
+    ],
+    "other": [
+      {
+        "id": "40000000-0000-4000-8000-000000000026",
+        "name": "In development",
+        "position": 900,
+        "revision": 1
+      }
+    ]
+  },
+  "positions_normalized": true,
+  "secondary_team_unchanged": true,
+  "rejected_writes_preserved_state": true,
+  "partial_commit_observed": false,
+  "environment_attempts": [
+    {
+      "attempt": 1,
+      "status": "rejected_harness_envelope_assumption",
+      "reason": "The first host harness expected a bare response body instead of the production data envelope; no product result was inferred."
+    },
+    {
+      "attempt": 2,
+      "status": "rejected_incomplete_matrix",
+      "checks_passed": 43,
+      "reason": "The initial passing matrix lacked explicit unique-ID assertions; source review found a synthetic cross-team UUID collision, which was corrected before final evidence."
+    },
+    {
+      "attempt": 3,
+      "status": "passed_clean_host_network",
+      "checks_attempted": 45,
+      "checks_passed": 45
+    },
+    {
+      "attempt": 4,
+      "status": "rejected_nonclean_fixture_precondition",
+      "reason": "A recapture reused the already-mutated fixture and correctly received a semantic no-op rejection for the concurrent PATCH; the fixture was restarted."
+    },
+    {
+      "attempt": 5,
+      "status": "passed_clean_host_network_after_restart",
+      "checks_attempted": 45,
+      "checks_passed": 45
+    }
+  ],
+  "browser_assertions_claimed": 0
+}

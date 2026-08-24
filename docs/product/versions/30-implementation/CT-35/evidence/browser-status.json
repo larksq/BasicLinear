@@ -1,0 +1,25 @@
+{
+  "schema_version": "ct35-browser-status-v1",
+  "recorded_at": "2026-08-20T04:55:27Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4180/",
+  "synthetic_fixture": true,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "Access to the local browser surface remains denied by the active security policy. The denied browser outcome was not retried through another surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": ["Issues board"],
+  "required_assertions": [
+    "one roving card tab stop per populated board column",
+    "Arrow Up Arrow Down J and K focus mounted and initially unmounted cards",
+    "Enter opens and Space selects the focused card",
+    "nested checkbox keys do not trigger card commands",
+    "status and priority text are exposed to assistive technology",
+    "focus remains visible and every card stays reachable through vertical and horizontal scrolling",
+    "zero uncontained positive horizontal overflow and zero duplicate IDs",
+    "zero console warnings and errors"
+  ]
+}

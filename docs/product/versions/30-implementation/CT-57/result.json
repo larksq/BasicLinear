@@ -1,0 +1,48 @@
+{
+  "schema_version": "ct57-implementation-result-v1",
+  "captured_at": "2026-08-20T15:36:14Z",
+  "verdict": "IMPLEMENTED_AWAITING_BROWSER_VERIFICATION",
+  "issue": {
+    "identifier": "CT-57",
+    "id": "d14f5128-4c15-43e9-96a0-8b34f2e12204",
+    "implementation_revision": 1,
+    "expected_checkpoint_revision": 2
+  },
+  "checks": {
+    "focused_test_files": 2,
+    "focused_tests_passed": 20,
+    "complete_test_files": 37,
+    "complete_tests_passed": 232,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "fixture_syntax": "passed",
+    "database_verification": "not_rerun_web_only_production_database_paths_unchanged",
+    "vite_modules": 1932,
+    "css_bytes": 79386,
+    "saved_views_chunk_bytes": 9989,
+    "projects_chunk_bytes": 41116,
+    "issues_chunk_bytes": 122569,
+    "index_chunk_bytes": 281557,
+    "editor_chunk_bytes": 402713,
+    "runtime_chunk_bytes": 589,
+    "archive_chunk_bytes": 529,
+    "html_bytes": 663,
+    "final_vite_chunk_warning": false,
+    "fixture_host_attempts": 2,
+    "initial_fixture_attempt": "failed_detached_process_not_retained",
+    "fixture_host_checks": 6,
+    "fixture_host_checks_passed": 6,
+    "cross_workspace_project_status": 404,
+    "browser_captures": 0,
+    "browser_assertions_claimed": 0,
+    "browser_verification": "deferred_permission_denied"
+  },
+  "source_hashes": {
+    "apps/web/src/App.tsx": "71fd62568d40b2bb7a9861af75bbb8c71493941099967badcaeee4ab7a47cacb",
+    "apps/web/src/workspace-navigation.ts": "b7ef1ce56eeaf2d2db736ceb349862a7b092d25447e1a18b7e6f412fc976314f",
+    "apps/web/tests/workspace-navigation.test.ts": "2d3bbe6eb4c52afb4311710931ee4b506e9a276019e71f243cf3b0accf5d58e3",
+    "apps/web/tests/layout-contract.test.ts": "20701d5675349767259494dc4981a18de6d2d504faccef71a89cddb4843d895d",
+    "scripts/serve-visual-fixture.mjs": "fd86d81709f0440a6568c12fdfaf6abc1dab6ec8de62fe1103b9ce212ea344a9"
+  },
+  "outcomes_claimed": []
+}

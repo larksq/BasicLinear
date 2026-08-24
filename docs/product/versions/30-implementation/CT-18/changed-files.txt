@@ -1,0 +1,6 @@
+ops/compose/Dockerfile
+docs/product/versions/v0.1.0/30-implementation/CT-18/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-18/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-18/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-18/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-18/session.md

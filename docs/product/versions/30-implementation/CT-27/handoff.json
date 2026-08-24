@@ -1,0 +1,106 @@
+{
+  "schema_version": "ct27-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "passed",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-27",
+      "stable_id": "ca48a764-bafd-4140-868e-4abccd142f59",
+      "revision": 2,
+      "accepted": true,
+      "blocked": false,
+      "status": "output_done",
+      "requirement_refs": ["R-015", "R-108"],
+      "acceptance_refs": ["R-015", "R-108"],
+      "outcome_refs": ["O-005"],
+      "allowed_mutation_paths": [
+        ".gitignore",
+        ".dockerignore",
+        "ops/release/audit-policy.json",
+        "scripts/tests/audit-public-release.test.mjs",
+        "docs/product/versions/v0.1.0/30-implementation/CT-27"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT27-IMPL-20260820T023955Z",
+      "actor_id": "codex-release-hygiene",
+      "issue_id": "CT-27",
+      "mode": "code_mutating",
+      "output_refs": [
+        ".gitignore",
+        ".dockerignore",
+        "ops/release/audit-policy.json",
+        "scripts/tests/audit-public-release.test.mjs"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-27/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-27/evidence.md"
+      ]
+    },
+    {
+      "session_id": "CT27-REVIEW-20260820T024109Z",
+      "actor_id": "codex-release-hygiene-reviewer",
+      "issue_id": "CT-27",
+      "mode": "review_only",
+      "output_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-27/changed-files.txt",
+        "docs/product/versions/v0.1.0/30-implementation/CT-27/evidence.md",
+        "docs/product/versions/v0.1.0/30-implementation/CT-27/handoff.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-27/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-27/session.md"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-27/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-27/evidence.md"
+      ]
+    }
+  ],
+  "checks": [
+    {"check_id":"CT27-IGNORE-CONTRACT","issue_id":"CT-27","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-27/evidence.md"},
+    {"check_id":"CT27-RELEASE-AUDIT-REGRESSION","issue_id":"CT-27","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-27/result.json"},
+    {"check_id":"CT27-PREFLIGHT","issue_id":"CT-27","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/50-outcome-review/CT-13/preflight-result.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-27",
+      "status": "passed",
+      "independent": true,
+      "review_actor_id": "codex-release-hygiene-reviewer",
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-27/evidence.md#verification",
+      "basis": "A separate review-only pass checked the three-layer ignore contract, the synthesized secret-shaped fixture, exact 402-to-352 exclusion delta, written-preflight absence, private scan, and expected gated audit result."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["R-015", "R-108"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-27/changed-files.txt",
+    "regression_areas": [
+      "source candidate walking",
+      "container build context",
+      "private artifact scanning",
+      "release provenance inventories"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-27/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-27/evidence.md"
+    ],
+    "implementation_actor_ids": ["codex-release-hygiene", "codex-release-hygiene-reviewer"],
+    "implementation_session_ids": ["CT27-IMPL-20260820T023955Z", "CT27-REVIEW-20260820T024109Z"]
+  },
+  "outcomes": [
+    {"outcome_id":"O-005","status":"pending"}
+  ],
+  "blockers": [],
+  "next": {
+    "skill": "ct-review-outcomes",
+    "issues": ["CT-13"],
+    "reason": "Refresh the stable P-T22 candidate after attaching CT-27 evidence while preserving the upstream CT-3 and CT-12 gates."
+  }
+}

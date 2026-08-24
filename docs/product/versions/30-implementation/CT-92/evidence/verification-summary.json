@@ -1,0 +1,41 @@
+{
+  "schema_version": "ct92-verification-summary-v1",
+  "captured_at": "2026-08-21T11:11:57Z",
+  "issue": "CT-92",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "checks": {
+    "focused_test_files": 1,
+    "focused_tests_passed": 5,
+    "complete_test_files": 59,
+    "complete_tests_passed": 404,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1947,
+    "dist_files": 109,
+    "dist_bytes": 1870112,
+    "build_warnings": 0,
+    "release_audit_tests_passed": 6,
+    "release_audit_tests_failed": 0,
+    "loopback_readiness": "ready",
+    "served_candidate_current": true,
+    "rendered_browser_captures": 0
+  },
+  "query_recovery_contract": {
+    "shared_named_retry_state": true,
+    "one_alert_per_blocking_failure": true,
+    "correlation_identifier_preserved": true,
+    "initial_failures_state_exclusive": true,
+    "stale_data_preserved": true,
+    "mutation_feedback_separate": true,
+    "exact_failed_query_retry": true,
+    "false_empty_actions_blocked": true,
+    "responsive_long_message_containment": true
+  },
+  "chrome_connection_attempts": 6,
+  "browser_acceptance": "blocked_chrome_control_unavailable",
+  "outcomes_claimed": []
+}

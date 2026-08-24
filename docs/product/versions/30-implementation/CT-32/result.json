@@ -1,0 +1,34 @@
+{
+  "schema_version": "ct32-implementation-result-v1",
+  "captured_at": "2026-08-20T04:27:18Z",
+  "verdict": "IMPLEMENTED_AWAITING_BROWSER_VERIFICATION",
+  "issue": {
+    "identifier": "CT-32",
+    "id": "63935cd7-949b-4ebe-8e9c-cf52e57988df",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "checks": {
+    "focused_test_files": 1,
+    "focused_tests_passed": 4,
+    "combined_focused_test_files": 2,
+    "combined_focused_tests_passed": 11,
+    "complete_test_files": 13,
+    "complete_tests_passed": 77,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1917,
+    "css_bytes": 63366,
+    "projects_chunk_bytes": 28638,
+    "index_chunk_bytes": 277149,
+    "issues_chunk_bytes": 490793,
+    "browser_captures": 0,
+    "browser_verification": "deferred_permission_denied"
+  },
+  "source_hashes": {
+    "apps/web/src/App.tsx": "85a7751a888a9901c4c3c40bc8910d6537824ae65e0fc5e2d2534ce12dc359e3",
+    "apps/web/src/command-palette.ts": "e924136ea5f6b4e38fd9635ccd2cf2aab3a80ef7d566c89e0b1f4009d9f1eac4",
+    "apps/web/tests/command-palette.test.ts": "bd4e9623a2add331cb8631e94c10d9b8c99ce3ca79739b86b86fa008a481791d"
+  },
+  "outcomes_claimed": []
+}

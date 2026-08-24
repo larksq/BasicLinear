@@ -1,0 +1,74 @@
+{
+  "schema_version": "ct78-implementation-handoff-v1",
+  "stage": "implementation.testing-handoff",
+  "status": "implementation_complete_testing_pending",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issue": {
+    "identifier": "CT-78",
+    "stable_id": "3e63d5bb-8442-4441-b5bb-99cb3f8cbab9",
+    "starting_revision": 4,
+    "expected_completion_revision": 5,
+    "completion_revision": 5,
+    "status": "Done",
+    "implementation_complete": true,
+    "product_accepted": false,
+    "requirement_refs": ["R-001", "R-002", "R-003", "R-005", "R-008", "R-009", "R-010", "R-101", "R-107", "R-109", "R-110"],
+    "acceptance_refs": ["P-T03", "P-T04", "P-T10", "P-T11", "P-T13", "P-T16", "P-T18", "P-T19", "P-T21"]
+  },
+  "session": {
+    "session_id": "CT78-IMPL-20260821T042100Z",
+    "actor_id": "codex-single-owner-surface",
+    "mode": "code_mutating",
+    "result_ref": "docs/product/versions/v0.1.0/30-implementation/CT-78/result.json"
+  },
+  "checks": [
+    { "check_id": "CT78-FOCUSED", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-78/result.json" },
+    { "check_id": "CT78-REGRESSION", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-78/result.json" },
+    { "check_id": "CT78-TYPECHECK", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-78/result.json" },
+    { "check_id": "CT78-BUILD", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-78/result.json" },
+    { "check_id": "CT78-HOST", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-78/evidence/host-matrix.json" },
+    { "check_id": "CT78-DATABASE", "status": "skipped_unconfigured", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-78/evidence/database-status.json" },
+    { "check_id": "CT78-BROWSER", "status": "blocked", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-78/evidence/browser-status.json" },
+    { "check_id": "CT78-RELEASE", "status": "not_ready_downstream", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-78/result.json" }
+  ],
+  "review": {
+    "source_review_complete": true,
+    "independent": false,
+    "blocking_findings": 0,
+    "independent_acceptance_owner": "CT-12"
+  },
+  "control_tower_readback": {
+    "CT-78": "Done@5",
+    "CT-12": "In Progress@58",
+    "CT-13": "Todo@59",
+    "store_health": "ready",
+    "provider_projection": "disabled_not_synced"
+  },
+  "testing_handoff": {
+    "status": "pending_sqlite_runtime_and_rendered_acceptance",
+    "risk_areas": [
+      "first-run and returning-owner behavior on the final one-process SQLite runtime",
+      "one-scope canonical migration and multi-scope fail-closed behavior",
+      "restart cookie and multiple-tab recovery",
+      "loopback Host Origin and CSRF enforcement after legacy auth removal",
+      "responsive navigation and long record containment",
+      "keyboard focus and accessibility-tree behavior with owner-context loading and errors"
+    ],
+    "next_implementation": ["CT-80", "CT-81"],
+    "next_testing": ["CT-12", "CT-82"]
+  },
+  "outcomes": {
+    "claimed": [],
+    "pending": ["O-001", "O-002", "O-003", "O-004"]
+  },
+  "blockers": [
+    "Rendered browser and UAT acceptance is unavailable under the established browser policy.",
+    "The PostgreSQL transition runner is unconfigured; CT-80 and CT-82 must execute migration, restart, and recovery checks.",
+    "The public release audit remains NOT_READY on independent legal, provenance, clean-host, revision, and accountable-review gates."
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": "ct28-implementation-result-v1",
+  "captured_at": "2026-08-20T03:00:30Z",
+  "verdict": "OUTPUT_DONE_FOR_CT12",
+  "issue": {
+    "identifier": "CT-28",
+    "id": "b668e4eb-2e44-44c3-8dd3-a31ecfa081b4",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "checks": {
+    "focused_test_files": 2,
+    "focused_tests_passed": 12,
+    "complete_test_files": 12,
+    "complete_tests_passed": 57,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1916,
+    "css_bytes": 55190,
+    "projects_chunk_bytes": 28232,
+    "index_chunk_bytes": 271336,
+    "issues_chunk_bytes": 490238,
+    "browser_captures": 4,
+    "named_busy_statuses_per_capture": 1,
+    "focusable_skeleton_nodes": 0,
+    "positive_horizontal_overflow_px": 0,
+    "outside_focusable_controls": 0,
+    "duplicate_ids": 0,
+    "console_warnings": 0,
+    "console_errors": 0
+  },
+  "source_hashes": {
+    "apps/web/src/components.tsx": "02f1656c00e91ef446a56f352ea44d46f2431c28e03fd756dde237c827117625",
+    "apps/web/src/App.tsx": "c8caeb275a36da34b392a2ab93a512c5fd9b870c1757a0007466a4b4c403546a",
+    "apps/web/src/projects.tsx": "6823b9ff112e3f1c5a09f9353ab0bc79d7bc6904adaa927f464b4e452ce57a5e",
+    "apps/web/src/issues.tsx": "d3d6cf87916779c5a501ed7f250689bb1ab19863b87bb96085fc1cc9715d570f",
+    "apps/web/src/styles.css": "45b4bf0d143066fd3f051ab2d314e3256e43e369ab0852e547abd7a6adfe4fd1",
+    "apps/web/tests/loading-skeleton.test.ts": "e6961c07af8b21e7c13149cc03ae748079979f9cdcffd0b924dc353480c3d98e",
+    "apps/web/tests/layout-contract.test.ts": "3b40fb221ad62b41e63e738841852942ea0db20f634564c5cfcfe5298c8a2943",
+    "scripts/serve-visual-fixture.mjs": "ead23bba61537e1ac4d926410d056754d5b756511171c22c49c4cc91cf373295"
+  },
+  "screenshot_hashes": {
+    "ct28-detail-loading-desktop-1440x900.png": "f1e1fa5f3dd6ee1707260f0e4a389585001c7aa7af3734811b83fc8581e908a8",
+    "ct28-detail-loading-mobile-390x844.png": "e633fdd2d9b2840387a86c6acf2f3262a306066d97ba65ff7eb6ec47984b534e",
+    "ct28-issues-loading-desktop-1440x900.png": "1691bc3970742e86ee22334063f9544b65e7d54a35d62aa07b4201281495c6bc",
+    "ct28-issues-loading-mobile-390x844.png": "f9748ca921804c01747789968108762aa718692145425bc816e1b7d9cb7f07ff"
+  },
+  "outcomes_claimed": []
+}

@@ -1,0 +1,184 @@
+{
+  "schema_version": "ct12-performance-current-v5",
+  "captured_at": "2026-08-23T02:15:17.471Z",
+  "authority": {
+    "issue": "CT-12",
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "candidate": {
+    "product_revision": "e1299af1bd06f7438f5010c6f6c030760c5a1dfb",
+    "product_tree": "ce6e21f1b0436e6afa1d11b1fc3f6ff471903bb3",
+    "evidence_head_at_capture": "b381f1c8b2ff42fdf969fbafb082a5347412bfae",
+    "browser": "Chrome 150.0.7871.184",
+    "platform": "macOS",
+    "loaded_asset": "assets/index-CpxWfAtI.js",
+    "runtime": "isolated loopback Node 24 process with a retained dedicated temporary schema-2 SQLite file",
+    "synthetic_data_only": true,
+    "release_fixture_touched": false,
+    "viewport": {
+      "requested": {
+        "width": 1440,
+        "height": 1000,
+        "device_pixel_ratio": 1
+      },
+      "observed": {
+        "width": 1440,
+        "height": 1000,
+        "device_pixel_ratio": 1
+      },
+      "override_reflected": true
+    }
+  },
+  "fixture": {
+    "active_issues": 2002,
+    "minimum_sequence": 1,
+    "maximum_sequence": 2002,
+    "represented_statuses": 5,
+    "database_sha256": "90c114c1402348fd5c4ec93e4429a4a7748d4e112cf5d14ab612436e58e7e42d",
+    "database_bytes": 1212416,
+    "database_mode": "0600"
+  },
+  "interaction_timing": {
+    "instrumentation": {
+      "start_mark": "openlinear-issue-navigation-start",
+      "end_mark": "openlinear-issue-navigation-end",
+      "measure": "openlinear-issue-navigation",
+      "visible_readback": "document.documentElement.dataset.issueNavigationMs",
+      "measurement_scope": "in-page contextual issue selection to loaded visible issue detail",
+      "automation_round_trip_excluded": true,
+      "quantile_method": "nearest_rank",
+      "accepted_p75_threshold_ms": 100
+    },
+    "warmup_diagnostic": {
+      "count": 10,
+      "min_ms": 55.1,
+      "p50_ms": 94.2,
+      "p75_ms": 129.6,
+      "p95_ms": 212,
+      "max_ms": 212,
+      "passed": false,
+      "acceptance_used": false
+    },
+    "retained_quiescent_attempts": [
+      {
+        "attempt": 1,
+        "count": 20,
+        "min_ms": 32.2,
+        "p50_ms": 67,
+        "p75_ms": 107.4,
+        "p95_ms": 137.8,
+        "max_ms": 154.7,
+        "passed": false,
+        "accepted": false
+      },
+      {
+        "attempt": 2,
+        "count": 20,
+        "min_ms": 37.4,
+        "p50_ms": 46,
+        "p75_ms": 53,
+        "p95_ms": 73.4,
+        "max_ms": 110,
+        "passed": true,
+        "accepted": true
+      }
+    ],
+    "accepted_quiescent_run": {
+      "attempt": 2,
+      "count": 20,
+      "min_ms": 37.4,
+      "p50_ms": 46,
+      "p75_ms": 53,
+      "p95_ms": 73.4,
+      "max_ms": 110,
+      "passed": true,
+      "accepted": true,
+      "purpose": "identical 20 adjacent forward-and-return transitions after a ten-second quiescence interval",
+      "cache_state": "fully warmed by the retained identical prior contract"
+    }
+  },
+  "virtualization": {
+    "sample_scroll_tops": [
+      0,
+      1200,
+      13200,
+      37199.5,
+      71422
+    ],
+    "initial_mounted_rows": 27,
+    "maximum_observed_mounted_rows": 35,
+    "bottom_mounted_rows": 27,
+    "accepted_maximum_mounted_rows": 70,
+    "row_overlap_failures": 0,
+    "document_overflow_failures": 0,
+    "rows_outside_scrollable_range": 0,
+    "passed": true
+  },
+  "stable_frame": {
+    "settle_ms": 1800,
+    "interval_ms": 500,
+    "bytesA": 109591,
+    "bytesB": 109591,
+    "sha256A": "67775e43523a6e84909be00c5fbe84af2f989e9abee9c71fab8740d75c29f614",
+    "sha256B": "67775e43523a6e84909be00c5fbe84af2f989e9abee9c71fab8740d75c29f614",
+    "byte_delta": 0,
+    "pixel_delta": 0,
+    "accepted_pixel_delta": 0,
+    "passed": true,
+    "private_frame_a": ".control-tower/evidence/CT-12/performance-current-e1299af-frame-a.jpg",
+    "private_frame_b": ".control-tower/evidence/CT-12/performance-current-e1299af-frame-b.jpg",
+    "public_frame_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/virtualization-2002-issues-1440x1000.jpg"
+  },
+  "geometry": {
+    "activeText": "2002 active",
+    "alerts": 0,
+    "assets": [
+      "http://127.0.0.1:4286/assets/index-CpxWfAtI.js"
+    ],
+    "clientHeight": 650,
+    "computedColorScheme": "light",
+    "documentOverflowX": 0,
+    "firstIndex": 0,
+    "label": "top",
+    "lastIndex": 26,
+    "maximumScrollTop": 71422,
+    "mountedRows": 27,
+    "overscanRowsOutsideViewport": 8,
+    "rowOverlaps": 0,
+    "rowsOutsideScrollableRange": 0,
+    "scrollHeight": 72072,
+    "scrollTop": 0,
+    "themeColor": "#f7f7f8",
+    "topbarHeight": 44,
+    "viewport": {
+      "height": 1000,
+      "width": 1440
+    },
+    "visibleRows": 19,
+    "passed": true
+  },
+  "system_mode_boundary": {
+    "preference_checked": "System",
+    "current_host_direction_observed": "light",
+    "computed_color_scheme": "light",
+    "theme_color": "#f7f7f8",
+    "two_direction_live_response_accepted": false,
+    "reason": "Pending the separately controlled live System-direction check."
+  },
+  "result": "performance_pass_exact_revision_live_system_bidirectional_open",
+  "full_p_t20_accepted": false,
+  "full_ct12_acceptance": false,
+  "limitations": [
+    "The retained first quiescent attempt missed p75 at 107.4 ms; the identical fully warmed accepted run passed at 53.0 ms.",
+    "Live two-direction System appearance behavior remains a separately authorized P-T20 gate.",
+    "This performance tranche does not replace P-T18, P-T19, independent acceptance, or release acceptance."
+  ],
+  "raw_evidence": {
+    "private_ref": ".control-tower/evidence/CT-12/performance-current-e1299af-raw.json",
+    "private_sha256": "d83b690fd022bf67008f903e6909aa061dee44a460eb23fc7bdafc08475e20a8",
+    "private_bytes": 21666,
+    "private_mode": "0600"
+  }
+}

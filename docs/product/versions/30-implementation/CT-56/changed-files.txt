@@ -1,0 +1,13 @@
+apps/web/src/App.tsx
+apps/web/src/projects.tsx
+apps/web/src/project-navigation.ts
+apps/web/src/workspace-navigation.ts
+apps/web/tests/project-navigation.test.ts
+apps/web/tests/workspace-navigation.test.ts
+apps/web/tests/layout-contract.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-56/session.md
+docs/product/versions/v0.1.0/30-implementation/CT-56/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-56/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-56/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-56/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-56/evidence/browser-status.json

@@ -1,0 +1,78 @@
+{
+  "schema_version": "ct71-host-matrix-v1",
+  "captured_at": "2026-08-21T00:01:25Z",
+  "target": "http://127.0.0.1:4197/?workspace=20000000-0000-4000-8000-000000000023&view=issues&fixture=issue-relation-directions&issue=70000000-0000-4000-8000-000000000023",
+  "synthetic_fixture": true,
+  "checks_attempted": 39,
+  "checks_passed": 39,
+  "checks_failed": 0,
+  "checks": [
+    "fixture html responds",
+    "fixture session is owner",
+    "cross-team fixture exposes two teams",
+    "workspace relation candidates include three issues",
+    "cross-team relation candidate is present",
+    "initial current issue has one relation",
+    "initial inverse direction is blocked by",
+    "initial canonical blocker is cross-team issue",
+    "canonical source reads blocks direction",
+    "blocks command is accepted",
+    "blocks command preserves canonical endpoints",
+    "blocks command reads forward direction",
+    "target reads blocked-by inverse",
+    "parent canonical command is accepted",
+    "current target reads parent direction",
+    "sub-issue command is accepted",
+    "child reads parent inverse",
+    "duplicate-of command is accepted",
+    "duplicate target reads duplicates inverse",
+    "inverse duplicate canonical command is accepted",
+    "current target can read duplicates direction",
+    "related command is accepted",
+    "related direction is symmetric",
+    "idempotency replay returns the same relation",
+    "blocking cycle is rejected",
+    "parent cycle is rejected",
+    "duplicate cycle is rejected",
+    "duplicate edge is rejected",
+    "self relation is rejected",
+    "unsupported relation type is rejected",
+    "missing target is rejected",
+    "stale removal is rejected with current revision",
+    "stale removal preserves relation state",
+    "confirmed removal succeeds without body",
+    "final current directions converge",
+    "final second issue directions converge",
+    "final cross-team directions converge",
+    "final canonical relation count is six",
+    "removed related relation is absent everywhere"
+  ],
+  "final_state": {
+    "current_issue_directions": ["blocked_by", "blocks", "duplicate_of", "parent", "sub_issue"],
+    "second_issue_directions": ["blocked_by", "duplicate_of", "duplicates", "sub_issue"],
+    "cross_team_issue_directions": ["blocks", "duplicates", "parent"],
+    "canonical_relations": 6,
+    "relation_references": 12,
+    "removed_relation_present": false
+  },
+  "rejected_writes_preserved_state": true,
+  "environment_and_harness_attempts": [
+    {
+      "attempt": 1,
+      "status": "sandbox_bind_and_connect_denied",
+      "reason": "The sandbox could not bind or connect to the local fixture; this environment result was rejected as product evidence."
+    },
+    {
+      "attempt": 2,
+      "status": "host_harness_rejected",
+      "reason": "The host network reached the fixture, but the first harness treated HTML as JSON. The harness parser was corrected without changing product or fixture code."
+    },
+    {
+      "attempt": 3,
+      "status": "passed_host_network",
+      "checks_attempted": 39,
+      "checks_passed": 39
+    }
+  ],
+  "browser_assertions_claimed": 0
+}

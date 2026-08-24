@@ -1,0 +1,120 @@
+{
+  "schema_version": "ct47-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_database_and_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-47",
+      "stable_id": "aa72195b-c2d5-45b2-956e-3421aacc8dc0",
+      "revision": 2,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_database_and_browser_verification",
+      "requirement_refs": ["R-003", "R-007", "R-013", "R-104", "R-107", "R-110"],
+      "acceptance_refs": ["P-T06", "P-T07", "P-T14", "P-T18", "P-T19"],
+      "outcome_refs": ["O-001", "O-002", "O-003", "O-004"],
+      "allowed_mutation_paths": [
+        "packages/contracts/src/index.ts",
+        "packages/contracts/tests/rich-text.test.ts",
+        "packages/db/migrations/008_project_rich_overviews.sql",
+        "packages/db/src/types.ts",
+        "packages/db/src/project-repository.ts",
+        "packages/db/tests/transfer.integration.test.ts",
+        "apps/api/tests/projects.integration.test.ts",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/projects.tsx",
+        "apps/web/src/styles.css",
+        "apps/web/tests/project-rich-overview.test.ts",
+        "scripts/serve-visual-fixture.mjs",
+        "docs/product/versions/v0.1.0/30-implementation/CT-47"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT47-IMPL-20260820T092354Z",
+      "actor_id": "codex-project-rich-overview",
+      "issue_id": "CT-47",
+      "mode": "code_mutating",
+      "output_refs": [
+        "packages/contracts/src/index.ts",
+        "packages/db/migrations/008_project_rich_overviews.sql",
+        "packages/db/src/types.ts",
+        "packages/db/src/project-repository.ts",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/projects.tsx",
+        "apps/web/src/styles.css",
+        "scripts/serve-visual-fixture.mjs"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-47/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-47/evidence.md"
+      ]
+    }
+  ],
+  "checks": [
+    {"check_id": "CT47-RICH-TEXT-CONTRACT", "issue_id": "CT-47", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-47/result.json"},
+    {"check_id": "CT47-REGRESSION", "issue_id": "CT-47", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-47/result.json"},
+    {"check_id": "CT47-TYPECHECK", "issue_id": "CT-47", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-47/result.json"},
+    {"check_id": "CT47-BUILD", "issue_id": "CT-47", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-47/result.json"},
+    {"check_id": "CT47-DATABASE", "issue_id": "CT-47", "status": "blocked", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-47/evidence.md#pending-database-matrix"},
+    {"check_id": "CT47-BROWSER", "issue_id": "CT-47", "status": "blocked", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-47/evidence/browser-status.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-47",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-47/evidence.md",
+      "basis": "Focused and complete regression, typecheck, build, shared-schema review, redacted-activity review, migration source review, and deterministic fixture review pass. PostgreSQL-backed and rendered verification remain unexecuted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["P-T06", "P-T07", "P-T14", "P-T18", "P-T19"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-47/changed-files.txt",
+    "regression_areas": [
+      "shared rich-text request and response schema",
+      "project rich-document normalization and safe links",
+      "same-length edit detection and activity redaction",
+      "migration 008 and populated pre-008 backup verification",
+      "canonical export import backup and restore",
+      "project create and edit rich-text workflows",
+      "semantic overview rendering and archive guards",
+      "dialog and responsive geometry"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-47/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-47/evidence.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-47/evidence/browser-status.json"
+    ],
+    "implementation_actor_ids": ["codex-project-rich-overview"],
+    "implementation_session_ids": ["CT47-IMPL-20260820T092354Z"]
+  },
+  "outcomes": [
+    {"outcome_id": "O-001", "status": "pending"},
+    {"outcome_id": "O-002", "status": "pending"},
+    {"outcome_id": "O-003", "status": "pending"},
+    {"outcome_id": "O-004", "status": "pending"}
+  ],
+  "blockers": [
+    {
+      "id": "CT47-DATABASE-ENVIRONMENT",
+      "description": "The isolated PostgreSQL integration URL and application password are absent; migration, persistence, activity, restart, transfer, backup/restore, and populated pre-008 upgrade execution remain required."
+    },
+    {
+      "id": "CT47-BROWSER-PERMISSION",
+      "description": "The approved local browser surface is unavailable under the active security policy; final desktop, tablet, and mobile editor, semantic output, focus, accessibility, and responsive geometry verification remains required."
+    }
+  ],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issues": ["CT-47"],
+    "reason": "Run the isolated PostgreSQL suite and bounded synthetic desktop, tablet, and mobile rich-project-overview matrix when those approved surfaces are available."
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": "ct28-browser-matrix-v1",
+  "captured_at": "2026-08-20T03:00:30Z",
+  "browser": "Codex in-app browser",
+  "target": "http://127.0.0.1:4180",
+  "synthetic_fixture": true,
+  "captures": [
+    {
+      "surface": "issues-loading",
+      "viewport": {"width": 1440, "height": 900},
+      "status": {"count": 1, "text": "Loading issues", "aria_busy": "true", "aria_live": "polite"},
+      "status_rect": {"x": 268, "y": 241, "width": 1136, "height": 343},
+      "interactive_inside_status": 0,
+      "positive_horizontal_overflow_px": 0,
+      "outside_focusable_controls": 0,
+      "duplicate_ids": 0,
+      "visual_overlap_observed": false,
+      "console_warnings": 0,
+      "console_errors": 0,
+      "screenshot": "ct28-issues-loading-desktop-1440x900.png",
+      "screenshot_sha256": "1691bc3970742e86ee22334063f9544b65e7d54a35d62aa07b4201281495c6bc"
+    },
+    {
+      "surface": "issue-detail-loading",
+      "viewport": {"width": 1440, "height": 900},
+      "status": {"count": 1, "text": "Loading issue details", "aria_busy": "true", "aria_live": "polite"},
+      "status_rect": {"x": 286, "y": 91, "width": 1100, "height": 620},
+      "interactive_inside_status": 0,
+      "positive_horizontal_overflow_px": 0,
+      "outside_focusable_controls": 0,
+      "duplicate_ids": 0,
+      "visual_overlap_observed": false,
+      "console_warnings": 0,
+      "console_errors": 0,
+      "screenshot": "ct28-detail-loading-desktop-1440x900.png",
+      "screenshot_sha256": "f1e1fa5f3dd6ee1707260f0e4a389585001c7aa7af3734811b83fc8581e908a8"
+    },
+    {
+      "surface": "issues-loading",
+      "viewport": {"width": 390, "height": 844},
+      "status": {"count": 1, "text": "Loading issues", "aria_busy": "true", "aria_live": "polite"},
+      "status_rect": {"x": 12, "y": 349, "width": 366, "height": 343},
+      "interactive_inside_status": 0,
+      "positive_horizontal_overflow_px": 0,
+      "outside_focusable_controls": 0,
+      "duplicate_ids": 0,
+      "visual_overlap_observed": false,
+      "console_warnings": 0,
+      "console_errors": 0,
+      "screenshot": "ct28-issues-loading-mobile-390x844.png",
+      "screenshot_sha256": "f9748ca921804c01747789968108762aa718692145425bc816e1b7d9cb7f07ff"
+    },
+    {
+      "surface": "issue-detail-loading",
+      "viewport": {"width": 390, "height": 844},
+      "status": {"count": 1, "text": "Loading issue details", "aria_busy": "true", "aria_live": "polite"},
+      "status_rect": {"x": 12, "y": 77, "width": 351, "height": 780},
+      "document_height": 917,
+      "expected_vertical_scroll": true,
+      "interactive_inside_status": 0,
+      "positive_horizontal_overflow_px": 0,
+      "outside_focusable_controls": 0,
+      "duplicate_ids": 0,
+      "visual_overlap_observed": false,
+      "console_warnings": 0,
+      "console_errors": 0,
+      "screenshot": "ct28-detail-loading-mobile-390x844.png",
+      "screenshot_sha256": "e633fdd2d9b2840387a86c6acf2f3262a306066d97ba65ff7eb6ec47984b534e"
+    }
+  ]
+}

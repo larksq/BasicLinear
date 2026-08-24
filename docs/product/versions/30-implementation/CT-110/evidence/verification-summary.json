@@ -1,0 +1,47 @@
+{
+  "schema_version": "ct110-verification-summary-v1",
+  "captured_at": "2026-08-22T11:21:00Z",
+  "issue": "CT-110",
+  "implementation_source": {
+    "revision": "1e960558bba51413657f75391478e56ddbdac275",
+    "tree": "6255242228edfa41f8bcef7fb8d0d3bc959e35d9"
+  },
+  "current_regression_source": {
+    "revision": "7665027c0266fa5f0be0070dd75c2541959a9eb5",
+    "tree": "573f0747c927aa0b35a1688de73c508c70665978"
+  },
+  "checks": {
+    "focused": { "files": 2, "passed": 11, "failed": 0 },
+    "complete": { "files": 70, "passed": 465, "failed": 0 },
+    "typecheck_workspaces": 8,
+    "release_audit": { "passed": 10, "failed": 0 },
+    "build": { "modules": 1949, "files": 105, "bytes": 1895747, "warnings": 0 },
+    "independent_application_review": "pending",
+    "independent_runtime": "pending_for_7665027"
+  },
+  "chrome": {
+    "family": "Chrome",
+    "version": "151.0.7922.170",
+    "url": "http://127.0.0.1:4284/",
+    "viewport": { "width": 1440, "height": 900 },
+    "themes": ["light", "dark"],
+    "synthetic_data_only": true,
+    "tab_stop_title": 35,
+    "tab_stop_due_date": 51,
+    "title_indicator": "inset 0 -2px var(--ol-focus)",
+    "due_date_indicator": "2px solid var(--ol-focus) on the host with token-colored Lucide calendar icon",
+    "retired_browser_blue_visible": false,
+    "layout_shift": false,
+    "clipping_or_overlap": false,
+    "horizontal_overflow": 0,
+    "captures": [
+      { "path": "docs/product/versions/v0.1.0/30-implementation/CT-110/evidence/issue-title-focus-light-1440x900.jpg", "bytes": 66208, "sha256": "9ad9323e5ab98c4ff99f9ad48dd8a27c67e6769b1ac40936aec5ba3a4612b06c" },
+      { "path": "docs/product/versions/v0.1.0/30-implementation/CT-110/evidence/issue-title-focus-dark-1440x900.jpg", "bytes": 65534, "sha256": "aacc3b106e39cc8220bc772ea8b4922f7ab323833b1ff1bf9909414493a7f62d" },
+      { "path": "docs/product/versions/v0.1.0/30-implementation/CT-110/evidence/issue-due-date-focus-light-1440x900.jpg", "bytes": 65916, "sha256": "c68a4dbbe5c4080db20b67bcb59ab906c975e4e5244cc2d11bb73d322383e5d3" },
+      { "path": "docs/product/versions/v0.1.0/30-implementation/CT-110/evidence/issue-due-date-focus-dark-1440x900.jpg", "bytes": 65323, "sha256": "8f92fb65e09de6494fcff808c080bc22aeb54d9c92be92bae6464fa05db0d617" }
+    ],
+    "full_ct12_acceptance": false
+  },
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

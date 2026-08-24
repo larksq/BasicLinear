@@ -1,0 +1,68 @@
+{
+  "schema_version": "ct129-independent-integrated-result-v1",
+  "captured_at": "2026-08-23T16:06:46Z",
+  "verdict": "PASSED_COMPOSITE_CURRENT_CANDIDATE_EVIDENCE",
+  "issue": {
+    "identifier": "CT-129",
+    "test_id": "P-T18",
+    "status": "Done",
+    "readback_revision": 3
+  },
+  "task_reconciliation": {
+    "authority": "project-local-v0.8",
+    "action": "issue-update",
+    "expected_revision": 2,
+    "readback_revision": 3,
+    "readback_status": "Done",
+    "backup_ref": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-23T16-12-09-000Z-119cbd72-2e00-439f-9b1c-6bbc177ddba3.json",
+    "backup_bytes": 511334,
+    "backup_sha256": "52b4bd568911ba5c80344fb6b85fbb7da2b933881c528c561fd837f67224e6e4",
+    "provider_projection": "disabled",
+    "projection_state": "not_synced",
+    "counts": {
+      "active": 4,
+      "completed": 125,
+      "trash": 0
+    }
+  },
+  "candidate": {
+    "product_revision": "e70124180962afbc3c959bfd2bb3607725997627",
+    "product_tree": "470d7293b447c39139571c6d95b9c7935940b85c",
+    "latest_product_code_revision": "886e2465e06623863c8c04d41e7c20fe6e0fea5c",
+    "source_set_sha256": "480b43c33f647497cc25fba791639bd30d1338bf965d229ef06f6ec38e2821a3",
+    "source_files": 1265,
+    "artifact_sha256": "6e0332def5f62a1e58697b39fe8c3eeda4b84edb119e310dbe7527ae4bc2fd1d",
+    "artifact_files": 113,
+    "artifact_bytes": 2054854
+  },
+  "independent_observation": {
+    "status": "passed",
+    "actor": "codex-independent-testing-ct129",
+    "session": "CT129-INDEPENDENT-20260823T154243Z",
+    "browser": "Chrome 151 / Chromium 151",
+    "viewport_css": "1800x917",
+    "checks_passed": 13,
+    "requirements": ["R-003", "R-004", "R-005", "R-006", "R-007", "R-008", "R-009", "R-010", "R-011", "R-012"],
+    "application_test_files": 73,
+    "application_tests": 483,
+    "workspaces_typechecked": 8,
+    "findings": [],
+    "restart_database_sha256": "ed40efb82ed93711002e36d9d683173f93fc0e97911efe2af2c82b70622a051e",
+    "raw_receipt": ".control-tower/evidence/CT-129/independent-integrated-e701241.json",
+    "raw_receipt_mode": "0600",
+    "raw_receipt_bytes": 10617,
+    "raw_receipt_sha256": "a4eb1da9be364e45b84f4f8e1181fc9eb06bdc035c6c5d1c076ab06e47834574"
+  },
+  "scope_boundary": {
+    "external_provider_used": false,
+    "linear_api_mcp_or_ui_used": false,
+    "external_identity_used": false,
+    "self_acceptance": false,
+    "release_claimed": false,
+    "outcomes_claimed": [],
+    "limitations": [
+      "Destructive purge, query-fault injection, and draft-conflict isolation were supported by the exact-candidate regression and strict-runtime evidence rather than repeated destructively in this browser fixture.",
+      "This receipt is independent evidence for CT-129 and is not product-owner, release, legal, identity, publication, or outcome authorization."
+    ]
+  }
+}

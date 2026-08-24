@@ -1,0 +1,15 @@
+scripts/prepare-third-party-notices.mjs
+scripts/prepare-release-provenance.mjs
+scripts/audit-public-release.mjs
+scripts/tests/audit-public-release.test.mjs
+THIRD_PARTY_NOTICES.md
+ops/release/third-party-notices.json
+ops/release/asset-provenance.json
+ops/release/copy-provenance.json
+docs/product/versions/v0.1.0/30-implementation/CT-89/session.md
+docs/product/versions/v0.1.0/30-implementation/CT-89/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-89/evidence/audit-summary.json
+docs/product/versions/v0.1.0/30-implementation/CT-89/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-89/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-89/changed-files.txt
+docs/product/versions/v0.1.0/50-outcome-review/CT-13/result.json

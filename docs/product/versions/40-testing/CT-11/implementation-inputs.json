@@ -1,0 +1,38 @@
+{
+  "schema_version": "ct11-implementation-inputs-v1",
+  "captured_at": "2026-08-19T22:24:32Z",
+  "handoffs": [
+    "docs/product/versions/v0.1.0/30-implementation/CT-6/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-8/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-9/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-16/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-17/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-18/handoff.json"
+  ],
+  "implementation_actor_ids": [
+    "codex-implementation",
+    "isolated-final-image-verifier",
+    "codex-implementation-remediation",
+    "immutable-artifact-reviewer"
+  ],
+  "implementation_session_ids": [
+    "ct6-implementation-1",
+    "ct8-implementation-1",
+    "ct9-implementation-1",
+    "ct9-final-image-review-1",
+    "CT16-IMPL-20260819T215122Z",
+    "CT16-REVIEW-20260819T222432Z",
+    "CT17-IMPL-20260819T215815Z",
+    "CT17-REVIEW-20260819T222432Z",
+    "CT18-IMPL-20260819T221333Z",
+    "CT18-REVIEW-20260819T222432Z"
+  ],
+  "control_tower_readback": {
+    "CT-6": 3,
+    "CT-8": 3,
+    "CT-9": 3,
+    "CT-16": 3,
+    "CT-17": 3,
+    "CT-18": 3
+  }
+}

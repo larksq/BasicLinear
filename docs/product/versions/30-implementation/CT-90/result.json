@@ -1,0 +1,42 @@
+{
+  "schema_version": "ct90-implementation-result-v1",
+  "captured_at": "2026-08-21T10:30:21Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING",
+  "issue": {
+    "identifier": "CT-90",
+    "id": "105da7ec-be9e-4703-a003-3a79028b59d9",
+    "created_revision": 1,
+    "implementation_scope_revision": 1,
+    "expected_completion_revision": 2
+  },
+  "resolution": {
+    "system_light_dark_options": true,
+    "persisted_validated_preference": true,
+    "prepaint_application": true,
+    "live_system_response": true,
+    "theme_color_sync": true,
+    "semantic_tokens_only": true,
+    "menu_radio_accessibility": true,
+    "keyboard_navigation": true
+  },
+  "checks": {
+    "focused_test_files": 1,
+    "focused_tests_passed": 5,
+    "complete_test_files": 57,
+    "complete_tests_passed": 394,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1947,
+    "dist_files": 109,
+    "dist_bytes": 1862186,
+    "build_warnings": 0,
+    "release_audit_tests_passed": 6,
+    "release_audit_tests_failed": 0,
+    "post_build_readiness": "ready",
+    "served_candidate_current": true,
+    "rendered_browser_captures": 0
+  },
+  "browser_acceptance_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": "ct16-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "passed",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-16",
+      "stable_id": "5d7dcd43-6a0a-4c89-a3aa-effe18c41e7e",
+      "revision": 2,
+      "accepted": true,
+      "blocked": false,
+      "status": "output_done",
+      "requirement_refs": ["R-101", "R-106"],
+      "acceptance_refs": ["R-101", "R-106"],
+      "outcome_refs": ["O-001", "O-004"],
+      "allowed_mutation_paths": ["apps", "packages", "ops", "docs/product/versions/v0.1.0/30-implementation/CT-16"]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT16-IMPL-20260819T215122Z",
+      "actor_id": "codex-implementation-remediation",
+      "issue_id": "CT-16",
+      "mode": "code_mutating",
+      "allowed_paths": ["apps", "packages", "ops"],
+      "output_refs": [
+        "apps/api/src/app.ts",
+        "apps/api/src/events.ts",
+        "apps/api/tests/ct11-security.integration.test.ts",
+        "apps/api/tests/events.test.ts",
+        "apps/web/src/App.tsx",
+        "ops/compose/Dockerfile",
+        "ops/compose/nginx.conf",
+        "packages/contracts/src/index.ts",
+        "packages/db/src/event-repository.ts",
+        "packages/db/src/index.ts"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-16/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-16/evidence.md"
+      ]
+    },
+    {
+      "session_id": "CT16-REVIEW-20260819T222432Z",
+      "actor_id": "immutable-artifact-reviewer",
+      "issue_id": "CT-16",
+      "mode": "review_only",
+      "allowed_paths": ["docs/product/versions/v0.1.0/30-implementation/CT-16"],
+      "output_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-16/changed-files.txt",
+        "docs/product/versions/v0.1.0/30-implementation/CT-16/evidence.md",
+        "docs/product/versions/v0.1.0/30-implementation/CT-16/handoff.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-16/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-16/session.md"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-16/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-16/evidence.md"
+      ]
+    }
+  ],
+  "changed_files": [
+    {"path":"apps/api/src/app.ts","issue_id":"CT-16","mutation_type":"code","ai_session_id":"CT16-IMPL-20260819T215122Z","risk_level":"high","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-16/evidence.md#verification","test_refs":["CT16-FOCUSED","CT16-IMMUTABLE"]},
+    {"path":"apps/api/src/events.ts","issue_id":"CT-16","mutation_type":"code","ai_session_id":"CT16-IMPL-20260819T215122Z","risk_level":"high","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-16/evidence.md#verification","test_refs":["CT16-PROTOCOL","CT16-IMMUTABLE"]},
+    {"path":"apps/api/tests/ct11-security.integration.test.ts","issue_id":"CT-16","mutation_type":"test","ai_session_id":"CT16-IMPL-20260819T215122Z","risk_level":"high","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-16/evidence.md#verification","test_refs":["CT16-FOCUSED","CT16-IMMUTABLE"]},
+    {"path":"apps/api/tests/events.test.ts","issue_id":"CT-16","mutation_type":"test","ai_session_id":"CT16-IMPL-20260819T215122Z","risk_level":"medium","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-16/evidence.md#verification","test_refs":["CT16-PROTOCOL"]},
+    {"path":"apps/web/src/App.tsx","issue_id":"CT-16","mutation_type":"code","ai_session_id":"CT16-IMPL-20260819T215122Z","risk_level":"high","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-16/evidence.md#verification","test_refs":["CT16-BROWSER","CT16-IMMUTABLE"]},
+    {"path":"ops/compose/Dockerfile","issue_id":"CT-16","mutation_type":"config","ai_session_id":"CT16-IMPL-20260819T215122Z","risk_level":"medium","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-16/evidence.md#verification","test_refs":["CT16-IMMUTABLE"]},
+    {"path":"ops/compose/nginx.conf","issue_id":"CT-16","mutation_type":"config","ai_session_id":"CT16-IMPL-20260819T215122Z","risk_level":"high","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-16/evidence.md#verification","test_refs":["CT16-BROWSER","CT16-IMMUTABLE"]},
+    {"path":"packages/contracts/src/index.ts","issue_id":"CT-16","mutation_type":"code","ai_session_id":"CT16-IMPL-20260819T215122Z","risk_level":"high","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-16/evidence.md#verification","test_refs":["CT16-PROTOCOL","CT16-IMMUTABLE"]},
+    {"path":"packages/db/src/event-repository.ts","issue_id":"CT-16","mutation_type":"code","ai_session_id":"CT16-IMPL-20260819T215122Z","risk_level":"high","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-16/evidence.md#verification","test_refs":["CT16-FOCUSED","CT16-IMMUTABLE"]},
+    {"path":"packages/db/src/index.ts","issue_id":"CT-16","mutation_type":"code","ai_session_id":"CT16-IMPL-20260819T215122Z","risk_level":"medium","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-16/evidence.md#verification","test_refs":["CT16-IMMUTABLE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-16/changed-files.txt","issue_id":"CT-16","mutation_type":"docs","ai_session_id":"CT16-REVIEW-20260819T222432Z","risk_level":"low","test_refs":["CT16-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-16/evidence.md","issue_id":"CT-16","mutation_type":"docs","ai_session_id":"CT16-REVIEW-20260819T222432Z","risk_level":"low","test_refs":["CT16-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-16/handoff.json","issue_id":"CT-16","mutation_type":"docs","ai_session_id":"CT16-REVIEW-20260819T222432Z","risk_level":"low","test_refs":["CT16-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-16/result.json","issue_id":"CT-16","mutation_type":"docs","ai_session_id":"CT16-REVIEW-20260819T222432Z","risk_level":"low","test_refs":["CT16-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-16/session.md","issue_id":"CT-16","mutation_type":"docs","ai_session_id":"CT16-REVIEW-20260819T222432Z","risk_level":"low","test_refs":["CT16-EVIDENCE"]}
+  ],
+  "checks": [
+    {"check_id":"CT16-PROTOCOL","issue_id":"CT-16","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-16/result.json"},
+    {"check_id":"CT16-FOCUSED","issue_id":"CT-16","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-16/result.json"},
+    {"check_id":"CT16-IMMUTABLE","issue_id":"CT-16","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-16/result.json"},
+    {"check_id":"CT16-BROWSER","issue_id":"CT-16","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-16/evidence.md"},
+    {"check_id":"CT16-EVIDENCE","issue_id":"CT-16","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-16/evidence.md"}
+  ],
+  "reviews": [{
+    "issue_id":"CT-16",
+    "status":"passed",
+    "independent":true,
+    "review_actor_id":"immutable-artifact-reviewer",
+    "review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-16/evidence.md#verification",
+    "basis":"Source-frozen image execution, disposable PostgreSQL fixtures, and live authenticated Chrome inspection occurred outside the code-mutating session."
+  }],
+  "testing_handoff": {
+    "acceptance_refs":["R-101","R-106"],
+    "changed_file_refs":["apps/api/src/app.ts","apps/api/src/events.ts","apps/api/tests/ct11-security.integration.test.ts","apps/api/tests/events.test.ts","apps/web/src/App.tsx","ops/compose/Dockerfile","ops/compose/nginx.conf","packages/contracts/src/index.ts","packages/db/src/event-repository.ts","packages/db/src/index.ts","docs/product/versions/v0.1.0/30-implementation/CT-16/changed-files.txt","docs/product/versions/v0.1.0/30-implementation/CT-16/evidence.md","docs/product/versions/v0.1.0/30-implementation/CT-16/handoff.json","docs/product/versions/v0.1.0/30-implementation/CT-16/result.json","docs/product/versions/v0.1.0/30-implementation/CT-16/session.md"],
+    "regression_areas":["workspace event authorization and existence hiding","cursor validation and reconnect resume","minimal payload redaction","same-origin cache invalidation","proxy streaming and runtime health"],
+    "evidence_refs":["docs/product/versions/v0.1.0/30-implementation/CT-16/result.json","docs/product/versions/v0.1.0/30-implementation/CT-16/evidence.md"],
+    "implementation_actor_ids":["codex-implementation-remediation","immutable-artifact-reviewer"],
+    "implementation_session_ids":["CT16-IMPL-20260819T215122Z","CT16-REVIEW-20260819T222432Z"]
+  },
+  "outcomes":[{"outcome_id":"O-001","status":"pending"},{"outcome_id":"O-004","status":"pending"}],
+  "blockers":[],
+  "next":{"skill":"ct-test-sprint","issues":["CT-11"],"reason":"Return CT-16 to the independent P-T16 acceptance session."}
+}

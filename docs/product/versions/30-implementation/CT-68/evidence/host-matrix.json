@@ -1,0 +1,33 @@
+{
+  "schema_version": "ct68-host-matrix-v1",
+  "captured_at": "2026-08-20T22:08:47Z",
+  "target": "http://127.0.0.1:4194/?workspace=20000000-0000-4000-8000-000000000023&view=projects&fixture=project-inline-edit&project=50000000-0000-4000-8000-000000000023",
+  "synthetic_fixture": true,
+  "checks_attempted": 20,
+  "checks_passed": 20,
+  "checks_failed": 0,
+  "checks": [
+    "fixture HTML returned 200 with the root mount",
+    "session returned the synthetic owner workspace",
+    "initial project list and detail converged at revision 4",
+    "status minimal patch advanced exactly to revision 5",
+    "project list readback confirmed the status change",
+    "sparse content patch advanced exactly to revision 6",
+    "detail readback confirmed the content change",
+    "stale write returned conflict status code and currentRevision 6",
+    "stale conflict left the project revision and content unchanged",
+    "reversed start date returned validation failure",
+    "unavailable lead assignment returned validation failure",
+    "multi-property input returned validation failure",
+    "team reassignment returned validation failure",
+    "content no-op returned validation failure",
+    "priority minimal patch advanced exactly to revision 7",
+    "start-date clear patch advanced exactly to revision 8",
+    "target-date clear patch advanced exactly to revision 9",
+    "credentialed resource URL returned validation failure",
+    "all rejected writes preserved final project state",
+    "final project list and detail converged on the exact revision 9 state"
+  ],
+  "rejected_writes_preserved_state": true,
+  "browser_assertions_claimed": 0
+}

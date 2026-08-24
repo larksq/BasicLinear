@@ -1,0 +1,115 @@
+{
+  "schema_version": "ct29-browser-matrix-v1",
+  "captured_at": "2026-08-20T03:40:30Z",
+  "browser": "Codex in-app browser",
+  "target": "http://127.0.0.1:4180",
+  "synthetic_fixture": true,
+  "global_assertions": {
+    "interactive_inside_status": 0,
+    "positive_horizontal_overflow_px": 0,
+    "duplicate_ids": 0,
+    "visual_overlap_observed": false,
+    "fresh_final_bundle_console": {
+      "desktop_workflow": {"warnings": 0, "errors": 0},
+      "mobile_workflow": {"warnings": 0, "errors": 0}
+    }
+  },
+  "captures": [
+    {
+      "surface": "workspace-loading",
+      "viewport": {"width": 1440, "height": 900},
+      "statuses": [{"text": "Loading workspace metrics", "aria_busy": "true", "aria_live": "polite", "width": 968, "height": 93}],
+      "geometry": {"metric_cells": 3, "rendered_metric_values": 0},
+      "screenshot": "ct29-workspace-loading-desktop-1440x900.png",
+      "screenshot_sha256": "8b9a18413162590dca02ec76f0a2216af2630c04ce1fb9f95707c3ebd6f11863"
+    },
+    {
+      "surface": "teams-loading",
+      "viewport": {"width": 390, "height": 844},
+      "statuses": [{"text": "Loading teams", "aria_busy": "true", "aria_live": "polite", "width": 354, "height": 311}],
+      "geometry": {"table_rows": 7, "inline_count_skeletons": 1},
+      "screenshot": "ct29-teams-loading-mobile-390x844.png",
+      "screenshot_sha256": "155155372aabcd25ffa9024e56f4793e91b8cf2ad5a140cfe712f002e3cc6595"
+    },
+    {
+      "surface": "workflow-loading",
+      "viewport": {"width": 1440, "height": 900},
+      "statuses": [{"text": "Loading workflow statuses", "aria_busy": "true", "aria_live": "polite", "width": 968, "height": 468}],
+      "geometry": {"groups": 2, "rows": 8},
+      "screenshot": "ct29-workflow-loading-desktop-1440x900.png",
+      "screenshot_sha256": "fc163e91d27c1daa22fb772e6633f8a0e086d6616f367f0f599e027b832cd0ce"
+    },
+    {
+      "surface": "workflow-loading",
+      "viewport": {"width": 390, "height": 844},
+      "statuses": [{"text": "Loading workflow statuses", "aria_busy": "true", "aria_live": "polite", "width": 354, "height": 468}],
+      "geometry": {"groups": 2, "rows": 8},
+      "screenshot": "ct29-workflow-loading-mobile-390x844.png",
+      "screenshot_sha256": "f79df60bc5126e63ed7831763d1da8e457a3ddc494fdd6f9ee07dc3ef8370548"
+    },
+    {
+      "surface": "project-detail-loading",
+      "viewport": {"width": 1440, "height": 900},
+      "statuses": [{"text": "Loading project details", "aria_busy": "true", "aria_live": "polite", "width": 1136, "height": 620}],
+      "geometry": {"region_label": "Project details", "expected_vertical_scroll": false},
+      "screenshot": "ct29-project-detail-loading-desktop-1440x900.png",
+      "screenshot_sha256": "376d120419843927d915e52ce9a6888645ca076be0ab0b642e5d4c0d2e9096d6"
+    },
+    {
+      "surface": "project-detail-loading",
+      "viewport": {"width": 390, "height": 844},
+      "statuses": [{"text": "Loading project details", "aria_busy": "true", "aria_live": "polite", "width": 351, "height": 714}],
+      "geometry": {"region_label": "Project details", "expected_vertical_scroll": true},
+      "screenshot": "ct29-project-detail-loading-mobile-390x844.png",
+      "screenshot_sha256": "c12402f2bf009cfe03a78de4fd846ee65a7648cd414ef5ce0f98e9d224e9772f"
+    },
+    {
+      "surface": "project-sections-loading:milestones",
+      "viewport": {"width": 1440, "height": 900},
+      "statuses": [{"text": "Loading project milestones", "aria_busy": "true", "aria_live": "polite", "width": 1121, "height": 257}],
+      "geometry": {"rows": 4, "inline_count_skeletons": 1},
+      "screenshot": "ct29-milestones-loading-desktop-1440x900.png",
+      "screenshot_sha256": "b9292f6d8c1a24535ae2569fb237ee7cdd0905f50ebee151fe6d8e3c1924e3d2"
+    },
+    {
+      "surface": "project-sections-loading:activity",
+      "viewport": {"width": 1440, "height": 900},
+      "statuses": [{"text": "Loading project activity", "aria_busy": "true", "aria_live": "polite", "width": 1136, "height": 210}],
+      "geometry": {"rows": 3},
+      "screenshot": "ct29-project-activity-loading-desktop-1440x900.png",
+      "screenshot_sha256": "705c0f6cda2a95b99fd378efe1270505646052d9ae1e2ceb2d5e4319f1328071"
+    },
+    {
+      "surface": "issue-sections-loading",
+      "viewport": {"width": 1440, "height": 900},
+      "statuses": [
+        {"text": "Loading issue relations", "aria_busy": "true", "aria_live": "polite", "width": 524, "height": 126},
+        {"text": "Loading issue comments", "aria_busy": "true", "aria_live": "polite", "width": 524, "height": 192},
+        {"text": "Loading issue activity", "aria_busy": "true", "aria_live": "polite", "width": 1100, "height": 210}
+      ],
+      "geometry": {"inline_count_skeletons": 2},
+      "screenshot": "ct29-issue-sections-loading-desktop-1440x900.png",
+      "screenshot_sha256": "993f534f47ea6277a8d29afd0991d518949de1c9508294c9fabb049c30003bbe"
+    },
+    {
+      "surface": "issue-sections-loading",
+      "viewport": {"width": 390, "height": 844},
+      "statuses": [
+        {"text": "Loading issue relations", "aria_busy": "true", "aria_live": "polite", "width": 351, "height": 126},
+        {"text": "Loading issue comments", "aria_busy": "true", "aria_live": "polite", "width": 351, "height": 192},
+        {"text": "Loading issue activity", "aria_busy": "true", "aria_live": "polite", "width": 351, "height": 210}
+      ],
+      "geometry": {"inline_count_skeletons": 2, "expected_vertical_scroll": true},
+      "screenshot": "ct29-issue-sections-loading-mobile-390x844.png",
+      "screenshot_sha256": "b1e0c59da94c009e19a72bd75dc8c5b65acf54774df95500e532f27159fcc136"
+    }
+  ],
+  "additional_source_covered_surface": {
+    "surface": "members-loading",
+    "viewport": {"width": 390, "height": 844},
+    "status": {"text": "Loading members", "aria_busy": "true", "rows": 7},
+    "interactive_inside_status": 0,
+    "positive_horizontal_overflow_px": 0,
+    "duplicate_ids": 0
+  }
+}

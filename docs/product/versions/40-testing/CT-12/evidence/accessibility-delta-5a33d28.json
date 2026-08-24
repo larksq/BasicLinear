@@ -1,0 +1,95 @@
+{
+  "schema_version": "ct12-exact-accessibility-delta-v1",
+  "captured_at": "2026-08-23T04:48:43.828Z",
+  "authority": {
+    "issue": "CT-12",
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "candidate": {
+    "product_revision": "5a33d28be383b7651a4b0d6156534aa12cc423fa",
+    "product_tree": "d106d3bb40a84184e7ee26c919134b01e4748679",
+    "asset": "assets/index-W0ZGkz-8.js"
+  },
+  "reference_matrix": {
+    "product_revision": "e1299af1bd06f7438f5010c6f6c030760c5a1dfb",
+    "states": 50,
+    "violations": 0,
+    "incomplete": 5,
+    "manually_resolved_incomplete": 5,
+    "pass_nodes": 38245,
+    "tracked_evidence_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/accessibility-current.json",
+    "private_receipt_ref": ".control-tower/evidence/CT-12/axe-core-e1299af.json",
+    "private_receipt_sha256": "e39d047e722955a9e3589005a4ff13295a7024469925583047cebd632f872a3b"
+  },
+  "source_delta": {
+    "runtime_files": [
+      "apps/web/src/issues.tsx",
+      "apps/web/src/saved-views.tsx"
+    ],
+    "test_files": [
+      "apps/web/tests/board-accessibility.test.ts",
+      "apps/web/tests/table-semantics.test.ts"
+    ],
+    "changed_accessibility_surfaces": [
+      "Issues board metadata",
+      "Saved Views action group"
+    ],
+    "other_matrix_surfaces_changed": false
+  },
+  "engine_delta": {
+    "engine": "axe-core",
+    "version": "4.12.1",
+    "run_only": [
+      "wcag2a",
+      "wcag2aa",
+      "wcag21a",
+      "wcag21aa",
+      "wcag22aa"
+    ],
+    "browser": "Google Chrome",
+    "viewport": "1654x875@2x",
+    "states": [
+      "issues-board-system",
+      "saved-views-system",
+      "issues-board-light",
+      "saved-views-light",
+      "issues-board-dark",
+      "saved-views-dark"
+    ],
+    "state_count": 6,
+    "violations": 0,
+    "incomplete": 0,
+    "pass_nodes": 2979,
+    "pass_rule_records": 141,
+    "product_alerts": 0
+  },
+  "semantic_readback": {
+    "issue_board_regions": 1,
+    "property_collections": 10,
+    "nested_named_property_groups": 0,
+    "saved_view_action_groups": 1,
+    "redundant_hidden_action_labels": 0,
+    "expected_delta_observed": true
+  },
+  "private_receipt": {
+    "path": ".control-tower/evidence/CT-12/axe-delta-5a33d28/axe-delta-5a33d28.json",
+    "bytes": 23585,
+    "mode": "0600",
+    "sha256": "812459aa0ded0b3029faf5feb0a734d8788cf19bf261a44463240ea0e8885d99"
+  },
+  "applicability": {
+    "P-T19_complete_matrix": "applicable_to_5a33d28_with_exact_changed_surface_engine_delta",
+    "distinct_application_review": "open_for_CT117_through_CT124",
+    "P-T20_live_system": "open_requires_action_time_authorization",
+    "P-T21_independent_runtime": "open"
+  },
+  "limitations": [
+    "System-selected rendering was scanned, but both live macOS Appearance directions were not exercised.",
+    "The testing actor does not provide distinct application acceptance or independent runtime qualification."
+  ],
+  "verdict": "PASS_EXACT_CHANGED_SURFACE_ENGINE_DELTA",
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

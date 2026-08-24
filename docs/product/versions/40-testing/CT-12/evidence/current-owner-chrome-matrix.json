@@ -1,0 +1,451 @@
+{
+  "schema_version": "ct12-owner-chrome-matrix-v1",
+  "captured_at": "2026-08-22T15:32:16.282Z",
+  "status": "in_progress_mixed_revision_evidence",
+  "authority": {
+    "issue": "CT-12",
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "candidate": {
+    "url": "http://127.0.0.1:4284/",
+    "browser_family": "chrome",
+    "browser_version": "151.0.7922.170",
+    "locale": "en-US",
+    "synthetic_data_only": true,
+    "product_mode": "one_owner_one_implicit_workspace_team",
+    "source_revision": "670a9f96e989654d84408e30c527e85b765a9042",
+    "source_tree": "d4c147b50bee345542286386934ac6e50f11aaf7",
+    "source_revision_gate": "pending_fresh_CT82_qualification_for_670a9f9"
+  },
+  "implementation_evidence": {
+    "complete_test_files": 71,
+    "complete_tests_passed": 469,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1950,
+    "dist_files": 109,
+    "dist_bytes": 1915948,
+    "appearance_focused_tests_passed": 5,
+    "empty_state_focused_tests_passed": 5,
+    "query_recovery_focused_tests_passed": 5,
+    "local_service_recovery_focused_tests_passed": 6,
+    "issue_detail_draft_focused_tests_passed": 6,
+    "project_purge_focused_tests_passed": 31,
+    "milestone_purge_focused_tests_passed": 32,
+    "archive_action_undo_focused_tests_passed": 5,
+    "shell_geometry_focused_and_related_tests_passed": 9,
+    "content_visual_focused_and_related_tests_passed": 14,
+    "focus_palette_focused_and_related_tests_passed": 13,
+    "semantic_token_focused_and_related_tests_passed": 35,
+    "mobile_issue_inspector_focused_and_related_tests_passed": 37,
+    "loopback_archive_restore_rehearsal": "project, milestone, and issue revisions 1 -> 2 -> 3",
+    "browser_acceptance_claimed": false,
+    "issue_focus_focused_tests_passed": 11,
+    "empty_draft_focused_tests_passed": 7,
+    "board_geometry_focused_tests_passed": 31,
+    "restart_recovery_focused_tests_passed": 14,
+    "restart_cycles_passed": 2,
+    "implementation_reviews": "pending_CT-110_CT-111_CT-112_CT-113"
+  },
+  "viewports": [
+    {
+      "id": "desktop",
+      "width": 1440,
+      "height": 900,
+      "rail": "expanded",
+      "detail": "context_panel"
+    },
+    {
+      "id": "tablet",
+      "width": 1024,
+      "height": 768,
+      "rail": "collapsed",
+      "detail": "near_full_overlay"
+    },
+    {
+      "id": "mobile",
+      "width": 390,
+      "height": 844,
+      "rail": "off_canvas",
+      "detail": "full_route"
+    },
+    {
+      "id": "wide",
+      "width": 2154,
+      "height": 1340,
+      "rail": "expanded",
+      "detail": "context_panel"
+    }
+  ],
+  "tests": [
+    {
+      "id": "P-T18",
+      "level": "uat",
+      "status": "passed_composite_exact_candidate",
+      "result_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/integrated-current.json",
+      "raw_receipt_ref": ".control-tower/evidence/CT-12/integrated-uat-d524c5c.json",
+      "raw_receipt_sha256": "f4e588d6d52092dd8363c05caa90a0aa9839d9d1fc14c9c2a57227eb75972d16",
+      "requirement_refs": [
+        "R-002",
+        "R-003",
+        "R-004",
+        "R-005",
+        "R-006",
+        "R-007",
+        "R-008",
+        "R-009",
+        "R-010",
+        "R-011",
+        "R-012",
+        "R-013"
+      ],
+      "steps": [
+        {
+          "id": "owner-bootstrap",
+          "action": "Open a clean local data directory and restart once.",
+          "expected": "Exactly one owner and stable implicit workspace/team/status metadata appear without login or external identity."
+        },
+        {
+          "id": "unsupported-surface-absence",
+          "action": "Inspect navigation, menus, creation forms, issue properties, saved views, and legacy scoped URLs.",
+          "expected": "No login, account, workspace/team/member/role/sharing/switching or non-owner assignment control is reachable; legacy scope parameters canonicalize away."
+        },
+        {
+          "id": "project-create",
+          "action": "Inspect true-empty, filtered-zero-result, and empty-archive project states, then create a project with title, summary, state, dates, lead, labels, overview content, and resource.",
+          "expected": "The local actions are respectively New project, Clear filters, and View active; filter clearing preserves unrelated view configuration; the project appears inline and every supported property persists after refresh."
+        },
+        {
+          "id": "project-edit",
+          "action": "Edit routine project fields inline, change overview content and resources, then exercise rejected-draft recovery.",
+          "expected": "Minimal writes persist, rich content remains independent, and retained drafts recover after a rejected write."
+        },
+        {
+          "id": "milestone-plan",
+          "action": "Use the empty-state Add milestone action, create a second milestone inline, edit names/descriptions/dates, reorder by pointer and keyboard, and open milestone-scoped issues.",
+          "expected": "The empty-state action opens the existing contextual dialog; order, target dates, issue counts, and derived progress persist and announced keyboard alternatives match pointer behavior."
+        },
+        {
+          "id": "issue-create-global",
+          "action": "Use the global keyboard path to create an issue title-first, then disclose and set supported details.",
+          "expected": "Title receives focus; Enter submits defaults; status, priority, owner, due date, labels, project, milestone, rich text, and resource persist."
+        },
+        {
+          "id": "issue-create-contextual",
+          "action": "Create an issue from project and milestone context.",
+          "expected": "Contextual defaults are correct and cross-project milestone pairings fail without state loss."
+        },
+        {
+          "id": "issue-relations-comments",
+          "action": "Add parent/sub-issue, blocking, related, and duplicate relations; add and inline-edit a comment.",
+          "expected": "Inverse relation semantics and comment revisions persist; self/invalid/overlapping writes fail atomically with retained-draft recovery."
+        },
+        {
+          "id": "issue-list-configuration",
+          "action": "Switch list/board, group, order, filter to zero results, clear the result filter from the empty state, inspect an empty archive, collapse groups, change density and visible properties, select rows, and bulk edit supported properties and labels.",
+          "expected": "Filtered empty offers Clear filters and archive empty offers View active; those actions preserve unrelated layout configuration; the exact personal view state restores and virtualized rows remain keyboard reachable."
+        },
+        {
+          "id": "issue-board-move",
+          "action": "Move an issue across valid board columns by pointer and use the keyboard alternative for project/milestone changes.",
+          "expected": "The validated property changes once, announcements identify the result, and stale/invalid targets preserve authoritative state."
+        },
+        {
+          "id": "saved-view",
+          "action": "Inspect true-empty, search-zero-result, and empty-archive states; build the configured issue view, open it from Views, rename it, archive it, and restore it.",
+          "expected": "The local actions are respectively Build view, Clear search, and View active; only a private personal scope is offered and the exact supported configuration persists."
+        },
+        {
+          "id": "search-command",
+          "action": "Open the command palette, search by identifier/title/description/label/project, navigate disabled-safe results, and open a result.",
+          "expected": "Matched text is emphasized, result state is announced, Home/End and arrows skip disabled options, and recent results remain workspace-local."
+        },
+        {
+          "id": "query-error-recovery",
+          "action": "Inject initial and stale read failures for owner context, command search, project list/detail/milestones/activity, issue list/detail/relations/comments/milestones/activity, and saved views; activate every retry.",
+          "expected": "Each initial failure replaces only its unknown result with one named alert and enabled retry, exposes no false empty state, preserves Back/Escape and view configuration, retries only failed reads, disables retry only while fetching, then restores data; stale data remains visible with non-destructive feedback."
+        },
+        {
+          "id": "local-service-reconnect",
+          "action": "With lists, detail context, and unsaved drafts open, stop the loopback service, activate Try now, then restart the service without reloading the page.",
+          "expected": "One app-wide named alert appears without owner provisioning; cached work, navigation, and drafts remain reachable; retry focus and busy state are correct; one polite reconnect status appears; active data refreshes once; and committed state remains authoritative."
+        },
+        {
+          "id": "detail-context",
+          "action": "Open detail from a filtered grouped scrolled list, edit inline properties, follow a related issue, use browser Back, then close.",
+          "expected": "Query, grouping, collapsed groups, selection, scroll, navigation context, unsaved content draft, and initiating focus restore."
+        },
+        {
+          "id": "issue-draft-navigation",
+          "action": "Create unsaved title, description, resource, and new-comment drafts on issue A; close and reopen it, follow a relation to issue B, use browser Back, resize across detail breakpoints, interrupt and recover the local service, exercise conflict Reapply, then discard each draft independently.",
+          "expected": "Only issue A restores its matching content and comment drafts across every remount; issue B never exposes or submits issue A data; service recovery retains both; Reapply uses the confirmed revision; content and comment save/discard clear only their matching record; status and focus remain explicit."
+        },
+        {
+          "id": "activity-progress",
+          "action": "Review project/milestone progress and activity after accepted and rejected mutations.",
+          "expected": "Derived progress matches issue states; accepted writes append one before/after activity entry and failed writes append none."
+        },
+        {
+          "id": "archive-restore",
+          "action": "Archive one issue from detail and list/board context, one milestone, and one project; inspect the visible feedback and focus, activate Undo, then exercise direct restore for saved views and labels where supported. Inject a stale Undo revision and a loopback transport failure.",
+          "expected": "Each core record archive exposes one full-width named Undo notice, moves focus to Undo when the record leaves its collection, restores from the exact returned archived revision, refreshes activity and dependent data, returns focus to the restored record or detail action, replaces older notices with the latest action, dismisses predictably, and leaves a failed Undo archived with an actionable Archive recovery path. Bulk archive remains separate; destructive status retirement still requires explicit replacement and confirmation."
+        },
+        {
+          "id": "milestone-purge-boundary",
+          "action": "From the archived-milestone list, enter an incorrect name, then the exact milestone name; confirm active and archived linked issues remain reachable in the same project with no milestone.",
+          "expected": "Purge is owner-only and archived-only; the wrong name preserves every record with an explicit field error; exact confirmation removes only the milestone, preserves project membership, identity, content, labels, relations, comments, resources, and archive state, clears matching milestone URL context, restores adjacent-list or archived-toggle focus, and announces the counted result."
+        },
+        {
+          "id": "project-purge-boundary",
+          "action": "From archived project detail, enter an incorrect name, then the exact project name; confirm the project disappears while active and archived linked issues remain reachable.",
+          "expected": "Purge is owner-only and archived-only; the wrong name preserves every record with an explicit field error; exact confirmation removes project milestones/resources, moves every linked issue to no project without changing identity, labels, relations, comments, or archive state, restores list-search focus, and announces the counted result."
+        },
+        {
+          "id": "refresh-restart-readback",
+          "action": "Refresh, restart the loopback process, and revisit Projects, Issues, My work, Views, and Workflow.",
+          "expected": "All committed state, configuration, ordering, relations, content, activity, and internal scope metadata read back unchanged."
+        }
+      ]
+    },
+    {
+      "id": "P-T19",
+      "level": "manual_accessibility_responsive",
+      "status": "in_progress",
+      "requirement_refs": [
+        "R-010",
+        "R-104",
+        "R-105",
+        "R-110"
+      ],
+      "checks": [
+        "Run the P-T18 keyboard path at desktop, tablet, and mobile without pointer-only dependencies.",
+        "Measure the computed topbar at exactly 44px at every baseline viewport and while crossing 767/768 and 1199/1200; verify the recovery banner and contextual or overlay detail begin at their token-derived positions, topbar paint is opaque and unblurred in pinned Light and Dark, focus is never hidden, and no overlap or unintended document overflow appears.",
+        "Measure project Overview at no more than 920px while project Issues, Activity, and all dense work views remain fluid; measure page titles at 20px and displayed or edited project titles at 24px at every baseline viewport and live breakpoint; verify dialogs retain dimming with no backdrop blur in pinned Light and Dark.",
+        "Inspect cyan focus and selection paint for global controls, fields, project rows, issue rows and cards, board targets, tabs, editors, drag targets, checkboxes, dialogs, and primary commands in pinned Light, pinned Dark, and live System; require a visible unclipped 2px indicator, adequate adjacent-color contrast, equivalent explicit/System Dark resolution, and a non-color state cue.",
+        "Inspect connection and query-error correlation identifiers plus the workflow-status drag handle in pinned Light, pinned Dark, and live System; require computed `--ol-text-subtle` paint of `#6d6e74` in Light and `#8b8b94` in explicit/System Dark, at least 4.5:1 contrast across current and hover surfaces, lower emphasis than muted text, visible focus, non-color pointer and keyboard affordance, and stable long-value wrapping and containment.",
+        "At 390x844 and while crossing 767/768, verify issue Properties defaults collapsed below 768px, exposes one named controlled region by pointer and keyboard without moving focus unexpectedly, retains a visible focus indicator and correct `aria-expanded` state, remains open while mutation or error recovery is present, resets for issue navigation, contains longest labels without overlap, and becomes continuously visible with no trigger at 768px and above in pinned Light, pinned Dark, and live System.",
+        "Verify one visible focus indicator, logical focus order, Escape recovery, trigger-focus restoration, and no keyboard trap for every dialog, menu, contextual empty-state action, query-error retry, local-service retry, listbox, detail surface, navigation drawer, and virtualized list.",
+        "Verify issue, project, and milestone archive notices are visible status bands with named Undo and dismiss controls; each result produces exactly one authoritative live-region announcement; archive focus lands on Undo; pending restore exposes busy and disabled state; successful restore returns focus to the restored record or detail action; failure uses alert semantics and a stable Archive recovery destination; and the latest action replaces any older notice.",
+        "Verify accessible names, roles, states, row and group relationships, active-descendant wiring, one alert announcement per blocking query failure, one app-wide disconnect alert, one polite reconnect status, validation messages, retry-busy state, and disabled-option navigation.",
+        "Run current automated accessibility inspection and require zero serious or critical violations; record any lower-severity result with owner and disposition.",
+        "Exercise longest approved titles, labels, descriptions, empty-state labels, query-error and local-service messages and correlation identifiers, project names, status names, identifiers, and dates at all baseline viewports; require stable empty-state, query-error, and connection-banner action geometry.",
+        "Require zero text/control overlap, zero document-level horizontal overflow, explicit announced scrolling for dense data regions, and no unreachable core property.",
+        "Verify the retained-draft status, content/comment discard commands, focus destination, long issue identifiers and draft labels, mutation/conflict lock state, and stable desktop/tablet/mobile geometry without cross-issue announcements.",
+        "Verify the archived-project purge danger action, exact-name dialog focus and Escape recovery, wrong-confirmation field error, preserved-issue success announcement and focus, longest project name wrapping, and stable desktop/tablet/mobile geometry.",
+        "Verify the archived-milestone purge danger action, exact-name dialog initial focus and Escape recovery, wrong-confirmation field error, same-project issue readback, cleared milestone URL context, adjacent-list or archived-toggle focus, counted success announcement, longest milestone name wrapping, and stable desktop/tablet/mobile geometry.",
+        "Verify desktop expanded rail, tablet collapsed rail and overlay, mobile off-canvas navigation and full-route detail, plus live resize across 767/768 and 1199/1200 boundaries.",
+        "Verify reduced-motion behavior, System/Light/Dark appearance menu keyboard/focus/checked state, live System response, pinned Light/Dark contrast, and that focus, announcements, and geometry do not depend on animation completion."
+      ]
+    },
+    {
+      "id": "P-T20",
+      "level": "golden_visual_performance",
+      "status": "in_progress",
+      "requirement_refs": [
+        "R-103",
+        "R-105",
+        "R-110"
+      ],
+      "historical_baseline_ref": "docs/product/versions/v0.1.0/30-implementation/CT-4/result.json",
+      "historical_baseline_current_acceptance": false,
+      "appearances": [
+        "light",
+        "dark"
+      ],
+      "system_mode_behavior": "Set System, change the operating-system color scheme in both directions, and verify live resolution, checked state, color-scheme, and theme-color without reloading.",
+      "screens": [
+        "projects-list",
+        "project-overview",
+        "project-milestones",
+        "project-activity",
+        "issues-list",
+        "issues-board",
+        "issue-detail-contextual",
+        "issue-detail-direct-mobile",
+        "issue-detail-direct-mobile-properties-open",
+        "my-work",
+        "saved-views-library",
+        "workflow-statuses",
+        "issue-create-compact",
+        "issue-create-expanded",
+        "command-palette-empty",
+        "command-palette-results",
+        "query-error-projects",
+        "query-error-issues",
+        "query-error-detail-subsections",
+        "local-service-unavailable",
+        "local-service-reconnected",
+        "issue-detail-content-draft",
+        "issue-detail-comment-draft",
+        "milestone-purge-confirmation",
+        "milestone-purge-result",
+        "project-purge-confirmation",
+        "project-purge-result",
+        "issue-archive-undo",
+        "project-archive-undo",
+        "milestone-archive-undo"
+      ],
+      "budgets": {
+        "interaction_p75_ms": 100,
+        "maximum_mounted_rows_at_2000_issues": 70,
+        "stable_fixture_pixel_delta": 0,
+        "document_horizontal_overflow_px": 0,
+        "overlap_or_clipping_allowed": false,
+        "masking": "Only deterministic caret, timestamp, and operating-system chrome regions may be documented; product geometry cannot be masked."
+      },
+      "evidence_required": "Fresh and byte-bound Chrome screenshots for the current owner-only candidate at every applicable baseline viewport in pinned Light and pinned Dark (60 named captures), plus live System-mode evidence, wider regression, and performance telemetry.",
+      "named_capture_status": {
+        "status": "in_progress",
+        "current": 24,
+        "required": 60,
+        "remaining_dynamic_captures": 36,
+        "manifest_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/core-manifest.json",
+        "audit_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-core-visual-audit.json",
+        "evidence_revision": "87dda2985c56bfaa80ad17360beb645e6f22f534"
+      },
+      "historical_named_capture_status": {
+        "status": "complete_historical",
+        "product_revision": "7665027c0266fa5f0be0070dd75c2541959a9eb5",
+        "current": 60,
+        "required": 60,
+        "manifest_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/manifest.json",
+        "audit_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-visual-audit.json",
+        "evidence_revision": "440b6da5c015663fc20d30551b037e97ae8a71da",
+        "current_acceptance": false
+      },
+      "remaining": [
+        "36 dynamic named captures across dialog, command, fault, reconnect, draft, purge, and archive states",
+        "live System-mode response in both operating-system appearance directions",
+        "comparable current interaction timing and remaining protected performance budgets"
+      ]
+    },
+    {
+      "id": "P-T21",
+      "level": "independent_clean_runtime",
+      "status": "pending",
+      "requirement_refs": [
+        "R-013",
+        "R-014",
+        "R-107",
+        "R-109"
+      ],
+      "owner": "CT-82",
+      "evidence_ref": null,
+      "accepted_environment": null,
+      "artifact_sha256": null,
+      "reason": "Product revision 670a9f9 postdates the accepted cf99bb8 qualification."
+    }
+  ],
+  "hard_fail_conditions": [
+    "Any unsupported collaboration, identity, remote-runtime, Docker, or database-server surface becomes reachable.",
+    "Any initial core query failure is presented as an empty collection, hides its retry, or leaves the affected result as a dead end.",
+    "Any loopback service failure triggers owner provisioning, discards reachable cached work or drafts, lacks one global retry, produces duplicate disconnect/reconnect announcements, or fails to refresh active reads after recovery.",
+    "Any unsaved issue content or new-comment draft is lost across a supported detail remount, appears under another issue or workspace, submits to the wrong issue, or clears outside its matching save, purge, or explicit discard.",
+    "Project purge is reachable before archive or without owner capability, accepts an inexact name or stale revision, deletes an issue, retains a project milestone/resource, loses issue activity, or fails to return visible counted feedback and list focus.",
+    "Milestone purge is reachable before archive or without owner capability, accepts an inexact name or stale revision, deletes an issue, clears an issue project, loses issue or project activity, leaves the milestone reachable, retains invalid milestone URL context, or fails to return visible counted feedback and contextual focus.",
+    "Any single-record issue, project, or milestone archive lacks visible named Undo, emits duplicate live-region results, restores from anything other than the exact server-returned archived revision, loses activity or dependent data, traps or drops focus, misrepresents restore failure, or removes the archived recovery path.",
+    "The computed topbar differs from 44px at an accepted viewport or breakpoint, uses translucent or blurred paint, or causes the recovery banner, contextual detail, overlay detail, focus, content, or document overflow to cross the accepted shell boundary.",
+    "Project Overview exceeds 920px, a dense or non-overview work view is incorrectly capped, a page title differs from 20px, a displayed or edited project title differs from 24px, or a dialog backdrop applies blur at an accepted viewport or breakpoint.",
+    "Any focus or selection state retains the retired blue focus family, lacks a visible unclipped 2px indicator, fails adjacent-color contrast, depends on color alone, or resolves differently between explicit Dark and System Dark.",
+    "Any recovery correlation identifier or workflow-status drag handle falls back or inherits because `--ol-text-subtle` is undefined, misses 4.5:1 contrast, loses its non-color affordance, or differs between explicit Dark and System Dark.",
+    "Issue Properties has no named keyboard-operable disclosure below 768px, defaults expanded on mobile, can hide pending or error recovery, loses state synchronization across issue or viewport changes, remains collapsible at 768px and above, or overlaps or clips its trigger, labels, controls, focus, or feedback.",
+    "Any critical workflow loses committed state, view context, focus recovery, or atomic conflict behavior.",
+    "Any core action requires an inaccessible pointer-only path.",
+    "Any serious or critical automated accessibility violation remains unresolved.",
+    "Any product text or control overlaps, clips, becomes unreachable, or causes unannounced document overflow.",
+    "Any screenshot or metric from an older candidate is represented as current evidence.",
+    "Any browser other than the explicitly required Chrome family supplies acceptance evidence."
+  ],
+  "current_execution": {
+    "chrome_connected": true,
+    "candidate_url": "http://127.0.0.1:4284/",
+    "source_revision": "670a9f96e989654d84408e30c527e85b765a9042",
+    "steps_executed": 0,
+    "steps_started": 13,
+    "screenshots_captured": 109,
+    "current_candidate_screenshots": 24,
+    "historical_screenshots": 85,
+    "passed_checks": 0,
+    "failed_checks": 0,
+    "in_progress_checks": 4,
+    "blocked_checks": 1,
+    "bounded_observations": [
+      "one-owner navigation and unsupported collaboration-control absence",
+      "project overview, two visible milestones, project activity, issue list, issue board, direct and mobile issue detail, My work, saved views, and workflow states",
+      "issue-title and native due-date semantic focus paint implemented and verified in pinned Light and Dark; CT-110 review pending",
+      "focus-only empty TipTap normalization no longer creates a retained draft; meaningful input and matching discard behave correctly; CT-111 review pending",
+      "compact/default/comfortable board cards expose complete title lines with contained metadata and exact six-pixel separation in pinned Light and Dark; CT-112 review pending",
+      "automatic local-owner recovery completed two process restarts without reload, preserved cached data, restored five client-navigated core routes, and left the SQLite digests exact; CT-113 review pending",
+      "24 current core pinned Light/Dark golden states bind to 670a9f9 and image-only evidence revision 87dda29; all pass structured and visual inspection, while 36 dynamic states remain open",
+      "20 current route accessibility states pass across 638 controls and 482 sequential Tab stops pass without focus or trap failures",
+      "24 pinned responsive states, six live-resize states, and pointer/keyboard Properties operation pass on 670a9f9",
+      "current 2,002-issue virtualization, stable-frame, and geometry checks pass; comparable current interaction timing remains open",
+      "bounded one-shot project, issue, and detail-subsection query failures exposed Retry and restored authoritative data",
+      "bounded loopback outage and reconnect states preserved the owner data surface and restored the 2-project, 2-milestone, 10-active-issue fixture",
+      "bounded content/comment draft, issue/project/milestone archive Undo, and archived project/milestone purge paths were exercised; fixture state was restored afterward",
+      "the 60-image golden set and 71.8ms p75 interaction timing bind to 7665027, while P-T21 qualification binds to cf99bb8; all are historical for current acceptance"
+    ],
+    "current_capture_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-113/evidence/verification-summary.json",
+      "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-core-route-accessibility.json",
+      "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-core-route-keyboard.json",
+      "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-responsive-breakpoints.json",
+      "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/performance-current.json",
+      "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/core-manifest.json",
+      "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-core-visual-audit.json"
+    ],
+    "core_route_accessibility_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-core-route-accessibility.json",
+    "core_route_keyboard_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-core-route-keyboard.json",
+    "core_route_accessibility_states": {
+      "passed": 20,
+      "failed": 0,
+      "visible_controls_observed": 638,
+      "current_revision": "670a9f9"
+    },
+    "core_route_tab_stops": {
+      "passed": 482,
+      "failed": 0,
+      "current_revision": "670a9f9"
+    },
+    "golden_named_captures": {
+      "current": 24,
+      "historical": 60,
+      "historical_revision": "7665027",
+      "required": 60,
+      "remaining_dynamic_captures": 36,
+      "current_evidence_revision": "87dda2985c56bfaa80ad17360beb645e6f22f534"
+    },
+    "resolved_bounded_defects": [
+      "CT-104",
+      "CT-105",
+      "CT-106",
+      "CT-107",
+      "CT-108"
+    ],
+    "automated_accessibility_engine": "complete_engine_requirement_open; current structured live DOM, landmark, ARIA-reference, control-name, direct-text contrast, paint, geometry, and overflow checks cover 20 route/viewport/theme states",
+    "acceptance_claimed": false,
+    "current_core_visual_audit_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-core-visual-audit.json",
+    "current_core_visual_audit_states": {
+      "passed": 24,
+      "failed": 0,
+      "current_revision": "670a9f9",
+      "visually_inspected": 24,
+      "remaining_dynamic_captures": 36
+    },
+    "historical_visual_audit_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-visual-audit.json",
+    "historical_visual_audit_states": {
+      "passed": 0,
+      "failed": 0,
+      "historical_passed": 60,
+      "historical_revision": "7665027",
+      "expected_recovery_alert_states": 8
+    },
+    "implementation_complete_review_pending": [
+      "CT-110",
+      "CT-111",
+      "CT-112",
+      "CT-113"
+    ]
+  }
+}

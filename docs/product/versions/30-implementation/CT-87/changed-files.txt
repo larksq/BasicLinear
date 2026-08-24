@@ -1,0 +1,14 @@
+apps/web/src/issues.tsx
+apps/web/src/issue-view-configuration.ts
+apps/web/src/styles.css
+apps/web/tests/single-owner-surface.test.ts
+apps/web/tests/issue-view-configuration.test.ts
+apps/web/tests/issue-row-actions.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-87/session.md
+docs/product/versions/v0.1.0/30-implementation/CT-87/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-87/evidence/verification-summary.json
+docs/product/versions/v0.1.0/30-implementation/CT-87/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-87/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-87/changed-files.txt
+docs/product/versions/v0.1.0/40-testing/CT-12/evidence/ct87-owner-boundary.json
+docs/product/versions/v0.1.0/50-outcome-review/CT-13/result.json

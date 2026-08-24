@@ -1,0 +1,741 @@
+{
+  "capturedAt": "2026-08-22T11:51:03.753Z",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "runs": [
+    {
+      "theme": "Light",
+      "cardCount": 10,
+      "density": "compact",
+      "failures": [],
+      "maxGap": 6,
+      "measurements": [
+        {
+          "cardHeight": 90,
+          "inlineHeight": "90px",
+          "issueId": "90a8a8f0-a643-447a-af20-04544a7986df",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 90,
+          "inlineHeight": "90px",
+          "issueId": "6da3a3ce-f45f-4137-9c7f-fa5eb7af64d4",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 90,
+          "inlineHeight": "90px",
+          "issueId": "4b70be55-b47c-4f8b-bd86-f90f30c988c7",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 90,
+          "inlineHeight": "90px",
+          "issueId": "3230e019-ea06-4227-bf75-3956e5985d06",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 90,
+          "inlineHeight": "90px",
+          "issueId": "b6a0d8f2-aeaf-4916-8613-ba10c1524dcb",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 90,
+          "inlineHeight": "90px",
+          "issueId": "a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 90,
+          "inlineHeight": "90px",
+          "issueId": "2ac09155-14a0-4c10-a3c0-bf0ef6e5e954",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 90,
+          "inlineHeight": "90px",
+          "issueId": "0951c94a-70e2-456d-84e8-4b6b9d4683ca",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 90,
+          "inlineHeight": "90px",
+          "issueId": "dde1eb01-2720-4686-9780-e650ec1702c1",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 90,
+          "inlineHeight": "90px",
+          "issueId": "2cd55b5c-863a-43b8-9966-684d76a5b1f3",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        }
+      ],
+      "minGap": 6,
+      "url": "http://127.0.0.1:4284/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=compact&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "viewportOverflow": 0
+    },
+    {
+      "theme": "Light",
+      "cardCount": 10,
+      "density": "default",
+      "failures": [],
+      "maxGap": 6,
+      "measurements": [
+        {
+          "cardHeight": 102,
+          "inlineHeight": "102px",
+          "issueId": "90a8a8f0-a643-447a-af20-04544a7986df",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 102,
+          "inlineHeight": "102px",
+          "issueId": "6da3a3ce-f45f-4137-9c7f-fa5eb7af64d4",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 102,
+          "inlineHeight": "102px",
+          "issueId": "4b70be55-b47c-4f8b-bd86-f90f30c988c7",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 102,
+          "inlineHeight": "102px",
+          "issueId": "3230e019-ea06-4227-bf75-3956e5985d06",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 102,
+          "inlineHeight": "102px",
+          "issueId": "b6a0d8f2-aeaf-4916-8613-ba10c1524dcb",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 102,
+          "inlineHeight": "102px",
+          "issueId": "a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 102,
+          "inlineHeight": "102px",
+          "issueId": "2ac09155-14a0-4c10-a3c0-bf0ef6e5e954",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 102,
+          "inlineHeight": "102px",
+          "issueId": "0951c94a-70e2-456d-84e8-4b6b9d4683ca",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 102,
+          "inlineHeight": "102px",
+          "issueId": "dde1eb01-2720-4686-9780-e650ec1702c1",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 102,
+          "inlineHeight": "102px",
+          "issueId": "2cd55b5c-863a-43b8-9966-684d76a5b1f3",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        }
+      ],
+      "minGap": 6,
+      "url": "http://127.0.0.1:4284/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "viewportOverflow": 0
+    },
+    {
+      "theme": "Light",
+      "cardCount": 10,
+      "density": "comfortable",
+      "failures": [],
+      "maxGap": 6,
+      "measurements": [
+        {
+          "cardHeight": 114,
+          "inlineHeight": "114px",
+          "issueId": "90a8a8f0-a643-447a-af20-04544a7986df",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 28,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 114,
+          "inlineHeight": "114px",
+          "issueId": "6da3a3ce-f45f-4137-9c7f-fa5eb7af64d4",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 28,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 114,
+          "inlineHeight": "114px",
+          "issueId": "4b70be55-b47c-4f8b-bd86-f90f30c988c7",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 28,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 114,
+          "inlineHeight": "114px",
+          "issueId": "3230e019-ea06-4227-bf75-3956e5985d06",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 28,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 114,
+          "inlineHeight": "114px",
+          "issueId": "b6a0d8f2-aeaf-4916-8613-ba10c1524dcb",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 28,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 114,
+          "inlineHeight": "114px",
+          "issueId": "a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 28,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 114,
+          "inlineHeight": "114px",
+          "issueId": "2ac09155-14a0-4c10-a3c0-bf0ef6e5e954",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 28,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 114,
+          "inlineHeight": "114px",
+          "issueId": "0951c94a-70e2-456d-84e8-4b6b9d4683ca",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 28,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 114,
+          "inlineHeight": "114px",
+          "issueId": "dde1eb01-2720-4686-9780-e650ec1702c1",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 28,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 114,
+          "inlineHeight": "114px",
+          "issueId": "2cd55b5c-863a-43b8-9966-684d76a5b1f3",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 28,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        }
+      ],
+      "minGap": 6,
+      "url": "http://127.0.0.1:4284/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=comfortable&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "viewportOverflow": 0
+    },
+    {
+      "theme": "Dark",
+      "cardCount": 10,
+      "density": "compact",
+      "failures": [],
+      "maxGap": 6,
+      "measurements": [
+        {
+          "cardHeight": 90,
+          "inlineHeight": "90px",
+          "issueId": "90a8a8f0-a643-447a-af20-04544a7986df",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 90,
+          "inlineHeight": "90px",
+          "issueId": "6da3a3ce-f45f-4137-9c7f-fa5eb7af64d4",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 90,
+          "inlineHeight": "90px",
+          "issueId": "4b70be55-b47c-4f8b-bd86-f90f30c988c7",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 90,
+          "inlineHeight": "90px",
+          "issueId": "3230e019-ea06-4227-bf75-3956e5985d06",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 90,
+          "inlineHeight": "90px",
+          "issueId": "b6a0d8f2-aeaf-4916-8613-ba10c1524dcb",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 90,
+          "inlineHeight": "90px",
+          "issueId": "a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 90,
+          "inlineHeight": "90px",
+          "issueId": "2ac09155-14a0-4c10-a3c0-bf0ef6e5e954",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 90,
+          "inlineHeight": "90px",
+          "issueId": "0951c94a-70e2-456d-84e8-4b6b9d4683ca",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 90,
+          "inlineHeight": "90px",
+          "issueId": "dde1eb01-2720-4686-9780-e650ec1702c1",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 90,
+          "inlineHeight": "90px",
+          "issueId": "2cd55b5c-863a-43b8-9966-684d76a5b1f3",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        }
+      ],
+      "minGap": 6,
+      "url": "http://127.0.0.1:4284/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=compact&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "viewportOverflow": 0
+    },
+    {
+      "theme": "Dark",
+      "cardCount": 10,
+      "density": "default",
+      "failures": [],
+      "maxGap": 6,
+      "measurements": [
+        {
+          "cardHeight": 102,
+          "inlineHeight": "102px",
+          "issueId": "90a8a8f0-a643-447a-af20-04544a7986df",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 102,
+          "inlineHeight": "102px",
+          "issueId": "6da3a3ce-f45f-4137-9c7f-fa5eb7af64d4",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 102,
+          "inlineHeight": "102px",
+          "issueId": "4b70be55-b47c-4f8b-bd86-f90f30c988c7",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 102,
+          "inlineHeight": "102px",
+          "issueId": "3230e019-ea06-4227-bf75-3956e5985d06",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 102,
+          "inlineHeight": "102px",
+          "issueId": "b6a0d8f2-aeaf-4916-8613-ba10c1524dcb",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 102,
+          "inlineHeight": "102px",
+          "issueId": "a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 102,
+          "inlineHeight": "102px",
+          "issueId": "2ac09155-14a0-4c10-a3c0-bf0ef6e5e954",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 102,
+          "inlineHeight": "102px",
+          "issueId": "0951c94a-70e2-456d-84e8-4b6b9d4683ca",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 102,
+          "inlineHeight": "102px",
+          "issueId": "dde1eb01-2720-4686-9780-e650ec1702c1",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 102,
+          "inlineHeight": "102px",
+          "issueId": "2cd55b5c-863a-43b8-9966-684d76a5b1f3",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 24,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        }
+      ],
+      "minGap": 6,
+      "url": "http://127.0.0.1:4284/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "viewportOverflow": 0
+    },
+    {
+      "theme": "Dark",
+      "cardCount": 10,
+      "density": "comfortable",
+      "failures": [],
+      "maxGap": 6,
+      "measurements": [
+        {
+          "cardHeight": 114,
+          "inlineHeight": "114px",
+          "issueId": "90a8a8f0-a643-447a-af20-04544a7986df",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 28,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 114,
+          "inlineHeight": "114px",
+          "issueId": "6da3a3ce-f45f-4137-9c7f-fa5eb7af64d4",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 28,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 114,
+          "inlineHeight": "114px",
+          "issueId": "4b70be55-b47c-4f8b-bd86-f90f30c988c7",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 28,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 114,
+          "inlineHeight": "114px",
+          "issueId": "3230e019-ea06-4227-bf75-3956e5985d06",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 28,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 114,
+          "inlineHeight": "114px",
+          "issueId": "b6a0d8f2-aeaf-4916-8613-ba10c1524dcb",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 28,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 114,
+          "inlineHeight": "114px",
+          "issueId": "a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 28,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 114,
+          "inlineHeight": "114px",
+          "issueId": "2ac09155-14a0-4c10-a3c0-bf0ef6e5e954",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 28,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 114,
+          "inlineHeight": "114px",
+          "issueId": "0951c94a-70e2-456d-84e8-4b6b9d4683ca",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 28,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 114,
+          "inlineHeight": "114px",
+          "issueId": "dde1eb01-2720-4686-9780-e650ec1702c1",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 28,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        },
+        {
+          "cardHeight": 114,
+          "inlineHeight": "114px",
+          "issueId": "2cd55b5c-863a-43b8-9966-684d76a5b1f3",
+          "metadataInside": true,
+          "noTitleMetadataOverlap": true,
+          "titleComplete": true,
+          "titleHeight": 28,
+          "titleInside": true,
+          "titleLineHeight": "16.2px"
+        }
+      ],
+      "minGap": 6,
+      "url": "http://127.0.0.1:4284/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=comfortable&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "viewportOverflow": 0
+    }
+  ]
+}

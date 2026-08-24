@@ -1,0 +1,39 @@
+{
+  "name": "openlinear",
+  "version": "0.1.0",
+  "license": "AGPL-3.0-only",
+  "private": true,
+  "type": "module",
+  "packageManager": "npm@11.16.0",
+  "engines": {
+    "node": ">=24.0.0 <25"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "ops/cli"
+  ],
+  "scripts": {
+    "build": "node scripts/clean-build-output.mjs && npm run build -w @openlinear/domain && npm run build -w @openlinear/contracts && npm run build -w @openlinear/db && npm run build -w @openlinear/ui && npm run build -w @openlinear/test-fixtures && npm run build -w @openlinear/api && npm run build -w @openlinear/operator && npm run build -w @openlinear/web",
+    "start": "node apps/api/dist/index.js",
+    "dev:api": "npm run dev -w @openlinear/api",
+    "dev:web": "npm run dev -w @openlinear/web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "vitest run --config vitest.config.ts",
+    "test:release-audit": "node --test scripts/tests/audit-public-release.test.mjs",
+    "prepare:release-provenance": "node scripts/prepare-release-provenance.mjs",
+    "prepare:third-party-notices": "node scripts/prepare-third-party-notices.mjs",
+    "audit:release": "node scripts/audit-public-release.mjs",
+    "visual:fixture": "node scripts/serve-visual-fixture.mjs",
+    "operator": "npm run start -w @openlinear/operator --",
+    "health": "npm run start -w @openlinear/operator -- health"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.3",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "tsx": "4.23.12",
+    "typescript": "7.0.2",
+    "vitest": "4.1.11"
+  }
+}

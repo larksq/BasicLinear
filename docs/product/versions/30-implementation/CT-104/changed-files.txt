@@ -1,0 +1,10 @@
+apps/web/src/issue-inline-properties.ts
+apps/web/src/issues.tsx
+apps/web/tests/issue-inline-properties.test.ts
+apps/web/tests/issue-inspector.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-104/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-104/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-104/evidence/verification-summary.json
+docs/product/versions/v0.1.0/30-implementation/CT-104/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-104/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-104/session.md

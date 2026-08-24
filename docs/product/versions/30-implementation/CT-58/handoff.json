@@ -1,0 +1,127 @@
+{
+  "schema_version": "ct58-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-58",
+      "stable_id": "b2289de0-eed2-401e-855f-0fbbd57e6ee9",
+      "starting_revision": 2,
+      "expected_checkpoint_revision": 3,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_browser_verification",
+      "requirement_refs": ["R-002", "R-003", "R-005", "R-008", "R-011", "R-101", "R-110"],
+      "acceptance_refs": ["P-T04", "P-T06", "P-T08", "P-T10", "P-T11", "P-T16", "P-T18", "P-T19"],
+      "outcome_refs": ["O-001", "O-002", "O-003", "O-004"],
+      "allowed_mutation_paths": [
+        "apps/web/src/App.tsx",
+        "apps/web/src/workspace-navigation.ts",
+        "apps/web/src/issue-scope.ts",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/projects.tsx",
+        "apps/web/src/styles.css",
+        "apps/web/tests/workspace-navigation.test.ts",
+        "apps/web/tests/issue-scope.test.ts",
+        "apps/web/tests/team-scope.test.ts",
+        "apps/web/tests/layout-contract.test.ts",
+        "apps/web/tests/state-semantics.test.ts",
+        "apps/web/tests/workspace-capabilities.test.ts",
+        "scripts/serve-visual-fixture.mjs",
+        "docs/product/versions/v0.1.0/30-implementation/CT-58",
+        "docs/product/versions/v0.1.0/40-testing/CT-12",
+        "docs/product/versions/v0.1.0/50-outcome-review/CT-13",
+        "ops/release current-candidate provenance manifests"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT58-IMPL-20260820T155803Z",
+      "actor_id": "codex-team-workspaces",
+      "issue_id": "CT-58",
+      "mode": "code_mutating",
+      "output_refs": [
+        "apps/web/src/App.tsx",
+        "apps/web/src/workspace-navigation.ts",
+        "apps/web/src/issue-scope.ts",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/projects.tsx",
+        "apps/web/src/styles.css",
+        "scripts/serve-visual-fixture.mjs"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-58/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-58/evidence.md",
+        "docs/product/versions/v0.1.0/30-implementation/CT-58/evidence/browser-status.json"
+      ]
+    }
+  ],
+  "checks": [
+    {"check_id": "CT58-TEAM-ALLOWLIST-AND-HISTORY", "issue_id": "CT-58", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-58/result.json"},
+    {"check_id": "CT58-ISSUE-SCOPE", "issue_id": "CT-58", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-58/result.json"},
+    {"check_id": "CT58-PROJECT-SCOPE", "issue_id": "CT-58", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-58/result.json"},
+    {"check_id": "CT58-REGRESSION", "issue_id": "CT-58", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-58/result.json"},
+    {"check_id": "CT58-TYPECHECK", "issue_id": "CT-58", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-58/result.json"},
+    {"check_id": "CT58-BUILD", "issue_id": "CT-58", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-58/result.json"},
+    {"check_id": "CT58-FIXTURE-HOST", "issue_id": "CT-58", "status": "passed_after_environment_retry", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-58/evidence/browser-status.json"},
+    {"check_id": "CT58-BROWSER", "issue_id": "CT-58", "status": "blocked", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-58/evidence/browser-status.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-58",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-58/evidence.md",
+      "basis": "Focused and complete regression, all-workspace typecheck, fixture syntax, production build, source review, allowlist/scope tests, and the two-team HTTP matrix pass. Rendered desktop, tablet, and mobile verification remains unexecuted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["P-T04", "P-T06", "P-T08", "P-T10", "P-T11", "P-T16", "P-T18", "P-T19"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-58/changed-files.txt",
+    "regression_areas": [
+      "missing valid invalid removed and view-incompatible team URL resolution",
+      "sidebar team changes and Issues Projects switcher history",
+      "global Projects Issues escape and workspace reset",
+      "fixed issue scope versus URL and saved-view filters",
+      "team project status milestone and issue query isolation",
+      "contextual issue and project creation",
+      "cross-team direct issue and project rejection",
+      "owner member guest desktop tablet mobile accessibility focus overflow and responsive geometry"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-58/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-58/evidence.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-58/evidence/browser-status.json"
+    ],
+    "implementation_actor_ids": ["codex-team-workspaces"],
+    "implementation_session_ids": ["CT58-IMPL-20260820T155803Z"]
+  },
+  "outcomes": [
+    {"outcome_id": "O-001", "status": "pending"},
+    {"outcome_id": "O-002", "status": "pending"},
+    {"outcome_id": "O-003", "status": "pending"},
+    {"outcome_id": "O-004", "status": "pending"}
+  ],
+  "blockers": [
+    {
+      "id": "CT58-BROWSER-PERMISSION",
+      "description": "The approved browser surface is unavailable under the active security policy; final owner/member/guest desktop, tablet, and mobile team route, scope, history, focus, accessibility, and responsive-geometry verification remains required."
+    }
+  ],
+  "environment_notes": [
+    "CT-58 changes no production schema, repository query compiler, service route, authorization policy, or RLS policy. The current CT-54 PostgreSQL 16.10 evidence remains applicable to those unchanged paths, but no CT-58 database rerun is claimed.",
+    "The sandboxed server bind and sandbox-local HTTP namespace were unavailable. The managed host fixture served the exact production build and all six bounded host checks passed."
+  ],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issues": ["CT-58"],
+    "reason": "Run the bounded owner/member/guest desktop, tablet, and mobile two-team route, scope, history, creation, cross-record rejection, focus, accessibility, and responsive-geometry matrix when the approved browser surface is available."
+  }
+}

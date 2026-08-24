@@ -1,0 +1,16 @@
+apps/web/src/App.tsx
+apps/web/src/layout-preferences.ts
+apps/web/src/styles.css
+apps/web/tests/layout-contract.test.ts
+apps/web/tests/layout-preferences.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-24/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-24/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/desktop-default-expanded-1440x900.jpg
+docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/mobile-drawer-closed-390x844.jpg
+docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/mobile-drawer-open-390x844.jpg
+docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/tablet-collapsed-768x1024.jpg
+docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/tablet-default-collapsed-1024x768.jpg
+docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/tablet-explicit-expanded-1024x768.jpg
+docs/product/versions/v0.1.0/30-implementation/CT-24/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-24/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-24/session.md

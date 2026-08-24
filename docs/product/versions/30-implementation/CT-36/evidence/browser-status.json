@@ -1,0 +1,25 @@
+{
+  "schema_version": "ct36-browser-status-v1",
+  "recorded_at": "2026-08-20T05:09:30Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4180/",
+  "synthetic_fixture": true,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "Access to the local browser surface remains denied by the active security policy. The denied browser outcome was not retried through another surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": ["Issues list", "Issues board"],
+  "required_assertions": [
+    "preferred issue retains the single roving tab stop after reorder or refresh",
+    "hidden preferred issue falls back to the visible active issue and then the first visible issue",
+    "empty issue collections expose no record tab stop",
+    "Arrow Up Arrow Down J and K retain focus identity through virtualized boundaries",
+    "Enter opens and Space selects the focused issue without nested-control leakage",
+    "focus remains visible and all issue content remains reachable",
+    "zero uncontained positive horizontal overflow and zero duplicate IDs",
+    "zero console warnings and errors"
+  ]
+}

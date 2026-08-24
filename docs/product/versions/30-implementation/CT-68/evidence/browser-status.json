@@ -1,0 +1,39 @@
+{
+  "schema_version": "ct68-browser-status-v1",
+  "recorded_at": "2026-08-20T22:08:47Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4194/?workspace=20000000-0000-4000-8000-000000000023&view=projects&fixture=project-inline-edit&project=50000000-0000-4000-8000-000000000023",
+  "synthetic_fixture": true,
+  "fixture_process": {
+    "port": 4194,
+    "build": "production",
+    "managed_session": 41587,
+    "initial_sandbox_launch": "failed_listen_eperm",
+    "managed_launch": "passed"
+  },
+  "host_attempts": [
+    {"attempt": 1, "status": "sandbox_bind_denied", "checks_attempted": 0, "checks_passed": 0, "reason": "The sandbox could not bind the local fixture; this environment result was rejected as product evidence."},
+    {"attempt": 2, "status": "passed_host_network", "port": 4194, "checks_attempted": 20, "checks_passed": 20, "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-68/evidence/host-matrix.json"}
+  ],
+  "browser_attempted": false,
+  "browser_captures": 0,
+  "rendered_assertions": 0,
+  "policy_reason": "The active security policy denies the approved browser surface. Alternate browser surfaces were not used.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_assertions": [
+    "owner and member can edit project content and properties while guest controls remain read-only",
+    "project content edits in page and the old edit-project modal is absent",
+    "status priority lead start date and target date commit without a shared property save command",
+    "a dirty name summary overview and resource draft survives property success validation failure conflict and unavailable readback",
+    "content conflict retains the draft for explicit retry or authoritative server-value recovery",
+    "pending error and revision-confirmed feedback retain stable geometry",
+    "project team remains visible and read-only after creation",
+    "date order invalid lead and capability restrictions fail closed",
+    "keyboard order focus visibility accessible names and live announcements remain correct",
+    "zero overlap clipped focus page-level positive overflow duplicate IDs console warnings and console errors"
+  ]
+}

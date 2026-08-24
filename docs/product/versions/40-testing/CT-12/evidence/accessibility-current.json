@@ -1,0 +1,101 @@
+{
+  "schema_version": "ct12-accessibility-current-v1",
+  "captured_at": "2026-08-23T00:43:44.030Z",
+  "verdict": "PASS_WITH_MANUALLY_RESOLVED_INCOMPLETE",
+  "authority": {
+    "issue": "CT-12",
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "product": {
+    "revision": "e1299af1bd06f7438f5010c6f6c030760c5a1dfb",
+    "tree": "ce6e21f1b0436e6afa1d11b1fc3f6ff471903bb3",
+    "asset": "assets/index-CpxWfAtI.js"
+  },
+  "engine": {
+    "name": "axe-core",
+    "version": "4.12.1",
+    "tags": ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"]
+  },
+  "browser": {
+    "family": "Google Chrome",
+    "version": "150.0.0.0",
+    "desktop_viewport": "1654x875",
+    "mobile_inner_viewport": "390x844"
+  },
+  "matrix": {
+    "states": 50,
+    "pass_nodes": 38245,
+    "violations": 0,
+    "incomplete": 5,
+    "manual_dispositions_passed": 5,
+    "system_route_and_dialog_states": 22,
+    "explicit_light_states": 9,
+    "explicit_dark_states": 9,
+    "mobile_long_content_and_dialog_states": 5,
+    "forced_error_pending_and_recovery_states": 5
+  },
+  "covered_surfaces": [
+    "Issues list and board",
+    "contextual and direct issue detail",
+    "My work",
+    "Workflow and status retirement",
+    "Saved Views and edit dialog",
+    "Projects list, overview, issues, activity, editor, and milestone edit",
+    "command, create-issue, label, and filter dialogs",
+    "issue actions, Appearance, and mobile Properties overlays",
+    "240-character mobile title in Light and Dark",
+    "query error, service interruption, delayed detail, archive Undo, and restored archive"
+  ],
+  "manual_dispositions": [
+    {
+      "state": "issue-action-menu-system",
+      "rule": "aria-valid-attr-value",
+      "result": "pass",
+      "evidence": "The live aria-controls target exists, is connected, and has role=menu."
+    },
+    {
+      "state": "appearance-menu-system",
+      "rule": "aria-valid-attr-value",
+      "result": "pass",
+      "evidence": "The live aria-controls target exists, is connected, and has role=menu."
+    },
+    {
+      "state": "appearance-menu-system",
+      "rule": "color-contrast",
+      "result": "pass",
+      "evidence": "The reported primary button is hidden beneath the open menu and independently measures 4.712:1 when visible."
+    },
+    {
+      "state": "workflow-retire-dialog-system",
+      "rule": "color-contrast",
+      "result": "pass",
+      "evidence": "Computed dialog text rgb(108,109,115) on white measures 5.156:1."
+    },
+    {
+      "state": "project-activity-system",
+      "rule": "color-contrast",
+      "result": "pass",
+      "evidence": "All 17 reported arrows are aria-hidden decorative markers and measure 15.037:1."
+    }
+  ],
+  "corrective_issues": {
+    "implemented_review_pending": ["CT-118", "CT-119", "CT-120", "CT-121", "CT-122", "CT-123"],
+    "unresolved_accessibility_defects": []
+  },
+  "raw_receipt": {
+    "path": ".control-tower/evidence/CT-12/axe-core-e1299af.json",
+    "mode": "0600",
+    "bytes": 55707,
+    "sha256": "e39d047e722955a9e3589005a4ff13295a7024469925583047cebd632f872a3b"
+  },
+  "boundaries": {
+    "live_two_direction_macos_system_response": "open_requires_action_time_authorization",
+    "distinct_application_review": "pending_CT117_through_CT123",
+    "exact_p_t21_independent_qualification": "pending",
+    "full_ct12_acceptance": false,
+    "release_claimed": false,
+    "outcomes_claimed": []
+  }
+}

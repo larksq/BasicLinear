@@ -1,0 +1,115 @@
+{
+  "schema_version": "ct65-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-65",
+      "stable_id": "495b1b7a-95b0-469b-b07f-84414cbbbfbf",
+      "starting_revision": 2,
+      "expected_checkpoint_revision": 3,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_browser_verification",
+      "requirement_refs": ["R-005", "R-008", "R-010", "R-104", "R-105", "R-110"],
+      "acceptance_refs": ["P-T08", "P-T10", "P-T11", "P-T12", "P-T18", "P-T19"],
+      "outcome_refs": ["O-001", "O-002", "O-003"],
+      "allowed_mutation_paths": [
+        "packages/contracts/src/index.ts",
+        "packages/contracts/tests/bulk-issues.test.ts",
+        "packages/db/src/issue-repository.ts",
+        "apps/api/tests/views.integration.test.ts",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/issue-bulk-actions.ts",
+        "apps/web/src/styles.css",
+        "apps/web/tests/issue-bulk-actions.test.ts",
+        "apps/web/tests/workspace-capabilities.test.ts",
+        "apps/web/tests/layout-contract.test.ts",
+        "scripts/serve-visual-fixture.mjs",
+        "docs/product/versions/v0.1.0/30-implementation/CT-65",
+        "docs/product/versions/v0.1.0/40-testing/CT-12",
+        "docs/product/versions/v0.1.0/50-outcome-review/CT-13",
+        "ops/release current-candidate provenance manifests"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT65-IMPL-20260820T194915Z",
+      "actor_id": "codex-bulk-label-edit",
+      "issue_id": "CT-65",
+      "mode": "code_mutating",
+      "output_refs": [
+        "packages/contracts/src/index.ts",
+        "packages/db/src/issue-repository.ts",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/issue-bulk-actions.ts",
+        "apps/web/src/styles.css",
+        "scripts/serve-visual-fixture.mjs"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-65/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-65/evidence.md",
+        "docs/product/versions/v0.1.0/30-implementation/CT-65/evidence/browser-status.json"
+      ]
+    }
+  ],
+  "checks": [
+    {"check_id": "CT65-LABEL-CONTRACT", "issue_id": "CT-65", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-65/result.json"},
+    {"check_id": "CT65-IDEMPOTENCY", "issue_id": "CT-65", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-65/result.json"},
+    {"check_id": "CT65-REGRESSION", "issue_id": "CT-65", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-65/result.json"},
+    {"check_id": "CT65-DATABASE", "issue_id": "CT-65", "status": "passed_after_environment_retry", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-65/result.json"},
+    {"check_id": "CT65-TYPECHECK", "issue_id": "CT-65", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-65/result.json"},
+    {"check_id": "CT65-BUILD", "issue_id": "CT-65", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-65/result.json"},
+    {"check_id": "CT65-FIXTURE-HOST", "issue_id": "CT-65", "status": "passed_after_environment_retry", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-65/evidence/browser-status.json"},
+    {"check_id": "CT65-BROWSER", "issue_id": "CT-65", "status": "blocked", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-65/evidence/browser-status.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-65",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-65/evidence.md",
+      "basis": "Schema, repository, API, helper, capability, layout, complete regression, all-workspace typecheck, current-source PostgreSQL, production build, source review, and a stateful 37-check HTTP matrix pass. Rendered menu, focus, announcement, keyboard, accessibility, and responsive geometry verification remains unexecuted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["P-T08", "P-T10", "P-T11", "P-T12", "P-T18", "P-T19"],
+    "status": "blocked_pending_browser_surface",
+    "risk_areas": [
+      "multi-select and Labels menu focus order",
+      "explicit add and remove mode semantics",
+      "heterogeneous current label sets",
+      "partial conflict selection retention and retry",
+      "idempotent result feedback",
+      "read-only and pending capability gates",
+      "bounded menu scrolling and responsive toolbar containment"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-65/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-65/evidence/browser-status.json"
+    ]
+  },
+  "outcomes": {
+    "claimed": [],
+    "pending": ["O-001", "O-002", "O-003"]
+  },
+  "blockers": [
+    "Approved browser access is unavailable for the required rendered desktop, tablet, mobile, keyboard, accessibility, interaction, geometry, and UAT matrix."
+  ],
+  "stale_downstream_state": [
+    "CT-12 must include CT-65 automated, PostgreSQL, and host evidence and retain the browser blocker.",
+    "CT-13 must audit the refreshed hash-bound release candidate after CT-65 and CT-12 reconciliation."
+  ],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issue": "CT-65",
+    "reason": "Run the bounded synthetic desktop, tablet, and mobile bulk-label, partial-result, keyboard, accessibility, and geometry matrix before accepting or closing CT-65."
+  }
+}

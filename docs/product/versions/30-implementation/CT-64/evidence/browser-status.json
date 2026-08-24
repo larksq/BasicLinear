@@ -1,0 +1,78 @@
+{
+  "schema_version": "ct64-browser-status-v1",
+  "recorded_at": "2026-08-20T19:27:20Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4189/?workspace=20000000-0000-4000-8000-000000000023&view=issues&fixture=issue-bulk-edit",
+  "synthetic_fixture": true,
+  "fixture_process": {
+    "port": 4189,
+    "build": "production",
+    "managed_session": 12743,
+    "initial_sandbox_launch": "failed_listen_eperm",
+    "managed_launch": "passed"
+  },
+  "host_attempts": [
+    {
+      "attempt": 1,
+      "status": "sandbox_network_denied",
+      "checks_attempted": 2,
+      "checks_passed": 0,
+      "reason": "The sandbox could not connect to the managed localhost fixture; this environment result was rejected as product evidence."
+    },
+    {
+      "attempt": 2,
+      "status": "passed_host_network",
+      "checks_attempted": 25,
+      "checks_passed": 25,
+      "observations": {
+        "application_html_status": 200,
+        "session_status": 200,
+        "session_role": "owner",
+        "projects_count": 2,
+        "milestones_count": 2,
+        "initial_issue_count": 2,
+        "initial_issue_revision": 3,
+        "paired_batch_updated": 2,
+        "paired_batch_revision": 4,
+        "paired_project_id": "50000000-0000-4000-8000-000000000025",
+        "paired_milestone_id": "52000000-0000-4000-8000-000000000026",
+        "paired_due_date": "2026-11-04",
+        "query_readback": true,
+        "detail_readback": true,
+        "mixed_result_updated": 1,
+        "mixed_result_conflicts": 1,
+        "mixed_conflict_current_revision": 4,
+        "invalid_pair_failed": 1,
+        "invalid_pair_code": "INVALID_ASSIGNMENT",
+        "invalid_pair_state_unchanged": true,
+        "project_only_milestone_cleared": true,
+        "conflict_retry_updated": true,
+        "explicit_clear_updated": 2,
+        "final_issue_a_revision": 7,
+        "final_issue_b_revision": 6,
+        "final_assignments_cleared": true
+      }
+    }
+  ],
+  "browser_attempted": false,
+  "browser_captures": 0,
+  "rendered_assertions": 0,
+  "policy_reason": "The active security policy denies the approved browser surface. Alternate browser surfaces were not used.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_assertions": [
+    "list and board selections expose one stable named bulk toolbar",
+    "common-team status project and milestone choices exclude ambiguous archived cross-team and duplicate records",
+    "milestone selection pairs its project while project changes clear stale milestone state",
+    "No project No milestone set date Clear due dates and keep-existing-date modes submit only intended fields",
+    "successful rows leave selection while conflicted and failed rows retain selection and current revisions for retry",
+    "pending offline archived mixed-team and read-only states preserve explicit recoverable behavior",
+    "one aggregate result is announced without duplicate live-region output",
+    "every control is keyboard reachable with visible focus in logical order",
+    "toolbar wrapping and the fixed date-control grid remain contained at desktop tablet and mobile widths",
+    "zero overlap clipped focus page-level positive overflow duplicate IDs console warnings and console errors"
+  ]
+}

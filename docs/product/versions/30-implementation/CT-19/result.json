@@ -1,0 +1,39 @@
+{
+  "schema_version": "ct19-implementation-result-v1",
+  "captured_at": "2026-08-19T22:47:53Z",
+  "verdict": "OUTPUT_DONE_FOR_CT12",
+  "issue": {
+    "identifier": "CT-19",
+    "id": "5e108c22-806f-4b75-aab8-bc65a7a34717",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "checks": {
+    "focused_test_files": 1,
+    "focused_tests_passed": 3,
+    "unit_test_files": 6,
+    "unit_tests_passed": 23,
+    "typecheck_workspaces": 8,
+    "production_build_passed": true,
+    "vite_modules_transformed": 1911,
+    "web_status": 200,
+    "readiness_status": "ready"
+  },
+  "browser": {
+    "prior_workspace_recent_verified": true,
+    "prior_issue_absent_after_switch": true,
+    "prior_project_absent_after_switch": true,
+    "current_workspace_search_verified": true,
+    "current_workspace_recent_verified": true,
+    "reload_persistence_verified": true,
+    "new_warning_or_error_count": 0,
+    "screenshot": "docs/product/versions/v0.1.0/30-implementation/CT-19/evidence/ct12-workspace-scoped-recents.jpg"
+  },
+  "source_hashes": {
+    "apps/web/src/App.tsx": "51c61879baaa0bd83d614497858f42690d5fc8639c4e0d5b1c115262a7399dd2",
+    "apps/web/src/search-recents.ts": "90bcad174b313d1c72d3ade9ad8395f8eb557492784da248fde5e8cb8d407c21",
+    "apps/web/tests/search-recents.test.ts": "b168ad35bb5c3d599a0a07bfd393f1834b576fbc8e830904612684111a4b295e",
+    "vitest.config.ts": "898792a1b4b0f8e17d44729d7a0427a2a30e30ef503f027bd7a92a8172c50c1c"
+  },
+  "outcomes_claimed": []
+}

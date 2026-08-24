@@ -1,0 +1,82 @@
+{
+  "schema_version": "ct124-verification-summary-v1",
+  "captured_at": "2026-08-23T02:57:30Z",
+  "issue": "CT-124",
+  "source_revision": "5a33d28be383b7651a4b0d6156534aa12cc423fa",
+  "source_tree": "d106d3bb40a84184e7ee26c919134b01e4748679",
+  "parent_product_revision": "e1299af1bd06f7438f5010c6f6c030760c5a1dfb",
+  "checks": {
+    "focused": { "files": 2, "passed": 13, "failed": 0 },
+    "complete": { "files": 73, "passed": 481, "failed": 0 },
+    "typecheck_workspaces": 8,
+    "release_audit": { "passed": 10, "failed": 0 },
+    "build": { "modules": 1953, "warnings": 0 },
+    "independent_application_review": "pending"
+  },
+  "chrome": {
+    "family": "Chrome",
+    "url": "http://127.0.0.1:4284/",
+    "appearance": "System",
+    "viewport": { "width": 1654, "height": 875, "device_scale_factor": 2 },
+    "loaded_asset": "assets/index-W0ZGkz-8.js",
+    "issue_board": {
+      "regions": 1,
+      "property_collections": 10,
+      "nested_named_property_groups": 0,
+      "first_card_properties": [
+        "Status: Backlog",
+        "Priority: High",
+        "Assignee: Owner",
+        "Project: OpenLinear v0.1 release",
+        "Labels: Release",
+        "Due date: 2026-09-10"
+      ],
+      "visual_geometry_findings": 0
+    },
+    "saved_views": {
+      "named_action_groups": 1,
+      "redundant_hidden_labels": 0,
+      "buttons": ["Edit Release readiness", "Archive Release readiness"],
+      "visual_geometry_findings": 0
+    }
+  },
+  "scope": {
+    "api_changed": false,
+    "sqlite_changed": false,
+    "schema_changed": false,
+    "owner_scope_changed": false,
+    "transfer_changed": false,
+    "identity_changed": false,
+    "collaboration_changed": false
+  },
+  "private_receipt": {
+    "path": ".control-tower/evidence/CT-124/implementation-5a33d28.json",
+    "bytes": 2678,
+    "mode": "0600",
+    "sha256": "105f95113ff9fc6f2082703e1435d8157e4aa7763ee10db2f8f44a683f49c7a0"
+  },
+  "task_reconciliation": {
+    "expected_revision": 1,
+    "readback_revision": 2,
+    "readback_status": "In Progress",
+    "milestone": "S3 — Implementation",
+    "store_health": "ready",
+    "counts": { "active": 13, "completed": 111, "trash": 0 },
+    "projection": "disabled_not_synced",
+    "backup": {
+      "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-23T03-04-48-041Z-0bc9cfe4-98f5-4296-8e97-098ab735c9b7.json",
+      "bytes": 488256,
+      "mode": "0600",
+      "package_sha256": "e745cc26f84f9ee682cf726766957b9e602ea412d45246b5f4672f4c025c8cb6",
+      "file_sha256": "f3eef2150851a6109caf983277137451b6a9ee422f0f57745abc435cd05e171c"
+    },
+    "raw_readback": {
+      "path": ".control-tower/evidence/CT-124/task-reconciliation-5a33d28.json",
+      "bytes": 511086,
+      "mode": "0600",
+      "sha256": "c2a533c67b5729bd88b7305afde7771fd1bbb1e0123290cdcf24a4983df89f17"
+    }
+  },
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

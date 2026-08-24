@@ -1,0 +1,62 @@
+{
+  "schema_version": "ct75-implementation-handoff-v1",
+  "stage": "implementation.testing-handoff",
+  "status": "implementation_complete_testing_pending",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issue": {
+    "identifier": "CT-75",
+    "stable_id": "87555ca5-f32d-41ec-86da-72b6450d4898",
+    "starting_revision": 4,
+    "expected_completion_revision": 5,
+    "implementation_complete": true,
+    "product_accepted": false,
+    "requirement_refs": ["R-002", "R-005", "R-007", "R-010", "R-102", "R-106", "R-107", "R-110"],
+    "acceptance_refs": ["P-T04", "P-T07", "P-T08", "P-T13", "P-T16", "P-T18", "P-T19"]
+  },
+  "session": {
+    "session_id": "CT75-IMPL-20260821T035500Z",
+    "actor_id": "codex-workflow-status-retirement",
+    "mode": "code_mutating",
+    "result_ref": "docs/product/versions/v0.1.0/30-implementation/CT-75/result.json"
+  },
+  "checks": [
+    { "check_id": "CT75-FOCUSED", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-75/result.json" },
+    { "check_id": "CT75-REGRESSION", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-75/result.json" },
+    { "check_id": "CT75-TYPECHECK", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-75/result.json" },
+    { "check_id": "CT75-BUILD", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-75/result.json" },
+    { "check_id": "CT75-HOST", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-75/evidence/host-matrix.json" },
+    { "check_id": "CT75-DATABASE", "status": "skipped_unconfigured", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-75/evidence/database-status.json" },
+    { "check_id": "CT75-BROWSER", "status": "blocked", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-75/evidence/browser-status.json" }
+  ],
+  "review": {
+    "source_review_complete": true,
+    "independent": false,
+    "blocking_findings": 0,
+    "independent_acceptance_owner": "CT-12"
+  },
+  "testing_handoff": {
+    "status": "pending_database_and_browser_acceptance",
+    "risk_areas": [
+      "active and archived issue reassignment in one SQLite transaction",
+      "source and replacement optimistic revisions",
+      "derived project and milestone progress after retirement",
+      "activity and canonical export continuity",
+      "destructive dialog keyboard focus and accessible feedback",
+      "responsive containment and long status names"
+    ],
+    "next_implementation": ["CT-78", "CT-80"]
+  },
+  "outcomes": {
+    "claimed": [],
+    "pending": ["O-001", "O-002", "O-003", "O-004"]
+  },
+  "blockers": [
+    "Rendered browser and UAT acceptance is unavailable under the active browser policy.",
+    "The PostgreSQL transition runner is unconfigured; CT-80 must independently execute the replacement SQLite contract."
+  ]
+}

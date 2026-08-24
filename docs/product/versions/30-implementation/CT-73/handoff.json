@@ -1,0 +1,98 @@
+{
+  "schema_version": "ct73-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [{
+    "issue_id": "CT-73",
+    "stable_id": "0c4589b2-cb5a-4dea-836a-49be90e7f1b9",
+    "starting_revision": 2,
+    "expected_checkpoint_revision": 3,
+    "accepted": false,
+    "blocked": true,
+    "status": "implemented_awaiting_browser_verification",
+    "requirement_refs": ["R-002", "R-010", "R-102", "R-104", "R-105", "R-110"],
+    "acceptance_refs": ["P-T04", "P-T11", "P-T13", "P-T16", "P-T18", "P-T19"],
+    "outcome_refs": ["O-001", "O-002", "O-003", "O-004"],
+    "allowed_mutation_paths": [
+      "apps/web/src/App.tsx",
+      "apps/web/src/workflow-status-inline-edit.ts",
+      "apps/web/src/styles.css",
+      "apps/web/tests/workflow-status-inline-edit.test.ts",
+      "apps/web/tests/workspace-capabilities.test.ts",
+      "scripts/serve-visual-fixture.mjs",
+      "docs/product/versions/v0.1.0/30-implementation/CT-73",
+      "docs/product/versions/v0.1.0/40-testing/CT-12",
+      "docs/product/versions/v0.1.0/50-outcome-review/CT-13",
+      "ops/release current-candidate provenance manifests"
+    ]
+  }],
+  "sessions": [{
+    "session_id": "CT73-IMPL-20260821T005004Z",
+    "actor_id": "codex-workflow-status-inline-edit",
+    "issue_id": "CT-73",
+    "mode": "code_mutating",
+    "output_refs": [
+      "apps/web/src/App.tsx",
+      "apps/web/src/workflow-status-inline-edit.ts",
+      "apps/web/src/styles.css",
+      "scripts/serve-visual-fixture.mjs"
+    ],
+    "validation_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-73/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-73/evidence.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-73/evidence/host-matrix.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-73/evidence/browser-status.json"
+    ]
+  }],
+  "checks": [
+    { "check_id": "CT73-STATE", "issue_id": "CT-73", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-73/result.json" },
+    { "check_id": "CT73-REGRESSION", "issue_id": "CT-73", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-73/result.json" },
+    { "check_id": "CT73-TYPECHECK", "issue_id": "CT-73", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-73/result.json" },
+    { "check_id": "CT73-BUILD", "issue_id": "CT-73", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-73/result.json" },
+    { "check_id": "CT73-FIXTURE-HOST", "issue_id": "CT-73", "status": "passed_after_environment_retry", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-73/evidence/host-matrix.json" },
+    { "check_id": "CT73-BROWSER", "issue_id": "CT-73", "status": "blocked", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-73/evidence/browser-status.json" }
+  ],
+  "reviews": [{
+    "issue_id": "CT-73",
+    "status": "pending",
+    "independent": false,
+    "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-73/evidence.md",
+    "basis": "Pure request and source contracts, complete regression, all-workspace typecheck, production build, release-audit regression, source review, and a stateful 54-assertion HTTP matrix pass. Rendered workflow-status editing, recovery, focus, keyboard, accessibility, and responsive geometry verification remains unexecuted."
+  }],
+  "testing_handoff": {
+    "acceptance_refs": ["P-T04", "P-T11", "P-T13", "P-T16", "P-T18", "P-T19"],
+    "status": "blocked_pending_browser_surface",
+    "risk_areas": [
+      "revision-bound workflow status drafts across background changes",
+      "team-scoped status positions and same-team name uniqueness",
+      "authoritative readback after accepted and rejected writes",
+      "retained rejected drafts with retry and server-value recovery",
+      "serialized create and edit interactions",
+      "owner admin member and guest capability projection",
+      "keyboard focus restoration and live announcements",
+      "responsive editor and recovery containment"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-73/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-73/evidence/host-matrix.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-73/evidence/browser-status.json"
+    ]
+  },
+  "outcomes": { "claimed": [], "pending": ["O-001", "O-002", "O-003", "O-004"] },
+  "blockers": ["Approved browser access is unavailable for the required rendered desktop, tablet, mobile, workflow-status create/edit/recovery, keyboard, accessibility, interaction, geometry, and UAT matrix."],
+  "stale_downstream_state": [
+    "CT-12 must include CT-73 automated and host evidence and retain the browser blocker.",
+    "CT-13 must audit the refreshed hash-bound release candidate after CT-73 and CT-12 reconciliation."
+  ],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issue": "CT-73",
+    "reason": "Run the bounded synthetic desktop, tablet, and mobile workflow-status create, inline edit, stale recovery, capability, keyboard, accessibility, and geometry matrix before accepting or closing CT-73."
+  }
+}

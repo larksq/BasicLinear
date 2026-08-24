@@ -1,0 +1,174 @@
+{
+  "schema_version": "ct82-test-evidence-v1",
+  "stage": "testing.evidence-map",
+  "status": "passed",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "implementation_handoff_ref": "docs/product/versions/v0.1.0/30-implementation/CT-116/handoff.json",
+  "additional_implementation_handoff_refs": [
+    "docs/product/versions/v0.1.0/30-implementation/CT-88/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-104/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-105/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-106/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-107/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-110/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-111/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-112/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-113/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-114/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-115/handoff.json"
+  ],
+  "implementation_actor_ids": [
+    "codex-ct88-tooling",
+    "codex-application-engineering"
+  ],
+  "implementation_session_ids": [
+    "CT88-IMPLEMENT-20260821T0915Z",
+    "CT104-IMPLEMENT-20260822T071150Z",
+    "CT105-IMPLEMENT-20260822T090250Z",
+    "CT106-IMPLEMENT-20260822T091635Z",
+    "CT107-IMPLEMENT-20260822T092423Z",
+    "CT110-IMPLEMENT-20260822T111513Z",
+    "CT111-IMPLEMENT-20260822T111513Z",
+    "CT112-IMPLEMENT-20260822T113821Z",
+    "CT113-IMPLEMENT-20260822T142603Z",
+    "CT114-IMPLEMENT-20260822T161552Z",
+    "CT115-IMPLEMENT-20260822T165122Z",
+    "CT116-IMPLEMENT-20260822T184413Z"
+  ],
+  "independent_acceptance": {
+    "status": "accepted",
+    "independent": true,
+    "decision_ref": "docs/product/versions/v0.1.0/40-testing/CT-82/decision.md",
+    "authorized_by": "ct82-independent-test-authority",
+    "evidence_ref": "docs/product/versions/v0.1.0/40-testing/CT-82/evidence/qualification-f7c3625.json",
+    "actor_id": "codex-independent-testing-ct82-f7c3625",
+    "session_id": "CT82-INDEPENDENT-20260822T191944Z"
+  },
+  "required_surfaces": [
+    "automated",
+    "manual",
+    "uat",
+    "regression"
+  ],
+  "issues": [
+    {
+      "issue_id": "CT-82",
+      "requirement_refs": [
+        "R-013",
+        "R-014",
+        "R-101",
+        "R-106",
+        "R-107",
+        "R-109"
+      ],
+      "acceptance_refs": [
+        "R-013",
+        "R-014",
+        "R-101",
+        "R-106",
+        "R-107",
+        "R-109"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "CT82-STRICT-RUNNER",
+      "surface": "automated",
+      "status": "passed",
+      "issue_refs": [
+        "CT-82"
+      ],
+      "requirement_refs": [
+        "R-013",
+        "R-014",
+        "R-101",
+        "R-106",
+        "R-107",
+        "R-109"
+      ],
+      "acceptance_refs": [
+        "R-013",
+        "R-014",
+        "R-101",
+        "R-106",
+        "R-107",
+        "R-109"
+      ],
+      "evidence_ref": "docs/product/versions/v0.1.0/40-testing/CT-82/evidence/qualification-f7c3625.json"
+    },
+    {
+      "check_id": "CT82-STRUCTURED-REVIEW",
+      "surface": "manual",
+      "status": "passed",
+      "issue_refs": [
+        "CT-82"
+      ],
+      "requirement_refs": [
+        "R-013",
+        "R-014",
+        "R-101",
+        "R-106",
+        "R-107",
+        "R-109"
+      ],
+      "acceptance_refs": [
+        "R-013",
+        "R-014",
+        "R-101",
+        "R-106",
+        "R-107",
+        "R-109"
+      ],
+      "evidence_ref": "docs/product/versions/v0.1.0/40-testing/CT-82/evidence.md"
+    },
+    {
+      "check_id": "CT82-INDEPENDENT-P-T21",
+      "surface": "uat",
+      "status": "passed",
+      "issue_refs": [
+        "CT-82"
+      ],
+      "requirement_refs": [
+        "R-013",
+        "R-014",
+        "R-101",
+        "R-106",
+        "R-107",
+        "R-109"
+      ],
+      "acceptance_refs": [
+        "R-013",
+        "R-014",
+        "R-101",
+        "R-106",
+        "R-107",
+        "R-109"
+      ],
+      "evidence_ref": "docs/product/versions/v0.1.0/40-testing/CT-82/evidence/qualification-f7c3625.json"
+    },
+    {
+      "check_id": "CT82-ARTIFACT-INVARIANT",
+      "surface": "regression",
+      "status": "passed",
+      "issue_refs": [
+        "CT-82"
+      ],
+      "requirement_refs": [
+        "R-109"
+      ],
+      "acceptance_refs": [
+        "R-109"
+      ],
+      "evidence_ref": "docs/product/versions/v0.1.0/40-testing/CT-82/result.json"
+    }
+  ],
+  "bug_loops": [],
+  "outcome_status": "pending",
+  "blockers": []
+}

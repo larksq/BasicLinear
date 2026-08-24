@@ -1,0 +1,10 @@
+apps/web/src/issue-roving-focus.ts
+apps/web/src/issues.tsx
+apps/web/tests/board-accessibility.test.ts
+apps/web/tests/issue-roving-focus.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-36/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-36/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-36/evidence/browser-status.json
+docs/product/versions/v0.1.0/30-implementation/CT-36/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-36/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-36/session.md

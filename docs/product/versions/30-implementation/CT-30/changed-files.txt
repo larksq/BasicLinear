@@ -1,0 +1,13 @@
+apps/web/src/issue-scope.ts
+apps/web/src/issues.tsx
+apps/web/tests/issue-scope.test.ts
+apps/web/tests/layout-contract.test.ts
+scripts/serve-visual-fixture.mjs
+docs/product/versions/v0.1.0/30-implementation/CT-30/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-30/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-30/evidence/browser-matrix.json
+docs/product/versions/v0.1.0/30-implementation/CT-30/evidence/ct30-milestone-create-desktop-1440x900.jpg
+docs/product/versions/v0.1.0/30-implementation/CT-30/evidence/ct30-milestone-create-mobile-390x844.jpg
+docs/product/versions/v0.1.0/30-implementation/CT-30/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-30/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-30/session.md

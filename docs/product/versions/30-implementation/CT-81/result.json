@@ -1,0 +1,100 @@
+{
+  "schema_version": "ct81-implementation-result-v1",
+  "captured_at": "2026-08-21T07:06:59Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_TESTING_PENDING",
+  "issue": {
+    "identifier": "CT-81",
+    "id": "3f54fea5-3822-451b-8300-0baaa8f9d170",
+    "starting_revision": 2,
+    "expected_completion_revision": 3,
+    "completion_revision": 3,
+    "status": "Done"
+  },
+  "architecture": {
+    "runtime_topology": "single_node_loopback_sqlite",
+    "node_processes": 1,
+    "loopback_host_options": 2,
+    "supported_remote_bind_options": 0,
+    "database_files": 1,
+    "database_schema_version": 2,
+    "backup_directories": 1,
+    "credential_tables": 0,
+    "session_tables": 0,
+    "mandatory_environment_values": 0,
+    "external_credentials": 0,
+    "outbound_runtime_dependencies": 0,
+    "docker_services": 0,
+    "postgresql_adapters": 0,
+    "collaboration_admin_routes": 0
+  },
+  "checks": {
+    "focused_test_files": 3,
+    "focused_tests_passed": 20,
+    "complete_test_files": 56,
+    "complete_tests_passed": 386,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1946,
+    "dist_total_bytes": 1027388,
+    "final_vite_chunk_warning": false,
+    "release_audit_tests_passed": 2,
+    "compiled_legacy_runtime_matches": 0,
+    "retired_direct_dependencies": 0,
+    "live_runtime_http_checks_passed": 12,
+    "restart_checks_passed": 4,
+    "network_denied_test_passed": true,
+    "clean_sigint_exit_code": 0,
+    "rendered_browser_check": "unavailable_policy_boundary",
+    "independent_acceptance": "pending_ct82_ct12"
+  },
+  "operator": {
+    "canonical_records": 12,
+    "canonical_digest": "ca9a78224dc244b52cbb91af58f9d5c8056a8b2970b532bb5477794faed91399",
+    "export_sha256": "62f6413edd628aa8570d755876a7482e10a11009223fea8cb263df7e5c055109",
+    "backup_sha256": "ac2d7aa0d8063f0ff940196ba9734cdc9c74a134a1b83961d48b335c80f76ee9",
+    "schema_version": 2,
+    "integrity": "ok",
+    "foreign_key_violations": 0,
+    "backup_file_mode": "0600",
+    "backup_sidecars": 0
+  },
+  "source_hashes": {
+    ".env.example": "0ff8f9f875ed0c1e25068b5d286355af84a3a3d3d895c9c43644bef188e13bdb",
+    "README.md": "ca99fa2093a3756fb81392bba29b784cf7b7332a79761133ce9c75024e76717c",
+    "package.json": "750d7ee0c1a6e6433aba5ebee2a942aaf15f95ff7aa4c08da7a135c23892a47e",
+    "package-lock.json": "67c7eb98518f5240ee9ea4efd49ab0f835541a283c69a35ad8a9cfb85579d215",
+    "apps/api/src/app.ts": "c6686306186df76ad8fcab7528f4ea26b4e44cd8dc0aa429cab7b6444dc37055",
+    "apps/api/src/config.ts": "8900c6a5cb4dde732a0609538c3d6fb4e964911fa74b81a5bb3710dd9f15ca99",
+    "apps/api/src/index.ts": "f52fb7113a4108bb6d16f778faa69b98b7629d352e946075d18f0aaddbaf3c66",
+    "apps/api/src/security.ts": "b6c212014aec35f523bd32c33b300377a6e2c095b1ddd67acb09ad8aedc825ac",
+    "apps/api/src/static-app.ts": "a5b4e56952fe1cd8a54634b5a0af5a5bd92781cc7a8dd5ac4eb7df38b7234b95",
+    "apps/web/src/api.ts": "c4a9275ceef76c8b48216e0353c689c4577fb86d1cb8ec7b20c1f5b0ecf4c0e9",
+    "packages/db/src/sqlite/client.ts": "e335f5072c4cdb368c25b1fe3b3f000f7071ea41f6156a46601e6490c57350d4",
+    "packages/db/src/sqlite/paths.ts": "a18f58662b01a2b8e3b9b233f500da8199bce6557d495c480df03964c18f3df9",
+    "packages/db/src/sqlite/repository.ts": "c968424e8afda6ccd6c1ad7b3b25259878b6a42c09a9a9f323a6617b82b82e8b",
+    "packages/db/src/sqlite/transfer.ts": "8ac6c1275c08ee1ba4db11771138883ccd7e525448351254c086664242ddeb7f",
+    "ops/cli/src/index.ts": "5b5160b572f88b2ed4e5e57eb585ec0d2d0adbf9585a6155265d09c01ad37bda",
+    "scripts/clean-build-output.mjs": "e174f2d98a122a7d0a26d8d9211f0f3fff4e6e7bd1c87e4a3f1733bf2b713fa8",
+    "ops/release/reproducible-build.json": "4207e249daa6789ac9c9f50ac405754d28de7d280a281af4398890b33760b6e4"
+  },
+  "control_tower_readback": {
+    "authority": "local",
+    "store": "tasks-v0.8.sqlite3",
+    "health": "ready",
+    "CT-81": {
+      "revision": 3,
+      "status": "Done",
+      "backup_sha256": "8837c0ace0613a3ec3f88ad553bb04d60829ee3500fec37fb19c6f189851cbcb"
+    },
+    "CT-82": {
+      "revision": 1,
+      "status": "Todo"
+    },
+    "CT-12": {
+      "revision": 58,
+      "status": "In Progress"
+    },
+    "provider_projection": "disabled_not_synced"
+  },
+  "outcomes_claimed": []
+}

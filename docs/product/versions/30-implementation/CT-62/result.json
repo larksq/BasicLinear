@@ -1,0 +1,52 @@
+{
+  "schema_version": "ct62-implementation-result-v1",
+  "captured_at": "2026-08-20T18:20:31Z",
+  "verdict": "IMPLEMENTED_AWAITING_BROWSER_VERIFICATION",
+  "issue": {
+    "identifier": "CT-62",
+    "id": "6388f0c5-8c5a-4f7b-9b0c-6414b9e33e81",
+    "starting_revision": 2,
+    "expected_checkpoint_revision": 3
+  },
+  "checks": {
+    "focused_test_files": 2,
+    "focused_tests_passed": 28,
+    "complete_test_files": 40,
+    "complete_tests_passed": 265,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "fixture_syntax": "passed",
+    "database_verification": "not_rerun_web_only_production_database_paths_unchanged",
+    "vite_modules": 1934,
+    "css_bytes": 82146,
+    "saved_views_chunk_bytes": 10177,
+    "projects_chunk_bytes": 50980,
+    "issues_chunk_bytes": 124908,
+    "index_chunk_bytes": 285158,
+    "editor_chunk_bytes": 402713,
+    "runtime_chunk_bytes": 589,
+    "archive_chunk_bytes": 529,
+    "html_bytes": 663,
+    "final_vite_chunk_warning": false,
+    "fixture_launch_attempts": 2,
+    "initial_fixture_launch": "sandbox_bind_denied_eperm",
+    "fixture_host_checks": 8,
+    "fixture_host_checks_passed": 8,
+    "fixture_initial_order": ["Interaction acceptance", "Keyboard parity", "Release rehearsal"],
+    "fixture_committed_order": ["Release rehearsal", "Interaction acceptance", "Keyboard parity"],
+    "fixture_positions": [100, 200, 300],
+    "fixture_stale_revision_status": 409,
+    "browser_captures": 0,
+    "browser_assertions_claimed": 0,
+    "browser_verification": "deferred_permission_denied"
+  },
+  "source_hashes": {
+    "apps/web/src/projects.tsx": "429ba77daa1f9bc0336a2c6f5b2871277ace4faf99b684c910b5091ec36778f5",
+    "apps/web/src/milestone-interactions.ts": "86cce6390ea983377e5c520079d18e0c380c297c5d9b5962f6a16ceeefa97e9d",
+    "apps/web/src/styles.css": "7754a5a5fedae179098bbe9d6962afbdb7adf5aa432930629fc07699e9f2f605",
+    "apps/web/tests/milestone-interactions.test.ts": "0910fe1c136a4a953a8e8c60c5a0d15cad19b2b86a5113413ad227b6f372b8d4",
+    "apps/web/tests/layout-contract.test.ts": "5f6443226c6d8cdd4b4a7c5b40779ed3947c7837077ea202fbd739b931a4a2ae",
+    "scripts/serve-visual-fixture.mjs": "b11228dd48a42389e49972b282d696550d8ba8634f1e4f05e76783860ee67f33"
+  },
+  "outcomes_claimed": []
+}

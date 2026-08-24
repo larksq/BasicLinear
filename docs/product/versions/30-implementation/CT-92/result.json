@@ -1,0 +1,46 @@
+{
+  "schema_version": "ct92-implementation-result-v1",
+  "captured_at": "2026-08-21T11:11:57Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING",
+  "issue": {
+    "identifier": "CT-92",
+    "id": "a20d5002-2055-4507-8e12-78527a6b5e44",
+    "created_revision": 1,
+    "implementation_scope_revision": 1,
+    "expected_completion_revision": 2
+  },
+  "resolution": {
+    "shared_named_retry_state": true,
+    "initial_failures_state_exclusive": true,
+    "stale_data_preserved": true,
+    "mutation_feedback_separate": true,
+    "exact_failed_query_retry": true,
+    "owner_context_covered": true,
+    "command_search_covered": true,
+    "project_surfaces_covered": true,
+    "issue_surfaces_covered": true,
+    "saved_views_covered": true,
+    "false_empty_actions_blocked": true,
+    "responsive_long_message_containment": true
+  },
+  "checks": {
+    "focused_test_files": 1,
+    "focused_tests_passed": 5,
+    "complete_test_files": 59,
+    "complete_tests_passed": 404,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1947,
+    "dist_files": 109,
+    "dist_bytes": 1870112,
+    "build_warnings": 0,
+    "release_audit_tests_passed": 6,
+    "release_audit_tests_failed": 0,
+    "loopback_readiness": "ready",
+    "served_candidate_current": true,
+    "rendered_browser_captures": 0
+  },
+  "browser_acceptance_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version":"ct18-implementation-handoff-v1",
+  "stage":"implementation.checkpoint-handoff",
+  "status":"passed",
+  "operating_profile":"project-local-v0.8",
+  "authority":{"task_store":".control-tower/tasks-v0.8.sqlite3","provider_projection":"disabled","linear_used":false},
+  "issues":[{"issue_id":"CT-18","stable_id":"d2d590bd-15b6-43bc-b96c-91ba55983942","revision":2,"accepted":true,"blocked":false,"status":"output_done","requirement_refs":["R-109"],"acceptance_refs":["R-109"],"outcome_refs":["O-004"],"allowed_mutation_paths":["ops/compose/Dockerfile","docs/product/versions/v0.1.0/30-implementation/CT-18"]}],
+  "sessions":[
+    {"session_id":"CT18-IMPL-20260819T221333Z","actor_id":"codex-implementation-remediation","issue_id":"CT-18","mode":"code_mutating","allowed_paths":["ops/compose/Dockerfile"],"output_refs":["ops/compose/Dockerfile"],"validation_refs":["docs/product/versions/v0.1.0/30-implementation/CT-18/result.json","docs/product/versions/v0.1.0/30-implementation/CT-18/evidence.md"]},
+    {"session_id":"CT18-REVIEW-20260819T222432Z","actor_id":"immutable-artifact-reviewer","issue_id":"CT-18","mode":"review_only","allowed_paths":["docs/product/versions/v0.1.0/30-implementation/CT-18"],"output_refs":["docs/product/versions/v0.1.0/30-implementation/CT-18/changed-files.txt","docs/product/versions/v0.1.0/30-implementation/CT-18/evidence.md","docs/product/versions/v0.1.0/30-implementation/CT-18/handoff.json","docs/product/versions/v0.1.0/30-implementation/CT-18/result.json","docs/product/versions/v0.1.0/30-implementation/CT-18/session.md"],"validation_refs":["docs/product/versions/v0.1.0/30-implementation/CT-18/result.json","docs/product/versions/v0.1.0/30-implementation/CT-18/evidence.md"]}
+  ],
+  "changed_files":[
+    {"path":"ops/compose/Dockerfile","issue_id":"CT-18","mutation_type":"config","ai_session_id":"CT18-IMPL-20260819T221333Z","risk_level":"high","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-18/evidence.md#verification","test_refs":["CT18-IMMUTABLE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-18/changed-files.txt","issue_id":"CT-18","mutation_type":"docs","ai_session_id":"CT18-REVIEW-20260819T222432Z","risk_level":"low","test_refs":["CT18-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-18/evidence.md","issue_id":"CT-18","mutation_type":"docs","ai_session_id":"CT18-REVIEW-20260819T222432Z","risk_level":"low","test_refs":["CT18-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-18/handoff.json","issue_id":"CT-18","mutation_type":"docs","ai_session_id":"CT18-REVIEW-20260819T222432Z","risk_level":"low","test_refs":["CT18-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-18/result.json","issue_id":"CT-18","mutation_type":"docs","ai_session_id":"CT18-REVIEW-20260819T222432Z","risk_level":"low","test_refs":["CT18-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-18/session.md","issue_id":"CT-18","mutation_type":"docs","ai_session_id":"CT18-REVIEW-20260819T222432Z","risk_level":"low","test_refs":["CT18-EVIDENCE"]}
+  ],
+  "checks":[
+    {"check_id":"CT18-IMMUTABLE","issue_id":"CT-18","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-18/result.json"},
+    {"check_id":"CT18-EVIDENCE","issue_id":"CT-18","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-18/evidence.md"}
+  ],
+  "reviews":[{"issue_id":"CT-18","status":"passed","independent":true,"review_actor_id":"immutable-artifact-reviewer","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-18/evidence.md#verification","basis":"The rebuilt source-frozen image executed its full typecheck, unit, and PostgreSQL integration gates outside the mutation session."}],
+  "testing_handoff":{"acceptance_refs":["R-109"],"changed_file_refs":["ops/compose/Dockerfile","docs/product/versions/v0.1.0/30-implementation/CT-18/changed-files.txt","docs/product/versions/v0.1.0/30-implementation/CT-18/evidence.md","docs/product/versions/v0.1.0/30-implementation/CT-18/handoff.json","docs/product/versions/v0.1.0/30-implementation/CT-18/result.json","docs/product/versions/v0.1.0/30-implementation/CT-18/session.md"],"regression_areas":["immutable test context completeness","secret exclusion","foundation static dependency checks","production runtime composition"],"evidence_refs":["docs/product/versions/v0.1.0/30-implementation/CT-18/result.json","docs/product/versions/v0.1.0/30-implementation/CT-18/evidence.md"],"implementation_actor_ids":["codex-implementation-remediation","immutable-artifact-reviewer"],"implementation_session_ids":["CT18-IMPL-20260819T221333Z","CT18-REVIEW-20260819T222432Z"]},
+  "outcomes":[{"outcome_id":"O-004","status":"pending"}],
+  "blockers":[],
+  "next":{"skill":"ct-test-sprint","issues":["CT-11"],"reason":"Return CT-18 to the independent immutable-image acceptance session."}
+}

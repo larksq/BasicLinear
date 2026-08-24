@@ -1,0 +1,54 @@
+{
+  "schema_version": "ct2-matched-comparison-v1",
+  "protocol_version": "CT-2-v1",
+  "captured_window": {
+    "start": "2026-08-19T23:37:24Z",
+    "end": "2026-08-20T00:07:00Z"
+  },
+  "openlinear_build": {
+    "source_revision": "unborn repository; no commit exists",
+    "fixture": "ct12-acceptance-fixture-v1",
+    "base_url": "http://localhost:4175",
+    "bundle_sha256": {
+      "index_html": "a0f998c8895e22647618110cc04926a456d3c325d859a31e5d4d973eed21bf19",
+      "styles": "0cc8f341ea98f67d7990764a475ab3227140d12ab43426f21bc25ef5a9d42f71",
+      "projects": "fd0d3015cab028448a89c840a372bf98d87879ea3e692bf32c9b290986208aec",
+      "application": "7b27d9e52db7adee66fb0ab502895176036c1d87763287a8de7bac3e1f2239dc",
+      "issues": "9078272f13ae3cc1062b57ae1b1fc63f339656e3c23f26098ef75c7e54303839",
+      "package_lock": "60e4998a0fdc1bc4241e3a6354fb7598e2e0f7c91ef3c3e412be61a2bb4e42ed"
+    }
+  },
+  "tasks": [
+    {"id":"T01","linear_median_ms":3251.8,"openlinear_samples_ms":[3134.4,3108.6,3108.0],"openlinear_median_ms":3108.6,"overhead_percent":-4.4,"linear_interactions":1,"openlinear_interactions":1,"errors":0},
+    {"id":"T02","linear_median_ms":3268.9,"openlinear_samples_ms":[361.9,354.2,361.8],"openlinear_median_ms":361.8,"overhead_percent":-88.9,"linear_interactions":1,"openlinear_interactions":1,"errors":0},
+    {"id":"T03","linear_median_ms":3145.9,"openlinear_samples_ms":[30.4,29.9,34.5],"openlinear_median_ms":30.4,"overhead_percent":-99.0,"linear_interactions":1,"openlinear_interactions":0,"errors":0},
+    {"id":"T04","linear_median_ms":3209.8,"openlinear_samples_ms":[373.3,340.6,343.4],"openlinear_median_ms":343.4,"overhead_percent":-89.3,"linear_interactions":1,"openlinear_interactions":1,"errors":0},
+    {"id":"T05","linear_median_ms":3228.0,"openlinear_samples_ms":[93.3,118.5,100.8],"openlinear_median_ms":100.8,"overhead_percent":-96.9,"linear_interactions":1,"openlinear_interactions":1,"errors":0,"equivalence":"analogous saved-view access; not structurally identical"},
+    {"id":"T06","linear_median_ms":3250.9,"openlinear_samples_ms":[3162.7,3160.4,3161.2],"openlinear_median_ms":3161.2,"overhead_percent":-2.8,"linear_interactions":1,"openlinear_interactions":1,"errors":0},
+    {"id":"T07","linear_median_ms":3625.9,"openlinear_samples_ms":[3225.0,3265.7,3174.3],"openlinear_median_ms":3225.0,"overhead_percent":-11.1,"linear_interactions":2,"openlinear_interactions":2,"errors":0},
+    {"id":"T08","linear_median_ms":4069.9,"openlinear_samples_ms":[426.1,423.2,422.7],"openlinear_median_ms":423.2,"overhead_percent":-89.6,"linear_interactions":3,"openlinear_interactions":2,"errors":0}
+  ],
+  "aggregate": {
+    "linear_median_of_task_medians_ms": 3251.35,
+    "openlinear_median_of_task_medians_ms": 392.5,
+    "median_reference_relative_overhead_percent": -89.1,
+    "linear_workflow_interactions": 11,
+    "openlinear_workflow_interactions": 9,
+    "interaction_delta": -2,
+    "interaction_reduction_percent": 18.2,
+    "measured_attempt_error_rate_percent": 0
+  },
+  "interpretation": {
+    "engineering_diagnostic": "OpenLinear completes all eight scripted tasks and shows no positive same-harness time overhead in this run.",
+    "outcome_decision": "not_validated",
+    "reason": "The operator is automated, human think time is absent, T05 is analogous, hosted and localhost transport differ, and the O-002 observation window has not begun."
+  },
+  "limitations": [
+    "Navigation and harness waits dominate T01 and T06 in both products.",
+    "Most Linear task medians cluster near the harness visible-ready interval, so the negative overhead must not be presented as human speed improvement.",
+    "T03 requires no OpenLinear interaction because milestones are already in the default project overview.",
+    "T05 compares Linear workspace Views with an OpenLinear saved issue view.",
+    "OpenLinear was measured from an identified production bundle but an unborn, uncommitted source tree.",
+    "No eligible target-user participant completed both conditions."
+  ]
+}

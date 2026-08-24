@@ -1,0 +1,74 @@
+{
+  "schema_version": "ct82-non-independent-rehearsal-v1",
+  "captured_at": "2026-08-21T07:51:13Z",
+  "issue": "CT-82",
+  "actor": "codex-platform-runtime",
+  "session": "CT84-IMPLEMENT-20260821T074106Z",
+  "independent": false,
+  "environment": {
+    "os": "macOS 26.5.2 build 25F84",
+    "node": "v24.18.0",
+    "npm": "11.16.0",
+    "source_revision": "unavailable_unborn_repository",
+    "docker": false,
+    "postgresql": false,
+    "external_identity": false
+  },
+  "passed_rehearsal_checks": [
+    "fresh_data_directory",
+    "loopback_only_listener",
+    "strict_host_and_origin",
+    "automatic_owner_scope_and_status_bootstrap",
+    "project_milestone_issue_private_view_workflow",
+    "search_and_issue_query",
+    "restart_session_renewal_and_data_persistence",
+    "canonical_export_import_digest_equality",
+    "online_backup_verify_and_fresh_restore",
+    "tampered_import_rejected_without_promotion",
+    "corrupt_restore_rejected_without_target_mutation",
+    "schema_1_to_schema_2_runtime_upgrade",
+    "owner_only_file_permissions",
+    "sidecar_free_idle_and_ctrl_c_after_ct84",
+    "server_free_legacy_transfer_after_ct85",
+    "ambiguous_scope_preflight_before_target_creation",
+    "explicit_scope_digest_parity_and_source_immutability"
+  ],
+  "defect_loop": {
+    "issue": "CT-84",
+    "initial_result": "failed_persistent_wal_shm",
+    "final_result": "implementation_rerun_passed",
+    "acceptance_inferred": false
+  },
+  "transfer_reconciliation": {
+    "issue": "CT-85",
+    "planning_authority": "CT-79 superseded Docker and PostgreSQL portions of P-T21",
+    "fixture_canonical_sha256": "000473521838884d216ef7ad87185a94b8400fcf488add218722d0a88d120772",
+    "ambiguous_target_created": false,
+    "source_file_unchanged": true,
+    "selected_digest_equal": true,
+    "live_postgresql_required": false,
+    "acceptance_inferred": false
+  },
+  "digests": {
+    "full_workflow_initial": "408ee158568dc605c1a711397db76eb7aa518304f6e55b7d805cddf9e3468b77",
+    "ct84_before_restart": "fe4961acf50cf1240e5e83e1ae0d0100b83f95f2df240762343db56aa6f8ef83",
+    "ct84_after_restart": "fe4961acf50cf1240e5e83e1ae0d0100b83f95f2df240762343db56aa6f8ef83",
+    "ct84_backup_sha256": "17b0f35d3c3a7daaf8d06b32bbf582aa07a4b1c7a2efcb35bd33e43111a2a700",
+    "ct85_selected_workspace": "5f35bf5f1b8cb00c808d043d1ef31fd03e0a6b022ca43095be1f1b700683f128",
+    "ct85_source_file_sha256": "3bbd2aeebf83148d48bf6eba986fdbc1cd4203829e6aea0311d72752f8d3222c"
+  },
+  "open_independent_checks": [
+    "distinct_actor_and_session",
+    "clean_supported_user_account_and_locked_artifact",
+    "outbound_network_denial_and observation",
+    "independent_locked_transfer_hash_and_source_immutability_reproduction",
+    "complete_interruption_matrix",
+    "cross_platform_coverage_or_authorized_scope",
+    "hash_bound_source_revision"
+  ],
+  "ct82_status": "Todo@3",
+  "ct84_status": "Done@2",
+  "ct85_status": "Done@2",
+  "p_t21_status": "open",
+  "outcomes_claimed": []
+}

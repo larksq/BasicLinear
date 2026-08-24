@@ -1,0 +1,74 @@
+{
+  "schema_version": "ct81-implementation-handoff-v1",
+  "stage": "implementation.testing-handoff",
+  "status": "implementation_complete_testing_pending",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issue": {
+    "identifier": "CT-81",
+    "stable_id": "3f54fea5-3822-451b-8300-0baaa8f9d170",
+    "starting_revision": 2,
+    "expected_completion_revision": 3,
+    "completion_revision": 3,
+    "status": "Done",
+    "implementation_complete": true,
+    "product_accepted": false,
+    "requirement_refs": ["R-001", "R-002", "R-014", "R-101", "R-106", "R-109"],
+    "acceptance_refs": ["P-T03", "P-T04", "P-T05", "P-T15", "P-T16", "P-T18", "P-T21"]
+  },
+  "session": {
+    "session_id": "CT81-IMPL-20260821T061533Z",
+    "actor_id": "codex-loopback-runtime",
+    "mode": "code_mutating",
+    "result_ref": "docs/product/versions/v0.1.0/30-implementation/CT-81/result.json"
+  },
+  "checks": [
+    { "check_id": "CT81-FOCUSED", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-81/result.json" },
+    { "check_id": "CT81-REGRESSION", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-81/result.json" },
+    { "check_id": "CT81-TYPECHECK", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-81/result.json" },
+    { "check_id": "CT81-BUILD", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-81/result.json" },
+    { "check_id": "CT81-LIVE-RUNTIME", "status": "passed_implementation_smoke", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-81/evidence/runtime-smoke.json" },
+    { "check_id": "CT81-INDEPENDENT-LOCAL-RUNTIME", "status": "pending_ct82", "evidence_ref": "docs/product/versions/v0.1.0/40-testing/CT-82/result.json" },
+    { "check_id": "CT81-RENDERED-UAT", "status": "pending_ct12", "evidence_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/result.json" }
+  ],
+  "review": {
+    "source_review_complete": true,
+    "independent": false,
+    "blocking_findings": 0,
+    "corrected_findings": 4,
+    "independent_acceptance_owners": ["CT-82", "CT-12"]
+  },
+  "control_tower_readback": {
+    "CT-81": "Done@3",
+    "CT-82": "Todo@1",
+    "CT-12": "In Progress@58",
+    "store_health": "ready",
+    "completion_backup_sha256": "8837c0ace0613a3ec3f88ad553bb04d60829ee3500fec37fb19c6f189851cbcb",
+    "provider_projection": "disabled_not_synced"
+  },
+  "testing_handoff": {
+    "status": "pending_independent_acceptance",
+    "risk_areas": [
+      "clean supported user account with runtime networking denied after artifact creation",
+      "last PostgreSQL canonical fixture import with explicit one-scope selection and source immutability",
+      "platform-specific data path and file-mode behavior outside the implementation host",
+      "prior-version upgrade, interrupted migration rollback, backup verification, and restore into a fresh directory",
+      "rendered responsive, keyboard, focus, accessibility, and visual-fidelity acceptance"
+    ],
+    "next_testing": ["CT-82", "CT-12"]
+  },
+  "outcomes": {
+    "claimed": [],
+    "pending": ["O-001", "O-002", "O-003", "O-004"]
+  },
+  "blockers": [
+    "Independent clean-user and cross-platform local-runtime acceptance has not run.",
+    "The last PostgreSQL canonical fixture was not available in this implementation session.",
+    "Rendered browser, accessibility, and UAT acceptance remains open.",
+    "Public release remains blocked by separate identity, license, provenance, revision, clean-host, and accountable-review gates."
+  ]
+}

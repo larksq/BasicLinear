@@ -1,0 +1,367 @@
+{
+  "schema_version": "ct12-test-evidence-v6",
+  "status": "passed",
+  "stage": "testing.evidence-map",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "operating_profile": "project-local-v0.8",
+  "issues": [
+    {
+      "issue_id": "CT-12",
+      "requirement_refs": [
+        "R-002",
+        "R-003",
+        "R-004",
+        "R-005",
+        "R-006",
+        "R-007",
+        "R-008",
+        "R-009",
+        "R-010",
+        "R-011",
+        "R-012",
+        "R-013",
+        "R-014",
+        "R-103",
+        "R-104",
+        "R-105",
+        "R-107",
+        "R-109",
+        "R-110"
+      ],
+      "acceptance_refs": [
+        "R-002",
+        "R-003",
+        "R-004",
+        "R-005",
+        "R-006",
+        "R-007",
+        "R-008",
+        "R-009",
+        "R-010",
+        "R-011",
+        "R-012",
+        "R-013",
+        "R-014",
+        "R-103",
+        "R-104",
+        "R-105",
+        "R-107",
+        "R-109",
+        "R-110"
+      ]
+    }
+  ],
+  "implementation_handoff_ref": "docs/product/versions/v0.1.0/30-implementation/CT-124/handoff.json",
+  "additional_implementation_handoff_refs": [
+    "docs/product/versions/v0.1.0/30-implementation/CT-104/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-105/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-106/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-107/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-110/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-111/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-112/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-113/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-114/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-115/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-116/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-117/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-118/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-119/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-120/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-121/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-122/handoff.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-123/handoff.json"
+  ],
+  "implementation_actor_ids": [
+    "codex-application-engineering"
+  ],
+  "implementation_session_ids": [
+    "CT104-IMPLEMENT-20260822T071150Z",
+    "CT105-IMPLEMENT-20260822T090250Z",
+    "CT106-IMPLEMENT-20260822T091635Z",
+    "CT107-IMPLEMENT-20260822T092423Z",
+    "CT110-IMPLEMENT-20260822T111513Z",
+    "CT111-IMPLEMENT-20260822T111513Z",
+    "CT112-IMPLEMENT-20260822T113821Z",
+    "CT113-IMPLEMENT-20260822T142603Z",
+    "CT114-IMPLEMENT-20260822T161552Z",
+    "CT115-IMPLEMENT-20260822T165122Z",
+    "CT116-IMPLEMENT-20260822T184413Z",
+    "CT117-IMPLEMENT-20260822T204149Z",
+    "CT118-123-IMPLEMENT-20260823",
+    "CT124-IMPLEMENT-20260823"
+  ],
+  "independent_acceptance": {
+    "status": "accepted",
+    "independent": true,
+    "authorized_by": "ct82-independent-test-authority",
+    "scope": "P-T21 exact 5a33d28 local runtime and distinct exact corrective-tranche review",
+    "required_product_revision": "5a33d28be383b7651a4b0d6156534aa12cc423fa",
+    "historical_decision_ref": "docs/product/versions/v0.1.0/40-testing/CT-82/decision.md",
+    "historical_product_revision": "f7c362562fdf0657114a862331b893e470b824c0",
+    "historical_current_acceptance": false,
+    "required_product_tree": "d106d3bb40a84184e7ee26c919134b01e4748679",
+    "closeout_actor": "codex-independent-closeout-review-ct117-124",
+    "closeout_session": "CT117-124-INDEPENDENT-20260823T113057Z",
+    "closeout_evidence_ref": ".control-tower/evidence/CT-124/independent-closeout-review-5a33d28.json",
+    "closeout_evidence_sha256": "5aa09f82fcd11a47206df1f56687323495dcfaf381e12b12ff14ca13fb0edca8",
+    "runtime_actor": "codex-independent-testing-ct82-5a33d28",
+    "runtime_session": "CT82-INDEPENDENT-20260823T114800Z",
+    "runtime_evidence_ref": ".control-tower/evidence/CT-82/qualification-5a33d28.json",
+    "runtime_evidence_sha256": "7d392f18bf3e5933a954334bf83e452907d41a2889ed87ef842790bbcee00f16",
+    "self_acceptance": false
+  },
+  "required_surfaces": [
+    "automated",
+    "manual",
+    "uat",
+    "regression"
+  ],
+  "checks": [
+    {
+      "check_id": "CT12-AUTOMATED-REGRESSION-5A33D28",
+      "surface": "automated",
+      "status": "passed",
+      "issue_refs": [
+        "CT-12"
+      ],
+      "requirement_refs": [
+        "R-005",
+        "R-010",
+        "R-104",
+        "R-105"
+      ],
+      "acceptance_refs": [
+        "R-005",
+        "R-010",
+        "R-104",
+        "R-105"
+      ],
+      "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-124/result.json"
+    },
+    {
+      "check_id": "CT12-P-T18-5A33D28-COMPOSITE",
+      "surface": "uat",
+      "status": "passed",
+      "issue_refs": [
+        "CT-12"
+      ],
+      "requirement_refs": [
+        "R-002",
+        "R-003",
+        "R-004",
+        "R-005",
+        "R-006",
+        "R-007",
+        "R-008",
+        "R-009",
+        "R-010",
+        "R-011",
+        "R-012"
+      ],
+      "acceptance_refs": [
+        "R-002",
+        "R-003",
+        "R-004",
+        "R-005",
+        "R-006",
+        "R-007",
+        "R-008",
+        "R-009",
+        "R-010",
+        "R-011",
+        "R-012"
+      ],
+      "partial_evidence_refs": [
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/integrated-current.json",
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-revision-5a33d28.json",
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/5a33d28/manifest.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-124/result.json"
+      ],
+      "evidence_ref": ".control-tower/evidence/CT-124/independent-closeout-review-5a33d28.json",
+      "evidence_sha256": "5aa09f82fcd11a47206df1f56687323495dcfaf381e12b12ff14ca13fb0edca8",
+      "independent_review": "codex-independent-closeout-review-ct117-124/CT117-124-INDEPENDENT-20260823T113057Z"
+    },
+    {
+      "check_id": "CT12-P-T19-ACCESSIBILITY-5A33D28",
+      "surface": "manual",
+      "status": "passed",
+      "issue_refs": [
+        "CT-12"
+      ],
+      "requirement_refs": [
+        "R-010",
+        "R-104",
+        "R-105",
+        "R-110"
+      ],
+      "acceptance_refs": [
+        "R-010",
+        "R-104",
+        "R-105",
+        "R-110"
+      ],
+      "partial_evidence_refs": [
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/accessibility-current.json",
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/accessibility-delta-5a33d28.json",
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-core-route-keyboard.json",
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-responsive-breakpoints.json",
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-revision-5a33d28.json",
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/5a33d28/manifest.json"
+      ],
+      "evidence_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/accessibility-delta-5a33d28.json",
+      "evidence_sha256": "812459aa0ded0b3029faf5feb0a734d8788cf19bf261a44463240ea0e8885d99",
+      "independent_review_ref": ".control-tower/evidence/CT-124/independent-closeout-review-5a33d28.json",
+      "independent_review_sha256": "5aa09f82fcd11a47206df1f56687323495dcfaf381e12b12ff14ca13fb0edca8"
+    },
+    {
+      "check_id": "CT12-P-T20-GOLDEN-PERFORMANCE-5A33D28",
+      "surface": "regression",
+      "status": "passed",
+      "issue_refs": [
+        "CT-12"
+      ],
+      "requirement_refs": [
+        "R-103",
+        "R-105",
+        "R-110"
+      ],
+      "acceptance_refs": [
+        "R-103",
+        "R-105",
+        "R-110"
+      ],
+      "evidence_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/manifest.json",
+      "supporting_evidence_refs": [
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-visual-audit.json",
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/performance-current.json",
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/5a33d28/manifest.json"
+      ]
+    },
+    {
+      "check_id": "CT12-P-T20-LIVE-SYSTEM-5A33D28",
+      "surface": "manual",
+      "status": "passed",
+      "issue_refs": [
+        "CT-12"
+      ],
+      "requirement_refs": [
+        "R-103",
+        "R-105",
+        "R-110"
+      ],
+      "acceptance_refs": [
+        "R-103",
+        "R-105",
+        "R-110"
+      ],
+      "evidence_ref": ".control-tower/evidence/CT-12/system-appearance-5a33d28.json",
+      "evidence_sha256": "8b5100e77ecffb93fcff10e235cc9a52fbcfd37210235d7fdd13ddaf2e0acc03",
+      "supporting_evidence_refs": [
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/manifest.json",
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/performance-current.json",
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/5a33d28/manifest.json"
+      ]
+    },
+    {
+      "check_id": "CT12-P-T21-INDEPENDENT-RUNTIME-5A33D28",
+      "surface": "uat",
+      "status": "passed",
+      "issue_refs": [
+        "CT-12"
+      ],
+      "requirement_refs": [
+        "R-013",
+        "R-014",
+        "R-107",
+        "R-109"
+      ],
+      "acceptance_refs": [
+        "R-013",
+        "R-014",
+        "R-107",
+        "R-109"
+      ],
+      "rehearsal_evidence_ref": "docs/product/versions/v0.1.0/40-testing/CT-82/evidence/rehearsal-5a33d28.json",
+      "historical_evidence_ref": "docs/product/versions/v0.1.0/40-testing/CT-82/evidence/qualification-f7c3625.json",
+      "evidence_ref": ".control-tower/evidence/CT-82/qualification-5a33d28.json",
+      "evidence_sha256": "7d392f18bf3e5933a954334bf83e452907d41a2889ed87ef842790bbcee00f16",
+      "qualification_actor": "codex-independent-testing-ct82-5a33d28",
+      "qualification_session": "CT82-INDEPENDENT-20260823T114800Z"
+    }
+  ],
+  "historical_evidence": {
+    "retained": true,
+    "current_acceptance": false,
+    "reason": "The complete e1299af accessibility, golden, and protected-performance records remain supporting evidence through exact 5a33d28 changed-surface scans, byte identity, and unchanged protected paths. Independent corrective-tranche review and exact-current P-T21 qualification now pass and are bound to private mode-0600 receipts."
+  },
+  "bug_loops": [
+    {
+      "status": "fixed",
+      "bug_ref": "CT-117",
+      "implementation_fix_ref": "docs/product/versions/v0.1.0/30-implementation/CT-117/result.json",
+      "focused_rerun_ref": "docs/product/versions/v0.1.0/30-implementation/CT-117/evidence/verification-summary.json",
+      "regression_rerun_ref": "docs/product/versions/v0.1.0/30-implementation/CT-117/evidence/verification-summary.json"
+    },
+    {
+      "status": "fixed",
+      "bug_ref": "CT-118",
+      "implementation_fix_ref": "docs/product/versions/v0.1.0/30-implementation/CT-118/result.json",
+      "focused_rerun_ref": "docs/product/versions/v0.1.0/30-implementation/CT-118/result.json",
+      "regression_rerun_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/accessibility-current.json"
+    },
+    {
+      "status": "fixed",
+      "bug_ref": "CT-119",
+      "implementation_fix_ref": "docs/product/versions/v0.1.0/30-implementation/CT-119/result.json",
+      "focused_rerun_ref": "docs/product/versions/v0.1.0/30-implementation/CT-119/result.json",
+      "regression_rerun_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/accessibility-current.json"
+    },
+    {
+      "status": "fixed",
+      "bug_ref": "CT-120",
+      "implementation_fix_ref": "docs/product/versions/v0.1.0/30-implementation/CT-120/result.json",
+      "focused_rerun_ref": "docs/product/versions/v0.1.0/30-implementation/CT-120/result.json",
+      "regression_rerun_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/accessibility-current.json"
+    },
+    {
+      "status": "fixed",
+      "bug_ref": "CT-121",
+      "implementation_fix_ref": "docs/product/versions/v0.1.0/30-implementation/CT-121/result.json",
+      "focused_rerun_ref": "docs/product/versions/v0.1.0/30-implementation/CT-121/result.json",
+      "regression_rerun_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/accessibility-current.json"
+    },
+    {
+      "status": "fixed",
+      "bug_ref": "CT-122",
+      "implementation_fix_ref": "docs/product/versions/v0.1.0/30-implementation/CT-122/result.json",
+      "focused_rerun_ref": "docs/product/versions/v0.1.0/30-implementation/CT-122/result.json",
+      "regression_rerun_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/accessibility-current.json"
+    },
+    {
+      "status": "fixed",
+      "bug_ref": "CT-123",
+      "implementation_fix_ref": "docs/product/versions/v0.1.0/30-implementation/CT-123/result.json",
+      "focused_rerun_ref": "docs/product/versions/v0.1.0/30-implementation/CT-123/result.json",
+      "regression_rerun_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/accessibility-current.json"
+    },
+    {
+      "status": "fixed",
+      "bug_ref": "CT-124",
+      "implementation_fix_ref": "docs/product/versions/v0.1.0/30-implementation/CT-124/result.json",
+      "focused_rerun_ref": "docs/product/versions/v0.1.0/30-implementation/CT-124/result.json",
+      "regression_rerun_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/5a33d28/manifest.json"
+    }
+  ],
+  "blockers": [],
+  "outcome_status": "pending",
+  "next": {
+    "issue": "CT-12",
+    "action": "Hand the passed Testing gate to ct-review-outcomes; keep CT-3 identity/legal, CT-13 accountable release, publication, and outcomes separate."
+  },
+  "outcomes_claimed": []
+}

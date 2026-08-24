@@ -1,0 +1,30 @@
+{
+  "schema_version": "ct103-candidate-binding-result-v1",
+  "captured_at": "2026-08-22T10:20:00Z",
+  "verdict": "CANDIDATE_BOUND_AND_INDEPENDENTLY_QUALIFIED",
+  "issue": {
+    "identifier": "CT-103",
+    "id": "9287d74f-df4d-496e-9059-c9bfc9243668",
+    "revision": 5,
+    "status": "Done"
+  },
+  "product": {
+    "revision": "cf99bb834f544633ad820328817dcc2320d09744",
+    "tree": "5bb99828de1171fa47137fe497b062212248f454"
+  },
+  "qualified_source": {
+    "clean": true,
+    "status_entries": 0,
+    "files": 942,
+    "sha256": "933a89469ee5bf29d61cfa4be661f1fc2ce2a4f6ef107192425be6b0973b5ad7"
+  },
+  "artifact": {
+    "files": 111,
+    "bytes": 2049476,
+    "sha256": "4380a34d46c60b8abce09ad2c2684e47498bcb635fe6809eb9c346f16c2a4a69"
+  },
+  "qualification_ref": "docs/product/versions/v0.1.0/40-testing/CT-82/evidence/qualification-cf99bb8.json",
+  "remote_operations": [],
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

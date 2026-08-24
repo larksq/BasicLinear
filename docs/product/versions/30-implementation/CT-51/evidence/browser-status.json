@@ -1,0 +1,38 @@
+{
+  "schema_version": "ct51-browser-status-v1",
+  "recorded_at": "2026-08-20T12:10:39Z",
+  "status": "deferred_permission_denied",
+  "planned_targets": {
+    "owner": "http://127.0.0.1:4181/",
+    "guest": "http://127.0.0.1:4181/?fixture=guest-readonly"
+  },
+  "synthetic_fixture": true,
+  "host_checks": 4,
+  "host_checks_passed": 4,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "The deterministic owner and guest fixture contracts are reachable from the host, but access to the approved browser surface remains denied by the active security policy. The denied browser outcome was not retried through another browser surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": [
+    "Owner active Personal and Workspace saved-view sections",
+    "Owner archived saved-view sections",
+    "Guest shared active and archived saved-view sections",
+    "Loading empty search-empty query-error and mutation-error states",
+    "Rename and access dialog plus Archive and Restore lifecycle transitions",
+    "Workspace and role transitions with an editor or mutation open"
+  ],
+  "required_assertions": [
+    "Views navigation and breadcrumb expose one current primary destination",
+    "Open routes to Issues with the exact saved-view identifier and no stale issue state",
+    "Build view routes to clean Issues state and existing Save view remains usable",
+    "only owners with issue write capability receive rename access archive and restore controls",
+    "native table row groups columns form labels announcements and focus recovery remain accessible",
+    "query mutation and revision-conflict failures remain recoverable without false success",
+    "workspace or role changes close stale state and suppress unrelated completion feedback",
+    "desktop tablet and mobile layouts have zero overlap uncontained overflow duplicate IDs hidden focus console warnings and console errors"
+  ]
+}

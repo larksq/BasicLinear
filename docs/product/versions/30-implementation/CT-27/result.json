@@ -1,0 +1,42 @@
+{
+  "schema_version": "ct27-implementation-result-v1",
+  "captured_at": "2026-08-20T02:41:09Z",
+  "verdict": "OUTPUT_DONE_FOR_CT13",
+  "issue": {
+    "identifier": "CT-27",
+    "id": "ca48a764-bafd-4140-868e-4abccd142f59",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "checks": {
+    "generated_browser_files": 50,
+    "candidate_files_before": 402,
+    "candidate_files_after_before_evidence": 352,
+    "candidate_files_removed": 50,
+    "release_audit_test_files": 1,
+    "release_audit_tests_passed": 2,
+    "release_audit_tests_failed": 0,
+    "preflight_expected_exit_code": 1,
+    "preflight_pass": 5,
+    "preflight_fail": 3,
+    "preflight_blocked": 6,
+    "asset_records": 64,
+    "public_copy_records": 13,
+    "browser_paths_in_preflight": 0,
+    "private_artifacts_found": 0,
+    "high_confidence_secret_indicators_found": 0,
+    "private_path_contract_missing": 0,
+    "git_ignore_match_passed": true
+  },
+  "source_hashes": {
+    ".gitignore": "2c24e9861a4b7d04bedb695725e67024b848ce6db99a1852c6e6eed5d76c85c3",
+    ".dockerignore": "4f2e1d013d1519d9db807186cdd31248f0f25e858af07a4407b8ebc698ee6a0c",
+    "ops/release/audit-policy.json": "3e2b57ea225bc786cf56a8569a261b919bffa5d2766e65d3c54e549428231da1",
+    "scripts/tests/audit-public-release.test.mjs": "1035812f0d3df8d06169e1572ae42342441afb63a4d7a51c1de46e011f9df6bc"
+  },
+  "pre_evidence_source": {
+    "file_count": 352,
+    "sha256": "5d5559d17040dda81c925e4aaf90dec3afdb192bad130bda326f1e2347508d84"
+  },
+  "outcomes_claimed": []
+}

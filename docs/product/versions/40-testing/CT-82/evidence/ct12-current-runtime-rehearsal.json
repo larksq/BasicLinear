@@ -1,0 +1,127 @@
+{
+  "schema_version": "ct88-clean-runtime-qualification-v1",
+  "issue": "CT-88",
+  "acceptance_issue": "CT-82",
+  "captured_at": "2026-08-21T10:11:37.033Z",
+  "actor": "codex-testing-ct82-readiness",
+  "session": "CT82-READINESS-20260821T101040Z",
+  "independent": false,
+  "environment": {
+    "os": "darwin 25.5.0 arm64",
+    "host_fingerprint": "5e793f830cea3896",
+    "node": "v24.18.0",
+    "npm": "11.16.0",
+    "source_revision": null,
+    "source_clean": false,
+    "source_status_entries": 19,
+    "source_set_sha256": "a44544c32a50efce4e30c6c8edbf5fc8409718fa6f9d2c6c080f01ddeb2bfe0f",
+    "source_files": 828,
+    "docker": false,
+    "postgresql": false,
+    "external_identity": false
+  },
+  "artifact": {
+    "sha256": "449aebc47de9c1ad519d4402db574d5b985b4fb123c3f9397a99850280ccf950",
+    "files": 111,
+    "bytes": 1993540
+  },
+  "verdict": "PASSED_IMPLEMENTATION_REHEARSAL",
+  "acceptance": {
+    "p_t21": "open",
+    "ct82": "Todo",
+    "self_acceptance": false,
+    "source_revision_bound": false
+  },
+  "checks": {
+    "built_spa_and_single_process": "passed",
+    "fresh_owner_scope_status_bootstrap": "passed",
+    "project_milestone_issue_private_view_search": "passed",
+    "derived_progress": "passed",
+    "host_origin_csrf_multiple_tabs": "passed",
+    "outbound_network_and_subprocess_denial": "passed",
+    "restart_session_rotation_stable_ids": "passed",
+    "interruption_matrix": [
+      "SIGKILL",
+      "SIGTERM",
+      "SIGINT"
+    ],
+    "sidecar_cleanup": "passed",
+    "canonical_export_import_digest": "5586967de356244c9f7d87499ac0225fb83f40ec0a6aaeeb95352317cdbfe8f6",
+    "online_backup_sha256": "285e3426ae1224730861aa437d55f84234117414bdaef651c589241c09b8a325",
+    "backup_integrity": "ok",
+    "restore_canonical_digest": "5586967de356244c9f7d87499ac0225fb83f40ec0a6aaeeb95352317cdbfe8f6",
+    "corrupt_restore_last_known_good": "passed",
+    "accepted_upgrade": {
+      "from": 1,
+      "to": 2,
+      "canonicalDigest": "5586967de356244c9f7d87499ac0225fb83f40ec0a6aaeeb95352317cdbfe8f6"
+    },
+    "future_upgrade_rejected_unchanged": "passed",
+    "malformed_upgrade_rolled_back": "passed",
+    "pre_upgrade_backup_sha256": "e4bd105799a59ab1f9c1803efaf919680fcf819a2607c08410f655763f56e2fa",
+    "accepted_scale": {
+      "projects": 1001,
+      "milestones": 2001,
+      "issues": 10001,
+      "activityEntries": 50006,
+      "durationMs": 163.23
+    },
+    "permissions": {
+      "database": "passed",
+      "backup": "passed",
+      "export": "passed"
+    },
+    "legacy_transfer": {
+      "canonicalSha256": "000473521838884d216ef7ad87185a94b8400fcf488add218722d0a88d120772",
+      "sourceSha256": "e32368e2d70ac6476428a874b42767d8d54da80d6889ce5298d3ab6e63e38eed",
+      "fixtureFileSha256": "3bbd2aeebf83148d48bf6eba986fdbc1cd4203829e6aea0311d72752f8d3222c",
+      "selectedWorkspaceDigest": "5f35bf5f1b8cb00c808d043d1ef31fd03e0a6b022ca43095be1f1b700683f128",
+      "ambiguousTargetCreated": false,
+      "sourceUnchanged": true
+    }
+  },
+  "network_audits": [
+    {
+      "phase": "first_crash",
+      "records": 1,
+      "attempts": 0,
+      "summaryPresent": false,
+      "termination": {
+        "code": null,
+        "signal": "SIGKILL"
+      }
+    },
+    {
+      "phase": "restart",
+      "records": 2,
+      "attempts": 0,
+      "summaryPresent": true
+    },
+    {
+      "phase": "accepted_upgrade",
+      "records": 2,
+      "attempts": 0,
+      "summaryPresent": true
+    },
+    {
+      "phase": "future_schema_rejected",
+      "records": 2,
+      "attempts": 0,
+      "summaryPresent": true
+    },
+    {
+      "phase": "migration_rollback",
+      "records": 2,
+      "attempts": 0,
+      "summaryPresent": true
+    },
+    {
+      "phase": "accepted_scale",
+      "records": 2,
+      "attempts": 0,
+      "summaryPresent": true
+    }
+  ],
+  "work_directory": null,
+  "outcomes_claimed": []
+}

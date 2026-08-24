@@ -1,0 +1,42 @@
+{
+  "schema_version": "ct6-implementation-handoff-v1",
+  "stage": "implementation",
+  "status": "output_done",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "inputs": {
+    "issue": "CT-6",
+    "issue_id": "7d88459a-3877-4bc0-b628-0d6ed6031558",
+    "issue_revision": 2,
+    "dependency": "CT-4@3",
+    "planning_package_sha256": "d161247c9c523e004a14d6e31ebcf9d12aab9764015b312383e13a0bb851f834"
+  },
+  "outputs": {
+    "changed_files": "docs/product/versions/v0.1.0/30-implementation/CT-6/changed-files.txt",
+    "evidence": "docs/product/versions/v0.1.0/30-implementation/CT-6/evidence.md",
+    "result": "docs/product/versions/v0.1.0/30-implementation/CT-6/result.json",
+    "runtime_url": "http://localhost:4175"
+  },
+  "validation": {
+    "tests": ["P-T03", "P-T04", "P-T05"],
+    "requirements": ["R-001", "R-002", "R-014", "R-101", "R-102", "R-106", "R-109"],
+    "result": "pass_with_clean_host_rehearsal_deferred"
+  },
+  "outcomes": {
+    "evaluated": false,
+    "claimed": []
+  },
+  "blockers": [],
+  "deferred": [
+    "Full named-volume Compose rehearsal on a supported clean host is owned by CT-10 and CT-12.",
+    "Independent security and integrated quality acceptance remain owned by CT-11 and CT-12."
+  ],
+  "next": {
+    "issues": ["CT-7", "CT-8"],
+    "reason": "Both direct dependencies are satisfied by the CT-6 foundation output."
+  }
+}

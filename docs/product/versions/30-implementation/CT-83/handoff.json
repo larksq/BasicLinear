@@ -1,0 +1,54 @@
+{
+  "schema_version": "ct83-reconciliation-handoff-v1",
+  "stage": "implementation.testing-handoff",
+  "status": "reconciled_acceptance_pending",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issue": {
+    "identifier": "CT-83",
+    "stable_id": "bdf4102e-3599-47dd-9409-70ce3b95a8ca",
+    "starting_revision": 1,
+    "expected_completion_revision": 2,
+    "completion_revision": 2,
+    "status": "Done"
+  },
+  "reconciliation": {
+    "supported_implementation_done": 38,
+    "superseded_canceled": 5,
+    "acceptance_claimed": false,
+    "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-83/evidence/reconciliation.json"
+  },
+  "control_tower_readback": {
+    "CT-83": "Done@2",
+    "CT-12": "In Progress@59",
+    "CT-13": "Todo@60",
+    "counts": {
+      "active": 6,
+      "completed_or_canceled": 77,
+      "trash": 0
+    },
+    "implementation_milestone": {
+      "issue_count": 68,
+      "completed_count": 63,
+      "progress": 0.9264705882352942,
+      "active_issues": 0
+    },
+    "completion_backup_sha256": "377c5bf13a8da9669b7e8387a15646389366392d6c3a307d41fd162347a0df57",
+    "provider_projection": "disabled_not_synced"
+  },
+  "next_gates": [
+    { "issue": "CT-82", "owner": "independent release testing", "scope": "clean local runtime, migration, upgrade, backup, and restore" },
+    { "issue": "CT-12", "owner": "independent testing", "scope": "owner rendered workflow, accessibility, fidelity, and UAT" },
+    { "issue": "CT-3", "owner": "sponsor and qualified reviewer", "scope": "public identity, license, and clean-room boundary" },
+    { "issue": "CT-13", "owner": "accountable release review", "scope": "hash-bound public release audit" }
+  ],
+  "blockers": [
+    "Independent rendered owner-browser acceptance has not run.",
+    "Independent CT-82 clean-user and migration/recovery acceptance has not run.",
+    "Public identity, license, provenance, source revision, and accountable review remain open."
+  ],
+  "outcomes_claimed": []
+}

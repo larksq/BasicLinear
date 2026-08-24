@@ -1,0 +1,17 @@
+{
+  "schema_version": "ct12-ct88-runtime-tooling-v1",
+  "captured_at": "2026-08-21T09:12:03.000Z",
+  "implementation_issue": "CT-88",
+  "runtime_acceptance_issue": "CT-82",
+  "testing_issue": "CT-12",
+  "artifact_sha256": "2dc6cc5751d136a1c0495e68283f4052066053c850de7094567f456c2478e776",
+  "implementation_rehearsal": "passed",
+  "independent_runtime_acceptance": "pending",
+  "browser_acceptance": "pending_chrome_control",
+  "p_t21": "open",
+  "p_t18": "open",
+  "p_t19": "open",
+  "outbound_attempts": 0,
+  "source_revision_bound": false,
+  "outcomes_claimed": []
+}

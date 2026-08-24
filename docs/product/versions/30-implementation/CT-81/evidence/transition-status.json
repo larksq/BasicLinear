@@ -1,0 +1,49 @@
+{
+  "schema_version": "ct81-transition-status-v1",
+  "captured_at": "2026-08-21T07:06:59Z",
+  "supported_runtime": {
+    "topology": "single_node_loopback_sqlite",
+    "start_command": "npm start",
+    "process_count": 1,
+    "database_files": 1,
+    "backup_directories": 1,
+    "mandatory_environment_values": 0,
+    "external_credentials": 0,
+    "outbound_runtime_dependencies": 0
+  },
+  "retired": {
+    "dockerfiles": true,
+    "compose": true,
+    "nginx": true,
+    "postgresql_runtime": true,
+    "postgresql_migrations": true,
+    "pg_and_kysely": true,
+    "password_and_setup_token": true,
+    "oidc_runtime_and_ui": true,
+    "remote_bind_and_tls_configuration": true,
+    "legacy_integration_runner": true,
+    "container_release_controls": true,
+    "workspace_team_member_administration": true
+  },
+  "retained_compatibility": {
+    "canonical_workspace_export_v1": true,
+    "canonical_database_backup_v1_parser": true,
+    "legacy_identity_fields_reachable_by_runtime": false,
+    "legacy_credentials_imported": false,
+    "legacy_postgresql_adapter_present": false
+  },
+  "artifact_scan": {
+    "stale_postgresql_runtime_modules": 0,
+    "stale_oidc_runtime_modules": 0,
+    "retired_direct_dependencies": 0,
+    "compose_directory_present": false,
+    "dockerignore_present": false,
+    "integration_config_present": false
+  },
+  "independent_acceptance": {
+    "status": "pending",
+    "owners": ["CT-82", "CT-12"],
+    "rendered_browser_available_in_session": false
+  },
+  "verdict": "supported_path_collapsed_acceptance_pending"
+}

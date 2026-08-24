@@ -1,0 +1,14 @@
+{
+  "schema_version": "ct80-transition-status-v1",
+  "captured_at": "2026-08-21T06:10:30Z",
+  "runner": "npm run test:integration",
+  "test_files_discovered": 7,
+  "tests_discovered": 17,
+  "test_files_skipped": 7,
+  "tests_skipped": 17,
+  "tests_passed": 0,
+  "tests_failed": 0,
+  "skip_reason": "TEST_MIGRATION_DATABASE_URL and TEST_APP_PASSWORD are absent",
+  "docker_started": false,
+  "verdict": "skipped_unconfigured_not_a_pass"
+}

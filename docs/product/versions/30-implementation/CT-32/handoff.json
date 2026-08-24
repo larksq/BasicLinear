@@ -1,0 +1,63 @@
+{
+  "schema_version": "ct32-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {"task_store":".control-tower/tasks-v0.8.sqlite3","provider_projection":"disabled","linear_used":false},
+  "issues": [
+    {
+      "issue_id": "CT-32",
+      "stable_id": "63935cd7-949b-4ebe-8e9c-cf52e57988df",
+      "revision": 2,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_browser_verification",
+      "requirement_refs": ["R-010", "R-104"],
+      "acceptance_refs": ["R-010", "R-104"],
+      "outcome_refs": ["O-001", "O-002"],
+      "allowed_mutation_paths": ["apps/web/src/App.tsx", "apps/web/src/command-palette.ts", "apps/web/tests/command-palette.test.ts", "docs/product/versions/v0.1.0/30-implementation/CT-32"]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT32-IMPL-20260820T042321Z",
+      "actor_id": "codex-command-palette-accessibility",
+      "issue_id": "CT-32",
+      "mode": "code_mutating",
+      "output_refs": ["apps/web/src/App.tsx", "apps/web/src/command-palette.ts", "apps/web/tests/command-palette.test.ts"],
+      "validation_refs": ["docs/product/versions/v0.1.0/30-implementation/CT-32/result.json", "docs/product/versions/v0.1.0/30-implementation/CT-32/evidence.md"]
+    }
+  ],
+  "checks": [
+    {"check_id":"CT32-SEMANTIC-CONTRACT","issue_id":"CT-32","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-32/result.json"},
+    {"check_id":"CT32-REGRESSION","issue_id":"CT-32","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-32/result.json"},
+    {"check_id":"CT32-TYPECHECK","issue_id":"CT-32","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-32/result.json"},
+    {"check_id":"CT32-BUILD","issue_id":"CT-32","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-32/result.json"},
+    {"check_id":"CT32-BROWSER","issue_id":"CT-32","status":"blocked","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-32/evidence/browser-status.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-32",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-32/evidence.md#pending-browser-matrix",
+      "basis": "Source contracts, complete regression, typecheck, and production build pass. Final rendered-browser semantics and responsive behavior are not yet asserted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["R-010", "R-104"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-32/changed-files.txt",
+    "regression_areas": ["combobox ownership", "active descendant", "option selection", "keyboard activation", "pointer activation", "long-result scrolling", "responsive geometry"],
+    "evidence_refs": ["docs/product/versions/v0.1.0/30-implementation/CT-32/result.json", "docs/product/versions/v0.1.0/30-implementation/CT-32/evidence.md", "docs/product/versions/v0.1.0/30-implementation/CT-32/evidence/browser-status.json"],
+    "implementation_actor_ids": ["codex-command-palette-accessibility"],
+    "implementation_session_ids": ["CT32-IMPL-20260820T042321Z"]
+  },
+  "outcomes": [{"outcome_id":"O-001","status":"pending"}, {"outcome_id":"O-002","status":"pending"}],
+  "blockers": [
+    {
+      "id": "CT32-BROWSER-PERMISSION",
+      "description": "The approved local browser surface is unavailable under the active security policy; final desktop/mobile browser verification remains required."
+    }
+  ],
+  "next": {"skill":"ct-test-sprint","issues":["CT-32"],"reason":"Run the bounded synthetic desktop/mobile command-palette browser matrix when the local browser surface is approved."}
+}

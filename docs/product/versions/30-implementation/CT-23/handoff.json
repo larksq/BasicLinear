@@ -1,0 +1,118 @@
+{
+  "schema_version": "ct23-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "passed",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-23",
+      "stable_id": "632cd6a5-62ed-42ca-9e5c-924cbbe80156",
+      "revision": 2,
+      "accepted": true,
+      "blocked": false,
+      "status": "output_done",
+      "requirement_refs": ["R-010", "R-011", "R-104", "R-110"],
+      "acceptance_refs": ["R-010", "R-011", "R-104", "R-110"],
+      "outcome_refs": ["O-001", "O-002", "O-003"],
+      "allowed_mutation_paths": [
+        "package.json",
+        "apps/web/src/App.tsx",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/layout-preferences.ts",
+        "apps/web/src/styles.css",
+        "apps/web/tests/layout-contract.test.ts",
+        "apps/web/tests/layout-preferences.test.ts",
+        "scripts/serve-visual-fixture.mjs",
+        "docs/product/versions/v0.1.0/30-implementation/CT-23"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT23-IMPL-20260820T005905Z",
+      "actor_id": "codex-layout-density",
+      "issue_id": "CT-23",
+      "mode": "code_mutating",
+      "output_refs": [
+        "package.json",
+        "apps/web/src/App.tsx",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/layout-preferences.ts",
+        "apps/web/src/styles.css",
+        "apps/web/tests/layout-contract.test.ts",
+        "apps/web/tests/layout-preferences.test.ts",
+        "scripts/serve-visual-fixture.mjs"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-23/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence.md"
+      ]
+    },
+    {
+      "session_id": "CT23-REVIEW-20260820T011600Z",
+      "actor_id": "codex-layout-density-reviewer",
+      "issue_id": "CT-23",
+      "mode": "review_only",
+      "output_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-23/changed-files.txt",
+        "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence.md",
+        "docs/product/versions/v0.1.0/30-implementation/CT-23/handoff.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-23/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-23/session.md"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-23/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence.md"
+      ]
+    }
+  ],
+  "checks": [
+    {"check_id":"CT23-FOCUSED","issue_id":"CT-23","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-23/result.json"},
+    {"check_id":"CT23-BROWSER","issue_id":"CT-23","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-23/evidence.md"},
+    {"check_id":"CT23-REGRESSION","issue_id":"CT-23","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-23/result.json"},
+    {"check_id":"CT23-EVIDENCE","issue_id":"CT-23","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-23/evidence.md"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-23",
+      "status": "passed",
+      "independent": true,
+      "review_actor_id": "codex-layout-density-reviewer",
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence.md#verification",
+      "basis": "A separate review-only pass inspected the complete affected source, retained the first failed capture, corrected both observed layout defects, reran all repository checks, and repeated the desktop and mobile Chrome matrix against the rebuilt production bundle."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["R-010", "R-011", "R-104", "R-110"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-23/changed-files.txt",
+    "regression_areas": [
+      "desktop workspace navigation",
+      "contextual issue list and detail split",
+      "layout preference persistence",
+      "keyboard and pointer separator behavior",
+      "tablet and mobile navigation/detail overlays"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-23/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence.md"
+    ],
+    "implementation_actor_ids": ["codex-layout-density", "codex-layout-density-reviewer"],
+    "implementation_session_ids": ["CT23-IMPL-20260820T005905Z", "CT23-REVIEW-20260820T011600Z"]
+  },
+  "outcomes": [
+    {"outcome_id":"O-001","status":"pending"},
+    {"outcome_id":"O-002","status":"pending"},
+    {"outcome_id":"O-003","status":"pending"}
+  ],
+  "blockers": [],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issues": ["CT-12"],
+    "reason": "Attach this focused evidence to CT-12 while retaining the separate CT-21 P-T21 clean-host blocker."
+  }
+}

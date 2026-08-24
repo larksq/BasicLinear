@@ -1,0 +1,731 @@
+{
+  "schema_version": "ct12-core-route-accessibility-v2",
+  "captured_at": "2026-08-22T15:00:08.318Z",
+  "candidate": {
+    "product_revision": "670a9f96e989654d84408e30c527e85b765a9042",
+    "url": "http://127.0.0.1:4284/",
+    "browser": "Chrome 151.0.7922.170",
+    "synthetic_data_only": true
+  },
+  "method": {
+    "settled_after_loading": true,
+    "viewports": [
+      {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "routes": [
+      "my-work",
+      "projects",
+      "issues",
+      "views",
+      "workflow"
+    ],
+    "checks": [
+      "main_nav_h1_landmarks",
+      "topbar_geometry_and_paint",
+      "document_overflow",
+      "duplicate_ids",
+      "accessible_names",
+      "aria_controls",
+      "aria_labelledby",
+      "direct_text_contrast",
+      "alerts"
+    ]
+  },
+  "states": [
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "My work"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "my-work",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 52,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Projects"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "projects",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 26,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Issues"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "issues",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 49,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Views"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "views",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 16,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Workflow"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "workflow",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 29,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "My work"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "my-work",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 52,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Projects"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "projects",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 26,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Issues"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "issues",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 49,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Views"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "views",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 16,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Workflow"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "workflow",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 29,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "My work"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "my-work",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "mobile",
+      "visibleControls": 47,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Projects"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "projects",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "mobile",
+      "visibleControls": 21,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Issues"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "issues",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "mobile",
+      "visibleControls": 44,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Views"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "views",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "mobile",
+      "visibleControls": 11,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Workflow"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "workflow",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "mobile",
+      "visibleControls": 24,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "My work"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "my-work",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "mobile",
+      "visibleControls": 47,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Projects"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "projects",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "mobile",
+      "visibleControls": 21,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Issues"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "issues",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "mobile",
+      "visibleControls": 44,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Views"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "views",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "mobile",
+      "visibleControls": 11,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Workflow"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "workflow",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "mobile",
+      "visibleControls": 24,
+      "passed": true
+    }
+  ],
+  "summary": {
+    "route_viewport_theme_states": 20,
+    "states_passed": 20,
+    "states_failed": 0,
+    "topbar_height_px": 44,
+    "unnamed_controls": 0,
+    "invalid_aria_references": 0,
+    "direct_text_contrast_failures": 0,
+    "duplicate_ids": 0,
+    "horizontal_overflow_px": 0,
+    "visible_controls_observed": 638,
+    "full_ct12_acceptance": false
+  },
+  "limitations": [
+    "Direct-text contrast is a bounded computed-style screen, not a replacement for the still-unavailable full automated accessibility engine.",
+    "This matrix does not complete subflow keyboard workflows, long-content, live System appearance, or all responsive-breakpoint checks."
+  ],
+  "raw_evidence": {
+    "private_ref": ".control-tower/evidence/CT-12/current-core-route-accessibility-670a9f9-raw.json",
+    "private_sha256": "2377b27a956cd100359825ff2617e57cfa30c7f4d47d478c5fcdf00deb83c29f"
+  },
+  "outcomes_claimed": []
+}

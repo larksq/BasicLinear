@@ -1,0 +1,5 @@
+apps/web/src/App.tsx
+apps/web/src/components.tsx
+apps/web/src/local-service-recovery.ts
+apps/web/tests/local-service-recovery.test.ts
+apps/web/tests/local-service-session-recovery.test.ts

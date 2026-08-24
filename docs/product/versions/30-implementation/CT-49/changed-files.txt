@@ -1,0 +1,17 @@
+packages/domain/src/index.ts
+packages/domain/tests/domain.test.ts
+apps/web/src/App.tsx
+apps/web/src/projects.tsx
+apps/web/src/issues.tsx
+apps/web/tests/global-shortcuts.test.ts
+apps/web/tests/local-keyboard-actions.test.ts
+apps/web/tests/project-row-interactions.test.ts
+apps/web/tests/table-semantics.test.ts
+apps/web/tests/workspace-capabilities.test.ts
+scripts/serve-visual-fixture.mjs
+docs/product/versions/v0.1.0/30-implementation/CT-49/session.md
+docs/product/versions/v0.1.0/30-implementation/CT-49/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-49/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-49/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-49/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-49/evidence/browser-status.json

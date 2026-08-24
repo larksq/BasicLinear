@@ -1,0 +1,105 @@
+{
+  "schema_version": "ct79-planning-result-v1",
+  "captured_at": "2026-08-21T03:51:09Z",
+  "issue": {
+    "identifier": "CT-79",
+    "id": "4c50132e-8cbc-477a-939b-7e9946aca7d1",
+    "revision": 2,
+    "status": "Done",
+    "milestone": "S2 - Sprint Planning"
+  },
+  "decision": {
+    "status": "accepted",
+    "supported_runtime": "one pinned Node 24 loopback process and one embedded SQLite application file",
+    "storage_api": "node:sqlite DatabaseSync behind a project-owned adapter",
+    "accepted_workload": {
+      "issues": 10000,
+      "projects": 1000,
+      "milestones": 2000,
+      "comments_relations_activity": 50000,
+      "enforced_quota": false
+    },
+    "initial_index_policy": "primary keys, uniqueness, and direct relationship lookup only; add a performance index only for a measured failing query",
+    "supersedes": "CT-21 Docker-host qualification and the Docker/PostgreSQL portions of R-014 and P-T21"
+  },
+  "review": {
+    "compose_services": 5,
+    "postgresql_tables": 23,
+    "explicit_indexes": 36,
+    "policy_declarations_in_history": 47,
+    "stored_functions": 20,
+    "sql_migration_lines": 1313,
+    "database_typescript_lines": 6858,
+    "postgresql_integration_test_lines": 4012
+  },
+  "feasibility_probe": {
+    "runtime": "Node v24.18.0",
+    "rows": 10000,
+    "manual_search_or_sort_indexes": 0,
+    "seed_ms": 47.18,
+    "search_ms": 4.12,
+    "search_rows": 50,
+    "backup_ms": 3.39,
+    "backup_pages": 372,
+    "restored_count": 10000,
+    "restored_relations": 1,
+    "integrity": "ok",
+    "acceptance": false,
+    "limitation": "Disposable machine-specific feasibility evidence only; it does not select the final journaling policy or prove product performance, migration, interruption recovery, or release readiness."
+  },
+  "validation": {
+    "discovery": {
+      "valid": true,
+      "errors": 0,
+      "warnings": 1,
+      "warning": "market-research.switching-cost remains an owned residual evidence gap"
+    },
+    "planning": {
+      "valid": true,
+      "errors": 0,
+      "warnings": 3,
+      "warning": "CT-7, CT-8, and CT-9 retain the accepted implementation-only O-002 baseline warning"
+    },
+    "outcomes_deep_equal": true,
+    "json_artifacts_parse": true
+  },
+  "bindings": {
+    "discovery_package_sha256": "61dc2f6dc797ccf25fd9d102c6a8a9791ad3197f3bd25f600292be643394a723",
+    "planning_package_sha256": "d078ff629b943dcb66563a8b02f9ef9f3671948d0fceb9e84219c922b4e8fbdc",
+    "outcome_contracts": {
+      "O-001": "87362bff159a581ea2a738afbf969457798e5a9a43e085ea9a9234f932ff604d",
+      "O-002": "5d0f045b83987b7da5e5f1c861becc225085b6f42a30ebe0aa6d0eec7f86fd37",
+      "O-003": "4c41f523cf34e292c85ddeb8b0e954e4f47578d5a0fdeae54ab4aaff5b8c669d",
+      "O-004": "78aee6a2f909bc3f4387ba41edd640747a3c1304387e0298f9744cfcadfdebce",
+      "O-005": "6e6b5f819f23d1484769e081c326e813aa2033e43b8a7eef2f8837e1d22f75f6"
+    }
+  },
+  "control_tower": {
+    "authority": "local",
+    "store": ".control-tower/tasks-v0.8.sqlite3",
+    "health": "ready",
+    "counts": {
+      "active": 53,
+      "completed": 29,
+      "trash": 0
+    },
+    "tasks": {
+      "CT-21": {"revision": 3, "status": "Canceled"},
+      "CT-76": {"revision": 2, "status": "Done"},
+      "CT-78": {"revision": 2, "status": "Todo", "blocked_by": ["CT-75", "CT-76"]},
+      "CT-79": {"revision": 2, "status": "Done"},
+      "CT-80": {"revision": 1, "status": "Todo", "blocked_by": ["CT-75", "CT-76", "CT-79"]},
+      "CT-81": {"revision": 1, "status": "Todo", "blocked_by": ["CT-78", "CT-80"]},
+      "CT-82": {"revision": 1, "status": "Todo", "blocked_by": ["CT-81"]},
+      "CT-12": {"revision": 56, "status": "In Progress", "direct_runtime_gate": "CT-82"},
+      "CT-13": {"revision": 57, "status": "Todo", "runtime_gate": "transitive through CT-12"}
+    },
+    "provider_projection": "disabled_not_synced",
+    "linear_used": false
+  },
+  "implementation_boundary": {
+    "complete": false,
+    "next": ["CT-75", "CT-78", "CT-80", "CT-81", "CT-82"],
+    "outcomes_claimed": []
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "ct124-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "blocked_on_distinct_review",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled_not_synced",
+    "linear_used": false
+  },
+  "candidate": {
+    "revision": "5a33d28be383b7651a4b0d6156534aa12cc423fa",
+    "tree": "d106d3bb40a84184e7ee26c919134b01e4748679"
+  },
+  "issue": {
+    "identifier": "CT-124",
+    "stable_id": "d3d6d768-e9d8-44b3-9d47-3e0938ca0e89",
+    "revision": 2,
+    "status": "In Progress",
+    "output_done": true,
+    "accepted": false
+  },
+  "changed_files": [
+    "apps/web/src/issues.tsx",
+    "apps/web/src/saved-views.tsx",
+    "apps/web/tests/board-accessibility.test.ts",
+    "apps/web/tests/table-semantics.test.ts"
+  ],
+  "checks": {
+    "automated": "passed",
+    "chrome": "passed_exact_candidate",
+    "distinct_application_review": "pending"
+  },
+  "task_readback": {
+    "health": "ready",
+    "counts": { "active": 13, "completed": 111, "trash": 0 },
+    "projection": "disabled_not_synced"
+  },
+  "blockers": [
+    "A distinct application reviewer must inspect CT-124 and the exact semantic readback before Done."
+  ],
+  "next": {
+    "action": "Run distinct application review; remediate findings or accept CT-124."
+  },
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

@@ -1,0 +1,118 @@
+{
+  "schema_version": "ct10-implementation-result-v1",
+  "captured_at": "2026-08-19T21:25:11Z",
+  "verdict": "OUTPUT_DONE_FOR_CT12",
+  "issue": {
+    "identifier": "CT-10",
+    "id": "fdb1ad84-8628-4ae8-8939-9b61f56a164d",
+    "start_revision": 1,
+    "implementation_revision": 2,
+    "completion_revision": 3
+  },
+  "planning_package_sha256": "d161247c9c523e004a14d6e31ebcf9d12aab9764015b312383e13a0bb851f834",
+  "source": {
+    "git_head": null,
+    "git_state": "unborn_repository",
+    "changed_files_manifest": "docs/product/versions/v0.1.0/30-implementation/CT-10/changed-files.txt",
+    "changed_files_manifest_sha256": "933b06723668cd6ac6b9aac1d834dcb773821f42601ffca599ac899c25a60bdb",
+    "production_files_count": 17,
+    "production_files_sha256": "8161b7e1413d05da12723c81781a1561116e1d96988ea34f673872a70967c91c",
+    "package_lock_sha256": "60e4998a0fdc1bc4241e3a6354fb7598e2e0f7c91ef3c3e412be61a2bb4e42ed"
+  },
+  "environment": {
+    "os": "macOS 26.5.2 arm64",
+    "node": "v24.18.0",
+    "npm": "11.16.0",
+    "chrome": "150.0.0.0",
+    "docker_desktop": "4.15",
+    "docker_engine": "20.10.21"
+  },
+  "checks": {
+    "typecheck_workspaces": 8,
+    "unit_test_files": 4,
+    "unit_tests_passed": 18,
+    "integration_test_files": 5,
+    "integration_tests_passed": 8,
+    "transfer_integration_tests_passed": 4,
+    "npm_vulnerabilities": 0,
+    "compose_profiles_rendered": 2,
+    "verification_network_internal": true,
+    "migrations_applied": 6,
+    "live_readiness_status": 200,
+    "live_web_status": 200,
+    "container_restarts": 0,
+    "runtime_error_level_entries": 0,
+    "runtime_5xx_responses": 0,
+    "browser_console_entries": 0,
+    "browser_active_issues": 2,
+    "browser_authenticated_after_restart": true,
+    "runtime_artifacts_match_final_image": true,
+    "backup_file_mode": "0600",
+    "backup_sessions_included": false,
+    "backup_matches_current_after_restart": true,
+    "restore_round_trip": "pass",
+    "tamper_rejection": "pass",
+    "clean_migration": "pass",
+    "populated_upgrade_backup_gate": "pass",
+    "largest_javascript_chunk_kb": 481.43
+  },
+  "canonical": {
+    "workspace_export_records": 76,
+    "workspace_export_collections": 16,
+    "workspace_export_digest": "ba0fa320605637842de5c0745aa6fd05bc6bad0419bc07011c2d88420000d839",
+    "database_backup_digest": "da96eff026fbed8513a9289d9618b2f8c6cf518ce619589cb3baac1340ba5c41",
+    "initial_backup_sha256": "48aeb32841ff0317aa92643c8cd71c17450ef65e49ad585c00a322eeb64f6c34",
+    "post_restart_backup_sha256": "5c2d5e0eca9f73e195a4b9f9e28a4038daae267ecacef8ea8264d7e78c30dce3",
+    "backup_bytes": 37927,
+    "workspace_count": 1,
+    "user_count": 2
+  },
+  "migrations": [
+    { "name": "001_foundation.sql", "sha256": "dd1fac4916d38f072f9fd49f31d0a89ff000b9b0d5cce0d588dea1754b0e7a3b" },
+    { "name": "002_status_team_workspace_integrity.sql", "sha256": "79c55276d5be91b4b36cd6fc66135bbb9a2879e529622159f7ba3c135f911f92" },
+    { "name": "003_scope_rls_to_workspace_context.sql", "sha256": "15e41c9eff8401f6092d43b2c604633c7ac9f6cc2ba515b523648d3bd4fe256b" },
+    { "name": "004_projects_milestones.sql", "sha256": "9539e28e2ae66a1c891e68bb805e24fee2179be92d2203b823c09bd1ad623612" },
+    { "name": "005_issues_relations_comments.sql", "sha256": "0df907aa7da512925c410736dca969200568f3cd38d5ad6bc8c5b5f950019d2a" },
+    { "name": "006_views_search.sql", "sha256": "8b7944c5bf5e768c824cd9a4c6e5a2b632ac6f1fcef0d48f299f357dd2221467" }
+  ],
+  "images": [
+    { "name": "openlinear-test:ct10-final", "id": "60f1427a77f12bc90d3c385393295d14a19d7a3f07484c316940b00c83f3b95d", "size_bytes": 442871777, "running": false },
+    { "name": "openlinear-operator:ct10-final", "id": "297b9b534e138eb7d17e1573e66ca655c5dd5341412d01b8fc5e73567d76ed0f", "size_bytes": 322087169, "running": false },
+    { "name": "openlinear-api:ct10-final", "id": "e740dd1f28fb812f9680264ca625a5ef5dd3446cfa220450c04d9132274eb67e", "size_bytes": 322264672, "running": false },
+    { "name": "openlinear-web:ct10-final", "id": "43e413340ad3c2862a9dba7b93d890d71a93996caaf1c11debbd4a1293748322", "size_bytes": 62053295, "running": true },
+    { "name": "openlinear-postgres:16.10", "id": "06928dd03c4562c7740748bd022145a82db0fa73565af609c63cd396a54c2620", "size_bytes": 449935983, "running": true }
+  ],
+  "live_runtime": {
+    "api_image_id": "84fa5667606763925c77eeef957f22b36e5b20eb2aa532088434748e8a2c7f3b",
+    "api_executable_artifacts_match_final": true,
+    "database_running": true,
+    "api_healthy": true,
+    "web_healthy": true,
+    "url": "http://localhost:4175"
+  },
+  "synthetic_live_fixture": {
+    "users": 2,
+    "workspaces": 1,
+    "memberships": 2,
+    "teams": 2,
+    "projects": 2,
+    "milestones": 2,
+    "issues": 2,
+    "comments": 1,
+    "saved_views": 1,
+    "activity_entries": 41,
+    "outbox_events": 41,
+    "sessions": 2
+  },
+  "host_limitations": [
+    "Docker Desktop 4.15 / Engine 20.10.21 deadlocked starts for newly created containers and exact Compose services.",
+    "The exact image filesystem was reconstructed inside an existing internal-network container for a clean 5-file, 8-test exit; clean-host full-Compose acceptance remains CT-12."
+  ],
+  "deferred_acceptance": [
+    "CT-11 independent security, isolation, failure-redaction, and concurrency verification",
+    "CT-12 clean-host full-Compose restore, assistive-technology, fidelity, performance, and integrated recovery verification",
+    "CT-13 public release approval",
+    "CT-14 mature O-001 and O-004 observation"
+  ],
+  "outcomes_claimed": []
+}

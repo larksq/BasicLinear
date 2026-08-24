@@ -1,0 +1,9 @@
+apps/web/src/issue-navigation-context.ts
+apps/web/src/issues.tsx
+apps/web/tests/issue-navigation-context.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-44/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-44/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-44/evidence/browser-status.json
+docs/product/versions/v0.1.0/30-implementation/CT-44/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-44/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-44/session.md

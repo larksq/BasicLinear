@@ -1,0 +1,44 @@
+{
+  "schema_version": "ct113-verification-summary-v1",
+  "captured_at": "2026-08-22T14:45:25.468Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_REVIEW_PENDING",
+  "source": {
+    "revision": "670a9f96e989654d84408e30c527e85b765a9042",
+    "tree": "d4c147b50bee345542286386934ac6e50f11aaf7",
+    "parent_revision": "1008d751e8b5905ae24fc375690ee2ce9f799bcf"
+  },
+  "checks": {
+    "focused_test_files": 3,
+    "focused_tests_passed": 14,
+    "complete_test_files": 71,
+    "complete_tests_passed": 469,
+    "workspaces_typechecked": 8,
+    "release_audit_tests_passed": 10,
+    "vite_modules": 1950,
+    "dist_files": 109,
+    "dist_bytes": 1915948,
+    "build_warnings": 0,
+    "restart_cycles_passed": 2,
+    "post_recovery_routes_passed": 5,
+    "post_recovery_route_failures": 0,
+    "expired_session_alerts_after_recovery": 0,
+    "database_exact_match": true,
+    "independent_application_review": "pending",
+    "P-T21": "pending_requalification_for_670a9f9"
+  },
+  "database": {
+    "file_sha256": "c90222fbaec1dc799a527abfc8c934f4cb91646a2d7b853fc3ef7037f1d3fd84",
+    "canonical_state_sha256": "63653a718fc9d3b8edb4ec886e193faae714f66e708f287290f41c257c625aa2",
+    "data_loss": false
+  },
+  "private_raw": {
+    "path": ".control-tower/evidence/CT-113/process-restart-670a9f9-raw.json",
+    "bytes": 17477,
+    "sha256": "5141db9b8983bdb21b5d45642ab1755312b7d2a7a7c604655bbed684e7425e26"
+  },
+  "limitations": [
+    "The live three-second success status elapsed before connected sampling returned; rendered tests cover progress, success, and failure semantics.",
+    "Distinct application review and current P-T21 qualification remain pending.",
+    "This bounded run is not complete CT-12, cross-platform, release, legal, identity, publication, or outcome acceptance."
+  ]
+}

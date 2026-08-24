@@ -1,0 +1,10 @@
+apps/web/src/App.tsx
+apps/web/src/search-recents.ts
+apps/web/tests/search-recents.test.ts
+vitest.config.ts
+docs/product/versions/v0.1.0/30-implementation/CT-19/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-19/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-19/evidence/ct12-workspace-scoped-recents.jpg
+docs/product/versions/v0.1.0/30-implementation/CT-19/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-19/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-19/session.md

@@ -1,0 +1,117 @@
+{
+  "schema_version": "ct55-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-55",
+      "stable_id": "e0848371-57f5-4406-a674-2d296c00dd74",
+      "revision": 1,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_browser_verification",
+      "requirement_refs": ["R-005", "R-008", "R-009", "R-010", "R-104", "R-110"],
+      "acceptance_refs": ["P-T08", "P-T10", "P-T11", "P-T13", "P-T18", "P-T19"],
+      "outcome_refs": ["O-001", "O-002", "O-003"],
+      "allowed_mutation_paths": [
+        "apps/web/src/App.tsx",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/issue-scope.ts",
+        "apps/web/src/workspace-navigation.ts",
+        "apps/web/src/command-palette.ts",
+        "apps/web/tests/issue-scope.test.ts",
+        "apps/web/tests/workspace-navigation.test.ts",
+        "apps/web/tests/command-palette.test.ts",
+        "apps/web/tests/layout-contract.test.ts",
+        "docs/product/versions/v0.1.0/30-implementation/CT-55",
+        "docs/product/versions/v0.1.0/40-testing/CT-12",
+        "docs/product/versions/v0.1.0/50-outcome-review/CT-13",
+        "ops/release current-candidate provenance manifests"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT55-IMPL-20260820T142533Z",
+      "actor_id": "codex-my-work-navigation",
+      "issue_id": "CT-55",
+      "mode": "code_mutating",
+      "output_refs": [
+        "apps/web/src/App.tsx",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/issue-scope.ts",
+        "apps/web/src/workspace-navigation.ts",
+        "apps/web/src/command-palette.ts"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-55/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-55/evidence.md",
+        "docs/product/versions/v0.1.0/30-implementation/CT-55/evidence/browser-status.json"
+      ]
+    }
+  ],
+  "checks": [
+    {"check_id": "CT55-WORKSPACE-ROUTE-CONTRACT", "issue_id": "CT-55", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-55/result.json"},
+    {"check_id": "CT55-LOCKED-ASSIGNEE-SCOPE", "issue_id": "CT-55", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-55/result.json"},
+    {"check_id": "CT55-REGRESSION", "issue_id": "CT-55", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-55/result.json"},
+    {"check_id": "CT55-TYPECHECK", "issue_id": "CT-55", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-55/result.json"},
+    {"check_id": "CT55-BUILD", "issue_id": "CT-55", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-55/result.json"},
+    {"check_id": "CT55-FIXTURE-HOST", "issue_id": "CT-55", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-55/evidence/browser-status.json"},
+    {"check_id": "CT55-BROWSER", "issue_id": "CT-55", "status": "blocked", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-55/evidence/browser-status.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-55",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-55/evidence.md",
+      "basis": "Focused and complete regression, all-workspace typecheck, production build, source review, locked-scope tests, route tests, and owner/guest fixture host checks pass. Rendered desktop, tablet, and mobile verification remains unexecuted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["P-T08", "P-T10", "P-T11", "P-T13", "P-T18", "P-T19"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-55/changed-files.txt",
+    "regression_areas": [
+      "direct and rail navigation to My work",
+      "Issues and My work route-state isolation",
+      "browser back forward reload and detail-route restoration",
+      "locked current-user scope combined with nested user filters search archive grouping and ordering",
+      "owner and guest command-palette indices active descendant and result selection",
+      "My work issue creation default and general Issues creation behavior",
+      "workspace role and identity transitions",
+      "desktop tablet and mobile focus accessibility overflow and responsive geometry"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-55/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-55/evidence.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-55/evidence/browser-status.json"
+    ],
+    "implementation_actor_ids": ["codex-my-work-navigation"],
+    "implementation_session_ids": ["CT55-IMPL-20260820T142533Z"]
+  },
+  "outcomes": [
+    {"outcome_id": "O-001", "status": "pending"},
+    {"outcome_id": "O-002", "status": "pending"},
+    {"outcome_id": "O-003", "status": "pending"}
+  ],
+  "blockers": [
+    {
+      "id": "CT55-BROWSER-PERMISSION",
+      "description": "The approved local browser surface is unavailable under the active security policy; final owner/guest desktop, tablet, and mobile route, scope, history, create, role, focus, accessibility, and responsive-geometry verification remains required."
+    }
+  ],
+  "environment_notes": [
+    "CT-55 changes no schema, repository query compiler, service route, authorization policy, or RLS policy. The current CT-54 PostgreSQL 16.10 evidence remains applicable to those unchanged paths, but no CT-55 database rerun is claimed."
+  ],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issues": ["CT-55"],
+    "reason": "Run the bounded owner/guest desktop, tablet, and mobile My work route and locked-assignee matrix when the approved browser surface is available."
+  }
+}

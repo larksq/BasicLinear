@@ -1,0 +1,58 @@
+{
+  "schema_version": "ct59-browser-status-v1",
+  "recorded_at": "2026-08-20T16:43:42Z",
+  "status": "deferred_permission_denied",
+  "planned_targets": {
+    "qa_views": "http://127.0.0.1:4184/?workspace=20000000-0000-4000-8000-000000000023&view=views&team=30000000-0000-4000-8000-000000000023&fixture=team-route",
+    "engineering_views": "http://127.0.0.1:4184/?workspace=20000000-0000-4000-8000-000000000023&view=views&team=30000000-0000-4000-8000-000000000025&fixture=team-route",
+    "qa_conflicting_saved_view": "http://127.0.0.1:4184/?workspace=20000000-0000-4000-8000-000000000023&view=issues&team=30000000-0000-4000-8000-000000000023&saved=80000000-0000-4000-8000-000000000023&fixture=team-route",
+    "qa_build_view": "http://127.0.0.1:4184/?workspace=20000000-0000-4000-8000-000000000023&view=issues&team=30000000-0000-4000-8000-000000000023&fixture=team-route",
+    "global_views_escape": "http://127.0.0.1:4184/?workspace=20000000-0000-4000-8000-000000000023&view=views&fixture=team-route",
+    "invalid_team_views": "http://127.0.0.1:4184/?workspace=20000000-0000-4000-8000-000000000023&view=views&team=90000000-0000-4000-8000-000000000099&fixture=team-route"
+  },
+  "synthetic_fixture": true,
+  "fixture_process": {
+    "port": 4184,
+    "build": "production",
+    "managed_session": 86882,
+    "initial_sandbox_launch": "failed_listen_eperm",
+    "managed_launch": "passed"
+  },
+  "host_attempts": [
+    {
+      "attempt": 1,
+      "status": "failed_sandbox_network_namespace",
+      "checks_attempted": 4,
+      "connection_failures": 4,
+      "accepted_as_product_evidence": false
+    },
+    {
+      "attempt": 2,
+      "status": "passed_host_network",
+      "checks_attempted": 6,
+      "checks_passed": 6,
+      "observations": {
+        "application_html_status": 200,
+        "session_status": 200,
+        "team_count": 2,
+        "saved_view_count": 2,
+        "qa_issue_count": 2,
+        "engineering_issue_count": 1
+      }
+    }
+  ],
+  "browser_attempted": false,
+  "browser_captures": 0,
+  "rendered_assertions": 0,
+  "policy_reason": "The active security policy denies the approved browser surface. Alternate browser surfaces were not used.",
+  "acceptance_pending": [
+    "desktop tablet and mobile team Views rendering",
+    "Issues Projects Views switcher pointer and keyboard operation",
+    "Back Forward reload and global Views escape",
+    "invalid and removed team cleanup without stale content",
+    "Open and Build view team-scope preservation",
+    "conflicting saved-view team clause replacement",
+    "workspace ownership copy and owner member guest capability presentation",
+    "focus accessibility overflow responsive geometry and console checks"
+  ]
+}

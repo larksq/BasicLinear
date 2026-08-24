@@ -1,0 +1,33 @@
+{
+  "schema_version": "ct44-browser-status-v1",
+  "recorded_at": "2026-08-20T07:55:52Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4180/",
+  "synthetic_fixture": true,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "Access to the local browser surface remains denied by the active security policy. The denied browser outcome was not retried through another surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": [
+    "Virtualized issue list and contextual detail panel",
+    "Virtualized issue list and route detail",
+    "Issue board and route detail",
+    "Related-issue detail chain"
+  ],
+  "required_assertions": [
+    "opening and closing route detail restores the exact virtual-list scroll offset",
+    "opening and closing route detail restores board horizontal scroll and every stable visible column offset",
+    "a changed filter grouping ordering layout saved view workspace or contextual project or milestone resets stale offsets",
+    "selection collapsed groups query ordering and visible properties remain unchanged through detail navigation",
+    "following two related issues and closing detail restores focus to the first initiating row or card",
+    "a direct detail URL never creates a synthetic list focus origin",
+    "browser back and forward preserve URL intent without restoring an origin from an unrelated direct entry",
+    "restored virtual rows or cards are rendered before focus is applied",
+    "list board panel tablet and mobile route layouts retain stable geometry and reachable content",
+    "zero uncontained positive horizontal overflow overlap duplicate IDs hidden focus console warnings and console errors"
+  ]
+}

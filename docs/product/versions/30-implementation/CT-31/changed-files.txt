@@ -1,0 +1,10 @@
+apps/web/src/components.tsx
+apps/web/tests/layout-contract.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-31/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-31/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-31/evidence/browser-matrix.json
+docs/product/versions/v0.1.0/30-implementation/CT-31/evidence/ct31-named-dialog-desktop-1440x900.jpg
+docs/product/versions/v0.1.0/30-implementation/CT-31/evidence/ct31-named-dialog-mobile-390x844.jpg
+docs/product/versions/v0.1.0/30-implementation/CT-31/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-31/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-31/session.md

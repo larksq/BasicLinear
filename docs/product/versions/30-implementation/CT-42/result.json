@@ -1,0 +1,35 @@
+{
+  "schema_version": "ct42-implementation-result-v1",
+  "captured_at": "2026-08-20T07:11:08Z",
+  "verdict": "IMPLEMENTED_AWAITING_BROWSER_VERIFICATION",
+  "issue": {
+    "identifier": "CT-42",
+    "id": "1c62e1a2-93eb-46aa-a8f1-40b52d22cd82",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "checks": {
+    "focused_test_files": 3,
+    "focused_tests_passed": 19,
+    "combined_focused_test_files": 12,
+    "combined_focused_tests_passed": 68,
+    "complete_test_files": 23,
+    "complete_tests_passed": 136,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1923,
+    "css_bytes": 69805,
+    "projects_chunk_bytes": 37301,
+    "index_chunk_bytes": 279244,
+    "issues_chunk_bytes": 493929,
+    "browser_captures": 0,
+    "browser_verification": "deferred_permission_denied"
+  },
+  "source_hashes": {
+    "apps/web/src/milestone-interactions.ts": "cae5e448eeac541d7322195765e915b97177559e09a89369514a4df12cb3717f",
+    "apps/web/src/projects.tsx": "bbe5a69b4e2d7c581b6aca035577e03590ff7d2e94dd4ac40955c14c6b3ee97e",
+    "apps/web/src/styles.css": "1eda49db96c1940e34f98bf957bae1d115bc9f47d511f8514d533af23340b4c1",
+    "apps/web/tests/milestone-interactions.test.ts": "be1849b030f1538e790d1de6e927a1524e93722bd25b97f1eb528d615ed32243"
+  },
+  "outcomes_claimed": []
+}

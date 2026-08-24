@@ -1,0 +1,1254 @@
+{
+  "schema_version": "ct12-current-core-visual-audit-v1",
+  "captured_at": "2026-08-22T15:32:16.282Z",
+  "authority": {
+    "issue": "CT-12",
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "candidate": {
+    "product_revision": "670a9f96e989654d84408e30c527e85b765a9042",
+    "product_tree": "d4c147b50bee345542286386934ac6e50f11aaf7",
+    "evidence_head_before_capture": "6e1aa7992627a0b19747dd32116ed1d2b6d12e24",
+    "url": "http://127.0.0.1:4284/",
+    "browser": "Chrome 151.0.7922.170",
+    "loaded_asset": "assets/index-B3mCRRCV.js",
+    "synthetic_data_only": true,
+    "evidence_revision": "87dda2985c56bfaa80ad17360beb645e6f22f534",
+    "evidence_tree": "743fa031b100489a36c21ea8559fe8af34c1ac17",
+    "evidence_commit_scope": "24_current_core_visual_jpegs_only"
+  },
+  "summary": {
+    "states": 24,
+    "failures": 0,
+    "alerts": 0,
+    "duplicate_ids": 0,
+    "invalid_aria_controls": 0,
+    "invalid_aria_labelledby": 0,
+    "unnamed_controls": 0,
+    "direct_text_contrast_failures": 0,
+    "viewport_overflow_px": 0,
+    "landmark_failures": 0,
+    "topbar_height_failures": 0,
+    "topbar_blur_failures": 0,
+    "current_core_named_captures": 24,
+    "required_named_captures": 60,
+    "remaining_dynamic_captures": 36
+  },
+  "viewport": {
+    "screens": [
+      "projects-list",
+      "my-work",
+      "issues-list",
+      "saved-views-library",
+      "workflow-statuses",
+      "project-overview",
+      "project-milestones",
+      "project-activity",
+      "issues-board",
+      "issue-detail-contextual",
+      "issue-detail-direct-mobile",
+      "issue-detail-direct-mobile-properties-open"
+    ],
+    "appearances": [
+      "light",
+      "dark"
+    ],
+    "desktop": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    },
+    "format": "jpeg",
+    "quality": 85,
+    "settled_after_loading": true
+  },
+  "visual_inspection": {
+    "status": "passed",
+    "inspected": 24,
+    "blank_or_theme_mismatch": 0,
+    "overlap_or_clipping_observed": 0,
+    "explicit_data_region_scroll": [
+      "issues-board"
+    ],
+    "contact_sheets": [
+      ".control-tower/evidence/CT-12/core-visual-670a9f9-light-contact.jpg",
+      ".control-tower/evidence/CT-12/core-visual-670a9f9-dark-contact.jpg"
+    ],
+    "full_size_inspection": [
+      "issues-board",
+      "project-overview",
+      "issue-detail-contextual",
+      "issue-detail-direct-mobile",
+      "issue-detail-direct-mobile-properties-open"
+    ]
+  },
+  "raw_evidence": {
+    "ref": ".control-tower/evidence/CT-12/core-visual-670a9f9-capture-run.json",
+    "sha256": "1c0e0f237a1b5e1f16c35718ba83a69ccd2f43ed260f5bd822cc04873ff26139",
+    "tracked": false,
+    "access": "project_local_private"
+  },
+  "captures": [
+    {
+      "theme": "light",
+      "screen": "projects-list",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/projects-list-1440x900.jpg",
+      "bytes": 42076,
+      "sha256": "b41b1f2d94c498c4728701db6274563e4ee42c38ca4c3f6f71bd825185596540",
+      "url": "http://127.0.0.1:4284/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress",
+      "h1": [
+        "Projects"
+      ]
+    },
+    {
+      "theme": "light",
+      "screen": "my-work",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/my-work-1440x900.jpg",
+      "bytes": 95613,
+      "sha256": "80af0a3603b4fcf8cb02c832fa3eef9d75f0f380003e5afbd3bdcc390bc87fba",
+      "url": "http://127.0.0.1:4284/?view=my-work&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "h1": [
+        "My work"
+      ]
+    },
+    {
+      "theme": "light",
+      "screen": "issues-list",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/issues-list-1440x900.jpg",
+      "bytes": 95998,
+      "sha256": "83204959f4cb5c9bfd16f903f02b28a2c4cb519c5bbdf5db727a6d342477cd4c",
+      "url": "http://127.0.0.1:4284/?view=issues&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "h1": [
+        "Issues"
+      ]
+    },
+    {
+      "theme": "light",
+      "screen": "saved-views-library",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/saved-views-library-1440x900.jpg",
+      "bytes": 33441,
+      "sha256": "521add91305a6500d1f1c0307bb9648d5fbbbaea7fc8517949ed3a2dadd595bd",
+      "url": "http://127.0.0.1:4284/?view=views",
+      "h1": [
+        "Views"
+      ]
+    },
+    {
+      "theme": "light",
+      "screen": "workflow-statuses",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/workflow-statuses-1440x900.jpg",
+      "bytes": 35680,
+      "sha256": "9aac5053da0842dfd75938116da47c4c73a088d564f89cb707d872da6e7927f9",
+      "url": "http://127.0.0.1:4284/?view=workflow",
+      "h1": [
+        "Workflow"
+      ]
+    },
+    {
+      "theme": "light",
+      "screen": "project-overview",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/project-overview-1440x900.jpg",
+      "bytes": 61644,
+      "sha256": "af3c5c0cd09683b7b12dd9beff42ea71f8495929590a6b2d866c606b81cf7b06",
+      "url": "http://127.0.0.1:4284/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress&project=a8eb020b-34f2-42d7-85f0-a84ba4939165&projectTab=overview",
+      "h1": [
+        "OpenLinear v0.1 release"
+      ]
+    },
+    {
+      "theme": "light",
+      "screen": "project-milestones",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/project-milestones-1440x900.jpg",
+      "bytes": 61644,
+      "sha256": "af3c5c0cd09683b7b12dd9beff42ea71f8495929590a6b2d866c606b81cf7b06",
+      "url": "http://127.0.0.1:4284/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress&project=a8eb020b-34f2-42d7-85f0-a84ba4939165&projectTab=overview",
+      "h1": [
+        "OpenLinear v0.1 release"
+      ]
+    },
+    {
+      "theme": "light",
+      "screen": "project-activity",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/project-activity-1440x900.jpg",
+      "bytes": 72675,
+      "sha256": "2396e5b021984d27770202fe435ea6ad64c9bd2e28f642c016ba75d99049f8ea",
+      "url": "http://127.0.0.1:4284/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress&project=a8eb020b-34f2-42d7-85f0-a84ba4939165&projectTab=activity",
+      "h1": [
+        "OpenLinear v0.1 release"
+      ]
+    },
+    {
+      "theme": "light",
+      "screen": "issues-board",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/issues-board-1440x900.jpg",
+      "bytes": 72968,
+      "sha256": "c41c182feac474d622ff568654631998ea7034021b61ea1dc3329f0100abe942",
+      "url": "http://127.0.0.1:4284/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "h1": [
+        "Issues"
+      ]
+    },
+    {
+      "theme": "light",
+      "screen": "issue-detail-contextual",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/issue-detail-contextual-1440x900.jpg",
+      "bytes": 71674,
+      "sha256": "45c8e4d8a2e72dbf66d717339d8cf3db5010a5c4ca96ff6776006be36c56fa28",
+      "url": "http://127.0.0.1:4284/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+      "h1": [
+        "Issues"
+      ]
+    },
+    {
+      "theme": "light",
+      "screen": "issue-detail-direct-mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/issue-detail-direct-mobile-390x844.jpg",
+      "bytes": 24293,
+      "sha256": "ab6202b9331cec34bd82f194010d6caae5f83d69dc647b161fa4ff544e10121e",
+      "url": "http://127.0.0.1:4284/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+      "h1": [
+        "Stop issue board density cards from clipping titles"
+      ]
+    },
+    {
+      "theme": "light",
+      "screen": "issue-detail-direct-mobile-properties-open",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/issue-detail-direct-mobile-properties-open-390x844.jpg",
+      "bytes": 24327,
+      "sha256": "69ede15ac2b844c3791b01e5fa84a78ff58c121c8ecc60bcb570f5a5461874e9",
+      "url": "http://127.0.0.1:4284/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+      "h1": [
+        "Stop issue board density cards from clipping titles"
+      ]
+    },
+    {
+      "theme": "dark",
+      "screen": "projects-list",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/projects-list-1440x900.jpg",
+      "bytes": 42045,
+      "sha256": "c0be9f31f7d16999ae7ecc5530f9c54d8987bef1394a5eab718e38c48d2f30a7",
+      "url": "http://127.0.0.1:4284/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress",
+      "h1": [
+        "Projects"
+      ]
+    },
+    {
+      "theme": "dark",
+      "screen": "my-work",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/my-work-1440x900.jpg",
+      "bytes": 96525,
+      "sha256": "5c71b543e00906b2b5bed43ec6b06b1501c1776f7ed100eda8857ffecd3f6a83",
+      "url": "http://127.0.0.1:4284/?view=my-work&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "h1": [
+        "My work"
+      ]
+    },
+    {
+      "theme": "dark",
+      "screen": "issues-list",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/issues-list-1440x900.jpg",
+      "bytes": 96842,
+      "sha256": "88c92b6f91e0b6f8388e17d4c52ccf94d9c6cd2296e7be25a876e59db1f8a6cf",
+      "url": "http://127.0.0.1:4284/?view=issues&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "h1": [
+        "Issues"
+      ]
+    },
+    {
+      "theme": "dark",
+      "screen": "saved-views-library",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/saved-views-library-1440x900.jpg",
+      "bytes": 33341,
+      "sha256": "114d61f5fef711de175269acd1eb63bb1f3ecb8cf213eceabca92e4343c940c6",
+      "url": "http://127.0.0.1:4284/?view=views",
+      "h1": [
+        "Views"
+      ]
+    },
+    {
+      "theme": "dark",
+      "screen": "workflow-statuses",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/workflow-statuses-1440x900.jpg",
+      "bytes": 35737,
+      "sha256": "909efc7e0ee6a657c05163064b7c163fd1a10f9ec37e290f25c6a7c7906f05c6",
+      "url": "http://127.0.0.1:4284/?view=workflow",
+      "h1": [
+        "Workflow"
+      ]
+    },
+    {
+      "theme": "dark",
+      "screen": "project-overview",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/project-overview-1440x900.jpg",
+      "bytes": 62013,
+      "sha256": "ed4a2441fd77b409c4018fa06adb214aeb1181bb517e4fcc26ca6fdc39138d64",
+      "url": "http://127.0.0.1:4284/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress&project=a8eb020b-34f2-42d7-85f0-a84ba4939165&projectTab=overview",
+      "h1": [
+        "OpenLinear v0.1 release"
+      ]
+    },
+    {
+      "theme": "dark",
+      "screen": "project-milestones",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/project-milestones-1440x900.jpg",
+      "bytes": 62013,
+      "sha256": "ed4a2441fd77b409c4018fa06adb214aeb1181bb517e4fcc26ca6fdc39138d64",
+      "url": "http://127.0.0.1:4284/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress&project=a8eb020b-34f2-42d7-85f0-a84ba4939165&projectTab=overview",
+      "h1": [
+        "OpenLinear v0.1 release"
+      ]
+    },
+    {
+      "theme": "dark",
+      "screen": "project-activity",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/project-activity-1440x900.jpg",
+      "bytes": 73244,
+      "sha256": "bc9795614af38d870c57630b8867d9bf86ed90f2b9eac5f9924a2336f834b904",
+      "url": "http://127.0.0.1:4284/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress&project=a8eb020b-34f2-42d7-85f0-a84ba4939165&projectTab=activity",
+      "h1": [
+        "OpenLinear v0.1 release"
+      ]
+    },
+    {
+      "theme": "dark",
+      "screen": "issues-board",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/issues-board-1440x900.jpg",
+      "bytes": 71590,
+      "sha256": "50dfbff000b43193dcbb011ec6f5afc330158ea9ac5ea7e085ffe64062d4b19b",
+      "url": "http://127.0.0.1:4284/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "h1": [
+        "Issues"
+      ]
+    },
+    {
+      "theme": "dark",
+      "screen": "issue-detail-contextual",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/issue-detail-contextual-1440x900.jpg",
+      "bytes": 69664,
+      "sha256": "b6f6eb8a4ae25060dc6af24aba48c7a0aa1462189287ca60d6247a9271983398",
+      "url": "http://127.0.0.1:4284/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+      "h1": [
+        "Issues"
+      ]
+    },
+    {
+      "theme": "dark",
+      "screen": "issue-detail-direct-mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/issue-detail-direct-mobile-390x844.jpg",
+      "bytes": 24195,
+      "sha256": "4de9cbed1ef7b2bdd6e19bee9fd9f982b25f57a36d516e723f122531ca271834",
+      "url": "http://127.0.0.1:4284/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+      "h1": [
+        "Stop issue board density cards from clipping titles"
+      ]
+    },
+    {
+      "theme": "dark",
+      "screen": "issue-detail-direct-mobile-properties-open",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/issue-detail-direct-mobile-properties-open-390x844.jpg",
+      "bytes": 24489,
+      "sha256": "9353c4346bb529c9439910f0b1bca032e0b457d8a3f19763d4438dff585d1ce9",
+      "url": "http://127.0.0.1:4284/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+      "h1": [
+        "Stop issue board density cards from clipping titles"
+      ]
+    }
+  ],
+  "audits": [
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Projects"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "projects-list",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 27,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "My work"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "my-work",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 52,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Issues"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "issues-list",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 54,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Views"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "saved-views-library",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 16,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Workflow"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "workflow-statuses",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 29,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "OpenLinear v0.1 release"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 2
+      },
+      "overflow": 0,
+      "route": "project-overview",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 32,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "OpenLinear v0.1 release"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 2
+      },
+      "overflow": 0,
+      "route": "project-milestones",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 32,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "OpenLinear v0.1 release"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 2
+      },
+      "overflow": 0,
+      "route": "project-activity",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 14,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Issues"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "issues-board",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 52,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Issues"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "issue-detail-contextual",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 91,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Stop issue board density cards from clipping titles"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "issue-detail-direct-mobile",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "mobile-detail",
+      "visibleControls": 35,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Stop issue board density cards from clipping titles"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "issue-detail-direct-mobile-properties-open",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "mobile-detail",
+      "visibleControls": 42,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Projects"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "projects-list",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 26,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "My work"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "my-work",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 52,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Issues"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "issues-list",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 54,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Views"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "saved-views-library",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 16,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Workflow"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "workflow-statuses",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 29,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "OpenLinear v0.1 release"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 2
+      },
+      "overflow": 0,
+      "route": "project-overview",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 32,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "OpenLinear v0.1 release"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 2
+      },
+      "overflow": 0,
+      "route": "project-milestones",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 32,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "OpenLinear v0.1 release"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 2
+      },
+      "overflow": 0,
+      "route": "project-activity",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 14,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Issues"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "issues-board",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 52,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Issues"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "issue-detail-contextual",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "desktop",
+      "visibleControls": 91,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Stop issue board density cards from clipping titles"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "issue-detail-direct-mobile",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "mobile-detail",
+      "visibleControls": 35,
+      "passed": true
+    },
+    {
+      "alerts": [],
+      "contrast": 0,
+      "details": {
+        "contrast": [],
+        "duplicates": [],
+        "invalidRefs": [],
+        "unnamed": []
+      },
+      "duplicates": 0,
+      "h1": [
+        "Stop issue board density cards from clipping titles"
+      ],
+      "invalidControls": 0,
+      "invalidLabelledby": 0,
+      "landmarks": {
+        "h1": 1,
+        "main": 1,
+        "nav": 1
+      },
+      "overflow": 0,
+      "route": "issue-detail-direct-mobile-properties-open",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "unnamed": 0,
+      "viewport": "mobile-detail",
+      "visibleControls": 42,
+      "passed": true
+    }
+  ],
+  "acceptance_claimed": false,
+  "outcomes_claimed": []
+}

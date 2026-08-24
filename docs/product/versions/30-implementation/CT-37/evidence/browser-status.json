@@ -1,0 +1,25 @@
+{
+  "schema_version": "ct37-browser-status-v1",
+  "recorded_at": "2026-08-20T05:20:14Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4180/",
+  "synthetic_fixture": true,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "Access to the local browser surface remains denied by the active security policy. The denied browser outcome was not retried through another surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": ["Issues", "Search dialog", "Issue creation dialog", "Editable controls"],
+  "required_assertions": [
+    "unmodified C opens exactly one issue dialog outside editable and dialog contexts",
+    "Command or Ctrl plus C does not create an issue and retains browser or editor behavior",
+    "Shift Alt repeat composition default-prevented and unrelated key paths are ignored",
+    "Command or Ctrl plus K toggles exactly one Search dialog",
+    "Command or Ctrl plus K inside a non-Search modal does not stack Search",
+    "Command or Ctrl plus K inside Search closes it and returns focus",
+    "all controls remain reachable with zero uncontained positive horizontal overflow and zero duplicate IDs",
+    "zero console warnings and errors"
+  ]
+}

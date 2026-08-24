@@ -1,0 +1,113 @@
+{
+  "schema_version": "ct26-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "passed",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-26",
+      "stable_id": "e28a18fd-2d95-49be-9d15-51d20520ce4b",
+      "revision": 2,
+      "accepted": true,
+      "blocked": false,
+      "status": "output_done",
+      "requirement_refs": ["R-005", "R-010", "R-011", "R-104", "R-110"],
+      "acceptance_refs": ["R-005", "R-010", "R-011", "R-104", "R-110"],
+      "outcome_refs": ["O-001", "O-002", "O-003"],
+      "allowed_mutation_paths": [
+        "apps/web/src/issue-detail-route.ts",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/styles.css",
+        "apps/web/tests/issue-detail-route.test.ts",
+        "apps/web/tests/layout-contract.test.ts",
+        "docs/product/versions/v0.1.0/30-implementation/CT-26"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT26-IMPL-20260820T021635Z",
+      "actor_id": "codex-issue-route",
+      "issue_id": "CT-26",
+      "mode": "code_mutating",
+      "output_refs": [
+        "apps/web/src/issue-detail-route.ts",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/styles.css",
+        "apps/web/tests/issue-detail-route.test.ts",
+        "apps/web/tests/layout-contract.test.ts"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-26/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-26/evidence.md"
+      ]
+    },
+    {
+      "session_id": "CT26-REVIEW-20260820T023100Z",
+      "actor_id": "codex-issue-route-reviewer",
+      "issue_id": "CT-26",
+      "mode": "review_only",
+      "output_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-26/changed-files.txt",
+        "docs/product/versions/v0.1.0/30-implementation/CT-26/evidence.md",
+        "docs/product/versions/v0.1.0/30-implementation/CT-26/handoff.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-26/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-26/session.md"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-26/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-26/evidence.md"
+      ]
+    }
+  ],
+  "checks": [
+    {"check_id":"CT26-FOCUSED","issue_id":"CT-26","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-26/result.json"},
+    {"check_id":"CT26-BROWSER","issue_id":"CT-26","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-26/evidence.md"},
+    {"check_id":"CT26-REGRESSION","issue_id":"CT-26","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-26/result.json"},
+    {"check_id":"CT26-EVIDENCE","issue_id":"CT-26","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-26/evidence.md"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-26",
+      "status": "passed",
+      "independent": true,
+      "review_actor_id": "codex-issue-route-reviewer",
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-26/evidence.md#verification",
+      "basis": "A separate review-only pass inspected route/history helpers, responsive branching, shared detail rendering, and heading semantics, then repeated direct, contextual, boundary, history, focus, screenshot, geometry, and console checks against the final production bundle."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["R-005", "R-010", "R-011", "R-104", "R-110"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-26/changed-files.txt",
+    "regression_areas": [
+      "direct issue navigation",
+      "contextual issue panels",
+      "browser history",
+      "Escape and trigger focus",
+      "responsive detail presentation",
+      "issue heading hierarchy"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-26/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-26/evidence.md"
+    ],
+    "implementation_actor_ids": ["codex-issue-route", "codex-issue-route-reviewer"],
+    "implementation_session_ids": ["CT26-IMPL-20260820T021635Z", "CT26-REVIEW-20260820T023100Z"]
+  },
+  "outcomes": [
+    {"outcome_id":"O-001","status":"pending"},
+    {"outcome_id":"O-002","status":"pending"},
+    {"outcome_id":"O-003","status":"pending"}
+  ],
+  "blockers": [],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issues": ["CT-12"],
+    "reason": "Attach the direct-route/contextual-panel addendum while retaining the separate CT-21/P-T21 clean-host blocker."
+  }
+}

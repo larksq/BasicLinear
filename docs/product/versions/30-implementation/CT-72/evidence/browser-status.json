@@ -1,0 +1,53 @@
+{
+  "schema_version": "ct72-browser-status-v1",
+  "recorded_at": "2026-08-21T00:29:46Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4198/?workspace=20000000-0000-4000-8000-000000000023&view=issues&fixture=label-inline-edit",
+  "synthetic_fixture": true,
+  "fixture_process": {
+    "port": 4198,
+    "build": "production",
+    "managed_session": 13812,
+    "initial_sandbox_launch": "failed_listen_eperm",
+    "managed_launch": "passed_clean_fixture"
+  },
+  "host_attempts": [
+    {
+      "attempt": 1,
+      "status": "sandbox_bind_and_node_connect_denied",
+      "checks_attempted": 0,
+      "checks_passed": 0,
+      "reason": "The sandbox could not bind the local fixture and the complete Node host harness could not connect; these environment results were rejected as product evidence."
+    },
+    {
+      "attempt": 2,
+      "status": "passed_host_network",
+      "port": 4198,
+      "checks_attempted": 48,
+      "checks_passed": 48,
+      "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-72/evidence/host-matrix.json"
+    }
+  ],
+  "browser_attempted": false,
+  "browser_captures": 0,
+  "rendered_assertions": 0,
+  "policy_reason": "The active security policy denies the approved browser surface. Alternate browser surfaces were not used.",
+  "required_viewports": [
+    { "width": 1440, "height": 900 },
+    { "width": 1024, "height": 768 },
+    { "width": 390, "height": 844 }
+  ],
+  "required_assertions": [
+    "owner member and guest label controls match their authoritative capabilities",
+    "active labels edit inline while archived labels require restore",
+    "opening drafts do not silently rebase after background query changes",
+    "name color archive and restore values converge after authoritative readback",
+    "stale validation remote-archive and unavailable-readback failures retain the draft",
+    "retry and server-value recovery use the confirmed revision without automatic replay",
+    "create edit archive and restore controls serialize",
+    "pending error and confirmed feedback remain stable and accurately announced",
+    "success cancellation rejection and recovery restore focus to the initiating control",
+    "keyboard and focus order remain complete at every viewport",
+    "long names remain contained with zero overlap clipped focus page-level positive overflow duplicate IDs console warnings and console errors"
+  ]
+}

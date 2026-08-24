@@ -1,0 +1,39 @@
+{
+  "schema_version": "ct54-implementation-result-v1",
+  "captured_at": "2026-08-20T13:51:05Z",
+  "verdict": "IMPLEMENTED_AND_DATABASE_VERIFIED_AWAITING_BROWSER_ACCEPTANCE",
+  "issue": {
+    "identifier": "CT-54",
+    "id": "12ceee9a-dbb1-4c30-b819-f89e8041a448",
+    "implementation_revision": 1,
+    "expected_completion_revision": 2
+  },
+  "checks": {
+    "focused_test_files": 2,
+    "focused_tests_passed": 4,
+    "complete_test_files": 35,
+    "complete_tests_passed": 213,
+    "complete_tests_failed": 0,
+    "integration_test_files": 7,
+    "integration_tests_passed": 17,
+    "integration_tests_failed": 0,
+    "database_verification": "passed_postgresql_16_10_migrations_001_through_010",
+    "workspaces_typechecked": 8,
+    "vite_modules": 1930,
+    "final_vite_chunk_warning": false,
+    "fixture_host_checks": 6,
+    "fixture_host_checks_passed": 6,
+    "browser_captures": 0,
+    "browser_assertions_claimed": 0,
+    "browser_verification": "deferred_permission_denied"
+  },
+  "source_hashes": {
+    "package-lock.json": "0f14fe60034468b86872ef2902667d29539c7578e79f42ab0ea0d7928c5648e7",
+    "apps/api/package.json": "f391e5d262bef1eeffd0eec1c6d6ac5013a5694ecdcac8ca2d65cb74b6bdc206",
+    "apps/api/src/app.ts": "c4d47e4f2adf8766cfe344224634ba39f9e04ae30af834895b23559936f223aa",
+    "apps/api/tests/projects.integration.test.ts": "1e3c01c1533d09d227fa3c6c285338d03182de4f55711f389157efa932a458cc",
+    "apps/api/tests/validation.test.ts": "57023570109c1a5d77b649ad14605c7d27704878e8cdac48ad41a122f4d7fe07",
+    "packages/db/tests/transfer.integration.test.ts": "897b4cb11d592b751647fc108466a7f3236e39498b7231b2ad2012be956b91b5"
+  },
+  "outcomes_claimed": []
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "ct36-implementation-result-v1",
+  "captured_at": "2026-08-20T05:09:30Z",
+  "verdict": "IMPLEMENTED_AWAITING_BROWSER_VERIFICATION",
+  "issue": {
+    "identifier": "CT-36",
+    "id": "fa21d313-bddc-4c33-baf5-c783c85a643d",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "checks": {
+    "focused_test_files": 1,
+    "focused_tests_passed": 5,
+    "combined_focused_test_files": 5,
+    "combined_focused_tests_passed": 21,
+    "initial_stale_assertions_failed": 1,
+    "complete_test_files": 17,
+    "complete_tests_passed": 94,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1918,
+    "css_bytes": 63366,
+    "projects_chunk_bytes": 28758,
+    "index_chunk_bytes": 277599,
+    "issues_chunk_bytes": 492204,
+    "browser_captures": 0,
+    "browser_verification": "deferred_permission_denied"
+  },
+  "source_hashes": {
+    "apps/web/src/issues.tsx": "50bcc8d5aa12794591a77bd70b5e0ea5025f33d0b794bc62fb618ab5ca5911ce",
+    "apps/web/src/issue-roving-focus.ts": "d0b6f87c10ca827db6c1fd7930ec72b83954b83c8eafe934a786a1fb38ffba30",
+    "apps/web/tests/issue-roving-focus.test.ts": "4913e3194532c8816844c78f57360cb80c8622cf2cc60251e818dba095c2f851",
+    "apps/web/tests/board-accessibility.test.ts": "c3ad602c3ea18c727f4a47ccbb4f95838f8aaff254a2d62004492f9de3d92e4c"
+  },
+  "outcomes_claimed": []
+}

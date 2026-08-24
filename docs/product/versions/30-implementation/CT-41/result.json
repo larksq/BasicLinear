@@ -1,0 +1,38 @@
+{
+  "schema_version": "ct41-implementation-result-v1",
+  "captured_at": "2026-08-20T06:42:55Z",
+  "verdict": "IMPLEMENTED_AWAITING_BROWSER_VERIFICATION",
+  "issue": {
+    "identifier": "CT-41",
+    "id": "a3e6e21a-a4cf-447c-8d46-bde3e808087b",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "checks": {
+    "focused_test_files": 4,
+    "focused_tests_passed": 23,
+    "combined_focused_test_files": 11,
+    "combined_focused_tests_passed": 60,
+    "complete_test_files": 22,
+    "complete_tests_passed": 128,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1922,
+    "css_bytes": 68414,
+    "projects_chunk_bytes": 33884,
+    "index_chunk_bytes": 279244,
+    "issues_chunk_bytes": 493929,
+    "browser_captures": 0,
+    "browser_verification": "deferred_permission_denied"
+  },
+  "source_hashes": {
+    "apps/web/src/local-keyboard-actions.ts": "989b303224ed59ebb737b55f4c008f5cc9c85027e55a01427255d5c83b525965",
+    "apps/web/src/project-roving-focus.ts": "77ebf45ddaafadb7aa664af0cb3fe97077109c486bc5d82cc12c2147a4a63960",
+    "apps/web/src/projects.tsx": "aaf9c24ac7ca3245c5d8451e6c29e480c17998963d93c54f1df75e7861dfa2a1",
+    "apps/web/src/styles.css": "0c8951b190ace64c4b414e2a05545385edf10a8feda9590ffb3a6dd1d1d518fa",
+    "apps/web/tests/local-keyboard-actions.test.ts": "756da2ee5bd0288ba9d7c1de16c58316af0639d588f39267fd65b449a98a7d59",
+    "apps/web/tests/project-row-interactions.test.ts": "4e6feba294aeca343a130962225b5746580495872f44222c847b94a81cc484b5",
+    "apps/web/tests/table-semantics.test.ts": "2b318a19fcdee6a67f40eed598e3cad8fa9f8e5490c2aa581524122ac1465d6a"
+  },
+  "outcomes_claimed": []
+}

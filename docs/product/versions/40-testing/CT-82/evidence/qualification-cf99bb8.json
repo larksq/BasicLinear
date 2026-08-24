@@ -1,0 +1,127 @@
+{
+  "schema_version": "ct88-clean-runtime-qualification-v1",
+  "issue": "CT-88",
+  "acceptance_issue": "CT-82",
+  "captured_at": "2026-08-22T10:00:42.725Z",
+  "actor": "codex-independent-testing-ct82",
+  "session": "CT82-INDEPENDENT-20260822T095807Z",
+  "independent": true,
+  "environment": {
+    "os": "darwin 25.5.0 arm64",
+    "host_fingerprint": "5e793f830cea3896",
+    "node": "v24.18.0",
+    "npm": "11.16.0",
+    "source_revision": "cf99bb834f544633ad820328817dcc2320d09744",
+    "source_clean": true,
+    "source_status_entries": 0,
+    "source_set_sha256": "933a89469ee5bf29d61cfa4be661f1fc2ce2a4f6ef107192425be6b0973b5ad7",
+    "source_files": 942,
+    "docker": false,
+    "postgresql": false,
+    "external_identity": false
+  },
+  "artifact": {
+    "sha256": "4380a34d46c60b8abce09ad2c2684e47498bcb635fe6809eb9c346f16c2a4a69",
+    "files": 111,
+    "bytes": 2049476
+  },
+  "verdict": "PASSED_INDEPENDENT_RUNTIME_GATE",
+  "acceptance": {
+    "p_t21": "passed",
+    "ct82": "eligible_for_readback",
+    "self_acceptance": false,
+    "source_revision_bound": true
+  },
+  "checks": {
+    "built_spa_and_single_process": "passed",
+    "fresh_owner_scope_status_bootstrap": "passed",
+    "project_milestone_issue_private_view_search": "passed",
+    "derived_progress": "passed",
+    "host_origin_csrf_multiple_tabs": "passed",
+    "outbound_network_and_subprocess_denial": "passed",
+    "restart_session_rotation_stable_ids": "passed",
+    "interruption_matrix": [
+      "SIGKILL",
+      "SIGTERM",
+      "SIGINT"
+    ],
+    "sidecar_cleanup": "passed",
+    "canonical_export_import_digest": "0c815b9fe1969eacb5b3c7f6c0e92c540dab6f9dd4edff2437cf7cef54638101",
+    "online_backup_sha256": "4fecc6fde6122ea0ebeeac70fa5bfb52af6520e6abba2fda25b5d816454a382a",
+    "backup_integrity": "ok",
+    "restore_canonical_digest": "0c815b9fe1969eacb5b3c7f6c0e92c540dab6f9dd4edff2437cf7cef54638101",
+    "corrupt_restore_last_known_good": "passed",
+    "accepted_upgrade": {
+      "from": 1,
+      "to": 2,
+      "canonicalDigest": "0c815b9fe1969eacb5b3c7f6c0e92c540dab6f9dd4edff2437cf7cef54638101"
+    },
+    "future_upgrade_rejected_unchanged": "passed",
+    "malformed_upgrade_rolled_back": "passed",
+    "pre_upgrade_backup_sha256": "2e93e2c3ff1e23019d9b107536e6108bf367e4fbf72ced5928b6aedba79c56b6",
+    "accepted_scale": {
+      "projects": 1001,
+      "milestones": 2001,
+      "issues": 10001,
+      "activityEntries": 50006,
+      "durationMs": 170.87
+    },
+    "permissions": {
+      "database": "passed",
+      "backup": "passed",
+      "export": "passed"
+    },
+    "legacy_transfer": {
+      "canonicalSha256": "000473521838884d216ef7ad87185a94b8400fcf488add218722d0a88d120772",
+      "sourceSha256": "e32368e2d70ac6476428a874b42767d8d54da80d6889ce5298d3ab6e63e38eed",
+      "fixtureFileSha256": "3bbd2aeebf83148d48bf6eba986fdbc1cd4203829e6aea0311d72752f8d3222c",
+      "selectedWorkspaceDigest": "5f35bf5f1b8cb00c808d043d1ef31fd03e0a6b022ca43095be1f1b700683f128",
+      "ambiguousTargetCreated": false,
+      "sourceUnchanged": true
+    }
+  },
+  "network_audits": [
+    {
+      "phase": "first_crash",
+      "records": 1,
+      "attempts": 0,
+      "summaryPresent": false,
+      "termination": {
+        "code": null,
+        "signal": "SIGKILL"
+      }
+    },
+    {
+      "phase": "restart",
+      "records": 2,
+      "attempts": 0,
+      "summaryPresent": true
+    },
+    {
+      "phase": "accepted_upgrade",
+      "records": 2,
+      "attempts": 0,
+      "summaryPresent": true
+    },
+    {
+      "phase": "future_schema_rejected",
+      "records": 2,
+      "attempts": 0,
+      "summaryPresent": true
+    },
+    {
+      "phase": "migration_rollback",
+      "records": 2,
+      "attempts": 0,
+      "summaryPresent": true
+    },
+    {
+      "phase": "accepted_scale",
+      "records": 2,
+      "attempts": 0,
+      "summaryPresent": true
+    }
+  ],
+  "work_directory": null,
+  "outcomes_claimed": []
+}

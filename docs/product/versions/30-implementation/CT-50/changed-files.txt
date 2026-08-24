@@ -1,0 +1,15 @@
+apps/web/src/issues.tsx
+apps/web/src/issue-row-actions.ts
+apps/web/src/styles.css
+apps/web/tests/issue-row-actions.test.ts
+apps/web/tests/local-keyboard-actions.test.ts
+apps/web/tests/table-semantics.test.ts
+apps/web/tests/board-accessibility.test.ts
+apps/web/tests/issue-loading-geometry.test.ts
+apps/web/tests/layout-contract.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-50/session.md
+docs/product/versions/v0.1.0/30-implementation/CT-50/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-50/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-50/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-50/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-50/evidence/browser-status.json

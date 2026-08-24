@@ -1,0 +1,32 @@
+{
+  "schema_version": "ct96-verification-summary-v1",
+  "captured_at": "2026-08-21T12:55:58Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING",
+  "checks": {
+    "focused_test_files": 6,
+    "focused_tests_passed": 32,
+    "complete_test_files": 63,
+    "complete_tests_passed": 428,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1948,
+    "dist_files": 109,
+    "dist_bytes": 1902251,
+    "build_warnings": 0,
+    "release_audit_tests_passed": 6,
+    "release_audit_tests_failed": 0,
+    "loopback_readiness": "ready",
+    "served_javascript": "index-GpJbqAul.js",
+    "served_css": "index-vO8y3zKJ.css",
+    "active_purge_http_status": 400,
+    "confirmed_purge_detached_issue_count": 1,
+    "confirmed_issue_project_preserved": true,
+    "confirmed_issue_milestone_cleared": true,
+    "confirmed_project_activity_retained": true,
+    "chrome_connection_attempts_cumulative": 8,
+    "rendered_browser_captures": 0
+  },
+  "browser_acceptance_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

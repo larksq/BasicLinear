@@ -1,0 +1,44 @@
+{
+  "schema_version": "ct52-implementation-result-v1",
+  "captured_at": "2026-08-20T12:34:34Z",
+  "verdict": "IMPLEMENTED_AWAITING_BROWSER_VERIFICATION",
+  "issue": {
+    "identifier": "CT-52",
+    "id": "74a18886-a598-4a84-b8a9-f5aa0b29d595",
+    "implementation_revision": 1,
+    "expected_completion_revision": 2
+  },
+  "checks": {
+    "focused_test_files": 1,
+    "focused_tests_passed": 8,
+    "complete_test_files": 33,
+    "complete_tests_passed": 207,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "integration_test_files_skipped": 7,
+    "integration_tests_skipped": 17,
+    "database_verification": "not_run_missing_test_credentials",
+    "vite_modules": 1929,
+    "css_bytes": 79167,
+    "saved_views_chunk_bytes": 9955,
+    "projects_chunk_bytes": 37258,
+    "issues_chunk_bytes": 117525,
+    "index_chunk_bytes": 278893,
+    "editor_chunk_bytes": 402713,
+    "runtime_chunk_bytes": 589,
+    "html_bytes": 663,
+    "final_vite_chunk_warning": false,
+    "fixture_host_checks": 4,
+    "fixture_host_checks_passed": 4,
+    "browser_captures": 0,
+    "browser_assertions_claimed": 0,
+    "browser_verification": "deferred_permission_denied"
+  },
+  "source_hashes": {
+    "apps/web/src/App.tsx": "132d31efc4a479d63b46d09bbed0bede9eed5b0fa8c3c8bc1b2fdba9bc04db8c",
+    "apps/web/src/command-palette.ts": "e9208ec58fd3357fe033799bbe58c87d19cf3002edfe1b19add9967ed652c9d7",
+    "apps/web/src/styles.css": "7e3cf4c1e9ee5ea546b6c347a299b39450d8c340d5911ab0d7781d0f42538eda",
+    "apps/web/tests/command-palette.test.ts": "cf99190e4f8feda8397287b94dbdf8758c77af2683e7bc360225bd949ff45023"
+  },
+  "outcomes_claimed": []
+}

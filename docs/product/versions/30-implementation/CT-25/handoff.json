@@ -1,0 +1,117 @@
+{
+  "schema_version": "ct25-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "passed",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-25",
+      "stable_id": "576f5ed3-ce2c-4be0-8341-f6265751e9ab",
+      "revision": 2,
+      "accepted": true,
+      "blocked": false,
+      "status": "output_done",
+      "requirement_refs": ["R-008", "R-009", "R-011", "R-110"],
+      "acceptance_refs": ["R-008", "R-009", "R-011", "R-110"],
+      "outcome_refs": ["O-001", "O-002", "O-003"],
+      "allowed_mutation_paths": [
+        "apps/web/package.json",
+        "apps/web/src/issue-url-state.ts",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/styles.css",
+        "apps/web/tests/issue-url-state.test.ts",
+        "apps/web/tests/layout-contract.test.ts",
+        "package-lock.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-25"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT25-IMPL-20260820T014536Z",
+      "actor_id": "codex-filter-restoration",
+      "issue_id": "CT-25",
+      "mode": "code_mutating",
+      "output_refs": [
+        "apps/web/package.json",
+        "apps/web/src/issue-url-state.ts",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/styles.css",
+        "apps/web/tests/issue-url-state.test.ts",
+        "apps/web/tests/layout-contract.test.ts",
+        "package-lock.json"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-25/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-25/evidence.md"
+      ]
+    },
+    {
+      "session_id": "CT25-REVIEW-20260820T015701Z",
+      "actor_id": "codex-filter-restoration-reviewer",
+      "issue_id": "CT-25",
+      "mode": "review_only",
+      "output_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-25/changed-files.txt",
+        "docs/product/versions/v0.1.0/30-implementation/CT-25/evidence.md",
+        "docs/product/versions/v0.1.0/30-implementation/CT-25/handoff.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-25/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-25/session.md"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-25/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-25/evidence.md"
+      ]
+    }
+  ],
+  "checks": [
+    {"check_id":"CT25-FOCUSED","issue_id":"CT-25","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-25/result.json"},
+    {"check_id":"CT25-BROWSER","issue_id":"CT-25","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-25/evidence.md"},
+    {"check_id":"CT25-REGRESSION","issue_id":"CT-25","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-25/result.json"},
+    {"check_id":"CT25-EVIDENCE","issue_id":"CT-25","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-25/evidence.md"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-25",
+      "status": "passed",
+      "independent": true,
+      "review_actor_id": "codex-filter-restoration-reviewer",
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-25/evidence.md#verification",
+      "basis": "A separate review-only pass inspected the parser, query gate, URL effects, recovery controls, and responsive styling, then repeated direct-load, network, clear, replace, history, screenshot, and console checks against the rebuilt production bundle."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["R-008", "R-009", "R-011", "R-110"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-25/changed-files.txt",
+    "regression_areas": [
+      "issue URL state restoration",
+      "issue query gating",
+      "saved-view creation",
+      "filter dialog recovery",
+      "browser history",
+      "desktop and mobile issue layouts"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-25/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-25/evidence.md"
+    ],
+    "implementation_actor_ids": ["codex-filter-restoration", "codex-filter-restoration-reviewer"],
+    "implementation_session_ids": ["CT25-IMPL-20260820T014536Z", "CT25-REVIEW-20260820T015701Z"]
+  },
+  "outcomes": [
+    {"outcome_id":"O-001","status":"pending"},
+    {"outcome_id":"O-002","status":"pending"},
+    {"outcome_id":"O-003","status":"pending"}
+  ],
+  "blockers": [],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issues": ["CT-12"],
+    "reason": "Attach the invalid-filter fail-closed addendum while retaining the separate CT-21/P-T21 clean-host blocker."
+  }
+}

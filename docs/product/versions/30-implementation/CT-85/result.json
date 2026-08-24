@@ -1,0 +1,57 @@
+{
+  "schema_version": "ct85-implementation-result-v1",
+  "captured_at": "2026-08-21T08:14:00Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_TESTING_PENDING",
+  "issue": {
+    "identifier": "CT-85",
+    "id": "46b9e2bf-1caa-40ce-9953-113fc6c41370",
+    "starting_revision": 1,
+    "expected_completion_revision": 2,
+    "completion_revision": 2,
+    "status": "Done"
+  },
+  "resolution": {
+    "preflight_before_filesystem_creation": true,
+    "deterministic_legacy_fixture": true,
+    "live_postgresql_required": false,
+    "multi_scope_rejected_without_output": true,
+    "explicit_scope_digest_parity": true,
+    "source_immutable": true,
+    "legacy_credentials_imported": false
+  },
+  "checks": {
+    "focused_test_files": 2,
+    "focused_tests_passed": 15,
+    "complete_test_files": 56,
+    "complete_tests_passed": 387,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1946,
+    "dist_bytes": 1027388,
+    "release_audit_tests_passed": 2,
+    "built_operator_rehearsal": "passed"
+  },
+  "control_tower_readback": {
+    "authority": "local",
+    "store": "tasks-v0.8.sqlite3",
+    "health": "ready",
+    "CT-85": "Done@2",
+    "CT-82": "Todo@3",
+    "CT-12": "In Progress@61",
+    "counts": {
+      "active": 6,
+      "completed": 79,
+      "trash": 0
+    },
+    "implementation_milestone": {
+      "issue_count": 70,
+      "completed_count": 65,
+      "progress": 0.9285714285714286
+    },
+    "completion_backup_sha256": "0133f45d530cc84ee53f7e50f25ac28c0184eaa13327c46ede6298aad84d101d",
+    "ct82_reconciliation_backup_sha256": "f03abbfdfea6260957c63414822fc5fb9e39bd1e808abc77e15333e915baa1ea",
+    "ct12_reconciliation_backup_sha256": "c3728e05dadedc904e8c6bb03da7297187f630c0f18ef5324a02a8a3f5defbf9",
+    "provider_projection": "disabled_not_synced"
+  },
+  "outcomes_claimed": []
+}

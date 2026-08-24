@@ -1,0 +1,6 @@
+docs/product/versions/v0.1.0/30-implementation/CT-83/session.md
+docs/product/versions/v0.1.0/30-implementation/CT-83/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-83/evidence/reconciliation.json
+docs/product/versions/v0.1.0/30-implementation/CT-83/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-83/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-83/changed-files.txt

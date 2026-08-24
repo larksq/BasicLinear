@@ -1,0 +1,44 @@
+{
+  "schema_version": "ct30-implementation-result-v1",
+  "captured_at": "2026-08-20T04:06:57Z",
+  "verdict": "OUTPUT_DONE_FOR_CT12",
+  "issue": {
+    "identifier": "CT-30",
+    "id": "b035a8dc-ca3a-4dcc-941f-158a4a4996f4",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "checks": {
+    "focused_test_files": 2,
+    "focused_tests_passed": 16,
+    "complete_test_files": 12,
+    "complete_tests_passed": 73,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1916,
+    "css_bytes": 63366,
+    "projects_chunk_bytes": 28638,
+    "index_chunk_bytes": 276240,
+    "issues_chunk_bytes": 490793,
+    "fixture_syntax_passed": true,
+    "browser_captures": 2,
+    "context_cases_passed": 4,
+    "accepted_fixture_submissions": 1,
+    "positive_horizontal_overflow_px": 0,
+    "duplicate_ids": 0,
+    "console_warnings": 0,
+    "console_errors": 0
+  },
+  "source_hashes": {
+    "apps/web/src/issue-scope.ts": "34f95e4ed036572dc522d36ab5ad267f1ed24cd514cd8da1d76178ca0ac7f392",
+    "apps/web/src/issues.tsx": "7e80cb017dfd86acbfb3380b5a42d433f19a7e75c4ff6b8f7af905f046172d75",
+    "apps/web/tests/issue-scope.test.ts": "bb3237e542d158d8192ab1bd533cb7192c8a9fe21ba2697f25066d2d585926d4",
+    "apps/web/tests/layout-contract.test.ts": "a5ec7f62a3264f1772ec63f3e23ca825771467e90a4771daf1e332f7dc77b6e8",
+    "scripts/serve-visual-fixture.mjs": "7fe9fdce1e06fb4ba52bbbd93f5e3b8ae892b78027d28abb37fb64ebf48ad20d"
+  },
+  "screenshot_hashes": {
+    "ct30-milestone-create-desktop-1440x900.jpg": "0cd827e3b688936c1af2b3cb00ebe914d6c416809f382b58ff1b602717960da0",
+    "ct30-milestone-create-mobile-390x844.jpg": "d2a6240e6787fd43c8e62a0de0b057509104fd6c3ae98a780208ac249a447cf9"
+  },
+  "outcomes_claimed": []
+}

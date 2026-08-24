@@ -1,0 +1,33 @@
+{
+  "schema_version": "ct42-browser-status-v1",
+  "recorded_at": "2026-08-20T07:11:08Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4180/",
+  "synthetic_fixture": true,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "Access to the local browser surface remains denied by the active security policy. The denied browser outcome was not retried through another surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": [
+    "Project overview",
+    "Milestone inline editor",
+    "Milestone ordered rows",
+    "Milestone archive view"
+  ],
+  "required_assertions": [
+    "Add milestone opens one inline editor on the existing milestone tracks and focuses the Name field",
+    "Enter submits one synthetic milestone while Escape and Cancel close without a mutation and restore focus to Add milestone",
+    "only persisted milestone records participate in ordered-list position semantics",
+    "move up and move down announce the committed one-based position among active milestones",
+    "reorder focus returns to the invoked move control or the moved row when that control becomes disabled at a boundary",
+    "a create error retains entered form state and a reorder error retains the previous committed order",
+    "the Archived control cannot replace the inline editor while a new milestone is being entered",
+    "the editor and loaded rows retain the established six-track desktop geometry and compact mobile two-row geometry",
+    "archived milestone controls remain reachable and active milestone progress date issue count edit and reorder controls remain intact",
+    "zero uncontained positive horizontal overflow overlap duplicate IDs hidden focus console warnings and console errors"
+  ]
+}

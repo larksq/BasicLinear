@@ -1,0 +1,83 @@
+{
+  "schema_version": "ct13-accountable-review-handoff-v2",
+  "stage": "outcome-review.release-readiness",
+  "status": "accountable_review_required",
+  "operating_profile": "project-local-v0.8",
+  "review": {
+    "actor": "codex-release-review-contract",
+    "session": "CT13-REVIEW-CONTRACT-20260822T055325Z",
+    "approval_recorded": false
+  },
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issue": {
+    "identifier": "CT-13",
+    "stable_id": "7ac28514-97fb-43e3-aabc-7c12c01129f7",
+    "revision_ref": ".control-tower/tasks-v0.8.sqlite3",
+    "status": "Todo",
+    "milestone": "S5 - Outcome Review"
+  },
+  "supported_surface": {
+    "owner_count": 1,
+    "implicit_workspace_team": true,
+    "runtime": "single_node_loopback_sqlite",
+    "remote_access": false,
+    "collaboration_administration": false
+  },
+  "inputs": {
+    "discovery_decision": "docs/product/versions/v0.1.0/10-discovery/CT-3/result.json",
+    "testing_result": "docs/product/versions/v0.1.0/40-testing/CT-12/result.json",
+    "audit_policy": "ops/release/audit-policy.json",
+    "asset_provenance": "ops/release/asset-provenance.json",
+    "copy_provenance": "ops/release/copy-provenance.json",
+    "third_party_notices": "ops/release/third-party-notices.json"
+  },
+  "outputs": {
+    "procedure": "docs/product/versions/v0.1.0/50-outcome-review/CT-13/review-guide.md",
+    "request": "ops/release/review-request.json",
+    "acceptance": "ops/release/review-acceptance.json",
+    "audit": "docs/product/versions/v0.1.0/50-outcome-review/CT-13/result.json",
+    "session": "docs/product/versions/v0.1.0/50-outcome-review/CT-13/session.md"
+  },
+  "expected_audit": {
+    "test": "P-T22",
+    "verdict": "NOT_READY",
+    "source_identity_ref": "docs/product/versions/v0.1.0/50-outcome-review/CT-13/result.json",
+    "pass": 8,
+    "fail": 0,
+    "blocked": 6,
+    "asset_records": 260,
+    "public_copy_records": 50,
+    "dependency_records": 252
+  },
+  "current_candidate": {
+    "product_revision": "5a33d28be383b7651a4b0d6156534aa12cc423fa",
+    "product_tree": "d106d3bb40a84184e7ee26c919134b01e4748679",
+    "p_t21": "passed_independent_exact_revision_5a33d28",
+    "audit_identity": "result.json",
+    "acceptance_created": false
+  },
+  "review_bindings": {
+    "qualified_identity_request": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-request.json",
+    "release_review_request": "ops/release/review-request.json",
+    "audit_result": "docs/product/versions/v0.1.0/50-outcome-review/CT-13/result.json"
+  },
+  "outcomes": {
+    "O-005": "pending",
+    "evaluated": false
+  },
+  "protected_gates": [
+    "CT-3 qualified identity, license, and clean-room disposition",
+    "Accountable third-party-notice review",
+    "Accountable asset-provenance review",
+    "Accountable public-copy review",
+    "Accountable CT-13 acceptance of the exact current review request"
+  ],
+  "next": {
+    "owner": "accountable release reviewer",
+    "action": "Resolve CT-3 and the remaining provenance/acceptance gates; follow review-guide.md, record real decisions in local Control Tower, and rerun P-T22 without self-approving or publishing."
+  }
+}

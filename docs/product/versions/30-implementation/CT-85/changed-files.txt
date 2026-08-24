@@ -1,0 +1,11 @@
+packages/db/src/sqlite/transfer.ts
+packages/db/tests/legacy-transfer-fixture.ts
+packages/db/tests/sqlite.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-85/session.md
+docs/product/versions/v0.1.0/30-implementation/CT-85/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-85/evidence/transfer-rehearsal.json
+docs/product/versions/v0.1.0/30-implementation/CT-85/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-85/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-85/changed-files.txt
+docs/product/versions/v0.1.0/40-testing/CT-82/rehearsal.md
+docs/product/versions/v0.1.0/40-testing/CT-82/evidence/rehearsal-20260821.json

@@ -1,0 +1,9 @@
+apps/web/src/App.tsx
+apps/web/src/global-shortcuts.ts
+apps/web/tests/global-shortcuts.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-37/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-37/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-37/evidence/browser-status.json
+docs/product/versions/v0.1.0/30-implementation/CT-37/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-37/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-37/session.md

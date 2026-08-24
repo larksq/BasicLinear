@@ -1,0 +1,18 @@
+{
+  "schema_version": "ct78-browser-status-v1",
+  "captured_at": "2026-08-21T04:58:42Z",
+  "status": "blocked_permission_denied",
+  "attempts_this_session": 0,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "The established security policy denies the approved browser surface; no alternate browser was used.",
+  "pending": [
+    "desktop tablet and mobile owner navigation geometry",
+    "absence of workspace team member role account and sharing controls in the rendered DOM and accessibility tree",
+    "owner-context loading and migration-error containment",
+    "issue and project creation without team or assignee presentation",
+    "saved-view table responsive columns with Actions reachable",
+    "legacy URL canonicalization history and focus behavior",
+    "console network overflow duplicate-ID and accessibility diagnostics"
+  ]
+}

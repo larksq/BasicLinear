@@ -1,0 +1,10 @@
+apps/web/src/App.tsx
+apps/web/src/issues.tsx
+apps/web/src/projects.tsx
+apps/web/tests/table-semantics.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-33/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-33/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-33/evidence/browser-status.json
+docs/product/versions/v0.1.0/30-implementation/CT-33/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-33/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-33/session.md

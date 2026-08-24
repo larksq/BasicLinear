@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "issue": {
+    "identifier": "CT-21",
+    "id": "6654426c-c327-4310-885d-6d74061d9e8c"
+  },
+  "status": "approval_required",
+  "completed": false,
+  "target": "210CPU",
+  "target_environment": {
+    "os": "Ubuntu 20.04.6 LTS",
+    "kernel": "5.4.0-182-generic",
+    "architecture": "x86_64",
+    "virtualization": "docker container under Kubernetes",
+    "cgroups": "v1_read_only",
+    "cap_sys_admin": false,
+    "docker_socket_present": false,
+    "container_runtime_present": false,
+    "unprivileged_user_namespaces": true,
+    "dev_fuse": true,
+    "docker_io_candidate": "26.1.3-0ubuntu1~20.04.1"
+  },
+  "assessment": {
+    "standard_docker_in_docker": "not_viable",
+    "rootless_docker": "plausible_unproven",
+    "clean_vm": "preferred_fallback"
+  },
+  "approval_scope": "Install rootless-Docker prerequisites and create a dedicated test account on 210CPU.",
+  "remote_mutations_performed": false,
+  "local_healthy_stack_modified": false,
+  "next_check": "Run the bounded rootless daemon and Compose probe after sponsor approval."
+}

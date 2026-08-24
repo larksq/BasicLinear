@@ -1,0 +1,34 @@
+{
+  "schema_version": "ct43-browser-status-v1",
+  "recorded_at": "2026-08-20T07:33:31Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4180/",
+  "synthetic_fixture": true,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "Access to the local browser surface remains denied by the active security policy. The denied browser outcome was not retried through another surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": [
+    "Contextual issue detail panel",
+    "Direct issue detail route",
+    "Issue edit conflict alert",
+    "Reapplied issue draft state"
+  ],
+  "required_assertions": [
+    "a stale issue update performs one authorized confirmed readback and renders one atomic conflict alert",
+    "confirmed server title description status priority assignee due date project milestone and labels replace rejected values",
+    "the alert announces the latest confirmed revision and retains the complete attempted draft",
+    "Reapply draft performs no network mutation and restores every retained field for review",
+    "a second explicit Save uses the rebased revision and can commit normally",
+    "Discard draft and Use server values restore confirmed fields and return focus to the title editor",
+    "a concurrent archive keeps Reapply disabled and returns recovery focus to the Restore action",
+    "an authorized event refetch advances conflict-phase confirmed state without rewriting an explicitly reapplied draft",
+    "non-conflict validation and service errors retain their existing visible behavior",
+    "panel route tablet and mobile layouts retain bounded copy reachable actions and stable geometry",
+    "zero uncontained positive horizontal overflow overlap duplicate IDs hidden focus console warnings and console errors"
+  ]
+}

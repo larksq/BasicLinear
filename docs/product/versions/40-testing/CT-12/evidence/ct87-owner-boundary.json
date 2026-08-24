@@ -1,0 +1,31 @@
+{
+  "schema_version": "ct12-ct87-owner-boundary-addendum-v1",
+  "captured_at": "2026-08-21T08:46:35Z",
+  "implementation_issue": "CT-87",
+  "implementation_status": "complete_pending_control_tower_readback",
+  "requirements": ["R-002", "R-005", "R-008", "R-010", "R-110"],
+  "planned_tests": ["P-T08", "P-T09", "P-T10", "P-T11", "P-T18", "P-T19"],
+  "automated_evidence": {
+    "focused_test_files": 3,
+    "focused_tests_passed": 20,
+    "complete_test_files": 56,
+    "complete_tests_passed": 389,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1946,
+    "dist_bytes": 1028892,
+    "post_build_readiness": "ready"
+  },
+  "covered": [
+    "owner identity is fixed in issue detail and quick edit",
+    "quick-edit and bulk requests cannot mutate assignee in owner mode",
+    "assignee grouping is absent and legacy URL or saved-view state is canonicalized",
+    "stale assignee-board callbacks return before request construction",
+    "historical assignee metadata and canonical transfer compatibility remain intact"
+  ],
+  "rendered_acceptance": {
+    "status": "blocked",
+    "captures": 0,
+    "reason": "Chrome control reports the browser unavailable because the required extension is not enabled in the selected Chrome profile."
+  },
+  "acceptance_boundary": "Automated implementation evidence does not pass the desktop, tablet, mobile, keyboard, focus, accessibility-tree, geometry, or visual-fidelity matrix owned by CT-12."
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": "ct85-transfer-rehearsal-v1",
+  "captured_at": "2026-08-21T08:14:00Z",
+  "issue": {
+    "identifier": "CT-85",
+    "stable_id": "46b9e2bf-1caa-40ce-9953-113fc6c41370",
+    "starting_revision": 1,
+    "expected_completion_revision": 2
+  },
+  "environment": {
+    "os": "macOS 26.5.2 build 25F84",
+    "node": "v24.18.0",
+    "npm": "11.16.0",
+    "source_revision": "unavailable_unborn_repository",
+    "docker": false,
+    "postgresql_server": false,
+    "external_identity": false
+  },
+  "fixture": {
+    "format": "openlinear.database-backup",
+    "version": 1,
+    "workspaces": 2,
+    "teams_per_workspace": 1,
+    "selected_records": 19,
+    "canonical_sha256": "000473521838884d216ef7ad87185a94b8400fcf488add218722d0a88d120772",
+    "file_bytes": 19321,
+    "file_sha256": "3bbd2aeebf83148d48bf6eba986fdbc1cd4203829e6aea0311d72752f8d3222c"
+  },
+  "ambiguous_import": {
+    "exit_code": 1,
+    "error_code": "AMBIGUOUS_SCOPE",
+    "target_directory_created": false,
+    "target_database_created": false,
+    "source_file_unchanged": true
+  },
+  "selected_import": {
+    "workspace_id": "00000020-0001-4000-8000-000000000001",
+    "team_id": "00000030-0001-4000-8000-000000000001",
+    "owner_user_id": "00000010-0001-4000-8000-000000000001",
+    "canonical_digest": "5f35bf5f1b8cb00c808d043d1ef31fd03e0a6b022ca43095be1f1b700683f128",
+    "export_digest_equal": true,
+    "database_schema": 2,
+    "database_integrity": "ok",
+    "foreign_key_violations": 0,
+    "database_mode": "0600",
+    "journal_mode": "delete",
+    "synchronous": "full",
+    "database_bytes": 225280,
+    "database_sha256": "3eacc0b54a088f3a7aeece7ff578ae404fe87af96182560f5bc9e11da7bc2955",
+    "export_bytes": 9086,
+    "export_sha256": "3ba4957472e1bf1e655a7a9e493e7d464c92a3fd630c8f0bf3f8fcdb0e8c7198",
+    "credential_recovery_required": 0,
+    "legacy_password_payload_present": false,
+    "legacy_oidc_payload_present": false,
+    "source_file_unchanged": true
+  },
+  "checks": {
+    "focused_test_files": 2,
+    "focused_tests_passed": 15,
+    "complete_test_files": 56,
+    "complete_tests_passed": 387,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1946,
+    "dist_bytes": 1027388,
+    "release_audit_tests_passed": 2,
+    "diff_check": "clean"
+  },
+  "control_tower_readback": {
+    "CT-85": "Done@2",
+    "CT-82": "Todo@3",
+    "CT-12": "In Progress@61",
+    "active": 6,
+    "completed": 79,
+    "trash": 0,
+    "provider_projection": "disabled_not_synced"
+  },
+  "independent_acceptance": false,
+  "outcomes_claimed": []
+}

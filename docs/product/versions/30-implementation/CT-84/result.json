@@ -1,0 +1,56 @@
+{
+  "schema_version": "ct84-implementation-result-v1",
+  "captured_at": "2026-08-21T07:51:13Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_TESTING_PENDING",
+  "issue": {
+    "identifier": "CT-84",
+    "id": "1eefa911-b84a-487a-bcfc-cb76308feecf",
+    "starting_revision": 1,
+    "expected_completion_revision": 2,
+    "completion_revision": 2,
+    "status": "Done"
+  },
+  "resolution": {
+    "root_start": "node apps/api/dist/index.js",
+    "journal_mode": "delete",
+    "synchronous": "full",
+    "persistent_sidecars_idle": 0,
+    "persistent_sidecars_after_interrupt": 0,
+    "manual_sidecar_deletion": false
+  },
+  "checks": {
+    "focused_test_files": 4,
+    "focused_tests_passed": 21,
+    "complete_test_files": 56,
+    "complete_tests_passed": 386,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1946,
+    "dist_bytes": 1027388,
+    "release_audit_tests_passed": 2,
+    "final_built_smoke": "passed",
+    "canonical_digest_preserved": true,
+    "backup_verified": true
+  },
+  "control_tower_readback": {
+    "authority": "local",
+    "store": "tasks-v0.8.sqlite3",
+    "health": "ready",
+    "CT-84": "Done@2",
+    "CT-82": "Todo@2",
+    "CT-12": "In Progress@60",
+    "counts": {
+      "active": 6,
+      "completed": 78,
+      "trash": 0
+    },
+    "implementation_milestone": {
+      "issue_count": 69,
+      "completed_count": 64,
+      "progress": 0.927536231884058
+    },
+    "completion_backup_sha256": "23c365675ff331140c6066306413147b635aff5223461706d03fddd63e76d16d",
+    "provider_projection": "disabled_not_synced"
+  },
+  "outcomes_claimed": []
+}

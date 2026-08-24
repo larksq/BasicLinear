@@ -1,0 +1,37 @@
+{
+  "schema_version": "ct89-audit-summary-v1",
+  "captured_at": "2026-08-21T09:51:37Z",
+  "verdict": "NOT_READY",
+  "summary": {
+    "pass": 6,
+    "fail": 0,
+    "blocked": 8
+  },
+  "checks": {
+    "source_revision": "BLOCKED",
+    "public_identity_decision": "BLOCKED",
+    "working_codename_removal": "BLOCKED",
+    "project_license": "PASS",
+    "dependency_metadata_inventory": "PASS",
+    "third_party_notices": "BLOCKED",
+    "private_path_controls": "PASS",
+    "private_artifact_scan": "PASS",
+    "asset_provenance": "BLOCKED",
+    "copy_provenance": "BLOCKED",
+    "contribution_and_security_policy": "PASS",
+    "reproducible_build_inputs": "PASS",
+    "clean_host_network_denied_runtime": "BLOCKED",
+    "accountable_release_review": "BLOCKED"
+  },
+  "provenance": {
+    "third_party_records": 252,
+    "unclassified_records": 0,
+    "missing_declared_licenses": 0,
+    "assets_technically_complete": 82,
+    "assets_pending_review": 82,
+    "copy_files_technically_complete": 43,
+    "copy_files_pending_review": 43
+  },
+  "expected_process_exit": 1,
+  "release_claimed": false
+}

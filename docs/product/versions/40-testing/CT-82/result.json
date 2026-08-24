@@ -1,0 +1,89 @@
+{
+  "schema_version": "ct82-test-result-v1",
+  "captured_at": "2026-08-22T19:21:06.014Z",
+  "verdict": "PASSED",
+  "issue": {
+    "identifier": "CT-82",
+    "id": "0103a501-2a94-41d2-8db6-751827501b27",
+    "revision": 17,
+    "status": "Done"
+  },
+  "planned_tests": {
+    "P-T03": "passed_by_strict_runtime_qualification",
+    "P-T14": "passed_by_backup_restore_and_integrity_matrix",
+    "P-T15": "passed_by_upgrade_rejection_and_rollback_matrix",
+    "P-T16": "passed_by_host_origin_csrf_network_and_permission_matrix",
+    "P-T18": "passed_for_local_runtime_workflow_surface_only",
+    "P-T21": "passed_independent_ct82_f7c3625"
+  },
+  "independent_acceptance": {
+    "actor": "codex-independent-testing-ct82-f7c3625",
+    "session": "CT82-INDEPENDENT-20260822T191944Z",
+    "independent": true,
+    "self_acceptance": false
+  },
+  "source": {
+    "revision": "f7c362562fdf0657114a862331b893e470b824c0",
+    "tree": "7b5f5af4d6f0b5ead0f403f69d4695b82779194c",
+    "clean": true,
+    "status_entries": 0,
+    "files": 1197,
+    "sha256": "6b765bace3480b63a79fe01b5ac8a2158bff34248c917c82044f9aa4bd0b27fd"
+  },
+  "artifact": {
+    "files": 111,
+    "bytes": 2052706,
+    "sha256": "c5d496806136aaf904d480e85c23c38974374a5f79ad0b651b898cc0f1cd3822"
+  },
+  "checks": {
+    "structured_checks_passed": 21,
+    "structured_checks_failed": 0,
+    "guarded_phases": 6,
+    "network_audit_records": 11,
+    "outbound_or_subprocess_attempts": 0,
+    "interruption_signals": [
+      "SIGKILL",
+      "SIGTERM",
+      "SIGINT"
+    ],
+    "canonical_digest": "abbf5e28a7c5a52f374cd39435fa744f2cb7e70e6a128893415164737726d5ec",
+    "accepted_scale": {
+      "projects": 1001,
+      "milestones": 2001,
+      "issues": 10001,
+      "activity_entries": 50006,
+      "duration_ms": 151.05
+    },
+    "permissions": "passed",
+    "cleanup": "passed",
+    "legacy_transfer": "passed",
+    "runner_contract_tests": {
+      "passed": 4,
+      "failed": 0
+    }
+  },
+  "raw_evidence": {
+    "tracked_ref": "docs/product/versions/v0.1.0/40-testing/CT-82/evidence/qualification-f7c3625.json",
+    "tracked_sha256": "82851883f97cfadf1057d59e489ca6951ba9ec9c71aea794636a930a156d4c9a",
+    "private_ref": ".control-tower/evidence/CT-82/qualification-f7c3625.json",
+    "private_sha256": "ffc378a4337c24466d04a589a5c811367660e269f1dd9546d2e554b1cebe3734",
+    "private_bytes": 3923,
+    "private_mode": "0600"
+  },
+  "task_readback": {
+    "authority": "local",
+    "store": ".control-tower/tasks-v0.8.sqlite3",
+    "health": "ready",
+    "expected_revision": 16,
+    "readback_revision": 17,
+    "readback_status": "Done",
+    "provider_projection": "disabled",
+    "projection_state": "not_synced"
+  },
+  "residual_limits": [
+    "Chrome P-T18, P-T19, and P-T20 remain in progress and incomplete.",
+    "Cross-platform runtime behavior is not accepted by this macOS-only run.",
+    "Identity, legal, accountable release, publication, and outcomes remain separate gates."
+  ],
+  "outcomes_claimed": []
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "ct11-testing-handoff-v1",
+  "stage": "testing",
+  "status": "passed",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "inputs": {
+    "issue": "CT-11",
+    "issue_id": "e041caff-6446-4324-8d43-06fe99421058",
+    "issue_revision": 5,
+    "implementation_handoffs": "docs/product/versions/v0.1.0/40-testing/CT-11/implementation-inputs.json"
+  },
+  "outputs": {
+    "evidence_map": "docs/product/versions/v0.1.0/40-testing/CT-11/evidence-map.json",
+    "evidence": "docs/product/versions/v0.1.0/40-testing/CT-11/evidence.md",
+    "decision": "docs/product/versions/v0.1.0/40-testing/CT-11/decision.md",
+    "result": "docs/product/versions/v0.1.0/40-testing/CT-11/result.json",
+    "runtime_url": "http://localhost:4175"
+  },
+  "validation": {
+    "tests": ["P-T16", "P-T17"],
+    "requirements": ["R-001", "R-002", "R-005", "R-008", "R-009", "R-101", "R-102", "R-106"],
+    "required_surfaces": ["automated", "manual", "uat", "regression"],
+    "result": "pass"
+  },
+  "bug_loops": ["CT-16@3", "CT-17@3", "CT-18@3"],
+  "outcomes": {
+    "evaluated": false,
+    "O-001": "pending",
+    "O-004": "pending"
+  },
+  "blockers": [],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issues": ["CT-12"],
+    "reason": "CT-11 is independently accepted and CT-12's complete dependency set is closed."
+  }
+}

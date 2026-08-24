@@ -1,0 +1,10 @@
+apps/web/src/milestone-interactions.ts
+apps/web/src/projects.tsx
+apps/web/src/styles.css
+apps/web/tests/milestone-interactions.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-42/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-42/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-42/evidence/browser-status.json
+docs/product/versions/v0.1.0/30-implementation/CT-42/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-42/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-42/session.md

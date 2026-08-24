@@ -1,0 +1,9 @@
+apps/web/src/App.tsx
+apps/web/tests/mobile-navigation-escape.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-106/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-106/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-106/evidence/mobile-drawer-open-light-390x844.jpg
+docs/product/versions/v0.1.0/30-implementation/CT-106/evidence/verification-summary.json
+docs/product/versions/v0.1.0/30-implementation/CT-106/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-106/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-106/session.md

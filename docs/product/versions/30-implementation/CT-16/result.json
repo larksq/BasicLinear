@@ -1,0 +1,38 @@
+{
+  "schema_version": "ct16-implementation-result-v1",
+  "captured_at": "2026-08-19T22:24:32Z",
+  "verdict": "OUTPUT_DONE_FOR_CT11",
+  "issue": {
+    "identifier": "CT-16",
+    "id": "5d7dcd43-6a0a-4c89-a3aa-effe18c41e7e",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "planning_package_sha256": "d161247c9c523e004a14d6e31ebcf9d12aab9764015b312383e13a0bb851f834",
+  "checks": {
+    "event_protocol_unit_tests": 2,
+    "ct11_focused_tests": 8,
+    "typecheck_workspaces": 8,
+    "unit_test_files": 5,
+    "unit_tests_passed": 20,
+    "integration_test_files": 6,
+    "integration_tests_passed": 16,
+    "live_readiness_status": 200,
+    "live_sse_refresh": "pass",
+    "browser_error_or_warning_entries": 0
+  },
+  "immutable_image": {
+    "name": "openlinear-test:ct11-final-r2",
+    "id": "b073182b066e765bdda111ffa6f32a0befba85039e6cccd2794b781913cc325d",
+    "size_bytes": 442958382
+  },
+  "source_hashes": {
+    "apps/api/src/app.ts": "472fa7a8ddaedb2ac5f2520a8f2f5eece0928c3620d231b58044d666c5dd98e4",
+    "apps/api/src/events.ts": "793475495abc5fd80e8acc7963349a8d8cd5e4c50387c903ff88d5c63a47fa1c",
+    "apps/api/tests/events.test.ts": "e6b12a2f967651956e25fdd7cf2102b1eb4317f221bf9e9522a1ff3eddd19129",
+    "apps/web/src/App.tsx": "14e4953b890e47991be84d70a5e6acbeca11e0431614d3cd27df6bc5b8fc3aa9",
+    "ops/compose/nginx.conf": "503798d9ed3f5734890cdcb552693183151570359b3cadbcc7d45af1ee309aee",
+    "packages/db/src/event-repository.ts": "90d309c53d137d70cf3d2430d2a913a37924ea655a5a41d8450cd1fd220ffd74"
+  },
+  "outcomes_claimed": []
+}

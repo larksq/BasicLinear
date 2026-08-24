@@ -1,0 +1,13 @@
+apps/web/src/local-keyboard-actions.ts
+apps/web/src/project-roving-focus.ts
+apps/web/src/projects.tsx
+apps/web/src/styles.css
+apps/web/tests/local-keyboard-actions.test.ts
+apps/web/tests/project-row-interactions.test.ts
+apps/web/tests/table-semantics.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-41/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-41/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-41/evidence/browser-status.json
+docs/product/versions/v0.1.0/30-implementation/CT-41/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-41/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-41/session.md

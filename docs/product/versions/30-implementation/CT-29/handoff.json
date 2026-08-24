@@ -1,0 +1,124 @@
+{
+  "schema_version": "ct29-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "passed",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-29",
+      "stable_id": "d40b4fc5-45b8-4aad-8563-7de227c50120",
+      "revision": 2,
+      "accepted": true,
+      "blocked": false,
+      "status": "output_done",
+      "requirement_refs": ["R-103", "R-104", "R-105", "R-110"],
+      "acceptance_refs": ["R-103", "R-104", "R-105", "R-110"],
+      "outcome_refs": ["O-001", "O-002", "O-003", "O-004"],
+      "allowed_mutation_paths": [
+        "apps/web/src/App.tsx",
+        "apps/web/src/components.tsx",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/projects.tsx",
+        "apps/web/src/styles.css",
+        "apps/web/tests/layout-contract.test.ts",
+        "apps/web/tests/loading-skeleton.test.ts",
+        "scripts/serve-visual-fixture.mjs",
+        "docs/product/versions/v0.1.0/30-implementation/CT-29"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT29-IMPL-20260820T031712Z",
+      "actor_id": "codex-loading-completion",
+      "issue_id": "CT-29",
+      "mode": "code_mutating",
+      "output_refs": [
+        "apps/web/src/App.tsx",
+        "apps/web/src/components.tsx",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/projects.tsx",
+        "apps/web/src/styles.css",
+        "apps/web/tests/layout-contract.test.ts",
+        "apps/web/tests/loading-skeleton.test.ts",
+        "scripts/serve-visual-fixture.mjs"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-29/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence.md"
+      ]
+    },
+    {
+      "session_id": "CT29-REVIEW-20260820T034030Z",
+      "actor_id": "codex-loading-completion-reviewer",
+      "issue_id": "CT-29",
+      "mode": "review_only",
+      "output_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-29/changed-files.txt",
+        "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence.md",
+        "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/browser-matrix.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-29/handoff.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-29/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-29/session.md"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-29/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/browser-matrix.json"
+      ]
+    }
+  ],
+  "checks": [
+    {"check_id":"CT29-SKELETON-SEMANTICS","issue_id":"CT-29","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-29/result.json"},
+    {"check_id":"CT29-REGRESSION","issue_id":"CT-29","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-29/result.json"},
+    {"check_id":"CT29-TYPECHECK","issue_id":"CT-29","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-29/result.json"},
+    {"check_id":"CT29-BUILD","issue_id":"CT-29","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-29/result.json"},
+    {"check_id":"CT29-BROWSER-MATRIX","issue_id":"CT-29","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/browser-matrix.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-29",
+      "status": "passed",
+      "independent": true,
+      "review_actor_id": "codex-loading-completion-reviewer",
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence.md#final-bundle-browser-matrix",
+      "basis": "A separately identified review-only pass checked source and test bindings, full regression and build output, ten synthetic final-bundle captures, accessible busy-state semantics, loading-time counts, responsive geometry, focusability, overflow, duplicate IDs, visual overlap, and fresh-tab console diagnostics."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["R-103", "R-104", "R-105", "R-110"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-29/changed-files.txt",
+    "regression_areas": [
+      "workspace metrics and loading-time counts",
+      "team and member table geometry",
+      "workflow group geometry",
+      "full project detail and nested milestones",
+      "project and issue activity timelines",
+      "issue relations and comments",
+      "responsive accessibility"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-29/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/browser-matrix.json"
+    ],
+    "implementation_actor_ids": ["codex-loading-completion", "codex-loading-completion-reviewer"],
+    "implementation_session_ids": ["CT29-IMPL-20260820T031712Z", "CT29-REVIEW-20260820T034030Z"]
+  },
+  "outcomes": [
+    {"outcome_id":"O-001","status":"pending"},
+    {"outcome_id":"O-002","status":"pending"},
+    {"outcome_id":"O-003","status":"pending"},
+    {"outcome_id":"O-004","status":"pending"}
+  ],
+  "blockers": [],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issues": ["CT-12"],
+    "reason": "Integrate the CT-29 loading-surface addendum while preserving CT-12's separate CT-21/P-T21 clean-host gate."
+  }
+}

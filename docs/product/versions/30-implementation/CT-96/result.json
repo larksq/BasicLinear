@@ -1,0 +1,50 @@
+{
+  "schema_version": "ct96-implementation-result-v1",
+  "captured_at": "2026-08-21T12:55:58Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING",
+  "issue": {
+    "identifier": "CT-96",
+    "id": "64b51645-3eb0-49e9-a81e-ad6fa9a8d8bf",
+    "created_revision": 1,
+    "implementation_scope_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "resolution": {
+    "owner_only_capability": true,
+    "archived_milestone_required": true,
+    "expected_revision_required": true,
+    "exact_name_confirmation_required": true,
+    "active_and_archived_issues_preserved": true,
+    "project_references_preserved": true,
+    "milestone_references_cleared": true,
+    "issue_revisions_and_activity_recorded": true,
+    "project_activity_retained_after_milestone_delete": true,
+    "milestone_idempotency_tombstones_removed": true,
+    "timestamped_counted_receipt": true,
+    "archived_only_ui_reachability": true,
+    "invalid_milestone_url_context_cleared": true,
+    "completion_focus_and_status": true,
+    "schema_or_transfer_changed": false
+  },
+  "checks": {
+    "focused_test_files": 6,
+    "focused_tests_passed": 32,
+    "complete_test_files": 63,
+    "complete_tests_passed": 428,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1948,
+    "dist_files": 109,
+    "dist_bytes": 1902251,
+    "build_warnings": 0,
+    "release_audit_tests_passed": 6,
+    "release_audit_tests_failed": 0,
+    "loopback_readiness": "ready",
+    "live_route_workflow": "passed",
+    "served_candidate_current": true,
+    "rendered_browser_captures": 0
+  },
+  "browser_acceptance_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

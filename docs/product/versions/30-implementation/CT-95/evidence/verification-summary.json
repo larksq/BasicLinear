@@ -1,0 +1,27 @@
+{
+  "schema_version": "ct95-verification-summary-v1",
+  "captured_at": "2026-08-21T12:23:14Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING",
+  "checks": {
+    "focused_test_files": 6,
+    "focused_tests_passed": 31,
+    "complete_test_files": 62,
+    "complete_tests_passed": 422,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1948,
+    "dist_files": 109,
+    "dist_bytes": 1890839,
+    "build_warnings": 0,
+    "release_audit_tests_passed": 6,
+    "release_audit_tests_failed": 0,
+    "loopback_readiness": "ready",
+    "served_javascript": "index-D8DnNmXI.js",
+    "served_css": "index-_71zhCk-.css",
+    "chrome_connection_attempts_cumulative": 8,
+    "rendered_browser_captures": 0
+  },
+  "browser_acceptance_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

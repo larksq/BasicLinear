@@ -1,0 +1,72 @@
+{
+  "schema_version": "ct83-reconciliation-v1",
+  "captured_at": "2026-08-21T07:22:46Z",
+  "authority": "project-local-v0.8",
+  "scope": {
+    "first_issue": "CT-32",
+    "last_issue": "CT-74",
+    "issues_audited": 43,
+    "result_files_present": 43,
+    "evidence_files_present": 43
+  },
+  "done": [
+    "CT-32", "CT-33", "CT-34", "CT-35", "CT-36", "CT-37", "CT-38", "CT-39",
+    "CT-40", "CT-41", "CT-42", "CT-43", "CT-44", "CT-45", "CT-46", "CT-47",
+    "CT-50", "CT-51", "CT-52", "CT-53", "CT-54", "CT-55", "CT-56",
+    "CT-60", "CT-61", "CT-62", "CT-63", "CT-64", "CT-65", "CT-66", "CT-67",
+    "CT-68", "CT-69", "CT-70", "CT-71", "CT-72", "CT-73", "CT-74"
+  ],
+  "canceled": {
+    "CT-48": "OIDC and external identity are excluded from the supported local runtime.",
+    "CT-49": "Generalized member and guest capability roles are historical under the sole-owner boundary.",
+    "CT-57": "Multi-workspace selection is unreachable under one implicit workspace.",
+    "CT-58": "Team workspaces are unreachable under one implicit team.",
+    "CT-59": "Team-shared views are replaced by the private owner library covered by CT-51."
+  },
+  "mutation_readback": {
+    "succeeded": 43,
+    "conflicts": 0,
+    "done_count": 38,
+    "canceled_count": 5,
+    "stable_ids_preserved": 43,
+    "milestones_preserved": 43,
+    "projection_state": "disabled_not_synced",
+    "readback_sha256": "57d2e8840791dcf0d4ee0e99611f293259408c2a24633f060fceae4974db443f",
+    "backup_manifest_sha256": "ce9d86f02f3df7fd4e5ac76564832a861a64064bc8735b5615e4209d8c4aa475"
+  },
+  "store_readback": {
+    "health": "ready",
+    "active_before_ct83_completion": 7,
+    "completed_or_canceled_before_ct83_completion": 76,
+    "trash": 0,
+    "active_identifiers": ["CT-3", "CT-12", "CT-13", "CT-14", "CT-15", "CT-82", "CT-83"]
+  },
+  "completion_readback": {
+    "CT-83": "Done@2",
+    "stable_id": "bdf4102e-3599-47dd-9409-70ce3b95a8ca",
+    "backup_sha256": "377c5bf13a8da9669b7e8387a15646389366392d6c3a307d41fd162347a0df57",
+    "authority": "local",
+    "health": "ready",
+    "active": 6,
+    "completed_or_canceled": 77,
+    "trash": 0,
+    "active_identifiers": ["CT-3", "CT-12", "CT-13", "CT-14", "CT-15", "CT-82"],
+    "implementation_milestone": {
+      "issue_count": 68,
+      "completed_count": 63,
+      "progress": 0.9264705882352942,
+      "active_issues": 0
+    }
+  },
+  "umbrella_readback": {
+    "CT-12": "In Progress@59",
+    "CT-13": "Todo@60"
+  },
+  "acceptance": {
+    "rendered_claimed": false,
+    "independent_claimed": false,
+    "outcome_claimed": false,
+    "release_claimed": false,
+    "owners": ["CT-12", "CT-82", "CT-3", "CT-13"]
+  }
+}

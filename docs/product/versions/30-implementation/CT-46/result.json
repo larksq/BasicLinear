@@ -1,0 +1,52 @@
+{
+  "schema_version": "ct46-implementation-result-v1",
+  "captured_at": "2026-08-20T09:04:43Z",
+  "verdict": "IMPLEMENTED_AWAITING_DATABASE_AND_BROWSER_VERIFICATION",
+  "issue": {
+    "identifier": "CT-46",
+    "id": "6b7ae26d-563d-4b3a-9d3c-c576abdf1c12",
+    "implementation_revision": 3,
+    "expected_completion_revision": 4
+  },
+  "checks": {
+    "focused_test_files": 2,
+    "focused_tests_passed": 10,
+    "complete_test_files": 27,
+    "complete_tests_passed": 172,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "integration_test_files_skipped": 6,
+    "integration_tests_skipped": 16,
+    "database_verification": "not_run_missing_test_credentials",
+    "vite_modules": 1926,
+    "css_bytes": 71615,
+    "projects_chunk_bytes": 37200,
+    "index_chunk_bytes": 267483,
+    "issues_chunk_bytes": 112005,
+    "editor_chunk_bytes": 402713,
+    "initial_issues_chunk_kb": 503.68,
+    "initial_vite_chunk_warning": true,
+    "final_vite_chunk_warning": false,
+    "browser_captures": 0,
+    "browser_verification": "deferred_permission_denied"
+  },
+  "source_hashes": {
+    "packages/contracts/src/index.ts": "fb94ab842200a1f4e2087224c9d06442d0df07a6e5484b3ec5f1a83ecb1f5b50",
+    "packages/contracts/src/transfer.ts": "39bbdccb1ee358d59f35274af097779e5a6535663df5dfae75a88a478478733e",
+    "packages/db/migrations/007_issue_resources.sql": "f1c06ef6cba00cadfbb19081c4fdfd82c3db6aa331141e9eeccd5716509a3ffe",
+    "packages/db/src/types.ts": "7142a5ee59e5ada555efb4d9765d58c0391dcb3baa1f18da878d664e65ec18c4",
+    "packages/db/src/issue-repository.ts": "5e63f76c46a3f8ba2b970c8f9b33ed8d2b41076dedc97bbf91a91d687935dc8b",
+    "packages/db/src/canonical.ts": "72426be7a58355b6b1003ab7874ea16273f6f9df045cbb9e9a0fcb18e7c45ca6",
+    "packages/db/src/transfer.ts": "71ec545d48f7cc305235354b7049cf1c0900f762fb9316c90b8b1634661ba4f4",
+    "packages/db/tests/canonical.test.ts": "f3d5104a32c6ae182045a3980a4dc0a145d02ebaa0b13295bd524a03aca83a87",
+    "packages/db/tests/transfer.integration.test.ts": "cd16b350a9ef840a7150525905b3b02323036489092e8c777b12b38d543afe8f",
+    "apps/api/tests/issues.integration.test.ts": "c5e08529766b518836001646882eac958be1dcc17ade05aaa20fe74b726ba5e2",
+    "apps/api/tests/ct11-security.integration.test.ts": "019d44c72ac97a3cac0f70b1ee31898f97282e19f9cdfee8ea0db482f389bbca",
+    "apps/web/src/issues.tsx": "839e6506973d87cf0b9061fb48cd9151b5e5d976360058666e2025f40f4a3ba4",
+    "apps/web/src/styles.css": "52b39acc6ccae554da0622d2f884ebff94d31e54ec611666f6aa309c30bd1964",
+    "apps/web/vite.config.ts": "d4a0b23b7bb9df1c52fbf73168665bd002d634c9205dcfe05cda7b04ef2577cd",
+    "apps/web/tests/issue-resources.test.ts": "24e12db85f2d44f21358e7a11030e21ae6143e914363498fdfd6896a97282bd6",
+    "scripts/serve-visual-fixture.mjs": "2feb14f69f8c846b62115a150f2a276cd38ba12ddd1b26de318adec2357d0fba"
+  },
+  "outcomes_claimed": []
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": "ct12-integrated-current-v1",
+  "captured_at": "2026-08-22T23:03:30Z",
+  "test_id": "P-T18",
+  "status": "passed_composite_exact_candidate",
+  "candidate": {
+    "product_revision": "d524c5c7eff38664bad7b8fb612283f2e2092563",
+    "product_tree": "4c5e21bbf45386f11face5c034dd433b663d14e0",
+    "loaded_asset": "assets/index-DtJuzGa7.js"
+  },
+  "authority": {
+    "issue": "CT-12",
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false,
+    "self_acceptance": false
+  },
+  "execution": {
+    "browser": "user Chrome persistent session",
+    "viewport": "1440x900@1x",
+    "disposable_local_fixture": true,
+    "steps_passed": 21,
+    "steps_failed": 0,
+    "critical_errors": 0,
+    "facilitator_interventions": 0,
+    "unsupported_controls_observed": 0,
+    "lost_committed_state": 0
+  },
+  "connected_workflow": {
+    "project": "CT12 integrated workflow d524c5c verified",
+    "milestones": [
+      "P18 planning milestone verified",
+      "P18 execution milestone"
+    ],
+    "issues": [
+      "OL-11 P18 global keyboard issue",
+      "OL-12 P18 contextual milestone issue"
+    ],
+    "saved_view": "P18 workflow view verified",
+    "final_project_progress": "1 of 2 complete",
+    "final_project_progress_percent": 50,
+    "relations": [
+      "parent/sub-issue",
+      "related",
+      "blocks",
+      "duplicate"
+    ],
+    "comment_revision": 2
+  },
+  "passed_steps": [
+    "owner-bootstrap",
+    "unsupported-surface-absence",
+    "project-create",
+    "project-edit",
+    "milestone-plan",
+    "issue-create-global",
+    "issue-create-contextual",
+    "issue-relations-comments",
+    "issue-list-configuration",
+    "issue-board-move",
+    "saved-view",
+    "search-command",
+    "query-error-recovery",
+    "local-service-reconnect",
+    "detail-context",
+    "issue-draft-navigation",
+    "activity-progress",
+    "archive-restore",
+    "milestone-purge-boundary",
+    "project-purge-boundary",
+    "refresh-restart-readback"
+  ],
+  "composite_bindings": [
+    "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/ct87-owner-boundary.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-91/evidence/verification-summary.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-92/evidence/verification-summary.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-93/evidence/verification-summary.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-94/evidence/verification-summary.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-95/evidence/verification-summary.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-96/evidence/verification-summary.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-97/evidence/verification-summary.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-113/evidence/verification-summary.json",
+    "docs/product/versions/v0.1.0/40-testing/CT-116/result.json",
+    "docs/product/versions/v0.1.0/30-implementation/CT-117/evidence/verification-summary.json"
+  ],
+  "raw_receipt": {
+    "path": ".control-tower/evidence/CT-12/integrated-uat-d524c5c.json",
+    "sha256": "f4e588d6d52092dd8363c05caa90a0aa9839d9d1fc14c9c2a57227eb75972d16",
+    "mode": "0600",
+    "bytes": 14746
+  },
+  "observation": "Transient collapsed-group state reset before Update saved view because it was uncommitted. After the enabled update command committed the change, refresh restored the collapsed group and the command was disabled. No committed state was lost.",
+  "findings": [],
+  "limitations": [
+    "This result passes P-T18 only.",
+    "P-T19, live two-direction System response, CT-117 distinct review, and exact-current P-T21 remain open.",
+    "No release, publication, identity, legal, cross-platform, comparative, or outcome claim is made."
+  ]
+}

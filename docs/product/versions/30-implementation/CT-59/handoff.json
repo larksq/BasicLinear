@@ -1,0 +1,118 @@
+{
+  "schema_version": "ct59-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-59",
+      "stable_id": "63f97904-db28-4267-9255-4cd573e5036c",
+      "starting_revision": 2,
+      "expected_checkpoint_revision": 3,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_browser_verification",
+      "requirement_refs": ["R-002", "R-008", "R-010", "R-011", "R-104", "R-110"],
+      "acceptance_refs": ["P-T10", "P-T11", "P-T13", "P-T18", "P-T19"],
+      "outcome_refs": ["O-001", "O-002", "O-003"],
+      "allowed_mutation_paths": [
+        "apps/web/src/App.tsx",
+        "apps/web/src/workspace-navigation.ts",
+        "apps/web/src/saved-views.tsx",
+        "apps/web/src/styles.css",
+        "apps/web/tests/workspace-navigation.test.ts",
+        "apps/web/tests/team-scope.test.ts",
+        "apps/web/tests/layout-contract.test.ts",
+        "apps/web/tests/table-semantics.test.ts",
+        "scripts/serve-visual-fixture.mjs",
+        "docs/product/versions/v0.1.0/30-implementation/CT-59",
+        "docs/product/versions/v0.1.0/40-testing/CT-12",
+        "docs/product/versions/v0.1.0/50-outcome-review/CT-13",
+        "ops/release current-candidate provenance manifests"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT59-IMPL-20260820T163747Z",
+      "actor_id": "codex-team-saved-views",
+      "issue_id": "CT-59",
+      "mode": "code_mutating",
+      "output_refs": [
+        "apps/web/src/App.tsx",
+        "apps/web/src/workspace-navigation.ts",
+        "apps/web/src/saved-views.tsx",
+        "apps/web/src/styles.css",
+        "scripts/serve-visual-fixture.mjs"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-59/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-59/evidence.md",
+        "docs/product/versions/v0.1.0/30-implementation/CT-59/evidence/browser-status.json"
+      ]
+    }
+  ],
+  "checks": [
+    {"check_id": "CT59-TEAM-VIEWS-ROUTING", "issue_id": "CT-59", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-59/result.json"},
+    {"check_id": "CT59-SAVED-VIEW-TEAM-SCOPE", "issue_id": "CT-59", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-59/result.json"},
+    {"check_id": "CT59-REGRESSION", "issue_id": "CT-59", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-59/result.json"},
+    {"check_id": "CT59-TYPECHECK", "issue_id": "CT-59", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-59/result.json"},
+    {"check_id": "CT59-BUILD", "issue_id": "CT-59", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-59/result.json"},
+    {"check_id": "CT59-FIXTURE-HOST", "issue_id": "CT-59", "status": "passed_after_environment_retry", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-59/evidence/browser-status.json"},
+    {"check_id": "CT59-BROWSER", "issue_id": "CT-59", "status": "blocked", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-59/evidence/browser-status.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-59",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-59/evidence.md",
+      "basis": "Focused and complete regression, all-workspace typecheck, fixture syntax, production build, source review, route/scope contracts, and the two-team saved-view HTTP matrix pass. Rendered desktop, tablet, and mobile verification remains unexecuted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["P-T10", "P-T11", "P-T13", "P-T18", "P-T19"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-59/changed-files.txt",
+    "regression_areas": [
+      "valid invalid and removed team Views URL resolution",
+      "Issues Projects Views switcher and global Views escape",
+      "direct load reload Back Forward and route remount behavior",
+      "workspace saved-view ownership and team-context copy",
+      "Open and Build view team scope preservation",
+      "conflicting saved-view team filter replacement by system scope",
+      "owner member guest desktop tablet mobile accessibility focus overflow and responsive geometry"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-59/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-59/evidence.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-59/evidence/browser-status.json"
+    ],
+    "implementation_actor_ids": ["codex-team-saved-views"],
+    "implementation_session_ids": ["CT59-IMPL-20260820T163747Z"]
+  },
+  "outcomes": [
+    {"outcome_id": "O-001", "status": "pending"},
+    {"outcome_id": "O-002", "status": "pending"},
+    {"outcome_id": "O-003", "status": "pending"}
+  ],
+  "blockers": [
+    {
+      "id": "CT59-BROWSER-PERMISSION",
+      "description": "The approved browser surface is unavailable under the active security policy; final owner/member/guest desktop, tablet, and mobile team Views route, scope, history, focus, accessibility, and responsive-geometry verification remains required."
+    }
+  ],
+  "environment_notes": [
+    "CT-59 changes no production schema, repository query compiler, service route, authorization policy, RLS policy, migration, or recovery path. The current CT-54 PostgreSQL 16.10 evidence remains applicable to those unchanged paths, but no CT-59 database rerun is claimed.",
+    "The sandboxed server bind and sandbox-local HTTP namespace were unavailable. The managed host fixture served the exact production build and all six bounded host checks passed."
+  ],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issues": ["CT-59"],
+    "reason": "Run the bounded owner/member/guest desktop, tablet, and mobile team Views route, reusable-scope, history, focus, accessibility, and responsive-geometry matrix when the approved browser surface is available."
+  }
+}

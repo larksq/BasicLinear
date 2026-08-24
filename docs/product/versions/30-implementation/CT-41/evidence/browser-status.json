@@ -1,0 +1,30 @@
+{
+  "schema_version": "ct41-browser-status-v1",
+  "recorded_at": "2026-08-20T06:42:55Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4180/",
+  "synthetic_fixture": true,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "Access to the local browser surface remains denied by the active security policy. The denied browser outcome was not retried through another surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": ["Projects list", "Project selection toolbar", "Project row overflow menu", "Projects archive", "Project detail return"],
+  "required_assertions": [
+    "exactly one visible project row is in the page Tab order",
+    "Arrow Up Arrow Down J and K move row focus and preserve stable project identity across reorder filter refresh and detail return",
+    "Enter and pointer activation open the intended project without changing selection",
+    "Space and the pointer checkbox toggle the same visible and nonvisual selected state",
+    "the bulk project toolbar remains 42 pixels high and announces selected count and mutation results",
+    "bulk archive and restore retain failed records for an explicit retry",
+    "pointer right click Context Menu and Shift F10 open the same named row menu",
+    "menu arrows Home and End skip disabled items and Escape restores focus to the originating row",
+    "the last two row menus open upward and remain reachable inside the viewport",
+    "compact default and comfortable rows remain exactly 32 36 and 44 pixels with no layout shift from selection or menus",
+    "responsive property pruning leaves project identity status and the action path reachable",
+    "zero uncontained positive horizontal overflow overlap duplicate IDs hidden focus console warnings and console errors"
+  ]
+}

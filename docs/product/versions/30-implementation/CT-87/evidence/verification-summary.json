@@ -1,0 +1,36 @@
+{
+  "schema_version": "ct87-verification-summary-v1",
+  "captured_at": "2026-08-21T08:46:35Z",
+  "issue": "CT-87",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "checks": {
+    "focused_test_files": 3,
+    "focused_tests_passed": 20,
+    "complete_test_files": 56,
+    "complete_tests_passed": 389,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1946,
+    "dist_bytes": 1028892,
+    "build_warnings": 0,
+    "release_audit_tests_passed": 3,
+    "release_audit_tests_failed": 0,
+    "post_build_readiness": "ready",
+    "rendered_browser_captures": 0
+  },
+  "owner_boundary": {
+    "detail_assignment_mutation_reachable": false,
+    "quick_edit_assignment_mutation_reachable": false,
+    "bulk_assignment_mutation_reachable": false,
+    "assignee_board_move_reachable": false,
+    "legacy_assignee_grouping_canonicalized": true,
+    "historical_assignee_metadata_retained": true,
+    "contracts_or_storage_changed": false
+  },
+  "browser_acceptance": "blocked_chrome_control_unavailable",
+  "outcomes_claimed": []
+}

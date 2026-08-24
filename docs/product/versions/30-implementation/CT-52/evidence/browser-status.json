@@ -1,0 +1,37 @@
+{
+  "schema_version": "ct52-browser-status-v1",
+  "recorded_at": "2026-08-20T12:34:34Z",
+  "status": "deferred_permission_denied",
+  "planned_targets": {
+    "owner": "http://127.0.0.1:4181/",
+    "guest": "http://127.0.0.1:4181/?fixture=guest-readonly"
+  },
+  "synthetic_fixture": true,
+  "host_checks": 4,
+  "host_checks_passed": 4,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "The deterministic owner and guest fixture contracts are reachable from the host, but access to the approved browser surface remains denied by the active security policy. The denied browser outcome was not retried through another browser surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": [
+    "Owner command palette with empty and populated recents",
+    "Owner search results for identifiers titles descriptions and labels",
+    "Guest command palette with disabled New issue",
+    "Searching no-result error and retry states",
+    "Mixed-case repeated punctuation and markup-like literal queries",
+    "Workspace and role transitions with the command palette open"
+  ],
+  "required_assertions": [
+    "server result order is unchanged and every visible literal query term is emphasized",
+    "ordinary text and mark elements preserve the complete accessible result string",
+    "ArrowUp ArrowDown Home End and Enter keep one enabled active descendant",
+    "guest navigation never lands on or invokes disabled New issue",
+    "recent loading error no-match and result counts are visible and announced without becoming options",
+    "workspace transitions do not expose another workspace's recents or stale results",
+    "desktop tablet and mobile layouts have zero overlap unintended wrapping clipped focus duplicate IDs console warnings and console errors"
+  ]
+}

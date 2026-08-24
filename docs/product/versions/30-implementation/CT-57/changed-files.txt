@@ -1,0 +1,15 @@
+apps/web/src/App.tsx
+apps/web/src/workspace-navigation.ts
+apps/web/tests/workspace-navigation.test.ts
+apps/web/tests/layout-contract.test.ts
+scripts/serve-visual-fixture.mjs
+docs/product/versions/v0.1.0/30-implementation/CT-57/session.md
+docs/product/versions/v0.1.0/30-implementation/CT-57/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-57/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-57/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-57/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-57/evidence/browser-status.json
+docs/product/versions/v0.1.0/40-testing/CT-12/
+docs/product/versions/v0.1.0/50-outcome-review/CT-13/
+ops/release/asset-provenance.json
+ops/release/copy-provenance.json

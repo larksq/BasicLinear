@@ -1,0 +1,103 @@
+{
+  "schema_version": "ct43-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-43",
+      "stable_id": "3e7c53ff-847c-4674-a753-d9b9a6fc6120",
+      "revision": 2,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_browser_verification",
+      "requirement_refs": ["R-005", "R-010", "R-102", "R-104", "R-110"],
+      "acceptance_refs": ["R-005", "R-010", "R-102", "R-104", "R-110"],
+      "outcome_refs": ["O-001", "O-002", "O-003", "O-004"],
+      "allowed_mutation_paths": [
+        "apps/web/src/issue-edit-conflict.ts",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/styles.css",
+        "apps/web/tests/issue-edit-conflict.test.ts",
+        "docs/product/versions/v0.1.0/30-implementation/CT-43"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT43-IMPL-20260820T072535Z",
+      "actor_id": "codex-issue-conflict-recovery",
+      "issue_id": "CT-43",
+      "mode": "code_mutating",
+      "output_refs": [
+        "apps/web/src/issue-edit-conflict.ts",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/styles.css",
+        "apps/web/tests/issue-edit-conflict.test.ts"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-43/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-43/evidence.md"
+      ]
+    }
+  ],
+  "checks": [
+    {"check_id": "CT43-ISSUE-CONFLICT", "issue_id": "CT-43", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-43/result.json"},
+    {"check_id": "CT43-REGRESSION", "issue_id": "CT-43", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-43/result.json"},
+    {"check_id": "CT43-TYPECHECK", "issue_id": "CT-43", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-43/result.json"},
+    {"check_id": "CT43-BUILD", "issue_id": "CT-43", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-43/result.json"},
+    {"check_id": "CT43-BROWSER", "issue_id": "CT-43", "status": "blocked", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-43/evidence/browser-status.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-43",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-43/evidence.md#pending-browser-matrix",
+      "basis": "Focused recovery tests, semantic regression, complete regression, typecheck, production build, and source race review pass. Final rendered server-state replacement, draft retention, alert announcement, focus recovery, responsive geometry, and error behavior are not yet asserted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["R-005", "R-010", "R-102", "R-104", "R-110"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-43/changed-files.txt",
+    "regression_areas": [
+      "issue detail stale writes",
+      "confirmed issue readback",
+      "retained issue drafts",
+      "explicit draft reapply and discard",
+      "revision rebasing",
+      "issue event refetch races",
+      "issue detail focus recovery",
+      "panel route and responsive geometry"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-43/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-43/evidence.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-43/evidence/browser-status.json"
+    ],
+    "implementation_actor_ids": ["codex-issue-conflict-recovery"],
+    "implementation_session_ids": ["CT43-IMPL-20260820T072535Z"]
+  },
+  "outcomes": [
+    {"outcome_id": "O-001", "status": "pending"},
+    {"outcome_id": "O-002", "status": "pending"},
+    {"outcome_id": "O-003", "status": "pending"},
+    {"outcome_id": "O-004", "status": "pending"}
+  ],
+  "blockers": [
+    {
+      "id": "CT43-BROWSER-PERMISSION",
+      "description": "The approved local browser surface is unavailable under the active security policy; final desktop, tablet, and mobile conflict recovery, retained-draft, focus, announcement, error, geometry, and assistive-technology verification remains required."
+    }
+  ],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issues": ["CT-43"],
+    "reason": "Run the bounded synthetic desktop, tablet, and mobile stale issue edit and retained-draft matrix when the local browser surface is approved."
+  }
+}

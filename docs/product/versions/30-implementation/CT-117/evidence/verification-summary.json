@@ -1,0 +1,58 @@
+{
+  "schema_version": "ct117-verification-summary-v1",
+  "captured_at": "2026-08-22T20:56:14.054Z",
+  "issue": "CT-117",
+  "source": {
+    "revision": "d524c5c7eff38664bad7b8fb612283f2e2092563",
+    "tree": "4c5e21bbf45386f11face5c034dd433b663d14e0",
+    "parent_revision": "4ec13058390b413c55070b05c6d73a289b596572",
+    "changed_file_count": 3,
+    "changed_file_manifest_sha256": "520a07cdfc05a04a6186be7485191c53ea84d5997227d1013ae51583a1ec30dc"
+  },
+  "resolution": {
+    "content_height_remeasured": true,
+    "width_changes_observed": true,
+    "expand_and_shrink_supported": true,
+    "controlled_draft_contract_preserved": true,
+    "api_schema_scope_or_transfer_changed": false
+  },
+  "checks": {
+    "focused": {"files": 4, "passed": 18, "failed": 0},
+    "complete": {"files": 73, "passed": 478, "failed": 0},
+    "typecheck_workspaces": 8,
+    "release_audit": {"passed": 10, "failed": 0},
+    "build": {"modules": 1953, "warnings": 0},
+    "chrome": {"passed": 6, "failed": 0, "images": 4},
+    "independent_application_review": "pending"
+  },
+  "browser": {
+    "family": "Google Chrome",
+    "viewports": [{"width": 1440, "height": 900}, {"width": 390, "height": 844}],
+    "appearances": ["Light", "Dark"],
+    "raw_receipt": {
+      "path": ".control-tower/evidence/CT-117/browser-uat-d524c5c.json",
+      "mode": "0600",
+      "bytes": 5918,
+      "sha256": "acea3121c019676ed16ea3f0bde4b09867e61c63dcfea11e775c562e08358344"
+    }
+  },
+  "task_reconciliation": {
+    "expected_revision": 1,
+    "readback_revision": 2,
+    "status": "In Progress",
+    "milestone": "S3 — Implementation",
+    "store_health": "ready",
+    "projection": "disabled_not_synced",
+    "backup": {
+      "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-22T20-56-14-043Z-1f63754b-1b2b-4c3f-a095-39e360ec04be.json",
+      "mode": "0600",
+      "bytes": 469954,
+      "package_sha256": "8baa2169184034514b697b85babdd924c476685133e1e036f7efc09e9255dfdd",
+      "file_sha256": "03aac05e5da34ee667f496d1406f28638304a862f9f779043555d88b3360f15e"
+    }
+  },
+  "browser_acceptance_claimed": false,
+  "p_t21_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": "ct7-implementation-handoff-v1",
+  "stage": "implementation",
+  "status": "output_done",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "inputs": {
+    "issue": "CT-7",
+    "issue_id": "e6494481-51bb-4c90-a148-41eb1d4a92cf",
+    "issue_revision": 2,
+    "dependency": "CT-6@3",
+    "planning_package_sha256": "d161247c9c523e004a14d6e31ebcf9d12aab9764015b312383e13a0bb851f834"
+  },
+  "outputs": {
+    "changed_files": "docs/product/versions/v0.1.0/30-implementation/CT-7/changed-files.txt",
+    "evidence": "docs/product/versions/v0.1.0/30-implementation/CT-7/evidence.md",
+    "result": "docs/product/versions/v0.1.0/30-implementation/CT-7/result.json",
+    "runtime_url": "http://localhost:4175"
+  },
+  "validation": {
+    "tests": ["P-T06", "P-T07"],
+    "requirements": ["R-003", "R-004", "R-007"],
+    "result": "pass_with_independent_acceptance_deferred"
+  },
+  "ct8_projection_contract": {
+    "table": "app.issue_progress_projection",
+    "writer": "writeIssueProgressProjection",
+    "replay": "same revision and state is accepted; older or divergent same-revision state is rejected",
+    "constraints": "workspace/project/milestone relationships are composite foreign keys",
+    "progress_policy": "project-progress-v1",
+    "progress_mutability": "derived_read_only"
+  },
+  "outcomes": {
+    "evaluated": false,
+    "claimed": []
+  },
+  "blockers": [],
+  "deferred": [
+    "Issue CRUD and issue-facing product views remain CT-8 scope.",
+    "Full named-volume Compose rehearsal on a supported clean host remains CT-10/CT-12 scope.",
+    "Independent security and integrated quality acceptance remain CT-11/CT-12 scope."
+  ],
+  "next": {
+    "issues": ["CT-8"],
+    "reason": "CT-8 dependency CT-6 is done and the CT-7 projection boundary is now implemented and verified."
+  }
+}

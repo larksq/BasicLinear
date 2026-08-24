@@ -1,0 +1,44 @@
+{
+  "schema_version": "ct87-implementation-result-v1",
+  "captured_at": "2026-08-21T08:46:35Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING",
+  "issue": {
+    "identifier": "CT-87",
+    "id": "dce3e8e1-c1db-4eb3-a5e4-bdff720c8d35",
+    "created_revision": 1,
+    "implementation_scope_revision": 3,
+    "expected_completion_revision": 4
+  },
+  "resolution": {
+    "fixed_owner_detail_metadata": true,
+    "fixed_owner_quick_edit_metadata": true,
+    "quick_edit_request_guarded": true,
+    "bulk_assignment_control_removed": true,
+    "bulk_assignment_request_guarded": true,
+    "assignee_group_option_removed": true,
+    "legacy_assignee_group_state_canonicalized": true,
+    "stale_assignee_board_move_guarded": true,
+    "historical_assignee_metadata_retained": true,
+    "canonical_transfer_compatibility_retained": true
+  },
+  "checks": {
+    "focused_test_files": 3,
+    "focused_tests_passed": 20,
+    "complete_test_files": 56,
+    "complete_tests_passed": 389,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1946,
+    "dist_bytes": 1028892,
+    "post_build_readiness": "ready",
+    "release_audit_regression_passed": 3,
+    "real_audit_verdict": "NOT_READY",
+    "real_audit_pass": 5,
+    "real_audit_fail": 3,
+    "real_audit_blocked": 6,
+    "rendered_browser_captures": 0
+  },
+  "browser_acceptance_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "ct104-implementation-result-v1",
+  "captured_at": "2026-08-22T08:09:21Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_BROWSER_EVIDENCE_RECORDED",
+  "issue": {
+    "identifier": "CT-104",
+    "id": "12f9f96d-3b45-4c44-9566-53816f4a43b7",
+    "created_revision": 1,
+    "completion_revision": 2
+  },
+  "source": {
+    "revision": "6d2f330e15cc714b2e131d0fd693bc1d4cdcff78",
+    "tree": "46e18c123fb4f20786e014165e726d6d338df506",
+    "clean_at_qualification": true
+  },
+  "resolution": {
+    "native_date_input_retained": true,
+    "uncontrolled_editor": true,
+    "every_input_event_marks_dirty": true,
+    "explicit_completion_commit": true,
+    "escape_restores_authority": true,
+    "stale_baseline_cannot_overwrite_authority": true,
+    "rejected_write_restores_display": true,
+    "api_database_schema_or_transfer_changed": false
+  },
+  "checks": {
+    "focused_test_files": 2,
+    "focused_tests_passed": 24,
+    "complete_test_files": 69,
+    "complete_tests_passed": 460,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1949,
+    "dist_files": 109,
+    "dist_bytes": 1912735,
+    "build_warnings": 0,
+    "release_audit_tests_passed": 10,
+    "release_audit_tests_failed": 0,
+    "current_chrome_screenshots": 4,
+    "independent_application_review": "passed",
+    "P-T21": "passed"
+  },
+  "browser_acceptance_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

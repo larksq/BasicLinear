@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <title>OpenLinear CT-4 Prototype</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Workspace navigation">
+        <div class="workspace-switcher">
+          <div class="workspace-mark" aria-hidden="true">O</div>
+          <div class="workspace-copy">
+            <strong>OpenLinear</strong>
+            <span>Product workspace</span>
+          </div>
+          <button class="icon-button" aria-label="Switch workspace" title="Switch workspace">⌄</button>
+        </div>
+
+        <nav class="primary-nav" aria-label="Primary">
+          <a href="#inbox"><span aria-hidden="true">◎</span><span class="nav-label">Inbox</span><kbd>4</kbd></a>
+          <a href="#my-work"><span aria-hidden="true">◇</span><span class="nav-label">My work</span></a>
+          <a href="#projects"><span aria-hidden="true">▱</span><span class="nav-label">Projects</span></a>
+          <a class="active" href="#issues"><span aria-hidden="true">☷</span><span class="nav-label">Issues</span></a>
+          <a href="#views"><span aria-hidden="true">◫</span><span class="nav-label">Views</span></a>
+        </nav>
+
+        <div class="nav-section">
+          <div class="nav-section-title"><span>Workspace core</span><button class="icon-button" aria-label="Add team item" title="Add">+</button></div>
+          <a href="#team-issues"><span class="team-dot" aria-hidden="true">W</span> Team issues</a>
+          <a href="#team-projects"><span aria-hidden="true">▱</span> Projects</a>
+          <a href="#team-views"><span aria-hidden="true">◫</span> Views</a>
+        </div>
+
+        <div class="sidebar-footer">
+          <button class="sidebar-command" data-open-command>
+            <span aria-hidden="true">⌕</span>
+            <span>Search or command</span>
+            <kbd>⌘K</kbd>
+          </button>
+          <button class="profile-button" aria-label="Open profile menu">
+            <span class="avatar">QS</span>
+            <span>Qiao</span>
+            <span aria-hidden="true">⋯</span>
+          </button>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="view-header">
+          <div class="title-block">
+            <button class="mobile-nav icon-button" aria-label="Open navigation">☰</button>
+            <span class="title-icon" aria-hidden="true">☷</span>
+            <h1>All issues</h1>
+            <span class="count-badge" id="result-count">2,000</span>
+          </div>
+          <div class="header-actions">
+            <button class="icon-button" aria-label="Toggle display options" title="Display options">☷</button>
+            <button class="icon-button" aria-label="Open filters" title="Filter">▽</button>
+            <button class="primary-button" data-open-create aria-label="Create issue"><span aria-hidden="true">+</span><span class="create-label">Issue</span></button>
+          </div>
+        </header>
+
+        <section class="view-controls" aria-label="Issue view controls">
+          <div class="segmented" aria-label="View mode">
+            <button class="selected" aria-pressed="true">List</button>
+            <button aria-pressed="false">Board</button>
+          </div>
+          <button class="control-button">Status <span aria-hidden="true">⌄</span></button>
+          <button class="control-button">Priority <span aria-hidden="true">⌄</span></button>
+          <button class="control-button">Assignee <span aria-hidden="true">⌄</span></button>
+          <label class="search-field">
+            <span class="visually-hidden">Filter issues</span>
+            <span aria-hidden="true">⌕</span>
+            <input id="issue-search" type="search" placeholder="Filter issues" autocomplete="off" />
+          </label>
+          <span class="sync-state"><span class="sync-dot" aria-hidden="true"></span> Synced</span>
+        </section>
+
+        <section class="issue-surface" aria-label="Issues">
+          <div class="column-header" aria-hidden="true">
+            <span></span><span>Issue</span><span>Title</span><span>Priority</span><span>Project</span><span>Assignee</span>
+          </div>
+          <div id="issue-list" class="issue-list" role="listbox" aria-label="All issues" tabindex="0">
+            <div id="virtual-content" class="virtual-content"></div>
+          </div>
+        </section>
+      </main>
+
+      <aside id="detail-panel" class="detail-panel" aria-label="Issue details" aria-hidden="true">
+        <header class="panel-header">
+          <div class="panel-breadcrumb"><span id="panel-identifier">FOC-101</span><span aria-hidden="true">/</span><span>Workspace core</span></div>
+          <div class="panel-actions">
+            <button class="icon-button" aria-label="Open issue in full page" title="Open full page">↗</button>
+            <button class="icon-button" data-close-detail aria-label="Close issue details" title="Close">×</button>
+          </div>
+        </header>
+        <div class="panel-body">
+          <div class="issue-heading">
+            <button id="panel-status" class="status-button"><span class="status-symbol" aria-hidden="true"></span><span>Todo</span></button>
+            <h2 id="panel-title">Issue title</h2>
+          </div>
+          <p id="panel-description" class="description"></p>
+          <button class="add-subissue"><span aria-hidden="true">+</span> Add sub-issue</button>
+
+          <section class="property-section" aria-labelledby="properties-heading">
+            <h3 id="properties-heading">Properties</h3>
+            <dl>
+              <div><dt>Priority</dt><dd id="panel-priority"></dd></div>
+              <div><dt>Assignee</dt><dd><span id="panel-owner" class="avatar small"></span><span id="panel-owner-name"></span></dd></div>
+              <div><dt>Project</dt><dd id="panel-project"></dd></div>
+              <div><dt>Labels</dt><dd id="panel-labels"></dd></div>
+              <div><dt>Due date</dt><dd id="panel-due">No due date</dd></div>
+            </dl>
+          </section>
+
+          <section class="activity-section" aria-labelledby="activity-heading">
+            <h3 id="activity-heading">Activity</h3>
+            <div class="activity-entry"><span class="avatar small">QS</span><p><strong>Qiao</strong> created the issue <time>Today at 10:42</time></p></div>
+            <label class="comment-box"><span class="visually-hidden">Leave a comment</span><textarea placeholder="Leave a comment…"></textarea></label>
+          </section>
+        </div>
+      </aside>
+    </div>
+
+    <dialog id="command-dialog" class="command-dialog">
+      <form method="dialog">
+        <label class="command-search"><span aria-hidden="true">⌕</span><input autofocus placeholder="Search or run a command" aria-label="Search commands" /></label>
+        <div class="command-group">
+          <span class="command-label">Actions</span>
+          <button value="create" data-command-create><span aria-hidden="true">+</span><span>Create issue</span><kbd>C</kbd></button>
+          <button value="search"><span aria-hidden="true">⌕</span><span>Search issues</span><kbd>/</kbd></button>
+          <button value="view"><span aria-hidden="true">◫</span><span>Save current view</span><kbd>V</kbd></button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="create-dialog" class="create-dialog">
+      <form method="dialog">
+        <header><strong>New issue</strong><button class="icon-button" value="cancel" aria-label="Close create issue">×</button></header>
+        <label><span class="visually-hidden">Issue title</span><input id="new-issue-title" placeholder="Issue title" autocomplete="off" /></label>
+        <textarea aria-label="Issue description" placeholder="Add description…"></textarea>
+        <div class="create-properties">
+          <button type="button">◉ Todo</button><button type="button">◇ No priority</button><button type="button">○ Assignee</button>
+        </div>
+        <footer><span>Workspace core</span><button class="primary-button" value="create">Create issue</button></footer>
+      </form>
+    </dialog>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

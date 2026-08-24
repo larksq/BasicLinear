@@ -1,0 +1,50 @@
+{
+  "schema_version": "ct12-performance-evidence-v1",
+  "captured_at": "2026-08-19T22:58:00Z",
+  "environment": {
+    "browser": "connected Chrome",
+    "viewport": "1440x1000",
+    "workspace": "CT12 Acceptance",
+    "active_issue_count": 2002
+  },
+  "issue_transition_durations_ms": [
+    76.7,
+    40.1,
+    42.7,
+    47.1,
+    42.9,
+    206.4,
+    60.8,
+    35.9,
+    45.6,
+    51.8,
+    110.4,
+    56.9,
+    106.6,
+    80.6,
+    58.7,
+    142.6,
+    66.2,
+    70,
+    48.8,
+    38.7
+  ],
+  "p50_ms": 56.9,
+  "p75_ms": 76.7,
+  "p95_ms": 142.6,
+  "max_ms": 206.4,
+  "accepted_p75_threshold_ms": 100,
+  "mounted_issue_rows": {
+    "minimum": 27,
+    "maximum": 36,
+    "accepted_maximum": 70,
+    "full_scroll_top": 71518,
+    "full_scroll_height": 72168
+  },
+  "fixture_cleanup": {
+    "performance_rows_remaining": 0,
+    "canonical_active_issues_remaining": 2
+  },
+  "screenshot": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/virtualization-2002-issues-1440x1000.jpg",
+  "result": "passed"
+}

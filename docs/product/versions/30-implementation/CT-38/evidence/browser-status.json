@@ -1,0 +1,27 @@
+{
+  "schema_version": "ct38-browser-status-v1",
+  "recorded_at": "2026-08-20T05:36:28Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4180/",
+  "synthetic_fixture": true,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "Access to the local browser surface remains denied by the active security policy. The denied browser outcome was not retried through another surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": ["Issues list", "Issues board", "Projects list", "Search dialog", "Issue filters", "Editable controls"],
+  "required_assertions": [
+    "Command or Ctrl plus K from a focused issue or project record opens exactly one Search dialog without moving the record",
+    "Command or Ctrl plus F retains browser behavior and does not open issue filters",
+    "modified B does not toggle the issue layout",
+    "exact slash F and B retain their issue-view actions outside editable and dialog content",
+    "exact Enter Space J K and arrow keys retain their applicable record actions",
+    "repeat navigates records but does not repeatedly open or toggle selection",
+    "Space remains unclaimed on project rows",
+    "composition default-prevented dialog editable and nested-control events remain isolated",
+    "all controls remain reachable with zero uncontained positive horizontal overflow and zero duplicate IDs",
+    "zero console warnings and errors"
+  ]
+}

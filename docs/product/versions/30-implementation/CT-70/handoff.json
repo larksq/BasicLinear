@@ -1,0 +1,97 @@
+{
+  "schema_version": "ct70-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [{
+    "issue_id": "CT-70",
+    "stable_id": "1f275915-fd36-425f-9d7f-a61cb1e59abd",
+    "starting_revision": 2,
+    "expected_checkpoint_revision": 3,
+    "accepted": false,
+    "blocked": true,
+    "status": "implemented_awaiting_browser_verification",
+    "requirement_refs": ["R-005", "R-007", "R-010", "R-102", "R-104", "R-105", "R-110"],
+    "acceptance_refs": ["P-T08", "P-T09", "P-T11", "P-T12", "P-T18", "P-T19"],
+    "outcome_refs": ["O-001", "O-002", "O-003"],
+    "allowed_mutation_paths": [
+      "apps/web/src/issues.tsx",
+      "apps/web/src/comment-inline-edit.ts",
+      "apps/web/src/styles.css",
+      "apps/web/tests/comment-inline-edit.test.ts",
+      "apps/web/tests/workspace-capabilities.test.ts",
+      "scripts/serve-visual-fixture.mjs",
+      "docs/product/versions/v0.1.0/30-implementation/CT-70",
+      "docs/product/versions/v0.1.0/40-testing/CT-12",
+      "docs/product/versions/v0.1.0/50-outcome-review/CT-13",
+      "ops/release current-candidate provenance manifests"
+    ]
+  }],
+  "sessions": [{
+    "session_id": "CT70-IMPL-20260820T230104Z",
+    "actor_id": "codex-comment-inline-edit",
+    "issue_id": "CT-70",
+    "mode": "code_mutating",
+    "output_refs": [
+      "apps/web/src/issues.tsx",
+      "apps/web/src/comment-inline-edit.ts",
+      "apps/web/src/styles.css",
+      "scripts/serve-visual-fixture.mjs"
+    ],
+    "validation_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-70/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-70/evidence.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-70/evidence/host-matrix.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-70/evidence/browser-status.json"
+    ]
+  }],
+  "checks": [
+    { "check_id": "CT70-STATE", "issue_id": "CT-70", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-70/result.json" },
+    { "check_id": "CT70-REGRESSION", "issue_id": "CT-70", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-70/result.json" },
+    { "check_id": "CT70-TYPECHECK", "issue_id": "CT-70", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-70/result.json" },
+    { "check_id": "CT70-BUILD", "issue_id": "CT-70", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-70/result.json" },
+    { "check_id": "CT70-FIXTURE-HOST", "issue_id": "CT-70", "status": "passed_after_environment_retry", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-70/evidence/host-matrix.json" },
+    { "check_id": "CT70-BROWSER", "issue_id": "CT-70", "status": "blocked", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-70/evidence/browser-status.json" }
+  ],
+  "reviews": [{
+    "issue_id": "CT-70",
+    "status": "pending",
+    "independent": false,
+    "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-70/evidence.md",
+    "basis": "Pure request and source contracts, complete regression, all-workspace typecheck, production build, release-audit regression, source review, and a stateful 42-assertion HTTP matrix pass. Rendered comment-row editing, stale recovery, focus, keyboard, accessibility, and responsive geometry verification remains unexecuted."
+  }],
+  "testing_handoff": {
+    "acceptance_refs": ["P-T08", "P-T09", "P-T11", "P-T12", "P-T18", "P-T19"],
+    "status": "blocked_pending_browser_surface",
+    "risk_areas": [
+      "baseline-bound draft behavior across background refresh",
+      "explicit conflict retry and server-value recovery",
+      "remotely archived readback with retained draft",
+      "serialized comment create edit archive restore and issue archive controls",
+      "author and role capability projection",
+      "keyboard cancellation focus restoration and live announcements",
+      "responsive chronology and recovery containment"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-70/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-70/evidence/host-matrix.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-70/evidence/browser-status.json"
+    ]
+  },
+  "outcomes": { "claimed": [], "pending": ["O-001", "O-002", "O-003"] },
+  "blockers": ["Approved browser access is unavailable for the required rendered desktop, tablet, mobile, stale-recovery, keyboard, accessibility, interaction, geometry, and UAT matrix."],
+  "stale_downstream_state": [
+    "CT-12 must include CT-70 automated and host evidence and retain the browser blocker.",
+    "CT-13 must audit the refreshed hash-bound release candidate after CT-70 and CT-12 reconciliation."
+  ],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issue": "CT-70",
+    "reason": "Run the bounded synthetic desktop, tablet, and mobile inline-comment, stale-recovery, capability, keyboard, accessibility, and geometry matrix before accepting or closing CT-70."
+  }
+}

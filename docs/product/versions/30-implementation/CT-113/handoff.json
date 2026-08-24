@@ -1,0 +1,34 @@
+{
+  "schema_version": "ct113-implementation-handoff-v1",
+  "stage": "implementation.review-gate",
+  "status": "implementation_complete_review_pending",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issue": {
+    "identifier": "CT-113",
+    "stable_id": "c567a55b-b386-4249-aae7-84026e95a60d",
+    "created_revision": 1,
+    "evidence_revision": 2,
+    "status": "In Progress"
+  },
+  "source": {
+    "revision": "670a9f96e989654d84408e30c527e85b765a9042",
+    "tree": "d4c147b50bee345542286386934ac6e50f11aaf7"
+  },
+  "changed_files_ref": "docs/product/versions/v0.1.0/30-implementation/CT-113/changed-files.txt",
+  "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-113/evidence/verification-summary.json",
+  "next": {
+    "skill": "ct-implement-sprint",
+    "issue": "CT-113",
+    "scope": "obtain a distinct application review of session recovery ordering and failure behavior; enter CT-12 testing only after review passes"
+  },
+  "blockers": [
+    "Distinct application review is pending.",
+    "CT-12 current evidence must be reconciled for product revision 670a9f9.",
+    "P-T21 qualification is pending for product revision 670a9f9."
+  ],
+  "outcomes_claimed": []
+}

@@ -1,0 +1,107 @@
+{
+  "schema_version": "ct62-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-62",
+      "stable_id": "6388f0c5-8c5a-4f7b-9b0c-6414b9e33e81",
+      "starting_revision": 2,
+      "expected_checkpoint_revision": 3,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_browser_verification",
+      "requirement_refs": ["R-004", "R-010", "R-104", "R-105", "R-110"],
+      "acceptance_refs": ["P-T06", "P-T07", "P-T11", "P-T18", "P-T19"],
+      "outcome_refs": ["O-001", "O-002", "O-003"],
+      "allowed_mutation_paths": [
+        "apps/web/src/projects.tsx",
+        "apps/web/src/milestone-interactions.ts",
+        "apps/web/src/styles.css",
+        "apps/web/tests/milestone-interactions.test.ts",
+        "apps/web/tests/layout-contract.test.ts",
+        "scripts/serve-visual-fixture.mjs",
+        "docs/product/versions/v0.1.0/30-implementation/CT-62",
+        "docs/product/versions/v0.1.0/40-testing/CT-12",
+        "docs/product/versions/v0.1.0/50-outcome-review/CT-13",
+        "ops/release current-candidate provenance manifests"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT62-IMPL-20260820T181134Z",
+      "actor_id": "codex-milestone-drag-reorder",
+      "issue_id": "CT-62",
+      "mode": "code_mutating",
+      "output_refs": [
+        "apps/web/src/projects.tsx",
+        "apps/web/src/milestone-interactions.ts",
+        "apps/web/src/styles.css",
+        "scripts/serve-visual-fixture.mjs"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-62/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-62/evidence.md",
+        "docs/product/versions/v0.1.0/30-implementation/CT-62/evidence/browser-status.json"
+      ]
+    }
+  ],
+  "checks": [
+    {"check_id": "CT62-MILESTONE-DROP-STATE", "issue_id": "CT-62", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-62/result.json"},
+    {"check_id": "CT62-POINTER-CONTRACT", "issue_id": "CT-62", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-62/result.json"},
+    {"check_id": "CT62-REGRESSION", "issue_id": "CT-62", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-62/result.json"},
+    {"check_id": "CT62-TYPECHECK", "issue_id": "CT-62", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-62/result.json"},
+    {"check_id": "CT62-BUILD", "issue_id": "CT-62", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-62/result.json"},
+    {"check_id": "CT62-FIXTURE-HOST", "issue_id": "CT-62", "status": "passed_after_environment_retry", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-62/evidence/browser-status.json"},
+    {"check_id": "CT62-BROWSER", "issue_id": "CT-62", "status": "blocked", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-62/evidence/browser-status.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-62",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-62/evidence.md",
+      "basis": "Pure reorder, source contract, complete regression, all-workspace typecheck, fixture syntax, production build, source review, and a stateful eight-check HTTP matrix pass. Rendered mouse, touch, pen, focus, announcement, and responsive geometry verification remains unexecuted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["P-T06", "P-T07", "P-T11", "P-T18", "P-T19"],
+    "status": "blocked_pending_browser_surface",
+    "risk_areas": [
+      "pointer capture and cancellation",
+      "before and after target geometry",
+      "touch and pen scroll interaction",
+      "revision-conflict recovery",
+      "announcement and focus recovery",
+      "keyboard parity",
+      "responsive containment and drop indicators"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-62/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-62/evidence/browser-status.json"
+    ]
+  },
+  "outcomes": {
+    "claimed": [],
+    "pending": ["O-001", "O-002", "O-003"]
+  },
+  "blockers": [
+    "Approved browser access is unavailable for the required rendered desktop, tablet, mobile, pointer, accessibility, interaction, geometry, and UAT matrix."
+  ],
+  "stale_downstream_state": [
+    "CT-12 must include CT-62 automated and host evidence and retain the browser blocker.",
+    "CT-13 must audit the refreshed hash-bound release candidate after CT-62 and CT-12 reconciliation."
+  ],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issue": "CT-62",
+    "reason": "Run the bounded synthetic desktop, tablet, and mobile pointer-drag and keyboard-parity matrix before accepting or closing CT-62."
+  }
+}

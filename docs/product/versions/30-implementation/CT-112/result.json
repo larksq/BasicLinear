@@ -1,0 +1,39 @@
+{
+  "schema_version": "ct112-implementation-result-v1",
+  "captured_at": "2026-08-22T11:51:00Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_REVIEW_PENDING",
+  "issue": {
+    "identifier": "CT-112",
+    "id": "6bc35315-4b0d-4795-9f91-82d38f3ce426",
+    "created_revision": 1,
+    "evidence_revision": 2,
+    "status": "In Progress"
+  },
+  "source": {
+    "revision": "7665027c0266fa5f0be0070dd75c2541959a9eb5",
+    "tree": "573f0747c927aa0b35a1688de73c508c70665978"
+  },
+  "resolution": {
+    "shared_density_item_heights": true,
+    "full_title_line_contained": true,
+    "metadata_contained": true,
+    "six_pixel_virtual_separation": true,
+    "loading_skeleton_geometry_bound": true
+  },
+  "checks": {
+    "focused_tests_passed": 31,
+    "complete_test_files": 70,
+    "complete_tests_passed": 465,
+    "workspaces_typechecked": 8,
+    "release_audit_tests_passed": 10,
+    "vite_modules": 1949,
+    "build_warnings": 0,
+    "chrome_density_theme_states_passed": 6,
+    "chrome_geometry_failures": 0,
+    "independent_application_review": "pending",
+    "P-T21": "pending_requalification_for_7665027"
+  },
+  "browser_acceptance_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

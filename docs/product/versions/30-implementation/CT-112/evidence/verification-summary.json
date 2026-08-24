@@ -1,0 +1,38 @@
+{
+  "schema_version": "ct112-verification-summary-v1",
+  "captured_at": "2026-08-22T11:51:00Z",
+  "issue": "CT-112",
+  "source": {
+    "revision": "7665027c0266fa5f0be0070dd75c2541959a9eb5",
+    "tree": "573f0747c927aa0b35a1688de73c508c70665978"
+  },
+  "checks": {
+    "focused": { "files": 3, "passed": 31, "failed": 0 },
+    "complete": { "files": 70, "passed": 465, "failed": 0 },
+    "typecheck_workspaces": 8,
+    "release_audit": { "passed": 10, "failed": 0 },
+    "build": { "modules": 1949, "files": 105, "bytes": 1895747, "warnings": 0 },
+    "independent_application_review": "pending",
+    "independent_runtime": "pending_for_7665027"
+  },
+  "chrome": {
+    "family": "Chrome",
+    "version": "151.0.7922.170",
+    "url": "http://127.0.0.1:4284/",
+    "viewport": { "width": 1440, "height": 900 },
+    "themes": ["light", "dark"],
+    "densities": [
+      { "name": "compact", "virtual_item_height": 96, "card_height": 90, "title_height": 24, "title_line_height": 16.2, "gap": 6 },
+      { "name": "default", "virtual_item_height": 108, "card_height": 102, "title_height": 24, "title_line_height": 16.2, "gap": 6 },
+      { "name": "comfortable", "virtual_item_height": 120, "card_height": 114, "title_height": 28, "title_line_height": 16.2, "gap": 6 }
+    ],
+    "states_checked": 6,
+    "cards_per_state": 10,
+    "geometry_failures": 0,
+    "horizontal_overflow": 0,
+    "geometry_ref": "docs/product/versions/v0.1.0/30-implementation/CT-112/evidence/geometry.json",
+    "full_ct12_acceptance": false
+  },
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

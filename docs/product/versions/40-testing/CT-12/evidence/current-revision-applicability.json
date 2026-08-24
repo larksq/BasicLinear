@@ -1,0 +1,142 @@
+{
+  "schema_version": "ct12-revision-applicability-v6",
+  "captured_at": "2026-08-23T12:05:39.344Z",
+  "authority": {
+    "issue": "CT-12",
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "current_candidate": {
+    "product_revision": "5a33d28be383b7651a4b0d6156534aa12cc423fa",
+    "product_tree": "d106d3bb40a84184e7ee26c919134b01e4748679",
+    "parent_product_revision": "e1299af1bd06f7438f5010c6f6c030760c5a1dfb",
+    "loaded_asset": "assets/index-W0ZGkz-8.js",
+    "changed_runtime_files": [
+      "apps/web/src/issues.tsx",
+      "apps/web/src/saved-views.tsx"
+    ],
+    "changed_test_files": [
+      "apps/web/tests/board-accessibility.test.ts",
+      "apps/web/tests/table-semantics.test.ts"
+    ],
+    "scope": "CT-124 removes duplicate accessibility context from issue-board metadata and Saved View actions without changing pixels, styles, API, SQLite, owner scope, or transfer."
+  },
+  "applicability": [
+    {
+      "surface": "automated regression and build",
+      "source_revision": "5a33d28be383b7651a4b0d6156534aa12cc423fa",
+      "status_for_candidate": "fresh_exact_revision_pass",
+      "reason": "Focused regression passes 2 files / 13 tests; complete regression passes 73 files / 481 tests; all eight workspace typechecks, 10 release-audit tests, and the warning-free 1,953-module build pass.",
+      "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-124/result.json",
+      "private_receipt_ref": ".control-tower/evidence/CT-124/implementation-5a33d28.json",
+      "private_receipt_sha256": "105f95113ff9fc6f2082703e1435d8157e4aa7763ee10db2f8f44a683f49c7a0"
+    },
+    {
+      "surface": "P-T18 integrated UAT",
+      "source_revision": "d524c5c7eff38664bad7b8fb612283f2e2092563",
+      "status_for_candidate": "passed_exact_5a33d28_delta_independent_closeout",
+      "reason": "The connected local workflow baseline plus exact 5a33d28 semantic and affected-surface checks is independently accepted for the declared one-owner local surface.",
+      "evidence_refs": [
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/integrated-current.json",
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/5a33d28/manifest.json"
+      ],
+      "raw_receipt_ref": ".control-tower/evidence/CT-12/integrated-uat-d524c5c.json",
+      "raw_receipt_sha256": "f4e588d6d52092dd8363c05caa90a0aa9839d9d1fc14c9c2a57227eb75972d16",
+      "independent_review_ref": ".control-tower/evidence/CT-124/independent-closeout-review-5a33d28.json",
+      "independent_review_sha256": "5aa09f82fcd11a47206df1f56687323495dcfaf381e12b12ff14ca13fb0edca8"
+    },
+    {
+      "surface": "P-T18 restart recovery",
+      "source_revision": "670a9f96e989654d84408e30c527e85b765a9042",
+      "status_for_candidate": "applicable_unchanged_partial_evidence",
+      "reason": "No session, event-stream, API, database, navigation, recovery, or scope source changed in CT-124.",
+      "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-113/evidence/verification-summary.json",
+      "evidence_sha256": "6e0f4ee09435b3fa0a7bb45587ab4bf15f18634c0e08d1298cb8e1713538504f"
+    },
+    {
+      "surface": "P-T18 project and milestone native-date workflow",
+      "source_revision": "f7c362562fdf0657114a862331b893e470b824c0",
+      "status_for_candidate": "applicable_unchanged_bounded_pass",
+      "reason": "CT-124 does not change the shared native-date control or any project, milestone, issue mutation, or confirmed-authority path.",
+      "evidence_ref": "docs/product/versions/v0.1.0/40-testing/CT-116/result.json",
+      "evidence_sha256": "0f292022549081f08e4804a2fd4ac4c677bfd393d28a1c50f6353db715bc3908"
+    },
+    {
+      "surface": "P-T19 core-route accessibility, keyboard, responsive, long-content, and forced-state matrix",
+      "source_revision": "e1299af1bd06f7438f5010c6f6c030760c5a1dfb",
+      "status_for_candidate": "passed_exact_changed_surface_engine_delta_independent_review",
+      "reason": "The e1299af axe-core matrix remains applicable through six exact 5a33d28 changed-surface scans with zero violations or incomplete items, and the distinct corrective-tranche review passed.",
+      "evidence_refs": [
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/accessibility-current.json",
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/accessibility-delta-5a33d28.json",
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-revision-5a33d28.json",
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/5a33d28/manifest.json"
+      ],
+      "raw_receipt_ref": ".control-tower/evidence/CT-12/axe-core-e1299af.json",
+      "raw_receipt_sha256": "e39d047e722955a9e3589005a4ff13295a7024469925583047cebd632f872a3b",
+      "private_delta_receipt_ref": ".control-tower/evidence/CT-12/axe-delta-5a33d28/axe-delta-5a33d28.json",
+      "private_delta_receipt_sha256": "812459aa0ded0b3029faf5feb0a734d8788cf19bf261a44463240ea0e8885d99",
+      "independent_review": "pending_for_CT117_through_CT124",
+      "independent_review_ref": ".control-tower/evidence/CT-124/independent-closeout-review-5a33d28.json",
+      "independent_review_sha256": "5aa09f82fcd11a47206df1f56687323495dcfaf381e12b12ff14ca13fb0edca8"
+    },
+    {
+      "surface": "P-T20 complete pinned Light and Dark visual set",
+      "source_revision": "e1299af1bd06f7438f5010c6f6c030760c5a1dfb",
+      "status_for_candidate": "applicable_with_exact_changed_surface_byte_identity_live_system_verified",
+      "reason": "The complete e1299af matrix contains all 60 required Light/Dark states with zero findings. CT-124 changes only issue-board and Saved View semantics. Against byte-identical 253,952-byte SQLite fixtures, exact 5a33d28 and e1299af produced four byte-identical JPEG pairs for those two surfaces in Light and Dark at 1440x900@1x, with the expected semantic delta and zero alerts. The authorized live System check separately verified Light and Dark effective media with zero alerts and restored macOS to Auto/System.",
+      "evidence_refs": [
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/manifest.json",
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-visual-audit.json",
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/5a33d28/manifest.json"
+      ],
+      "historical_named_states": 60,
+      "exact_delta_pairs": 4,
+      "byte_identical_pairs": 4,
+      "historical_combined_image_sha256": "0208b8474bdae382ff053fda6eb33d1259c56be213ed71eee85fffcade6959d2",
+      "private_delta_receipt_ref": ".control-tower/evidence/CT-12/delta-5a33d28/receipt.json",
+      "private_delta_receipt_sha256": "4a0807ef4019e31c790760724cee689f26b8d034446f45ba5a3073d46e4760bf",
+      "live_system_receipt_ref": ".control-tower/evidence/CT-12/system-appearance-5a33d28.json",
+      "live_system_receipt_sha256": "8b5100e77ecffb93fcff10e235cc9a52fbcfd37210235d7fdd13ddaf2e0acc03"
+    },
+    {
+      "surface": "P-T20 protected performance",
+      "source_revision": "e1299af1bd06f7438f5010c6f6c030760c5a1dfb",
+      "status_for_candidate": "applicable_unchanged_protected_path_live_system_verified",
+      "reason": "The accepted e1299af protected list/detail contract passes at 53.0 ms p75 against 100 ms and mounts at most 35 rows. CT-124 changes neither styles nor the protected list/detail, query, virtualization, API, or persistence path; exact affected-surface pixel pairs are byte-identical. The authorized live System check separately passed Light and Dark with zero alerts and restored macOS to Auto/System.",
+      "evidence_refs": [
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/performance-current.json",
+        "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/5a33d28/manifest.json"
+      ],
+      "raw_receipt_ref": ".control-tower/evidence/CT-12/performance-current-e1299af-raw.json",
+      "raw_receipt_sha256": "d83b690fd022bf67008f903e6909aa061dee44a460eb23fc7bdafc08475e20a8",
+      "accepted_p75_ms": 53,
+      "threshold_ms": 100,
+      "live_system_receipt_ref": ".control-tower/evidence/CT-12/system-appearance-5a33d28.json",
+      "live_system_receipt_sha256": "8b5100e77ecffb93fcff10e235cc9a52fbcfd37210235d7fdd13ddaf2e0acc03"
+    },
+    {
+      "surface": "P-T21 independent clean runtime",
+      "source_revision": "5a33d28be383b7651a4b0d6156534aa12cc423fa",
+      "status_for_candidate": "passed_independent_exact_5a33d28",
+      "reason": "A distinct actor/session passed all 21 strict checks and 4/4 runner contracts against exact 5a33d28; the private receipt binds source and artifact identity, zero outbound/subprocess attempts, accepted scale, permissions, cleanup, and transfer.",
+      "rehearsal_evidence_ref": "docs/product/versions/v0.1.0/40-testing/CT-82/evidence/rehearsal-5a33d28.json",
+      "historical_acceptance_ref": "docs/product/versions/v0.1.0/40-testing/CT-82/evidence/qualification-f7c3625.json",
+      "current_acceptance": false,
+      "acceptance_ref": ".control-tower/evidence/CT-82/qualification-5a33d28.json",
+      "acceptance_sha256": "7d392f18bf3e5933a954334bf83e452907d41a2889ed87ef842790bbcee00f16",
+      "actor": "codex-independent-testing-ct82-5a33d28",
+      "session": "CT82-INDEPENDENT-20260823T114800Z",
+      "source_sha256": "456fc149dffc711e87f372f2f71af937e6a3ba4db984201af84000e2cb659c2a",
+      "artifact_sha256": "858750ef2bce49e39a028419a23646200207f58fd5394a20f812c207889c1e7c"
+    }
+  ],
+  "open_reviews": [],
+  "limitations": [
+    "Testing acceptance is limited to the supported one-owner, one-implicit-workspace/team, loopback Node 24 local surface on the qualified macOS environment.",
+    "Cross-platform behavior, CT-3 identity/legal approval, CT-13 accountable release approval, publication, and product outcomes remain separate gates."
+  ],
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

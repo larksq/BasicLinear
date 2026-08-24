@@ -1,0 +1,121 @@
+{
+  "schema_version": "ct50-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-50",
+      "stable_id": "c11ef27e-6b2c-4804-acff-a18de085d20e",
+      "revision": 3,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_browser_verification",
+      "requirement_refs": ["R-005", "R-008", "R-010", "R-011", "R-012", "R-104", "R-105", "R-110"],
+      "acceptance_refs": ["P-T09", "P-T11", "P-T13", "P-T18", "P-T19"],
+      "outcome_refs": ["O-002", "O-003", "O-004"],
+      "allowed_mutation_paths": [
+        "apps/web/src/issues.tsx",
+        "apps/web/src/issue-row-actions.ts",
+        "apps/web/src/styles.css",
+        "apps/web/tests/issue-row-actions.test.ts",
+        "apps/web/tests/local-keyboard-actions.test.ts",
+        "apps/web/tests/table-semantics.test.ts",
+        "apps/web/tests/board-accessibility.test.ts",
+        "apps/web/tests/issue-loading-geometry.test.ts",
+        "apps/web/tests/layout-contract.test.ts",
+        "docs/product/versions/v0.1.0/30-implementation/CT-50",
+        "docs/product/versions/v0.1.0/40-testing/CT-12",
+        "docs/product/versions/v0.1.0/50-outcome-review/CT-13",
+        "ops/release/current-candidate.json",
+        "ops/release/current-candidate-source-manifest.json"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT50-IMPL-20260820T112036Z",
+      "actor_id": "codex-issue-row-actions",
+      "issue_id": "CT-50",
+      "mode": "code_mutating",
+      "output_refs": [
+        "apps/web/src/issues.tsx",
+        "apps/web/src/issue-row-actions.ts",
+        "apps/web/src/styles.css",
+        "apps/web/tests/issue-row-actions.test.ts",
+        "apps/web/tests/local-keyboard-actions.test.ts",
+        "apps/web/tests/table-semantics.test.ts",
+        "apps/web/tests/board-accessibility.test.ts",
+        "apps/web/tests/issue-loading-geometry.test.ts",
+        "apps/web/tests/layout-contract.test.ts"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-50/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-50/evidence.md"
+      ]
+    }
+  ],
+  "checks": [
+    {"check_id": "CT50-ACTION-CONTRACT", "issue_id": "CT-50", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-50/result.json"},
+    {"check_id": "CT50-REGRESSION", "issue_id": "CT-50", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-50/result.json"},
+    {"check_id": "CT50-TYPECHECK", "issue_id": "CT-50", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-50/result.json"},
+    {"check_id": "CT50-BUILD", "issue_id": "CT-50", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-50/result.json"},
+    {"check_id": "CT50-FIXTURE-HOST", "issue_id": "CT-50", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-50/evidence/browser-status.json"},
+    {"check_id": "CT50-DATABASE-RUNNER", "issue_id": "CT-50", "status": "skipped", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-50/evidence.md#automated-verification"},
+    {"check_id": "CT50-BROWSER", "issue_id": "CT-50", "status": "blocked", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-50/evidence/browser-status.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-50",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-50/evidence.md",
+      "basis": "Focused and complete regression, typecheck, production build, source review, cross-workspace mutation correction, measured-menu correction, and owner/guest fixture host checks pass. Rendered desktop, tablet, and mobile verification remains unexecuted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["P-T09", "P-T11", "P-T13", "P-T18", "P-T19"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-50/changed-files.txt",
+    "regression_areas": [
+      "active and archived issue list contextual actions",
+      "active and archived issue board contextual actions",
+      "owner member and guest capability projection",
+      "quick status priority and assignee editing",
+      "revision conflicts no-op submissions and error recovery",
+      "virtualized focus recovery and menu dismissal",
+      "workspace and role transitions during pending mutations",
+      "desktop tablet and mobile action geometry and accessibility"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-50/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-50/evidence.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-50/evidence/browser-status.json"
+    ],
+    "implementation_actor_ids": ["codex-issue-row-actions"],
+    "implementation_session_ids": ["CT50-IMPL-20260820T112036Z"]
+  },
+  "outcomes": [
+    {"outcome_id": "O-002", "status": "pending"},
+    {"outcome_id": "O-003", "status": "pending"},
+    {"outcome_id": "O-004", "status": "pending"}
+  ],
+  "blockers": [
+    {
+      "id": "CT50-BROWSER-PERMISSION",
+      "description": "The approved local browser surface is unavailable under the active security policy; final owner/guest desktop, tablet, and mobile action-menu, quick-edit, keyboard, focus, accessibility, and responsive-geometry verification remains required."
+    }
+  ],
+  "environment_notes": [
+    "The PostgreSQL integration runner skipped seven files and 17 tests because TEST_MIGRATION_DATABASE_URL and TEST_APP_PASSWORD are absent. CT-50 changes no persistence schema, service authorization path, or RLS policy."
+  ],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issues": ["CT-50"],
+    "reason": "Run the bounded owner/guest desktop, tablet, and mobile issue-action matrix when the approved browser surface is available."
+  }
+}

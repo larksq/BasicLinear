@@ -1,0 +1,49 @@
+{
+  "schema_version": "ct94-implementation-result-v1",
+  "captured_at": "2026-08-21T11:58:21Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING",
+  "issue": {
+    "identifier": "CT-94",
+    "id": "a21ebb3f-ba73-4a9e-8d45-c3e3a08a3ca5",
+    "created_revision": 1,
+    "implementation_scope_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "resolution": {
+    "content_drafts_controlled": true,
+    "comment_drafts_issue_keyed": true,
+    "workspace_identity_isolated": true,
+    "detail_instances_identity_keyed": true,
+    "server_equivalent_content_pruned": true,
+    "empty_comments_pruned_and_blocked": true,
+    "matching_save_cleanup": true,
+    "matching_discard_cleanup": true,
+    "purge_cleanup": true,
+    "resource_cancel_preserves_other_content": true,
+    "conflict_reapply_preserved": true,
+    "mutation_and_conflict_editors_locked": true,
+    "responsive_long_message_containment": true,
+    "browser_storage_added": false,
+    "persistence_or_api_changed": false
+  },
+  "checks": {
+    "focused_test_files": 1,
+    "focused_tests_passed": 6,
+    "complete_test_files": 61,
+    "complete_tests_passed": 416,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1948,
+    "dist_files": 105,
+    "dist_bytes": 1860412,
+    "build_warnings": 0,
+    "release_audit_tests_passed": 6,
+    "release_audit_tests_failed": 0,
+    "loopback_readiness": "ready",
+    "served_candidate_current": true,
+    "rendered_browser_captures": 0
+  },
+  "browser_acceptance_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

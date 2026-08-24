@@ -1,0 +1,60 @@
+{
+  "schema_version": "ct60-browser-status-v1",
+  "recorded_at": "2026-08-20T17:19:57Z",
+  "status": "deferred_permission_denied",
+  "planned_targets": {
+    "status_grouped": "http://127.0.0.1:4185/?workspace=20000000-0000-4000-8000-000000000023&view=projects&fixture=project-view&group=status&properties=status,priority,team,progress&collapsed=status:planned",
+    "priority_grouped": "http://127.0.0.1:4185/?workspace=20000000-0000-4000-8000-000000000023&view=projects&fixture=project-view&group=priority&properties=status,priority,lead,targetDate,progress",
+    "lead_grouped": "http://127.0.0.1:4185/?workspace=20000000-0000-4000-8000-000000000023&view=projects&fixture=project-view&group=lead&properties=lead,team,startDate,targetDate",
+    "team_grouped": "http://127.0.0.1:4185/?workspace=20000000-0000-4000-8000-000000000023&view=projects&fixture=project-view&group=team&properties=status,priority,team,progress",
+    "minimal_properties": "http://127.0.0.1:4185/?workspace=20000000-0000-4000-8000-000000000023&view=projects&fixture=project-view&group=none&properties=none",
+    "invalid_state": "http://127.0.0.1:4185/?workspace=20000000-0000-4000-8000-000000000023&view=projects&fixture=project-view&group=owner&properties=status,owner&collapsed=lead:none"
+  },
+  "synthetic_fixture": true,
+  "fixture_process": {
+    "port": 4185,
+    "build": "production",
+    "managed_session": 34700,
+    "initial_sandbox_launch": "failed_listen_eperm",
+    "managed_launch": "passed"
+  },
+  "host_attempts": [
+    {
+      "attempt": 1,
+      "status": "mixed_sandbox_network_namespace",
+      "checks_attempted": 3,
+      "checks_passed": 1,
+      "connection_failures": 2,
+      "accepted_as_product_evidence": false
+    },
+    {
+      "attempt": 2,
+      "status": "passed_host_network",
+      "checks_attempted": 6,
+      "checks_passed": 6,
+      "observations": {
+        "application_html_status": 200,
+        "session_status": 200,
+        "team_count": 2,
+        "project_count": 3,
+        "product_quality_project_count": 2,
+        "engineering_systems_project_count": 1
+      }
+    }
+  ],
+  "browser_attempted": false,
+  "browser_captures": 0,
+  "rendered_assertions": 0,
+  "policy_reason": "The active security policy denies the approved browser surface. Alternate browser surfaces were not used.",
+  "acceptance_pending": [
+    "desktop tablet and mobile grouped Projects rendering",
+    "group and property controls with URL reload and history restoration",
+    "collapse and expand semantics counts and focus recovery",
+    "all and minimal property header data and loading alignment",
+    "workspace team search filter archive order and density composition",
+    "row keyboard selection context menu and reorder boundaries",
+    "horizontal data-region reachability without page overflow",
+    "owner member and guest capability presentation",
+    "empty loading offline error duplicate-ID and console checks"
+  ]
+}

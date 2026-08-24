@@ -1,0 +1,46 @@
+{
+  "schema_version": "ct2-source-register-v1",
+  "accessed_on": "2026-08-19",
+  "sources": [
+    {
+      "id": "CT2-S01",
+      "type": "official_documentation",
+      "ref": "https://linear.app/docs/search",
+      "verification_status": "verified",
+      "strength": "high",
+      "claim_supported": "Linear documents search invocation, exact issue identifier/title matching, and Escape behavior."
+    },
+    {
+      "id": "CT2-S02",
+      "type": "official_documentation",
+      "ref": "https://linear.app/docs/projects",
+      "verification_status": "verified",
+      "strength": "high",
+      "claim_supported": "Linear documents project context and project-attached issue views."
+    },
+    {
+      "id": "CT2-S03",
+      "type": "official_documentation",
+      "ref": "https://linear.app/docs/select-issues",
+      "verification_status": "verified",
+      "strength": "high",
+      "claim_supported": "Linear documents keyboard navigation and issue selection behavior."
+    },
+    {
+      "id": "CT2-S04",
+      "type": "official_documentation",
+      "ref": "https://linear.app/docs/default-team-pages",
+      "verification_status": "verified",
+      "strength": "high",
+      "claim_supported": "Linear documents team Projects and Views navigation surfaces."
+    },
+    {
+      "id": "CT2-S05",
+      "type": "authenticated_ui_observation",
+      "ref": "anonymized aggregate only; no private artifact retained",
+      "verification_status": "verified",
+      "strength": "high",
+      "claim_supported": "The eight reference tasks completed read-only in authenticated Chrome with the retained timings and interaction counts."
+    }
+  ]
+}

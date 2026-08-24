@@ -1,0 +1,56 @@
+{
+  "schema_version": "ct117-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "blocked_on_distinct_review",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "candidate": {
+    "revision": "d524c5c7eff38664bad7b8fb612283f2e2092563",
+    "tree": "4c5e21bbf45386f11face5c034dd433b663d14e0"
+  },
+  "issue": {
+    "identifier": "CT-117",
+    "stable_id": "474ecd99-7266-4dc4-bc53-52d2bf7be92e",
+    "revision": 2,
+    "status": "In Progress",
+    "output_done": true,
+    "accepted": false,
+    "blocked": false,
+    "requirement_refs": ["R-104", "R-105", "R-110"],
+    "test_refs": ["P-T19", "P-T20"]
+  },
+  "session": {
+    "session_id": "CT117-IMPLEMENT-20260822T204149Z",
+    "actor_id": "codex-application-engineering",
+    "mode": "code_mutating"
+  },
+  "changed_files": [
+    "apps/web/src/issues.tsx",
+    "apps/web/src/textarea-autosize.ts",
+    "apps/web/tests/issue-title-autosize.test.ts"
+  ],
+  "checks": {
+    "focused": "passed",
+    "complete": "passed",
+    "typecheck": "passed",
+    "release_audit": "passed",
+    "build": "passed",
+    "chrome": "passed_bounded",
+    "distinct_application_review": "pending"
+  },
+  "blockers": [
+    "A distinct application reviewer must inspect the exact three-file diff and rerun the declared checks before CT-117 can move to Done."
+  ],
+  "stale_downstream_state": [
+    "CT-12 exact-candidate captures and performance evidence predate d524c5c.",
+    "CT-82/P-T21 qualification predates d524c5c."
+  ],
+  "next": {
+    "action": "Run a distinct application review against d524c5c; remediate findings or accept CT-117, then refresh CT-12 and CT-82."
+  },
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

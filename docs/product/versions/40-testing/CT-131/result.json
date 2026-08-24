@@ -1,0 +1,74 @@
+{
+  "schema_version": "ct131-independent-visual-a11y-result-v1",
+  "captured_at": "2026-08-23T18:17:02.184Z",
+  "verdict": "PASS_FOR_DECLARED_P_T19_P_T20_MATRIX",
+  "issue": {
+    "identifier": "CT-131",
+    "test_ids": ["P-T19", "P-T20"],
+    "status": "Done",
+    "readback_revision": 2
+  },
+  "candidate": {
+    "sealed_revision": "307983e18f0296963bc1b4037abedde1eaa27f37",
+    "sealed_tree": "e43d2a6751cd2952b16d92bb569c79c8f4943cc6",
+    "source_set_sha256": "dcdf5366e6d63ccda95367045610e2880b9bb425f11f2ba6c97ec0481d1f5492",
+    "source_files": 1265,
+    "artifact_sha256": "69902fa2dd4ba8ac4a213220e68d9dee740a18db0694e2bdf267f6a0a12c4371",
+    "artifact_files": 113,
+    "artifact_bytes": 2054982
+  },
+  "independent_observation": {
+    "actor": "codex-independent-testing-ct131",
+    "session": "CT131-INDEPENDENT-VISUAL-307983E-20260824",
+    "browser": "Google Chrome 151.0.7922.170",
+    "platform": "macOS darwin 25.5.0 arm64",
+    "runtime": "Node v24.18.0 / npm 11.16.0 / loopback-only synthetic fixture",
+    "checks": "23/23",
+    "matrix": "60/60 unique named Light/Dark capture keys; 63 images including System; zero skips",
+    "system": "dark -> light -> dark passed",
+    "accessibility": "axe 0 violation instances/nodes; 0 deterministic contrast, overflow, duplicate-ID, or invalid ARIA failures",
+    "keyboard": "196 samples; command dialog 0/36 failures; native-date host-shadow samples manually passed with Light/Dark screenshots and next-Tab verification",
+    "performance": "2,002 issues; p75 64.2ms <= 100ms; 35 mounted rows <= 70; stable-frame delta 0; overflow 0",
+    "network": "0 outbound requests; loopback-only runtime",
+    "findings": [],
+    "raw_receipt": ".control-tower/evidence/CT-131/independent-visual-a11y-307983e.json",
+    "raw_receipt_mode": "0600",
+    "raw_receipt_bytes": 103129,
+    "raw_receipt_sha256": "1d7b385805976218f956b9978f1abe3d12b8500578ff31f0662ead7e39823fa5"
+  },
+  "scope_boundary": {
+    "external_network_used": false,
+    "external_identity_used": false,
+    "google_authorization_used": false,
+    "linear_api_mcp_or_ui_used": false,
+    "docker_used": false,
+    "postgresql_used": false,
+    "self_acceptance": false,
+    "release_claimed": false,
+    "outcomes_claimed": [],
+    "accepted": "independent current-candidate P-T19/P-T20 Chrome matrix, accessibility, keyboard, forced-state, System, and protected-performance evidence",
+    "not_accepted": [
+      "CT-3 qualified identity/legal approval",
+      "CT-12 self-acceptance",
+      "CT-13 accountable release approval",
+      "CT-14 outcomes, CT-15 retrospective, publication, cross-platform coverage, or comparative claims"
+    ]
+  },
+  "task_reconciliation": {
+    "authority": "project-local-v0.8",
+    "action": "issue-update",
+    "expected_revision": 1,
+    "readback_revision": 2,
+    "readback_status": "Done",
+    "backup_ref": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-23T18-19-07-801Z-cf70072a-a4cf-4855-a17a-be725290e4d2.json",
+    "backup_bytes": 519354,
+    "backup_sha256": "f7a6cb2e1f78523af26b622dfa7a559d38580dbbb10ccc7097b499f15646f807",
+    "provider_projection": "disabled",
+    "projection_state": "not_synced",
+    "counts": {
+      "active": 4,
+      "completed": 127,
+      "trash": 0
+    }
+  }
+}

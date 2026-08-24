@@ -1,0 +1,35 @@
+{
+  "schema_version": "ct114-implementation-handoff-v1",
+  "stage": "implementation.complete",
+  "status": "done_testing_handoff_ready",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issue": {
+    "identifier": "CT-114",
+    "stable_id": "0d73dd36-7bd4-4249-922c-839c5198422a",
+    "created_revision": 1,
+    "evidence_revision": 2,
+    "completed_revision": 3,
+    "status": "Done"
+  },
+  "source": {
+    "revision": "3a09041dc58086ebe44d1a547419ce8853ea65e8",
+    "tree": "722605485351b1fce693d03416929ae989830aaf"
+  },
+  "changed_files_ref": "docs/product/versions/v0.1.0/30-implementation/CT-114/changed-files.txt",
+  "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-114/evidence/verification-summary.json",
+  "independent_review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-114/evidence/independent-review.json",
+  "next": {
+    "skill": "ct-test-sprint",
+    "issue": "CT-12",
+    "scope": "include the accepted danger-token implementation in the exact-revision Chrome and clean-runtime candidate"
+  },
+  "blockers": [
+    "CT-12 P-T18, P-T19, and P-T20 require a complete current matrix for product revision 279a9b2.",
+    "P-T21 qualification is stale and must rerun for product revision 279a9b2."
+  ],
+  "outcomes_claimed": []
+}

@@ -1,0 +1,207 @@
+{
+  "schema_version": "release-review-request-v1",
+  "issue": "CT-13",
+  "status": "accountable_review_required",
+  "candidate": {
+    "source_revision": "b5996f930252fb5a20ff4f57dd87354ecea0d4f3",
+    "source_file_count": 1279,
+    "source_sha256": "6049dde44f36c97a3776ca2eaee18c8a946c89137056e9bef314c43323a08fd8"
+  },
+  "scopes": [
+    {
+      "id": "asset_provenance",
+      "artifacts": [
+        {
+          "path": "ops/release/asset-provenance.json",
+          "exists": true,
+          "sha256": "e36b2fa28594bb2f0c6d7146e68a7f036eb544e11456ff1abdf033158ff9af70"
+        }
+      ],
+      "state": {
+        "technical_complete": true,
+        "manifest_status": "ready_for_accountable_review",
+        "review_status": "pending",
+        "records": 266
+      }
+    },
+    {
+      "id": "copy_provenance",
+      "artifacts": [
+        {
+          "path": "ops/release/copy-provenance.json",
+          "exists": true,
+          "sha256": "6ebb46f1dd68eb76588d273fc9554dc7db189fe95f9383f4854471040d0cf9e4"
+        }
+      ],
+      "state": {
+        "technical_complete": true,
+        "manifest_status": "ready_for_accountable_review",
+        "review_status": "pending",
+        "records": 50
+      }
+    },
+    {
+      "id": "public_identity_and_clean_room",
+      "artifacts": [
+        {
+          "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/result.json",
+          "exists": true,
+          "sha256": "8afa63e748fa0d2a9033a204d49214da2145c2f6713176503b1cde377b035993"
+        },
+        {
+          "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-request.json",
+          "exists": true,
+          "sha256": "1c6ccbdac3a7ad034909a3562fefd1c6f84767bb755f27f52303da32b21c5a12"
+        },
+        {
+          "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-acceptance.json",
+          "exists": false,
+          "sha256": null
+        }
+      ],
+      "state": {
+        "decision_status": "sponsor_decision_recorded_review_required",
+        "completed": false
+      }
+    },
+    {
+      "id": "public_release_candidate",
+      "artifacts": [
+        {
+          "path": "ops/release/audit-policy.json",
+          "exists": true,
+          "sha256": "ce43807a2c6e6f53a1012e20169c8d2aaa3cc708aefe40ee5dda8ea6e09ea3af"
+        },
+        {
+          "path": "LICENSE",
+          "exists": true,
+          "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+        },
+        {
+          "path": "package.json",
+          "exists": true,
+          "sha256": "f107ff1154c9dededacd0d63ae6de07d3949c122539856bdde9c7cfd84ba6165"
+        },
+        {
+          "path": "package-lock.json",
+          "exists": true,
+          "sha256": "fd719192d99ee14779bc3dc5fcc910da030ac889a45d78600b93e515cce67cca"
+        },
+        {
+          "path": "ops/release/dependency-license-inventory.json",
+          "exists": true,
+          "sha256": "6dba383bc3b554743409f6bd71f6609fe0934dbf188948b26b5b640fdff34e14"
+        },
+        {
+          "path": "ops/release/reproducible-build.json",
+          "exists": true,
+          "sha256": "972502b5d5c235ee9c72832ffd8536f3683fb7219d09373e6793487fe7873804"
+        },
+        {
+          "path": "docs/product/versions/v0.1.0/40-testing/CT-12/result.json",
+          "exists": true,
+          "sha256": "746e4dc85d6108b30db629accc426634052bf2a88d3ffcff8ad772f82ff393d9"
+        }
+      ],
+      "state": {
+        "checks": [
+          {
+            "id": "source_revision",
+            "status": "PASS"
+          },
+          {
+            "id": "public_identity_decision",
+            "status": "BLOCKED"
+          },
+          {
+            "id": "working_codename_removal",
+            "status": "BLOCKED"
+          },
+          {
+            "id": "project_license",
+            "status": "PASS"
+          },
+          {
+            "id": "dependency_metadata_inventory",
+            "status": "PASS"
+          },
+          {
+            "id": "third_party_notices",
+            "status": "BLOCKED"
+          },
+          {
+            "id": "private_path_controls",
+            "status": "PASS"
+          },
+          {
+            "id": "private_artifact_scan",
+            "status": "PASS"
+          },
+          {
+            "id": "asset_provenance",
+            "status": "BLOCKED"
+          },
+          {
+            "id": "copy_provenance",
+            "status": "BLOCKED"
+          },
+          {
+            "id": "contribution_and_security_policy",
+            "status": "PASS"
+          },
+          {
+            "id": "reproducible_build_inputs",
+            "status": "PASS"
+          },
+          {
+            "id": "clean_host_network_denied_runtime",
+            "status": "PASS"
+          }
+        ]
+      }
+    },
+    {
+      "id": "third_party_notices",
+      "artifacts": [
+        {
+          "path": "THIRD_PARTY_NOTICES.md",
+          "exists": true,
+          "sha256": "19ec59372c85259cc14258c9f4187968a078ab263f79313a9247ee2bb450ff67"
+        },
+        {
+          "path": "ops/release/third-party-notices.json",
+          "exists": true,
+          "sha256": "fb626e1bd4905f0ac0cfbb2460425f21b73c234bb1c551ab29404a9d586f63bc"
+        }
+      ],
+      "state": {
+        "technical_complete": true,
+        "manifest_status": "ready_for_accountable_review",
+        "review_status": "pending",
+        "records": 252
+      }
+    }
+  ],
+  "acceptance_contract": {
+    "schema_version": "release-review-acceptance-v1",
+    "status": "accepted",
+    "required_reviewer_fields": [
+      "name",
+      "role",
+      "qualification"
+    ],
+    "required_fields": [
+      "reviewed_at",
+      "jurisdictions",
+      "request_sha256",
+      "accepted_scopes"
+    ],
+    "required_scopes": [
+      "asset_provenance",
+      "copy_provenance",
+      "public_identity_and_clean_room",
+      "public_release_candidate",
+      "third_party_notices"
+    ]
+  }
+}

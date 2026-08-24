@@ -1,0 +1,50 @@
+{
+  "schema_version": "ct49-implementation-result-v1",
+  "captured_at": "2026-08-20T11:00:13Z",
+  "verdict": "IMPLEMENTED_AWAITING_BROWSER_VERIFICATION",
+  "issue": {
+    "identifier": "CT-49",
+    "id": "4ff15472-ea6e-4ef8-acc8-9eda80e9c0b2",
+    "implementation_revision": 5,
+    "expected_completion_revision": 6
+  },
+  "checks": {
+    "focused_test_files": 6,
+    "focused_tests_passed": 33,
+    "complete_test_files": 31,
+    "complete_tests_passed": 187,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "integration_test_files_skipped": 7,
+    "integration_tests_skipped": 17,
+    "database_verification": "not_run_missing_test_credentials",
+    "vite_modules": 1926,
+    "css_bytes": 72887,
+    "projects_chunk_bytes": 37379,
+    "issues_chunk_bytes": 108779,
+    "index_chunk_bytes": 276041,
+    "editor_chunk_bytes": 402713,
+    "runtime_chunk_bytes": 589,
+    "html_bytes": 663,
+    "final_vite_chunk_warning": false,
+    "fixture_host_checks": 4,
+    "fixture_host_checks_passed": 4,
+    "browser_captures": 0,
+    "browser_assertions_claimed": 0,
+    "browser_verification": "deferred_permission_denied"
+  },
+  "source_hashes": {
+    "packages/domain/src/index.ts": "ddc8076607f4ad0d71a584ed1ad8fa98d751d61a091bd7063f505007438aad55",
+    "packages/domain/tests/domain.test.ts": "4356db086ef600f63d43b5a2f24c45f8707251d268133493884e97cc1c9b8f2b",
+    "apps/web/src/App.tsx": "8df9d3343b1b5236264af1ed927f3b9c28847c87dd5f49612b2d891fbd8583b6",
+    "apps/web/src/projects.tsx": "4ca1f18af4ae96758c939c021db38744a1f0f38aa2f726ca24f8942223b12aab",
+    "apps/web/src/issues.tsx": "da83bcd95969d347fa7f4cdc7477b9ca214ecf0154f00c04982199756c7a31b2",
+    "apps/web/tests/global-shortcuts.test.ts": "dad02267bea65ea72065bd884697fd1cb0ead3dc68dbc6a8fabf5de1a3419773",
+    "apps/web/tests/local-keyboard-actions.test.ts": "71338969ec89f7150bccae0e196263e100bbb9fdd75e8d9a0935add852364997",
+    "apps/web/tests/project-row-interactions.test.ts": "479d7cc79a70b6168f9f9a3e337db86646e8965982f8042182015257b3dab7d0",
+    "apps/web/tests/table-semantics.test.ts": "3bd65bdf52c4008e5d233c7bd9e80604ab9b25bd994221b7773b1316f33a7a6e",
+    "apps/web/tests/workspace-capabilities.test.ts": "13af2eb7d3d1b1ab610a89d281b96a5de1a5a822aeabe2647d9b330603851f60",
+    "scripts/serve-visual-fixture.mjs": "e549ff4a344fc8652ee41ec36beb3ccdad6195c1ef77959a0aa1db5d1ca695ca"
+  },
+  "outcomes_claimed": []
+}

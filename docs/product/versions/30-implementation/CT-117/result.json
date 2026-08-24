@@ -1,0 +1,51 @@
+{
+  "schema_version": "ct117-implementation-result-v1",
+  "captured_at": "2026-08-22T20:56:14.054Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_REVIEW_PENDING",
+  "issue": {
+    "identifier": "CT-117",
+    "id": "474ecd99-7266-4dc4-bc53-52d2bf7be92e",
+    "revision": 2,
+    "status": "In Progress"
+  },
+  "source": {
+    "revision": "d524c5c7eff38664bad7b8fb612283f2e2092563",
+    "tree": "4c5e21bbf45386f11face5c034dd433b663d14e0"
+  },
+  "resolution": {
+    "long_title_clipping_removed": true,
+    "responsive_reflow_supported": true,
+    "shrink_back_supported": true,
+    "draft_cleanup_preserved": true,
+    "api_schema_scope_or_transfer_changed": false
+  },
+  "checks": {
+    "focused_test_files": 4,
+    "focused_tests_passed": 18,
+    "complete_test_files": 73,
+    "complete_tests_passed": 478,
+    "workspaces_typechecked": 8,
+    "release_audit_tests_passed": 10,
+    "vite_modules": 1953,
+    "build_warnings": 0,
+    "chrome_bounded_checks_passed": 6,
+    "independent_application_review": "pending"
+  },
+  "task_reconciliation": {
+    "authority": "project-local-v0.8",
+    "expected_revision": 1,
+    "readback_revision": 2,
+    "readback_status": "In Progress",
+    "milestone": "S3 — Implementation",
+    "store_health": "ready",
+    "provider_projection": "disabled",
+    "projection_state": "not_synced",
+    "backup_ref": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-22T20-56-14-043Z-1f63754b-1b2b-4c3f-a095-39e360ec04be.json",
+    "backup_bytes": 469954,
+    "backup_package_sha256": "8baa2169184034514b697b85babdd924c476685133e1e036f7efc09e9255dfdd",
+    "backup_file_sha256": "03aac05e5da34ee667f496d1406f28638304a862f9f779043555d88b3360f15e"
+  },
+  "browser_acceptance_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

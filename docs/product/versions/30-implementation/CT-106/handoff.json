@@ -1,0 +1,33 @@
+{
+  "schema_version": "ct106-implementation-handoff-v1",
+  "stage": "implementation.testing-handoff",
+  "status": "implementation_complete_browser_evidence_recorded",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issue": {
+    "identifier": "CT-106",
+    "stable_id": "ac8d8b25-e69c-4220-a466-ac0ab7587d06",
+    "created_revision": 1,
+    "completion_revision": 2
+  },
+  "source": {
+    "revision": "cf99bb834f544633ad820328817dcc2320d09744",
+    "tree": "5bb99828de1171fa47137fe497b062212248f454"
+  },
+  "changed_files_ref": "docs/product/versions/v0.1.0/30-implementation/CT-106/changed-files.txt",
+  "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-106/evidence/verification-summary.json",
+  "next": {
+    "skill": "ct-test-sprint",
+    "issue": "CT-12",
+    "scope": "continue the unfinished P-T18, P-T19, and P-T20 matrices; treat this drawer check as bounded current-build evidence"
+  },
+  "blockers": [
+    "The complete workflow, accessibility, responsive, golden, and performance matrices remain unfinished.",
+    "Fresh independent P-T21 qualification is required for product revision cf99bb8.",
+    "CT-3 qualified identity/legal review and CT-13 accountable release acceptance remain open."
+  ],
+  "outcomes_claimed": []
+}

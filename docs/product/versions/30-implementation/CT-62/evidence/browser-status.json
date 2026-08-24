@@ -1,0 +1,61 @@
+{
+  "schema_version": "ct62-browser-status-v1",
+  "recorded_at": "2026-08-20T18:20:31Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4187/?workspace=20000000-0000-4000-8000-000000000023&view=projects&fixture=milestone-drag&project=50000000-0000-4000-8000-000000000023&projectTab=overview",
+  "synthetic_fixture": true,
+  "fixture_process": {
+    "port": 4187,
+    "build": "production",
+    "managed_session": 6084,
+    "initial_sandbox_launch": "failed_listen_eperm",
+    "managed_launch": "passed"
+  },
+  "host_attempts": [
+    {
+      "attempt": 1,
+      "status": "failed_test_payload",
+      "checks_attempted": 5,
+      "checks_passed": 4,
+      "reason": "The verification payload used revision instead of the API contract's expectedRevision; the fixture correctly returned 409 and did not mutate state."
+    },
+    {
+      "attempt": 2,
+      "status": "passed_host_network",
+      "checks_attempted": 8,
+      "checks_passed": 8,
+      "observations": {
+        "application_html_status": 200,
+        "session_status": 200,
+        "project_status": 200,
+        "initial_order": ["Interaction acceptance", "Keyboard parity", "Release rehearsal"],
+        "committed_order": ["Release rehearsal", "Interaction acceptance", "Keyboard parity"],
+        "normalized_positions": [100, 200, 300],
+        "persisted_readback": true,
+        "stale_revision_status": 409,
+        "stale_revision_code": "REVISION_CONFLICT"
+      }
+    }
+  ],
+  "browser_attempted": false,
+  "browser_captures": 0,
+  "rendered_assertions": 0,
+  "policy_reason": "The active security policy denies the approved browser surface. Alternate browser surfaces were not used.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_assertions": [
+    "mouse touch and pen gestures require the accepted threshold and use one captured pointer",
+    "before and after drop intent matches the visible row midpoint at every list position",
+    "sub-threshold non-primary adjacent no-op canceled and lost-capture gestures do not mutate",
+    "valid drops persist after readback and stale revisions retain the last committed order",
+    "pickup target cancellation commit and failure produce the intended polite announcements",
+    "focus returns to the moved milestone and keyboard Move Up and Move Down remain complete alternatives",
+    "archived milestones do not expose reorder controls",
+    "drop indicators do not shift row geometry or obscure milestone content and controls",
+    "desktop tablet and mobile scrolling containment and touch behavior remain usable",
+    "zero overlap clipped focus page-level positive overflow duplicate IDs console warnings and console errors"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": "ct53-browser-status-v1",
+  "recorded_at": "2026-08-20T13:06:42Z",
+  "status": "deferred_permission_denied",
+  "planned_targets": {
+    "owner": "http://127.0.0.1:4181/",
+    "guest": "http://127.0.0.1:4181/?fixture=guest-readonly"
+  },
+  "synthetic_fixture": true,
+  "host_checks": 6,
+  "host_checks_passed": 6,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "The deterministic owner and guest shells, sessions, and workspace milestone catalogues are reachable from the host, but access to the approved browser surface remains denied by the active security policy. The denied browser outcome was not retried through another browser surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": [
+    "Owner issue list grouped and filtered by milestone",
+    "Owner issue board with selected milestone property",
+    "Guest list and board with read-only milestone context",
+    "No milestone archived milestone and missing milestone states",
+    "Saved-view and URL reload back and forward restoration",
+    "Workspace transition loading error and retry states"
+  ],
+  "required_assertions": [
+    "milestone choices and rendered values include project context and explicit archive state",
+    "no-assignment and missing-assignment groups remain visible and named",
+    "list headers rows loading tracks and density preserve exact alignment",
+    "board cards render only selected properties while preserving status for assistive technology",
+    "guest users never receive milestone or issue mutation affordances",
+    "URL and saved-view round trips preserve group filters properties and collapse state",
+    "desktop tablet and mobile layouts have zero overlap unintended wrapping clipped focus duplicate IDs console warnings and console errors"
+  ]
+}

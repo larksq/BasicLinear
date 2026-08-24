@@ -1,0 +1,36 @@
+{
+  "schema_version": "ct45-implementation-result-v1",
+  "captured_at": "2026-08-20T08:22:24Z",
+  "verdict": "IMPLEMENTED_AWAITING_BROWSER_VERIFICATION",
+  "issue": {
+    "identifier": "CT-45",
+    "id": "e440b2d5-3c55-4d10-81a8-516b2be93654",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "checks": {
+    "focused_test_files": 4,
+    "focused_tests_passed": 34,
+    "combined_focused_test_files": 15,
+    "combined_focused_tests_passed": 95,
+    "complete_test_files": 26,
+    "complete_tests_passed": 166,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1926,
+    "css_bytes": 70935,
+    "projects_chunk_bytes": 37297,
+    "index_chunk_bytes": 279252,
+    "issues_chunk_bytes": 499991,
+    "vite_chunk_warning": false,
+    "browser_captures": 0,
+    "browser_verification": "deferred_permission_denied"
+  },
+  "source_hashes": {
+    "apps/web/src/issue-relation-groups.ts": "9ca9baf945fdb5d4a12c368070a128e653ca02dbf94c09a86e9e5f5a300636e6",
+    "apps/web/src/issues.tsx": "cc64e33c1a710894745d69484b0e54e18d086087a29643b5aa6f47d4ac91ce87",
+    "apps/web/tests/issue-relation-groups.test.ts": "df1a95f23ab30b0e11fb83e7d1561a448c52ec53e3ed4999ad8e3cd84a6d6c22",
+    "apps/web/tests/layout-contract.test.ts": "45ce21dd39e9d076637e76242334eb38fa0e52a19bb58c66dc6b1b20a87639ff"
+  },
+  "outcomes_claimed": []
+}

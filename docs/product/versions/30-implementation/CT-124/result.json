@@ -1,0 +1,53 @@
+{
+  "schema_version": "ct124-implementation-result-v1",
+  "captured_at": "2026-08-23T02:57:30Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_REVIEW_PENDING",
+  "issue": {
+    "identifier": "CT-124",
+    "id": "d3d6d768-e9d8-44b3-9d47-3e0938ca0e89",
+    "revision": 2,
+    "status": "In Progress"
+  },
+  "source": {
+    "commit": "5a33d28be383b7651a4b0d6156534aa12cc423fa",
+    "candidate_tree": "d106d3bb40a84184e7ee26c919134b01e4748679"
+  },
+  "resolution": {
+    "issue_property_collection_retained": true,
+    "nested_named_property_groups_removed": true,
+    "single_property_announcements": true,
+    "saved_view_action_group_retained": true,
+    "redundant_saved_view_label_removed": true,
+    "visual_geometry_changed": false,
+    "api_or_persistence_changed": false
+  },
+  "checks": {
+    "focused": { "files": 2, "passed": 13 },
+    "complete": { "files": 73, "passed": 481 },
+    "typecheck_workspaces": 8,
+    "release_audit_passed": 10,
+    "build_modules": 1953,
+    "build_warnings": 0,
+    "exact_chrome_semantic_checks": 2
+  },
+  "evidence": {
+    "private_receipt": ".control-tower/evidence/CT-124/implementation-5a33d28.json",
+    "private_receipt_sha256": "105f95113ff9fc6f2082703e1435d8157e4aa7763ee10db2f8f44a683f49c7a0"
+  },
+  "task_reconciliation": {
+    "expected_revision": 1,
+    "readback_revision": 2,
+    "readback_status": "In Progress",
+    "milestone": "S3 — Implementation",
+    "store_health": "ready",
+    "projection": "disabled_not_synced",
+    "backup_ref": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-23T03-04-48-041Z-0bc9cfe4-98f5-4296-8e97-098ab735c9b7.json",
+    "backup_bytes": 488256,
+    "backup_package_sha256": "e745cc26f84f9ee682cf726766957b9e602ea412d45246b5f4672f4c025c8cb6",
+    "backup_file_sha256": "f3eef2150851a6109caf983277137451b6a9ee422f0f57745abc435cd05e171c",
+    "backup_mode": "0600"
+  },
+  "independent_application_review": "pending",
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

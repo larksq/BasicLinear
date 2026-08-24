@@ -1,0 +1,13 @@
+scripts/verify-clean-runtime.mjs
+scripts/clean-runtime-network-guard.cjs
+scripts/tests/verify-clean-runtime.test.mjs
+docs/product/versions/v0.1.0/30-implementation/CT-88/session.md
+docs/product/versions/v0.1.0/30-implementation/CT-88/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-88/evidence/qualification-rehearsal.json
+docs/product/versions/v0.1.0/30-implementation/CT-88/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-88/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-88/changed-files.txt
+docs/product/versions/v0.1.0/40-testing/CT-82/rehearsal.md
+docs/product/versions/v0.1.0/40-testing/CT-82/evidence/ct88-runner-readiness.json
+docs/product/versions/v0.1.0/40-testing/CT-12/evidence/ct88-clean-runtime-tooling.json
+docs/product/versions/v0.1.0/50-outcome-review/CT-13/result.json

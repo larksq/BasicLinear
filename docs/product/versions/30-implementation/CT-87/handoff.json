@@ -1,0 +1,31 @@
+{
+  "schema_version": "ct87-implementation-handoff-v1",
+  "stage": "implementation.testing-handoff",
+  "status": "implementation_complete_browser_acceptance_pending",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issue": {
+    "identifier": "CT-87",
+    "stable_id": "dce3e8e1-c1db-4eb3-a5e4-bdff720c8d35",
+    "created_revision": 1,
+    "implementation_scope_revision": 3,
+    "expected_completion_revision": 4
+  },
+  "changed_files_ref": "docs/product/versions/v0.1.0/30-implementation/CT-87/changed-files.txt",
+  "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-87/evidence/verification-summary.json",
+  "next": {
+    "skill": "ct-test-sprint",
+    "issue": "CT-12",
+    "scope": "owner-only issue detail, quick edit, bulk, URL/saved-view grouping, and board rendered accessibility and responsive UAT"
+  },
+  "blockers": [
+    "Chrome control is unavailable in the selected Chrome profile.",
+    "The repository has no source revision.",
+    "CT-82 independent clean-user runtime acceptance remains open.",
+    "CT-3 public identity, license, and clean-room review remains open."
+  ],
+  "outcomes_claimed": []
+}

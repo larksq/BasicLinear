@@ -1,0 +1,1486 @@
+{
+  "schema_version": "1.0",
+  "issue": "CT-108",
+  "phase": "post_rename",
+  "governed_roots": [
+    "docs/product/versions/v0.1.0",
+    ".control-tower/evidence/CT-104"
+  ],
+  "acceptance": {
+    "renamed_count": 69,
+    "all_bytes_identical": true,
+    "jpeg_under_png_count": 0,
+    "stale_reference_count": 0,
+    "genuine_png_count": 19,
+    "passed": true
+  },
+  "comparisons": [
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-105/evidence/focused-rich-editor-dark-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 70620,
+        "sha256": "922d5cad0ce9ab0349c1653594bfeeaedec44626870ef9a403c2f0da3eb824a1",
+        "width": 1440,
+        "height": 900
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-105/evidence/focused-rich-editor-dark-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 70620,
+        "sha256": "922d5cad0ce9ab0349c1653594bfeeaedec44626870ef9a403c2f0da3eb824a1",
+        "width": 1440,
+        "height": 900
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-106/evidence/mobile-drawer-open-light-390x844.png",
+        "media_type": "image/jpeg",
+        "bytes": 10998,
+        "sha256": "2d0c049b7058fed95dcf6172d1a521a3d8cc9a625178705834288b522dd4625d",
+        "width": 390,
+        "height": 844
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-106/evidence/mobile-drawer-open-light-390x844.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 10998,
+        "sha256": "2d0c049b7058fed95dcf6172d1a521a3d8cc9a625178705834288b522dd4625d",
+        "width": 390,
+        "height": 844
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-107/evidence/projects-menu-open-light-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 35021,
+        "sha256": "afd612ac974dfb0dd3d9c72bf1edaed661a29ec41dc4c7acbb334d6d92eeaf1b",
+        "width": 1440,
+        "height": 900
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-107/evidence/projects-menu-open-light-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 35021,
+        "sha256": "afd612ac974dfb0dd3d9c72bf1edaed661a29ec41dc4c7acbb334d6d92eeaf1b",
+        "width": 1440,
+        "height": 900
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-19/evidence/ct12-workspace-scoped-recents.png",
+        "media_type": "image/jpeg",
+        "bytes": 49716,
+        "sha256": "7b33664cfbfae5a3d9720bf922cb7f424c49f31e1037a6e221532a6deef7e208",
+        "width": 2154,
+        "height": 1340
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-19/evidence/ct12-workspace-scoped-recents.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 49716,
+        "sha256": "7b33664cfbfae5a3d9720bf922cb7f424c49f31e1037a6e221532a6deef7e208",
+        "width": 2154,
+        "height": 1340
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-20/evidence/mobile-navigation-closed-390x844.png",
+        "media_type": "image/jpeg",
+        "bytes": 19715,
+        "sha256": "a32f2c96bb4fd0d272ba4bc38a35fcb89397204c82a7a358718954801863584a",
+        "width": 375,
+        "height": 812
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-20/evidence/mobile-navigation-closed-390x844.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 19715,
+        "sha256": "a32f2c96bb4fd0d272ba4bc38a35fcb89397204c82a7a358718954801863584a",
+        "width": 375,
+        "height": 812
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-20/evidence/mobile-navigation-open-390x844.png",
+        "media_type": "image/jpeg",
+        "bytes": 16670,
+        "sha256": "c347f896a4462fc2ff84a2cc33edff190c578ede80d042bb1708a2d16e7d3927",
+        "width": 375,
+        "height": 812
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-20/evidence/mobile-navigation-open-390x844.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 16670,
+        "sha256": "c347f896a4462fc2ff84a2cc33edff190c578ede80d042bb1708a2d16e7d3927",
+        "width": 375,
+        "height": 812
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-count-mobile-390x844.png",
+        "media_type": "image/jpeg",
+        "bytes": 23120,
+        "sha256": "880c9b4c5035508745a4442a9980a97edcb6b01ae27b439c952398fc62326ac6",
+        "width": 375,
+        "height": 812
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-count-mobile-390x844.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 23120,
+        "sha256": "880c9b4c5035508745a4442a9980a97edcb6b01ae27b439c952398fc62326ac6",
+        "width": 375,
+        "height": 812
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-filter-desktop-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 49383,
+        "sha256": "84f68d3eea0583fde0604302fbf821e7e5e28a66aebda3440285488b372e4146",
+        "width": 1425,
+        "height": 891
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-filter-desktop-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 49383,
+        "sha256": "84f68d3eea0583fde0604302fbf821e7e5e28a66aebda3440285488b372e4146",
+        "width": 1425,
+        "height": 891
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-filter-mobile-390x844.png",
+        "media_type": "image/jpeg",
+        "bytes": 24319,
+        "sha256": "d4537d9f9949c78db554226dfa303df7dab66014e36fe18a65ebc46a6cf73e12",
+        "width": 375,
+        "height": 812
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-filter-mobile-390x844.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 24319,
+        "sha256": "d4537d9f9949c78db554226dfa303df7dab66014e36fe18a65ebc46a6cf73e12",
+        "width": 375,
+        "height": 812
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/collapsed-rail-default-panel-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 64636,
+        "sha256": "b864bb6654d4130d15a169d97bad444f37d0b6637f149fc4351913f9309d9248",
+        "width": 1425,
+        "height": 891
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/collapsed-rail-default-panel-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 64636,
+        "sha256": "b864bb6654d4130d15a169d97bad444f37d0b6637f149fc4351913f9309d9248",
+        "width": 1425,
+        "height": 891
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/collapsed-rail-narrow-panel-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 66569,
+        "sha256": "68e8832bb2bd2288e5389bed2f9a4ec80b365e81e2276bcc11d1bf4d3dc68265",
+        "width": 1425,
+        "height": 891
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/collapsed-rail-narrow-panel-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 66569,
+        "sha256": "68e8832bb2bd2288e5389bed2f9a4ec80b365e81e2276bcc11d1bf4d3dc68265",
+        "width": 1425,
+        "height": 891
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/collapsed-rail-wide-panel-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 66721,
+        "sha256": "8d4841809cb4a509991dff24e23e7569f85032a5c6c9f0edc82235e12accf415",
+        "width": 1425,
+        "height": 891
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/collapsed-rail-wide-panel-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 66721,
+        "sha256": "8d4841809cb4a509991dff24e23e7569f85032a5c6c9f0edc82235e12accf415",
+        "width": 1425,
+        "height": 891
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/expanded-rail-default-panel-1440x900-fixed.png",
+        "media_type": "image/jpeg",
+        "bytes": 71461,
+        "sha256": "c4dc335713c4e9c8aea9da6bc34e242cf293e7d37790314c8b5ea1af87b9ccc9",
+        "width": 1425,
+        "height": 891
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/expanded-rail-default-panel-1440x900-fixed.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 71461,
+        "sha256": "c4dc335713c4e9c8aea9da6bc34e242cf293e7d37790314c8b5ea1af87b9ccc9",
+        "width": 1425,
+        "height": 891
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/expanded-rail-default-panel-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 68948,
+        "sha256": "c2d74b49127232077feaf0483a09eef23928f2880f9e88e1df2946420afce8f2",
+        "width": 1425,
+        "height": 891
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/expanded-rail-default-panel-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 68948,
+        "sha256": "c2d74b49127232077feaf0483a09eef23928f2880f9e88e1df2946420afce8f2",
+        "width": 1425,
+        "height": 891
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/mobile-full-width-panel-390x844.png",
+        "media_type": "image/jpeg",
+        "bytes": 28831,
+        "sha256": "9e01baae950ff6f718ab7dae068eda21701cdf15b8cf27ce94bac972407695cc",
+        "width": 375,
+        "height": 812
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/mobile-full-width-panel-390x844.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 28831,
+        "sha256": "9e01baae950ff6f718ab7dae068eda21701cdf15b8cf27ce94bac972407695cc",
+        "width": 375,
+        "height": 812
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/mobile-navigation-drawer-390x844.png",
+        "media_type": "image/jpeg",
+        "bytes": 17034,
+        "sha256": "49f0bd9f3cc5a46ec978268dd786c5875397fffb86e577977bba58333aff8dc9",
+        "width": 375,
+        "height": 812
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/mobile-navigation-drawer-390x844.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 17034,
+        "sha256": "49f0bd9f3cc5a46ec978268dd786c5875397fffb86e577977bba58333aff8dc9",
+        "width": 375,
+        "height": 812
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/desktop-default-expanded-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 69254,
+        "sha256": "bc837788b31f4b37688f422db5dd62399ab2f29c64c030e4311cfc47ca24b334",
+        "width": 1425,
+        "height": 891
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/desktop-default-expanded-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 69254,
+        "sha256": "bc837788b31f4b37688f422db5dd62399ab2f29c64c030e4311cfc47ca24b334",
+        "width": 1425,
+        "height": 891
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/mobile-drawer-closed-390x844.png",
+        "media_type": "image/jpeg",
+        "bytes": 28831,
+        "sha256": "9e01baae950ff6f718ab7dae068eda21701cdf15b8cf27ce94bac972407695cc",
+        "width": 375,
+        "height": 812
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/mobile-drawer-closed-390x844.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 28831,
+        "sha256": "9e01baae950ff6f718ab7dae068eda21701cdf15b8cf27ce94bac972407695cc",
+        "width": 375,
+        "height": 812
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/mobile-drawer-open-390x844.png",
+        "media_type": "image/jpeg",
+        "bytes": 17034,
+        "sha256": "49f0bd9f3cc5a46ec978268dd786c5875397fffb86e577977bba58333aff8dc9",
+        "width": 375,
+        "height": 812
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/mobile-drawer-open-390x844.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 17034,
+        "sha256": "49f0bd9f3cc5a46ec978268dd786c5875397fffb86e577977bba58333aff8dc9",
+        "width": 375,
+        "height": 812
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/tablet-collapsed-768x1024.png",
+        "media_type": "image/jpeg",
+        "bytes": 46267,
+        "sha256": "868683b99c23113c1db673c0fbf2201a70324bc57a746c1d30141e2ed61c077c",
+        "width": 753,
+        "height": 1004
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/tablet-collapsed-768x1024.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 46267,
+        "sha256": "868683b99c23113c1db673c0fbf2201a70324bc57a746c1d30141e2ed61c077c",
+        "width": 753,
+        "height": 1004
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/tablet-default-collapsed-1024x768.png",
+        "media_type": "image/jpeg",
+        "bytes": 45827,
+        "sha256": "dcddedafa60cf353b75f76b6a32a880e59636697c8e5c631ac6bdbede63172a5",
+        "width": 1009,
+        "height": 757
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/tablet-default-collapsed-1024x768.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 45827,
+        "sha256": "dcddedafa60cf353b75f76b6a32a880e59636697c8e5c631ac6bdbede63172a5",
+        "width": 1009,
+        "height": 757
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/tablet-explicit-expanded-1024x768.png",
+        "media_type": "image/jpeg",
+        "bytes": 48221,
+        "sha256": "3d8c9663fcaaa445f8e7a470409e5626b99bfc5c84e367081db1dc178e410a6d",
+        "width": 1009,
+        "height": 757
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/tablet-explicit-expanded-1024x768.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 48221,
+        "sha256": "3d8c9663fcaaa445f8e7a470409e5626b99bfc5c84e367081db1dc178e410a6d",
+        "width": 1009,
+        "height": 757
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-30/evidence/ct30-milestone-create-desktop-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 53315,
+        "sha256": "0cd827e3b688936c1af2b3cb00ebe914d6c416809f382b58ff1b602717960da0",
+        "width": 1425,
+        "height": 891
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-30/evidence/ct30-milestone-create-desktop-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 53315,
+        "sha256": "0cd827e3b688936c1af2b3cb00ebe914d6c416809f382b58ff1b602717960da0",
+        "width": 1425,
+        "height": 891
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-30/evidence/ct30-milestone-create-mobile-390x844.png",
+        "media_type": "image/jpeg",
+        "bytes": 27575,
+        "sha256": "d2a6240e6787fd43c8e62a0de0b057509104fd6c3ae98a780208ac249a447cf9",
+        "width": 375,
+        "height": 812
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-30/evidence/ct30-milestone-create-mobile-390x844.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 27575,
+        "sha256": "d2a6240e6787fd43c8e62a0de0b057509104fd6c3ae98a780208ac249a447cf9",
+        "width": 375,
+        "height": 812
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-31/evidence/ct31-named-dialog-desktop-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 53315,
+        "sha256": "0cd827e3b688936c1af2b3cb00ebe914d6c416809f382b58ff1b602717960da0",
+        "width": 1425,
+        "height": 891
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-31/evidence/ct31-named-dialog-desktop-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 53315,
+        "sha256": "0cd827e3b688936c1af2b3cb00ebe914d6c416809f382b58ff1b602717960da0",
+        "width": 1425,
+        "height": 891
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-31/evidence/ct31-named-dialog-mobile-390x844.png",
+        "media_type": "image/jpeg",
+        "bytes": 27575,
+        "sha256": "d2a6240e6787fd43c8e62a0de0b057509104fd6c3ae98a780208ac249a447cf9",
+        "width": 375,
+        "height": 812
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-31/evidence/ct31-named-dialog-mobile-390x844.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 27575,
+        "sha256": "d2a6240e6787fd43c8e62a0de0b057509104fd6c3ae98a780208ac249a447cf9",
+        "width": 375,
+        "height": 812
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-6/evidence/desktop-overview.png",
+        "media_type": "image/jpeg",
+        "bytes": 34683,
+        "sha256": "54415e404e827169c2ad12d41e3439e13fa70b51a2ea39812b52334348bb6b4d",
+        "width": 1440,
+        "height": 900
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-6/evidence/desktop-overview.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 34683,
+        "sha256": "54415e404e827169c2ad12d41e3439e13fa70b51a2ea39812b52334348bb6b4d",
+        "width": 1440,
+        "height": 900
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-6/evidence/desktop-workflow.png",
+        "media_type": "image/jpeg",
+        "bytes": 52528,
+        "sha256": "3886c57431e0f99897f4dcfb3ac6c51c85f7fcaa07bb5cfa1b48cd0c4529df79",
+        "width": 1440,
+        "height": 900
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-6/evidence/desktop-workflow.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 52528,
+        "sha256": "3886c57431e0f99897f4dcfb3ac6c51c85f7fcaa07bb5cfa1b48cd0c4529df79",
+        "width": 1440,
+        "height": 900
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-6/evidence/mobile-workflow.png",
+        "media_type": "image/jpeg",
+        "bytes": 23416,
+        "sha256": "175bd80134d88ba3dc438e3b9e748c97c938b47170553750369f1ebeb2676723",
+        "width": 390,
+        "height": 844
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-6/evidence/mobile-workflow.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 23416,
+        "sha256": "175bd80134d88ba3dc438e3b9e748c97c938b47170553750369f1ebeb2676723",
+        "width": 390,
+        "height": 844
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-6/evidence/tablet-workflow.png",
+        "media_type": "image/jpeg",
+        "bytes": 38980,
+        "sha256": "6fdbd6d432fd63eec12403a96ced975c6f7a065ec33fe9aae69a6fdad839f4f0",
+        "width": 885,
+        "height": 688
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-6/evidence/tablet-workflow.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 38980,
+        "sha256": "6fdbd6d432fd63eec12403a96ced975c6f7a065ec33fe9aae69a6fdad839f4f0",
+        "width": 885,
+        "height": 688
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-create-390x844.png",
+        "media_type": "image/jpeg",
+        "bytes": 25675,
+        "sha256": "978fb175c6f4d4b62d181046ac89faeea216f24b234d1d8243807bbba0b22005",
+        "width": 390,
+        "height": 844
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-create-390x844.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 25675,
+        "sha256": "978fb175c6f4d4b62d181046ac89faeea216f24b234d1d8243807bbba0b22005",
+        "width": 390,
+        "height": 844
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-detail-1024x768.png",
+        "media_type": "image/jpeg",
+        "bytes": 44941,
+        "sha256": "8336708a80b874d02cd523b5638df9d7f93c045420f1da149b6342f8a89a0c1a",
+        "width": 1009,
+        "height": 757
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-detail-1024x768.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 44941,
+        "sha256": "8336708a80b874d02cd523b5638df9d7f93c045420f1da149b6342f8a89a0c1a",
+        "width": 1009,
+        "height": 757
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-detail-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 54493,
+        "sha256": "dfee23d3f3db9585c99a69c72e389ec5c1a54f2ea9e99445587631cc4e3b878f",
+        "width": 1425,
+        "height": 891
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-detail-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 54493,
+        "sha256": "dfee23d3f3db9585c99a69c72e389ec5c1a54f2ea9e99445587631cc4e3b878f",
+        "width": 1425,
+        "height": 891
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-detail-390-full.png",
+        "media_type": "image/jpeg",
+        "bytes": 79610,
+        "sha256": "56513ce76c36c24a8a834b2cd3c00ae3790718d7f98f28e8622a5c2c27e83dfd",
+        "width": 375,
+        "height": 2556
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-detail-390-full.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 79610,
+        "sha256": "56513ce76c36c24a8a834b2cd3c00ae3790718d7f98f28e8622a5c2c27e83dfd",
+        "width": 375,
+        "height": 2556
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-detail-390x844.png",
+        "media_type": "image/jpeg",
+        "bytes": 21907,
+        "sha256": "11811d5b20f3d0b8ee2118699bfc6f5c487602febe2d79988ed785046d7a312d",
+        "width": 375,
+        "height": 812
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-detail-390x844.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 21907,
+        "sha256": "11811d5b20f3d0b8ee2118699bfc6f5c487602febe2d79988ed785046d7a312d",
+        "width": 375,
+        "height": 812
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-detail-768x800.png",
+        "media_type": "image/jpeg",
+        "bytes": 24612,
+        "sha256": "8cb02ea9721ca50a2e790db3ae8ce7ea5877fff9b8d30a1fde2f6a6a5d28dc2d",
+        "width": 753,
+        "height": 784
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-detail-768x800.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 24612,
+        "sha256": "8cb02ea9721ca50a2e790db3ae8ce7ea5877fff9b8d30a1fde2f6a6a5d28dc2d",
+        "width": 753,
+        "height": 784
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issues-list-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 43302,
+        "sha256": "437869f5663e349d628872b215af45cbb5b983ae6572caea295d4fa81a4d398c",
+        "width": 1440,
+        "height": 900
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issues-list-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 43302,
+        "sha256": "437869f5663e349d628872b215af45cbb5b983ae6572caea295d4fa81a4d398c",
+        "width": 1440,
+        "height": 900
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issues-list-390x844.png",
+        "media_type": "image/jpeg",
+        "bytes": 15789,
+        "sha256": "ff112af923c1e0a7750e0bfc9a8c497d2575844cd55d7d9618bfca5b79d93454",
+        "width": 390,
+        "height": 844
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issues-list-390x844.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 15789,
+        "sha256": "ff112af923c1e0a7750e0bfc9a8c497d2575844cd55d7d9618bfca5b79d93454",
+        "width": 390,
+        "height": 844
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issues-list-filtered-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 37365,
+        "sha256": "82dfd32cad56185c598da7670c4545bd40d971ab4046210b95ef2d97cdc00042",
+        "width": 1440,
+        "height": 900
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issues-list-filtered-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 37365,
+        "sha256": "82dfd32cad56185c598da7670c4545bd40d971ab4046210b95ef2d97cdc00042",
+        "width": 1440,
+        "height": 900
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-board-desktop-1440x1000.png",
+        "media_type": "image/jpeg",
+        "bytes": 48717,
+        "sha256": "4dd600f4ffb2208e9704485707d07a614d3fc9578a4200079e397cfc681501b2",
+        "width": 1440,
+        "height": 1000
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-board-desktop-1440x1000.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 48717,
+        "sha256": "4dd600f4ffb2208e9704485707d07a614d3fc9578a4200079e397cfc681501b2",
+        "width": 1440,
+        "height": 1000
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-mobile-390x844.png",
+        "media_type": "image/jpeg",
+        "bytes": 18738,
+        "sha256": "ef6b75e539f8840f642233ec82d3b8f78a3753341a5b6b1ea6e04338a586d96e",
+        "width": 375,
+        "height": 812
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-mobile-390x844.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 18738,
+        "sha256": "ef6b75e539f8840f642233ec82d3b8f78a3753341a5b6b1ea6e04338a586d96e",
+        "width": 375,
+        "height": 812
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-split-desktop-1440x1000.png",
+        "media_type": "image/jpeg",
+        "bytes": 68877,
+        "sha256": "ffde53eb19b49a03d8fa69e91b2153dc9cfd1355c961011f2da79b7db5d12ccd",
+        "width": 1425,
+        "height": 990
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-split-desktop-1440x1000.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 68877,
+        "sha256": "ffde53eb19b49a03d8fa69e91b2153dc9cfd1355c961011f2da79b7db5d12ccd",
+        "width": 1425,
+        "height": 990
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-tablet-768x1024.png",
+        "media_type": "image/jpeg",
+        "bytes": 26500,
+        "sha256": "1539fa2bc20f6c97906e095218b34f0ffd345b8f7b24d9658943aeb151ba08d9",
+        "width": 753,
+        "height": 1004
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-tablet-768x1024.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 26500,
+        "sha256": "1539fa2bc20f6c97906e095218b34f0ffd345b8f7b24d9658943aeb151ba08d9",
+        "width": 753,
+        "height": 1004
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/virtualization-2002-issues-1440x1000.png",
+        "media_type": "image/jpeg",
+        "bytes": 116197,
+        "sha256": "aef875c8b472995e22022e61cdc0ba7cb3bf2699e8b605ca13d143fefc753f66",
+        "width": 1425,
+        "height": 990
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/virtualization-2002-issues-1440x1000.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 116197,
+        "sha256": "aef875c8b472995e22022e61cdc0ba7cb3bf2699e8b605ca13d143fefc753f66",
+        "width": 1425,
+        "height": 990
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-issues-detail-mobile-properties-open-dark-390x844.png",
+        "media_type": "image/jpeg",
+        "bytes": 18315,
+        "sha256": "39f331d4b103c6c33457102d6ce1ca88faa6d0d69414c2a6ce6d10e3da8cead4",
+        "width": 390,
+        "height": 844
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-issues-detail-mobile-properties-open-dark-390x844.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 18315,
+        "sha256": "39f331d4b103c6c33457102d6ce1ca88faa6d0d69414c2a6ce6d10e3da8cead4",
+        "width": 390,
+        "height": 844
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-issues-detail-mobile-properties-open-light-390x844.png",
+        "media_type": "image/jpeg",
+        "bytes": 19637,
+        "sha256": "38a0fcbd784f663d013e06a7a183f3506e6f24946409e4109a5702ed66e9c871",
+        "width": 390,
+        "height": 844
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-issues-detail-mobile-properties-open-light-390x844.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 19637,
+        "sha256": "38a0fcbd784f663d013e06a7a183f3506e6f24946409e4109a5702ed66e9c871",
+        "width": 390,
+        "height": 844
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issues-list-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 53692,
+        "sha256": "66ba6be161a6cabf94bce6221dd3c5e6002dbb5b7ccddb46105b8cf37f3b77a8",
+        "width": 1440,
+        "height": 900
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issues-list-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 53692,
+        "sha256": "66ba6be161a6cabf94bce6221dd3c5e6002dbb5b7ccddb46105b8cf37f3b77a8",
+        "width": 1440,
+        "height": 900
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/my-work-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 53350,
+        "sha256": "1311cecfcda1ce76ae8f83597b964e12b7644f06ddda1d913f1cef4088ce8e49",
+        "width": 1440,
+        "height": 900
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/my-work-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 53350,
+        "sha256": "1311cecfcda1ce76ae8f83597b964e12b7644f06ddda1d913f1cef4088ce8e49",
+        "width": 1440,
+        "height": 900
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/projects-list-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 34237,
+        "sha256": "ebcddb2300ed8436e63c3e6c30a9b2457933b4d2646aa90caea019369700d643",
+        "width": 1440,
+        "height": 900
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/projects-list-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 34237,
+        "sha256": "ebcddb2300ed8436e63c3e6c30a9b2457933b4d2646aa90caea019369700d643",
+        "width": 1440,
+        "height": 900
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/saved-views-library-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 26564,
+        "sha256": "4631bc6f08ad672d48471642fd53c42326ed6916be321aaded757f97144871a8",
+        "width": 1440,
+        "height": 900
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/saved-views-library-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 26564,
+        "sha256": "4631bc6f08ad672d48471642fd53c42326ed6916be321aaded757f97144871a8",
+        "width": 1440,
+        "height": 900
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/workflow-statuses-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 35737,
+        "sha256": "909efc7e0ee6a657c05163064b7c163fd1a10f9ec37e290f25c6a7c7906f05c6",
+        "width": 1440,
+        "height": 900
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/workflow-statuses-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 35737,
+        "sha256": "909efc7e0ee6a657c05163064b7c163fd1a10f9ec37e290f25c6a7c7906f05c6",
+        "width": 1440,
+        "height": 900
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issues-list-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 53732,
+        "sha256": "957f0f20c1f2d87563cd7ee40274e456f3d4f80fb0b6d6126303b1234ec9f936",
+        "width": 1440,
+        "height": 900
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issues-list-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 53732,
+        "sha256": "957f0f20c1f2d87563cd7ee40274e456f3d4f80fb0b6d6126303b1234ec9f936",
+        "width": 1440,
+        "height": 900
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/my-work-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 53355,
+        "sha256": "81ecc53219d6cbd425712dc004001ef888c5255682d0d6b34596abb4b1fc21a1",
+        "width": 1440,
+        "height": 900
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/my-work-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 53355,
+        "sha256": "81ecc53219d6cbd425712dc004001ef888c5255682d0d6b34596abb4b1fc21a1",
+        "width": 1440,
+        "height": 900
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/projects-list-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 34412,
+        "sha256": "4334839dd77038469b5ad7abef8fd2c7735741c6514fc66d4ac8ba394e4dd607",
+        "width": 1440,
+        "height": 900
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/projects-list-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 34412,
+        "sha256": "4334839dd77038469b5ad7abef8fd2c7735741c6514fc66d4ac8ba394e4dd607",
+        "width": 1440,
+        "height": 900
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/saved-views-library-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 26715,
+        "sha256": "ad32cdb1ecc9b7010d46b61864a8b5937827b5edb8bacf72499b82bc99a8f703",
+        "width": 1440,
+        "height": 900
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/saved-views-library-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 26715,
+        "sha256": "ad32cdb1ecc9b7010d46b61864a8b5937827b5edb8bacf72499b82bc99a8f703",
+        "width": 1440,
+        "height": 900
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/workflow-statuses-1440x900.png",
+        "media_type": "image/jpeg",
+        "bytes": 35671,
+        "sha256": "e3eeb5fe9598e9265a0ee6cd5eec43786b3d21a850736cd375b2bbf35e34c38a",
+        "width": 1440,
+        "height": 900
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/workflow-statuses-1440x900.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 35671,
+        "sha256": "e3eeb5fe9598e9265a0ee6cd5eec43786b3d21a850736cd375b2bbf35e34c38a",
+        "width": 1440,
+        "height": 900
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-board-desktop-2154x1340.png",
+        "media_type": "image/jpeg",
+        "bytes": 60934,
+        "sha256": "02b33203c83889fa57fde3cb6f717b54b55dd35f6c9fbd6394fa2ba7f3dae7ab",
+        "width": 2154,
+        "height": 1340
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-board-desktop-2154x1340.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 60934,
+        "sha256": "02b33203c83889fa57fde3cb6f717b54b55dd35f6c9fbd6394fa2ba7f3dae7ab",
+        "width": 2154,
+        "height": 1340
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-detail-desktop-2154x1340.png",
+        "media_type": "image/jpeg",
+        "bytes": 101945,
+        "sha256": "2b157785a1fa71c7ce2393ec4b462c711c6529f35894c604b7ee9c2764f8d358",
+        "width": 2139,
+        "height": 1331
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-detail-desktop-2154x1340.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 101945,
+        "sha256": "2b157785a1fa71c7ce2393ec4b462c711c6529f35894c604b7ee9c2764f8d358",
+        "width": 2139,
+        "height": 1331
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-detail-mobile-390x844.png",
+        "media_type": "image/jpeg",
+        "bytes": 29146,
+        "sha256": "c7bec285dc7ef6d8a693b9ae7bfae0e537397631a86f67f497b43d37e6dc3c78",
+        "width": 375,
+        "height": 812
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-detail-mobile-390x844.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 29146,
+        "sha256": "c7bec285dc7ef6d8a693b9ae7bfae0e537397631a86f67f497b43d37e6dc3c78",
+        "width": 375,
+        "height": 812
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-list-desktop-2154x1340.png",
+        "media_type": "image/jpeg",
+        "bytes": 71280,
+        "sha256": "d976918e6b19a9561b4508df146a1f1a91e07e73f00009f303c4a108e7c3607a",
+        "width": 2154,
+        "height": 1340
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-list-desktop-2154x1340.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 71280,
+        "sha256": "d976918e6b19a9561b4508df146a1f1a91e07e73f00009f303c4a108e7c3607a",
+        "width": 2154,
+        "height": 1340
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-mobile-390x844.png",
+        "media_type": "image/jpeg",
+        "bytes": 19715,
+        "sha256": "a32f2c96bb4fd0d272ba4bc38a35fcb89397204c82a7a358718954801863584a",
+        "width": 375,
+        "height": 812
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-mobile-390x844.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 19715,
+        "sha256": "a32f2c96bb4fd0d272ba4bc38a35fcb89397204c82a7a358718954801863584a",
+        "width": 375,
+        "height": 812
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-tablet-768x1024.png",
+        "media_type": "image/jpeg",
+        "bytes": 26869,
+        "sha256": "08a3d82060f95b9ddcb8fa2cb7fb38316e58b77fd1bb6c5ba7bb172987f457f9",
+        "width": 753,
+        "height": 1004
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-tablet-768x1024.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 26869,
+        "sha256": "08a3d82060f95b9ddcb8fa2cb7fb38316e58b77fd1bb6c5ba7bb172987f457f9",
+        "width": 753,
+        "height": 1004
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/post-restart-readback-2154x1340.png",
+        "media_type": "image/jpeg",
+        "bytes": 68188,
+        "sha256": "9c8fbcfc1b9e97869859e7b0a7b0e634f59db5fcebfd03960f14c8a484eb53e4",
+        "width": 2154,
+        "height": 1340
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/post-restart-readback-2154x1340.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 68188,
+        "sha256": "9c8fbcfc1b9e97869859e7b0a7b0e634f59db5fcebfd03960f14c8a484eb53e4",
+        "width": 2154,
+        "height": 1340
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/project-milestones-desktop-2154x1340.png",
+        "media_type": "image/jpeg",
+        "bytes": 77013,
+        "sha256": "c6b1e76bc01bd5b7634638622f85fda72fe5af8f9d5857954239ca228b3c9a79",
+        "width": 2154,
+        "height": 1340
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/project-milestones-desktop-2154x1340.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 77013,
+        "sha256": "c6b1e76bc01bd5b7634638622f85fda72fe5af8f9d5857954239ca228b3c9a79",
+        "width": 2154,
+        "height": 1340
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/virtualization-2002-issues-1440x1000.png",
+        "media_type": "image/jpeg",
+        "bytes": 126230,
+        "sha256": "94d9f4feaaaeb94d6fd65519492115c07e40805cec7f85c42a5385a011d56abc",
+        "width": 1425,
+        "height": 990
+      },
+      "after": {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/virtualization-2002-issues-1440x1000.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 126230,
+        "sha256": "94d9f4feaaaeb94d6fd65519492115c07e40805cec7f85c42a5385a011d56abc",
+        "width": 1425,
+        "height": 990
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": ".control-tower/evidence/CT-104/empty-date-partial-after-sse.png",
+        "media_type": "image/jpeg",
+        "bytes": 61144,
+        "sha256": "d45980c1e5196700ab5716f259eadb1092acc1d21f743cd5dbd9e49570496ab6",
+        "width": 1440,
+        "height": 900
+      },
+      "after": {
+        "path": ".control-tower/evidence/CT-104/empty-date-partial-after-sse.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 61144,
+        "sha256": "d45980c1e5196700ab5716f259eadb1092acc1d21f743cd5dbd9e49570496ab6",
+        "width": 1440,
+        "height": 900
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": ".control-tower/evidence/CT-104/empty-date-partial-before-sse.png",
+        "media_type": "image/jpeg",
+        "bytes": 61446,
+        "sha256": "ac88ebc61d47bb96c5f31446810abf2ecf6a4756dd24598b4bda181b9c285892",
+        "width": 1440,
+        "height": 900
+      },
+      "after": {
+        "path": ".control-tower/evidence/CT-104/empty-date-partial-before-sse.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 61446,
+        "sha256": "ac88ebc61d47bb96c5f31446810abf2ecf6a4756dd24598b4bda181b9c285892",
+        "width": 1440,
+        "height": 900
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": ".control-tower/evidence/CT-104/inline-due-date-final-dark.png",
+        "media_type": "image/jpeg",
+        "bytes": 63461,
+        "sha256": "18a52401a621727c22240d09db489739feaf48e77217f0cac650ec3fa81196c4",
+        "width": 1440,
+        "height": 900
+      },
+      "after": {
+        "path": ".control-tower/evidence/CT-104/inline-due-date-final-dark.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 63461,
+        "sha256": "18a52401a621727c22240d09db489739feaf48e77217f0cac650ec3fa81196c4",
+        "width": 1440,
+        "height": 900
+      },
+      "byte_identical": true
+    },
+    {
+      "before": {
+        "path": ".control-tower/evidence/CT-104/rejected-write-restored-dark.png",
+        "media_type": "image/jpeg",
+        "bytes": 65150,
+        "sha256": "cd537fc639d6bf78dc52214ddbc1d836ebb026198eb8a87988e53d96a77436ad",
+        "width": 1440,
+        "height": 900
+      },
+      "after": {
+        "path": ".control-tower/evidence/CT-104/rejected-write-restored-dark.jpg",
+        "media_type": "image/jpeg",
+        "bytes": 65150,
+        "sha256": "cd537fc639d6bf78dc52214ddbc1d836ebb026198eb8a87988e53d96a77436ad",
+        "width": 1440,
+        "height": 900
+      },
+      "byte_identical": true
+    }
+  ],
+  "remaining_jpeg_under_png": [],
+  "stale_references": [],
+  "genuine_png": [
+    {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-25/evidence/invalid-filter-desktop-1440x900.png",
+      "media_type": "image/png",
+      "bytes": 61200,
+      "sha256": "37630c578b5bf472402adea51f772931f01409b4afedd2c02af19c9403a0958b",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-25/evidence/invalid-filter-mobile-390x844.png",
+      "media_type": "image/png",
+      "bytes": 33024,
+      "sha256": "4e44d92d48d9b9970f5e93922a3e275d695a40fbd2975bf4feceb45bfec8f565",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-26/evidence/ct26-contextual-desktop-1440x900.png",
+      "media_type": "image/png",
+      "bytes": 103064,
+      "sha256": "3977a8874cd0fd04a9cb3fddc1cd53605c294a4bb7572cf3fc86916b07292c38",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-26/evidence/ct26-direct-desktop-1440x900.png",
+      "media_type": "image/png",
+      "bytes": 83616,
+      "sha256": "d3a84004a29ce3894457c7ac0fb7bc960488b3d58862e756c4743fc3ce6cd517",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-26/evidence/ct26-direct-mobile-390x844.png",
+      "media_type": "image/png",
+      "bytes": 39048,
+      "sha256": "cc16690e257e8d35f022b5e1c71da23cea12c3031262c33ec81cbb44d86adcfd",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-28/evidence/ct28-detail-loading-desktop-1440x900.png",
+      "media_type": "image/png",
+      "bytes": 79681,
+      "sha256": "f1e1fa5f3dd6ee1707260f0e4a389585001c7aa7af3734811b83fc8581e908a8",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-28/evidence/ct28-detail-loading-mobile-390x844.png",
+      "media_type": "image/png",
+      "bytes": 78311,
+      "sha256": "e633fdd2d9b2840387a86c6acf2f3262a306066d97ba65ff7eb6ec47984b534e",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-28/evidence/ct28-issues-loading-desktop-1440x900.png",
+      "media_type": "image/png",
+      "bytes": 133190,
+      "sha256": "1691bc3970742e86ee22334063f9544b65e7d54a35d62aa07b4201281495c6bc",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-28/evidence/ct28-issues-loading-mobile-390x844.png",
+      "media_type": "image/png",
+      "bytes": 60016,
+      "sha256": "f9748ca921804c01747789968108762aa718692145425bc816e1b7d9cb7f07ff",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-issue-sections-loading-desktop-1440x900.png",
+      "media_type": "image/png",
+      "bytes": 49071,
+      "sha256": "993f534f47ea6277a8d29afd0991d518949de1c9508294c9fabb049c30003bbe",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-issue-sections-loading-mobile-390x844.png",
+      "media_type": "image/png",
+      "bytes": 17793,
+      "sha256": "b1e0c59da94c009e19a72bd75dc8c5b65acf54774df95500e532f27159fcc136",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-milestones-loading-desktop-1440x900.png",
+      "media_type": "image/png",
+      "bytes": 85225,
+      "sha256": "b9292f6d8c1a24535ae2569fb237ee7cdd0905f50ebee151fe6d8e3c1924e3d2",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-project-activity-loading-desktop-1440x900.png",
+      "media_type": "image/png",
+      "bytes": 53802,
+      "sha256": "705c0f6cda2a95b99fd378efe1270505646052d9ae1e2ceb2d5e4319f1328071",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-project-detail-loading-desktop-1440x900.png",
+      "media_type": "image/png",
+      "bytes": 36804,
+      "sha256": "376d120419843927d915e52ce9a6888645ca076be0ab0b642e5d4c0d2e9096d6",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-project-detail-loading-mobile-390x844.png",
+      "media_type": "image/png",
+      "bytes": 10343,
+      "sha256": "c12402f2bf009cfe03a78de4fd846ee65a7648cd414ef5ce0f98e9d224e9772f",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-teams-loading-mobile-390x844.png",
+      "media_type": "image/png",
+      "bytes": 10748,
+      "sha256": "155155372aabcd25ffa9024e56f4793e91b8cf2ad5a140cfe712f002e3cc6595",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-workflow-loading-desktop-1440x900.png",
+      "media_type": "image/png",
+      "bytes": 43791,
+      "sha256": "fc163e91d27c1daa22fb772e6633f8a0e086d6616f367f0f599e027b832cd0ce",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-workflow-loading-mobile-390x844.png",
+      "media_type": "image/png",
+      "bytes": 15715,
+      "sha256": "f79df60bc5126e63ed7831763d1da8e457a3ddc494fdd6f9ee07dc3ef8370548",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-workspace-loading-desktop-1440x900.png",
+      "media_type": "image/png",
+      "bytes": 57095,
+      "sha256": "8b9a18413162590dca02ec76f0a2216af2630c04ce1fb9f95707c3ebd6f11863",
+      "width": 1440,
+      "height": 900
+    }
+  ]
+}

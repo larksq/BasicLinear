@@ -1,0 +1,141 @@
+{
+  "schema_version": "ct12-exact-visual-delta-v1",
+  "captured_at": "2026-08-23T04:21:32Z",
+  "authority": {
+    "issue": "CT-12",
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "reference": {
+    "product_revision": "e1299af1bd06f7438f5010c6f6c030760c5a1dfb",
+    "product_tree": "ce6e21f1b0436e6afa1d11b1fc3f6ff471903bb3",
+    "asset": "assets/index-CpxWfAtI.js"
+  },
+  "candidate": {
+    "product_revision": "5a33d28be383b7651a4b0d6156534aa12cc423fa",
+    "product_tree": "d106d3bb40a84184e7ee26c919134b01e4748679",
+    "asset": "assets/index-W0ZGkz-8.js"
+  },
+  "fixture": {
+    "database_bytes": 253952,
+    "reference_sha256": "38a291ebe617adef1f56a021e3ef66a2d3d88c0856e40a13f478241eb0df3a3d",
+    "candidate_sha256": "38a291ebe617adef1f56a021e3ef66a2d3d88c0856e40a13f478241eb0df3a3d",
+    "byte_identical": true
+  },
+  "capture": {
+    "browser": "Chrome",
+    "viewport": {
+      "width": 1440,
+      "height": 900,
+      "device_scale_factor": 1
+    },
+    "appearances": [
+      "Light",
+      "Dark"
+    ],
+    "settle_ms": 1800,
+    "format": "JPEG",
+    "accepted_states_had_alerts": 0,
+    "accepted_states_had_document_overflow": 0
+  },
+  "source_delta": {
+    "runtime_files": [
+      "apps/web/src/issues.tsx",
+      "apps/web/src/saved-views.tsx"
+    ],
+    "test_files": [
+      "apps/web/tests/board-accessibility.test.ts",
+      "apps/web/tests/table-semantics.test.ts"
+    ],
+    "styles_changed": false,
+    "protected_list_detail_performance_path_changed": false,
+    "api_changed": false,
+    "sqlite_changed": false,
+    "schema_changed": false
+  },
+  "semantic_delta": {
+    "issue_board": {
+      "reference_regions": 1,
+      "candidate_regions": 1,
+      "reference_property_collections": 10,
+      "candidate_property_collections": 10,
+      "reference_nested_named_property_groups": 60,
+      "candidate_nested_named_property_groups": 0
+    },
+    "saved_views": {
+      "reference_tables": 1,
+      "candidate_tables": 1,
+      "reference_named_action_groups": 1,
+      "candidate_named_action_groups": 1,
+      "reference_redundant_hidden_action_labels": 1,
+      "candidate_redundant_hidden_action_labels": 0
+    },
+    "expected_delta_observed_in_light_and_dark": true
+  },
+  "images": [
+    {
+      "screen": "issues-board",
+      "appearance": "Light",
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/5a33d28/light/issues-board-1440x900.jpg",
+      "width": 1440,
+      "height": 900,
+      "bytes": 72998,
+      "sha256": "4cc13837b5543360a96ed11376e3bcc3b710674fec0d14708cd991f09156e9cc",
+      "reference_byte_identical": true
+    },
+    {
+      "screen": "saved-views-library",
+      "appearance": "Light",
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/5a33d28/light/saved-views-library-1440x900.jpg",
+      "width": 1440,
+      "height": 900,
+      "bytes": 33481,
+      "sha256": "14587debba160f8d024e1f41018383c19e97d92252482c11dcb5d360371ae4ee",
+      "reference_byte_identical": true
+    },
+    {
+      "screen": "issues-board",
+      "appearance": "Dark",
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/5a33d28/dark/issues-board-1440x900.jpg",
+      "width": 1440,
+      "height": 900,
+      "bytes": 71595,
+      "sha256": "969f1067114748a4998215b6c2e30486ef41bfceec529390733a3316ed4050e9",
+      "reference_byte_identical": true
+    },
+    {
+      "screen": "saved-views-library",
+      "appearance": "Dark",
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/5a33d28/dark/saved-views-library-1440x900.jpg",
+      "width": 1440,
+      "height": 900,
+      "bytes": 33365,
+      "sha256": "0a32339dd526db5a4dcd7d278c4f16fbe569633d3109a8981a8a8c270ef3d423",
+      "reference_byte_identical": true
+    }
+  ],
+  "comparison": {
+    "pairs": 4,
+    "byte_identical_pairs": 4,
+    "differing_files": 0,
+    "visual_geometry_findings": 0,
+    "verdict": "PASSED_EXACT_AFFECTED_SURFACE_PIXEL_DELTA"
+  },
+  "private_receipt": {
+    "path": ".control-tower/evidence/CT-12/delta-5a33d28/receipt.json",
+    "bytes": 6099,
+    "mode": "0600",
+    "sha256": "4a0807ef4019e31c790760724cee689f26b8d034446f45ba5a3073d46e4760bf"
+  },
+  "applicability": {
+    "P-T20_complete_e1299af_matrix": "applicable_with_exact_changed_surface_byte_identity",
+    "P-T20_e1299af_protected_performance": "applicable_unchanged_list_detail_path",
+    "P-T19_exact_5a33d28_accessibility_engine": "open",
+    "P-T20_live_system": "open_requires_action_time_authorization",
+    "distinct_application_review": "open",
+    "P-T21_independent_runtime": "open"
+  },
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

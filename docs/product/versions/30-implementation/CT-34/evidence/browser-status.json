@@ -1,0 +1,24 @@
+{
+  "schema_version": "ct34-browser-status-v1",
+  "recorded_at": "2026-08-20T04:45:11Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4180/",
+  "synthetic_fixture": true,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "Access to the local browser surface remains denied by the active security policy. The denied browser outcome was not retried through another surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": ["Workspace navigation", "Issues layout controls", "Issue filters", "Issue rich-text editor"],
+  "required_assertions": [
+    "exactly one active workspace destination exposes aria-current page",
+    "exactly one Issues layout control exposes aria-pressed true",
+    "exactly one filter join operator exposes aria-pressed true",
+    "rich-text tools expose the editor-reported active state",
+    "focus remains visible and stable after every state transition",
+    "zero uncontained positive horizontal overflow and zero duplicate IDs",
+    "zero console warnings and errors"
+  ]
+}

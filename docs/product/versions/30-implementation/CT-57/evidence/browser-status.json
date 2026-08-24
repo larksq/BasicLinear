@@ -1,0 +1,59 @@
+{
+  "schema_version": "ct57-browser-status-v1",
+  "recorded_at": "2026-08-20T15:36:14Z",
+  "status": "deferred_permission_denied",
+  "planned_targets": {
+    "primary_projects": "http://127.0.0.1:4182/?workspace=20000000-0000-4000-8000-000000000023&view=projects&fixture=workspace-route",
+    "secondary_projects": "http://127.0.0.1:4182/?workspace=20000000-0000-4000-8000-000000000024&view=projects&fixture=workspace-route",
+    "primary_project_detail": "http://127.0.0.1:4182/?workspace=20000000-0000-4000-8000-000000000023&view=projects&project=50000000-0000-4000-8000-000000000023&projectTab=overview&fixture=workspace-route",
+    "invalid_workspace": "http://127.0.0.1:4182/?workspace=90000000-0000-4000-8000-000000000099&view=issues&issue=70000000-0000-4000-8000-000000000023&fixture=workspace-route"
+  },
+  "synthetic_fixture": true,
+  "host_attempts": [
+    {
+      "attempt": 1,
+      "status": "failed_fixture_not_running",
+      "checks_attempted": 6,
+      "connection_failures": 6,
+      "accepted_as_product_evidence": false
+    },
+    {
+      "attempt": 2,
+      "status": "passed",
+      "checks_attempted": 6,
+      "checks_passed": 6,
+      "observations": {
+        "application_html_status": 200,
+        "session_workspace_count": 2,
+        "secondary_team_count": 1,
+        "secondary_project_count": 0,
+        "cross_workspace_primary_project_status": 404,
+        "primary_project_status": 200
+      }
+    }
+  ],
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "The exact production bundle and two-workspace fixture APIs are reachable from the host after the managed retry, but access to the approved browser surface remains denied by the active security policy. The denied browser outcome was not retried through another browser surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": [
+    "Owner primary workspace Projects Issues My work Views and detail routes",
+    "Member secondary workspace empty Projects Issues My work Views and settings routes",
+    "Guest direct route and selector behavior",
+    "Missing invalid and removed workspace routes",
+    "New workspace and optional OIDC account-link returns"
+  ],
+  "required_assertions": [
+    "only an authenticated session workspace can become active",
+    "selector reload Back and Forward keep URL picker breadcrumb role data and SSE scope synchronized",
+    "issue project milestone saved-view filter selection dialog request and contextual-history state never crosses a workspace switch",
+    "legacy links without workspace retain their direct surface while invalid workspace links reset local record state",
+    "new-workspace and OIDC account-link returns expose the canonical workspace parameter",
+    "owner member and guest capabilities remain correct",
+    "desktop tablet and mobile layouts have zero stale record flash overlap unintended wrapping clipped focus positive overflow duplicate IDs console warnings and console errors"
+  ]
+}

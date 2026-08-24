@@ -1,0 +1,41 @@
+{
+  "schema_version": "ct84-implementation-handoff-v1",
+  "stage": "implementation.testing-handoff",
+  "status": "implementation_complete_testing_pending",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issue": {
+    "identifier": "CT-84",
+    "stable_id": "1eefa911-b84a-487a-bcfc-cb76308feecf",
+    "starting_revision": 1,
+    "expected_completion_revision": 2,
+    "completion_revision": 2,
+    "status": "Done"
+  },
+  "control_tower_readback": {
+    "health": "ready",
+    "CT-84": "Done@2",
+    "CT-82": "Todo@2",
+    "CT-12": "In Progress@60",
+    "active": 6,
+    "completed": 78,
+    "trash": 0,
+    "completion_backup_sha256": "23c365675ff331140c6066306413147b635aff5223461706d03fddd63e76d16d"
+  },
+  "changed_files_ref": "docs/product/versions/v0.1.0/30-implementation/CT-84/changed-files.txt",
+  "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-84/evidence/runtime-rehearsal.json",
+  "next": {
+    "skill": "ct-test-sprint",
+    "issue": "CT-82",
+    "scope": "independent clean local install, upgrade, interruption, import, backup, restore, and network-denied acceptance"
+  },
+  "blockers": [
+    "The implementation actor cannot independently accept CT-82.",
+    "The last PostgreSQL canonical and multi-scope fixtures were not available in this rehearsal.",
+    "Source revision is unavailable because the repository has no commit."
+  ],
+  "outcomes_claimed": []
+}

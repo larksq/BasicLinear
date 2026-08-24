@@ -1,0 +1,43 @@
+{
+  "schema_version": "ct22-implementation-result-v1",
+  "captured_at": "2026-08-20T00:07:00Z",
+  "verdict": "OUTPUT_DONE_FOR_CT2",
+  "issue": {
+    "identifier": "CT-22",
+    "id": "64957198-74e6-4fd5-a5b9-422ae6a55aa9",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "checks": {
+    "focused_test_files": 1,
+    "focused_tests_passed": 5,
+    "unit_test_files": 7,
+    "unit_tests_passed": 28,
+    "typecheck_workspaces": 8,
+    "production_build_passed": true,
+    "vite_modules_transformed": 1912,
+    "pointer_path_passed": true,
+    "keyboard_path_passed": true,
+    "clear_path_passed": true,
+    "detail_escape_context_retained": true,
+    "mobile_visible_outside_controls": 0,
+    "mobile_document_scroll_width": 375
+  },
+  "benchmark": {
+    "task_id": "O-T04",
+    "viewport": "1440x900",
+    "warmup_ms": 342.7,
+    "samples_ms": [373.3, 340.6, 343.4],
+    "median_ms": 343.4,
+    "interactions": 1,
+    "errors": 0
+  },
+  "source_hashes": {
+    "apps/web/src/issue-scope.ts": "1224ffaa2315043ed3402dbf33f96ce5f171ffffba7a4b7b724c99e2882933ac",
+    "apps/web/src/issues.tsx": "e5d2974bf8b834ff6acfcc324ac8dbae33c1de88912a3075f023139b94c4f14b",
+    "apps/web/src/projects.tsx": "ebb11cddafe438c6eccdc9f308acc0d2f11caf5d23eed3c8ce0d2875bfd693f6",
+    "apps/web/src/styles.css": "3a81b3395900dca7f1274dad87ed90b22f3bdf035fe25f859d353bb70b23524e",
+    "apps/web/tests/issue-scope.test.ts": "04338eaca0fe30101a25bee1f9081da64b6913cef8622d8fd32107cd0558c08d"
+  },
+  "outcomes_claimed": []
+}

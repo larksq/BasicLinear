@@ -1,0 +1,31 @@
+{
+  "schema_version": "ct88-implementation-handoff-v1",
+  "stage": "implementation.testing-handoff",
+  "status": "implementation_complete_independent_acceptance_pending",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issue": {
+    "identifier": "CT-88",
+    "stable_id": "a3925543-7e44-4b3c-b897-3fdab7b734e1",
+    "created_revision": 1,
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "changed_files_ref": "docs/product/versions/v0.1.0/30-implementation/CT-88/changed-files.txt",
+  "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-88/evidence/qualification-rehearsal.json",
+  "next": {
+    "skill": "ct-test-sprint",
+    "issue": "CT-82",
+    "scope": "strict distinct-actor execution from a clean revision-bound checkout"
+  },
+  "blockers": [
+    "The implementing actor/session cannot independently accept CT-82.",
+    "The repository has no Git source revision and is not clean.",
+    "CT-12 rendered Chrome accessibility, responsive, fidelity, and UAT checks remain open.",
+    "CT-3 public identity, license, and clean-room review remains open."
+  ],
+  "outcomes_claimed": []
+}

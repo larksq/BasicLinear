@@ -1,0 +1,59 @@
+{
+  "schema_version": "ct115-implementation-result-v1",
+  "captured_at": "2026-08-22T17:44:13Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_REVIEW_PASSED",
+  "issue": {
+    "identifier": "CT-115",
+    "id": "915fe560-82f4-4596-ada8-00482e51d430",
+    "created_revision": 1,
+    "evidence_revision": 2,
+    "completed_revision": 4,
+    "status": "Done"
+  },
+  "source": {
+    "revision": "279a9b230c1e1e1b46354327f4858b7825270ba0",
+    "tree": "ae76a837785d211899af4c075124a609a0498e5b"
+  },
+  "resolution": {
+    "light_success_token_corrected": true,
+    "normal_text_contrast_at_least_4_5": true,
+    "dark_success_token_preserved": true,
+    "milestone_confirmation_verified": true,
+    "milestone_result_verified": true,
+    "fixture_restored": true
+  },
+  "checks": {
+    "focused_tests_passed": 6,
+    "complete_test_files": 71,
+    "complete_tests_passed": 471,
+    "workspaces_typechecked": 8,
+    "release_audit_tests_passed": 10,
+    "vite_modules": 1950,
+    "build_warnings": 0,
+    "chrome_theme_surface_states_passed": 4,
+    "chrome_audit_failures": 0,
+    "independent_application_review": "passed",
+    "P-T21": "pending_requalification_for_279a9b2"
+  },
+  "independent_review": {
+    "actor": "codex-independent-application-review-ct114-ct115",
+    "session": "CT115-INDEPENDENT-REVIEW-20260822T170318Z",
+    "verdict": "PASSED_DISTINCT_APPLICATION_REVIEW",
+    "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-115/evidence/independent-review.json",
+    "raw_sha256": "0c33fcaf8271112cd9650dddf79ede2183c199285ebba0b292cfbbfd501319b4"
+  },
+  "task_reconciliation": {
+    "authority": "project-local-v0.8",
+    "expected_revision": 3,
+    "readback_revision": 4,
+    "readback_status": "Done",
+    "provider_projection": "disabled",
+    "projection_state": "not_synced",
+    "backup_ref": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-22T17-44-13-890Z-cb110588-5218-4717-b648-a372346c4bfb.json",
+    "backup_bytes": 463961,
+    "backup_sha256": "79447fed9726704c1e1728a7b6e66950577d9ba73daf675c2d2fe7272a69e79a"
+  },
+  "browser_acceptance_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

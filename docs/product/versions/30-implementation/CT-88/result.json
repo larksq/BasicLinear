@@ -1,0 +1,50 @@
+{
+  "schema_version": "ct88-implementation-result-v1",
+  "captured_at": "2026-08-21T09:12:03.000Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_INDEPENDENT_ACCEPTANCE_PENDING",
+  "issue": {
+    "identifier": "CT-88",
+    "id": "a3925543-7e44-4b3c-b897-3fdab7b734e1",
+    "created_revision": 1,
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "resolution": {
+    "external_built_process_runner": true,
+    "artifact_hash_lock": true,
+    "clean_temporary_home_and_data": true,
+    "node_outbound_and_subprocess_guard": true,
+    "core_owner_workflow": true,
+    "interruption_restart_and_sidecar_matrix": true,
+    "backup_restore_and_transfer_matrix": true,
+    "accepted_and_rejected_upgrade_matrix": true,
+    "accepted_personal_scale": true,
+    "locked_legacy_transfer_reproduction": true
+  },
+  "checks": {
+    "focused_runner_tests_passed": 4,
+    "combined_script_tests_passed": 7,
+    "complete_test_files": 56,
+    "complete_tests_passed": 389,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1946,
+    "web_dist_bytes": 1028892,
+    "artifact_files": 111,
+    "artifact_bytes": 1993170,
+    "artifact_sha256": "2dc6cc5751d136a1c0495e68283f4052066053c850de7094567f456c2478e776",
+    "implementation_rehearsal": "passed",
+    "guarded_runtime_phases": 6,
+    "outbound_attempts": 0,
+    "accepted_scale_duration_ms": 168.02,
+    "real_audit_verdict": "NOT_READY",
+    "real_audit_pass": 5,
+    "real_audit_fail": 3,
+    "real_audit_blocked": 6
+  },
+  "independent_acceptance_claimed": false,
+  "source_revision_bound": false,
+  "browser_acceptance_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

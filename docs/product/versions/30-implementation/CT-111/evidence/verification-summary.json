@@ -1,0 +1,39 @@
+{
+  "schema_version": "ct111-verification-summary-v1",
+  "captured_at": "2026-08-22T11:22:00Z",
+  "issue": "CT-111",
+  "implementation_source": {
+    "revision": "1e960558bba51413657f75391478e56ddbdac275",
+    "tree": "6255242228edfa41f8bcef7fb8d0d3bc959e35d9"
+  },
+  "current_regression_source": {
+    "revision": "7665027c0266fa5f0be0070dd75c2541959a9eb5",
+    "tree": "573f0747c927aa0b35a1688de73c508c70665978"
+  },
+  "checks": {
+    "focused": { "files": 1, "passed": 7, "failed": 0 },
+    "complete": { "files": 70, "passed": 465, "failed": 0 },
+    "typecheck_workspaces": 8,
+    "release_audit": { "passed": 10, "failed": 0 },
+    "build": { "modules": 1949, "files": 105, "bytes": 1895747, "warnings": 0 },
+    "independent_application_review": "pending",
+    "independent_runtime": "pending_for_7665027"
+  },
+  "chrome": {
+    "family": "Chrome",
+    "version": "151.0.7922.170",
+    "url": "http://127.0.0.1:4284/",
+    "viewport": { "width": 1440, "height": 900 },
+    "theme": "light",
+    "synthetic_data_only": true,
+    "initial_retained_draft_count_after_discard_reload": 0,
+    "tab_stops_to_empty_description": 44,
+    "retained_draft_count_after_focus_only": 0,
+    "retained_draft_count_after_meaningful_input": 1,
+    "retained_draft_count_after_matching_discard": 0,
+    "issue_identity_preserved": true,
+    "full_ct12_acceptance": false
+  },
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

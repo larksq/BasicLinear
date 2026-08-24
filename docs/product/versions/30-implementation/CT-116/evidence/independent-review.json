@@ -1,0 +1,48 @@
+{
+  "schema_version": "ct-independent-application-review-receipt-v1",
+  "captured_at": "2026-08-22T19:06:18Z",
+  "issue": "CT-116",
+  "review": {
+    "actor": "codex-independent-application-review-ct116",
+    "session": "CT116-INDEPENDENT-REVIEW-20260822T185649Z",
+    "distinct_from_implementation": true,
+    "verdict": "PASSED_DISTINCT_APPLICATION_REVIEW",
+    "findings": []
+  },
+  "bindings": {
+    "implementation_revision": "f7c362562fdf0657114a862331b893e470b824c0",
+    "implementation_tree": "7b5f5af4d6f0b5ead0f403f69d4695b82779194c",
+    "parent_revision": "7a55d5c60bde8bf23d83fb12a470a98c996fa517",
+    "changed_file_count": 8,
+    "changed_file_manifest_sha256": "1bb4ad20abcff23d1104fb3903528811d99337b86102e7f3896558766c6e001d",
+    "isolated_checkout_clean_before": true,
+    "isolated_checkout_clean_after": true
+  },
+  "checks": {
+    "git_diff_check": "passed",
+    "focused_tests": {"files": 5, "passed": 42, "failed": 0},
+    "complete_regression": {"files": 72, "passed": 475, "failed": 0},
+    "workspaces_typechecked": 8,
+    "release_audit": {"passed": 10, "failed": 0},
+    "build": {"modules": 1952, "warnings": 0}
+  },
+  "environment": {
+    "operating_system": "Darwin 25.5.0 arm64",
+    "node": "v24.18.0",
+    "npm": "11.16.0"
+  },
+  "raw_evidence": {
+    "ref": ".control-tower/evidence/CT-116/independent-review-f7c3625.json",
+    "mode": "0600",
+    "bytes": 5321,
+    "sha256": "564cc63ff2134671aef805f5f8de3bca0f2c3b12f1abb06b553f2b71f79a187c"
+  },
+  "boundaries": {
+    "chrome_used": false,
+    "ct12_acceptance_claimed": false,
+    "p_t21_claimed": false,
+    "identity_or_legal_claimed": false,
+    "release_claimed": false,
+    "outcomes_claimed": []
+  }
+}

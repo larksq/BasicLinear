@@ -1,0 +1,56 @@
+{
+  "schema_version": "ct107-verification-summary-v1",
+  "captured_at": "2026-08-22T09:40:37Z",
+  "issue": "CT-107",
+  "source_revision": "cf99bb834f544633ad820328817dcc2320d09744",
+  "source_tree": "5bb99828de1171fa47137fe497b062212248f454",
+  "checks": {
+    "focused": { "files": 1, "passed": 4, "failed": 0 },
+    "complete": { "files": 70, "passed": 461, "failed": 0 },
+    "typecheck_workspaces": 8,
+    "release_audit": { "passed": 10, "failed": 0 },
+    "build": { "modules": 1949, "files": 105, "bytes": 1894235, "warnings": 0 },
+    "independent_application_review": "passed",
+    "independent_runtime": "pending_for_cf99bb8"
+  },
+  "chrome": {
+    "family": "Chrome",
+    "version": "151.0.7922.170",
+    "url": "http://127.0.0.1:4284/",
+    "viewport": { "width": 1440, "height": 900 },
+    "theme": "light",
+    "synthetic_data_only": true,
+    "closed": {
+      "expanded": false,
+      "controls": null,
+      "menu_count": 0
+    },
+    "keyboard_open": {
+      "expanded": true,
+      "controls": "project-menu-c7b767d7-d161-411e-881b-e7bcb7eac6b6",
+      "menu_id": "project-menu-c7b767d7-d161-411e-881b-e7bcb7eac6b6",
+      "focused_item": "Open project"
+    },
+    "escape_closed": {
+      "expanded": false,
+      "controls": null,
+      "menu_count": 0,
+      "focus_restored_to_row": true,
+      "focus_outline": "2px solid rgb(8, 126, 140)"
+    },
+    "page_audit": {
+      "unnamed_controls": 0,
+      "invalid_aria_references": 0,
+      "direct_text_contrast_failures": 0,
+      "horizontal_overflow": 0
+    },
+    "capture": {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-107/evidence/projects-menu-open-light-1440x900.jpg",
+      "bytes": 35021,
+      "sha256": "afd612ac974dfb0dd3d9c72bf1edaed661a29ec41dc4c7acbb334d6d92eeaf1b"
+    },
+    "full_ct12_acceptance": false
+  },
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

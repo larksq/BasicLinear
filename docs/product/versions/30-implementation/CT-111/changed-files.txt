@@ -1,0 +1,8 @@
+apps/web/src/issue-detail-drafts.ts
+apps/web/tests/issue-detail-drafts.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-111/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-111/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-111/evidence/verification-summary.json
+docs/product/versions/v0.1.0/30-implementation/CT-111/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-111/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-111/session.md

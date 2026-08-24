@@ -1,0 +1,120 @@
+{
+  "schema_version": "ct51-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-51",
+      "stable_id": "8cb0c257-1388-4be4-bb17-5ed689d0bd3a",
+      "revision": 1,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_browser_verification",
+      "requirement_refs": ["R-008", "R-010", "R-104", "R-110"],
+      "acceptance_refs": ["P-T10", "P-T11", "P-T13", "P-T18", "P-T19"],
+      "outcome_refs": ["O-001", "O-002", "O-003"],
+      "allowed_mutation_paths": [
+        "apps/web/src/App.tsx",
+        "apps/web/src/saved-views.tsx",
+        "apps/web/src/saved-view-library.ts",
+        "apps/web/src/styles.css",
+        "apps/web/tests/saved-view-library.test.ts",
+        "apps/web/tests/table-semantics.test.ts",
+        "apps/web/tests/workspace-capabilities.test.ts",
+        "apps/web/tests/layout-contract.test.ts",
+        "docs/product/versions/v0.1.0/30-implementation/CT-51",
+        "docs/product/versions/v0.1.0/40-testing/CT-12",
+        "docs/product/versions/v0.1.0/50-outcome-review/CT-13",
+        "ops/release/current-candidate.json",
+        "ops/release/current-candidate-source-manifest.json"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT51-IMPL-20260820T115615Z",
+      "actor_id": "codex-saved-view-library",
+      "issue_id": "CT-51",
+      "mode": "code_mutating",
+      "output_refs": [
+        "apps/web/src/App.tsx",
+        "apps/web/src/saved-views.tsx",
+        "apps/web/src/saved-view-library.ts",
+        "apps/web/src/styles.css",
+        "apps/web/tests/saved-view-library.test.ts",
+        "apps/web/tests/table-semantics.test.ts",
+        "apps/web/tests/workspace-capabilities.test.ts",
+        "apps/web/tests/layout-contract.test.ts"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-51/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-51/evidence.md"
+      ]
+    }
+  ],
+  "checks": [
+    {"check_id": "CT51-SAVED-VIEW-LIBRARY-CONTRACT", "issue_id": "CT-51", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-51/result.json"},
+    {"check_id": "CT51-REGRESSION", "issue_id": "CT-51", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-51/result.json"},
+    {"check_id": "CT51-TYPECHECK", "issue_id": "CT-51", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-51/result.json"},
+    {"check_id": "CT51-BUILD", "issue_id": "CT-51", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-51/result.json"},
+    {"check_id": "CT51-FIXTURE-HOST", "issue_id": "CT-51", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-51/evidence/browser-status.json"},
+    {"check_id": "CT51-DATABASE-RUNNER", "issue_id": "CT-51", "status": "skipped", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-51/evidence.md#automated-verification"},
+    {"check_id": "CT51-BROWSER", "issue_id": "CT-51", "status": "blocked", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-51/evidence/browser-status.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-51",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-51/evidence.md",
+      "basis": "Focused and complete regression, typecheck, production build, source review, workspace-safe mutation correction, owner-bound dialog correction, and owner/guest fixture host checks pass. Rendered desktop, tablet, and mobile verification remains unexecuted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["P-T10", "P-T11", "P-T13", "P-T18", "P-T19"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-51/changed-files.txt",
+    "regression_areas": [
+      "primary workspace Views navigation and breadcrumb context",
+      "active and archived Personal and Workspace saved-view sections",
+      "saved-view state summaries search sorting and empty states",
+      "exact saved-view opening and clean Build view routing",
+      "owner-only rename access archive and restore controls",
+      "guest and non-owner readable open-only behavior",
+      "revision conflicts query retry and mutation error recovery",
+      "workspace and role transitions during pending mutations",
+      "desktop tablet and mobile table geometry focus and accessibility"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-51/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-51/evidence.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-51/evidence/browser-status.json"
+    ],
+    "implementation_actor_ids": ["codex-saved-view-library"],
+    "implementation_session_ids": ["CT51-IMPL-20260820T115615Z"]
+  },
+  "outcomes": [
+    {"outcome_id": "O-001", "status": "pending"},
+    {"outcome_id": "O-002", "status": "pending"},
+    {"outcome_id": "O-003", "status": "pending"}
+  ],
+  "blockers": [
+    {
+      "id": "CT51-BROWSER-PERMISSION",
+      "description": "The approved local browser surface is unavailable under the active security policy; final owner/guest desktop, tablet, and mobile saved-view library, lifecycle, focus, accessibility, error, and responsive-geometry verification remains required."
+    }
+  ],
+  "environment_notes": [
+    "The PostgreSQL integration runner skipped seven files and 17 tests because TEST_MIGRATION_DATABASE_URL and TEST_APP_PASSWORD are absent. CT-51 changes no persistence schema, service authorization path, or RLS policy."
+  ],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issues": ["CT-51"],
+    "reason": "Run the bounded owner/guest desktop, tablet, and mobile saved-view library matrix when the approved browser surface is available."
+  }
+}

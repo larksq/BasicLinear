@@ -1,0 +1,46 @@
+{
+  "schema_version": "ct93-implementation-result-v1",
+  "captured_at": "2026-08-21T11:28:46Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING",
+  "issue": {
+    "identifier": "CT-93",
+    "id": "bc7e3113-d398-4c04-a67c-d0d2223db3f2",
+    "created_revision": 1,
+    "implementation_scope_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "resolution": {
+    "same_origin_request_boundary": true,
+    "typed_transport_error": true,
+    "readiness_probe_only": true,
+    "loopback_independent_of_external_connectivity": true,
+    "false_owner_bootstrap_blocked": true,
+    "cached_content_and_drafts_preserved": true,
+    "app_wide_disconnect_alert": true,
+    "native_retry": true,
+    "single_reconnect_announcement": true,
+    "active_queries_refreshed_after_recovery": true,
+    "issue_only_network_state_removed": true,
+    "responsive_long_message_containment": true
+  },
+  "checks": {
+    "focused_test_files": 1,
+    "focused_tests_passed": 6,
+    "complete_test_files": 60,
+    "complete_tests_passed": 410,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1947,
+    "dist_files": 109,
+    "dist_bytes": 1874334,
+    "build_warnings": 0,
+    "release_audit_tests_passed": 6,
+    "release_audit_tests_failed": 0,
+    "loopback_readiness": "ready",
+    "served_candidate_current": true,
+    "rendered_browser_captures": 0
+  },
+  "browser_acceptance_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": "ct37-implementation-result-v1",
+  "captured_at": "2026-08-20T05:20:14Z",
+  "verdict": "IMPLEMENTED_AWAITING_BROWSER_VERIFICATION",
+  "issue": {
+    "identifier": "CT-37",
+    "id": "73173adc-e98b-4051-8ba2-eb84ba0483b6",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "checks": {
+    "focused_test_files": 1,
+    "focused_tests_passed": 5,
+    "combined_focused_test_files": 6,
+    "combined_focused_tests_passed": 26,
+    "complete_test_files": 18,
+    "complete_tests_passed": 99,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1919,
+    "css_bytes": 63366,
+    "projects_chunk_bytes": 28758,
+    "index_chunk_bytes": 278211,
+    "issues_chunk_bytes": 492204,
+    "browser_captures": 0,
+    "browser_verification": "deferred_permission_denied"
+  },
+  "source_hashes": {
+    "apps/web/src/App.tsx": "5ea0316fdaf8185c4869282884859dd681848a1d178bb2952a56e401a0f7b4cc",
+    "apps/web/src/global-shortcuts.ts": "43f9cf28d4139eeb688f6308a8b2c75a57210ac43f0dbf36e3b19067510d6a90",
+    "apps/web/tests/global-shortcuts.test.ts": "2e228c5d584c575be6696f7aab8f22e611a6047c108d767d042d944202dd7c49"
+  },
+  "outcomes_claimed": []
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": "ct106-verification-summary-v1",
+  "captured_at": "2026-08-22T09:40:37Z",
+  "issue": "CT-106",
+  "source_revision": "cf99bb834f544633ad820328817dcc2320d09744",
+  "source_tree": "5bb99828de1171fa47137fe497b062212248f454",
+  "checks": {
+    "focused": { "files": 1, "passed": 1, "failed": 0 },
+    "complete": { "files": 70, "passed": 461, "failed": 0 },
+    "typecheck_workspaces": 8,
+    "release_audit": { "passed": 10, "failed": 0 },
+    "build": { "modules": 1949, "files": 105, "bytes": 1894235, "warnings": 0 },
+    "independent_application_review": "passed",
+    "independent_runtime": "pending_for_cf99bb8"
+  },
+  "chrome": {
+    "family": "Chrome",
+    "version": "151.0.7922.170",
+    "url": "http://127.0.0.1:4284/",
+    "viewport": { "width": 390, "height": 844 },
+    "synthetic_data_only": true,
+    "escape_origins": [
+      "open_navigation_trigger",
+      "close_navigation_scrim",
+      "drawer_navigation",
+      "underlying_issue_detail_control"
+    ],
+    "exact_issue_url_retained": true,
+    "drawer_closed_only": true,
+    "focus_restored_to": "Open navigation",
+    "focus_outline": "2px solid rgb(8, 126, 140)",
+    "capture": {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-106/evidence/mobile-drawer-open-light-390x844.jpg",
+      "bytes": 10998,
+      "sha256": "2d0c049b7058fed95dcf6172d1a521a3d8cc9a625178705834288b522dd4625d"
+    },
+    "full_ct12_acceptance": false
+  },
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

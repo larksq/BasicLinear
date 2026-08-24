@@ -1,0 +1,39 @@
+{
+  "schema_version": "ct49-browser-status-v1",
+  "recorded_at": "2026-08-20T11:00:13Z",
+  "status": "deferred_permission_denied",
+  "planned_targets": {
+    "owner": "http://127.0.0.1:4181/",
+    "guest": "http://127.0.0.1:4181/?fixture=guest-readonly"
+  },
+  "synthetic_fixture": true,
+  "host_checks": 4,
+  "host_checks_passed": 4,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "The current deterministic owner and guest fixture contracts are reachable from the host, but access to the approved browser surface remains denied by the active security policy. The denied browser outcome was not retried through another browser surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": [
+    "Owner project and milestone lists detail dialogs context menus and bulk controls",
+    "Guest project and milestone lists and detail surfaces",
+    "Owner active and archived issue detail relations resources comments archive and purge",
+    "Guest active and archived issue detail static content",
+    "Owner and guest workspace team membership and status administration",
+    "Owner and guest command palette and global issue-create shortcut",
+    "Owner and guest labels saved views selection and bulk actions",
+    "Workspace and role transitions while capability-sensitive state is open"
+  ],
+  "required_assertions": [
+    "owner controls remain visible operable and keyboard reachable",
+    "admin and member controls match the domain capability matrix and only owners can purge issues",
+    "guest mutation controls are absent or disabled while copy navigation and static content remain available",
+    "disabled command options are skipped and global create signals do not replay after a role change",
+    "capability-sensitive dialogs and drafts close when workspace or role changes revoke access",
+    "interactive controls have visible focus accessible names and stable dimensions",
+    "desktop tablet and mobile layouts have zero overlap uncontained overflow duplicate IDs hidden focus console warnings and console errors"
+  ]
+}

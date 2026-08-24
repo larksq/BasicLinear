@@ -1,0 +1,34 @@
+{
+  "schema_version": "ct89-implementation-handoff-v1",
+  "stage": "implementation.release-review-handoff",
+  "status": "implementation_complete_accountable_review_pending",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issue": {
+    "identifier": "CT-89",
+    "stable_id": "6da5c3bf-ecc4-471c-987c-ec3990823940",
+    "created_revision": 1,
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "changed_files_ref": "docs/product/versions/v0.1.0/30-implementation/CT-89/changed-files.txt",
+  "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-89/evidence/audit-summary.json",
+  "next": {
+    "skill": "ct-review-outcomes",
+    "issue": "CT-13",
+    "scope": "named accountable review of the exact hash-bound notice, asset, copy, identity, runtime, revision, and release evidence"
+  },
+  "blockers": [
+    "The repository has no source revision.",
+    "CT-3 qualified public-identity and clean-room review remains open.",
+    "Notice, asset, and copy evidence is technically complete but not approved.",
+    "CT-82 independent clean-runtime qualification remains open.",
+    "CT-12 Chrome-rendered accessibility, responsive, fidelity, and UAT acceptance remains open.",
+    "CT-13 accountable release acceptance remains open."
+  ],
+  "approvals_created": [],
+  "outcomes_claimed": []
+}

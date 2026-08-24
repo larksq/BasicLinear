@@ -1,0 +1,67 @@
+{
+  "schema_version": "ct2-linear-reference-baseline-v1",
+  "protocol_version": "CT-2-v1",
+  "issue": {
+    "identifier": "CT-2",
+    "id": "8f5a41e2-71a5-4e8b-9947-e30ddc6c2a51",
+    "measurement_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_task_tracking_used": false
+  },
+  "captured_window": {
+    "start": "2026-08-19T23:37:24Z",
+    "end": "2026-08-19T23:53:15Z",
+    "basis": "bounded by the local CT-2 start and CT-22 benchmark-defect creation readbacks"
+  },
+  "environment": {
+    "browser": "Google Chrome 151.0.7922.138",
+    "operating_system": "macOS 26.5.2 (25F84)",
+    "viewport_css_pixels": {"width": 1440, "height": 900},
+    "device_pixel_ratio": 1,
+    "reference_build_identity": "hosted provider revision not exposed",
+    "harness": "connected Chrome locator and visible-ready waits"
+  },
+  "trial": {
+    "operator": "scripted browser-control operator",
+    "eligible_target_user_outcome_trial": false,
+    "warmups_per_task": 1,
+    "measured_attempts_per_task": 3,
+    "setup_navigation_included": false,
+    "human_think_time_included": false
+  },
+  "tasks": [
+    {"id":"L-T01","name":"Open workspace project list","samples_ms":[3186.2,3251.8,10739.3],"median_ms":3251.8,"interactions":1,"errors":0},
+    {"id":"L-T02","name":"Open project detail","samples_ms":[3359.6,3268.9,3190.8],"median_ms":3268.9,"interactions":1,"errors":0},
+    {"id":"L-T03","name":"Reach first project milestone","samples_ms":[3206.3,3143.9,3145.9],"median_ms":3145.9,"interactions":1,"errors":0},
+    {"id":"L-T04","name":"Open project issues from milestone","samples_ms":[3209.8,3165.3,3225.7],"median_ms":3209.8,"interactions":1,"errors":0},
+    {"id":"L-T05","name":"Open workspace views","samples_ms":[3228.0,3181.2,3279.0],"median_ms":3228.0,"interactions":1,"errors":0},
+    {"id":"L-T06","name":"Open team issue list","samples_ms":[3204.5,3304.7,3250.9],"median_ms":3250.9,"interactions":1,"errors":0},
+    {"id":"L-T07","name":"Open issue detail and return with Escape","samples_ms":[3629.7,3594.7,3625.9],"median_ms":3625.9,"interactions":2,"errors":0},
+    {"id":"L-T08","name":"Search exact issue identifier","samples_ms":[3937.8,4135.3,4069.9],"median_ms":4069.9,"interactions":3,"errors":0}
+  ],
+  "aggregate": {
+    "measured_attempts": 24,
+    "errors": 0,
+    "error_rate_percent": 0,
+    "median_of_task_medians_ms": 3251.35,
+    "workflow_interactions": 11
+  },
+  "privacy": {
+    "private_workspace_names_retained": false,
+    "private_entity_titles_retained": false,
+    "private_identifiers_retained": false,
+    "private_urls_retained": false,
+    "private_raw_dom_retained": false,
+    "private_screenshots_retained": false
+  },
+  "limitations": [
+    "The hosted Linear source revision was not exposed.",
+    "Automation round-trip and visible-ready waiting dominate several timings.",
+    "The trial excludes human think time and is not an eligible-user O-002 observation.",
+    "One T01 attempt was an outlier; the predeclared median aggregation limits its effect."
+  ]
+}

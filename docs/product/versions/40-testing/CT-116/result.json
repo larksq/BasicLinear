@@ -1,0 +1,31 @@
+{
+  "schema_version": "ct116-bounded-browser-result-v1",
+  "captured_at": "2026-08-22T19:10:35Z",
+  "verdict": "BOUNDED_BROWSER_VERIFICATION_PASSED",
+  "issue": {
+    "identifier": "CT-116",
+    "id": "a0267e95-cffb-4dd2-ae3d-01dcc646f638"
+  },
+  "candidate": {
+    "revision": "f7c362562fdf0657114a862331b893e470b824c0",
+    "tree": "7b5f5af4d6f0b5ead0f403f69d4695b82779194c"
+  },
+  "browser": {
+    "family": "Chrome",
+    "major_version": 151,
+    "viewport": {"width": 1440, "height": 900, "device_pixel_ratio": 1},
+    "appearance": "Light",
+    "checks_passed": 10,
+    "checks_failed": 0,
+    "actor_independent_from_implementation": false
+  },
+  "independent_application_review": {
+    "status": "passed",
+    "chrome_used": false,
+    "receipt": "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/independent-review.json"
+  },
+  "ct12_acceptance_claimed": false,
+  "p_t21_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

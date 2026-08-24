@@ -1,0 +1,39 @@
+{
+  "schema_version": "ct91-verification-summary-v1",
+  "captured_at": "2026-08-21T10:50:29Z",
+  "issue": "CT-91",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "checks": {
+    "focused_test_files": 1,
+    "focused_tests_passed": 5,
+    "complete_test_files": 58,
+    "complete_tests_passed": 399,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1947,
+    "dist_files": 109,
+    "dist_bytes": 1864059,
+    "build_warnings": 0,
+    "release_audit_tests_passed": 6,
+    "release_audit_tests_failed": 0,
+    "post_build_readiness": "ready",
+    "served_candidate_current": true,
+    "rendered_browser_captures": 0
+  },
+  "empty_state_contract": {
+    "optional_action_region": true,
+    "true_empty_creation_action": true,
+    "filtered_zero_result_recovery": true,
+    "empty_archive_recovery": true,
+    "contextual_issue_creation_preserved": true,
+    "unrelated_view_configuration_preserved": true,
+    "read_only_empty_states_unmodified": true,
+    "long_label_containment": true
+  },
+  "browser_acceptance": "blocked_chrome_control_unavailable",
+  "outcomes_claimed": []
+}

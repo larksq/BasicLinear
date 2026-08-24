@@ -1,0 +1,39 @@
+{
+  "schema_version": "ct31-browser-matrix-v1",
+  "captured_at": "2026-08-20T04:06:57Z",
+  "browser": "Codex in-app browser",
+  "target": "http://127.0.0.1:4180/?fixture=milestone-create",
+  "synthetic_fixture": true,
+  "global_assertions": {
+    "dialog_accessible_name": "New issue for Interaction acceptance",
+    "named_role_count_before": 0,
+    "positive_horizontal_overflow_px": 0,
+    "duplicate_ids": 0,
+    "visual_overlap_observed": false,
+    "console_warnings": 0,
+    "console_errors": 0
+  },
+  "captures": [
+    {
+      "viewport": {"width": 1440, "height": 900},
+      "named_role_count_after": 1,
+      "aria_labelledby_resolves": true,
+      "label_text": "New issue for Interaction acceptance",
+      "initial_focus": {"tag": "INPUT", "name": "title", "placeholder": "Issue title"},
+      "dialog_geometry": {"width": 680, "height": 722, "x": 372.5, "y": 89},
+      "screenshot": "ct31-named-dialog-desktop-1440x900.jpg",
+      "screenshot_sha256": "0cd827e3b688936c1af2b3cb00ebe914d6c416809f382b58ff1b602717960da0"
+    },
+    {
+      "viewport": {"width": 390, "height": 844},
+      "named_role_count_after": 1,
+      "aria_labelledby_resolves": true,
+      "label_text": "New issue for Interaction acceptance",
+      "initial_focus": {"tag": "INPUT", "name": "title", "placeholder": "Issue title"},
+      "dialog_geometry": {"width": 341, "height": 814, "x": 17, "y": 15},
+      "screenshot": "ct31-named-dialog-mobile-390x844.jpg",
+      "screenshot_sha256": "d2a6240e6787fd43c8e62a0de0b057509104fd6c3ae98a780208ac249a447cf9"
+    }
+  ],
+  "close_control": {"open_dialogs_after": 0, "focus_return": "New issue"}
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "ct20-implementation-result-v1",
+  "captured_at": "2026-08-19T23:08:13Z",
+  "verdict": "OUTPUT_DONE_FOR_CT12",
+  "issue": {
+    "identifier": "CT-20",
+    "id": "00e7a13b-f2cf-4a37-b975-3d6c053c7814",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "checks": {
+    "typecheck_workspaces": 8,
+    "unit_test_files": 6,
+    "unit_tests_passed": 23,
+    "production_build_passed": true,
+    "vite_modules_transformed": 1911,
+    "mobile_closed_outside_controls": 0,
+    "mobile_closed_unnamed_controls": 0,
+    "mobile_closed_accessibility_navigation_present": false,
+    "mobile_open_named_controls": 10,
+    "mobile_open_outside_controls": 0,
+    "mobile_open_accessibility_navigation_present": true,
+    "escape_focus_return": "Open navigation",
+    "keyboard_scrim_focus_return": "Open navigation",
+    "pointer_scrim_focus_return": "Open navigation",
+    "desktop_sidebar_visible": true,
+    "document_overflow_x": 0,
+    "new_browser_warning_or_error_count": 0
+  },
+  "source_hashes": {
+    "apps/web/src/App.tsx": "7070a9c8396c18ecb0c28b2352dfe1b862fa8fd72f5f6aaf24dda819a6c95a4e",
+    "apps/web/src/styles.css": "779e28bfb7e3ea482922a480787fa604aac2c9156ef51d4ceab7a05ec9cf3902"
+  },
+  "outcomes_claimed": []
+}

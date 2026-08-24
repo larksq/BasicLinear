@@ -1,0 +1,104 @@
+{
+  "schema_version": "ct78-implementation-result-v1",
+  "captured_at": "2026-08-21T04:58:42Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_TESTING_PENDING",
+  "issue": {
+    "identifier": "CT-78",
+    "id": "3e63d5bb-8442-4441-b5bb-99cb3f8cbab9",
+    "starting_revision": 4,
+    "expected_completion_revision": 5,
+    "completion_revision": 5,
+    "status": "Done"
+  },
+  "surface": {
+    "supported_destinations": ["my-work", "projects", "issues", "views", "workflow"],
+    "fixed_owner_creation": true,
+    "fixed_internal_workspace": true,
+    "fixed_internal_team": true,
+    "saved_views_private": true,
+    "legacy_scope_canonicalized": true,
+    "owner_context_fails_closed": true,
+    "unsupported_client_auth_methods": 0,
+    "unsupported_collaboration_controls": 0
+  },
+  "security": {
+    "local_owner_request_body": false,
+    "local_owner_external_credential": false,
+    "non_loopback_rejected_before_database": true,
+    "returning_fixed_owner_session_recovery": true,
+    "remote_peer_test_status": 403
+  },
+  "checks": {
+    "focused_test_files": 5,
+    "focused_tests_passed": 31,
+    "complete_test_files": 55,
+    "complete_tests_passed": 375,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "fixture_syntax": "passed",
+    "host_requests": 4,
+    "host_requests_passed": 4,
+    "host_assertions": 9,
+    "host_assertions_passed": 9,
+    "integration_test_files_discovered": 7,
+    "integration_tests_discovered": 17,
+    "integration_test_files_skipped": 7,
+    "integration_tests_skipped": 17,
+    "integration_tests_passed": 0,
+    "integration_skip_reason": "TEST_MIGRATION_DATABASE_URL and TEST_APP_PASSWORD are absent",
+    "docker_started": false,
+    "vite_modules": 1946,
+    "css_bytes": 92589,
+    "saved_views_chunk_bytes": 8556,
+    "projects_chunk_bytes": 70554,
+    "issues_chunk_bytes": 164857,
+    "index_chunk_bytes": 286159,
+    "editor_chunk_bytes": 402713,
+    "runtime_chunk_bytes": 589,
+    "archive_chunk_bytes": 529,
+    "html_bytes": 663,
+    "dist_total_bytes": 1027209,
+    "final_vite_chunk_warning": false,
+    "release_audit_tests_passed": 2,
+    "public_release_audit": "NOT_READY",
+    "browser_captures": 0,
+    "browser_assertions_claimed": 0,
+    "browser_verification": "blocked_permission_denied"
+  },
+  "source_hashes": {
+    "apps/api/src/app.ts": "5a037c6b4ece4fd1bf94e1ccb70b1347532a45b4ae243eaa56d6834214a3ddc0",
+    "apps/api/tests/local-owner-surface.test.ts": "418df9dd68d1d2baf79b54c04242e84a4f1d213869883d0554eb265bc876a93f",
+    "apps/web/src/App.tsx": "0efabd8cf4c6cd0a7280ee32e6b08bd30c4ec10f9f0c18b847c4fcead520d747",
+    "apps/web/src/api.ts": "3ad2eb38d350fa9ea079e408f7462a7a7e40a5fde679460014d953dece7e298e",
+    "apps/web/src/components.tsx": "98dd2d054661ec6cbfba1fecd4e2c2504eea8b4b37b228494f952bdae2039549",
+    "apps/web/src/issues.tsx": "b2f3fc1915928922a2bff1616620f0ca092659ffb5840725909ec28b0af6a41b",
+    "apps/web/src/projects.tsx": "853cd77512bb40abcbf20a98525b324aabd71b0f8cd089896d7144d65ced94f6",
+    "apps/web/src/saved-view-library.ts": "f22894719dc6982ee77385253a3b69e95fa0316a69a3884d657967c73cd62ac8",
+    "apps/web/src/saved-views.tsx": "41bb2a35ace2c891ece9fb7ecbe68abfe48d279a415743eed1ead382647a4ace",
+    "apps/web/src/styles.css": "085dfd375d598ae4257ebffa28cec0e581a471e10f2fe68e87e5f8e419c1dd32",
+    "apps/web/src/workspace-navigation.ts": "01861b5bdea8856245861c2e200cb0581cd071ce7bb9ab741dbe9afa41cb786c",
+    "apps/web/tests/single-owner-surface.test.ts": "3c2c35b596557f7e83a1ca6eb1742e791ea301d2dfa6de3d7e9c18dac1725db4"
+  },
+  "control_tower_readback": {
+    "authority": "local",
+    "store": "tasks-v0.8.sqlite3",
+    "health": "ready",
+    "CT-78": {
+      "revision": 5,
+      "status": "Done",
+      "backup_sha256": "91145beafdcb5f662ce0cd48344598fe6f9ae9cf5f507da2051c62c8a00ff0d1"
+    },
+    "CT-12": {
+      "revision": 58,
+      "status": "In Progress",
+      "backup_sha256": "ff472f80da0e3e6b929a1026e55a3fd13b5ba716f15e3530dad5fc78d2a1670a"
+    },
+    "CT-13": {
+      "revision": 59,
+      "status": "Todo",
+      "backup_sha256": "4cf8f6ff43f72ec183582c87fac5d501f1b4be7d9ec86961721f17fc9f118218"
+    },
+    "provider_projection": "disabled_not_synced"
+  },
+  "outcomes_claimed": []
+}

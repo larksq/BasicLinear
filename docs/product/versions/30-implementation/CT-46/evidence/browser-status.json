@@ -1,0 +1,34 @@
+{
+  "schema_version": "ct46-browser-status-v1",
+  "recorded_at": "2026-08-20T09:04:43Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4180/",
+  "synthetic_fixture": true,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "Access to the local browser surface remains denied by the active security policy. The denied browser outcome was not retried through another surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": [
+    "Issue create dialog resources",
+    "Issue detail route resources",
+    "Issue detail panel resources",
+    "Resource edit conflict and archived states",
+    "Issue resource activity"
+  ],
+  "required_assertions": [
+    "resources render after hierarchy and peer relations and before comments",
+    "zero one and fifty resources retain stable geometry and correct counts",
+    "add edit remove-all and cancel preserve explicit ordered draft behavior",
+    "invalid labels and URLs produce visible actionable errors without committed mutation",
+    "stale resource updates restore confirmed server state and retain the attempted draft for explicit recovery",
+    "archived issues expose resource links but no resource mutation control",
+    "external links are named keyboard reachable and open without replacing issue context",
+    "resource activity labels remain readable for empty one and many before and after states",
+    "route panel tablet and mobile layouts retain keyboard reachability and visible focus",
+    "zero uncontained positive horizontal overflow overlap duplicate IDs hidden focus console warnings and console errors"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": "ct25-implementation-result-v1",
+  "captured_at": "2026-08-20T02:01:20Z",
+  "verdict": "OUTPUT_DONE_FOR_CT12",
+  "issue": {
+    "identifier": "CT-25",
+    "id": "576f5ed3-ce2c-4be0-8341-f6265751e9ab",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "checks": {
+    "focused_test_files": 2,
+    "focused_tests_passed": 10,
+    "unit_test_files": 10,
+    "unit_tests_passed": 44,
+    "typecheck_workspaces": 8,
+    "production_build_passed": true,
+    "vite_modules_transformed": 1915,
+    "issue_chunk_bytes": 488990,
+    "invalid_direct_issue_query_requests": 0,
+    "invalid_direct_issue_rows": 0,
+    "explicit_clear_issue_query_requests": 1,
+    "explicit_clear_issue_rows": 2,
+    "history_invalid_additional_issue_query_requests": 0,
+    "history_invalid_issue_rows": 0,
+    "invalid_clause_display_limit": 240,
+    "desktop_document_overflow_px": 0,
+    "mobile_document_overflow_px": 0,
+    "mobile_outside_controls": 0,
+    "console_warnings": 0,
+    "console_errors": 0
+  },
+  "source_hashes": {
+    "apps/web/package.json": "e0f799d6585b1c406e43b1b7aacf3754948b521bc6e86e9e5e4215c1b16a7c9a",
+    "package-lock.json": "6766ffa3e74a0c49ccc6bf81a47d2eef7a186ff7067bc7c00d8b32ded2f9947c",
+    "apps/web/src/issue-url-state.ts": "b67c9673d408c33576ed0c7275e298d5af06eb64da7ac8ad0be99d96a428453e",
+    "apps/web/src/issues.tsx": "5f7f382995f5acde4c8208417bc88beb96331835e3ff797d9a9381d0b0d65136",
+    "apps/web/src/styles.css": "521c44f18079f9bcfda9605e9f784c8abd20a9a84a05cd46a8785f860113eb82",
+    "apps/web/tests/issue-url-state.test.ts": "04029eec795beb2d425457afaa62db63eab5f171bb34c3c050359ec31d92174a",
+    "apps/web/tests/layout-contract.test.ts": "2650df3f5c81885bd6217b7a83f7434d0003d7db144c44925b01aa91b56956b1"
+  },
+  "screenshot_hashes": {
+    "desktop_invalid_filter": "37630c578b5bf472402adea51f772931f01409b4afedd2c02af19c9403a0958b",
+    "mobile_invalid_filter": "4e44d92d48d9b9970f5e93922a3e275d695a40fbd2975bf4feceb45bfec8f565"
+  },
+  "browser_environment": {
+    "fixture_browser": "Playwright Chromium",
+    "chrome_connected": true,
+    "chrome_new_bundle_navigation": "blocked_mac_locked",
+    "authenticated_product_evidence_changed": false
+  },
+  "outcomes_claimed": []
+}

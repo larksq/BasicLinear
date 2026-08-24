@@ -1,0 +1,13 @@
+apps/web/src/issues.tsx
+apps/web/src/textarea-autosize.ts
+apps/web/tests/issue-title-autosize.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-117/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-117/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-117/evidence/contextual-long-title-1440x900.jpg
+docs/product/versions/v0.1.0/30-implementation/CT-117/evidence/direct-long-title-1440x900.jpg
+docs/product/versions/v0.1.0/30-implementation/CT-117/evidence/direct-long-title-390x844.jpg
+docs/product/versions/v0.1.0/30-implementation/CT-117/evidence/direct-long-title-dark-1440x900.jpg
+docs/product/versions/v0.1.0/30-implementation/CT-117/evidence/verification-summary.json
+docs/product/versions/v0.1.0/30-implementation/CT-117/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-117/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-117/session.md

@@ -1,0 +1,63 @@
+{
+  "schema_version": "ct40-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {"task_store":".control-tower/tasks-v0.8.sqlite3","provider_projection":"disabled","linear_used":false},
+  "issues": [
+    {
+      "issue_id": "CT-40",
+      "stable_id": "47084bfe-cb67-4c91-8e9a-05636f7b8c34",
+      "revision": 2,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_browser_verification",
+      "requirement_refs": ["R-008", "R-103", "R-104", "R-105", "R-110"],
+      "acceptance_refs": ["R-008", "R-103", "R-104", "R-105", "R-110"],
+      "outcome_refs": ["O-001", "O-002", "O-003", "O-005"],
+      "allowed_mutation_paths": ["apps/web/src/components.tsx", "apps/web/src/issues.tsx", "apps/web/src/styles.css", "apps/web/tests/issue-loading-geometry.test.ts", "apps/web/tests/layout-contract.test.ts", "apps/web/tests/loading-skeleton.test.ts", "docs/product/versions/v0.1.0/30-implementation/CT-40"]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT40-IMPL-20260820T060944Z",
+      "actor_id": "codex-issue-loading-geometry",
+      "issue_id": "CT-40",
+      "mode": "code_mutating",
+      "output_refs": ["apps/web/src/components.tsx", "apps/web/src/issues.tsx", "apps/web/src/styles.css", "apps/web/tests/issue-loading-geometry.test.ts", "apps/web/tests/layout-contract.test.ts", "apps/web/tests/loading-skeleton.test.ts"],
+      "validation_refs": ["docs/product/versions/v0.1.0/30-implementation/CT-40/result.json", "docs/product/versions/v0.1.0/30-implementation/CT-40/evidence.md"]
+    }
+  ],
+  "checks": [
+    {"check_id":"CT40-LOADING-GEOMETRY","issue_id":"CT-40","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-40/result.json"},
+    {"check_id":"CT40-REGRESSION","issue_id":"CT-40","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-40/result.json"},
+    {"check_id":"CT40-TYPECHECK","issue_id":"CT-40","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-40/result.json"},
+    {"check_id":"CT40-BUILD","issue_id":"CT-40","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-40/result.json"},
+    {"check_id":"CT40-BROWSER","issue_id":"CT-40","status":"blocked","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-40/evidence/browser-status.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-40",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-40/evidence.md#pending-browser-matrix",
+      "basis": "Focused loading and layout integration tests, combined semantic regression, complete regression, typecheck, and production build pass. Final list and board measurement, property-track parity, persistence, loading transition, responsive scrolling, focus, and console behavior are not yet asserted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["R-008", "R-103", "R-104", "R-105", "R-110"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-40/changed-files.txt",
+    "regression_areas": ["issue list loading rows", "issue visible-property tracks", "issue board loading columns", "issue board loading cards", "saved issue layout and density", "loading semantics", "responsive data-region scrolling", "loading-to-loaded transition"],
+    "evidence_refs": ["docs/product/versions/v0.1.0/30-implementation/CT-40/result.json", "docs/product/versions/v0.1.0/30-implementation/CT-40/evidence.md", "docs/product/versions/v0.1.0/30-implementation/CT-40/evidence/browser-status.json"],
+    "implementation_actor_ids": ["codex-issue-loading-geometry"],
+    "implementation_session_ids": ["CT40-IMPL-20260820T060944Z"]
+  },
+  "outcomes": [{"outcome_id":"O-001","status":"pending"}, {"outcome_id":"O-002","status":"pending"}, {"outcome_id":"O-003","status":"pending"}, {"outcome_id":"O-005","status":"pending"}],
+  "blockers": [
+    {
+      "id": "CT40-BROWSER-PERMISSION",
+      "description": "The approved local browser surface is unavailable under the active security policy; final desktop, tablet, and mobile issue-list and board loading-geometry verification remains required."
+    }
+  ],
+  "next": {"skill":"ct-test-sprint","issues":["CT-40"],"reason":"Run the bounded synthetic desktop, tablet, and mobile issue-loading layout and density matrix when the local browser surface is approved."}
+}

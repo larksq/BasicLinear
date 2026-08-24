@@ -1,0 +1,16 @@
+{
+  "schema_version": "ct75-browser-status-v1",
+  "captured_at": "2026-08-21T04:07:01Z",
+  "status": "blocked_permission_denied",
+  "attempts_this_session": 0,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "The established security policy denies the approved browser surface; no alternate browser was used.",
+  "pending": [
+    "desktop tablet and mobile destructive-dialog geometry",
+    "keyboard opening selection submission Escape and focus return",
+    "accessible dialog name labels alert and status announcements",
+    "pending serialization and unavailable-readback recovery",
+    "long-name containment overflow duplicate IDs and console diagnostics"
+  ]
+}

@@ -1,0 +1,11 @@
+apps/web/src/issues.tsx
+apps/web/src/local-keyboard-actions.ts
+apps/web/src/projects.tsx
+apps/web/tests/board-accessibility.test.ts
+apps/web/tests/local-keyboard-actions.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-38/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-38/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-38/evidence/browser-status.json
+docs/product/versions/v0.1.0/30-implementation/CT-38/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-38/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-38/session.md

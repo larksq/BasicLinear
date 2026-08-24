@@ -1,0 +1,9 @@
+apps/web/src/App.tsx
+apps/web/src/command-palette.ts
+apps/web/tests/command-palette.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-32/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-32/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-32/evidence/browser-status.json
+docs/product/versions/v0.1.0/30-implementation/CT-32/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-32/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-32/session.md

@@ -1,0 +1,120 @@
+{
+  "schema_version": "ct116-implementation-handoff-v2",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "passed",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "candidate": {
+    "revision": "f7c362562fdf0657114a862331b893e470b824c0",
+    "tree": "7b5f5af4d6f0b5ead0f403f69d4695b82779194c"
+  },
+  "issues": [
+    {
+      "issue_id": "CT-116",
+      "stable_id": "a0267e95-cffb-4dd2-ae3d-01dcc646f638",
+      "accepted": true,
+      "blocked": false,
+      "status": "output_done",
+      "requirement_refs": ["R-003", "R-004", "R-005", "R-010"],
+      "acceptance_refs": ["CT-116-AC-DRAFT", "CT-116-AC-COMMIT", "CT-116-AC-AUTHORITY", "CT-116-AC-REGRESSION"],
+      "outcome_refs": ["O-001", "O-002"],
+      "allowed_mutation_paths": ["apps/web/src/", "apps/web/tests/"]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT116-IMPLEMENT-20260822T184413Z",
+      "actor_id": "codex-application-engineering",
+      "issue_id": "CT-116",
+      "mode": "code_mutating",
+      "allowed_paths": ["apps/web/src/", "apps/web/tests/"],
+      "output_refs": [
+        "apps/web/src/buffered-date-input.tsx",
+        "apps/web/src/issue-inline-properties.ts",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/native-date-input.ts",
+        "apps/web/src/projects.tsx",
+        "apps/web/tests/issue-inline-properties.test.ts",
+        "apps/web/tests/issue-properties-inspector.test.ts",
+        "apps/web/tests/native-date-input.test.ts"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/verification-summary.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/independent-review.json",
+        "docs/product/versions/v0.1.0/40-testing/CT-116/result.json"
+      ]
+    }
+  ],
+  "changed_files": [
+    {"path": "apps/web/src/buffered-date-input.tsx", "issue_id": "CT-116", "mutation_type": "code", "ai_session_id": "CT116-IMPLEMENT-20260822T184413Z", "risk_level": "medium", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/independent-review.json", "test_refs": ["CT116-FOCUSED", "CT116-FULL"]},
+    {"path": "apps/web/src/issue-inline-properties.ts", "issue_id": "CT-116", "mutation_type": "code", "ai_session_id": "CT116-IMPLEMENT-20260822T184413Z", "risk_level": "medium", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/independent-review.json", "test_refs": ["CT116-FOCUSED", "CT116-FULL"]},
+    {"path": "apps/web/src/issues.tsx", "issue_id": "CT-116", "mutation_type": "code", "ai_session_id": "CT116-IMPLEMENT-20260822T184413Z", "risk_level": "medium", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/independent-review.json", "test_refs": ["CT116-FOCUSED", "CT116-FULL"]},
+    {"path": "apps/web/src/native-date-input.ts", "issue_id": "CT-116", "mutation_type": "code", "ai_session_id": "CT116-IMPLEMENT-20260822T184413Z", "risk_level": "medium", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/independent-review.json", "test_refs": ["CT116-FOCUSED", "CT116-FULL"]},
+    {"path": "apps/web/src/projects.tsx", "issue_id": "CT-116", "mutation_type": "code", "ai_session_id": "CT116-IMPLEMENT-20260822T184413Z", "risk_level": "medium", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/independent-review.json", "test_refs": ["CT116-FOCUSED", "CT116-FULL", "CT116-CHROME"]},
+    {"path": "apps/web/tests/issue-inline-properties.test.ts", "issue_id": "CT-116", "mutation_type": "test", "ai_session_id": "CT116-IMPLEMENT-20260822T184413Z", "risk_level": "medium", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/independent-review.json", "test_refs": ["CT116-FOCUSED", "CT116-FULL"]},
+    {"path": "apps/web/tests/issue-properties-inspector.test.ts", "issue_id": "CT-116", "mutation_type": "test", "ai_session_id": "CT116-IMPLEMENT-20260822T184413Z", "risk_level": "medium", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/independent-review.json", "test_refs": ["CT116-FOCUSED", "CT116-FULL"]},
+    {"path": "apps/web/tests/native-date-input.test.ts", "issue_id": "CT-116", "mutation_type": "test", "ai_session_id": "CT116-IMPLEMENT-20260822T184413Z", "risk_level": "medium", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/independent-review.json", "test_refs": ["CT116-FOCUSED", "CT116-FULL"]}
+  ],
+  "checks": [
+    {"check_id": "CT116-FOCUSED", "issue_id": "CT-116", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/verification-summary.json"},
+    {"check_id": "CT116-FULL", "issue_id": "CT-116", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/verification-summary.json"},
+    {"check_id": "CT116-TYPECHECK", "issue_id": "CT-116", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/verification-summary.json"},
+    {"check_id": "CT116-RELEASE-AUDIT", "issue_id": "CT-116", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/verification-summary.json"},
+    {"check_id": "CT116-BUILD", "issue_id": "CT-116", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/verification-summary.json"},
+    {"check_id": "CT116-REVIEW", "issue_id": "CT-116", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/independent-review.json"},
+    {"check_id": "CT116-CHROME", "issue_id": "CT-116", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/40-testing/CT-116/result.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-116",
+      "status": "passed",
+      "independent": true,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/independent-review.json"
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["CT-116-AC-DRAFT", "CT-116-AC-COMMIT", "CT-116-AC-AUTHORITY", "CT-116-AC-REGRESSION"],
+    "changed_file_refs": [
+      "apps/web/src/buffered-date-input.tsx",
+      "apps/web/src/issue-inline-properties.ts",
+      "apps/web/src/issues.tsx",
+      "apps/web/src/native-date-input.ts",
+      "apps/web/src/projects.tsx",
+      "apps/web/tests/issue-inline-properties.test.ts",
+      "apps/web/tests/issue-properties-inspector.test.ts",
+      "apps/web/tests/native-date-input.test.ts"
+    ],
+    "regression_areas": [
+      "native segmented date entry",
+      "stale authority and rejected writes",
+      "project and milestone optimistic revisions",
+      "issue due-date behavior",
+      "local service restart recovery"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/verification-summary.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/independent-review.json",
+      "docs/product/versions/v0.1.0/40-testing/CT-116/result.json"
+    ],
+    "implementation_actor_ids": ["codex-application-engineering"],
+    "implementation_session_ids": ["CT116-IMPLEMENT-20260822T184413Z"]
+  },
+  "outcomes": [
+    {"outcome_id": "O-001", "status": "pending"},
+    {"outcome_id": "O-002", "status": "pending"}
+  ],
+  "blockers": [],
+  "pending_downstream_gates": [
+    "Complete CT-12 workflow, accessibility, responsive, appearance, golden, and performance matrices.",
+    "Requalify CT-82/P-T21 against exact product revision f7c3625.",
+    "Complete CT-3 qualified identity/legal review and CT-13 accountable release review."
+  ],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issue": "CT-12",
+    "scope": "credit the bounded native-date evidence and continue the unfinished exact-candidate matrices"
+  }
+}

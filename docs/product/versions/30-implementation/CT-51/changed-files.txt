@@ -1,0 +1,14 @@
+apps/web/src/App.tsx
+apps/web/src/saved-views.tsx
+apps/web/src/saved-view-library.ts
+apps/web/src/styles.css
+apps/web/tests/saved-view-library.test.ts
+apps/web/tests/table-semantics.test.ts
+apps/web/tests/workspace-capabilities.test.ts
+apps/web/tests/layout-contract.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-51/session.md
+docs/product/versions/v0.1.0/30-implementation/CT-51/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-51/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-51/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-51/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-51/evidence/browser-status.json

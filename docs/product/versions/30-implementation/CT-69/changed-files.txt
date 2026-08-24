@@ -1,0 +1,17 @@
+apps/web/src/projects.tsx
+apps/web/src/milestone-inline-edit.ts
+apps/web/src/styles.css
+apps/web/tests/milestone-inline-edit.test.ts
+apps/web/tests/workspace-capabilities.test.ts
+scripts/serve-visual-fixture.mjs
+docs/product/versions/v0.1.0/30-implementation/CT-69/session.md
+docs/product/versions/v0.1.0/30-implementation/CT-69/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-69/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-69/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-69/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-69/evidence/host-matrix.json
+docs/product/versions/v0.1.0/30-implementation/CT-69/evidence/browser-status.json
+docs/product/versions/v0.1.0/40-testing/CT-12/
+docs/product/versions/v0.1.0/50-outcome-review/CT-13/
+ops/release/asset-provenance.json
+ops/release/copy-provenance.json

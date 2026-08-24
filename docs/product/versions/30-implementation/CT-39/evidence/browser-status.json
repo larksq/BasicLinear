@@ -1,0 +1,29 @@
+{
+  "schema_version": "ct39-browser-status-v1",
+  "recorded_at": "2026-08-20T05:57:12Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4180/",
+  "synthetic_fixture": true,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "Access to the local browser surface remains denied by the active security policy. The denied browser outcome was not retried through another surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": ["Projects list", "Projects loading state", "Project density control", "Project row actions"],
+  "required_assertions": [
+    "compact loaded project rows measure exactly 32 pixels",
+    "default loaded project rows measure exactly 36 pixels",
+    "comfortable loaded project rows measure exactly 44 pixels",
+    "the first visit defaults to 36-pixel project rows",
+    "project loading rows match the selected loaded-row density",
+    "each selected density survives reload and invalid storage falls back to default",
+    "project names icons metadata progress and row actions remain contained and reachable",
+    "pointer keyboard and nested-control row actions retain their behavior",
+    "responsive columns remain coherent and any data-region scrolling is explicit",
+    "all controls retain accessible names with zero uncontained positive horizontal overflow and zero duplicate IDs",
+    "zero console warnings and errors"
+  ]
+}

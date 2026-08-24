@@ -1,0 +1,41 @@
+{
+  "schema_version": "ct85-implementation-handoff-v1",
+  "stage": "implementation.testing-handoff",
+  "status": "implementation_complete_testing_pending",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issue": {
+    "identifier": "CT-85",
+    "stable_id": "46b9e2bf-1caa-40ce-9953-113fc6c41370",
+    "starting_revision": 1,
+    "expected_completion_revision": 2,
+    "completion_revision": 2,
+    "status": "Done"
+  },
+  "control_tower_readback": {
+    "health": "ready",
+    "CT-85": "Done@2",
+    "CT-82": "Todo@3",
+    "CT-12": "In Progress@61",
+    "active": 6,
+    "completed": 79,
+    "trash": 0,
+    "completion_backup_sha256": "0133f45d530cc84ee53f7e50f25ac28c0184eaa13327c46ede6298aad84d101d"
+  },
+  "changed_files_ref": "docs/product/versions/v0.1.0/30-implementation/CT-85/changed-files.txt",
+  "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-85/evidence/transfer-rehearsal.json",
+  "next": {
+    "skill": "ct-test-sprint",
+    "issue": "CT-82",
+    "scope": "independent locked-artifact, offline, interruption, upgrade, backup, restore, and source-revision acceptance"
+  },
+  "blockers": [
+    "The implementation actor cannot independently accept CT-82.",
+    "Source revision is unavailable because the repository has no commit.",
+    "Chrome-rendered CT-12 acceptance is separate and remains unavailable in the selected profile."
+  ],
+  "outcomes_claimed": []
+}

@@ -1,0 +1,119 @@
+{
+  "schema_version": "ct11-test-evidence-v1",
+  "stage": "testing.evidence-map",
+  "status": "passed",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "implementation_handoff_ref": "docs/product/versions/v0.1.0/40-testing/CT-11/implementation-inputs.json",
+  "implementation_actor_ids": [
+    "codex-implementation",
+    "isolated-final-image-verifier",
+    "codex-implementation-remediation",
+    "immutable-artifact-reviewer"
+  ],
+  "implementation_session_ids": [
+    "ct6-implementation-1",
+    "ct8-implementation-1",
+    "ct9-implementation-1",
+    "ct9-final-image-review-1",
+    "CT16-IMPL-20260819T215122Z",
+    "CT16-REVIEW-20260819T222432Z",
+    "CT17-IMPL-20260819T215815Z",
+    "CT17-REVIEW-20260819T222432Z",
+    "CT18-IMPL-20260819T221333Z",
+    "CT18-REVIEW-20260819T222432Z"
+  ],
+  "independent_acceptance": {
+    "status": "accepted",
+    "independent": true,
+    "decision_ref": "docs/product/versions/v0.1.0/40-testing/CT-11/decision.md",
+    "authorized_by": "ct11-independent-test-authority",
+    "evidence_ref": "docs/product/versions/v0.1.0/40-testing/CT-11/evidence.md",
+    "actor_id": "codex-testing-ct11",
+    "session_id": "CT11-TEST-20260819T213417Z"
+  },
+  "required_surfaces": ["automated", "manual", "uat", "regression"],
+  "issues": [
+    {
+      "issue_id": "CT-11",
+      "requirement_refs": ["R-001", "R-002", "R-005", "R-008", "R-009", "R-101", "R-102", "R-106"],
+      "acceptance_refs": ["R-001", "R-002", "R-005", "R-008", "R-009", "R-101", "R-102", "R-106"]
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "CT11-P-T16",
+      "surface": "automated",
+      "status": "passed",
+      "issue_refs": ["CT-11"],
+      "requirement_refs": ["R-001", "R-002", "R-005", "R-008", "R-009", "R-101"],
+      "acceptance_refs": ["R-001", "R-002", "R-005", "R-008", "R-009", "R-101"],
+      "evidence_ref": "docs/product/versions/v0.1.0/40-testing/CT-11/evidence.md"
+    },
+    {
+      "check_id": "CT11-P-T17",
+      "surface": "automated",
+      "status": "passed",
+      "issue_refs": ["CT-11"],
+      "requirement_refs": ["R-102", "R-106"],
+      "acceptance_refs": ["R-102", "R-106"],
+      "evidence_ref": "docs/product/versions/v0.1.0/40-testing/CT-11/result.json"
+    },
+    {
+      "check_id": "CT11-MANUAL-RUNTIME",
+      "surface": "manual",
+      "status": "passed",
+      "issue_refs": ["CT-11"],
+      "requirement_refs": ["R-001", "R-101", "R-106"],
+      "acceptance_refs": ["R-001", "R-101", "R-106"],
+      "evidence_ref": "docs/product/versions/v0.1.0/40-testing/CT-11/evidence.md"
+    },
+    {
+      "check_id": "CT11-INDEPENDENT-UAT",
+      "surface": "uat",
+      "status": "passed",
+      "issue_refs": ["CT-11"],
+      "requirement_refs": ["R-001", "R-002", "R-005", "R-008", "R-009", "R-101", "R-102", "R-106"],
+      "acceptance_refs": ["R-001", "R-002", "R-005", "R-008", "R-009", "R-101", "R-102", "R-106"],
+      "evidence_ref": "docs/product/versions/v0.1.0/40-testing/CT-11/evidence.md"
+    },
+    {
+      "check_id": "CT11-FULL-REGRESSION",
+      "surface": "regression",
+      "status": "passed",
+      "issue_refs": ["CT-11"],
+      "requirement_refs": ["R-001", "R-002", "R-005", "R-008", "R-009", "R-101", "R-102", "R-106"],
+      "acceptance_refs": ["R-001", "R-002", "R-005", "R-008", "R-009", "R-101", "R-102", "R-106"],
+      "evidence_ref": "docs/product/versions/v0.1.0/40-testing/CT-11/result.json"
+    }
+  ],
+  "bug_loops": [
+    {
+      "bug_ref": ".control-tower/tasks-v0.8.sqlite3#CT-16@3",
+      "implementation_fix_ref": "docs/product/versions/v0.1.0/30-implementation/CT-16/handoff.json",
+      "focused_rerun_ref": "docs/product/versions/v0.1.0/30-implementation/CT-16/result.json",
+      "regression_rerun_ref": "docs/product/versions/v0.1.0/40-testing/CT-11/result.json",
+      "status": "resolved"
+    },
+    {
+      "bug_ref": ".control-tower/tasks-v0.8.sqlite3#CT-17@3",
+      "implementation_fix_ref": "docs/product/versions/v0.1.0/30-implementation/CT-17/handoff.json",
+      "focused_rerun_ref": "docs/product/versions/v0.1.0/30-implementation/CT-17/result.json",
+      "regression_rerun_ref": "docs/product/versions/v0.1.0/40-testing/CT-11/result.json",
+      "status": "resolved"
+    },
+    {
+      "bug_ref": ".control-tower/tasks-v0.8.sqlite3#CT-18@3",
+      "implementation_fix_ref": "docs/product/versions/v0.1.0/30-implementation/CT-18/handoff.json",
+      "focused_rerun_ref": "docs/product/versions/v0.1.0/30-implementation/CT-18/result.json",
+      "regression_rerun_ref": "docs/product/versions/v0.1.0/40-testing/CT-11/result.json",
+      "status": "resolved"
+    }
+  ],
+  "outcome_status": "pending",
+  "blockers": []
+}

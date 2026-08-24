@@ -1,0 +1,153 @@
+{
+  "schema_version": "ct22-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "passed",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-22",
+      "stable_id": "64957198-74e6-4fd5-a5b9-422ae6a55aa9",
+      "revision": 2,
+      "accepted": true,
+      "blocked": false,
+      "status": "output_done",
+      "requirement_refs": ["R-004", "R-008", "R-010", "R-011", "R-103"],
+      "acceptance_refs": ["R-004", "R-008", "R-010", "R-011", "R-103"],
+      "outcome_refs": ["O-001", "O-002", "O-003"],
+      "allowed_mutation_paths": [
+        "apps/web/src/issue-scope.ts",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/projects.tsx",
+        "apps/web/src/styles.css",
+        "apps/web/tests/issue-scope.test.ts",
+        "docs/product/versions/v0.1.0/30-implementation/CT-22"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT22-IMPL-20260820T000000Z",
+      "actor_id": "codex-milestone-drilldown",
+      "issue_id": "CT-22",
+      "mode": "code_mutating",
+      "allowed_paths": [
+        "apps/web/src/issue-scope.ts",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/projects.tsx",
+        "apps/web/src/styles.css",
+        "apps/web/tests/issue-scope.test.ts"
+      ],
+      "output_refs": [
+        "apps/web/src/issue-scope.ts",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/projects.tsx",
+        "apps/web/src/styles.css",
+        "apps/web/tests/issue-scope.test.ts"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-22/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence.md"
+      ]
+    },
+    {
+      "session_id": "CT22-REVIEW-20260820T000700Z",
+      "actor_id": "milestone-drilldown-reviewer",
+      "issue_id": "CT-22",
+      "mode": "review_only",
+      "allowed_paths": ["docs/product/versions/v0.1.0/30-implementation/CT-22"],
+      "output_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-22/changed-files.txt",
+        "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence.md",
+        "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-count-mobile-390x844.jpg",
+        "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-filter-desktop-1440x900.jpg",
+        "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-filter-mobile-390x844.jpg",
+        "docs/product/versions/v0.1.0/30-implementation/CT-22/handoff.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-22/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-22/session.md"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-22/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence.md"
+      ]
+    }
+  ],
+  "changed_files": [
+    {"path":"apps/web/src/issue-scope.ts","issue_id":"CT-22","mutation_type":"code","ai_session_id":"CT22-IMPL-20260820T000000Z","risk_level":"high","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-22/evidence.md#verification","test_refs":["CT22-FOCUSED","CT22-REGRESSION"]},
+    {"path":"apps/web/src/issues.tsx","issue_id":"CT-22","mutation_type":"code","ai_session_id":"CT22-IMPL-20260820T000000Z","risk_level":"high","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-22/evidence.md#verification","test_refs":["CT22-FOCUSED","CT22-BROWSER","CT22-REGRESSION"]},
+    {"path":"apps/web/src/projects.tsx","issue_id":"CT-22","mutation_type":"code","ai_session_id":"CT22-IMPL-20260820T000000Z","risk_level":"high","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-22/evidence.md#verification","test_refs":["CT22-FOCUSED","CT22-BROWSER","CT22-BENCHMARK","CT22-REGRESSION"]},
+    {"path":"apps/web/src/styles.css","issue_id":"CT-22","mutation_type":"code","ai_session_id":"CT22-IMPL-20260820T000000Z","risk_level":"high","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-22/evidence.md#verification","test_refs":["CT22-BROWSER","CT22-REGRESSION"]},
+    {"path":"apps/web/tests/issue-scope.test.ts","issue_id":"CT-22","mutation_type":"test","ai_session_id":"CT22-IMPL-20260820T000000Z","risk_level":"medium","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-22/evidence.md#verification","test_refs":["CT22-FOCUSED","CT22-REGRESSION"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-22/changed-files.txt","issue_id":"CT-22","mutation_type":"docs","ai_session_id":"CT22-REVIEW-20260820T000700Z","risk_level":"low","test_refs":["CT22-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-22/evidence.md","issue_id":"CT-22","mutation_type":"docs","ai_session_id":"CT22-REVIEW-20260820T000700Z","risk_level":"low","test_refs":["CT22-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-count-mobile-390x844.jpg","issue_id":"CT-22","mutation_type":"artifact","ai_session_id":"CT22-REVIEW-20260820T000700Z","risk_level":"low","test_refs":["CT22-BROWSER"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-filter-desktop-1440x900.jpg","issue_id":"CT-22","mutation_type":"artifact","ai_session_id":"CT22-REVIEW-20260820T000700Z","risk_level":"low","test_refs":["CT22-BROWSER","CT22-BENCHMARK"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-filter-mobile-390x844.jpg","issue_id":"CT-22","mutation_type":"artifact","ai_session_id":"CT22-REVIEW-20260820T000700Z","risk_level":"low","test_refs":["CT22-BROWSER"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-22/handoff.json","issue_id":"CT-22","mutation_type":"docs","ai_session_id":"CT22-REVIEW-20260820T000700Z","risk_level":"low","test_refs":["CT22-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-22/result.json","issue_id":"CT-22","mutation_type":"docs","ai_session_id":"CT22-REVIEW-20260820T000700Z","risk_level":"low","test_refs":["CT22-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-22/session.md","issue_id":"CT-22","mutation_type":"docs","ai_session_id":"CT22-REVIEW-20260820T000700Z","risk_level":"low","test_refs":["CT22-EVIDENCE"]}
+  ],
+  "checks": [
+    {"check_id":"CT22-FOCUSED","issue_id":"CT-22","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-22/result.json"},
+    {"check_id":"CT22-BROWSER","issue_id":"CT-22","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-22/evidence.md"},
+    {"check_id":"CT22-BENCHMARK","issue_id":"CT-22","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-22/evidence.md"},
+    {"check_id":"CT22-REGRESSION","issue_id":"CT-22","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-22/result.json"},
+    {"check_id":"CT22-EVIDENCE","issue_id":"CT-22","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-22/evidence.md"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-22",
+      "status": "passed",
+      "independent": true,
+      "review_actor_id": "milestone-drilldown-reviewer",
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence.md#verification",
+      "basis": "The review session reran the deployed pointer, keyboard, clear, detail-return, responsive, and matched benchmark paths after the full repository checks passed."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["R-004", "R-008", "R-010", "R-011", "R-103"],
+    "changed_file_refs": [
+      "apps/web/src/issue-scope.ts",
+      "apps/web/src/issues.tsx",
+      "apps/web/src/projects.tsx",
+      "apps/web/src/styles.css",
+      "apps/web/tests/issue-scope.test.ts",
+      "docs/product/versions/v0.1.0/30-implementation/CT-22/changed-files.txt",
+      "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-count-mobile-390x844.jpg",
+      "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-filter-desktop-1440x900.jpg",
+      "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-filter-mobile-390x844.jpg",
+      "docs/product/versions/v0.1.0/30-implementation/CT-22/handoff.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-22/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-22/session.md"
+    ],
+    "regression_areas": [
+      "project overview milestone controls",
+      "embedded project issue scoping",
+      "nested user filter composition",
+      "issue detail return context",
+      "desktop and mobile issue toolbar layout"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-22/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence.md"
+    ],
+    "implementation_actor_ids": ["codex-milestone-drilldown", "milestone-drilldown-reviewer"],
+    "implementation_session_ids": ["CT22-IMPL-20260820T000000Z", "CT22-REVIEW-20260820T000700Z"]
+  },
+  "outcomes": [
+    {"outcome_id":"O-001","status":"pending"},
+    {"outcome_id":"O-002","status":"pending"},
+    {"outcome_id":"O-003","status":"pending"}
+  ],
+  "blockers": [],
+  "next": {
+    "skill": "ct-discover-product",
+    "issues": ["CT-2"],
+    "reason": "Resume the complete eight-task reference baseline and matched comparison without claiming the future O-002 outcome window."
+  }
+}

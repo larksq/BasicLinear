@@ -1,0 +1,17 @@
+package.json
+packages/db/src/sqlite/client.ts
+packages/db/tests/sqlite.test.ts
+apps/api/tests/local-runtime.test.ts
+packages/config/tests/foundation-static.test.ts
+README.md
+docs/operations/recovery.md
+docs/product/versions/v0.1.0/20-planning/architecture.md
+docs/product/versions/v0.1.0/30-implementation/CT-84/session.md
+docs/product/versions/v0.1.0/30-implementation/CT-84/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-84/evidence/runtime-rehearsal.json
+docs/product/versions/v0.1.0/30-implementation/CT-84/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-84/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-84/changed-files.txt
+docs/product/versions/v0.1.0/40-testing/CT-82/rehearsal.md
+docs/product/versions/v0.1.0/40-testing/CT-82/evidence/rehearsal-20260821.json
+docs/product/versions/v0.1.0/40-testing/CT-12/evidence/chrome-connection-20260821.json

@@ -1,0 +1,63 @@
+{
+  "schema_version": "ct38-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {"task_store":".control-tower/tasks-v0.8.sqlite3","provider_projection":"disabled","linear_used":false},
+  "issues": [
+    {
+      "issue_id": "CT-38",
+      "stable_id": "b0a977c4-a5c0-404d-8f94-cd5697fe06ed",
+      "revision": 2,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_browser_verification",
+      "requirement_refs": ["R-010", "R-104"],
+      "acceptance_refs": ["R-010", "R-104"],
+      "outcome_refs": ["O-001", "O-002", "O-003"],
+      "allowed_mutation_paths": ["apps/web/src/issues.tsx", "apps/web/src/local-keyboard-actions.ts", "apps/web/src/projects.tsx", "apps/web/tests/board-accessibility.test.ts", "apps/web/tests/local-keyboard-actions.test.ts", "docs/product/versions/v0.1.0/30-implementation/CT-38"]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT38-IMPL-20260820T053114Z",
+      "actor_id": "codex-local-keyboard-safety",
+      "issue_id": "CT-38",
+      "mode": "code_mutating",
+      "output_refs": ["apps/web/src/issues.tsx", "apps/web/src/local-keyboard-actions.ts", "apps/web/src/projects.tsx", "apps/web/tests/board-accessibility.test.ts", "apps/web/tests/local-keyboard-actions.test.ts"],
+      "validation_refs": ["docs/product/versions/v0.1.0/30-implementation/CT-38/result.json", "docs/product/versions/v0.1.0/30-implementation/CT-38/evidence.md"]
+    }
+  ],
+  "checks": [
+    {"check_id":"CT38-LOCAL-KEY-CONTRACT","issue_id":"CT-38","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-38/result.json"},
+    {"check_id":"CT38-REGRESSION","issue_id":"CT-38","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-38/result.json"},
+    {"check_id":"CT38-TYPECHECK","issue_id":"CT-38","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-38/result.json"},
+    {"check_id":"CT38-BUILD","issue_id":"CT-38","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-38/result.json"},
+    {"check_id":"CT38-BROWSER","issue_id":"CT-38","status":"blocked","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-38/evidence/browser-status.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-38",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-38/evidence.md#pending-browser-matrix",
+      "basis": "Focused policy and integration tests, combined semantic regression, complete regression, typecheck, and production build pass. Final shortcut propagation, reserved-key behavior, repeat behavior, focus return, responsive-browser, and console behavior are not yet asserted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["R-010", "R-104"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-38/changed-files.txt",
+    "regression_areas": ["issue-view shortcuts", "issue list record commands", "issue board record commands", "project row commands", "global Search propagation", "browser-reserved chords", "IME composition", "key repeat", "nested controls"],
+    "evidence_refs": ["docs/product/versions/v0.1.0/30-implementation/CT-38/result.json", "docs/product/versions/v0.1.0/30-implementation/CT-38/evidence.md", "docs/product/versions/v0.1.0/30-implementation/CT-38/evidence/browser-status.json"],
+    "implementation_actor_ids": ["codex-local-keyboard-safety"],
+    "implementation_session_ids": ["CT38-IMPL-20260820T053114Z"]
+  },
+  "outcomes": [{"outcome_id":"O-001","status":"pending"}, {"outcome_id":"O-002","status":"pending"}, {"outcome_id":"O-003","status":"pending"}],
+  "blockers": [
+    {
+      "id": "CT38-BROWSER-PERMISSION",
+      "description": "The approved local browser surface is unavailable under the active security policy; final desktop/mobile local-key propagation and reserved-command verification remains required."
+    }
+  ],
+  "next": {"skill":"ct-test-sprint","issues":["CT-38"],"reason":"Run the bounded synthetic desktop/mobile local-key propagation and reserved-command matrix when the local browser surface is approved."}
+}

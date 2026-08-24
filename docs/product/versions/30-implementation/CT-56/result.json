@@ -1,0 +1,47 @@
+{
+  "schema_version": "ct56-implementation-result-v1",
+  "captured_at": "2026-08-20T15:08:17Z",
+  "verdict": "IMPLEMENTED_AWAITING_BROWSER_VERIFICATION",
+  "issue": {
+    "identifier": "CT-56",
+    "id": "e57793e7-5a84-4b7b-97e2-95e377992526",
+    "implementation_revision": 1,
+    "expected_checkpoint_revision": 2
+  },
+  "checks": {
+    "focused_test_files": 3,
+    "focused_tests_passed": 22,
+    "complete_test_files": 37,
+    "complete_tests_passed": 228,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "fixture_syntax": "passed",
+    "database_verification": "not_rerun_web_only_database_paths_unchanged",
+    "vite_modules": 1932,
+    "css_bytes": 79386,
+    "saved_views_chunk_bytes": 9989,
+    "projects_chunk_bytes": 41116,
+    "issues_chunk_bytes": 122569,
+    "index_chunk_bytes": 280207,
+    "editor_chunk_bytes": 402713,
+    "runtime_chunk_bytes": 589,
+    "archive_chunk_bytes": 529,
+    "html_bytes": 663,
+    "final_vite_chunk_warning": false,
+    "fixture_host_checks": 6,
+    "fixture_host_checks_passed": 6,
+    "browser_captures": 0,
+    "browser_assertions_claimed": 0,
+    "browser_verification": "deferred_permission_denied"
+  },
+  "source_hashes": {
+    "apps/web/src/App.tsx": "817856fbabc4f1a243746682851efb7b9653972ba20fca86e4209432c6f81fe0",
+    "apps/web/src/projects.tsx": "5b4b3fb82b8ea99da8061e7c4179ed6087f570d475e2ca8d34cb65126327814f",
+    "apps/web/src/project-navigation.ts": "ee70af168f52d7d2ea7b7942b9ee15c2f9b2f5609dbbb7270e163698eadd0e0d",
+    "apps/web/src/workspace-navigation.ts": "7435b1b649107185140aca86c6845a0ce1e94383e9a362771027610a3d924082",
+    "apps/web/tests/project-navigation.test.ts": "747a6a58fb830e5f4c51ef51ee820057990b567935d07a460cb18fa253659e23",
+    "apps/web/tests/workspace-navigation.test.ts": "3355362d83b276bbdc230ce5f4e7bd03d3271563aea4c0828d6f5679a62fe837",
+    "apps/web/tests/layout-contract.test.ts": "e65563bddf572b2fd93a40b1b1868d2c688ed784b8f4cacaca13f3e7b599ad16"
+  },
+  "outcomes_claimed": []
+}

@@ -1,0 +1,12 @@
+package-lock.json
+apps/api/package.json
+apps/api/src/app.ts
+apps/api/tests/projects.integration.test.ts
+apps/api/tests/validation.test.ts
+packages/db/tests/transfer.integration.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-54/session.md
+docs/product/versions/v0.1.0/30-implementation/CT-54/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-54/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-54/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-54/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-54/evidence/database-status.json

@@ -1,0 +1,126 @@
+{
+  "schema_version": "ct53-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_database_and_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-53",
+      "stable_id": "c577b844-46b3-4031-bcb3-d66c42477d1e",
+      "revision": 3,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_database_and_browser_verification",
+      "requirement_refs": ["R-004", "R-005", "R-008", "R-010", "R-104", "R-110"],
+      "acceptance_refs": ["P-T06", "P-T07", "P-T08", "P-T09", "P-T10", "P-T11", "P-T13", "P-T18", "P-T19"],
+      "outcome_refs": ["O-001", "O-002", "O-003"],
+      "allowed_mutation_paths": [
+        "packages/contracts/src/index.ts",
+        "packages/domain/src/index.ts",
+        "packages/domain/tests/domain.test.ts",
+        "packages/db/migrations/010_saved_view_milestone_grouping.sql",
+        "packages/db/src/project-repository.ts",
+        "apps/api/src/app.ts",
+        "apps/api/tests/projects.integration.test.ts",
+        "apps/api/tests/views.integration.test.ts",
+        "apps/web/src/api.ts",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/issue-view-milestones.ts",
+        "apps/web/src/saved-view-library.ts",
+        "apps/web/src/styles.css",
+        "apps/web/tests/issue-view-milestones.test.ts",
+        "apps/web/tests/saved-view-library.test.ts",
+        "apps/web/tests/issue-loading-geometry.test.ts",
+        "scripts/serve-visual-fixture.mjs",
+        "docs/product/versions/v0.1.0/30-implementation/CT-53",
+        "docs/product/versions/v0.1.0/40-testing/CT-12",
+        "docs/product/versions/v0.1.0/50-outcome-review/CT-13",
+        "ops/release provenance manifests"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT53-IMPL-20260820T125423Z",
+      "actor_id": "codex-milestone-issue-views",
+      "issue_id": "CT-53",
+      "mode": "code_mutating",
+      "output_refs": [
+        "packages/contracts/src/index.ts",
+        "packages/db/migrations/010_saved_view_milestone_grouping.sql",
+        "packages/db/src/project-repository.ts",
+        "apps/api/src/app.ts",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/issue-view-milestones.ts",
+        "apps/web/src/styles.css"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-53/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-53/evidence.md"
+      ]
+    }
+  ],
+  "checks": [
+    {"check_id": "CT53-MILESTONE-VIEW-CONTRACT", "issue_id": "CT-53", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-53/result.json"},
+    {"check_id": "CT53-REGRESSION", "issue_id": "CT-53", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-53/result.json"},
+    {"check_id": "CT53-TYPECHECK", "issue_id": "CT-53", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-53/result.json"},
+    {"check_id": "CT53-BUILD", "issue_id": "CT-53", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-53/result.json"},
+    {"check_id": "CT53-FIXTURE-HOST", "issue_id": "CT-53", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-53/evidence/browser-status.json"},
+    {"check_id": "CT53-DATABASE-RUNNER", "issue_id": "CT-53", "status": "skipped", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-53/evidence.md#automated-verification"},
+    {"check_id": "CT53-BROWSER", "issue_id": "CT-53", "status": "blocked", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-53/evidence/browser-status.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-53",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-53/evidence.md",
+      "basis": "Focused and complete regression, typecheck, production build, source review, round-trip correction, migration-source checks, and owner/guest fixture host checks pass. PostgreSQL execution and rendered desktop, tablet, and mobile verification remain unexecuted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["P-T06", "P-T07", "P-T08", "P-T09", "P-T10", "P-T11", "P-T13", "P-T18", "P-T19"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-53/changed-files.txt",
+    "regression_areas": [
+      "workspace membership and RLS milestone catalogue isolation",
+      "migration 010 and milestone-grouped saved-view persistence",
+      "milestone filter labels ordering archive and missing states",
+      "list milestone grouping columns loading tracks and density",
+      "board selected-property metadata geometry labels and scrolling",
+      "URL save reload back forward and saved-view round trips",
+      "owner and guest desktop tablet and mobile interaction accessibility and geometry"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-53/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-53/evidence.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-53/evidence/browser-status.json"
+    ],
+    "implementation_actor_ids": ["codex-milestone-issue-views"],
+    "implementation_session_ids": ["CT53-IMPL-20260820T125423Z"]
+  },
+  "outcomes": [
+    {"outcome_id": "O-001", "status": "pending"},
+    {"outcome_id": "O-002", "status": "pending"},
+    {"outcome_id": "O-003", "status": "pending"}
+  ],
+  "blockers": [
+    {
+      "id": "CT53-DATABASE-CREDENTIALS",
+      "description": "TEST_MIGRATION_DATABASE_URL and TEST_APP_PASSWORD are absent; migration 010, saved-view persistence, workspace/RLS catalogue isolation, and database-backed API behavior remain required."
+    },
+    {
+      "id": "CT53-BROWSER-PERMISSION",
+      "description": "The approved local browser surface is unavailable under the active security policy; final owner/guest desktop, tablet, and mobile milestone filtering, grouping, properties, round-trip, accessibility, and responsive-geometry verification remains required."
+    }
+  ],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issues": ["CT-53"],
+    "reason": "Run the isolated PostgreSQL cases and bounded owner/guest desktop, tablet, and mobile milestone-view matrix when their approved environments are available."
+  }
+}

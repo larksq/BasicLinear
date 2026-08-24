@@ -1,0 +1,14 @@
+{
+  "schema_version": "ct120-implementation-result-v1",
+  "captured_at": "2026-08-23T00:49:00Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_REVIEW_PENDING",
+  "issue": {"identifier": "CT-120", "id": "f788d79c-bb16-483a-8a8b-3c98564c8b5d", "revision": 2, "status": "In Progress"},
+  "source": {"commit": "71b8fbcbe8ac0c9437b02c754383f36be3c352b0", "candidate_revision": "e1299af1bd06f7438f5010c6f6c030760c5a1dfb", "candidate_tree": "ce6e21f1b0436e6afa1d11b1fc3f6ff471903bb3"},
+  "resolution": {"action_track_css_px": 124, "enabled_control_min_width_css_px": 30, "enabled_control_min_height_css_px": 30, "required_minimum_css_px": 24, "api_or_persistence_changed": false},
+  "checks": {"focused": {"files": 3, "passed": 23}, "complete": {"files": 73, "passed": 481}, "typecheck_workspaces": 8, "release_audit_passed": 10, "build_modules": 1953, "build_warnings": 0, "axe_workflow_states": 4, "axe_violations": 0, "axe_incomplete": 0},
+  "evidence": {"private_tranche_receipt": ".control-tower/evidence/CT-118-123/implementation-e1299af.json", "private_tranche_sha256": "3e2a81e8c0c03ad756af56591d5dedf10c772a47696de7ba5235693db38082a9", "accessibility_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/accessibility-current.json"},
+  "task_reconciliation": {"expected_revision": 1, "readback_revision": 2, "readback_status": "In Progress", "milestone": "S3 — Implementation", "store_health": "ready", "projection": "disabled_not_synced", "backup_ref": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-23T01-04-26-732Z-c12d209d-f1f7-465e-8dd5-4964dd058a5e.json", "backup_bytes": 485685, "backup_package_sha256": "e7179f54ca29c7ea43bcff61f70f5530ef35aaeb18fb1377ec7a9283297e0d2e", "backup_file_sha256": "4df0a4e4e31c8a28d14c94eed939ed59292da4de2476cfd380cd197320955e1e", "backup_mode": "0600"},
+  "independent_application_review": "pending",
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

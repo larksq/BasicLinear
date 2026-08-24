@@ -1,0 +1,14 @@
+{
+  "schema_version": "ct118-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "blocked_on_distinct_review",
+  "authority": {"task_store": ".control-tower/tasks-v0.8.sqlite3", "provider_projection": "disabled", "linear_used": false},
+  "candidate": {"revision": "e1299af1bd06f7438f5010c6f6c030760c5a1dfb", "tree": "ce6e21f1b0436e6afa1d11b1fc3f6ff471903bb3"},
+  "issue": {"identifier": "CT-118", "stable_id": "8e14579f-53ab-4619-8724-352af3dcf8bf", "revision": 2, "status": "In Progress", "output_done": true, "accepted": false},
+  "changed_files": ["apps/web/src/issues.tsx", "apps/web/src/styles.css", "apps/web/tests/board-accessibility.test.ts", "apps/web/tests/issue-board-move.test.ts"],
+  "checks": {"automated": "passed", "chrome": "passed_exact_candidate", "distinct_application_review": "pending"},
+  "blockers": ["A distinct application reviewer must inspect the CT-118 commit and exact evidence before Done."],
+  "next": {"action": "Run distinct application review; remediate findings or accept CT-118."},
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

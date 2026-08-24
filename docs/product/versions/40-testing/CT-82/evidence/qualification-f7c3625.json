@@ -1,0 +1,133 @@
+{
+  "schema_version": "ct88-clean-runtime-qualification-v1",
+  "issue": "CT-88",
+  "acceptance_issue": "CT-82",
+  "captured_at": "2026-08-22T19:21:06.014Z",
+  "actor": "codex-independent-testing-ct82-f7c3625",
+  "session": "CT82-INDEPENDENT-20260822T191944Z",
+  "independent": true,
+  "environment": {
+    "os": "darwin 25.5.0 arm64",
+    "host_fingerprint": "5e793f830cea3896",
+    "node": "v24.18.0",
+    "npm": "11.16.0",
+    "source_revision": "f7c362562fdf0657114a862331b893e470b824c0",
+    "source_clean": true,
+    "source_status_entries": 0,
+    "source_set_sha256": "6b765bace3480b63a79fe01b5ac8a2158bff34248c917c82044f9aa4bd0b27fd",
+    "source_files": 1197,
+    "docker": false,
+    "postgresql": false,
+    "external_identity": false
+  },
+  "artifact": {
+    "sha256": "c5d496806136aaf904d480e85c23c38974374a5f79ad0b651b898cc0f1cd3822",
+    "files": 111,
+    "bytes": 2052706
+  },
+  "verdict": "PASSED_INDEPENDENT_RUNTIME_GATE",
+  "acceptance": {
+    "p_t21": "passed",
+    "ct82": "eligible_for_readback",
+    "self_acceptance": false,
+    "source_revision_bound": true
+  },
+  "checks": {
+    "built_spa_and_single_process": "passed",
+    "fresh_owner_scope_status_bootstrap": "passed",
+    "project_milestone_issue_private_view_search": "passed",
+    "derived_progress": "passed",
+    "host_origin_csrf_multiple_tabs": "passed",
+    "outbound_network_and_subprocess_denial": "passed",
+    "restart_session_rotation_stable_ids": "passed",
+    "interruption_matrix": [
+      "SIGKILL",
+      "SIGTERM",
+      "SIGINT"
+    ],
+    "sidecar_cleanup": "passed",
+    "canonical_export_import_digest": "abbf5e28a7c5a52f374cd39435fa744f2cb7e70e6a128893415164737726d5ec",
+    "online_backup_sha256": "e241df55b370fa654c574fdf6f06a47eeb53e09a8a5a23a2c756b6312dbf833f",
+    "backup_integrity": "ok",
+    "restore_canonical_digest": "abbf5e28a7c5a52f374cd39435fa744f2cb7e70e6a128893415164737726d5ec",
+    "corrupt_restore_last_known_good": "passed",
+    "accepted_upgrade": {
+      "from": 1,
+      "to": 2,
+      "canonicalDigest": "abbf5e28a7c5a52f374cd39435fa744f2cb7e70e6a128893415164737726d5ec"
+    },
+    "future_upgrade_rejected_unchanged": "passed",
+    "malformed_upgrade_rolled_back": "passed",
+    "pre_upgrade_backup_sha256": "7c0765ab433c04b23addbb7a28ef3b9cfde34451ae919dd20bd0944af4d5b4a0",
+    "accepted_scale": {
+      "projects": 1001,
+      "milestones": 2001,
+      "issues": 10001,
+      "activityEntries": 50006,
+      "durationMs": 151.05
+    },
+    "permissions": {
+      "database": "passed",
+      "backup": "passed",
+      "export": "passed"
+    },
+    "legacy_transfer": {
+      "canonicalSha256": "000473521838884d216ef7ad87185a94b8400fcf488add218722d0a88d120772",
+      "sourceSha256": "e32368e2d70ac6476428a874b42767d8d54da80d6889ce5298d3ab6e63e38eed",
+      "fixtureFileSha256": "3bbd2aeebf83148d48bf6eba986fdbc1cd4203829e6aea0311d72752f8d3222c",
+      "selectedWorkspaceDigest": "5f35bf5f1b8cb00c808d043d1ef31fd03e0a6b022ca43095be1f1b700683f128",
+      "ambiguousTargetCreated": false,
+      "sourceUnchanged": true
+    }
+  },
+  "network_audits": [
+    {
+      "phase": "first_crash",
+      "records": 1,
+      "attempts": 0,
+      "summaryPresent": false,
+      "termination": {
+        "code": null,
+        "signal": "SIGKILL"
+      }
+    },
+    {
+      "phase": "restart",
+      "records": 2,
+      "attempts": 0,
+      "summaryPresent": true
+    },
+    {
+      "phase": "accepted_upgrade",
+      "records": 2,
+      "attempts": 0,
+      "summaryPresent": true
+    },
+    {
+      "phase": "future_schema_rejected",
+      "records": 2,
+      "attempts": 0,
+      "summaryPresent": true
+    },
+    {
+      "phase": "migration_rollback",
+      "records": 2,
+      "attempts": 0,
+      "summaryPresent": true
+    },
+    {
+      "phase": "accepted_scale",
+      "records": 2,
+      "attempts": 0,
+      "summaryPresent": true
+    }
+  ],
+  "work_directory": null,
+  "raw_evidence": {
+    "private_ref": ".control-tower/evidence/CT-82/qualification-f7c3625.json",
+    "private_sha256": "ffc378a4337c24466d04a589a5c811367660e269f1dd9546d2e554b1cebe3734",
+    "private_bytes": 3923,
+    "private_mode": "0600"
+  },
+  "outcomes_claimed": []
+}

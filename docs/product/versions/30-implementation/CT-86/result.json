@@ -1,0 +1,37 @@
+{
+  "schema_version": "ct86-implementation-result-v1",
+  "captured_at": "2026-08-21T08:27:29Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_RELEASE_REVIEW_PENDING",
+  "issue": {
+    "identifier": "CT-86",
+    "id": "fe09802e-c156-47ae-98bd-c73f755b3527",
+    "created_revision": 1,
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "resolution": {
+    "manifest_start_command_bound": true,
+    "root_start_command_matches": true,
+    "supported_start_command": "node apps/api/dist/index.js",
+    "supported_runtime_topology": "single_node_loopback_sqlite",
+    "container_commands_present": false,
+    "manifest_input_mismatches": 0
+  },
+  "checks": {
+    "focused_test_files": 1,
+    "focused_tests_passed": 3,
+    "complete_test_files": 56,
+    "complete_tests_passed": 387,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1946,
+    "dist_bytes": 1027388,
+    "real_audit_verdict": "NOT_READY",
+    "real_audit_pass": 5,
+    "real_audit_fail": 3,
+    "real_audit_blocked": 6,
+    "reproducible_build_inputs": "PASS"
+  },
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "ct23-implementation-result-v1",
+  "captured_at": "2026-08-20T01:16:00Z",
+  "verdict": "OUTPUT_DONE_FOR_CT12",
+  "issue": {
+    "identifier": "CT-23",
+    "id": "632cd6a5-62ed-42ca-9e5c-924cbbe80156",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "checks": {
+    "focused_test_files": 2,
+    "focused_tests_passed": 7,
+    "unit_test_files": 9,
+    "unit_tests_passed": 35,
+    "typecheck_workspaces": 8,
+    "production_build_passed": true,
+    "vite_modules_transformed": 1913,
+    "expanded_rail_px": 232,
+    "collapsed_rail_px": 48,
+    "default_panel_px": 560,
+    "minimum_panel_px": 480,
+    "maximum_panel_px": 640,
+    "keyboard_bounds_passed": true,
+    "pointer_math_passed": true,
+    "preference_reload_passed": true,
+    "final_toolbar_overlap": false,
+    "mobile_inner_width_px": 390,
+    "mobile_visible_content_width_px": 375,
+    "mobile_drawer_px": 248,
+    "mobile_resizer_display": "none",
+    "console_warnings": 0,
+    "console_errors": 0
+  },
+  "source_hashes": {
+    "package.json": "638e85f3303ab3a595d2a18dffddbcb0e2d79739ab4c0ed79c31f295c8f6e7ee",
+    "apps/web/src/App.tsx": "191371f5fe51c5dfd81bb70bd04d8bbbc70eb7b32b4f4674cc820a5310fc36ab",
+    "apps/web/src/issues.tsx": "46c5d862df95b26520f99b4c6cfff3aa7922a013c3346b9e6b7cbb5a2a6ddd0e",
+    "apps/web/src/layout-preferences.ts": "f3e4c1f9f1ca09191ed17dc78bdc8c6160f613d02681d7c3b1ddd4855ab06643",
+    "apps/web/src/styles.css": "bc94445d5802ff0336689cc839e0ddee32183d51341d62217eeceb81f7a323bc",
+    "apps/web/tests/layout-contract.test.ts": "f44f371ab03be97b1434b8f93b621d27dc8f842cf68089e5f6a91e1563c6d0b7",
+    "apps/web/tests/layout-preferences.test.ts": "e1f36e3d033b3d071c2090b19788876eb9d98f9146c102a914520fdc679939e8",
+    "scripts/serve-visual-fixture.mjs": "38da3956fb3c45197645e72458845eca40510f3c8f195f3a5411e96094ac2d70"
+  },
+  "screenshot_hashes": {
+    "expanded_default": "c4dc335713c4e9c8aea9da6bc34e242cf293e7d37790314c8b5ea1af87b9ccc9",
+    "collapsed_default": "b864bb6654d4130d15a169d97bad444f37d0b6637f149fc4351913f9309d9248",
+    "collapsed_minimum": "68e8832bb2bd2288e5389bed2f9a4ec80b365e81e2276bcc11d1bf4d3dc68265",
+    "collapsed_maximum": "8d4841809cb4a509991dff24e23e7569f85032a5c6c9f0edc82235e12accf415",
+    "mobile_detail": "9e01baae950ff6f718ab7dae068eda21701cdf15b8cf27ce94bac972407695cc",
+    "mobile_drawer": "49f0bd9f3cc5a46ec978268dd786c5875397fffb86e577977bba58333aff8dc9"
+  },
+  "outcomes_claimed": []
+}

@@ -1,0 +1,78 @@
+{
+  "schema_version": "ct65-browser-status-v1",
+  "recorded_at": "2026-08-20T20:14:06Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4191/?workspace=20000000-0000-4000-8000-000000000023&view=issues&fixture=issue-bulk-edit",
+  "synthetic_fixture": true,
+  "fixture_process": {
+    "port": 4191,
+    "build": "production",
+    "managed_session": 58026,
+    "initial_sandbox_launch": "failed_listen_eperm",
+    "reserved_port_retry": "4190_node_fetch_bad_port",
+    "managed_launch": "passed"
+  },
+  "host_attempts": [
+    {
+      "attempt": 1,
+      "status": "sandbox_bind_denied",
+      "checks_attempted": 0,
+      "checks_passed": 0,
+      "reason": "The sandbox could not bind the local fixture; this environment result was rejected as product evidence."
+    },
+    {
+      "attempt": 2,
+      "status": "reserved_port_rejected_by_client",
+      "port": 4190,
+      "checks_attempted": 0,
+      "checks_passed": 0,
+      "reason": "The managed fixture launched, but Node Fetch rejects port 4190 as a forbidden bad port; no product assertion was accepted."
+    },
+    {
+      "attempt": 3,
+      "status": "passed_host_network",
+      "port": 4191,
+      "checks_attempted": 37,
+      "checks_passed": 37,
+      "observations": {
+        "application_html_status": 200,
+        "session_status": 200,
+        "session_role": "owner",
+        "active_label_count": 3,
+        "heterogeneous_initial_label_sets": true,
+        "add_persisted": true,
+        "idempotent_add_revision_unchanged": true,
+        "remove_persisted": true,
+        "idempotent_remove_revision_unchanged": true,
+        "unrelated_labels_preserved": true,
+        "partial_result_updated": 1,
+        "partial_result_conflicts": 1,
+        "conflict_current_revision_reported": true,
+        "unavailable_mutation_failed_closed": true,
+        "destructive_replacement_rejected": true,
+        "final_query_readback": true
+      }
+    }
+  ],
+  "browser_attempted": false,
+  "browser_captures": 0,
+  "rendered_assertions": 0,
+  "policy_reason": "The active security policy denies the approved browser surface. Alternate browser surfaces were not used.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_assertions": [
+    "list and board selections expose one stable named Labels menu",
+    "menu open close and focus return work by pointer and keyboard",
+    "Add and Remove modes are explicit and multiple active labels can be checked",
+    "labels already present or absent on heterogeneous issues produce idempotent per-issue behavior",
+    "successful rows leave selection while conflicted and failed rows retain selection and current revisions for retry",
+    "pending offline archived unavailable and read-only states preserve explicit recoverable behavior",
+    "one aggregate result is announced without duplicate live-region output",
+    "every control is keyboard reachable with visible focus in logical order",
+    "the bounded menu scrolls internally and remains contained at desktop tablet and mobile widths",
+    "zero overlap clipped focus page-level positive overflow duplicate IDs console warnings and console errors"
+  ]
+}

@@ -1,0 +1,8 @@
+apps/web/src/issues.tsx
+apps/web/tests/board-accessibility.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-35/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-35/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-35/evidence/browser-status.json
+docs/product/versions/v0.1.0/30-implementation/CT-35/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-35/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-35/session.md

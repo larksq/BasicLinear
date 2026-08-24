@@ -1,0 +1,63 @@
+{
+  "schema_version": "ct36-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {"task_store":".control-tower/tasks-v0.8.sqlite3","provider_projection":"disabled","linear_used":false},
+  "issues": [
+    {
+      "issue_id": "CT-36",
+      "stable_id": "fa21d313-bddc-4c33-baf5-c783c85a643d",
+      "revision": 2,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_browser_verification",
+      "requirement_refs": ["R-010", "R-011", "R-104"],
+      "acceptance_refs": ["R-010", "R-011", "R-104"],
+      "outcome_refs": ["O-001", "O-002", "O-003"],
+      "allowed_mutation_paths": ["apps/web/src/issues.tsx", "apps/web/src/issue-roving-focus.ts", "apps/web/tests/issue-roving-focus.test.ts", "apps/web/tests/board-accessibility.test.ts", "docs/product/versions/v0.1.0/30-implementation/CT-36"]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT36-IMPL-20260820T050611Z",
+      "actor_id": "codex-dynamic-issue-focus",
+      "issue_id": "CT-36",
+      "mode": "code_mutating",
+      "output_refs": ["apps/web/src/issues.tsx", "apps/web/src/issue-roving-focus.ts", "apps/web/tests/issue-roving-focus.test.ts", "apps/web/tests/board-accessibility.test.ts"],
+      "validation_refs": ["docs/product/versions/v0.1.0/30-implementation/CT-36/result.json", "docs/product/versions/v0.1.0/30-implementation/CT-36/evidence.md"]
+    }
+  ],
+  "checks": [
+    {"check_id":"CT36-FOCUS-CONTRACT","issue_id":"CT-36","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-36/result.json"},
+    {"check_id":"CT36-REGRESSION","issue_id":"CT-36","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-36/result.json"},
+    {"check_id":"CT36-TYPECHECK","issue_id":"CT-36","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-36/result.json"},
+    {"check_id":"CT36-BUILD","issue_id":"CT-36","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-36/result.json"},
+    {"check_id":"CT36-BROWSER","issue_id":"CT-36","status":"blocked","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-36/evidence/browser-status.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-36",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-36/evidence.md#pending-browser-matrix",
+      "basis": "Focused behavior, integration contracts, complete regression, typecheck, and production build pass. Final dynamic focus, accessibility-tree, virtualized navigation, and responsive-browser behavior are not yet asserted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["R-010", "R-011", "R-104"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-36/changed-files.txt",
+    "regression_areas": ["issue list roving focus", "issue board roving focus", "filter and collapse fallback", "virtualized reorder and refresh", "nested checkbox isolation", "responsive horizontal reachability"],
+    "evidence_refs": ["docs/product/versions/v0.1.0/30-implementation/CT-36/result.json", "docs/product/versions/v0.1.0/30-implementation/CT-36/evidence.md", "docs/product/versions/v0.1.0/30-implementation/CT-36/evidence/browser-status.json"],
+    "implementation_actor_ids": ["codex-dynamic-issue-focus"],
+    "implementation_session_ids": ["CT36-IMPL-20260820T050611Z"]
+  },
+  "outcomes": [{"outcome_id":"O-001","status":"pending"}, {"outcome_id":"O-002","status":"pending"}, {"outcome_id":"O-003","status":"pending"}],
+  "blockers": [
+    {
+      "id": "CT36-BROWSER-PERMISSION",
+      "description": "The approved local browser surface is unavailable under the active security policy; final desktop/mobile dynamic-focus verification remains required."
+    }
+  ],
+  "next": {"skill":"ct-test-sprint","issues":["CT-36"],"reason":"Run the bounded synthetic desktop/mobile list-and-board dynamic-focus matrix when the local browser surface is approved."}
+}

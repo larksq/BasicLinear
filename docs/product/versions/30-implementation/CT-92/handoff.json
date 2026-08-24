@@ -1,0 +1,31 @@
+{
+  "schema_version": "ct92-implementation-handoff-v1",
+  "stage": "implementation.testing-handoff",
+  "status": "implementation_complete_browser_acceptance_pending",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issue": {
+    "identifier": "CT-92",
+    "stable_id": "a20d5002-2055-4507-8e12-78527a6b5e44",
+    "created_revision": 1,
+    "implementation_scope_revision": 1,
+    "expected_completion_revision": 2
+  },
+  "changed_files_ref": "docs/product/versions/v0.1.0/30-implementation/CT-92/changed-files.txt",
+  "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-92/evidence/verification-summary.json",
+  "next": {
+    "skill": "ct-test-sprint",
+    "issue": "CT-12",
+    "scope": "inject blocking and stale read failures; verify exact retry, focus, announcements, restored data, responsive geometry, long diagnostics, and pinned Light/Dark contrast in Chrome"
+  },
+  "blockers": [
+    "Chrome control is unavailable in the selected Chrome profile and direct execution-time authorization is required to open it.",
+    "The repository has no source revision.",
+    "CT-82 independent clean-user runtime acceptance remains open.",
+    "CT-3 public identity, final-brand, license, and clean-room review remains open because OpenLinear has an exact active market collision."
+  ],
+  "outcomes_claimed": []
+}

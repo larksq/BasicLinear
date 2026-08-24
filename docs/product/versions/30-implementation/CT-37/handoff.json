@@ -1,0 +1,63 @@
+{
+  "schema_version": "ct37-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {"task_store":".control-tower/tasks-v0.8.sqlite3","provider_projection":"disabled","linear_used":false},
+  "issues": [
+    {
+      "issue_id": "CT-37",
+      "stable_id": "73173adc-e98b-4051-8ba2-eb84ba0483b6",
+      "revision": 2,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_browser_verification",
+      "requirement_refs": ["R-010", "R-104"],
+      "acceptance_refs": ["R-010", "R-104"],
+      "outcome_refs": ["O-001", "O-002", "O-003"],
+      "allowed_mutation_paths": ["apps/web/src/App.tsx", "apps/web/src/global-shortcuts.ts", "apps/web/tests/global-shortcuts.test.ts", "docs/product/versions/v0.1.0/30-implementation/CT-37"]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT37-IMPL-20260820T051814Z",
+      "actor_id": "codex-global-shortcut-safety",
+      "issue_id": "CT-37",
+      "mode": "code_mutating",
+      "output_refs": ["apps/web/src/App.tsx", "apps/web/src/global-shortcuts.ts", "apps/web/tests/global-shortcuts.test.ts"],
+      "validation_refs": ["docs/product/versions/v0.1.0/30-implementation/CT-37/result.json", "docs/product/versions/v0.1.0/30-implementation/CT-37/evidence.md"]
+    }
+  ],
+  "checks": [
+    {"check_id":"CT37-SHORTCUT-CONTRACT","issue_id":"CT-37","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-37/result.json"},
+    {"check_id":"CT37-REGRESSION","issue_id":"CT-37","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-37/result.json"},
+    {"check_id":"CT37-TYPECHECK","issue_id":"CT-37","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-37/result.json"},
+    {"check_id":"CT37-BUILD","issue_id":"CT-37","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-37/result.json"},
+    {"check_id":"CT37-BROWSER","issue_id":"CT-37","status":"blocked","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-37/evidence/browser-status.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-37",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-37/evidence.md#pending-browser-matrix",
+      "basis": "Focused policy and binding tests, combined semantic regression, complete regression, typecheck, and production build pass. Final shortcut dispatch, modal stacking, focus return, responsive-browser, and console behavior are not yet asserted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["R-010", "R-104"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-37/changed-files.txt",
+    "regression_areas": ["global issue-create shortcut", "global Search shortcut", "editable content isolation", "dialog stacking", "IME composition", "key repeat", "focus return", "responsive modal geometry"],
+    "evidence_refs": ["docs/product/versions/v0.1.0/30-implementation/CT-37/result.json", "docs/product/versions/v0.1.0/30-implementation/CT-37/evidence.md", "docs/product/versions/v0.1.0/30-implementation/CT-37/evidence/browser-status.json"],
+    "implementation_actor_ids": ["codex-global-shortcut-safety"],
+    "implementation_session_ids": ["CT37-IMPL-20260820T051814Z"]
+  },
+  "outcomes": [{"outcome_id":"O-001","status":"pending"}, {"outcome_id":"O-002","status":"pending"}, {"outcome_id":"O-003","status":"pending"}],
+  "blockers": [
+    {
+      "id": "CT37-BROWSER-PERMISSION",
+      "description": "The approved local browser surface is unavailable under the active security policy; final desktop/mobile shortcut and modal-stack verification remains required."
+    }
+  ],
+  "next": {"skill":"ct-test-sprint","issues":["CT-37"],"reason":"Run the bounded synthetic desktop/mobile shortcut and modal-stack matrix when the local browser surface is approved."}
+}

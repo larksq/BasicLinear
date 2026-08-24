@@ -1,0 +1,33 @@
+{
+  "schema_version": "ct82-runner-readiness-v1",
+  "captured_at": "2026-08-21T09:12:03.000Z",
+  "implementation_issue": "CT-88",
+  "acceptance_issue": "CT-82",
+  "runner": "scripts/verify-clean-runtime.mjs",
+  "guard": "scripts/clean-runtime-network-guard.cjs",
+  "artifact_sha256": "2dc6cc5751d136a1c0495e68283f4052066053c850de7094567f456c2478e776",
+  "implementation_rehearsal": "passed",
+  "independent": false,
+  "p_t21": "open",
+  "ct82": "Todo",
+  "source_revision_bound": false,
+  "guarded_phases": 6,
+  "outbound_attempts": 0,
+  "interruption_signals": ["SIGKILL", "SIGTERM", "SIGINT"],
+  "accepted_scale": {
+    "projects": 1001,
+    "milestones": 2001,
+    "issues": 10001,
+    "activity_entries": 50006,
+    "duration_ms": 168.02,
+    "threshold_ms": 5000
+  },
+  "remaining": [
+    "distinct_actor_and_session",
+    "clean_supported_account",
+    "clean_git_source_revision",
+    "strict_independent_runner_execution",
+    "independent_evidence_review"
+  ],
+  "outcomes_claimed": []
+}

@@ -1,0 +1,77 @@
+:root {
+  color-scheme: light;
+  --ol-bg: #f7f7f8;
+  --ol-surface: #ffffff;
+  --ol-surface-subtle: #f1f1f3;
+  --ol-border: #dedee3;
+  --ol-border-strong: #c7c7ce;
+  --ol-text: #202124;
+  --ol-text-muted: #6c6d73;
+  --ol-text-subtle: #6d6e74;
+  --ol-accent: #3366cc;
+  --ol-accent-strong: #2451ad;
+  --ol-primary-bg: #3366cc;
+  --ol-primary-bg-hover: #2451ad;
+  --ol-success: #237d47;
+  --ol-warning: #a55b17;
+  --ol-danger: #bd3b3b;
+  --ol-danger-solid: #bd3b3b;
+  --ol-focus: #087e8c;
+  --ol-sidebar-width: 248px;
+  --ol-topbar-height: 44px;
+  --ol-document-content-width: 920px;
+  --ol-page-title-size: 20px;
+  --ol-project-title-size: 24px;
+  --ol-row-height: 36px;
+  --ol-control-height: 30px;
+  --ol-radius: 6px;
+  --ol-shadow-popover: 0 10px 32px rgb(26 28 33 / 14%);
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --ol-bg: #171719;
+  --ol-surface: #1d1d20;
+  --ol-surface-subtle: #252529;
+  --ol-border: #343439;
+  --ol-border-strong: #47474f;
+  --ol-text: #ececef;
+  --ol-text-muted: #9b9ba4;
+  --ol-text-subtle: #8b8b94;
+  --ol-accent: #7d9be8;
+  --ol-accent-strong: #9cb2ec;
+  --ol-primary-bg: #4f70c5;
+  --ol-primary-bg-hover: #4263b8;
+  --ol-success: #5fbf84;
+  --ol-warning: #df9b52;
+  --ol-danger: #e27676;
+  --ol-danger-solid: #bd3b3b;
+  --ol-focus: #6be7f5;
+  --ol-shadow-popover: 0 12px 36px rgb(0 0 0 / 34%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+    --ol-bg: #171719;
+    --ol-surface: #1d1d20;
+    --ol-surface-subtle: #252529;
+    --ol-border: #343439;
+    --ol-border-strong: #47474f;
+    --ol-text: #ececef;
+    --ol-text-muted: #9b9ba4;
+    --ol-text-subtle: #8b8b94;
+    --ol-accent: #7d9be8;
+    --ol-accent-strong: #9cb2ec;
+    --ol-primary-bg: #4f70c5;
+    --ol-primary-bg-hover: #4263b8;
+    --ol-success: #5fbf84;
+    --ol-warning: #df9b52;
+    --ol-danger: #e27676;
+    --ol-danger-solid: #bd3b3b;
+    --ol-focus: #6be7f5;
+    --ol-shadow-popover: 0 12px 36px rgb(0 0 0 / 34%);
+  }
+}

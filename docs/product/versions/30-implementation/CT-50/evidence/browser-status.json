@@ -1,0 +1,37 @@
+{
+  "schema_version": "ct50-browser-status-v1",
+  "recorded_at": "2026-08-20T11:41:25Z",
+  "status": "deferred_permission_denied",
+  "planned_targets": {
+    "owner": "http://127.0.0.1:4181/",
+    "guest": "http://127.0.0.1:4181/?fixture=guest-readonly"
+  },
+  "synthetic_fixture": true,
+  "host_checks": 4,
+  "host_checks_passed": 4,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "The deterministic owner and guest fixture contracts are reachable from the host, but access to the approved browser surface remains denied by the active security policy. The denied browser outcome was not retried through another browser surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": [
+    "Owner active issue list and board",
+    "Owner archived issue list and board",
+    "Guest active and archived issue list and board",
+    "Quick property dialog with status priority and assignee fields",
+    "Workspace and role transitions with a menu editor or mutation open"
+  ],
+  "required_assertions": [
+    "overflow click right-click ContextMenu and Shift+F10 open one correctly positioned menu",
+    "ArrowUp ArrowDown Home End Escape and Tab preserve menu and return-focus semantics",
+    "owner write commands remain available while guests retain only Open issue",
+    "quick edit sends only changed properties with the visible revision and no-op submit sends nothing",
+    "archive restore errors and revision conflicts preserve recoverable focus and confirmed state",
+    "workspace or role changes close stale state and suppress unrelated completion feedback",
+    "interactive controls have visible focus accessible names and stable dimensions",
+    "desktop tablet and mobile layouts have zero overlap uncontained overflow duplicate IDs hidden focus console warnings and console errors"
+  ]
+}

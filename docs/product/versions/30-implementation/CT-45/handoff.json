@@ -1,0 +1,102 @@
+{
+  "schema_version": "ct45-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-45",
+      "stable_id": "e440b2d5-3c55-4d10-81a8-516b2be93654",
+      "revision": 2,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_browser_verification",
+      "requirement_refs": ["R-005", "R-006", "R-010", "R-104", "R-110"],
+      "acceptance_refs": ["R-005", "R-006", "R-010", "R-104", "R-110"],
+      "outcome_refs": ["O-001", "O-002", "O-003"],
+      "allowed_mutation_paths": [
+        "apps/web/src/issue-relation-groups.ts",
+        "apps/web/src/issues.tsx",
+        "apps/web/tests/issue-relation-groups.test.ts",
+        "apps/web/tests/layout-contract.test.ts",
+        "docs/product/versions/v0.1.0/30-implementation/CT-45"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT45-IMPL-20260820T080745Z",
+      "actor_id": "codex-issue-hierarchy",
+      "issue_id": "CT-45",
+      "mode": "code_mutating",
+      "output_refs": [
+        "apps/web/src/issue-relation-groups.ts",
+        "apps/web/src/issues.tsx",
+        "apps/web/tests/issue-relation-groups.test.ts",
+        "apps/web/tests/layout-contract.test.ts"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-45/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-45/evidence.md"
+      ]
+    }
+  ],
+  "checks": [
+    {"check_id": "CT45-ISSUE-HIERARCHY", "issue_id": "CT-45", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-45/result.json"},
+    {"check_id": "CT45-REGRESSION", "issue_id": "CT-45", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-45/result.json"},
+    {"check_id": "CT45-TYPECHECK", "issue_id": "CT-45", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-45/result.json"},
+    {"check_id": "CT45-BUILD", "issue_id": "CT-45", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-45/result.json"},
+    {"check_id": "CT45-BROWSER", "issue_id": "CT-45", "status": "blocked", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-45/evidence/browser-status.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-45",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-45/evidence.md#pending-browser-matrix",
+      "basis": "Focused hierarchy tests, semantic regression, complete regression, typecheck, production build, source review, and chunk-budget review pass. Final rendered hierarchy order, mutations, errors, responsive geometry, and assistive-technology behavior are not yet asserted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["R-005", "R-006", "R-010", "R-104", "R-110"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-45/changed-files.txt",
+    "regression_areas": [
+      "parent and sub-issue partitioning",
+      "hierarchy and peer direction labels",
+      "hierarchy create and remove mutations",
+      "relation errors and archive guards",
+      "detail relation navigation",
+      "activity refresh",
+      "secondary-section loading geometry",
+      "panel route and responsive geometry"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-45/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-45/evidence.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-45/evidence/browser-status.json"
+    ],
+    "implementation_actor_ids": ["codex-issue-hierarchy"],
+    "implementation_session_ids": ["CT45-IMPL-20260820T080745Z"]
+  },
+  "outcomes": [
+    {"outcome_id": "O-001", "status": "pending"},
+    {"outcome_id": "O-002", "status": "pending"},
+    {"outcome_id": "O-003", "status": "pending"}
+  ],
+  "blockers": [
+    {
+      "id": "CT45-BROWSER-PERMISSION",
+      "description": "The approved local browser surface is unavailable under the active security policy; final desktop, tablet, and mobile hierarchy ordering, mutation, error, archive, focus, responsive geometry, and assistive-technology verification remains required."
+    }
+  ],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issues": ["CT-45"],
+    "reason": "Run the bounded synthetic desktop, tablet, and mobile issue hierarchy matrix when the local browser surface is approved."
+  }
+}

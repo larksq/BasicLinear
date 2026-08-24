@@ -1,0 +1,13 @@
+apps/web/src/issue-scope.ts
+apps/web/src/issues.tsx
+apps/web/src/projects.tsx
+apps/web/src/styles.css
+apps/web/tests/issue-scope.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-22/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-22/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-count-mobile-390x844.jpg
+docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-filter-desktop-1440x900.jpg
+docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-filter-mobile-390x844.jpg
+docs/product/versions/v0.1.0/30-implementation/CT-22/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-22/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-22/session.md

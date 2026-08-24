@@ -1,0 +1,51 @@
+{
+  "schema_version": "release-dependency-license-inventory-v1",
+  "issue": "CT-13",
+  "generated_at": "2026-08-21T09:31:18Z",
+  "status": "metadata_screen_complete_distribution_audit_pending",
+  "source": {
+    "path": "package-lock.json",
+    "sha256": "fd719192d99ee14779bc3dc5fcc910da030ac889a45d78600b93e515cce67cca",
+    "method": "Count non-link package-lock package records, excluding the root project and separating project-owned workspace packages from third-party records."
+  },
+  "counts": {
+    "all_lockfile_entries": 271,
+    "workspace_link_entries": 9,
+    "non_link_entries_including_root": 262,
+    "package_records_excluding_root": 261,
+    "project_workspace_packages": 9,
+    "third_party_package_records": 252
+  },
+  "package_record_license_counts": {
+    "MIT": 205,
+    "Apache-2.0": 23,
+    "MPL-2.0": 12,
+    "ISC": 6,
+    "BSD-3-Clause": 5,
+    "Unlicense": 1,
+    "AGPL-3.0-only_PROJECT_WORKSPACE": 9
+  },
+  "project_metadata": {
+    "root_license_declared": true,
+    "workspace_license_declared_count": 9,
+    "workspace_license_undeclared_count": 0,
+    "declared_license": "AGPL-3.0-only",
+    "reason": "The sponsor selected AGPL-3.0-only on 2026-08-21; the root and all workspace manifests apply it."
+  },
+  "candidate_delta": {
+    "from_previous_candidate_records": 284,
+    "removed_third_party_records": 32,
+    "reason": "CT-81 removed the PostgreSQL, Kysely, external-identity, and password-hashing runtime dependency trees."
+  },
+  "findings": [
+    "No third-party package record has missing license metadata in the current lockfile.",
+    "No third-party package record declares GPL or AGPL in the current lockfile metadata.",
+    "Metadata values are not a legal compatibility conclusion and do not replace inspection of actual license and NOTICE files.",
+    "The final audit must operate on the release candidate and its actual web, API, and local operator contents.",
+    "No current third-party package name matches the retired pg, postgres, Kysely, openid, or Argon runtime families.",
+    "The project-owned root and nine workspace packages now declare AGPL-3.0-only; qualified compatibility and notice review remains pending."
+  ],
+  "historical_input": "docs/product/versions/v0.1.0/10-discovery/CT-3/dependency-license-inventory.json",
+  "owner": "CT-13 release audit with qualified review",
+  "decision_dependency": "DEC-003"
+}

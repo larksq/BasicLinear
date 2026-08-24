@@ -1,0 +1,36 @@
+{
+  "schema_version": "ct109-release-audit-reconciliation-v1",
+  "captured_at": "2026-08-22T10:35:00Z",
+  "verdict": "TECHNICAL_RELEASE_AUDIT_RECONCILED",
+  "issue": {
+    "identifier": "CT-109",
+    "id": "eafa6bf7-86dd-411b-8670-9ce6315bfdce",
+    "created_revision": 1,
+    "completion_revision": 2,
+    "metadata_revision": 3,
+    "status": "Done"
+  },
+  "before": {
+    "pass": 7,
+    "fail": 3,
+    "blocked": 4
+  },
+  "after": {
+    "pass": 8,
+    "fail": 0,
+    "blocked": 6,
+    "verdict": "NOT_READY"
+  },
+  "technical_inventory": {
+    "asset_records": 97,
+    "asset_pending_review": 97,
+    "copy_records": 46,
+    "copy_pending_review": 46,
+    "P-T21": "passed",
+    "release_audit_regression": "10/10 passed"
+  },
+  "acceptance_files_created": [],
+  "product_behavior_changed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

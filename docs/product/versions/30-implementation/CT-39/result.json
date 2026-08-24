@@ -1,0 +1,39 @@
+{
+  "schema_version": "ct39-implementation-result-v1",
+  "captured_at": "2026-08-20T05:57:12Z",
+  "verdict": "IMPLEMENTED_AWAITING_BROWSER_VERIFICATION",
+  "issue": {
+    "identifier": "CT-39",
+    "id": "6544ff13-9f17-4b7b-b41f-3c9be0fe7f81",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "checks": {
+    "focused_test_files": 1,
+    "focused_tests_passed": 7,
+    "focused_integration_test_files": 5,
+    "focused_integration_tests_passed": 41,
+    "combined_focused_test_files": 8,
+    "combined_focused_tests_passed": 39,
+    "complete_test_files": 20,
+    "complete_tests_passed": 112,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1921,
+    "css_bytes": 64663,
+    "projects_chunk_bytes": 29783,
+    "index_chunk_bytes": 278310,
+    "issues_chunk_bytes": 493319,
+    "browser_captures": 0,
+    "browser_verification": "deferred_permission_denied"
+  },
+  "source_hashes": {
+    "apps/web/src/project-density.ts": "514002c13f86feb1191a7e6b1783a71a4abcbc66790fb09fb5e05e6cea484853",
+    "apps/web/src/components.tsx": "77cbfa0900c79e66030047a8576c32ba2e27c2f9be877cb763097caea5aa7300",
+    "apps/web/src/projects.tsx": "8c604f45de5deb24f2b89ec310116b92f05f0e951cd2413f05ffb996b71b1781",
+    "apps/web/src/styles.css": "63ca8d8080b759f3b857a71ef516e17f3ccd308bb71e7ca3ae02591da705d0a9",
+    "apps/web/tests/project-density.test.ts": "7b06c887963dc9358ec52c53243daaffb4fa5bb590bd373b46891cb76dfd5b72",
+    "apps/web/tests/layout-contract.test.ts": "92cec36feceac8c111fe223a2eaa363fe0f8667c0229f7a6d802f11af6a71b30"
+  },
+  "outcomes_claimed": []
+}

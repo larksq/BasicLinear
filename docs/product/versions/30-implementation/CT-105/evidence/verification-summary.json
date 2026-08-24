@@ -1,0 +1,43 @@
+{
+  "schema_version": "ct105-verification-summary-v1",
+  "captured_at": "2026-08-22T09:40:37Z",
+  "issue": "CT-105",
+  "source_revision": "cf99bb834f544633ad820328817dcc2320d09744",
+  "source_tree": "5bb99828de1171fa47137fe497b062212248f454",
+  "checks": {
+    "focused": { "files": 1, "passed": 4, "failed": 0 },
+    "complete": { "files": 70, "passed": 461, "failed": 0 },
+    "typecheck_workspaces": 8,
+    "release_audit": { "passed": 10, "failed": 0 },
+    "build": { "modules": 1949, "files": 105, "bytes": 1894235, "warnings": 0 },
+    "independent_application_review": "passed",
+    "independent_runtime": "pending_for_cf99bb8"
+  },
+  "chrome": {
+    "family": "Chrome",
+    "version": "151.0.7922.170",
+    "url": "http://127.0.0.1:4284/",
+    "viewport": { "width": 1440, "height": 900 },
+    "theme": "dark",
+    "synthetic_data_only": true,
+    "tab_stops_to_editor": 42,
+    "focused_name": "Issue description",
+    "outline": "2px solid rgb(107, 231, 245)",
+    "outline_offset": "-2px",
+    "parent_focus_within_retained": true,
+    "page_audit": {
+      "unnamed_controls": 0,
+      "invalid_aria_references": 0,
+      "direct_text_contrast_failures": 0,
+      "horizontal_overflow": 0
+    },
+    "capture": {
+      "path": "docs/product/versions/v0.1.0/30-implementation/CT-105/evidence/focused-rich-editor-dark-1440x900.jpg",
+      "bytes": 70620,
+      "sha256": "922d5cad0ce9ab0349c1653594bfeeaedec44626870ef9a403c2f0da3eb824a1"
+    },
+    "full_ct12_acceptance": false
+  },
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

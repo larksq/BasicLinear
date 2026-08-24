@@ -1,0 +1,31 @@
+{
+  "schema_version": "ct94-implementation-handoff-v1",
+  "stage": "implementation.testing-handoff",
+  "status": "implementation_complete_browser_acceptance_pending",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issue": {
+    "identifier": "CT-94",
+    "stable_id": "a21ebb3f-ba73-4a9e-8d45-c3e3a08a3ca5",
+    "created_revision": 1,
+    "implementation_scope_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "changed_files_ref": "docs/product/versions/v0.1.0/30-implementation/CT-94/changed-files.txt",
+  "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-94/evidence/verification-summary.json",
+  "next": {
+    "skill": "ct-test-sprint",
+    "issue": "CT-12",
+    "scope": "verify per-issue content and comment draft restoration and isolation through close/reopen, related-issue navigation, browser Back, responsive remount, service interruption, matching save/discard, conflict reapply, long labels, focus, geometry, and pinned Light/Dark Chrome captures"
+  },
+  "blockers": [
+    "Chrome extension transport is unavailable in the selected Chrome profile and direct execution-time authorization is required to open it.",
+    "The repository has no source revision.",
+    "CT-82 independent clean-user runtime acceptance remains open.",
+    "CT-3 public identity, final-brand, license, and clean-room review remains open because OpenLinear has an exact active market collision."
+  ],
+  "outcomes_claimed": []
+}

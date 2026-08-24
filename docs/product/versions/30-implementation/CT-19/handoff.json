@@ -1,0 +1,141 @@
+{
+  "schema_version": "ct19-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "passed",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-19",
+      "stable_id": "5e108c22-806f-4b75-aab8-bc65a7a34717",
+      "revision": 2,
+      "accepted": true,
+      "blocked": false,
+      "status": "output_done",
+      "requirement_refs": ["R-009", "R-010", "R-011", "R-101"],
+      "acceptance_refs": ["R-009", "R-010", "R-011", "R-101"],
+      "outcome_refs": ["O-001", "O-002"],
+      "allowed_mutation_paths": [
+        "apps/web/src/App.tsx",
+        "apps/web/src/search-recents.ts",
+        "apps/web/tests/search-recents.test.ts",
+        "vitest.config.ts",
+        "docs/product/versions/v0.1.0/30-implementation/CT-19"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT19-IMPL-20260819T224200Z",
+      "actor_id": "codex-frontend-remediation",
+      "issue_id": "CT-19",
+      "mode": "code_mutating",
+      "allowed_paths": [
+        "apps/web/src/App.tsx",
+        "apps/web/src/search-recents.ts",
+        "apps/web/tests/search-recents.test.ts",
+        "vitest.config.ts"
+      ],
+      "output_refs": [
+        "apps/web/src/App.tsx",
+        "apps/web/src/search-recents.ts",
+        "apps/web/tests/search-recents.test.ts",
+        "vitest.config.ts"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-19/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-19/evidence.md"
+      ]
+    },
+    {
+      "session_id": "CT19-REVIEW-20260819T224700Z",
+      "actor_id": "browser-isolation-reviewer",
+      "issue_id": "CT-19",
+      "mode": "review_only",
+      "allowed_paths": ["docs/product/versions/v0.1.0/30-implementation/CT-19"],
+      "output_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-19/changed-files.txt",
+        "docs/product/versions/v0.1.0/30-implementation/CT-19/evidence.md",
+        "docs/product/versions/v0.1.0/30-implementation/CT-19/evidence/ct12-workspace-scoped-recents.jpg",
+        "docs/product/versions/v0.1.0/30-implementation/CT-19/handoff.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-19/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-19/session.md"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-19/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-19/evidence.md"
+      ]
+    }
+  ],
+  "changed_files": [
+    {"path":"apps/web/src/App.tsx","issue_id":"CT-19","mutation_type":"code","ai_session_id":"CT19-IMPL-20260819T224200Z","risk_level":"high","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-19/evidence.md#verification","test_refs":["CT19-FOCUSED","CT19-BROWSER","CT19-REGRESSION"]},
+    {"path":"apps/web/src/search-recents.ts","issue_id":"CT-19","mutation_type":"code","ai_session_id":"CT19-IMPL-20260819T224200Z","risk_level":"high","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-19/evidence.md#verification","test_refs":["CT19-FOCUSED","CT19-BROWSER","CT19-REGRESSION"]},
+    {"path":"apps/web/tests/search-recents.test.ts","issue_id":"CT-19","mutation_type":"test","ai_session_id":"CT19-IMPL-20260819T224200Z","risk_level":"medium","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-19/evidence.md#verification","test_refs":["CT19-FOCUSED","CT19-REGRESSION"]},
+    {"path":"vitest.config.ts","issue_id":"CT-19","mutation_type":"config","ai_session_id":"CT19-IMPL-20260819T224200Z","risk_level":"medium","review_ref":"docs/product/versions/v0.1.0/30-implementation/CT-19/evidence.md#verification","test_refs":["CT19-REGRESSION"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-19/changed-files.txt","issue_id":"CT-19","mutation_type":"docs","ai_session_id":"CT19-REVIEW-20260819T224700Z","risk_level":"low","test_refs":["CT19-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-19/evidence.md","issue_id":"CT-19","mutation_type":"docs","ai_session_id":"CT19-REVIEW-20260819T224700Z","risk_level":"low","test_refs":["CT19-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-19/evidence/ct12-workspace-scoped-recents.jpg","issue_id":"CT-19","mutation_type":"artifact","ai_session_id":"CT19-REVIEW-20260819T224700Z","risk_level":"low","test_refs":["CT19-BROWSER"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-19/handoff.json","issue_id":"CT-19","mutation_type":"docs","ai_session_id":"CT19-REVIEW-20260819T224700Z","risk_level":"low","test_refs":["CT19-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-19/result.json","issue_id":"CT-19","mutation_type":"docs","ai_session_id":"CT19-REVIEW-20260819T224700Z","risk_level":"low","test_refs":["CT19-EVIDENCE"]},
+    {"path":"docs/product/versions/v0.1.0/30-implementation/CT-19/session.md","issue_id":"CT-19","mutation_type":"docs","ai_session_id":"CT19-REVIEW-20260819T224700Z","risk_level":"low","test_refs":["CT19-EVIDENCE"]}
+  ],
+  "checks": [
+    {"check_id":"CT19-FOCUSED","issue_id":"CT-19","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-19/result.json"},
+    {"check_id":"CT19-BROWSER","issue_id":"CT-19","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-19/evidence.md"},
+    {"check_id":"CT19-REGRESSION","issue_id":"CT-19","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-19/result.json"},
+    {"check_id":"CT19-EVIDENCE","issue_id":"CT-19","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-19/evidence.md"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-19",
+      "status": "passed",
+      "independent": true,
+      "review_actor_id": "browser-isolation-reviewer",
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-19/evidence.md#verification",
+      "basis": "The deployed browser independently reproduced both workspace histories, the transition, current-context search, reload persistence, visual state, and diagnostic delta after the mutation checks completed."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["R-009", "R-010", "R-011", "R-101"],
+    "changed_file_refs": [
+      "apps/web/src/App.tsx",
+      "apps/web/src/search-recents.ts",
+      "apps/web/tests/search-recents.test.ts",
+      "vitest.config.ts",
+      "docs/product/versions/v0.1.0/30-implementation/CT-19/changed-files.txt",
+      "docs/product/versions/v0.1.0/30-implementation/CT-19/evidence.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-19/evidence/ct12-workspace-scoped-recents.jpg",
+      "docs/product/versions/v0.1.0/30-implementation/CT-19/handoff.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-19/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-19/session.md"
+    ],
+    "regression_areas": [
+      "workspace transition command state",
+      "recent search persistence and legacy storage",
+      "current-workspace issue and project search",
+      "command keyboard behavior",
+      "workspace service authorization"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-19/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-19/evidence.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-19/evidence/ct12-workspace-scoped-recents.jpg"
+    ],
+    "implementation_actor_ids": ["codex-frontend-remediation", "browser-isolation-reviewer"],
+    "implementation_session_ids": ["CT19-IMPL-20260819T224200Z", "CT19-REVIEW-20260819T224700Z"]
+  },
+  "outcomes": [
+    {"outcome_id":"O-001","status":"pending"},
+    {"outcome_id":"O-002","status":"pending"}
+  ],
+  "blockers": [],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issues": ["CT-12"],
+    "reason": "Return CT-19 to the independent integrated acceptance session that found the context leak."
+  }
+}

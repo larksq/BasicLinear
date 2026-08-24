@@ -1,0 +1,82 @@
+{
+  "schema_version": "ct84-runtime-rehearsal-v1",
+  "captured_at": "2026-08-21T07:51:13Z",
+  "issue": {
+    "identifier": "CT-84",
+    "stable_id": "1eefa911-b84a-487a-bcfc-cb76308feecf",
+    "starting_revision": 1,
+    "expected_completion_revision": 2
+  },
+  "environment": {
+    "os": "macOS 26.5.2 build 25F84",
+    "node": "v24.18.0",
+    "npm": "11.16.0",
+    "source_revision": "unavailable_unborn_repository"
+  },
+  "reproduction": {
+    "runtime": "built npm start",
+    "child_confirmed_absent_after_interrupt": true,
+    "first_retained_wal_bytes": 181312,
+    "focused_retained_wal_bytes": 78312,
+    "retained_shm_bytes": 32768,
+    "integrity": "ok",
+    "foreign_key_violations": 0
+  },
+  "decision": {
+    "journal_mode": "delete",
+    "synchronous": "full",
+    "single_process": true,
+    "single_connection": true,
+    "single_writer": true,
+    "manual_sidecar_deletion": false,
+    "transient_rollback_journal_owned_by_sqlite": true
+  },
+  "final_built_process": {
+    "origin": "http://127.0.0.1:4296",
+    "listener": "127.0.0.1_only",
+    "owner_status": 201,
+    "project_status": 201,
+    "workspace_id": "a61c8833-27f6-40d2-9f8b-b4460c85bfbe",
+    "owner_id": "85d488e4-3134-4887-a416-8bdb952bf7d3",
+    "team_id": "01de5d41-73b2-4b8a-98f5-6812605f2f3a",
+    "project_id": "4ebdaa3b-2814-496e-a502-a78ba96a4751",
+    "milestone_id": "1ac453c2-1518-4066-9835-b293d733a939",
+    "issue_id": "59d43c2b-d9df-46e1-9da3-cdea5dc60dfb",
+    "issue_identifier": "OL-1",
+    "idle_sqlite_sidecars": 0,
+    "post_interrupt_sqlite_sidecars": 0,
+    "database_mode": "0600",
+    "restart_readback": "passed",
+    "canonical_digest_before_restart": "fe4961acf50cf1240e5e83e1ae0d0100b83f95f2df240762343db56aa6f8ef83",
+    "canonical_digest_after_restart": "fe4961acf50cf1240e5e83e1ae0d0100b83f95f2df240762343db56aa6f8ef83"
+  },
+  "backup": {
+    "schema_version": 2,
+    "pages": 55,
+    "integrity": "ok",
+    "foreign_key_violations": 0,
+    "sha256": "17b0f35d3c3a7daaf8d06b32bbf582aa07a4b1c7a2efcb35bd33e43111a2a700"
+  },
+  "checks": {
+    "focused_test_files": 4,
+    "focused_tests_passed": 21,
+    "complete_test_files": 56,
+    "complete_tests_passed": 386,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1946,
+    "dist_bytes": 1027388,
+    "release_audit_tests_passed": 2
+  },
+  "control_tower_readback": {
+    "CT-84": "Done@2",
+    "CT-82": "Todo@2",
+    "CT-12": "In Progress@60",
+    "active": 6,
+    "completed": 78,
+    "trash": 0,
+    "provider_projection": "disabled_not_synced"
+  },
+  "independent_acceptance": false,
+  "outcomes_claimed": []
+}

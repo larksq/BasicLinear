@@ -1,0 +1,12 @@
+apps/web/src/components.tsx
+apps/web/src/project-density.ts
+apps/web/src/projects.tsx
+apps/web/src/styles.css
+apps/web/tests/layout-contract.test.ts
+apps/web/tests/project-density.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-39/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-39/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-39/evidence/browser-status.json
+docs/product/versions/v0.1.0/30-implementation/CT-39/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-39/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-39/session.md

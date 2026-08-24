@@ -1,0 +1,40 @@
+{
+  "schema_version": "ct89-implementation-result-v1",
+  "captured_at": "2026-08-21T09:51:37Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_ACCOUNTABLE_REVIEW_PENDING",
+  "issue": {
+    "identifier": "CT-89",
+    "id": "6da5c3bf-ecc4-471c-987c-ec3990823940",
+    "created_revision": 1,
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "resolution": {
+    "lockfile_records_classified": 252,
+    "unclassified_records": 0,
+    "missing_declared_licenses": 0,
+    "notice_document_hash_bound": true,
+    "notice_entry_set_hash_bound": true,
+    "asset_entries_technically_complete": 82,
+    "copy_entries_technically_complete": 43,
+    "generators_can_self_approve": false,
+    "changed_or_malformed_approvals_reset": true,
+    "valid_unchanged_approvals_preserved": true
+  },
+  "checks": {
+    "focused_tests_passed": 6,
+    "focused_tests_failed": 0,
+    "complete_test_files": 56,
+    "complete_tests_passed": 389,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1946,
+    "real_audit_verdict": "NOT_READY",
+    "real_audit_pass": 6,
+    "real_audit_fail": 0,
+    "real_audit_blocked": 8
+  },
+  "approvals_created": [],
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

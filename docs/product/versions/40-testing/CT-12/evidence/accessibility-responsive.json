@@ -1,0 +1,51 @@
+{
+  "schema_version": "ct12-accessibility-responsive-evidence-v1",
+  "captured_at": "2026-08-19T23:09:00Z",
+  "desktop_2154x1340": {
+    "list_visible_controls": 36,
+    "unnamed_controls": 0,
+    "duplicate_ids": 0,
+    "heading_order_violations": 0,
+    "document_horizontal_overflow_px": 0,
+    "focus_outline": "2px solid",
+    "sidebar_visible": true
+  },
+  "detail_desktop": {
+    "visible_controls": 73,
+    "unnamed_controls": 0,
+    "duplicate_ids": 0,
+    "document_horizontal_overflow_px": 0,
+    "escape_restored_exact_trigger": true
+  },
+  "mobile_390x844_closed_navigation": {
+    "visible_controls": 26,
+    "unnamed_controls": 0,
+    "controls_outside_viewport": 0,
+    "document_horizontal_overflow_px": 0,
+    "navigation_in_accessibility_tree": false
+  },
+  "mobile_390x844_open_navigation": {
+    "named_navigation_controls": 10,
+    "controls_outside_viewport": 0,
+    "navigation_landmark_present": true,
+    "escape_closes_and_restores_trigger": true,
+    "keyboard_scrim_closes_and_restores_trigger": true,
+    "pointer_scrim_closes_and_restores_trigger": true
+  },
+  "tablet_768x1024": {
+    "active_issue_count": 2,
+    "controls_outside_viewport": 0,
+    "document_horizontal_overflow_px": 0,
+    "closed_navigation_hidden": true
+  },
+  "workspace_search_isolation": {
+    "prior_workspace_recent_visible_after_switch": false,
+    "prior_workspace_result_visible_after_switch": false,
+    "current_workspace_result_and_recent_persist": true,
+    "new_warning_or_error_entries": 0,
+    "bug_ref": "CT-19",
+    "result": "passed_after_fix"
+  },
+  "mobile_navigation_bug_ref": "CT-20",
+  "result": "passed_after_fix"
+}

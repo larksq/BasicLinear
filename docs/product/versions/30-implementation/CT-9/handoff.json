@@ -1,0 +1,187 @@
+{
+  "schema_version": "ct9-implementation-handoff-v2",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "passed",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-9",
+      "stable_id": "5c6dbd22-82bf-46d4-8e0a-098146b45282",
+      "revision": 2,
+      "accepted": true,
+      "blocked": false,
+      "status": "output_done",
+      "requirement_refs": ["R-008", "R-009", "R-010", "R-011", "R-103", "R-104", "R-105", "R-110"],
+      "acceptance_refs": ["R-008", "R-009", "R-010", "R-011", "R-103", "R-104", "R-105", "R-110"],
+      "outcome_refs": ["O-001", "O-002", "O-003"],
+      "allowed_mutation_paths": ["apps", "packages", "package-lock.json", "docs/product/versions/v0.1.0/30-implementation/CT-9"]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "ct9-implementation-1",
+      "actor_id": "codex-implementation",
+      "issue_id": "CT-9",
+      "mode": "code_mutating",
+      "allowed_paths": ["apps", "packages", "package-lock.json"],
+      "output_refs": [
+        "apps/api/src/app.ts",
+        "apps/api/tests/views.integration.test.ts",
+        "apps/web/package.json",
+        "apps/web/src/App.tsx",
+        "apps/web/src/api.ts",
+        "apps/web/src/issues.tsx",
+        "apps/web/src/projects.tsx",
+        "apps/web/src/styles.css",
+        "package-lock.json",
+        "packages/contracts/src/index.ts",
+        "packages/db/migrations/006_views_search.sql",
+        "packages/db/src/index.ts",
+        "packages/db/src/issue-repository.ts",
+        "packages/db/src/types.ts",
+        "packages/db/src/view-repository.ts",
+        "packages/domain/src/index.ts",
+        "packages/domain/tests/domain.test.ts",
+        "packages/ui/src/tokens.css"
+      ],
+      "validation_refs": ["docs/product/versions/v0.1.0/30-implementation/CT-9/result.json", "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md"]
+    },
+    {
+      "session_id": "ct9-final-image-review-1",
+      "actor_id": "isolated-final-image-verifier",
+      "issue_id": "CT-9",
+      "mode": "review_only",
+      "allowed_paths": ["docs/product/versions/v0.1.0/30-implementation/CT-9"],
+      "output_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-9/changed-files.txt",
+        "docs/product/versions/v0.1.0/30-implementation/CT-9/session.md",
+        "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md",
+        "docs/product/versions/v0.1.0/30-implementation/CT-9/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-9/handoff.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-board-desktop-1440x1000.jpg",
+        "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-split-desktop-1440x1000.jpg",
+        "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-tablet-768x1024.jpg",
+        "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-mobile-390x844.jpg",
+        "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/virtualization-2002-issues-1440x1000.jpg"
+      ],
+      "validation_refs": ["docs/product/versions/v0.1.0/30-implementation/CT-9/result.json", "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md"]
+    }
+  ],
+  "changed_files": [
+    { "path": "apps/api/src/app.ts", "issue_id": "CT-9", "mutation_type": "code", "ai_session_id": "ct9-implementation-1", "risk_level": "high", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md#verification", "test_refs": ["CT9-TYPECHECK-UNIT", "CT9-INTEGRATION", "CT9-BUILD-RUNTIME"] },
+    { "path": "apps/api/tests/views.integration.test.ts", "issue_id": "CT-9", "mutation_type": "test", "ai_session_id": "ct9-implementation-1", "risk_level": "high", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md#verification", "test_refs": ["CT9-INTEGRATION"] },
+    { "path": "apps/web/package.json", "issue_id": "CT-9", "mutation_type": "config", "ai_session_id": "ct9-implementation-1", "risk_level": "medium", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md#verification", "test_refs": ["CT9-BUILD-RUNTIME", "CT9-BROWSER-PERFORMANCE"] },
+    { "path": "apps/web/src/App.tsx", "issue_id": "CT-9", "mutation_type": "code", "ai_session_id": "ct9-implementation-1", "risk_level": "high", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md#verification", "test_refs": ["CT9-TYPECHECK-UNIT", "CT9-BROWSER-PERFORMANCE"] },
+    { "path": "apps/web/src/api.ts", "issue_id": "CT-9", "mutation_type": "code", "ai_session_id": "ct9-implementation-1", "risk_level": "high", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md#verification", "test_refs": ["CT9-TYPECHECK-UNIT", "CT9-INTEGRATION", "CT9-BROWSER-PERFORMANCE"] },
+    { "path": "apps/web/src/issues.tsx", "issue_id": "CT-9", "mutation_type": "code", "ai_session_id": "ct9-implementation-1", "risk_level": "high", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md#verification", "test_refs": ["CT9-TYPECHECK-UNIT", "CT9-BROWSER-PERFORMANCE"] },
+    { "path": "apps/web/src/projects.tsx", "issue_id": "CT-9", "mutation_type": "code", "ai_session_id": "ct9-implementation-1", "risk_level": "medium", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md#verification", "test_refs": ["CT9-TYPECHECK-UNIT", "CT9-BROWSER-PERFORMANCE"] },
+    { "path": "apps/web/src/styles.css", "issue_id": "CT-9", "mutation_type": "code", "ai_session_id": "ct9-implementation-1", "risk_level": "high", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md#verification", "test_refs": ["CT9-BROWSER-PERFORMANCE", "CT9-ACCESSIBILITY"] },
+    { "path": "package-lock.json", "issue_id": "CT-9", "mutation_type": "config", "ai_session_id": "ct9-implementation-1", "risk_level": "medium", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md#verification", "test_refs": ["CT9-BUILD-RUNTIME"] },
+    { "path": "packages/contracts/src/index.ts", "issue_id": "CT-9", "mutation_type": "code", "ai_session_id": "ct9-implementation-1", "risk_level": "high", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md#verification", "test_refs": ["CT9-TYPECHECK-UNIT", "CT9-INTEGRATION"] },
+    { "path": "packages/db/migrations/006_views_search.sql", "issue_id": "CT-9", "mutation_type": "config", "ai_session_id": "ct9-implementation-1", "risk_level": "high", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md#verification", "test_refs": ["CT9-INTEGRATION", "CT9-BUILD-RUNTIME"] },
+    { "path": "packages/db/src/index.ts", "issue_id": "CT-9", "mutation_type": "code", "ai_session_id": "ct9-implementation-1", "risk_level": "medium", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md#verification", "test_refs": ["CT9-TYPECHECK-UNIT", "CT9-INTEGRATION"] },
+    { "path": "packages/db/src/issue-repository.ts", "issue_id": "CT-9", "mutation_type": "code", "ai_session_id": "ct9-implementation-1", "risk_level": "high", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md#verification", "test_refs": ["CT9-TYPECHECK-UNIT", "CT9-INTEGRATION"] },
+    { "path": "packages/db/src/types.ts", "issue_id": "CT-9", "mutation_type": "code", "ai_session_id": "ct9-implementation-1", "risk_level": "medium", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md#verification", "test_refs": ["CT9-TYPECHECK-UNIT", "CT9-INTEGRATION"] },
+    { "path": "packages/db/src/view-repository.ts", "issue_id": "CT-9", "mutation_type": "code", "ai_session_id": "ct9-implementation-1", "risk_level": "high", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md#verification", "test_refs": ["CT9-TYPECHECK-UNIT", "CT9-INTEGRATION"] },
+    { "path": "packages/domain/src/index.ts", "issue_id": "CT-9", "mutation_type": "code", "ai_session_id": "ct9-implementation-1", "risk_level": "high", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md#verification", "test_refs": ["CT9-TYPECHECK-UNIT", "CT9-INTEGRATION"] },
+    { "path": "packages/domain/tests/domain.test.ts", "issue_id": "CT-9", "mutation_type": "test", "ai_session_id": "ct9-implementation-1", "risk_level": "medium", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md#verification", "test_refs": ["CT9-TYPECHECK-UNIT"] },
+    { "path": "packages/ui/src/tokens.css", "issue_id": "CT-9", "mutation_type": "config", "ai_session_id": "ct9-implementation-1", "risk_level": "medium", "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md#verification", "test_refs": ["CT9-ACCESSIBILITY", "CT9-BROWSER-PERFORMANCE"] },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/changed-files.txt", "issue_id": "CT-9", "mutation_type": "docs", "ai_session_id": "ct9-final-image-review-1", "risk_level": "low", "test_refs": ["CT9-EVIDENCE"] },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/session.md", "issue_id": "CT-9", "mutation_type": "docs", "ai_session_id": "ct9-final-image-review-1", "risk_level": "low", "test_refs": ["CT9-EVIDENCE"] },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md", "issue_id": "CT-9", "mutation_type": "docs", "ai_session_id": "ct9-final-image-review-1", "risk_level": "low", "test_refs": ["CT9-EVIDENCE"] },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/result.json", "issue_id": "CT-9", "mutation_type": "docs", "ai_session_id": "ct9-final-image-review-1", "risk_level": "low", "test_refs": ["CT9-EVIDENCE"] },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/handoff.json", "issue_id": "CT-9", "mutation_type": "docs", "ai_session_id": "ct9-final-image-review-1", "risk_level": "low", "test_refs": ["CT9-EVIDENCE"] },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-board-desktop-1440x1000.jpg", "issue_id": "CT-9", "mutation_type": "artifact", "ai_session_id": "ct9-final-image-review-1", "risk_level": "low", "test_refs": ["CT9-BROWSER-PERFORMANCE"] },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-split-desktop-1440x1000.jpg", "issue_id": "CT-9", "mutation_type": "artifact", "ai_session_id": "ct9-final-image-review-1", "risk_level": "low", "test_refs": ["CT9-BROWSER-PERFORMANCE"] },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-tablet-768x1024.jpg", "issue_id": "CT-9", "mutation_type": "artifact", "ai_session_id": "ct9-final-image-review-1", "risk_level": "low", "test_refs": ["CT9-BROWSER-PERFORMANCE"] },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-mobile-390x844.jpg", "issue_id": "CT-9", "mutation_type": "artifact", "ai_session_id": "ct9-final-image-review-1", "risk_level": "low", "test_refs": ["CT9-BROWSER-PERFORMANCE"] },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/virtualization-2002-issues-1440x1000.jpg", "issue_id": "CT-9", "mutation_type": "artifact", "ai_session_id": "ct9-final-image-review-1", "risk_level": "low", "test_refs": ["CT9-BROWSER-PERFORMANCE"] }
+  ],
+  "checks": [
+    { "check_id": "CT9-TYPECHECK-UNIT", "issue_id": "CT-9", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/result.json" },
+    { "check_id": "CT9-INTEGRATION", "issue_id": "CT-9", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/result.json" },
+    { "check_id": "CT9-BUILD-RUNTIME", "issue_id": "CT-9", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/result.json" },
+    { "check_id": "CT9-BROWSER-PERFORMANCE", "issue_id": "CT-9", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md" },
+    { "check_id": "CT9-ACCESSIBILITY", "issue_id": "CT-9", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md" },
+    { "check_id": "CT9-EVIDENCE", "issue_id": "CT-9", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/result.json" }
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-9",
+      "status": "passed",
+      "independent": true,
+      "review_actor_id": "isolated-final-image-verifier",
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md#verification",
+      "basis": "Source-frozen immutable images, a fresh PostgreSQL database suite, and production-browser review were executed outside the code-mutating session."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["R-008", "R-009", "R-010", "R-011", "R-103", "R-104", "R-105", "R-110"],
+    "changed_file_refs": [
+      "apps/api/src/app.ts",
+      "apps/api/tests/views.integration.test.ts",
+      "apps/web/package.json",
+      "apps/web/src/App.tsx",
+      "apps/web/src/api.ts",
+      "apps/web/src/issues.tsx",
+      "apps/web/src/projects.tsx",
+      "apps/web/src/styles.css",
+      "package-lock.json",
+      "packages/contracts/src/index.ts",
+      "packages/db/migrations/006_views_search.sql",
+      "packages/db/src/index.ts",
+      "packages/db/src/issue-repository.ts",
+      "packages/db/src/types.ts",
+      "packages/db/src/view-repository.ts",
+      "packages/domain/src/index.ts",
+      "packages/domain/tests/domain.test.ts",
+      "packages/ui/src/tokens.css",
+      "docs/product/versions/v0.1.0/30-implementation/CT-9/changed-files.txt",
+      "docs/product/versions/v0.1.0/30-implementation/CT-9/session.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-9/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-9/handoff.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-board-desktop-1440x1000.jpg",
+      "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-split-desktop-1440x1000.jpg",
+      "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-tablet-768x1024.jpg",
+      "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-mobile-390x844.jpg",
+      "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/virtualization-2002-issues-1440x1000.jpg"
+    ],
+    "regression_areas": [
+      "workspace isolation and filter SQL parameterization",
+      "saved-view ownership, revision, archive, and URL serialization",
+      "bulk partial conflicts and per-item result reporting",
+      "ranked issue/project search authorization and log hygiene",
+      "virtual row/card mounting and seeded-scale detail readiness",
+      "list-to-detail history, adjacent replacement, scroll, selection, and focus return",
+      "keyboard shortcuts around editable targets and layered Escape recovery",
+      "desktop split geometry, mobile overflow, contrast, and assistive semantics"
+    ],
+    "evidence_refs": ["docs/product/versions/v0.1.0/30-implementation/CT-9/result.json", "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence.md"],
+    "implementation_actor_ids": ["codex-implementation", "isolated-final-image-verifier"],
+    "implementation_session_ids": ["ct9-implementation-1", "ct9-final-image-review-1"]
+  },
+  "outcomes": [
+    { "outcome_id": "O-001", "status": "pending" },
+    { "outcome_id": "O-002", "status": "baseline-needed" },
+    { "outcome_id": "O-003", "status": "pending" }
+  ],
+  "blockers": [],
+  "deferred": [
+    "Canonical export/import and operator recovery remain CT-10 scope.",
+    "Independent security and concurrency acceptance remain CT-11 scope.",
+    "Integrated assistive-technology, fidelity, performance, and recovery acceptance remain CT-12 scope.",
+    "O-002 remains baseline-needed under CT-2."
+  ],
+  "next": {
+    "skill": "ct-implement-sprint",
+    "issues": ["CT-10"],
+    "parallel_acceptance_issue": "CT-11",
+    "reason": "CT-10 is dependency-closed; completing CT-9 also closes CT-11's implementation dependency set."
+  }
+}

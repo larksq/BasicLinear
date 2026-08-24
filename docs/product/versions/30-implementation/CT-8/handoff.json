@@ -1,0 +1,53 @@
+{
+  "schema_version": "ct8-implementation-handoff-v1",
+  "stage": "implementation",
+  "status": "output_done",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "inputs": {
+    "issue": "CT-8",
+    "issue_id": "b69d8b70-f5be-420e-8746-602e0b3bbde7",
+    "issue_revision": 2,
+    "dependency": "CT-6@3",
+    "planning_package_sha256": "d161247c9c523e004a14d6e31ebcf9d12aab9764015b312383e13a0bb851f834"
+  },
+  "outputs": {
+    "changed_files": "docs/product/versions/v0.1.0/30-implementation/CT-8/changed-files.txt",
+    "evidence": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence.md",
+    "result": "docs/product/versions/v0.1.0/30-implementation/CT-8/result.json",
+    "runtime_url": "http://localhost:4175"
+  },
+  "validation": {
+    "tests": ["P-T08", "P-T09"],
+    "requirements": ["R-005", "R-006", "R-007", "R-012"],
+    "result": "pass_with_independent_acceptance_deferred"
+  },
+  "issue_contract": {
+    "identifier": "transactional monotonic team sequence",
+    "rich_text": "versioned allowlisted ProseMirror JSON",
+    "relations": "canonical edges with derived inverse semantics and cycle rejection",
+    "comments": "revision-safe rich-text create/edit/archive/restore",
+    "activity": "accepted mutations pair activity and outbox writes transactionally",
+    "recovery": "archive/restore plus owner-only archived exact-confirmation purge",
+    "progress_policy": "project-progress-v1",
+    "progress_mutability": "derived_read_only"
+  },
+  "outcomes": {
+    "evaluated": false,
+    "claimed": []
+  },
+  "blockers": [],
+  "deferred": [
+    "Composed views, saved filter state, board, bulk workflows, global search, command palette, detail side panels, and seeded-scale performance remain CT-9 scope.",
+    "Canonical export/import, backup/restore, and clean-host named-volume qualification remain CT-10/CT-12 scope.",
+    "Independent security and integrated quality acceptance remain CT-11/CT-12 scope."
+  ],
+  "next": {
+    "issues": ["CT-9", "CT-10"],
+    "reason": "Both issues have completed CT-6/CT-7 dependencies and become dependency-closed when CT-8 is marked Done."
+  }
+}

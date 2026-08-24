@@ -1,0 +1,17 @@
+apps/web/src/projects.tsx
+apps/web/src/project-inline-edit.ts
+apps/web/src/styles.css
+apps/web/tests/project-inline-edit.test.ts
+apps/web/tests/workspace-capabilities.test.ts
+scripts/serve-visual-fixture.mjs
+docs/product/versions/v0.1.0/30-implementation/CT-68/session.md
+docs/product/versions/v0.1.0/30-implementation/CT-68/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-68/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-68/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-68/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-68/evidence/host-matrix.json
+docs/product/versions/v0.1.0/30-implementation/CT-68/evidence/browser-status.json
+docs/product/versions/v0.1.0/40-testing/CT-12/
+docs/product/versions/v0.1.0/50-outcome-review/CT-13/
+ops/release/asset-provenance.json
+ops/release/copy-provenance.json

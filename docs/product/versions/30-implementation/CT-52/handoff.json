@@ -1,0 +1,111 @@
+{
+  "schema_version": "ct52-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-52",
+      "stable_id": "74a18886-a598-4a84-b8a9-f5aa0b29d595",
+      "revision": 1,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_browser_verification",
+      "requirement_refs": ["R-009", "R-010", "R-104", "R-110"],
+      "acceptance_refs": ["P-T10", "P-T11", "P-T13", "P-T18", "P-T19"],
+      "outcome_refs": ["O-001", "O-002", "O-003"],
+      "allowed_mutation_paths": [
+        "apps/web/src/App.tsx",
+        "apps/web/src/command-palette.ts",
+        "apps/web/src/styles.css",
+        "apps/web/tests/command-palette.test.ts",
+        "apps/web/tests/layout-contract.test.ts",
+        "docs/product/versions/v0.1.0/30-implementation/CT-52",
+        "docs/product/versions/v0.1.0/40-testing/CT-12",
+        "docs/product/versions/v0.1.0/50-outcome-review/CT-13",
+        "ops/release/current-candidate.json",
+        "ops/release/current-candidate-source-manifest.json"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT52-IMPL-20260820T122846Z",
+      "actor_id": "codex-command-search-polish",
+      "issue_id": "CT-52",
+      "mode": "code_mutating",
+      "output_refs": [
+        "apps/web/src/App.tsx",
+        "apps/web/src/command-palette.ts",
+        "apps/web/src/styles.css",
+        "apps/web/tests/command-palette.test.ts"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-52/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-52/evidence.md"
+      ]
+    }
+  ],
+  "checks": [
+    {"check_id": "CT52-COMMAND-SEARCH-CONTRACT", "issue_id": "CT-52", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-52/result.json"},
+    {"check_id": "CT52-REGRESSION", "issue_id": "CT-52", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-52/result.json"},
+    {"check_id": "CT52-TYPECHECK", "issue_id": "CT-52", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-52/result.json"},
+    {"check_id": "CT52-BUILD", "issue_id": "CT-52", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-52/result.json"},
+    {"check_id": "CT52-FIXTURE-HOST", "issue_id": "CT-52", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-52/evidence/browser-status.json"},
+    {"check_id": "CT52-DATABASE-RUNNER", "issue_id": "CT-52", "status": "skipped", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-52/evidence.md#automated-verification"},
+    {"check_id": "CT52-BROWSER", "issue_id": "CT-52", "status": "blocked", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-52/evidence/browser-status.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-52",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-52/evidence.md",
+      "basis": "Focused and complete regression, typecheck, production build, source review, disabled-option correction, literal-input checks, and owner/guest fixture host checks pass. Rendered desktop, tablet, and mobile verification remains unexecuted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["P-T10", "P-T11", "P-T13", "P-T18", "P-T19"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-52/changed-files.txt",
+    "regression_areas": [
+      "literal query-term emphasis in issue and project identifiers titles and subtitles",
+      "regex-like markup-like repeated and mixed-case query input",
+      "recent searching result-count no-match and error status",
+      "owner and guest ArrowUp ArrowDown Home End and Enter navigation",
+      "active descendant stability as result counts and capabilities change",
+      "workspace-scoped recent result storage and server result order",
+      "desktop tablet and mobile command-dialog geometry focus and accessibility"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-52/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-52/evidence.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-52/evidence/browser-status.json"
+    ],
+    "implementation_actor_ids": ["codex-command-search-polish"],
+    "implementation_session_ids": ["CT52-IMPL-20260820T122846Z"]
+  },
+  "outcomes": [
+    {"outcome_id": "O-001", "status": "pending"},
+    {"outcome_id": "O-002", "status": "pending"},
+    {"outcome_id": "O-003", "status": "pending"}
+  ],
+  "blockers": [
+    {
+      "id": "CT52-BROWSER-PERMISSION",
+      "description": "The approved local browser surface is unavailable under the active security policy; final owner/guest desktop, tablet, and mobile search emphasis, status, keyboard, focus, accessibility, error, and responsive-geometry verification remains required."
+    }
+  ],
+  "environment_notes": [
+    "The PostgreSQL integration runner skipped seven files and 17 tests because TEST_MIGRATION_DATABASE_URL and TEST_APP_PASSWORD are absent. CT-52 changes no persistence schema, service search path, authorization path, or RLS policy."
+  ],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issues": ["CT-52"],
+    "reason": "Run the bounded owner/guest desktop, tablet, and mobile command-palette matrix when the approved browser surface is available."
+  }
+}

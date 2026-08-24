@@ -1,0 +1,122 @@
+{
+  "schema_version": "ct48-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_database_and_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issues": [
+    {
+      "issue_id": "CT-48",
+      "stable_id": "135569dd-b489-4adc-b305-1dc9b5d15cf3",
+      "revision": 2,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_database_and_browser_verification",
+      "requirement_refs": ["R-001", "R-101", "R-102", "R-106", "R-107", "R-109"],
+      "acceptance_refs": ["P-T03", "P-T04", "P-T05", "P-T14", "P-T16", "P-T17", "P-T19", "P-T21"],
+      "outcome_refs": ["O-001", "O-004"],
+      "allowed_mutation_paths": [
+        "apps/api",
+        "apps/web/src/App.tsx",
+        "apps/web/src/api.ts",
+        "apps/web/src/styles.css",
+        "packages/contracts",
+        "packages/db",
+        "packages/domain/src/index.ts",
+        "ops/cli/src/index.ts",
+        "ops/compose/docker-compose.yml",
+        ".env.example",
+        "README.md",
+        "package-lock.json",
+        "THIRD_PARTY_NOTICES.md",
+        "ops/release/third-party-notices.json",
+        "scripts/serve-visual-fixture.mjs",
+        "docs/product/versions/v0.1.0/30-implementation/CT-48"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT48-IMPL-20260820T095851Z",
+      "actor_id": "codex-optional-oidc",
+      "issue_id": "CT-48",
+      "mode": "code_mutating",
+      "output_refs": [
+        "apps/api/src/oidc.ts",
+        "apps/api/src/app.ts",
+        "packages/db/migrations/009_optional_oidc.sql",
+        "packages/db/src/auth-repository.ts",
+        "packages/db/src/canonical.ts",
+        "packages/db/src/transfer.ts",
+        "apps/web/src/App.tsx",
+        "apps/web/src/api.ts"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.1.0/30-implementation/CT-48/result.json",
+        "docs/product/versions/v0.1.0/30-implementation/CT-48/evidence.md"
+      ]
+    }
+  ],
+  "checks": [
+    {"check_id": "CT48-OIDC-PRIMITIVES", "issue_id": "CT-48", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-48/result.json"},
+    {"check_id": "CT48-REGRESSION", "issue_id": "CT-48", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-48/result.json"},
+    {"check_id": "CT48-TYPECHECK", "issue_id": "CT-48", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-48/result.json"},
+    {"check_id": "CT48-BUILD", "issue_id": "CT-48", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-48/result.json"},
+    {"check_id": "CT48-FIXTURE-HOST", "issue_id": "CT-48", "status": "passed", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-48/evidence/browser-status.json"},
+    {"check_id": "CT48-DATABASE", "issue_id": "CT-48", "status": "blocked", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-48/evidence.md#pending-database-matrix"},
+    {"check_id": "CT48-BROWSER", "issue_id": "CT-48", "status": "blocked", "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-48/evidence/browser-status.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-48",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-48/evidence.md",
+      "basis": "Focused and complete regression, typecheck, production build, protocol source review, POST-link correction, canonical recovery review, dependency notice generation, and fixture host checks pass. PostgreSQL-backed and rendered verification remain unexecuted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["P-T03", "P-T04", "P-T05", "P-T14", "P-T16", "P-T17", "P-T19", "P-T21"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-48/changed-files.txt",
+    "regression_areas": [
+      "local setup login password rotation and operator recovery",
+      "OIDC discovery authorization callback PKCE state nonce and browser binding",
+      "exact issuer and subject mapping without email matching",
+      "origin-protected link and revision-bound unlink",
+      "forced-RLS security-definer authentication functions",
+      "canonical backup restore and transient authorization-request exclusion",
+      "migration 009 and populated pre-009 backup gating",
+      "provider-disabled and provider-failure web states"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-48/result.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-48/evidence.md",
+      "docs/product/versions/v0.1.0/30-implementation/CT-48/evidence/browser-status.json"
+    ],
+    "implementation_actor_ids": ["codex-optional-oidc"],
+    "implementation_session_ids": ["CT48-IMPL-20260820T095851Z"]
+  },
+  "outcomes": [
+    {"outcome_id": "O-001", "status": "pending"},
+    {"outcome_id": "O-004", "status": "pending"}
+  ],
+  "blockers": [
+    {
+      "id": "CT48-DATABASE-ENVIRONMENT",
+      "description": "The isolated PostgreSQL integration URL and application password are absent; migration, grants, RLS, exact mapping, replay, restart, backup/restore, transient exclusion, and populated pre-009 upgrade execution remain required."
+    },
+    {
+      "id": "CT48-BROWSER-PERMISSION",
+      "description": "The approved local browser surface is unavailable under the active security policy; final desktop and mobile login, link, unlink, focus, accessibility, error, and responsive geometry verification remains required."
+    }
+  ],
+  "next": {
+    "skill": "ct-test-sprint",
+    "issues": ["CT-48"],
+    "reason": "Run the isolated PostgreSQL matrix and bounded synthetic desktop/mobile OIDC account-link matrix when the approved surfaces are available."
+  }
+}

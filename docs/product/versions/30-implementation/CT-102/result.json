@@ -1,0 +1,45 @@
+{
+  "schema_version": "ct102-implementation-result-v1",
+  "captured_at": "2026-08-22T04:51:47Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING",
+  "issue": {
+    "identifier": "CT-102",
+    "id": "a6c0ee1a-be5a-46ba-8d9f-9b5f939d39ce",
+    "created_revision": 1,
+    "implementation_scope_revision": 4,
+    "expected_completion_revision": 5
+  },
+  "resolution": {
+    "mobile_breakpoint_px": 768,
+    "mobile_default_collapsed": true,
+    "tablet_desktop_continuously_visible": true,
+    "live_viewport_sync": true,
+    "issue_navigation_reset": true,
+    "pending_error_forces_visibility": true,
+    "author_hidden_rule_enforced": true,
+    "property_controls_changed": false,
+    "api_database_schema_or_transfer_changed": false
+  },
+  "checks": {
+    "focused_test_files": 4,
+    "focused_tests_passed": 37,
+    "complete_test_files": 69,
+    "complete_tests_passed": 455,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1949,
+    "dist_files": 105,
+    "dist_bytes": 1893145,
+    "build_warnings": 0,
+    "release_audit_tests_passed": 6,
+    "release_audit_tests_failed": 0,
+    "loopback_readiness": "ready",
+    "served_web_assets": 9,
+    "served_web_assets_exact": 9,
+    "served_candidate_current": true,
+    "rendered_browser_captures": 0
+  },
+  "browser_acceptance_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

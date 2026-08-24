@@ -1,0 +1,48 @@
+{
+  "schema_version": "ct51-implementation-result-v1",
+  "captured_at": "2026-08-20T12:10:39Z",
+  "verdict": "IMPLEMENTED_AWAITING_BROWSER_VERIFICATION",
+  "issue": {
+    "identifier": "CT-51",
+    "id": "8cb0c257-1388-4be4-bb17-5ed689d0bd3a",
+    "implementation_revision": 1,
+    "expected_completion_revision": 2
+  },
+  "checks": {
+    "focused_test_files": 4,
+    "focused_tests_passed": 22,
+    "complete_test_files": 33,
+    "complete_tests_passed": 203,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "integration_test_files_skipped": 7,
+    "integration_tests_skipped": 17,
+    "database_verification": "not_run_missing_test_credentials",
+    "vite_modules": 1929,
+    "css_bytes": 78801,
+    "saved_views_chunk_bytes": 9955,
+    "projects_chunk_bytes": 37258,
+    "issues_chunk_bytes": 117525,
+    "index_chunk_bytes": 277254,
+    "editor_chunk_bytes": 402713,
+    "runtime_chunk_bytes": 589,
+    "html_bytes": 663,
+    "final_vite_chunk_warning": false,
+    "fixture_host_checks": 4,
+    "fixture_host_checks_passed": 4,
+    "browser_captures": 0,
+    "browser_assertions_claimed": 0,
+    "browser_verification": "deferred_permission_denied"
+  },
+  "source_hashes": {
+    "apps/web/src/App.tsx": "f335725a45e90dee17b8a525eb2c30a46248edf2bbd693c006f18d387ddef1f5",
+    "apps/web/src/saved-views.tsx": "754a590d1c3957fda2dbb4c0e3dd31d901337a8b5b75a4fa67aca95347850b9e",
+    "apps/web/src/saved-view-library.ts": "af3416b669c969d3b58d08159002363691da9d4a6812d3fa41eebf1feba9a0b6",
+    "apps/web/src/styles.css": "38abe8c652c53b066230cc1381d2d4e617ba1d762398152dc20c5ece152d93a1",
+    "apps/web/tests/saved-view-library.test.ts": "379b2b8f4b7ff651293fb9cd37908b9ad43cda974f25c3952393e95102d6cb77",
+    "apps/web/tests/table-semantics.test.ts": "95d72bc535934f882a6f9dc7b1da0ccd78947065a704d011e0da58470ebb8b3e",
+    "apps/web/tests/workspace-capabilities.test.ts": "b1ac2e1c280375c8828a67ed9257eb2295b5cf2000ddc7da7f0483130ee0a0c3",
+    "apps/web/tests/layout-contract.test.ts": "ae0f6758bfbade42a20748d44b1da7c9efd9b6342976f79cd8b69759557735cc"
+  },
+  "outcomes_claimed": []
+}

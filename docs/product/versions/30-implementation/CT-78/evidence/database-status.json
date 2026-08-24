@@ -1,0 +1,30 @@
+{
+  "schema_version": "ct78-database-status-v1",
+  "captured_at": "2026-08-21T04:58:42Z",
+  "status": "skipped_unconfigured",
+  "runner": "npm run test:integration",
+  "test_files_discovered": 7,
+  "tests_discovered": 17,
+  "test_files_skipped": 7,
+  "tests_skipped": 17,
+  "tests_passed": 0,
+  "required_environment": ["TEST_MIGRATION_DATABASE_URL", "TEST_APP_PASSWORD"],
+  "required_environment_present": false,
+  "docker_started": false,
+  "schema_changed": false,
+  "repository_changed": false,
+  "api_behavior_changed": true,
+  "executed_without_database": [
+    "non-loopback automatic owner request rejected with 403 before database access",
+    "fixed default and returning-owner source contract",
+    "bodyless automatic owner request contract"
+  ],
+  "pending": [
+    "first PostgreSQL bootstrap and readback",
+    "returning fixed-owner session recovery after cookie expiry",
+    "concurrent first-run behavior",
+    "one-scope canonical SQLite import",
+    "restart backup restore and corrupt-input recovery"
+  ],
+  "claim": "The API source is typechecked and the pre-database peer rejection is executed, but no PostgreSQL or SQLite behavior is counted as executed or passed."
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": "ct111-implementation-result-v1",
+  "captured_at": "2026-08-22T11:22:00Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_REVIEW_PENDING",
+  "issue": {
+    "identifier": "CT-111",
+    "id": "448bd793-c0f7-4d72-b4cb-fcea8016c926",
+    "created_revision": 1,
+    "evidence_revision": 2,
+    "status": "In Progress"
+  },
+  "source": {
+    "revision": "1e960558bba51413657f75391478e56ddbdac275",
+    "tree": "6255242228edfa41f8bcef7fb8d0d3bc959e35d9"
+  },
+  "resolution": {
+    "empty_document_equivalence": true,
+    "whitespace_only_equivalence": true,
+    "meaningful_content_stays_dirty": true,
+    "structural_content_stays_dirty": true,
+    "content_comment_pruning_independent": true
+  },
+  "checks": {
+    "focused_tests_passed": 7,
+    "complete_test_files": 70,
+    "complete_tests_passed": 465,
+    "workspaces_typechecked": 8,
+    "release_audit_tests_passed": 10,
+    "vite_modules": 1949,
+    "build_warnings": 0,
+    "chrome_exact_flow": "passed",
+    "independent_application_review": "pending",
+    "P-T21": "pending_requalification_for_7665027"
+  },
+  "browser_acceptance_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

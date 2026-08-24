@@ -1,0 +1,9 @@
+apps/web/src/styles.css
+apps/web/tests/focus-palette.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-105/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-105/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-105/evidence/focused-rich-editor-dark-1440x900.jpg
+docs/product/versions/v0.1.0/30-implementation/CT-105/evidence/verification-summary.json
+docs/product/versions/v0.1.0/30-implementation/CT-105/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-105/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-105/session.md

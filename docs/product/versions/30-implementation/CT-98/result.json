@@ -1,0 +1,45 @@
+{
+  "schema_version": "ct98-implementation-result-v1",
+  "captured_at": "2026-08-22T03:11:44Z",
+  "verdict": "IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING",
+  "issue": {
+    "identifier": "CT-98",
+    "id": "c9816cda-d98d-447b-8a36-d6ea37997c94",
+    "created_revision": 1,
+    "implementation_scope_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "resolution": {
+    "shared_header_token_px": 44,
+    "accepted_ux_value_bound": true,
+    "topbar_uses_shared_token": true,
+    "recovery_banner_uses_shared_token": true,
+    "desktop_detail_offsets_use_shared_token": true,
+    "tablet_overlay_uses_shared_token": true,
+    "topbar_background_opaque": true,
+    "topbar_backdrop_blur_removed": true,
+    "raw_49px_shell_geometry_remaining": false,
+    "panel_width_or_navigation_changed": false,
+    "api_database_schema_or_transfer_changed": false
+  },
+  "checks": {
+    "focused_test_files": 2,
+    "focused_tests_passed": 9,
+    "complete_test_files": 65,
+    "complete_tests_passed": 436,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1948,
+    "dist_files": 109,
+    "dist_bytes": 1909362,
+    "build_warnings": 0,
+    "release_audit_tests_passed": 6,
+    "release_audit_tests_failed": 0,
+    "loopback_readiness": "ready",
+    "served_candidate_current": true,
+    "rendered_browser_captures": 0
+  },
+  "browser_acceptance_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

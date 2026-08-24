@@ -1,0 +1,30 @@
+{
+  "schema_version": "ct40-browser-status-v1",
+  "recorded_at": "2026-08-20T06:17:13Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4180/",
+  "synthetic_fixture": true,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "Access to the local browser surface remains denied by the active security policy. The denied browser outcome was not retried through another surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": ["Issues list loading", "Issues board loading", "Issues list", "Issues board", "Saved issue views", "Issue property controls"],
+  "required_assertions": [
+    "compact default and comfortable list loading rows measure exactly 32 36 and 44 pixels",
+    "the list loading header remains exactly 34 pixels",
+    "list placeholder count and tracks follow the selected visible properties",
+    "board layout renders a board skeleton rather than a table skeleton",
+    "compact default and comfortable board loading cards measure exactly 76 92 and 108 pixels",
+    "the board loading surface reserves the loaded column and scroll-region geometry",
+    "saved list and board layout density and property state select the matching loading surface after reload",
+    "loading-to-loaded transitions have no incoherent geometry shift or unreachable information",
+    "the board loading region retains explicit horizontal scrolling at reduced widths",
+    "each loading surface has one accessible busy name and zero focusable skeleton descendants",
+    "zero uncontained positive horizontal overflow outside the announced data region and zero duplicate IDs",
+    "zero console warnings and errors"
+  ]
+}

@@ -1,0 +1,9 @@
+apps/web/src/projects.tsx
+apps/web/tests/project-row-interactions.test.ts
+docs/product/versions/v0.1.0/30-implementation/CT-107/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-107/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-107/evidence/projects-menu-open-light-1440x900.jpg
+docs/product/versions/v0.1.0/30-implementation/CT-107/evidence/verification-summary.json
+docs/product/versions/v0.1.0/30-implementation/CT-107/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-107/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-107/session.md

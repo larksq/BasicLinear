@@ -1,0 +1,10 @@
+apps/api/tests/ct11-security.integration.test.ts
+packages/db/src/issue-repository.ts
+packages/db/src/project-repository.ts
+packages/db/src/repository.ts
+packages/db/src/view-repository.ts
+docs/product/versions/v0.1.0/30-implementation/CT-17/changed-files.txt
+docs/product/versions/v0.1.0/30-implementation/CT-17/evidence.md
+docs/product/versions/v0.1.0/30-implementation/CT-17/handoff.json
+docs/product/versions/v0.1.0/30-implementation/CT-17/result.json
+docs/product/versions/v0.1.0/30-implementation/CT-17/session.md

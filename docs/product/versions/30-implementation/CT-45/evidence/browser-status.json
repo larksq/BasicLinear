@@ -1,0 +1,33 @@
+{
+  "schema_version": "ct45-browser-status-v1",
+  "recorded_at": "2026-08-20T08:22:24Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4180/",
+  "synthetic_fixture": true,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "Access to the local browser surface remains denied by the active security policy. The denied browser outcome was not retried through another surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": [
+    "Issue detail route hierarchy section",
+    "Issue detail panel hierarchy section",
+    "Hierarchy create and removal controls",
+    "Hierarchy error and archived states"
+  ],
+  "required_assertions": [
+    "the dedicated sub-issues section renders before peer relations and comments",
+    "parent and sub-issue rows show explicit direction labels and independent hierarchy counts",
+    "zero one and many hierarchy rows retain stable geometry and reachable controls",
+    "adding an existing sub-issue creates the server-authoritative parent relation and refreshes activity",
+    "self existing-parent cycle and archived-target failures remain visible and actionable",
+    "removing a hierarchy relation is reflected when navigating between both affected issues",
+    "archived issues expose neither hierarchy nor peer relation creation and disable removal",
+    "route panel tablet and mobile layouts retain keyboard reachability and visible focus",
+    "relation navigation preserves the established detail and list context behavior",
+    "zero uncontained positive horizontal overflow overlap duplicate IDs hidden focus console warnings and console errors"
+  ]
+}

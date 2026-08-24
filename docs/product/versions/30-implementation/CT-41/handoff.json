@@ -1,0 +1,63 @@
+{
+  "schema_version": "ct41-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "pending_browser_verification",
+  "operating_profile": "project-local-v0.8",
+  "authority": {"task_store":".control-tower/tasks-v0.8.sqlite3","provider_projection":"disabled","linear_used":false},
+  "issues": [
+    {
+      "issue_id": "CT-41",
+      "stable_id": "a3e6e21a-a4cf-447c-8d46-bde3e808087b",
+      "revision": 2,
+      "accepted": false,
+      "blocked": true,
+      "status": "implemented_awaiting_browser_verification",
+      "requirement_refs": ["R-003", "R-010", "R-104", "R-105", "R-110"],
+      "acceptance_refs": ["R-003", "R-010", "R-104", "R-105", "R-110"],
+      "outcome_refs": ["O-001", "O-002", "O-003", "O-005"],
+      "allowed_mutation_paths": ["apps/web/src/local-keyboard-actions.ts", "apps/web/src/project-roving-focus.ts", "apps/web/src/projects.tsx", "apps/web/src/styles.css", "apps/web/tests/local-keyboard-actions.test.ts", "apps/web/tests/project-row-interactions.test.ts", "apps/web/tests/table-semantics.test.ts", "docs/product/versions/v0.1.0/30-implementation/CT-41"]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT41-IMPL-20260820T063411Z",
+      "actor_id": "codex-project-row-interactions",
+      "issue_id": "CT-41",
+      "mode": "code_mutating",
+      "output_refs": ["apps/web/src/local-keyboard-actions.ts", "apps/web/src/project-roving-focus.ts", "apps/web/src/projects.tsx", "apps/web/src/styles.css", "apps/web/tests/local-keyboard-actions.test.ts", "apps/web/tests/project-row-interactions.test.ts", "apps/web/tests/table-semantics.test.ts"],
+      "validation_refs": ["docs/product/versions/v0.1.0/30-implementation/CT-41/result.json", "docs/product/versions/v0.1.0/30-implementation/CT-41/evidence.md"]
+    }
+  ],
+  "checks": [
+    {"check_id":"CT41-PROJECT-ROW-INTERACTIONS","issue_id":"CT-41","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-41/result.json"},
+    {"check_id":"CT41-REGRESSION","issue_id":"CT-41","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-41/result.json"},
+    {"check_id":"CT41-TYPECHECK","issue_id":"CT-41","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-41/result.json"},
+    {"check_id":"CT41-BUILD","issue_id":"CT-41","status":"passed","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-41/result.json"},
+    {"check_id":"CT41-BROWSER","issue_id":"CT-41","status":"blocked","evidence_ref":"docs/product/versions/v0.1.0/30-implementation/CT-41/evidence/browser-status.json"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-41",
+      "status": "pending",
+      "independent": false,
+      "review_ref": "docs/product/versions/v0.1.0/30-implementation/CT-41/evidence.md#pending-browser-matrix",
+      "basis": "Focused interaction tests, combined semantic regression, complete regression, typecheck, and production build pass. Final rendered row focus, selection, bulk mutation feedback, menu placement/navigation, announcements, density, responsive reachability, and console behavior are not yet asserted."
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["R-003", "R-010", "R-104", "R-105", "R-110"],
+    "changed_file_ref": "docs/product/versions/v0.1.0/30-implementation/CT-41/changed-files.txt",
+    "regression_areas": ["project row roving focus", "project selection", "project bulk archive and restore", "project overflow menu", "project reorder eligibility", "project density geometry", "project responsive columns", "project detail return focus"],
+    "evidence_refs": ["docs/product/versions/v0.1.0/30-implementation/CT-41/result.json", "docs/product/versions/v0.1.0/30-implementation/CT-41/evidence.md", "docs/product/versions/v0.1.0/30-implementation/CT-41/evidence/browser-status.json"],
+    "implementation_actor_ids": ["codex-project-row-interactions"],
+    "implementation_session_ids": ["CT41-IMPL-20260820T063411Z"]
+  },
+  "outcomes": [{"outcome_id":"O-001","status":"pending"}, {"outcome_id":"O-002","status":"pending"}, {"outcome_id":"O-003","status":"pending"}, {"outcome_id":"O-005","status":"pending"}],
+  "blockers": [
+    {
+      "id": "CT41-BROWSER-PERMISSION",
+      "description": "The approved local browser surface is unavailable under the active security policy; final desktop, tablet, and mobile project-row interaction, focus, selection, menu, geometry, and assistive-technology verification remains required."
+    }
+  ],
+  "next": {"skill":"ct-test-sprint","issues":["CT-41"],"reason":"Run the bounded synthetic desktop, tablet, and mobile project-row keyboard, selection, menu, and density matrix when the local browser surface is approved."}
+}

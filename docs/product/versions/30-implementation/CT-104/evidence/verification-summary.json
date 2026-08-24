@@ -1,0 +1,76 @@
+{
+  "schema_version": "ct104-verification-summary-v1",
+  "captured_at": "2026-08-22T08:09:21Z",
+  "issue": "CT-104",
+  "source_revision": "6d2f330e15cc714b2e131d0fd693bc1d4cdcff78",
+  "source_tree": "46e18c123fb4f20786e014165e726d6d338df506",
+  "checks": {
+    "focused": {
+      "files": 2,
+      "passed": 24,
+      "failed": 0
+    },
+    "complete": {
+      "files": 69,
+      "passed": 460,
+      "failed": 0
+    },
+    "typecheck_workspaces": 8,
+    "release_audit": {
+      "passed": 10,
+      "failed": 0
+    },
+    "build": {
+      "modules": 1949,
+      "files": 109,
+      "bytes": 1912735,
+      "warnings": 0
+    },
+    "independent_application_review": "passed",
+    "independent_runtime": {
+      "status": "passed",
+      "structured_checks": 21,
+      "artifact_files": 111,
+      "artifact_bytes": 2049322,
+      "artifact_sha256": "4a5b3867a51f7f5e216cd93fe5f12523c81b9d936918216abae78626c06768d0"
+    }
+  },
+  "chrome": {
+    "family": "Chrome",
+    "version": "151.0.7922.170",
+    "url": "http://127.0.0.1:4284/",
+    "synthetic_data_only": true,
+    "checks": [
+      "complete_date_commit",
+      "escape_restore",
+      "focused_draft_sse_authority",
+      "rejected_write_restore",
+      "empty_partial_date_sse_retention"
+    ],
+    "captures": [
+      {
+        "path": ".control-tower/evidence/CT-104/inline-due-date-final-dark.jpg",
+        "bytes": 63461,
+        "sha256": "18a52401a621727c22240d09db489739feaf48e77217f0cac650ec3fa81196c4"
+      },
+      {
+        "path": ".control-tower/evidence/CT-104/rejected-write-restored-dark.jpg",
+        "bytes": 65150,
+        "sha256": "cd537fc639d6bf78dc52214ddbc1d836ebb026198eb8a87988e53d96a77436ad"
+      },
+      {
+        "path": ".control-tower/evidence/CT-104/empty-date-partial-before-sse.jpg",
+        "bytes": 61446,
+        "sha256": "ac88ebc61d47bb96c5f31446810abf2ecf6a4756dd24598b4bda181b9c285892"
+      },
+      {
+        "path": ".control-tower/evidence/CT-104/empty-date-partial-after-sse.jpg",
+        "bytes": 61144,
+        "sha256": "d45980c1e5196700ab5716f259eadb1092acc1d21f743cd5dbd9e49570496ab6"
+      }
+    ],
+    "full_ct12_acceptance": false
+  },
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

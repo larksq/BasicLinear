@@ -1,0 +1,81 @@
+{
+  "schema_version": "reproducible-build-v1",
+  "issue": "CT-13",
+  "status": "inputs_pinned_revision_pending",
+  "source_revision": null,
+  "runtime_topology": "single_node_loopback_sqlite",
+  "start_command": "node apps/api/dist/index.js",
+  "toolchain": {
+    "node": "24.18.0",
+    "npm": "11.16.0",
+    "package_manager_declaration": "npm@11.16.0"
+  },
+  "inputs": [
+    {
+      "path": "package-lock.json",
+      "sha256": "fd719192d99ee14779bc3dc5fcc910da030ac889a45d78600b93e515cce67cca"
+    },
+    {
+      "path": "package.json",
+      "sha256": "f107ff1154c9dededacd0d63ae6de07d3949c122539856bdde9c7cfd84ba6165"
+    },
+    {
+      "path": "apps/api/package.json",
+      "sha256": "60d3812d72fdab296ea442a57144e3cc32ff02b4bbbc76e0bca5d197bfc9b50d"
+    },
+    {
+      "path": "apps/web/package.json",
+      "sha256": "7e9b956a0383a63351b91f81d42d72b2b3324117a3afdebc26a51b436f234096"
+    },
+    {
+      "path": "ops/cli/package.json",
+      "sha256": "69e814219f87c6adc6ac7398c4b6bf1153ff48f91755c68441bbe0eed1526b1f"
+    },
+    {
+      "path": "packages/config/package.json",
+      "sha256": "f28ac6c095d42439093eec2f7093fff2533d14bcc6259d34fb31e690a5dd87af"
+    },
+    {
+      "path": "packages/contracts/package.json",
+      "sha256": "d914916fea1ff80034abe959c7fd9eb753c7342c6860596655aa36ddcc2d303f"
+    },
+    {
+      "path": "packages/db/package.json",
+      "sha256": "b6d1b86400f0febefac71a6bfe1d357097f1a32fa5b9c11f78d2d72cc7447fdc"
+    },
+    {
+      "path": "packages/domain/package.json",
+      "sha256": "bdad17cd8270118024be72a4d4cd21a8dc2a368a14b30947251210d00ca80f85"
+    },
+    {
+      "path": "packages/test-fixtures/package.json",
+      "sha256": "5bbd30a5128e58183c803eccb552c0a2abe52d78a8637bf288c3c06d3b3956d8"
+    },
+    {
+      "path": "packages/ui/package.json",
+      "sha256": "4594421e1498f9b1dc7c835a3cba318c22e95b2cda8186536bafba1fd84c42cf"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "path": "scripts/clean-build-output.mjs",
+      "sha256": "e174f2d98a122a7d0a26d8d9211f0f3fff4e6e7bd1c87e4a3f1733bf2b713fa8"
+    }
+  ],
+  "commands": [
+    "npm ci",
+    "npm run typecheck",
+    "npm test",
+    "npm run build",
+    "npm start"
+  ],
+  "runtime_policy": "One Node 24 process serves built assets and API on loopback with one embedded SQLite file.",
+  "release_requirements": [
+    "Set source_revision to the accepted release commit.",
+    "Run the build from a clean checkout using the declared toolchain.",
+    "Record artifact hashes and the clean-user network-denied result.",
+    "Obtain the accountable CT-13 reviewer acceptance."
+  ]
+}

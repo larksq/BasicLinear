@@ -1,0 +1,2666 @@
+{
+  "schema_version": "public-release-audit-v1",
+  "issue": "CT-13",
+  "test": "P-T22",
+  "verdict": "NOT_READY",
+  "source": {
+    "revision": "96a696c63cf19a138977f76410ac98c6e5cec175",
+    "file_count": 1259,
+    "sha256": "2307cc65f0f809bf43372843bf378583b96b13233527ecf038900bf8133cda3a"
+  },
+  "inventory": {
+    "assets": [
+      {
+        "path": "apps/web/public/favicon.svg",
+        "size": 252,
+        "sha256": "e20e5b6aef8e5d5adf0051059838a750a49516ec5cd2063ffff9147c75a22ba1"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-105/evidence/focused-rich-editor-dark-1440x900.jpg",
+        "size": 70620,
+        "sha256": "922d5cad0ce9ab0349c1653594bfeeaedec44626870ef9a403c2f0da3eb824a1"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-106/evidence/mobile-drawer-open-light-390x844.jpg",
+        "size": 10998,
+        "sha256": "2d0c049b7058fed95dcf6172d1a521a3d8cc9a625178705834288b522dd4625d"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-107/evidence/projects-menu-open-light-1440x900.jpg",
+        "size": 35021,
+        "sha256": "afd612ac974dfb0dd3d9c72bf1edaed661a29ec41dc4c7acbb334d6d92eeaf1b"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-110/evidence/issue-due-date-focus-dark-1440x900.jpg",
+        "size": 65323,
+        "sha256": "8f92fb65e09de6494fcff808c080bc22aeb54d9c92be92bae6464fa05db0d617"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-110/evidence/issue-due-date-focus-light-1440x900.jpg",
+        "size": 65916,
+        "sha256": "c68a4dbbe5c4080db20b67bcb59ab906c975e4e5244cc2d11bb73d322383e5d3"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-110/evidence/issue-title-focus-dark-1440x900.jpg",
+        "size": 65534,
+        "sha256": "aacc3b106e39cc8220bc772ea8b4922f7ab323833b1ff1bf9909414493a7f62d"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-110/evidence/issue-title-focus-light-1440x900.jpg",
+        "size": 66208,
+        "sha256": "9ad9323e5ab98c4ff99f9ad48dd8a27c67e6769b1ac40936aec5ba3a4612b06c"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-112/evidence/issues-board-after-dark-comfortable-1440x900.jpg",
+        "size": 73390,
+        "sha256": "5d0167ec5dedace7928b1bb682133ac371661c19cf3276440a62551ccbcb83ea"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-112/evidence/issues-board-after-dark-compact-1440x900.jpg",
+        "size": 70230,
+        "sha256": "eaf716310e3f07578674464132e64044d255f4de93ef526f6fed698daf8c22f8"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-112/evidence/issues-board-after-dark-default-1440x900.jpg",
+        "size": 69887,
+        "sha256": "66734495bcdf24d93365ab4c9c258085834d1df4a53388be448f3c58731d8382"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-112/evidence/issues-board-after-light-comfortable-1440x900.jpg",
+        "size": 78988,
+        "sha256": "087e9010bedb09ba369dea196ba5afb3d3c21135e7dc191418004c1c7c9abfd7"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-112/evidence/issues-board-after-light-compact-1440x900.jpg",
+        "size": 75267,
+        "sha256": "d67213f8a0d8360a5fa655296ad88f776775d704ce4c1730bc6fcd74fb03cf5d"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-112/evidence/issues-board-after-light-default-1440x900.jpg",
+        "size": 74908,
+        "sha256": "c5f3c9cffcf5649c5b7cb54484dc1316ec752590a00330eee6cf545bab192005"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-112/evidence/issues-board-before-dark-default-1440x900.jpg",
+        "size": 46675,
+        "sha256": "743d970a36acb3c49d3cdeccceadac0e1e7a43ec3611d7b5e8a217d6442de07b"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-112/evidence/issues-board-before-light-default-1440x900.jpg",
+        "size": 49828,
+        "sha256": "24d76fb33af5b49272c5c5078e1eec0c4b53cc0acdb361022ef7d05a872306bd"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-114/evidence/milestone-purge-confirmation-dark-1440x900.jpg",
+        "size": 63061,
+        "sha256": "5d96e62d027480a5e8f9ece2c897e53011144608ca477564267f5074748665cb"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-114/evidence/milestone-purge-confirmation-light-1440x900.jpg",
+        "size": 61833,
+        "sha256": "c30fe80873a57048e41a4808ac2ce583a7c13264799f04d70b0976dbc5ecdd1b"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-114/evidence/project-purge-confirmation-dark-1440x900.jpg",
+        "size": 51328,
+        "sha256": "0bade003cc2472e9e3d8ea0efe0f86da9fe24012d7d833b6e68b955f550cf8a0"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-114/evidence/project-purge-confirmation-light-1440x900.jpg",
+        "size": 52346,
+        "sha256": "bb9cf789fba3bcfe2fdee62fe35279ad31e2226f75a199dc560c6982097c18f8"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-115/evidence/milestone-purge-confirmation-dark-1440x900.jpg",
+        "size": 63061,
+        "sha256": "5d96e62d027480a5e8f9ece2c897e53011144608ca477564267f5074748665cb"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-115/evidence/milestone-purge-confirmation-light-1440x900.jpg",
+        "size": 61723,
+        "sha256": "8b2aa007351febc03aa204e84660b09087d5ac335cdfe4522d519f17c0ab327a"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-115/evidence/milestone-purge-result-dark-1440x900.jpg",
+        "size": 59837,
+        "sha256": "e1c6ff49550c79fcb5fa28899e75d13a3c71f84e8c971c2205e5479ab7ebdc6c"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-115/evidence/milestone-purge-result-light-1440x900.jpg",
+        "size": 59378,
+        "sha256": "be3d4ae40eced39d4cd60d1f94bdd50d9604987bea0c9b9b439e45191eef075f"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/project-milestone-restart-readback-1440x900.jpg",
+        "size": 71715,
+        "sha256": "af6b63319d604955d0b382561908f015178f854ff80acd6760f6fa0478356c9d"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-117/evidence/contextual-long-title-1440x900.jpg",
+        "size": 111916,
+        "sha256": "320899245052e2a9a9e0651fd53a5c5bdea90011df0e6319180fa34f9c6ff0b9"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-117/evidence/direct-long-title-1440x900.jpg",
+        "size": 82709,
+        "sha256": "fbb093f4f800ccc05d78257a0afcd0205d4ddf52f752c43bb423300f7d20360b"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-117/evidence/direct-long-title-390x844.jpg",
+        "size": 43453,
+        "sha256": "5ae38deb1051b1334e3354d5be528e8ae657c5bb83052a72a03d98da1a0ddb9b"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-117/evidence/direct-long-title-dark-1440x900.jpg",
+        "size": 81546,
+        "sha256": "aec215a50a02c73e95375177e17c818ee7a16890525394f14948142e89b3883b"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-19/evidence/ct12-workspace-scoped-recents.jpg",
+        "size": 49716,
+        "sha256": "7b33664cfbfae5a3d9720bf922cb7f424c49f31e1037a6e221532a6deef7e208"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-20/evidence/mobile-navigation-closed-390x844.jpg",
+        "size": 19715,
+        "sha256": "a32f2c96bb4fd0d272ba4bc38a35fcb89397204c82a7a358718954801863584a"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-20/evidence/mobile-navigation-open-390x844.jpg",
+        "size": 16670,
+        "sha256": "c347f896a4462fc2ff84a2cc33edff190c578ede80d042bb1708a2d16e7d3927"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-count-mobile-390x844.jpg",
+        "size": 23120,
+        "sha256": "880c9b4c5035508745a4442a9980a97edcb6b01ae27b439c952398fc62326ac6"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-filter-desktop-1440x900.jpg",
+        "size": 49383,
+        "sha256": "84f68d3eea0583fde0604302fbf821e7e5e28a66aebda3440285488b372e4146"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-filter-mobile-390x844.jpg",
+        "size": 24319,
+        "sha256": "d4537d9f9949c78db554226dfa303df7dab66014e36fe18a65ebc46a6cf73e12"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/collapsed-rail-default-panel-1440x900.jpg",
+        "size": 64636,
+        "sha256": "b864bb6654d4130d15a169d97bad444f37d0b6637f149fc4351913f9309d9248"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/collapsed-rail-narrow-panel-1440x900.jpg",
+        "size": 66569,
+        "sha256": "68e8832bb2bd2288e5389bed2f9a4ec80b365e81e2276bcc11d1bf4d3dc68265"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/collapsed-rail-wide-panel-1440x900.jpg",
+        "size": 66721,
+        "sha256": "8d4841809cb4a509991dff24e23e7569f85032a5c6c9f0edc82235e12accf415"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/expanded-rail-default-panel-1440x900-fixed.jpg",
+        "size": 71461,
+        "sha256": "c4dc335713c4e9c8aea9da6bc34e242cf293e7d37790314c8b5ea1af87b9ccc9"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/expanded-rail-default-panel-1440x900.jpg",
+        "size": 68948,
+        "sha256": "c2d74b49127232077feaf0483a09eef23928f2880f9e88e1df2946420afce8f2"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/mobile-full-width-panel-390x844.jpg",
+        "size": 28831,
+        "sha256": "9e01baae950ff6f718ab7dae068eda21701cdf15b8cf27ce94bac972407695cc"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/mobile-navigation-drawer-390x844.jpg",
+        "size": 17034,
+        "sha256": "49f0bd9f3cc5a46ec978268dd786c5875397fffb86e577977bba58333aff8dc9"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/desktop-default-expanded-1440x900.jpg",
+        "size": 69254,
+        "sha256": "bc837788b31f4b37688f422db5dd62399ab2f29c64c030e4311cfc47ca24b334"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/mobile-drawer-closed-390x844.jpg",
+        "size": 28831,
+        "sha256": "9e01baae950ff6f718ab7dae068eda21701cdf15b8cf27ce94bac972407695cc"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/mobile-drawer-open-390x844.jpg",
+        "size": 17034,
+        "sha256": "49f0bd9f3cc5a46ec978268dd786c5875397fffb86e577977bba58333aff8dc9"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/tablet-collapsed-768x1024.jpg",
+        "size": 46267,
+        "sha256": "868683b99c23113c1db673c0fbf2201a70324bc57a746c1d30141e2ed61c077c"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/tablet-default-collapsed-1024x768.jpg",
+        "size": 45827,
+        "sha256": "dcddedafa60cf353b75f76b6a32a880e59636697c8e5c631ac6bdbede63172a5"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/tablet-explicit-expanded-1024x768.jpg",
+        "size": 48221,
+        "sha256": "3d8c9663fcaaa445f8e7a470409e5626b99bfc5c84e367081db1dc178e410a6d"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-25/evidence/invalid-filter-desktop-1440x900.png",
+        "size": 61200,
+        "sha256": "37630c578b5bf472402adea51f772931f01409b4afedd2c02af19c9403a0958b"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-25/evidence/invalid-filter-mobile-390x844.png",
+        "size": 33024,
+        "sha256": "4e44d92d48d9b9970f5e93922a3e275d695a40fbd2975bf4feceb45bfec8f565"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-26/evidence/ct26-contextual-desktop-1440x900.png",
+        "size": 103064,
+        "sha256": "3977a8874cd0fd04a9cb3fddc1cd53605c294a4bb7572cf3fc86916b07292c38"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-26/evidence/ct26-direct-desktop-1440x900.png",
+        "size": 83616,
+        "sha256": "d3a84004a29ce3894457c7ac0fb7bc960488b3d58862e756c4743fc3ce6cd517"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-26/evidence/ct26-direct-mobile-390x844.png",
+        "size": 39048,
+        "sha256": "cc16690e257e8d35f022b5e1c71da23cea12c3031262c33ec81cbb44d86adcfd"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-28/evidence/ct28-detail-loading-desktop-1440x900.png",
+        "size": 79681,
+        "sha256": "f1e1fa5f3dd6ee1707260f0e4a389585001c7aa7af3734811b83fc8581e908a8"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-28/evidence/ct28-detail-loading-mobile-390x844.png",
+        "size": 78311,
+        "sha256": "e633fdd2d9b2840387a86c6acf2f3262a306066d97ba65ff7eb6ec47984b534e"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-28/evidence/ct28-issues-loading-desktop-1440x900.png",
+        "size": 133190,
+        "sha256": "1691bc3970742e86ee22334063f9544b65e7d54a35d62aa07b4201281495c6bc"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-28/evidence/ct28-issues-loading-mobile-390x844.png",
+        "size": 60016,
+        "sha256": "f9748ca921804c01747789968108762aa718692145425bc816e1b7d9cb7f07ff"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-issue-sections-loading-desktop-1440x900.png",
+        "size": 49071,
+        "sha256": "993f534f47ea6277a8d29afd0991d518949de1c9508294c9fabb049c30003bbe"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-issue-sections-loading-mobile-390x844.png",
+        "size": 17793,
+        "sha256": "b1e0c59da94c009e19a72bd75dc8c5b65acf54774df95500e532f27159fcc136"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-milestones-loading-desktop-1440x900.png",
+        "size": 85225,
+        "sha256": "b9292f6d8c1a24535ae2569fb237ee7cdd0905f50ebee151fe6d8e3c1924e3d2"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-project-activity-loading-desktop-1440x900.png",
+        "size": 53802,
+        "sha256": "705c0f6cda2a95b99fd378efe1270505646052d9ae1e2ceb2d5e4319f1328071"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-project-detail-loading-desktop-1440x900.png",
+        "size": 36804,
+        "sha256": "376d120419843927d915e52ce9a6888645ca076be0ab0b642e5d4c0d2e9096d6"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-project-detail-loading-mobile-390x844.png",
+        "size": 10343,
+        "sha256": "c12402f2bf009cfe03a78de4fd846ee65a7648cd414ef5ce0f98e9d224e9772f"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-teams-loading-mobile-390x844.png",
+        "size": 10748,
+        "sha256": "155155372aabcd25ffa9024e56f4793e91b8cf2ad5a140cfe712f002e3cc6595"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-workflow-loading-desktop-1440x900.png",
+        "size": 43791,
+        "sha256": "fc163e91d27c1daa22fb772e6633f8a0e086d6616f367f0f599e027b832cd0ce"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-workflow-loading-mobile-390x844.png",
+        "size": 15715,
+        "sha256": "f79df60bc5126e63ed7831763d1da8e457a3ddc494fdd6f9ee07dc3ef8370548"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-workspace-loading-desktop-1440x900.png",
+        "size": 57095,
+        "sha256": "8b9a18413162590dca02ec76f0a2216af2630c04ce1fb9f95707c3ebd6f11863"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-30/evidence/ct30-milestone-create-desktop-1440x900.jpg",
+        "size": 53315,
+        "sha256": "0cd827e3b688936c1af2b3cb00ebe914d6c416809f382b58ff1b602717960da0"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-30/evidence/ct30-milestone-create-mobile-390x844.jpg",
+        "size": 27575,
+        "sha256": "d2a6240e6787fd43c8e62a0de0b057509104fd6c3ae98a780208ac249a447cf9"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-31/evidence/ct31-named-dialog-desktop-1440x900.jpg",
+        "size": 53315,
+        "sha256": "0cd827e3b688936c1af2b3cb00ebe914d6c416809f382b58ff1b602717960da0"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-31/evidence/ct31-named-dialog-mobile-390x844.jpg",
+        "size": 27575,
+        "sha256": "d2a6240e6787fd43c8e62a0de0b057509104fd6c3ae98a780208ac249a447cf9"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-6/evidence/desktop-overview.jpg",
+        "size": 34683,
+        "sha256": "54415e404e827169c2ad12d41e3439e13fa70b51a2ea39812b52334348bb6b4d"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-6/evidence/desktop-workflow.jpg",
+        "size": 52528,
+        "sha256": "3886c57431e0f99897f4dcfb3ac6c51c85f7fcaa07bb5cfa1b48cd0c4529df79"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-6/evidence/mobile-workflow.jpg",
+        "size": 23416,
+        "sha256": "175bd80134d88ba3dc438e3b9e748c97c938b47170553750369f1ebeb2676723"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-6/evidence/tablet-workflow.jpg",
+        "size": 38980,
+        "sha256": "6fdbd6d432fd63eec12403a96ced975c6f7a065ec33fe9aae69a6fdad839f4f0"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-7/evidence/desktop-project-overview.jpg",
+        "size": 65962,
+        "sha256": "3d903a7b87b68d27ea06cbb45665f2d23cee3d2dfeba1a6176a93932eefdf314"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-7/evidence/desktop-projects.jpg",
+        "size": 43715,
+        "sha256": "8e11393e52d946a823c503a577e9edf2dceb4675826f716491ab34ae4a4acc7b"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-7/evidence/mobile-project-dialog.jpg",
+        "size": 24545,
+        "sha256": "56664c4c6a0fae6c1d8984ab1d6c9619d48004ea227908b498da67375757186f"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-7/evidence/mobile-project-overview.jpg",
+        "size": 30263,
+        "sha256": "cbb3e2f44402c4c34d9db750d5b0dcfd81412145fc06e8d55b35aeb65f105c52"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-7/evidence/mobile-projects.jpg",
+        "size": 18848,
+        "sha256": "3f402e9422ca2d094310a2edf06b0b95d9f0b826b7811f66d3ce1e9c5fc21990"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-7/evidence/tablet-project-overview.jpg",
+        "size": 48229,
+        "sha256": "fb422dbf5f208845c8da793bd523d4b91d30c13300975fe331cb9500785234bc"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-7/evidence/tablet-projects.jpg",
+        "size": 35697,
+        "sha256": "70f5b26b2a2d45a99242100613e252eb9c19a86e121d39f73abf4a9ce59aee0b"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-create-390x844.jpg",
+        "size": 25675,
+        "sha256": "978fb175c6f4d4b62d181046ac89faeea216f24b234d1d8243807bbba0b22005"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-detail-1024x768.jpg",
+        "size": 44941,
+        "sha256": "8336708a80b874d02cd523b5638df9d7f93c045420f1da149b6342f8a89a0c1a"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-detail-1440x900.jpg",
+        "size": 54493,
+        "sha256": "dfee23d3f3db9585c99a69c72e389ec5c1a54f2ea9e99445587631cc4e3b878f"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-detail-390-full.jpg",
+        "size": 79610,
+        "sha256": "56513ce76c36c24a8a834b2cd3c00ae3790718d7f98f28e8622a5c2c27e83dfd"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-detail-390x844.jpg",
+        "size": 21907,
+        "sha256": "11811d5b20f3d0b8ee2118699bfc6f5c487602febe2d79988ed785046d7a312d"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-detail-768x800.jpg",
+        "size": 24612,
+        "sha256": "8cb02ea9721ca50a2e790db3ae8ce7ea5877fff9b8d30a1fde2f6a6a5d28dc2d"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issues-list-1440x900.jpg",
+        "size": 43302,
+        "sha256": "437869f5663e349d628872b215af45cbb5b983ae6572caea295d4fa81a4d398c"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issues-list-390x844.jpg",
+        "size": 15789,
+        "sha256": "ff112af923c1e0a7750e0bfc9a8c497d2575844cd55d7d9618bfca5b79d93454"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issues-list-filtered-1440x900.jpg",
+        "size": 37365,
+        "sha256": "82dfd32cad56185c598da7670c4545bd40d971ab4046210b95ef2d97cdc00042"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-board-desktop-1440x1000.jpg",
+        "size": 48717,
+        "sha256": "4dd600f4ffb2208e9704485707d07a614d3fc9578a4200079e397cfc681501b2"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-mobile-390x844.jpg",
+        "size": 18738,
+        "sha256": "ef6b75e539f8840f642233ec82d3b8f78a3753341a5b6b1ea6e04338a586d96e"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-split-desktop-1440x1000.jpg",
+        "size": 68877,
+        "sha256": "ffde53eb19b49a03d8fa69e91b2153dc9cfd1355c961011f2da79b7db5d12ccd"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-tablet-768x1024.jpg",
+        "size": 26500,
+        "sha256": "1539fa2bc20f6c97906e095218b34f0ffd345b8f7b24d9658943aeb151ba08d9"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/virtualization-2002-issues-1440x1000.jpg",
+        "size": 116197,
+        "sha256": "aef875c8b472995e22022e61cdc0ba7cb3bf2699e8b605ca13d143fefc753f66"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-issues-detail-mobile-properties-open-dark-390x844.jpg",
+        "size": 18315,
+        "sha256": "39f331d4b103c6c33457102d6ce1ca88faa6d0d69414c2a6ce6d10e3da8cead4"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-issues-detail-mobile-properties-open-light-390x844.jpg",
+        "size": 19637,
+        "sha256": "38a0fcbd784f663d013e06a7a183f3506e6f24946409e4109a5702ed66e9c871"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/command-palette-empty-1440x900.jpg",
+        "size": 70067,
+        "sha256": "0b8effeb25f562be10304d4e23367fb6b8007d3a84b119b64f8a788e439b6119"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/command-palette-results-1440x900.jpg",
+        "size": 69195,
+        "sha256": "e9a938375ce9d7a182eba99d6c38fede5649011d5515e417827f2f9fd0ec8a25"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/issue-archive-undo-1440x900.jpg",
+        "size": 53882,
+        "sha256": "f94ccac35a9d963fd0e7031bc4bc18f7f5b56509ba0c9afdf1135bf479fb3e60"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/issue-create-compact-1440x900.jpg",
+        "size": 71159,
+        "sha256": "441f07ceb469627e30b0f10800a4979ad1882a161135bc72ec2eeca1b949fe41"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/issue-create-expanded-1440x900.jpg",
+        "size": 67640,
+        "sha256": "f4be815c1132612526539698991bd660565c2d35e2edeb917a782b479c333f1f"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/issue-detail-comment-draft-1440x900.jpg",
+        "size": 61521,
+        "sha256": "3fd37e4da1eb906ba31e2afc8e18f82437528029ae94723ea3394ee757d9ac66"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/issue-detail-content-draft-1440x900.jpg",
+        "size": 63581,
+        "sha256": "a148db62cd7ef6bc91822371b46bfb495e0c8fb3f5b5650e4918be3885ff5d1d"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/issue-detail-contextual-1440x900.jpg",
+        "size": 59099,
+        "sha256": "ed312d1fcb8df7ea145a20bfad29ddbe50f17719bcd3800c842cd5166ec6e929"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/issue-detail-direct-mobile-390x844.jpg",
+        "size": 24736,
+        "sha256": "479634af2b3f226548130a90321b51d9f1f52e802a5c4e9fd691ae801517b33d"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/issue-detail-direct-mobile-properties-open-390x844.jpg",
+        "size": 24297,
+        "sha256": "564a9bbba317ee7b3df7e34bb34d04116ab997927f345abad3c9190e7600c174"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/issues-board-1440x900.jpg",
+        "size": 71636,
+        "sha256": "bef1aa9a92590055cb907b0ad3c750ca92c2c17422045181233df7e19c2041da"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/issues-list-1440x900.jpg",
+        "size": 96842,
+        "sha256": "88c92b6f91e0b6f8388e17d4c52ccf94d9c6cd2296e7be25a876e59db1f8a6cf"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/local-service-reconnected-1440x900.jpg",
+        "size": 98935,
+        "sha256": "36fd498b1eed7f56a362796be46544f15e92ecdd71246ff82b04ce1e71f24d19"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/local-service-unavailable-1440x900.jpg",
+        "size": 101803,
+        "sha256": "b9028962c2b2ce80fc5d47bc5c531317a395a17729bcd08d14b27e6d45c412a6"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/milestone-archive-undo-1440x900.jpg",
+        "size": 61093,
+        "sha256": "dee92d1ca2a61ea980e3c827178f813eaae4278c180948a27bbfc9a224e81e52"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/milestone-purge-confirmation-1440x900.jpg",
+        "size": 62057,
+        "sha256": "257c056099e7b7719a97312f73eef8ed342be6e7f66e75b080adc277e000faf8"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/milestone-purge-result-1440x900.jpg",
+        "size": 59837,
+        "sha256": "e1c6ff49550c79fcb5fa28899e75d13a3c71f84e8c971c2205e5479ab7ebdc6c"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/my-work-1440x900.jpg",
+        "size": 96648,
+        "sha256": "0673d25b3ef1c5aab7cb5cbbd992974c6da31dfa993973e0f1790f838daef020"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/project-activity-1440x900.jpg",
+        "size": 73248,
+        "sha256": "62303fcd53437f36620aef5905adf39cb01a417fd592ee3c7f596eb66f26c0a2"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/project-archive-undo-1440x900.jpg",
+        "size": 39783,
+        "sha256": "3bec3076ad1a1a2d064d6403dd2a36222897bd739cfdf15bf9d49ff87a83990b"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/project-milestones-1440x900.jpg",
+        "size": 62032,
+        "sha256": "a18ffaa86ca8d2408d98d1a0017fe0b9e1c8f3ae14dcf8552768d9aa4607fb1f"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/project-overview-1440x900.jpg",
+        "size": 62032,
+        "sha256": "a18ffaa86ca8d2408d98d1a0017fe0b9e1c8f3ae14dcf8552768d9aa4607fb1f"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/project-purge-confirmation-1440x900.jpg",
+        "size": 51259,
+        "sha256": "4842fa5c8da89505fe6c71be74cdb502d1f153281cec65b6884b229fb89a443c"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/project-purge-result-1440x900.jpg",
+        "size": 37421,
+        "sha256": "2565b32d6b0b7f84de1b25bcd3b5c848cebaa8c12a28a587d2842a8f6f258f8d"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/projects-list-1440x900.jpg",
+        "size": 42081,
+        "sha256": "1eda8ffb2e5546b2799d5aa4e78e397d57daea97a0cff284b33f35bb6807b793"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/query-error-detail-subsections-1440x900.jpg",
+        "size": 61831,
+        "sha256": "a52f3a92ee7805a8ef9838edc06b3b7c774f0cc559cfd91ca1c5deb187d40dc6"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/query-error-issues-1440x900.jpg",
+        "size": 34512,
+        "sha256": "934763fd6fa610ace26b7b9718989597afef8ea4b03768c647187903ace14e22"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/query-error-projects-1440x900.jpg",
+        "size": 33175,
+        "sha256": "a52510822054133c224893af13302ac0fdf9015814735295f9f7a6aee3f7f141"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/saved-views-library-1440x900.jpg",
+        "size": 33334,
+        "sha256": "e1414d26ff1dc1d00a4aa2bbbd0c66fa9d193695c0acd51ef6ef014a272d4099"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/workflow-statuses-1440x900.jpg",
+        "size": 35737,
+        "sha256": "909efc7e0ee6a657c05163064b7c163fd1a10f9ec37e290f25c6a7c7906f05c6"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/command-palette-empty-1440x900.jpg",
+        "size": 71790,
+        "sha256": "5ee7c7cf0470e10551df329107fcde4ecf7ed531095991a75a93b2cb34e0164d"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/command-palette-results-1440x900.jpg",
+        "size": 71696,
+        "sha256": "839dde9c6e1e0b8b1c6197786157ff152a1f749ecce5b7db9c925fa182c03b40"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/issue-archive-undo-1440x900.jpg",
+        "size": 53934,
+        "sha256": "a3f913bfcf916becdf68bf876e58338599543cb2e8c81f06d0b023b4ac9706a5"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/issue-create-compact-1440x900.jpg",
+        "size": 72319,
+        "sha256": "f451bc4b96a02a756be6c323c38730f095e8687e86cadfb240b2def352d47596"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/issue-create-expanded-1440x900.jpg",
+        "size": 70568,
+        "sha256": "f0374d81b03a398b8e9efc15300c97ac1726d7b75cb297ecbce5005bf93a81ba"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/issue-detail-comment-draft-1440x900.jpg",
+        "size": 60425,
+        "sha256": "f764f21ebeec9d180b614b2efeba37de48eda93079506634d4d868ead3bf0a30"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/issue-detail-content-draft-1440x900.jpg",
+        "size": 72006,
+        "sha256": "25e36ddd5f20399966cb60aa72a2560297ceeab7ff52a8c6aed9b95f4b109c01"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/issue-detail-contextual-1440x900.jpg",
+        "size": 59174,
+        "sha256": "027d11c04c6f1848661a82afbdd78287df3f5198c9922e22c982cfc43fc1ffe5"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/issue-detail-direct-mobile-390x844.jpg",
+        "size": 24843,
+        "sha256": "0204ad6b1780495adbfb24284e185bf97d793ee9ac133776038a83284769c301"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/issue-detail-direct-mobile-properties-open-390x844.jpg",
+        "size": 23723,
+        "sha256": "497a581bff2f0f59c7c763ef538ac7f48743eb12ffb90b249f086c1f4af36de2"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/issues-board-1440x900.jpg",
+        "size": 73022,
+        "sha256": "75d8aca4e3a1252195bf250fa478f0f84b3389611b9ac64e5752e3bb4d178c4e"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/issues-list-1440x900.jpg",
+        "size": 95998,
+        "sha256": "83204959f4cb5c9bfd16f903f02b28a2c4cb519c5bbdf5db727a6d342477cd4c"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/local-service-reconnected-1440x900.jpg",
+        "size": 98523,
+        "sha256": "22bcf92d99fe441ebfa78f95c9aefc1d43a10e6e1bd88e89acfab38a6747d29e"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/local-service-unavailable-1440x900.jpg",
+        "size": 101329,
+        "sha256": "17a11549d8fd4a1265e7a7e0a3ea90cf30095f00ce812d054acd75d1da5fb1d5"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/milestone-archive-undo-1440x900.jpg",
+        "size": 62121,
+        "sha256": "c9a3065c67ac2827b82577a01d8c4c1be86663ba8fffd4699e532b74165c8c25"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/milestone-purge-confirmation-1440x900.jpg",
+        "size": 62582,
+        "sha256": "369177b345053711d8d505c3b0486916a54976f1c2250a5bb80c6a35fb274da4"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/milestone-purge-result-1440x900.jpg",
+        "size": 59378,
+        "sha256": "be3d4ae40eced39d4cd60d1f94bdd50d9604987bea0c9b9b439e45191eef075f"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/my-work-1440x900.jpg",
+        "size": 95572,
+        "sha256": "8e4060c043229abf61e46ebef4f50c59ccfe44290f56dfef143f7bf0f0dcb9b3"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/project-activity-1440x900.jpg",
+        "size": 72675,
+        "sha256": "2396e5b021984d27770202fe435ea6ad64c9bd2e28f642c016ba75d99049f8ea"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/project-archive-undo-1440x900.jpg",
+        "size": 40332,
+        "sha256": "7baaa875ab5906132b2a2f4bebfd4ae2ce1af791f6330fb52fd77a615f288dfb"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/project-milestones-1440x900.jpg",
+        "size": 61632,
+        "sha256": "80ff8a988f89a5de2d8b1721bc2d00a9faf1c7dfcf7d42627c0287645bb0c6ed"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/project-overview-1440x900.jpg",
+        "size": 61632,
+        "sha256": "80ff8a988f89a5de2d8b1721bc2d00a9faf1c7dfcf7d42627c0287645bb0c6ed"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/project-purge-confirmation-1440x900.jpg",
+        "size": 52346,
+        "sha256": "bb9cf789fba3bcfe2fdee62fe35279ad31e2226f75a199dc560c6982097c18f8"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/project-purge-result-1440x900.jpg",
+        "size": 36209,
+        "sha256": "d7cb89e87a2cd69722c40dc51160e7121594d5d09a70ca8bf004a889962a8a09"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/projects-list-1440x900.jpg",
+        "size": 42361,
+        "sha256": "5de5fc22b9cb3f6f648d4c546acc430ca743096a6bf51d90722290b8ea251205"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/query-error-detail-subsections-1440x900.jpg",
+        "size": 62233,
+        "sha256": "a8bd245bd1229747a27d843760d7f709f344b4142580755fc0ce37e40de733be"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/query-error-issues-1440x900.jpg",
+        "size": 34555,
+        "sha256": "0202ed1d6936b515735943301eb6ff61374ef7eb4a6e9830dcfaf148c1187b2a"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/query-error-projects-1440x900.jpg",
+        "size": 33254,
+        "sha256": "109c4064a244f171cf9c923c317c1b142c25eed54375fa51bbe7b27230bd5c9c"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/saved-views-library-1440x900.jpg",
+        "size": 33441,
+        "sha256": "7e070197ebbd25592fd19b03c077ed9f7e2fd411551f815e3589ffe86699ee31"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/workflow-statuses-1440x900.jpg",
+        "size": 35671,
+        "sha256": "e3eeb5fe9598e9265a0ee6cd5eec43786b3d21a850736cd375b2bbf35e34c38a"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/5a33d28/dark/issues-board-1440x900.jpg",
+        "size": 71595,
+        "sha256": "969f1067114748a4998215b6c2e30486ef41bfceec529390733a3316ed4050e9"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/5a33d28/dark/saved-views-library-1440x900.jpg",
+        "size": 33365,
+        "sha256": "0a32339dd526db5a4dcd7d278c4f16fbe569633d3109a8981a8a8c270ef3d423"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/5a33d28/light/issues-board-1440x900.jpg",
+        "size": 72998,
+        "sha256": "4cc13837b5543360a96ed11376e3bcc3b710674fec0d14708cd991f09156e9cc"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/5a33d28/light/saved-views-library-1440x900.jpg",
+        "size": 33481,
+        "sha256": "14587debba160f8d024e1f41018383c19e97d92252482c11dcb5d360371ae4ee"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/issue-detail-contextual-1440x900.jpg",
+        "size": 69664,
+        "sha256": "b6f6eb8a4ae25060dc6af24aba48c7a0aa1462189287ca60d6247a9271983398"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/issue-detail-direct-mobile-390x844.jpg",
+        "size": 24195,
+        "sha256": "4de9cbed1ef7b2bdd6e19bee9fd9f982b25f57a36d516e723f122531ca271834"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/issue-detail-direct-mobile-properties-open-390x844.jpg",
+        "size": 24489,
+        "sha256": "9353c4346bb529c9439910f0b1bca032e0b457d8a3f19763d4438dff585d1ce9"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/issues-board-1440x900.jpg",
+        "size": 71590,
+        "sha256": "50dfbff000b43193dcbb011ec6f5afc330158ea9ac5ea7e085ffe64062d4b19b"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/issues-list-1440x900.jpg",
+        "size": 96842,
+        "sha256": "88c92b6f91e0b6f8388e17d4c52ccf94d9c6cd2296e7be25a876e59db1f8a6cf"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/my-work-1440x900.jpg",
+        "size": 96525,
+        "sha256": "5c71b543e00906b2b5bed43ec6b06b1501c1776f7ed100eda8857ffecd3f6a83"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/project-activity-1440x900.jpg",
+        "size": 73244,
+        "sha256": "bc9795614af38d870c57630b8867d9bf86ed90f2b9eac5f9924a2336f834b904"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/project-milestones-1440x900.jpg",
+        "size": 62013,
+        "sha256": "ed4a2441fd77b409c4018fa06adb214aeb1181bb517e4fcc26ca6fdc39138d64"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/project-overview-1440x900.jpg",
+        "size": 62013,
+        "sha256": "ed4a2441fd77b409c4018fa06adb214aeb1181bb517e4fcc26ca6fdc39138d64"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/projects-list-1440x900.jpg",
+        "size": 42045,
+        "sha256": "c0be9f31f7d16999ae7ecc5530f9c54d8987bef1394a5eab718e38c48d2f30a7"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/saved-views-library-1440x900.jpg",
+        "size": 33341,
+        "sha256": "114d61f5fef711de175269acd1eb63bb1f3ecb8cf213eceabca92e4343c940c6"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/workflow-statuses-1440x900.jpg",
+        "size": 35737,
+        "sha256": "909efc7e0ee6a657c05163064b7c163fd1a10f9ec37e290f25c6a7c7906f05c6"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/issue-detail-contextual-1440x900.jpg",
+        "size": 71674,
+        "sha256": "45c8e4d8a2e72dbf66d717339d8cf3db5010a5c4ca96ff6776006be36c56fa28"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/issue-detail-direct-mobile-390x844.jpg",
+        "size": 24293,
+        "sha256": "ab6202b9331cec34bd82f194010d6caae5f83d69dc647b161fa4ff544e10121e"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/issue-detail-direct-mobile-properties-open-390x844.jpg",
+        "size": 24327,
+        "sha256": "69ede15ac2b844c3791b01e5fa84a78ff58c121c8ecc60bcb570f5a5461874e9"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/issues-board-1440x900.jpg",
+        "size": 72968,
+        "sha256": "c41c182feac474d622ff568654631998ea7034021b61ea1dc3329f0100abe942"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/issues-list-1440x900.jpg",
+        "size": 95998,
+        "sha256": "83204959f4cb5c9bfd16f903f02b28a2c4cb519c5bbdf5db727a6d342477cd4c"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/my-work-1440x900.jpg",
+        "size": 95613,
+        "sha256": "80af0a3603b4fcf8cb02c832fa3eef9d75f0f380003e5afbd3bdcc390bc87fba"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/project-activity-1440x900.jpg",
+        "size": 72675,
+        "sha256": "2396e5b021984d27770202fe435ea6ad64c9bd2e28f642c016ba75d99049f8ea"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/project-milestones-1440x900.jpg",
+        "size": 61644,
+        "sha256": "af3c5c0cd09683b7b12dd9beff42ea71f8495929590a6b2d866c606b81cf7b06"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/project-overview-1440x900.jpg",
+        "size": 61644,
+        "sha256": "af3c5c0cd09683b7b12dd9beff42ea71f8495929590a6b2d866c606b81cf7b06"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/projects-list-1440x900.jpg",
+        "size": 42076,
+        "sha256": "b41b1f2d94c498c4728701db6274563e4ee42c38ca4c3f6f71bd825185596540"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/saved-views-library-1440x900.jpg",
+        "size": 33441,
+        "sha256": "521add91305a6500d1f1c0307bb9648d5fbbbaea7fc8517949ed3a2dadd595bd"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/workflow-statuses-1440x900.jpg",
+        "size": 35680,
+        "sha256": "9aac5053da0842dfd75938116da47c4c73a088d564f89cb707d872da6e7927f9"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/command-palette-empty-1440x900.jpg",
+        "size": 77861,
+        "sha256": "81ebd89e4a60bb54719488bd4dd387132ba2aeb29c89fc836ba11846d43d95b6"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/command-palette-results-1440x900.jpg",
+        "size": 77497,
+        "sha256": "ee9c3649073fd36c08d0008f977e9e61c46c85ba6f89edcc93e0dbd230bf94ca"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-archive-undo-1440x900.jpg",
+        "size": 53924,
+        "sha256": "b1b908e481f83d6bee8855371eb3a893bfa02b6d01bffceabf9dfe16bf665c5f"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-create-compact-1440x900.jpg",
+        "size": 79398,
+        "sha256": "806e6f73b6d5b62991731f765c221f95e13f6ee74090bfeee2f658992a1a8c53"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-create-expanded-1440x900.jpg",
+        "size": 70797,
+        "sha256": "3ee2c09a02ed25a6dcc765af6ace9fa62bcee8fc83729531f2938b4e9db2e526"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-detail-comment-draft-1440x900.jpg",
+        "size": 62354,
+        "sha256": "66b4d6f05f4b44591a6438bb2277a74c5a0605b557162376c597a17c0d22bb26"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-detail-content-draft-1440x900.jpg",
+        "size": 65752,
+        "sha256": "bdff19a7ba964b7af0e416ede7682ef50d625db780c921bf3c29a0c3319465f3"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-detail-contextual-1440x900.jpg",
+        "size": 59118,
+        "sha256": "0c779255d58e913592e344c722f3675e21676ab6e3fae2edfd548e29c9177cf1"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-detail-direct-mobile-390x844.jpg",
+        "size": 24745,
+        "sha256": "98836a82d354cec105e6f4e392cf65caeb7eb461d1a38e6ed9574d38e984d48a"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-detail-direct-mobile-properties-open-390x844.jpg",
+        "size": 23926,
+        "sha256": "16e1167cef70371dab16f021e75b03ffcd42d21eb5d88bea8342bcd319d26577"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issues-board-1440x900.jpg",
+        "size": 80260,
+        "sha256": "f9b904c52bae3d61798fad73d134cd31afd7f49cafddad0fa5b184ddf9d2e15c"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issues-list-1440x900.jpg",
+        "size": 107654,
+        "sha256": "4350dc95808a71401d7a31854432a65109e9f89ec98c5f9d383979918f141328"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/local-service-reconnected-1440x900.jpg",
+        "size": 53992,
+        "sha256": "798e47a768fc35c603902a3b82fe563bf2a82b11670f0e7e04cfcfafbf15a96d"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/local-service-unavailable-1440x900.jpg",
+        "size": 56598,
+        "sha256": "d38a197ce0e947181be670da58262dd0fbc187864ab884c302c81491f4fcac1c"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/milestone-archive-undo-1440x900.jpg",
+        "size": 62310,
+        "sha256": "1762cc7cf4577f8aa772152e10d2d8a7d8e022a5c2a87f091dc28a9c0fb426f1"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/milestone-purge-confirmation-1440x900.jpg",
+        "size": 65661,
+        "sha256": "84af5aabbca5f5d39900c33d44d63e8da0f1017fa9318b14aa8848c7092df8d9"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/milestone-purge-result-1440x900.jpg",
+        "size": 67922,
+        "sha256": "d7a381d7790d2f427c0e8c8accb6eddb8ac683264e41c08f920ef7d6ec1f6c7f"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/my-work-1440x900.jpg",
+        "size": 107293,
+        "sha256": "8c3b2cc9d67e37565ca402d0b65bc460851609463010eb4189a1ab3d6e6a09b1"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/project-activity-1440x900.jpg",
+        "size": 72277,
+        "sha256": "68f795b1f32ff7eef10177b296f9538e477923474c1ee069dd20c99b1e3fbb3e"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/project-archive-undo-1440x900.jpg",
+        "size": 45899,
+        "sha256": "f05d057a10819fa57bf517dc07599e4dc97a6d5b72c39f090807728cdd68c02e"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/project-milestones-1440x900.jpg",
+        "size": 61822,
+        "sha256": "a7198b0fc267cff823c220df5096f1840b87ebce9867419096f4fccdb262b3f3"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/project-overview-1440x900.jpg",
+        "size": 61822,
+        "sha256": "a7198b0fc267cff823c220df5096f1840b87ebce9867419096f4fccdb262b3f3"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/project-purge-confirmation-1440x900.jpg",
+        "size": 54568,
+        "sha256": "26959d0b911607f9e416abe04869c07119db159a933c09b6409e800f40fb50f0"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/project-purge-result-1440x900.jpg",
+        "size": 38226,
+        "sha256": "bb06a333daa93abf270e0b2b052f63040b5b5ef636abdb69799da8d21cd90a9a"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/projects-list-1440x900.jpg",
+        "size": 48676,
+        "sha256": "70b1fa453ef46caf8678d82d0d2cd0fd219ab0482dd8e78eb28cddf29258902b"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/query-error-detail-subsections-1440x900.jpg",
+        "size": 62226,
+        "sha256": "35254b5ed6af9ea787689f43aca8a045d758add8b2cdbb5768a1ce2003676c74"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/query-error-issues-1440x900.jpg",
+        "size": 33849,
+        "sha256": "c6f96fcc98ea6c312e15659f880676ad6bfd21d002d81a62ae22d392b1dc0b8b"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/query-error-projects-1440x900.jpg",
+        "size": 32411,
+        "sha256": "cc322b712dbd82384d2c3f391970105bbb657356aaf853a55304a3191131f6c5"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/saved-views-library-1440x900.jpg",
+        "size": 39625,
+        "sha256": "aaa3e664803062c7866afcc6b55478a771d9c7bb1570e74556526d9e1cde3c55"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/workflow-statuses-1440x900.jpg",
+        "size": 35672,
+        "sha256": "e260c013739e0bcecd6e3e85d72f8f761649b301bb20b8a9344c78afba0b4aaf"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/command-palette-empty-1440x900.jpg",
+        "size": 79071,
+        "sha256": "092456f7311c2207406f9fd4914805f18954e9df76e6f99cf2770aaa5779a11b"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/command-palette-results-1440x900.jpg",
+        "size": 78399,
+        "sha256": "7479ea1c307aa2d2d6d3d84fd9c7764ca1700d62df92a749d7c4c5849f993994"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-archive-undo-1440x900.jpg",
+        "size": 53994,
+        "sha256": "46b8c5b45d9a4b11f9227f152128bf019b13d3c1db0cf6dc257e06bb884591ea"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-create-compact-1440x900.jpg",
+        "size": 80204,
+        "sha256": "e26b96fc222a285d30bafe14d9b6a3d86448dab43cb55fcbb814a3e5e136548e"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-create-expanded-1440x900.jpg",
+        "size": 73671,
+        "sha256": "231c62b4b3959eba120abbee8180fb918092a47ca84451fea13524dd4928fc7b"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-detail-comment-draft-1440x900.jpg",
+        "size": 61901,
+        "sha256": "49556b5ff0d348a17e227025e72aa8c1ebda4eb78c2eea6abef8b8b4a9a9034d"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-detail-content-draft-1440x900.jpg",
+        "size": 65233,
+        "sha256": "b3b2390376f39099c5bcb7c665185274153ef21f6ff51f68b24be6bb6ced2af7"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-detail-contextual-1440x900.jpg",
+        "size": 59111,
+        "sha256": "d345544e8573daeb288c3c8cf2b83c30e63cdb4415601d5097f09177989cac1f"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-detail-direct-mobile-390x844.jpg",
+        "size": 24865,
+        "sha256": "4ed37d9115cd3bc517f8f2087646dbe5b53a930f590e88be65df58cbe67be752"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-detail-direct-mobile-properties-open-390x844.jpg",
+        "size": 23723,
+        "sha256": "497a581bff2f0f59c7c763ef538ac7f48743eb12ffb90b249f086c1f4af36de2"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issues-board-1440x900.jpg",
+        "size": 82148,
+        "sha256": "0775d954d7eb99f2394f101b1edea736c8710efe13e612ca0d232aa8277d19ab"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issues-list-1440x900.jpg",
+        "size": 106475,
+        "sha256": "13f88a57c033cf44f7b6880d06c73e544668467dab8f099c3fea4154ae0db541"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/local-service-reconnected-1440x900.jpg",
+        "size": 54403,
+        "sha256": "d5f4f01dca2e96e8fa223140dd8f5067ca8890bdfe84f706d7c37d8ebe007b70"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/local-service-unavailable-1440x900.jpg",
+        "size": 57076,
+        "sha256": "86622e6381ae82318303d5515fc0c0cd463e87565c55399c2112716bdfa0e8b2"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/milestone-archive-undo-1440x900.jpg",
+        "size": 62394,
+        "sha256": "c3437caf698066eb64a6f24d4ae9c75337df9d20ab286598c84a275a09b5ac9b"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/milestone-purge-confirmation-1440x900.jpg",
+        "size": 67713,
+        "sha256": "6b4c5398705e69ce2c358c0324398c6e9e7a8887181633ad5a3d86b3786b62db"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/milestone-purge-result-1440x900.jpg",
+        "size": 67773,
+        "sha256": "8c8af7770a05388c59150ab70ed1da2a5152ed81079ab2ba9ccf4f8f42c4247f"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/my-work-1440x900.jpg",
+        "size": 106302,
+        "sha256": "1f45432658e7cc75e87096994ce24f5c0158dc3fe0960c3853cbeebe1bde86ae"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/project-activity-1440x900.jpg",
+        "size": 75423,
+        "sha256": "738647f32969fe11489003d16a4345aa662989cd0cbb79e6afdbcf6f9fa1a81a"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/project-archive-undo-1440x900.jpg",
+        "size": 46385,
+        "sha256": "29864cec320c9975feac310974ef6f189c121c41b35b1d5f744da39f9e475945"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/project-milestones-1440x900.jpg",
+        "size": 61958,
+        "sha256": "17bd9d9993b352f32d8aa3b770416d06f0ab02701d2e03e4ed704fce642fc522"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/project-overview-1440x900.jpg",
+        "size": 61958,
+        "sha256": "17bd9d9993b352f32d8aa3b770416d06f0ab02701d2e03e4ed704fce642fc522"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/project-purge-confirmation-1440x900.jpg",
+        "size": 55483,
+        "sha256": "06f774c26fc11b6bd2f1ba0d94dfcc66151fe7a3645629c2b0cb3fa2a2541b17"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/project-purge-result-1440x900.jpg",
+        "size": 38301,
+        "sha256": "292624de306247e2ffe4f8a76dd8173d90034b6243e604379857f601022a3ce4"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/projects-list-1440x900.jpg",
+        "size": 48951,
+        "sha256": "ebddfc7f9147f0aae799d7dc9c7f78750078db3d4efef86061f3baebc632849e"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/query-error-detail-subsections-1440x900.jpg",
+        "size": 62316,
+        "sha256": "ef270e5805661197c53643ce7e0c31fc00b2202ec64268128a85e8fb2b1ec854"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/query-error-issues-1440x900.jpg",
+        "size": 33606,
+        "sha256": "913ad0f526d4d55eae3728023f6e6cd37c3b3aa25816d2fd817eaa5e13b01b75"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/query-error-projects-1440x900.jpg",
+        "size": 32482,
+        "sha256": "30b9a1ad35d7cd20b7df687235e5fadf619756b4870730828ba2eea0b2b8c68b"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/saved-views-library-1440x900.jpg",
+        "size": 39615,
+        "sha256": "3881337c80c6ade3622ad3f7330813a0f2a1a994ff2c66ecbfe170dc8dc8b657"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/workflow-statuses-1440x900.jpg",
+        "size": 35602,
+        "sha256": "606f25ca8839e81d38662839de2dc5a26cab737120d4a4c4c7cbb3ee35673c85"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-board-desktop-2154x1340.jpg",
+        "size": 60934,
+        "sha256": "02b33203c83889fa57fde3cb6f717b54b55dd35f6c9fbd6394fa2ba7f3dae7ab"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-detail-desktop-2154x1340.jpg",
+        "size": 101945,
+        "sha256": "2b157785a1fa71c7ce2393ec4b462c711c6529f35894c604b7ee9c2764f8d358"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-detail-mobile-390x844.jpg",
+        "size": 29146,
+        "sha256": "c7bec285dc7ef6d8a693b9ae7bfae0e537397631a86f67f497b43d37e6dc3c78"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-list-desktop-2154x1340.jpg",
+        "size": 71280,
+        "sha256": "d976918e6b19a9561b4508df146a1f1a91e07e73f00009f303c4a108e7c3607a"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-mobile-390x844.jpg",
+        "size": 19715,
+        "sha256": "a32f2c96bb4fd0d272ba4bc38a35fcb89397204c82a7a358718954801863584a"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-tablet-768x1024.jpg",
+        "size": 26869,
+        "sha256": "08a3d82060f95b9ddcb8fa2cb7fb38316e58b77fd1bb6c5ba7bb172987f457f9"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/post-restart-readback-2154x1340.jpg",
+        "size": 68188,
+        "sha256": "9c8fbcfc1b9e97869859e7b0a7b0e634f59db5fcebfd03960f14c8a484eb53e4"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/project-milestones-desktop-2154x1340.jpg",
+        "size": 77013,
+        "sha256": "c6b1e76bc01bd5b7634638622f85fda72fe5af8f9d5857954239ca228b3c9a79"
+      },
+      {
+        "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/virtualization-2002-issues-1440x1000.jpg",
+        "size": 109591,
+        "sha256": "67775e43523a6e84909be00c5fbe84af2f989e9abee9c71fab8740d75c29f614"
+      },
+      {
+        "path": "prototypes/ct-4/evidence/desktop-1440x900.png",
+        "size": 141990,
+        "sha256": "6a7202c3a12cb362f1885eb41fdff33f9896b606de0baf8e5bac29ab8536aea1"
+      },
+      {
+        "path": "prototypes/ct-4/evidence/desktop-detail-1440x900.png",
+        "size": 143039,
+        "sha256": "3f50c00e856d891c28ea6bcd9d53550238b03bc648f019fed2b3a7549f2973a3"
+      },
+      {
+        "path": "prototypes/ct-4/evidence/mobile-390x844.png",
+        "size": 136384,
+        "sha256": "31943bebf176132a52f33fbf518d0b8237e5896d5dcee0c7a2cf552fb465644a"
+      },
+      {
+        "path": "prototypes/ct-4/evidence/mobile-detail-390x844.png",
+        "size": 54113,
+        "sha256": "9b1c94daec3aeb5e6a826938149b41d79299ac416adc7381836cafb929daea0a"
+      },
+      {
+        "path": "prototypes/ct-4/evidence/tablet-1024x768.png",
+        "size": 142910,
+        "sha256": "d9555c5932c19bb665560d79cae0127524f3968ccce65b039bc129af9682a340"
+      },
+      {
+        "path": "prototypes/ct-4/evidence/tablet-detail-1024x768.png",
+        "size": 104181,
+        "sha256": "10783a90af8f2712cd4e206990812e8e73a1e00bfed887816ac956c033d35625"
+      }
+    ],
+    "public_copy": [
+      {
+        "path": "apps/web/index.html",
+        "size": 514,
+        "sha256": "b71c821a79e9902c00a77edfcf9552412c36c971c885dbcfc19d90e0fdfe250a"
+      },
+      {
+        "path": "apps/web/src/api.ts",
+        "size": 18324,
+        "sha256": "dc0133b600360e9506c0f7adb1ff147cf84d291be1227c14da5afe36a8d4bdbd"
+      },
+      {
+        "path": "apps/web/src/App.tsx",
+        "size": 80459,
+        "sha256": "a9dcfd81d530a56aaca8946becf59a0019552c8127e6ef185c7d1f12a805df33"
+      },
+      {
+        "path": "apps/web/src/appearance-preferences.ts",
+        "size": 1976,
+        "sha256": "3699ef5dedb5624f920ab9f436d7d1396afa8fe1cb8e5eadf0aa682ec98700c4"
+      },
+      {
+        "path": "apps/web/src/buffered-date-input.tsx",
+        "size": 2133,
+        "sha256": "b5ad5427fe4b02b503a4f8607591c41e41ab05d20511451816a55ad6a59565d8"
+      },
+      {
+        "path": "apps/web/src/command-palette.ts",
+        "size": 3690,
+        "sha256": "811b0739d992f702e9032d6cce8f37d963869dd444c011291e5e323591a1eee8"
+      },
+      {
+        "path": "apps/web/src/comment-inline-edit.ts",
+        "size": 1739,
+        "sha256": "6a8450ada257fff4d7de889dc078495ccd1f5c70815f2e1ae49625402ad759ac"
+      },
+      {
+        "path": "apps/web/src/components.tsx",
+        "size": 16548,
+        "sha256": "0a294b5b7905c44ca4eb11fae2e83b62c744cb91edc7d62133fd734f83dd9b4c"
+      },
+      {
+        "path": "apps/web/src/global-shortcuts.ts",
+        "size": 1074,
+        "sha256": "43f9cf28d4139eeb688f6308a8b2c75a57210ac43f0dbf36e3b19067510d6a90"
+      },
+      {
+        "path": "apps/web/src/issue-board-move.ts",
+        "size": 3619,
+        "sha256": "9cfd884f6ce7711440a787a7e5fa479dd397929ef7c1c57e5e9142e7d6486747"
+      },
+      {
+        "path": "apps/web/src/issue-bulk-actions.ts",
+        "size": 9264,
+        "sha256": "620726859918c11fad6457830246d032d7c724e97c44fa3fa28358f6aee33d06"
+      },
+      {
+        "path": "apps/web/src/issue-create.ts",
+        "size": 1925,
+        "sha256": "9ef7fb9ecd31e681d07403dfd46891f35febba3681811823e1894b13c2fddb09"
+      },
+      {
+        "path": "apps/web/src/issue-detail-drafts.ts",
+        "size": 5377,
+        "sha256": "7c2ef35f6a470fa58232ae8d65fff3a4363f49291f8fd8f5a9f2999781d3cda3"
+      },
+      {
+        "path": "apps/web/src/issue-detail-route.ts",
+        "size": 1301,
+        "sha256": "5130f96a8f53644a0baac8d0ce386d42c9d62dfca00ee53a161282c47e9ec480"
+      },
+      {
+        "path": "apps/web/src/issue-edit-conflict.ts",
+        "size": 2244,
+        "sha256": "77bb5e4cf97706e106133467da4ee836dbfb87d8636c167550e7f37f4ddfc937"
+      },
+      {
+        "path": "apps/web/src/issue-inline-properties.ts",
+        "size": 9135,
+        "sha256": "ddbd3da124dcd96e64fb57c47ff391d2c4dbbc62a893990a50673749dddff90d"
+      },
+      {
+        "path": "apps/web/src/issue-navigation-context.ts",
+        "size": 2062,
+        "sha256": "ba8e67a223139faad0f26147207dbb656e3739acea795f963a0b3a8638f030ac"
+      },
+      {
+        "path": "apps/web/src/issue-properties-inspector.ts",
+        "size": 676,
+        "sha256": "ea480e7b6573c79cb43d895eed2ef825eaef8778268b10a2ba5308cf457682fd"
+      },
+      {
+        "path": "apps/web/src/issue-relation-create.ts",
+        "size": 3133,
+        "sha256": "7d78627f3e1d456bfbfde857470cdc75baf12640adbf7e1c9ce39b0fd52e77d4"
+      },
+      {
+        "path": "apps/web/src/issue-relation-groups.ts",
+        "size": 511,
+        "sha256": "9ca9baf945fdb5d4a12c368070a128e653ca02dbf94c09a86e9e5f5a300636e6"
+      },
+      {
+        "path": "apps/web/src/issue-roving-focus.ts",
+        "size": 476,
+        "sha256": "d0b6f87c10ca827db6c1fd7930ec72b83954b83c8eafe934a786a1fb38ffba30"
+      },
+      {
+        "path": "apps/web/src/issue-row-actions.ts",
+        "size": 2398,
+        "sha256": "6d8fdfd5d9521ef660966f88b4ec0b39632d803eda75fb3facb9ec0030663b12"
+      },
+      {
+        "path": "apps/web/src/issue-scope.ts",
+        "size": 3182,
+        "sha256": "eea266e2fb78f486b27c5c4b01ba218d1ff5eb3e6577d397908eab3f50c732e1"
+      },
+      {
+        "path": "apps/web/src/issue-url-state.ts",
+        "size": 915,
+        "sha256": "b67c9673d408c33576ed0c7275e298d5af06eb64da7ac8ad0be99d96a428453e"
+      },
+      {
+        "path": "apps/web/src/issue-view-configuration.ts",
+        "size": 4714,
+        "sha256": "6fc3e39f7e1fbb297f9bcb8faa864b4e3dba8c5b8977a2525360849a4cd53209"
+      },
+      {
+        "path": "apps/web/src/issue-view-milestones.ts",
+        "size": 2017,
+        "sha256": "1edab2b00563748fd30d471822c6798db9fd83c1281bd16d4fa4927550ec6a6e"
+      },
+      {
+        "path": "apps/web/src/issues.tsx",
+        "size": 236983,
+        "sha256": "61f85ce9572d3a67375958d7a266f5c24134b725bea2d1d72b40b3c877f44a5b"
+      },
+      {
+        "path": "apps/web/src/label-inline-edit.ts",
+        "size": 1505,
+        "sha256": "78bfb6c602474826bb66c84ab636acd0f67e8a8584fdb502925ee1aad0fcb92a"
+      },
+      {
+        "path": "apps/web/src/layout-preferences.ts",
+        "size": 2597,
+        "sha256": "5288535830aaa51d3ad31436a4e9991aafcb843dc3070253f5a7f44ec4c78377"
+      },
+      {
+        "path": "apps/web/src/local-keyboard-actions.ts",
+        "size": 2357,
+        "sha256": "989b303224ed59ebb737b55f4c008f5cc9c85027e55a01427255d5c83b525965"
+      },
+      {
+        "path": "apps/web/src/local-service-recovery.ts",
+        "size": 1011,
+        "sha256": "ec2b4572e4a923ae71f1f9584192fd5bd9cc5a51adb9854bd5574d8b921f8f27"
+      },
+      {
+        "path": "apps/web/src/main.tsx",
+        "size": 738,
+        "sha256": "708bb7871943364e32be94b4536f56efebe60f8a6b6f6e1d24996022639ce687"
+      },
+      {
+        "path": "apps/web/src/milestone-inline-edit.ts",
+        "size": 2046,
+        "sha256": "71884e6b3da519e4f757d316ed4c2e411a41269a5f89335425488c8e259c3be5"
+      },
+      {
+        "path": "apps/web/src/milestone-interactions.ts",
+        "size": 3085,
+        "sha256": "86cce6390ea983377e5c520079d18e0c380c297c5d9b5962f6a16ceeefa97e9d"
+      },
+      {
+        "path": "apps/web/src/native-date-input.ts",
+        "size": 1174,
+        "sha256": "c73c46c113445de7d2163198400da5fcb407204673cc19c1d6e733e58e98f911"
+      },
+      {
+        "path": "apps/web/src/project-density.ts",
+        "size": 1018,
+        "sha256": "514002c13f86feb1191a7e6b1783a71a4abcbc66790fb09fb5e05e6cea484853"
+      },
+      {
+        "path": "apps/web/src/project-inline-edit.ts",
+        "size": 6730,
+        "sha256": "9fd5ce7a16ca55435a5751de300c2abac093bdb20c29872d1afeca30256895a7"
+      },
+      {
+        "path": "apps/web/src/project-navigation.ts",
+        "size": 6499,
+        "sha256": "60e5e3c57043e80fd03e72b2552094ff2095254fc807ac8757573cdb87ad7766"
+      },
+      {
+        "path": "apps/web/src/project-roving-focus.ts",
+        "size": 350,
+        "sha256": "77ebf45ddaafadb7aa664af0cb3fe97077109c486bc5d82cc12c2147a4a63960"
+      },
+      {
+        "path": "apps/web/src/project-view-configuration.ts",
+        "size": 7366,
+        "sha256": "f5e403fd7158c99bbd9e41bed568d4280b25e0bb5689a9a8e7e6e53a09513121"
+      },
+      {
+        "path": "apps/web/src/projects.tsx",
+        "size": 123412,
+        "sha256": "204bc677a52628f2447760ffa0d056e63b6d8ecea2f801ce1b87eba216751c11"
+      },
+      {
+        "path": "apps/web/src/saved-view-library.ts",
+        "size": 2709,
+        "sha256": "f22894719dc6982ee77385253a3b69e95fa0316a69a3884d657967c73cd62ac8"
+      },
+      {
+        "path": "apps/web/src/saved-views.tsx",
+        "size": 12650,
+        "sha256": "770e29b73e54372a24d5827ceb01089adebd87f4ab6bc3b0d4a16fbab58d5170"
+      },
+      {
+        "path": "apps/web/src/search-recents.ts",
+        "size": 2173,
+        "sha256": "90bcad174b313d1c72d3ade9ad8395f8eb557492784da248fde5e8cb8d407c21"
+      },
+      {
+        "path": "apps/web/src/styles.css",
+        "size": 114150,
+        "sha256": "92c095cf0711b0af3a7c02e3ed67432904ea1437806161b225613c9e8b9b065b"
+      },
+      {
+        "path": "apps/web/src/textarea-autosize.ts",
+        "size": 338,
+        "sha256": "b12fcdba5bb0417497114cc780efbbe7bb1bfd7b0ee17f3a96aa670516f7dc4e"
+      },
+      {
+        "path": "apps/web/src/workflow-status-inline-edit.ts",
+        "size": 2989,
+        "sha256": "0cee49e0ed12f7d8ed80b56a6b5bccf320c27600af63298e456c3a483dd50e4f"
+      },
+      {
+        "path": "apps/web/src/workflow-status-reorder.ts",
+        "size": 3506,
+        "sha256": "580de2815efa65e8a94dc46c568872e5eaf5da393b40f2637bacbc1f2698ffa8"
+      },
+      {
+        "path": "apps/web/src/workflow-status-retire.ts",
+        "size": 2648,
+        "sha256": "3f2b42fc972d6e20f25a73b0bfeaec809ac819e3d40e2c08d9a3e00fc44f48d5"
+      },
+      {
+        "path": "apps/web/src/workspace-navigation.ts",
+        "size": 4090,
+        "sha256": "01861b5bdea8856245861c2e200cb0581cd071ce7bb9ab741dbe9afa41cb786c"
+      }
+    ]
+  },
+  "review": {
+    "request_manifest": "ops/release/review-request.json",
+    "acceptance_manifest": "ops/release/review-acceptance.json",
+    "expected_request": {
+      "schema_version": "release-review-request-v1",
+      "issue": "CT-13",
+      "status": "accountable_review_required",
+      "candidate": {
+        "source_revision": "96a696c63cf19a138977f76410ac98c6e5cec175",
+        "source_file_count": 1259,
+        "source_sha256": "2307cc65f0f809bf43372843bf378583b96b13233527ecf038900bf8133cda3a"
+      },
+      "scopes": [
+        {
+          "id": "asset_provenance",
+          "artifacts": [
+            {
+              "path": "ops/release/asset-provenance.json",
+              "exists": true,
+              "sha256": "b35c55628001baeddbf32dc940ba32726810ac689b1bdd2a20795e698278cd44"
+            }
+          ],
+          "state": {
+            "technical_complete": true,
+            "manifest_status": "ready_for_accountable_review",
+            "review_status": "pending",
+            "records": 261
+          }
+        },
+        {
+          "id": "copy_provenance",
+          "artifacts": [
+            {
+              "path": "ops/release/copy-provenance.json",
+              "exists": true,
+              "sha256": "89a143566dd603a9921f7e3f925a1cba69410df87de1d4f29dddc25042a5dc42"
+            }
+          ],
+          "state": {
+            "technical_complete": true,
+            "manifest_status": "ready_for_accountable_review",
+            "review_status": "pending",
+            "records": 50
+          }
+        },
+        {
+          "id": "public_identity_and_clean_room",
+          "artifacts": [
+            {
+              "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/result.json",
+              "exists": true,
+              "sha256": "8afa63e748fa0d2a9033a204d49214da2145c2f6713176503b1cde377b035993"
+            },
+            {
+              "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-request.json",
+              "exists": true,
+              "sha256": "3cf0399cf783013cd8eb9c3751f2b3449247d302c1d1e9c53fc50bdff6ecfd4a"
+            },
+            {
+              "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-acceptance.json",
+              "exists": false,
+              "sha256": null
+            }
+          ],
+          "state": {
+            "decision_status": "sponsor_decision_recorded_review_required",
+            "completed": false
+          }
+        },
+        {
+          "id": "public_release_candidate",
+          "artifacts": [
+            {
+              "path": "ops/release/audit-policy.json",
+              "exists": true,
+              "sha256": "ce43807a2c6e6f53a1012e20169c8d2aaa3cc708aefe40ee5dda8ea6e09ea3af"
+            },
+            {
+              "path": "LICENSE",
+              "exists": true,
+              "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+            },
+            {
+              "path": "package.json",
+              "exists": true,
+              "sha256": "f107ff1154c9dededacd0d63ae6de07d3949c122539856bdde9c7cfd84ba6165"
+            },
+            {
+              "path": "package-lock.json",
+              "exists": true,
+              "sha256": "fd719192d99ee14779bc3dc5fcc910da030ac889a45d78600b93e515cce67cca"
+            },
+            {
+              "path": "ops/release/dependency-license-inventory.json",
+              "exists": true,
+              "sha256": "6dba383bc3b554743409f6bd71f6609fe0934dbf188948b26b5b640fdff34e14"
+            },
+            {
+              "path": "ops/release/reproducible-build.json",
+              "exists": true,
+              "sha256": "972502b5d5c235ee9c72832ffd8536f3683fb7219d09373e6793487fe7873804"
+            },
+            {
+              "path": "docs/product/versions/v0.1.0/40-testing/CT-12/result.json",
+              "exists": true,
+              "sha256": "746e4dc85d6108b30db629accc426634052bf2a88d3ffcff8ad772f82ff393d9"
+            }
+          ],
+          "state": {
+            "checks": [
+              {
+                "id": "source_revision",
+                "status": "PASS"
+              },
+              {
+                "id": "public_identity_decision",
+                "status": "BLOCKED"
+              },
+              {
+                "id": "working_codename_removal",
+                "status": "BLOCKED"
+              },
+              {
+                "id": "project_license",
+                "status": "PASS"
+              },
+              {
+                "id": "dependency_metadata_inventory",
+                "status": "PASS"
+              },
+              {
+                "id": "third_party_notices",
+                "status": "BLOCKED"
+              },
+              {
+                "id": "private_path_controls",
+                "status": "PASS"
+              },
+              {
+                "id": "private_artifact_scan",
+                "status": "PASS"
+              },
+              {
+                "id": "asset_provenance",
+                "status": "BLOCKED"
+              },
+              {
+                "id": "copy_provenance",
+                "status": "BLOCKED"
+              },
+              {
+                "id": "contribution_and_security_policy",
+                "status": "PASS"
+              },
+              {
+                "id": "reproducible_build_inputs",
+                "status": "PASS"
+              },
+              {
+                "id": "clean_host_network_denied_runtime",
+                "status": "PASS"
+              }
+            ]
+          }
+        },
+        {
+          "id": "third_party_notices",
+          "artifacts": [
+            {
+              "path": "THIRD_PARTY_NOTICES.md",
+              "exists": true,
+              "sha256": "19ec59372c85259cc14258c9f4187968a078ab263f79313a9247ee2bb450ff67"
+            },
+            {
+              "path": "ops/release/third-party-notices.json",
+              "exists": true,
+              "sha256": "fb626e1bd4905f0ac0cfbb2460425f21b73c234bb1c551ab29404a9d586f63bc"
+            }
+          ],
+          "state": {
+            "technical_complete": true,
+            "manifest_status": "ready_for_accountable_review",
+            "review_status": "pending",
+            "records": 252
+          }
+        }
+      ],
+      "acceptance_contract": {
+        "schema_version": "release-review-acceptance-v1",
+        "status": "accepted",
+        "required_reviewer_fields": [
+          "name",
+          "role",
+          "qualification"
+        ],
+        "required_fields": [
+          "reviewed_at",
+          "jurisdictions",
+          "request_sha256",
+          "accepted_scopes"
+        ],
+        "required_scopes": [
+          "asset_provenance",
+          "copy_provenance",
+          "public_identity_and_clean_room",
+          "public_release_candidate",
+          "third_party_notices"
+        ]
+      }
+    }
+  },
+  "identity_review": {
+    "request_manifest": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-request.json",
+    "acceptance_manifest": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-acceptance.json",
+    "expected_request": {
+      "schema_version": "qualified-identity-review-request-v1",
+      "issue": "CT-3",
+      "status": "qualified_review_required",
+      "candidate": {
+        "source_revision": "96a696c63cf19a138977f76410ac98c6e5cec175",
+        "evidence_set_sha256": "dc8797aac1d51303a2d1e600590b78ce2e3b7a223b23eb3e16e8bc111b3b9614"
+      },
+      "sponsor_decision": {
+        "license": "AGPL-3.0-only",
+        "project_identity": "Scopefold",
+        "requested_final_product_brand": "OpenLinear"
+      },
+      "accepted_identity_patterns": [
+        "OpenLinear",
+        "openlinear",
+        "@openlinear/"
+      ],
+      "evidence": [
+        {
+          "path": "LICENSE",
+          "exists": true,
+          "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+        },
+        {
+          "path": "THIRD_PARTY_NOTICES.md",
+          "exists": true,
+          "sha256": "19ec59372c85259cc14258c9f4187968a078ab263f79313a9247ee2bb450ff67"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "exists": true,
+          "sha256": "2a7d172ceae6be4c95018e42bef58dddb561d17cbc305acde5c47cd6ee9648f4"
+        },
+        {
+          "path": "SECURITY.md",
+          "exists": true,
+          "sha256": "acc05c67ce58808cf1bc47f4b46b0ccb82599e16314ee0700e9ac77cf326ac8b"
+        },
+        {
+          "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/decision-record.md",
+          "exists": true,
+          "sha256": "96e9ddb1249d14ee5e27a193acbe89d9901cf0e767ddff29761739e3627e84f6"
+        },
+        {
+          "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/license-comparison.md",
+          "exists": true,
+          "sha256": "a951d8bdc242e30be9749263ba4b239a9564b7188fd7d173ff48fa423bfaaeac"
+        },
+        {
+          "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/clean-room-policy.md",
+          "exists": true,
+          "sha256": "b61006b71881b872b75c31c3e18ce390d23036cd376996aecc23e2fedd95980b"
+        },
+        {
+          "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/name-screen.md",
+          "exists": true,
+          "sha256": "623642d73ac80f4166dafe49f8df2113601869a4545a02050d9e811d434f6fa9"
+        },
+        {
+          "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/source-register.json",
+          "exists": true,
+          "sha256": "8ec0e10843c3604d19d44b5135f690af9057c123c4d01a0d5044811d14aa7da4"
+        },
+        {
+          "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/evidence.md",
+          "exists": true,
+          "sha256": "7f679817a6d6d46493d1964fcbe86aae0778f6a879b394f1edfe15851e3663b6"
+        },
+        {
+          "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-guide.md",
+          "exists": true,
+          "sha256": "25f55c501a437134f83b7d4d3490bc67e6e5d21e4b5cdc38a8a803d647860f52"
+        },
+        {
+          "path": "ops/release/dependency-license-inventory.json",
+          "exists": true,
+          "sha256": "6dba383bc3b554743409f6bd71f6609fe0934dbf188948b26b5b640fdff34e14"
+        },
+        {
+          "path": "ops/release/third-party-notices.json",
+          "exists": true,
+          "sha256": "fb626e1bd4905f0ac0cfbb2460425f21b73c234bb1c551ab29404a9d586f63bc"
+        },
+        {
+          "path": "ops/release/asset-provenance.json",
+          "exists": true,
+          "sha256": "b35c55628001baeddbf32dc940ba32726810ac689b1bdd2a20795e698278cd44"
+        },
+        {
+          "path": "ops/release/copy-provenance.json",
+          "exists": true,
+          "sha256": "89a143566dd603a9921f7e3f925a1cba69410df87de1d4f29dddc25042a5dc42"
+        }
+      ],
+      "evidence_state": {
+        "asset_provenance": {
+          "status": "ready_for_accountable_review",
+          "review_status": "pending",
+          "records": 261
+        },
+        "copy_provenance": {
+          "status": "ready_for_accountable_review",
+          "review_status": "pending",
+          "records": 50
+        },
+        "third_party_notices": {
+          "status": "ready_for_accountable_review",
+          "review_status": "pending",
+          "records": 252
+        }
+      },
+      "acceptance_contract": {
+        "schema_version": "qualified-identity-review-acceptance-v1",
+        "statuses": [
+          "accepted",
+          "remediation_required"
+        ],
+        "required_reviewer_fields": [
+          "name",
+          "role",
+          "qualification"
+        ],
+        "required_fields": [
+          "reviewed_at",
+          "jurisdictions",
+          "request_sha256",
+          "dispositions"
+        ],
+        "accepted_dispositions": {
+          "license_compatibility": "agpl_3_0_only_accepted",
+          "project_identity": "scopefold_cleared",
+          "product_identity": "openlinear_cleared",
+          "trademark_and_trade_dress": "independent_expression_cleared",
+          "clean_room_method": "restrictive_boundary_accepted",
+          "existing_reference_evidence": "private_quarantine_accepted",
+          "public_comparative_claims": "qualified_independent_evidence_only",
+          "contribution_intake": "agpl_contribution_terms_accepted",
+          "asset_copy_and_notices": "qualified_disposition_accepted"
+        },
+        "remediation_value": "remediation_required"
+      }
+    }
+  },
+  "summary": {
+    "pass": 8,
+    "fail": 0,
+    "blocked": 6
+  },
+  "checks": [
+    {
+      "id": "source_revision",
+      "status": "PASS",
+      "summary": "A source revision identifies the candidate.",
+      "evidence": {
+        "revision": "96a696c63cf19a138977f76410ac98c6e5cec175",
+        "untracked_count": 4
+      }
+    },
+    {
+      "id": "public_identity_decision",
+      "status": "BLOCKED",
+      "summary": "The exact CT-3 qualified-review request is ready, but acceptance is absent.",
+      "evidence": {
+        "result": "docs/product/versions/v0.1.0/10-discovery/CT-3/result.json",
+        "status": "sponsor_decision_recorded_review_required",
+        "completed": false,
+        "qualified_review": {
+          "request": {
+            "manifest": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-request.json",
+            "status": "valid",
+            "sha256": "3cf0399cf783013cd8eb9c3751f2b3449247d302c1d1e9c53fc50bdff6ecfd4a",
+            "issues": []
+          },
+          "acceptance": {
+            "manifest": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-acceptance.json",
+            "status": "missing",
+            "reviewer": null,
+            "reviewed_at": null,
+            "issues": []
+          }
+        }
+      }
+    },
+    {
+      "id": "working_codename_removal",
+      "status": "BLOCKED",
+      "summary": "Working-identity references remain pending qualified identity review.",
+      "evidence": {
+        "occurrences": 592,
+        "patterns": {
+          "OpenLinear": {
+            "occurrences": 182,
+            "files": [
+              "README.md",
+              "apps/api/src/app.ts",
+              "apps/api/src/config.ts",
+              "apps/api/src/index.ts",
+              "apps/api/src/security.ts",
+              "apps/api/tests/local-owner-surface.test.ts",
+              "apps/api/tests/local-runtime.test.ts",
+              "apps/api/tests/validation.test.ts",
+              "apps/web/index.html",
+              "apps/web/src/App.tsx",
+              "apps/web/src/api.ts",
+              "apps/web/tests/local-service-recovery.test.ts",
+              "apps/web/tests/local-service-session-recovery.test.ts",
+              "docs/operations/recovery.md",
+              "packages/db/src/sqlite/client.ts",
+              "packages/db/src/sqlite/event-repository.ts",
+              "packages/db/src/sqlite/helpers.ts",
+              "packages/db/src/sqlite/issue-repository.ts",
+              "packages/db/src/sqlite/paths.ts",
+              "packages/db/src/sqlite/project-repository.ts",
+              "packages/db/src/sqlite/repository.ts",
+              "packages/db/src/sqlite/transfer.ts",
+              "packages/db/src/sqlite/view-repository.ts",
+              "packages/db/tests/sqlite.test.ts"
+            ]
+          },
+          "openlinear": {
+            "occurrences": 268,
+            "files": [
+              "README.md",
+              "apps/api/package.json",
+              "apps/api/src/app.ts",
+              "apps/api/src/config.ts",
+              "apps/api/src/events.ts",
+              "apps/api/src/index.ts",
+              "apps/api/src/security.ts",
+              "apps/api/src/static-app.ts",
+              "apps/api/tests/events.test.ts",
+              "apps/api/tests/local-owner-surface.test.ts",
+              "apps/api/tests/local-runtime.test.ts",
+              "apps/api/tests/sqlite.test.ts",
+              "apps/api/tests/validation.test.ts",
+              "apps/web/package.json",
+              "apps/web/src/App.tsx",
+              "apps/web/src/api.ts",
+              "apps/web/src/comment-inline-edit.ts",
+              "apps/web/src/issue-board-move.ts",
+              "apps/web/src/issue-bulk-actions.ts",
+              "apps/web/src/issue-create.ts",
+              "apps/web/src/issue-detail-drafts.ts",
+              "apps/web/src/issue-detail-route.ts",
+              "apps/web/src/issue-inline-properties.ts",
+              "apps/web/src/issue-relation-create.ts",
+              "apps/web/src/issue-relation-groups.ts",
+              "apps/web/src/issue-row-actions.ts",
+              "apps/web/src/issue-scope.ts",
+              "apps/web/src/issue-url-state.ts",
+              "apps/web/src/issue-view-configuration.ts",
+              "apps/web/src/issue-view-milestones.ts",
+              "apps/web/src/issues.tsx",
+              "apps/web/src/label-inline-edit.ts",
+              "apps/web/src/local-service-recovery.ts",
+              "apps/web/src/main.tsx",
+              "apps/web/src/milestone-inline-edit.ts",
+              "apps/web/src/project-density.ts",
+              "apps/web/src/project-inline-edit.ts",
+              "apps/web/src/project-navigation.ts",
+              "apps/web/src/project-view-configuration.ts",
+              "apps/web/src/projects.tsx",
+              "apps/web/src/saved-view-library.ts",
+              "apps/web/src/saved-views.tsx",
+              "apps/web/src/search-recents.ts",
+              "apps/web/src/workflow-status-inline-edit.ts",
+              "apps/web/src/workflow-status-retire.ts",
+              "apps/web/tests/comment-inline-edit.test.ts",
+              "apps/web/tests/issue-board-move.test.ts",
+              "apps/web/tests/issue-detail-drafts.test.ts",
+              "apps/web/tests/issue-detail-route.test.ts",
+              "apps/web/tests/issue-relation-groups.test.ts",
+              "apps/web/tests/issue-scope.test.ts",
+              "apps/web/tests/local-service-session-recovery.test.ts",
+              "apps/web/tests/milestone-purge.test.ts",
+              "apps/web/tests/project-navigation.test.ts",
+              "apps/web/tests/project-purge.test.ts",
+              "apps/web/tests/project-view-configuration.test.ts",
+              "apps/web/tests/saved-view-library.test.ts",
+              "apps/web/tests/search-recents.test.ts",
+              "apps/web/tests/single-owner-surface.test.ts",
+              "apps/web/tests/workflow-status-retire.test.ts",
+              "apps/web/tests/workspace-capabilities.test.ts",
+              "apps/web/tests/workspace-navigation.test.ts",
+              "docs/operations/recovery.md",
+              "ops/cli/package.json",
+              "ops/cli/src/index.ts",
+              "package-lock.json",
+              "package.json",
+              "packages/config/package.json",
+              "packages/config/tests/foundation-static.test.ts",
+              "packages/contracts/package.json",
+              "packages/contracts/src/transfer.ts",
+              "packages/db/package.json",
+              "packages/db/src/canonical.ts",
+              "packages/db/src/sqlite/client.ts",
+              "packages/db/src/sqlite/event-repository.ts",
+              "packages/db/src/sqlite/helpers.ts",
+              "packages/db/src/sqlite/issue-repository.ts",
+              "packages/db/src/sqlite/paths.ts",
+              "packages/db/src/sqlite/project-repository.ts",
+              "packages/db/src/sqlite/repository.ts",
+              "packages/db/src/sqlite/transfer.ts",
+              "packages/db/src/sqlite/view-repository.ts",
+              "packages/db/src/types.ts",
+              "packages/db/tests/canonical.test.ts",
+              "packages/db/tests/legacy-transfer-fixture.ts",
+              "packages/db/tests/sqlite.test.ts",
+              "packages/domain/package.json",
+              "packages/test-fixtures/package.json",
+              "packages/ui/package.json"
+            ]
+          },
+          "@openlinear/": {
+            "occurrences": 142,
+            "files": [
+              "apps/api/package.json",
+              "apps/api/src/app.ts",
+              "apps/api/src/config.ts",
+              "apps/api/src/events.ts",
+              "apps/api/src/index.ts",
+              "apps/api/src/security.ts",
+              "apps/api/src/static-app.ts",
+              "apps/api/tests/events.test.ts",
+              "apps/api/tests/local-runtime.test.ts",
+              "apps/api/tests/sqlite.test.ts",
+              "apps/api/tests/validation.test.ts",
+              "apps/web/package.json",
+              "apps/web/src/App.tsx",
+              "apps/web/src/api.ts",
+              "apps/web/src/comment-inline-edit.ts",
+              "apps/web/src/issue-board-move.ts",
+              "apps/web/src/issue-bulk-actions.ts",
+              "apps/web/src/issue-create.ts",
+              "apps/web/src/issue-detail-drafts.ts",
+              "apps/web/src/issue-inline-properties.ts",
+              "apps/web/src/issue-relation-create.ts",
+              "apps/web/src/issue-relation-groups.ts",
+              "apps/web/src/issue-row-actions.ts",
+              "apps/web/src/issue-scope.ts",
+              "apps/web/src/issue-url-state.ts",
+              "apps/web/src/issue-view-configuration.ts",
+              "apps/web/src/issue-view-milestones.ts",
+              "apps/web/src/issues.tsx",
+              "apps/web/src/label-inline-edit.ts",
+              "apps/web/src/local-service-recovery.ts",
+              "apps/web/src/main.tsx",
+              "apps/web/src/milestone-inline-edit.ts",
+              "apps/web/src/project-inline-edit.ts",
+              "apps/web/src/project-navigation.ts",
+              "apps/web/src/project-view-configuration.ts",
+              "apps/web/src/projects.tsx",
+              "apps/web/src/saved-view-library.ts",
+              "apps/web/src/saved-views.tsx",
+              "apps/web/src/search-recents.ts",
+              "apps/web/src/workflow-status-inline-edit.ts",
+              "apps/web/src/workflow-status-retire.ts",
+              "apps/web/tests/comment-inline-edit.test.ts",
+              "apps/web/tests/issue-board-move.test.ts",
+              "apps/web/tests/issue-detail-drafts.test.ts",
+              "apps/web/tests/issue-relation-groups.test.ts",
+              "apps/web/tests/issue-scope.test.ts",
+              "apps/web/tests/local-service-session-recovery.test.ts",
+              "apps/web/tests/milestone-purge.test.ts",
+              "apps/web/tests/project-purge.test.ts",
+              "apps/web/tests/project-view-configuration.test.ts",
+              "apps/web/tests/saved-view-library.test.ts",
+              "apps/web/tests/search-recents.test.ts",
+              "apps/web/tests/workflow-status-retire.test.ts",
+              "ops/cli/package.json",
+              "ops/cli/src/index.ts",
+              "package-lock.json",
+              "package.json",
+              "packages/config/package.json",
+              "packages/config/tests/foundation-static.test.ts",
+              "packages/contracts/package.json",
+              "packages/db/package.json",
+              "packages/db/src/canonical.ts",
+              "packages/db/src/sqlite/client.ts",
+              "packages/db/src/sqlite/event-repository.ts",
+              "packages/db/src/sqlite/helpers.ts",
+              "packages/db/src/sqlite/issue-repository.ts",
+              "packages/db/src/sqlite/paths.ts",
+              "packages/db/src/sqlite/project-repository.ts",
+              "packages/db/src/sqlite/repository.ts",
+              "packages/db/src/sqlite/transfer.ts",
+              "packages/db/src/sqlite/view-repository.ts",
+              "packages/db/src/types.ts",
+              "packages/db/tests/canonical.test.ts",
+              "packages/db/tests/legacy-transfer-fixture.ts",
+              "packages/db/tests/sqlite.test.ts",
+              "packages/domain/package.json",
+              "packages/test-fixtures/package.json",
+              "packages/ui/package.json"
+            ]
+          }
+        },
+        "accepted_identity_patterns": [
+          "OpenLinear",
+          "openlinear",
+          "@openlinear/"
+        ],
+        "unresolved_patterns": [],
+        "accepted_as_public_identity": false
+      }
+    },
+    {
+      "id": "project_license",
+      "status": "PASS",
+      "summary": "The root and workspace packages declare the accepted license.",
+      "evidence": {
+        "root_license": true,
+        "package_manifests": 10,
+        "missing_package_license": []
+      }
+    },
+    {
+      "id": "dependency_metadata_inventory",
+      "status": "PASS",
+      "summary": "The dependency metadata inventory matches the lockfile.",
+      "evidence": {
+        "inventory": "ops/release/dependency-license-inventory.json",
+        "lock_sha256": "fd719192d99ee14779bc3dc5fcc910da030ac889a45d78600b93e515cce67cca"
+      }
+    },
+    {
+      "id": "third_party_notices",
+      "status": "BLOCKED",
+      "summary": "The dependency notices are technically complete and await accountable review.",
+      "evidence": {
+        "path": "THIRD_PARTY_NOTICES.md",
+        "manifest": "ops/release/third-party-notices.json",
+        "status": "ready_for_accountable_review",
+        "counts": {
+          "records": 252,
+          "installed_on_inventory_host": 184,
+          "absent_on_inventory_host": 68,
+          "missing_declared_license": 0,
+          "installed_without_local_license_or_notice": 4,
+          "records_with_notice_file": 2,
+          "distribution_scopes": {
+            "runtime_dependency": 125,
+            "development_dependency": 48,
+            "optional_runtime_dependency": 5,
+            "optional_development_dependency": 73,
+            "peer_dependency": 1,
+            "optional_peer_dependency": 0
+          },
+          "evidence_statuses": {
+            "local_license_or_notice": 180,
+            "declared_license_only": 4,
+            "not_installed_on_inventory_host": 68
+          }
+        },
+        "technical_complete": true,
+        "approved": false,
+        "issues": []
+      }
+    },
+    {
+      "id": "private_path_controls",
+      "status": "PASS",
+      "summary": "Private state and credential paths are excluded by the source ignore policy.",
+      "evidence": {
+        "missing": []
+      }
+    },
+    {
+      "id": "private_artifact_scan",
+      "status": "PASS",
+      "summary": "No private artifact or high-confidence secret indicator was found.",
+      "evidence": {
+        "private_artifacts": [],
+        "secret_indicators": [],
+        "symlinks": []
+      }
+    },
+    {
+      "id": "asset_provenance",
+      "status": "BLOCKED",
+      "summary": "Every binary asset has complete, hash-bound provenance awaiting accountable review.",
+      "evidence": {
+        "manifest": "ops/release/asset-provenance.json",
+        "asset_count": 261,
+        "technical_complete": true,
+        "approved": false,
+        "missing": [],
+        "stale": [],
+        "malformed": [],
+        "unexpected": [],
+        "pending_review": [
+          "apps/web/public/favicon.svg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-105/evidence/focused-rich-editor-dark-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-106/evidence/mobile-drawer-open-light-390x844.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-107/evidence/projects-menu-open-light-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-110/evidence/issue-due-date-focus-dark-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-110/evidence/issue-due-date-focus-light-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-110/evidence/issue-title-focus-dark-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-110/evidence/issue-title-focus-light-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-112/evidence/issues-board-after-dark-comfortable-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-112/evidence/issues-board-after-dark-compact-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-112/evidence/issues-board-after-dark-default-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-112/evidence/issues-board-after-light-comfortable-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-112/evidence/issues-board-after-light-compact-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-112/evidence/issues-board-after-light-default-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-112/evidence/issues-board-before-dark-default-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-112/evidence/issues-board-before-light-default-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-114/evidence/milestone-purge-confirmation-dark-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-114/evidence/milestone-purge-confirmation-light-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-114/evidence/project-purge-confirmation-dark-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-114/evidence/project-purge-confirmation-light-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-115/evidence/milestone-purge-confirmation-dark-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-115/evidence/milestone-purge-confirmation-light-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-115/evidence/milestone-purge-result-dark-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-115/evidence/milestone-purge-result-light-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-116/evidence/project-milestone-restart-readback-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-117/evidence/contextual-long-title-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-117/evidence/direct-long-title-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-117/evidence/direct-long-title-390x844.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-117/evidence/direct-long-title-dark-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-19/evidence/ct12-workspace-scoped-recents.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-20/evidence/mobile-navigation-closed-390x844.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-20/evidence/mobile-navigation-open-390x844.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-count-mobile-390x844.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-filter-desktop-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-22/evidence/milestone-filter-mobile-390x844.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/collapsed-rail-default-panel-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/collapsed-rail-narrow-panel-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/collapsed-rail-wide-panel-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/expanded-rail-default-panel-1440x900-fixed.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/expanded-rail-default-panel-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/mobile-full-width-panel-390x844.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-23/evidence/mobile-navigation-drawer-390x844.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/desktop-default-expanded-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/mobile-drawer-closed-390x844.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/mobile-drawer-open-390x844.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/tablet-collapsed-768x1024.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/tablet-default-collapsed-1024x768.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-24/evidence/tablet-explicit-expanded-1024x768.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-25/evidence/invalid-filter-desktop-1440x900.png",
+          "docs/product/versions/v0.1.0/30-implementation/CT-25/evidence/invalid-filter-mobile-390x844.png",
+          "docs/product/versions/v0.1.0/30-implementation/CT-26/evidence/ct26-contextual-desktop-1440x900.png",
+          "docs/product/versions/v0.1.0/30-implementation/CT-26/evidence/ct26-direct-desktop-1440x900.png",
+          "docs/product/versions/v0.1.0/30-implementation/CT-26/evidence/ct26-direct-mobile-390x844.png",
+          "docs/product/versions/v0.1.0/30-implementation/CT-28/evidence/ct28-detail-loading-desktop-1440x900.png",
+          "docs/product/versions/v0.1.0/30-implementation/CT-28/evidence/ct28-detail-loading-mobile-390x844.png",
+          "docs/product/versions/v0.1.0/30-implementation/CT-28/evidence/ct28-issues-loading-desktop-1440x900.png",
+          "docs/product/versions/v0.1.0/30-implementation/CT-28/evidence/ct28-issues-loading-mobile-390x844.png",
+          "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-issue-sections-loading-desktop-1440x900.png",
+          "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-issue-sections-loading-mobile-390x844.png",
+          "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-milestones-loading-desktop-1440x900.png",
+          "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-project-activity-loading-desktop-1440x900.png",
+          "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-project-detail-loading-desktop-1440x900.png",
+          "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-project-detail-loading-mobile-390x844.png",
+          "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-teams-loading-mobile-390x844.png",
+          "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-workflow-loading-desktop-1440x900.png",
+          "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-workflow-loading-mobile-390x844.png",
+          "docs/product/versions/v0.1.0/30-implementation/CT-29/evidence/ct29-workspace-loading-desktop-1440x900.png",
+          "docs/product/versions/v0.1.0/30-implementation/CT-30/evidence/ct30-milestone-create-desktop-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-30/evidence/ct30-milestone-create-mobile-390x844.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-31/evidence/ct31-named-dialog-desktop-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-31/evidence/ct31-named-dialog-mobile-390x844.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-6/evidence/desktop-overview.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-6/evidence/desktop-workflow.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-6/evidence/mobile-workflow.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-6/evidence/tablet-workflow.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-7/evidence/desktop-project-overview.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-7/evidence/desktop-projects.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-7/evidence/mobile-project-dialog.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-7/evidence/mobile-project-overview.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-7/evidence/mobile-projects.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-7/evidence/tablet-project-overview.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-7/evidence/tablet-projects.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-create-390x844.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-detail-1024x768.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-detail-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-detail-390-full.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-detail-390x844.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-detail-768x800.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issues-list-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issues-list-390x844.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issues-list-filtered-1440x900.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-board-desktop-1440x1000.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-mobile-390x844.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-split-desktop-1440x1000.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-tablet-768x1024.jpg",
+          "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/virtualization-2002-issues-1440x1000.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-issues-detail-mobile-properties-open-dark-390x844.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-issues-detail-mobile-properties-open-light-390x844.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/command-palette-empty-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/command-palette-results-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/issue-archive-undo-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/issue-create-compact-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/issue-create-expanded-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/issue-detail-comment-draft-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/issue-detail-content-draft-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/issue-detail-contextual-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/issue-detail-direct-mobile-390x844.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/issue-detail-direct-mobile-properties-open-390x844.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/issues-board-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/issues-list-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/local-service-reconnected-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/local-service-unavailable-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/milestone-archive-undo-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/milestone-purge-confirmation-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/milestone-purge-result-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/my-work-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/project-activity-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/project-archive-undo-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/project-milestones-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/project-overview-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/project-purge-confirmation-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/project-purge-result-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/projects-list-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/query-error-detail-subsections-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/query-error-issues-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/query-error-projects-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/saved-views-library-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/dark/workflow-statuses-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/command-palette-empty-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/command-palette-results-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/issue-archive-undo-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/issue-create-compact-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/issue-create-expanded-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/issue-detail-comment-draft-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/issue-detail-content-draft-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/issue-detail-contextual-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/issue-detail-direct-mobile-390x844.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/issue-detail-direct-mobile-properties-open-390x844.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/issues-board-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/issues-list-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/local-service-reconnected-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/local-service-unavailable-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/milestone-archive-undo-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/milestone-purge-confirmation-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/milestone-purge-result-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/my-work-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/project-activity-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/project-archive-undo-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/project-milestones-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/project-overview-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/project-purge-confirmation-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/project-purge-result-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/projects-list-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/query-error-detail-subsections-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/query-error-issues-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/query-error-projects-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/saved-views-library-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/279a9b2/light/workflow-statuses-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/5a33d28/dark/issues-board-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/5a33d28/dark/saved-views-library-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/5a33d28/light/issues-board-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/5a33d28/light/saved-views-library-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/issue-detail-contextual-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/issue-detail-direct-mobile-390x844.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/issue-detail-direct-mobile-properties-open-390x844.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/issues-board-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/issues-list-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/my-work-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/project-activity-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/project-milestones-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/project-overview-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/projects-list-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/saved-views-library-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/dark/workflow-statuses-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/issue-detail-contextual-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/issue-detail-direct-mobile-390x844.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/issue-detail-direct-mobile-properties-open-390x844.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/issues-board-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/issues-list-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/my-work-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/project-activity-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/project-milestones-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/project-overview-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/projects-list-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/saved-views-library-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/670a9f9/light/workflow-statuses-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/command-palette-empty-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/command-palette-results-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-archive-undo-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-create-compact-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-create-expanded-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-detail-comment-draft-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-detail-content-draft-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-detail-contextual-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-detail-direct-mobile-390x844.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-detail-direct-mobile-properties-open-390x844.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issues-board-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issues-list-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/local-service-reconnected-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/local-service-unavailable-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/milestone-archive-undo-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/milestone-purge-confirmation-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/milestone-purge-result-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/my-work-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/project-activity-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/project-archive-undo-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/project-milestones-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/project-overview-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/project-purge-confirmation-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/project-purge-result-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/projects-list-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/query-error-detail-subsections-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/query-error-issues-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/query-error-projects-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/saved-views-library-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/workflow-statuses-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/command-palette-empty-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/command-palette-results-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-archive-undo-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-create-compact-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-create-expanded-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-detail-comment-draft-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-detail-content-draft-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-detail-contextual-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-detail-direct-mobile-390x844.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-detail-direct-mobile-properties-open-390x844.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issues-board-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issues-list-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/local-service-reconnected-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/local-service-unavailable-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/milestone-archive-undo-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/milestone-purge-confirmation-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/milestone-purge-result-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/my-work-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/project-activity-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/project-archive-undo-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/project-milestones-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/project-overview-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/project-purge-confirmation-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/project-purge-result-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/projects-list-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/query-error-detail-subsections-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/query-error-issues-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/query-error-projects-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/saved-views-library-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/workflow-statuses-1440x900.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-board-desktop-2154x1340.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-detail-desktop-2154x1340.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-detail-mobile-390x844.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-list-desktop-2154x1340.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-mobile-390x844.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/issues-tablet-768x1024.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/post-restart-readback-2154x1340.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/project-milestones-desktop-2154x1340.jpg",
+          "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/virtualization-2002-issues-1440x1000.jpg",
+          "prototypes/ct-4/evidence/desktop-1440x900.png",
+          "prototypes/ct-4/evidence/desktop-detail-1440x900.png",
+          "prototypes/ct-4/evidence/mobile-390x844.png",
+          "prototypes/ct-4/evidence/mobile-detail-390x844.png",
+          "prototypes/ct-4/evidence/tablet-1024x768.png",
+          "prototypes/ct-4/evidence/tablet-detail-1024x768.png"
+        ]
+      }
+    },
+    {
+      "id": "copy_provenance",
+      "status": "BLOCKED",
+      "summary": "Every public-copy file has complete, hash-bound provenance awaiting accountable review.",
+      "evidence": {
+        "manifest": "ops/release/copy-provenance.json",
+        "copy_file_count": 50,
+        "technical_complete": true,
+        "approved": false,
+        "missing": [],
+        "stale": [],
+        "malformed": [],
+        "unexpected": [],
+        "pending_review": [
+          "apps/web/index.html",
+          "apps/web/src/api.ts",
+          "apps/web/src/App.tsx",
+          "apps/web/src/appearance-preferences.ts",
+          "apps/web/src/buffered-date-input.tsx",
+          "apps/web/src/command-palette.ts",
+          "apps/web/src/comment-inline-edit.ts",
+          "apps/web/src/components.tsx",
+          "apps/web/src/global-shortcuts.ts",
+          "apps/web/src/issue-board-move.ts",
+          "apps/web/src/issue-bulk-actions.ts",
+          "apps/web/src/issue-create.ts",
+          "apps/web/src/issue-detail-drafts.ts",
+          "apps/web/src/issue-detail-route.ts",
+          "apps/web/src/issue-edit-conflict.ts",
+          "apps/web/src/issue-inline-properties.ts",
+          "apps/web/src/issue-navigation-context.ts",
+          "apps/web/src/issue-properties-inspector.ts",
+          "apps/web/src/issue-relation-create.ts",
+          "apps/web/src/issue-relation-groups.ts",
+          "apps/web/src/issue-roving-focus.ts",
+          "apps/web/src/issue-row-actions.ts",
+          "apps/web/src/issue-scope.ts",
+          "apps/web/src/issue-url-state.ts",
+          "apps/web/src/issue-view-configuration.ts",
+          "apps/web/src/issue-view-milestones.ts",
+          "apps/web/src/issues.tsx",
+          "apps/web/src/label-inline-edit.ts",
+          "apps/web/src/layout-preferences.ts",
+          "apps/web/src/local-keyboard-actions.ts",
+          "apps/web/src/local-service-recovery.ts",
+          "apps/web/src/main.tsx",
+          "apps/web/src/milestone-inline-edit.ts",
+          "apps/web/src/milestone-interactions.ts",
+          "apps/web/src/native-date-input.ts",
+          "apps/web/src/project-density.ts",
+          "apps/web/src/project-inline-edit.ts",
+          "apps/web/src/project-navigation.ts",
+          "apps/web/src/project-roving-focus.ts",
+          "apps/web/src/project-view-configuration.ts",
+          "apps/web/src/projects.tsx",
+          "apps/web/src/saved-view-library.ts",
+          "apps/web/src/saved-views.tsx",
+          "apps/web/src/search-recents.ts",
+          "apps/web/src/styles.css",
+          "apps/web/src/textarea-autosize.ts",
+          "apps/web/src/workflow-status-inline-edit.ts",
+          "apps/web/src/workflow-status-reorder.ts",
+          "apps/web/src/workflow-status-retire.ts",
+          "apps/web/src/workspace-navigation.ts"
+        ]
+      }
+    },
+    {
+      "id": "contribution_and_security_policy",
+      "status": "PASS",
+      "summary": "Contribution and private vulnerability-reporting policies exist.",
+      "evidence": {
+        "documents": [
+          {
+            "path": "CONTRIBUTING.md",
+            "exists": true
+          },
+          {
+            "path": "SECURITY.md",
+            "exists": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "reproducible_build_inputs",
+      "status": "PASS",
+      "summary": "The local runtime build inputs and topology are hash-pinned.",
+      "evidence": {
+        "manifest": "ops/release/reproducible-build.json",
+        "status": "inputs_pinned_revision_pending",
+        "mismatches": []
+      }
+    },
+    {
+      "id": "clean_host_network_denied_runtime",
+      "status": "PASS",
+      "summary": "The clean-host network-denied runtime check passed.",
+      "evidence": {
+        "result": "docs/product/versions/v0.1.0/40-testing/CT-12/result.json",
+        "observed": "passed"
+      }
+    },
+    {
+      "id": "accountable_release_review",
+      "status": "BLOCKED",
+      "summary": "The exact review request is ready, but accountable CT-13 acceptance is absent.",
+      "evidence": {
+        "request": {
+          "manifest": "ops/release/review-request.json",
+          "status": "valid",
+          "sha256": "8058d38862e2c391ccfee6fddcda62843f617a785879fc6e8360dcbf2c43db24",
+          "issues": []
+        },
+        "acceptance": {
+          "manifest": "ops/release/review-acceptance.json",
+          "status": "missing",
+          "reviewer": null,
+          "reviewed_at": null,
+          "issues": []
+        }
+      }
+    }
+  ]
+}

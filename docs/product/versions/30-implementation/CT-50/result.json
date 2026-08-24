@@ -1,0 +1,48 @@
+{
+  "schema_version": "ct50-implementation-result-v1",
+  "captured_at": "2026-08-20T11:41:25Z",
+  "verdict": "IMPLEMENTED_AWAITING_BROWSER_VERIFICATION",
+  "issue": {
+    "identifier": "CT-50",
+    "id": "c11ef27e-6b2c-4804-acff-a18de085d20e",
+    "implementation_revision": 3,
+    "expected_completion_revision": 4
+  },
+  "checks": {
+    "focused_test_files": 6,
+    "focused_tests_passed": 40,
+    "complete_test_files": 32,
+    "complete_tests_passed": 196,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "integration_test_files_skipped": 7,
+    "integration_tests_skipped": 17,
+    "database_verification": "not_run_missing_test_credentials",
+    "vite_modules": 1927,
+    "css_bytes": 74610,
+    "projects_chunk_bytes": 37225,
+    "issues_chunk_bytes": 117957,
+    "index_chunk_bytes": 276041,
+    "editor_chunk_bytes": 402713,
+    "runtime_chunk_bytes": 589,
+    "html_bytes": 663,
+    "final_vite_chunk_warning": false,
+    "fixture_host_checks": 4,
+    "fixture_host_checks_passed": 4,
+    "browser_captures": 0,
+    "browser_assertions_claimed": 0,
+    "browser_verification": "deferred_permission_denied"
+  },
+  "source_hashes": {
+    "apps/web/src/issues.tsx": "bd6dbff2ee63e5ca89394f47366a3abac4966cb9af38c0a741452dad3f0c9a23",
+    "apps/web/src/issue-row-actions.ts": "3d32a866b441c102e0f0041d95b64008cec84d5138bd6b5cd01c7c71247fadca",
+    "apps/web/src/styles.css": "20aa4a1d92107efc1d16ba169c21b1c517204a3c14c05c25f75343fd0f2bf4d0",
+    "apps/web/tests/issue-row-actions.test.ts": "315e8b5499299fa95c3e7a9cc582dc2ab0e8d0db2f1beaf914cfac31a3c20ac5",
+    "apps/web/tests/local-keyboard-actions.test.ts": "2a5ea57ca6a0eae493574b2a30eea50d2e044055335b3cb0052dae04d4cadab1",
+    "apps/web/tests/table-semantics.test.ts": "636028ebb03bd08ac9d54caec1661eaceb5f22062c6e96ea9295fd328734fd75",
+    "apps/web/tests/board-accessibility.test.ts": "ab44cb7f422d38756fd029e40d7c9443fdf87b5b6e153c66863b3f1398dea441",
+    "apps/web/tests/issue-loading-geometry.test.ts": "b41639335e3b6f2f838bc5e4ed89a71c61e5205e9020f92bb7e8ad76d64f2152",
+    "apps/web/tests/layout-contract.test.ts": "a3e2fd07de1a4bf4d0537ddabe415d53a8fdb78c1ac3f051429d85f05ff7ddd7"
+  },
+  "outcomes_claimed": []
+}

@@ -1,0 +1,18 @@
+# Control Tower local authority, backups, private evidence, and staging data.
+.control-tower/
+
+# Local environment and generated build state.
+.env
+.env.*
+!.env.example
+.playwright-mcp/
+node_modules/
+dist/
+build/
+coverage/
+.DS_Store
+*.log
+
+# Operator exports and backups can contain private workspace data or credentials.
+/backups/
+/.local-data/

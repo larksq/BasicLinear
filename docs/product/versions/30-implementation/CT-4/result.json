@@ -1,0 +1,54 @@
+{
+  "schema_version": "ct4-prototype-result-v1",
+  "captured_at": "2026-08-19T14:41:29Z",
+  "verdict": "PASS_FOR_CT6",
+  "issue": {
+    "identifier": "CT-4",
+    "id": "c6ce2ff5-54c8-4d70-84c4-8a06d3ad3718",
+    "start_revision": 2,
+    "completion_revision": 3
+  },
+  "planning_package_sha256": "d161247c9c523e004a14d6e31ebcf9d12aab9764015b312383e13a0bb851f834",
+  "source": {
+    "git_head": null,
+    "git_state": "unborn_repository",
+    "prototype_root": "prototypes/ct-4"
+  },
+  "environment": {
+    "os": "macOS 26.5.2 arm64",
+    "node": "v24.18.0",
+    "npm": "11.16.0",
+    "active_chrome": "150.0.7871.184",
+    "docker": "20.10.21",
+    "postgres_image": "postgres:16-alpine"
+  },
+  "checks": {
+    "node_tests": { "passed": 7, "failed": 0 },
+    "postgres_rls": "pass",
+    "accepted_revision": "pass",
+    "stale_revision": "pass",
+    "database_restart_readback": "2|2",
+    "runtime_errors": 0,
+    "unhandled_rejections": 0,
+    "duplicate_ids": 0,
+    "unnamed_buttons": 0,
+    "document_overflow": 0,
+    "max_mounted_virtual_rows": 50,
+    "scroll_restoration": { "issue": "FOC-340", "scroll_top": 1008, "preserved": true },
+    "latency_ms": { "samples": 60, "min": 23, "p50": 26, "p75": 29, "p95": 56, "max": 82 }
+  },
+  "accepted_budgets": {
+    "interaction_p75_ms": 100,
+    "max_mounted_virtual_rows": 70,
+    "stable_fixture_pixel_delta": 0
+  },
+  "screenshots": [
+    { "path": "prototypes/ct-4/evidence/desktop-1440x900.png", "sha256": "6a7202c3a12cb362f1885eb41fdff33f9896b606de0baf8e5bac29ab8536aea1", "deterministic_reload": true },
+    { "path": "prototypes/ct-4/evidence/desktop-detail-1440x900.png", "sha256": "3f50c00e856d891c28ea6bcd9d53550238b03bc648f019fed2b3a7549f2973a3" },
+    { "path": "prototypes/ct-4/evidence/tablet-1024x768.png", "sha256": "d9555c5932c19bb665560d79cae0127524f3968ccce65b039bc129af9682a340", "deterministic_reload": true },
+    { "path": "prototypes/ct-4/evidence/tablet-detail-1024x768.png", "sha256": "10783a90af8f2712cd4e206990812e8e73a1e00bfed887816ac956c033d35625" },
+    { "path": "prototypes/ct-4/evidence/mobile-390x844.png", "sha256": "31943bebf176132a52f33fbf518d0b8237e5896d5dcee0c7a2cf552fb465644a", "deterministic_reload": true },
+    { "path": "prototypes/ct-4/evidence/mobile-detail-390x844.png", "sha256": "9b1c94daec3aeb5e6a826938149b41d79299ac416adc7381836cafb929daea0a" }
+  ],
+  "unresolved_owners": ["CT-1", "CT-2", "CT-3", "CT-12", "CT-13"]
+}

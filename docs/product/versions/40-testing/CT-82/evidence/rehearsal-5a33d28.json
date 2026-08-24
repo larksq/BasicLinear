@@ -1,0 +1,90 @@
+{
+  "schema_version": "ct82-current-rehearsal-v1",
+  "captured_at": "2026-08-23T03:10:32.297Z",
+  "verdict": "PASSED_IMPLEMENTATION_REHEARSAL",
+  "actor": "codex-testing-ct82-5a33d28-rehearsal",
+  "session": "CT82-REHEARSAL-20260823T1110-CST",
+  "independent": false,
+  "self_acceptance": false,
+  "product": {
+    "revision": "5a33d28be383b7651a4b0d6156534aa12cc423fa",
+    "tree": "d106d3bb40a84184e7ee26c919134b01e4748679",
+    "clean": true,
+    "status_entries": 0,
+    "source_files": 1241,
+    "source_sha256": "456fc149dffc711e87f372f2f71af937e6a3ba4db984201af84000e2cb659c2a"
+  },
+  "environment": {
+    "os": "darwin 25.5.0 arm64",
+    "node": "v24.19.0",
+    "npm": "11.8.0",
+    "docker": false,
+    "postgresql": false,
+    "external_identity": false
+  },
+  "artifact": {
+    "files": 111,
+    "bytes": 2053719,
+    "sha256": "858750ef2bce49e39a028419a23646200207f58fd5394a20f812c207889c1e7c"
+  },
+  "checks": {
+    "structured_passed": 21,
+    "structured_failed": 0,
+    "runner_contract_passed": 4,
+    "runner_contract_failed": 0,
+    "guarded_phases": 6,
+    "network_audit_records": 11,
+    "outbound_or_subprocess_attempts": 0,
+    "interruption_signals": ["SIGKILL", "SIGTERM", "SIGINT"],
+    "canonical_digest": "82a029c6c16d3f7504e8a1c8c48cca63cc20025202032e525cf2253f733c8584",
+    "accepted_scale": {
+      "projects": 1001,
+      "milestones": 2001,
+      "issues": 10001,
+      "activity_entries": 50006,
+      "duration_ms": 157
+    },
+    "permissions": "passed",
+    "cleanup": "passed",
+    "legacy_transfer": "passed"
+  },
+  "runner": {
+    "sha256": "d447f179db835fd09d5f420cc9d1c3f412470e099c3a711ca4f708bf37fa412c",
+    "guard_sha256": "f11d5f39866508001fa7eebe2a2242efb52a4c6bf3d0a61c72fd45b2d58d5062"
+  },
+  "private_receipt": {
+    "path": ".control-tower/evidence/CT-82/rehearsal-5a33d28.json",
+    "bytes": 3898,
+    "mode": "0600",
+    "sha256": "62a1e1d65c1058163fabec4dfbde424881c1477d273d2b7bac4fd1d3d80455c0"
+  },
+  "acceptance": {
+    "p_t21": "open_for_5a33d28",
+    "ct82": "Todo@18",
+    "historical_f7c3625_acceptance_preserved": true
+  },
+  "task_reconciliation": {
+    "expected_revision": 17,
+    "readback_revision": 18,
+    "readback_status": "Todo",
+    "milestone": "S4 — Testing",
+    "store_health": "ready",
+    "counts": { "active": 14, "completed": 110, "trash": 0 },
+    "projection": "disabled_not_synced",
+    "backup": {
+      "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-23T03-14-43-717Z-a95d4cb2-db32-4ec1-97a4-287e104c62a0.json",
+      "bytes": 488076,
+      "mode": "0600",
+      "package_sha256": "810302dde688be64b45809546b1109a4cefe817ac4799509b280a9fa28316006",
+      "file_sha256": "98122378e8ecd899d35a0ba0adb476601881ce0dc03aa2ee9c85bc04fe81272b"
+    },
+    "raw_readback": {
+      "path": ".control-tower/evidence/CT-82/task-reconciliation-5a33d28.json",
+      "bytes": 512192,
+      "mode": "0600",
+      "sha256": "211ca5d68a5578ab808e94e65ac08c2dd8f7a432378f23aa6268c8c7971e331b"
+    }
+  },
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

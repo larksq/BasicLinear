@@ -1,0 +1,2736 @@
+{
+  "schema_version": "ct12-responsive-breakpoint-evidence-v1",
+  "captured_at": "2026-08-22T15:00:08.318Z",
+  "candidate": {
+    "product_revision": "670a9f96e989654d84408e30c527e85b765a9042",
+    "url": "http://127.0.0.1:4284/",
+    "browser": "Chrome 151.0.7922.170",
+    "synthetic_data_only": true
+  },
+  "method": {
+    "viewports": [
+      {
+        "width": 767,
+        "height": 900
+      },
+      {
+        "width": 768,
+        "height": 900
+      },
+      {
+        "width": 1199,
+        "height": 900
+      },
+      {
+        "width": 1200,
+        "height": 900
+      }
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "screens": [
+      "projects-list",
+      "project-overview",
+      "issue-detail-contextual"
+    ],
+    "live_resize_sequence": [
+      767,
+      768,
+      1199,
+      1200,
+      1199,
+      767
+    ]
+  },
+  "states": [
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 433,
+          "height": 389,
+          "left": 0,
+          "right": 767,
+          "top": 44,
+          "width": 767
+        }
+      },
+      "detail": {
+        "rect": null,
+        "visible": false
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": null,
+      "navigation": {
+        "drawerVisible": true,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": -248,
+          "right": 0,
+          "top": 0,
+          "width": 248
+        },
+        "sidebarVisibility": "hidden",
+        "sidebarVisible": false
+      },
+      "pageTitle": {
+        "fontSize": "20px",
+        "text": "Projects"
+      },
+      "panel": {
+        "maxHeight": null,
+        "position": null,
+        "rect": null,
+        "top": null,
+        "visible": false
+      },
+      "projectOverview": {
+        "maxWidth": null,
+        "rect": null
+      },
+      "projectTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "properties": {
+        "controls": null,
+        "expanded": null,
+        "regionDisplay": null,
+        "regionExists": false,
+        "regionHidden": null,
+        "regionVisible": false,
+        "toggleDisplay": null,
+        "toggleVisible": false,
+        "validControl": null
+      },
+      "resizer": {
+        "display": null,
+        "position": null,
+        "visible": false
+      },
+      "screen": "projects-list",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 767
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 1194.984375,
+          "height": 1150.984375,
+          "left": 0,
+          "right": 767,
+          "top": 44,
+          "width": 767
+        }
+      },
+      "detail": {
+        "rect": null,
+        "visible": false
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": null,
+      "navigation": {
+        "drawerVisible": true,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": -248,
+          "right": 0,
+          "top": 0,
+          "width": 248
+        },
+        "sidebarVisibility": "hidden",
+        "sidebarVisible": false
+      },
+      "pageTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "panel": {
+        "maxHeight": null,
+        "position": null,
+        "rect": null,
+        "top": null,
+        "visible": false
+      },
+      "projectOverview": {
+        "maxWidth": "920px",
+        "rect": {
+          "bottom": 1134.984375,
+          "height": 1062.984375,
+          "left": 12,
+          "right": 755,
+          "top": 72,
+          "width": 743
+        }
+      },
+      "projectTitle": {
+        "fontSize": "24px",
+        "text": "OpenLinear v0.1 release"
+      },
+      "properties": {
+        "controls": null,
+        "expanded": null,
+        "regionDisplay": null,
+        "regionExists": false,
+        "regionHidden": null,
+        "regionVisible": false,
+        "toggleDisplay": null,
+        "toggleVisible": false,
+        "validControl": null
+      },
+      "resizer": {
+        "display": null,
+        "position": null,
+        "visible": false
+      },
+      "screen": "project-overview",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 767
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 1956,
+          "height": 1912,
+          "left": 0,
+          "right": 767,
+          "top": 44,
+          "width": 767
+        }
+      },
+      "detail": {
+        "rect": {
+          "bottom": 1896,
+          "height": 1824,
+          "left": 12,
+          "right": 755,
+          "top": 72,
+          "width": 743
+        },
+        "visible": true
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": "route",
+      "navigation": {
+        "drawerVisible": true,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": -248,
+          "right": 0,
+          "top": 0,
+          "width": 248
+        },
+        "sidebarVisibility": "hidden",
+        "sidebarVisible": false
+      },
+      "pageTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "panel": {
+        "maxHeight": null,
+        "position": null,
+        "rect": null,
+        "top": null,
+        "visible": false
+      },
+      "projectOverview": {
+        "maxWidth": null,
+        "rect": null
+      },
+      "projectTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "properties": {
+        "controls": "issue-properties-90a8a8f0-a643-447a-af20-04544a7986df",
+        "expanded": "false",
+        "regionDisplay": "none",
+        "regionExists": true,
+        "regionHidden": true,
+        "regionVisible": false,
+        "toggleDisplay": "grid",
+        "toggleVisible": true,
+        "validControl": true
+      },
+      "resizer": {
+        "display": null,
+        "position": null,
+        "visible": false
+      },
+      "screen": "issue-detail",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 767
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 433,
+          "height": 389,
+          "left": 48,
+          "right": 768,
+          "top": 44,
+          "width": 720
+        }
+      },
+      "detail": {
+        "rect": null,
+        "visible": false
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": null,
+      "navigation": {
+        "drawerVisible": false,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": 0,
+          "right": 48,
+          "top": 0,
+          "width": 48
+        },
+        "sidebarVisibility": "visible",
+        "sidebarVisible": true
+      },
+      "pageTitle": {
+        "fontSize": "20px",
+        "text": "Projects"
+      },
+      "panel": {
+        "maxHeight": null,
+        "position": null,
+        "rect": null,
+        "top": null,
+        "visible": false
+      },
+      "projectOverview": {
+        "maxWidth": null,
+        "rect": null
+      },
+      "projectTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "properties": {
+        "controls": null,
+        "expanded": null,
+        "regionDisplay": null,
+        "regionExists": false,
+        "regionHidden": null,
+        "regionVisible": false,
+        "toggleDisplay": null,
+        "toggleVisible": false,
+        "validControl": null
+      },
+      "resizer": {
+        "display": null,
+        "position": null,
+        "visible": false
+      },
+      "screen": "projects-list",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 768
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 1194.984375,
+          "height": 1150.984375,
+          "left": 48,
+          "right": 768,
+          "top": 44,
+          "width": 720
+        }
+      },
+      "detail": {
+        "rect": null,
+        "visible": false
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": null,
+      "navigation": {
+        "drawerVisible": false,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": 0,
+          "right": 48,
+          "top": 0,
+          "width": 48
+        },
+        "sidebarVisibility": "visible",
+        "sidebarVisible": true
+      },
+      "pageTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "panel": {
+        "maxHeight": null,
+        "position": null,
+        "rect": null,
+        "top": null,
+        "visible": false
+      },
+      "projectOverview": {
+        "maxWidth": "920px",
+        "rect": {
+          "bottom": 1134.984375,
+          "height": 1062.984375,
+          "left": 60,
+          "right": 756,
+          "top": 72,
+          "width": 696
+        }
+      },
+      "projectTitle": {
+        "fontSize": "24px",
+        "text": "OpenLinear v0.1 release"
+      },
+      "properties": {
+        "controls": null,
+        "expanded": null,
+        "regionDisplay": null,
+        "regionExists": false,
+        "regionHidden": null,
+        "regionVisible": false,
+        "toggleDisplay": null,
+        "toggleVisible": false,
+        "validControl": null
+      },
+      "resizer": {
+        "display": null,
+        "position": null,
+        "visible": false
+      },
+      "screen": "project-overview",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 768
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 953,
+          "height": 909,
+          "left": 48,
+          "right": 768,
+          "top": 44,
+          "width": 720
+        }
+      },
+      "detail": {
+        "rect": {
+          "bottom": 2153,
+          "height": 2109,
+          "left": 129,
+          "right": 768,
+          "top": 44,
+          "width": 639
+        },
+        "visible": true
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": "panel",
+      "navigation": {
+        "drawerVisible": false,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": 0,
+          "right": 48,
+          "top": 0,
+          "width": 48
+        },
+        "sidebarVisibility": "visible",
+        "sidebarVisible": true
+      },
+      "pageTitle": {
+        "fontSize": "20px",
+        "text": "Issues"
+      },
+      "panel": {
+        "maxHeight": "none",
+        "position": "fixed",
+        "rect": {
+          "bottom": 900,
+          "height": 856,
+          "left": 128,
+          "right": 768,
+          "top": 44,
+          "width": 640
+        },
+        "top": "44px",
+        "visible": true
+      },
+      "projectOverview": {
+        "maxWidth": null,
+        "rect": null
+      },
+      "projectTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "properties": {
+        "controls": "issue-properties-90a8a8f0-a643-447a-af20-04544a7986df",
+        "expanded": "true",
+        "regionDisplay": "grid",
+        "regionExists": true,
+        "regionHidden": false,
+        "regionVisible": true,
+        "toggleDisplay": "none",
+        "toggleVisible": false,
+        "validControl": true
+      },
+      "resizer": {
+        "display": "none",
+        "position": "static",
+        "visible": false
+      },
+      "screen": "issue-detail",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 768
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 385,
+          "height": 341,
+          "left": 48,
+          "right": 1199,
+          "top": 44,
+          "width": 1151
+        }
+      },
+      "detail": {
+        "rect": null,
+        "visible": false
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": null,
+      "navigation": {
+        "drawerVisible": false,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": 0,
+          "right": 48,
+          "top": 0,
+          "width": 48
+        },
+        "sidebarVisibility": "visible",
+        "sidebarVisible": true
+      },
+      "pageTitle": {
+        "fontSize": "20px",
+        "text": "Projects"
+      },
+      "panel": {
+        "maxHeight": null,
+        "position": null,
+        "rect": null,
+        "top": null,
+        "visible": false
+      },
+      "projectOverview": {
+        "maxWidth": null,
+        "rect": null
+      },
+      "projectTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "properties": {
+        "controls": null,
+        "expanded": null,
+        "regionDisplay": null,
+        "regionExists": false,
+        "regionHidden": null,
+        "regionVisible": false,
+        "toggleDisplay": null,
+        "toggleVisible": false,
+        "validControl": null
+      },
+      "resizer": {
+        "display": null,
+        "position": null,
+        "visible": false
+      },
+      "screen": "projects-list",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1199
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 937.484375,
+          "height": 893.484375,
+          "left": 48,
+          "right": 1199,
+          "top": 44,
+          "width": 1151
+        }
+      },
+      "detail": {
+        "rect": null,
+        "visible": false
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": null,
+      "navigation": {
+        "drawerVisible": false,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": 0,
+          "right": 48,
+          "top": 0,
+          "width": 48
+        },
+        "sidebarVisibility": "visible",
+        "sidebarVisible": true
+      },
+      "pageTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "panel": {
+        "maxHeight": null,
+        "position": null,
+        "rect": null,
+        "top": null,
+        "visible": false
+      },
+      "projectOverview": {
+        "maxWidth": "920px",
+        "rect": {
+          "bottom": 857.484375,
+          "height": 771.484375,
+          "left": 163.5,
+          "right": 1083.5,
+          "top": 86,
+          "width": 920
+        }
+      },
+      "projectTitle": {
+        "fontSize": "24px",
+        "text": "OpenLinear v0.1 release"
+      },
+      "properties": {
+        "controls": null,
+        "expanded": null,
+        "regionDisplay": null,
+        "regionExists": false,
+        "regionHidden": null,
+        "regionVisible": false,
+        "toggleDisplay": null,
+        "toggleVisible": false,
+        "validControl": null
+      },
+      "resizer": {
+        "display": null,
+        "position": null,
+        "visible": false
+      },
+      "screen": "project-overview",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1199
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 936,
+          "height": 892,
+          "left": 48,
+          "right": 1199,
+          "top": 44,
+          "width": 1151
+        }
+      },
+      "detail": {
+        "rect": {
+          "bottom": 2045,
+          "height": 2001,
+          "left": 560,
+          "right": 1199,
+          "top": 44,
+          "width": 639
+        },
+        "visible": true
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": "panel",
+      "navigation": {
+        "drawerVisible": false,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": 0,
+          "right": 48,
+          "top": 0,
+          "width": 48
+        },
+        "sidebarVisibility": "visible",
+        "sidebarVisible": true
+      },
+      "pageTitle": {
+        "fontSize": "20px",
+        "text": "Issues"
+      },
+      "panel": {
+        "maxHeight": "none",
+        "position": "fixed",
+        "rect": {
+          "bottom": 900,
+          "height": 856,
+          "left": 559,
+          "right": 1199,
+          "top": 44,
+          "width": 640
+        },
+        "top": "44px",
+        "visible": true
+      },
+      "projectOverview": {
+        "maxWidth": null,
+        "rect": null
+      },
+      "projectTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "properties": {
+        "controls": "issue-properties-90a8a8f0-a643-447a-af20-04544a7986df",
+        "expanded": "true",
+        "regionDisplay": "grid",
+        "regionExists": true,
+        "regionHidden": false,
+        "regionVisible": true,
+        "toggleDisplay": "none",
+        "toggleVisible": false,
+        "validControl": true
+      },
+      "resizer": {
+        "display": "none",
+        "position": "static",
+        "visible": false
+      },
+      "screen": "issue-detail",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1199
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 385,
+          "height": 341,
+          "left": 232,
+          "right": 1200,
+          "top": 44,
+          "width": 968
+        }
+      },
+      "detail": {
+        "rect": null,
+        "visible": false
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": null,
+      "navigation": {
+        "drawerVisible": false,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": 0,
+          "right": 232,
+          "top": 0,
+          "width": 232
+        },
+        "sidebarVisibility": "visible",
+        "sidebarVisible": true
+      },
+      "pageTitle": {
+        "fontSize": "20px",
+        "text": "Projects"
+      },
+      "panel": {
+        "maxHeight": null,
+        "position": null,
+        "rect": null,
+        "top": null,
+        "visible": false
+      },
+      "projectOverview": {
+        "maxWidth": null,
+        "rect": null
+      },
+      "projectTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "properties": {
+        "controls": null,
+        "expanded": null,
+        "regionDisplay": null,
+        "regionExists": false,
+        "regionHidden": null,
+        "regionVisible": false,
+        "toggleDisplay": null,
+        "toggleVisible": false,
+        "validControl": null
+      },
+      "resizer": {
+        "display": null,
+        "position": null,
+        "visible": false
+      },
+      "screen": "projects-list",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1200
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 937.484375,
+          "height": 893.484375,
+          "left": 232,
+          "right": 1200,
+          "top": 44,
+          "width": 968
+        }
+      },
+      "detail": {
+        "rect": null,
+        "visible": false
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": null,
+      "navigation": {
+        "drawerVisible": false,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": 0,
+          "right": 232,
+          "top": 0,
+          "width": 232
+        },
+        "sidebarVisibility": "visible",
+        "sidebarVisible": true
+      },
+      "pageTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "panel": {
+        "maxHeight": null,
+        "position": null,
+        "rect": null,
+        "top": null,
+        "visible": false
+      },
+      "projectOverview": {
+        "maxWidth": "920px",
+        "rect": {
+          "bottom": 857.484375,
+          "height": 771.484375,
+          "left": 268,
+          "right": 1164,
+          "top": 86,
+          "width": 896
+        }
+      },
+      "projectTitle": {
+        "fontSize": "24px",
+        "text": "OpenLinear v0.1 release"
+      },
+      "properties": {
+        "controls": null,
+        "expanded": null,
+        "regionDisplay": null,
+        "regionExists": false,
+        "regionHidden": null,
+        "regionVisible": false,
+        "toggleDisplay": null,
+        "toggleVisible": false,
+        "validControl": null
+      },
+      "resizer": {
+        "display": null,
+        "position": null,
+        "visible": false
+      },
+      "screen": "project-overview",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1200
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 1014,
+          "height": 970,
+          "left": 232,
+          "right": 1200,
+          "top": 44,
+          "width": 968
+        }
+      },
+      "detail": {
+        "rect": {
+          "bottom": 2069,
+          "height": 2001,
+          "left": 604,
+          "right": 1164,
+          "top": 68,
+          "width": 560
+        },
+        "visible": true
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": "panel",
+      "navigation": {
+        "drawerVisible": false,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": 0,
+          "right": 232,
+          "top": 0,
+          "width": 232
+        },
+        "sidebarVisibility": "visible",
+        "sidebarVisible": true
+      },
+      "pageTitle": {
+        "fontSize": "20px",
+        "text": "Issues"
+      },
+      "panel": {
+        "maxHeight": "831px",
+        "position": "sticky",
+        "rect": {
+          "bottom": 899,
+          "height": 831,
+          "left": 604,
+          "right": 1164,
+          "top": 68,
+          "width": 560
+        },
+        "top": "57px",
+        "visible": true
+      },
+      "projectOverview": {
+        "maxWidth": null,
+        "rect": null
+      },
+      "projectTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "properties": {
+        "controls": "issue-properties-90a8a8f0-a643-447a-af20-04544a7986df",
+        "expanded": "true",
+        "regionDisplay": "grid",
+        "regionExists": true,
+        "regionHidden": false,
+        "regionVisible": true,
+        "toggleDisplay": "none",
+        "toggleVisible": false,
+        "validControl": true
+      },
+      "resizer": {
+        "display": "grid",
+        "position": "sticky",
+        "visible": true
+      },
+      "screen": "issue-detail",
+      "theme": "light",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(247, 247, 248)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1200
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 433,
+          "height": 389,
+          "left": 0,
+          "right": 767,
+          "top": 44,
+          "width": 767
+        }
+      },
+      "detail": {
+        "rect": null,
+        "visible": false
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": null,
+      "navigation": {
+        "drawerVisible": true,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": -248,
+          "right": 0,
+          "top": 0,
+          "width": 248
+        },
+        "sidebarVisibility": "hidden",
+        "sidebarVisible": false
+      },
+      "pageTitle": {
+        "fontSize": "20px",
+        "text": "Projects"
+      },
+      "panel": {
+        "maxHeight": null,
+        "position": null,
+        "rect": null,
+        "top": null,
+        "visible": false
+      },
+      "projectOverview": {
+        "maxWidth": null,
+        "rect": null
+      },
+      "projectTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "properties": {
+        "controls": null,
+        "expanded": null,
+        "regionDisplay": null,
+        "regionExists": false,
+        "regionHidden": null,
+        "regionVisible": false,
+        "toggleDisplay": null,
+        "toggleVisible": false,
+        "validControl": null
+      },
+      "resizer": {
+        "display": null,
+        "position": null,
+        "visible": false
+      },
+      "screen": "projects-list",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 767
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 1194.984375,
+          "height": 1150.984375,
+          "left": 0,
+          "right": 767,
+          "top": 44,
+          "width": 767
+        }
+      },
+      "detail": {
+        "rect": null,
+        "visible": false
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": null,
+      "navigation": {
+        "drawerVisible": true,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": -248,
+          "right": 0,
+          "top": 0,
+          "width": 248
+        },
+        "sidebarVisibility": "hidden",
+        "sidebarVisible": false
+      },
+      "pageTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "panel": {
+        "maxHeight": null,
+        "position": null,
+        "rect": null,
+        "top": null,
+        "visible": false
+      },
+      "projectOverview": {
+        "maxWidth": "920px",
+        "rect": {
+          "bottom": 1134.984375,
+          "height": 1062.984375,
+          "left": 12,
+          "right": 755,
+          "top": 72,
+          "width": 743
+        }
+      },
+      "projectTitle": {
+        "fontSize": "24px",
+        "text": "OpenLinear v0.1 release"
+      },
+      "properties": {
+        "controls": null,
+        "expanded": null,
+        "regionDisplay": null,
+        "regionExists": false,
+        "regionHidden": null,
+        "regionVisible": false,
+        "toggleDisplay": null,
+        "toggleVisible": false,
+        "validControl": null
+      },
+      "resizer": {
+        "display": null,
+        "position": null,
+        "visible": false
+      },
+      "screen": "project-overview",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 767
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 1956,
+          "height": 1912,
+          "left": 0,
+          "right": 767,
+          "top": 44,
+          "width": 767
+        }
+      },
+      "detail": {
+        "rect": {
+          "bottom": 1896,
+          "height": 1824,
+          "left": 12,
+          "right": 755,
+          "top": 72,
+          "width": 743
+        },
+        "visible": true
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": "route",
+      "navigation": {
+        "drawerVisible": true,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": -248,
+          "right": 0,
+          "top": 0,
+          "width": 248
+        },
+        "sidebarVisibility": "hidden",
+        "sidebarVisible": false
+      },
+      "pageTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "panel": {
+        "maxHeight": null,
+        "position": null,
+        "rect": null,
+        "top": null,
+        "visible": false
+      },
+      "projectOverview": {
+        "maxWidth": null,
+        "rect": null
+      },
+      "projectTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "properties": {
+        "controls": "issue-properties-90a8a8f0-a643-447a-af20-04544a7986df",
+        "expanded": "false",
+        "regionDisplay": "none",
+        "regionExists": true,
+        "regionHidden": true,
+        "regionVisible": false,
+        "toggleDisplay": "grid",
+        "toggleVisible": true,
+        "validControl": true
+      },
+      "resizer": {
+        "display": null,
+        "position": null,
+        "visible": false
+      },
+      "screen": "issue-detail",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 767
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 433,
+          "height": 389,
+          "left": 48,
+          "right": 768,
+          "top": 44,
+          "width": 720
+        }
+      },
+      "detail": {
+        "rect": null,
+        "visible": false
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": null,
+      "navigation": {
+        "drawerVisible": false,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": 0,
+          "right": 48,
+          "top": 0,
+          "width": 48
+        },
+        "sidebarVisibility": "visible",
+        "sidebarVisible": true
+      },
+      "pageTitle": {
+        "fontSize": "20px",
+        "text": "Projects"
+      },
+      "panel": {
+        "maxHeight": null,
+        "position": null,
+        "rect": null,
+        "top": null,
+        "visible": false
+      },
+      "projectOverview": {
+        "maxWidth": null,
+        "rect": null
+      },
+      "projectTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "properties": {
+        "controls": null,
+        "expanded": null,
+        "regionDisplay": null,
+        "regionExists": false,
+        "regionHidden": null,
+        "regionVisible": false,
+        "toggleDisplay": null,
+        "toggleVisible": false,
+        "validControl": null
+      },
+      "resizer": {
+        "display": null,
+        "position": null,
+        "visible": false
+      },
+      "screen": "projects-list",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 768
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 1194.984375,
+          "height": 1150.984375,
+          "left": 48,
+          "right": 768,
+          "top": 44,
+          "width": 720
+        }
+      },
+      "detail": {
+        "rect": null,
+        "visible": false
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": null,
+      "navigation": {
+        "drawerVisible": false,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": 0,
+          "right": 48,
+          "top": 0,
+          "width": 48
+        },
+        "sidebarVisibility": "visible",
+        "sidebarVisible": true
+      },
+      "pageTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "panel": {
+        "maxHeight": null,
+        "position": null,
+        "rect": null,
+        "top": null,
+        "visible": false
+      },
+      "projectOverview": {
+        "maxWidth": "920px",
+        "rect": {
+          "bottom": 1134.984375,
+          "height": 1062.984375,
+          "left": 60,
+          "right": 756,
+          "top": 72,
+          "width": 696
+        }
+      },
+      "projectTitle": {
+        "fontSize": "24px",
+        "text": "OpenLinear v0.1 release"
+      },
+      "properties": {
+        "controls": null,
+        "expanded": null,
+        "regionDisplay": null,
+        "regionExists": false,
+        "regionHidden": null,
+        "regionVisible": false,
+        "toggleDisplay": null,
+        "toggleVisible": false,
+        "validControl": null
+      },
+      "resizer": {
+        "display": null,
+        "position": null,
+        "visible": false
+      },
+      "screen": "project-overview",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 768
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 953,
+          "height": 909,
+          "left": 48,
+          "right": 768,
+          "top": 44,
+          "width": 720
+        }
+      },
+      "detail": {
+        "rect": {
+          "bottom": 2153,
+          "height": 2109,
+          "left": 129,
+          "right": 768,
+          "top": 44,
+          "width": 639
+        },
+        "visible": true
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": "panel",
+      "navigation": {
+        "drawerVisible": false,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": 0,
+          "right": 48,
+          "top": 0,
+          "width": 48
+        },
+        "sidebarVisibility": "visible",
+        "sidebarVisible": true
+      },
+      "pageTitle": {
+        "fontSize": "20px",
+        "text": "Issues"
+      },
+      "panel": {
+        "maxHeight": "none",
+        "position": "fixed",
+        "rect": {
+          "bottom": 900,
+          "height": 856,
+          "left": 128,
+          "right": 768,
+          "top": 44,
+          "width": 640
+        },
+        "top": "44px",
+        "visible": true
+      },
+      "projectOverview": {
+        "maxWidth": null,
+        "rect": null
+      },
+      "projectTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "properties": {
+        "controls": "issue-properties-90a8a8f0-a643-447a-af20-04544a7986df",
+        "expanded": "true",
+        "regionDisplay": "grid",
+        "regionExists": true,
+        "regionHidden": false,
+        "regionVisible": true,
+        "toggleDisplay": "none",
+        "toggleVisible": false,
+        "validControl": true
+      },
+      "resizer": {
+        "display": "none",
+        "position": "static",
+        "visible": false
+      },
+      "screen": "issue-detail",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 768
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 385,
+          "height": 341,
+          "left": 48,
+          "right": 1199,
+          "top": 44,
+          "width": 1151
+        }
+      },
+      "detail": {
+        "rect": null,
+        "visible": false
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": null,
+      "navigation": {
+        "drawerVisible": false,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": 0,
+          "right": 48,
+          "top": 0,
+          "width": 48
+        },
+        "sidebarVisibility": "visible",
+        "sidebarVisible": true
+      },
+      "pageTitle": {
+        "fontSize": "20px",
+        "text": "Projects"
+      },
+      "panel": {
+        "maxHeight": null,
+        "position": null,
+        "rect": null,
+        "top": null,
+        "visible": false
+      },
+      "projectOverview": {
+        "maxWidth": null,
+        "rect": null
+      },
+      "projectTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "properties": {
+        "controls": null,
+        "expanded": null,
+        "regionDisplay": null,
+        "regionExists": false,
+        "regionHidden": null,
+        "regionVisible": false,
+        "toggleDisplay": null,
+        "toggleVisible": false,
+        "validControl": null
+      },
+      "resizer": {
+        "display": null,
+        "position": null,
+        "visible": false
+      },
+      "screen": "projects-list",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1199
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 937.484375,
+          "height": 893.484375,
+          "left": 48,
+          "right": 1199,
+          "top": 44,
+          "width": 1151
+        }
+      },
+      "detail": {
+        "rect": null,
+        "visible": false
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": null,
+      "navigation": {
+        "drawerVisible": false,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": 0,
+          "right": 48,
+          "top": 0,
+          "width": 48
+        },
+        "sidebarVisibility": "visible",
+        "sidebarVisible": true
+      },
+      "pageTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "panel": {
+        "maxHeight": null,
+        "position": null,
+        "rect": null,
+        "top": null,
+        "visible": false
+      },
+      "projectOverview": {
+        "maxWidth": "920px",
+        "rect": {
+          "bottom": 857.484375,
+          "height": 771.484375,
+          "left": 163.5,
+          "right": 1083.5,
+          "top": 86,
+          "width": 920
+        }
+      },
+      "projectTitle": {
+        "fontSize": "24px",
+        "text": "OpenLinear v0.1 release"
+      },
+      "properties": {
+        "controls": null,
+        "expanded": null,
+        "regionDisplay": null,
+        "regionExists": false,
+        "regionHidden": null,
+        "regionVisible": false,
+        "toggleDisplay": null,
+        "toggleVisible": false,
+        "validControl": null
+      },
+      "resizer": {
+        "display": null,
+        "position": null,
+        "visible": false
+      },
+      "screen": "project-overview",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1199
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 936,
+          "height": 892,
+          "left": 48,
+          "right": 1199,
+          "top": 44,
+          "width": 1151
+        }
+      },
+      "detail": {
+        "rect": {
+          "bottom": 2045,
+          "height": 2001,
+          "left": 560,
+          "right": 1199,
+          "top": 44,
+          "width": 639
+        },
+        "visible": true
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": "panel",
+      "navigation": {
+        "drawerVisible": false,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": 0,
+          "right": 48,
+          "top": 0,
+          "width": 48
+        },
+        "sidebarVisibility": "visible",
+        "sidebarVisible": true
+      },
+      "pageTitle": {
+        "fontSize": "20px",
+        "text": "Issues"
+      },
+      "panel": {
+        "maxHeight": "none",
+        "position": "fixed",
+        "rect": {
+          "bottom": 900,
+          "height": 856,
+          "left": 559,
+          "right": 1199,
+          "top": 44,
+          "width": 640
+        },
+        "top": "44px",
+        "visible": true
+      },
+      "projectOverview": {
+        "maxWidth": null,
+        "rect": null
+      },
+      "projectTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "properties": {
+        "controls": "issue-properties-90a8a8f0-a643-447a-af20-04544a7986df",
+        "expanded": "true",
+        "regionDisplay": "grid",
+        "regionExists": true,
+        "regionHidden": false,
+        "regionVisible": true,
+        "toggleDisplay": "none",
+        "toggleVisible": false,
+        "validControl": true
+      },
+      "resizer": {
+        "display": "none",
+        "position": "static",
+        "visible": false
+      },
+      "screen": "issue-detail",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1199
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 385,
+          "height": 341,
+          "left": 232,
+          "right": 1200,
+          "top": 44,
+          "width": 968
+        }
+      },
+      "detail": {
+        "rect": null,
+        "visible": false
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": null,
+      "navigation": {
+        "drawerVisible": false,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": 0,
+          "right": 232,
+          "top": 0,
+          "width": 232
+        },
+        "sidebarVisibility": "visible",
+        "sidebarVisible": true
+      },
+      "pageTitle": {
+        "fontSize": "20px",
+        "text": "Projects"
+      },
+      "panel": {
+        "maxHeight": null,
+        "position": null,
+        "rect": null,
+        "top": null,
+        "visible": false
+      },
+      "projectOverview": {
+        "maxWidth": null,
+        "rect": null
+      },
+      "projectTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "properties": {
+        "controls": null,
+        "expanded": null,
+        "regionDisplay": null,
+        "regionExists": false,
+        "regionHidden": null,
+        "regionVisible": false,
+        "toggleDisplay": null,
+        "toggleVisible": false,
+        "validControl": null
+      },
+      "resizer": {
+        "display": null,
+        "position": null,
+        "visible": false
+      },
+      "screen": "projects-list",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1200
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 937.484375,
+          "height": 893.484375,
+          "left": 232,
+          "right": 1200,
+          "top": 44,
+          "width": 968
+        }
+      },
+      "detail": {
+        "rect": null,
+        "visible": false
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": null,
+      "navigation": {
+        "drawerVisible": false,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": 0,
+          "right": 232,
+          "top": 0,
+          "width": 232
+        },
+        "sidebarVisibility": "visible",
+        "sidebarVisible": true
+      },
+      "pageTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "panel": {
+        "maxHeight": null,
+        "position": null,
+        "rect": null,
+        "top": null,
+        "visible": false
+      },
+      "projectOverview": {
+        "maxWidth": "920px",
+        "rect": {
+          "bottom": 857.484375,
+          "height": 771.484375,
+          "left": 268,
+          "right": 1164,
+          "top": 86,
+          "width": 896
+        }
+      },
+      "projectTitle": {
+        "fontSize": "24px",
+        "text": "OpenLinear v0.1 release"
+      },
+      "properties": {
+        "controls": null,
+        "expanded": null,
+        "regionDisplay": null,
+        "regionExists": false,
+        "regionHidden": null,
+        "regionVisible": false,
+        "toggleDisplay": null,
+        "toggleVisible": false,
+        "validControl": null
+      },
+      "resizer": {
+        "display": null,
+        "position": null,
+        "visible": false
+      },
+      "screen": "project-overview",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1200
+      }
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 1014,
+          "height": 970,
+          "left": 232,
+          "right": 1200,
+          "top": 44,
+          "width": 968
+        }
+      },
+      "detail": {
+        "rect": {
+          "bottom": 2069,
+          "height": 2001,
+          "left": 604,
+          "right": 1164,
+          "top": 68,
+          "width": 560
+        },
+        "visible": true
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": "panel",
+      "navigation": {
+        "drawerVisible": false,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": 0,
+          "right": 232,
+          "top": 0,
+          "width": 232
+        },
+        "sidebarVisibility": "visible",
+        "sidebarVisible": true
+      },
+      "pageTitle": {
+        "fontSize": "20px",
+        "text": "Issues"
+      },
+      "panel": {
+        "maxHeight": "831px",
+        "position": "sticky",
+        "rect": {
+          "bottom": 899,
+          "height": 831,
+          "left": 604,
+          "right": 1164,
+          "top": 68,
+          "width": 560
+        },
+        "top": "57px",
+        "visible": true
+      },
+      "projectOverview": {
+        "maxWidth": null,
+        "rect": null
+      },
+      "projectTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "properties": {
+        "controls": "issue-properties-90a8a8f0-a643-447a-af20-04544a7986df",
+        "expanded": "true",
+        "regionDisplay": "grid",
+        "regionExists": true,
+        "regionHidden": false,
+        "regionVisible": true,
+        "toggleDisplay": "none",
+        "toggleVisible": false,
+        "validControl": true
+      },
+      "resizer": {
+        "display": "grid",
+        "position": "sticky",
+        "visible": true
+      },
+      "screen": "issue-detail",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1200
+      }
+    }
+  ],
+  "live_resize": [
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 1956,
+          "height": 1912,
+          "left": 0,
+          "right": 767,
+          "top": 44,
+          "width": 767
+        }
+      },
+      "detail": {
+        "rect": {
+          "bottom": 1896,
+          "height": 1824,
+          "left": 12,
+          "right": 755,
+          "top": 72,
+          "width": 743
+        },
+        "visible": true
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": "route",
+      "navigation": {
+        "drawerVisible": true,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": -248,
+          "right": 0,
+          "top": 0,
+          "width": 248
+        },
+        "sidebarVisibility": "hidden",
+        "sidebarVisible": false
+      },
+      "pageTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "panel": {
+        "maxHeight": null,
+        "position": null,
+        "rect": null,
+        "top": null,
+        "visible": false
+      },
+      "projectOverview": {
+        "maxWidth": null,
+        "rect": null
+      },
+      "projectTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "properties": {
+        "controls": "issue-properties-90a8a8f0-a643-447a-af20-04544a7986df",
+        "expanded": "false",
+        "regionDisplay": "none",
+        "regionExists": true,
+        "regionHidden": true,
+        "regionVisible": false,
+        "toggleDisplay": "grid",
+        "toggleVisible": true,
+        "validControl": true
+      },
+      "resizer": {
+        "display": null,
+        "position": null,
+        "visible": false
+      },
+      "screen": "issue-detail-live-resize",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 767
+      },
+      "url": "http://127.0.0.1:4284/?view=issues&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=90a8a8f0-a643-447a-af20-04544a7986df",
+      "issueId": "90a8a8f0-a643-447a-af20-04544a7986df",
+      "passed": true
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 953,
+          "height": 909,
+          "left": 48,
+          "right": 768,
+          "top": 44,
+          "width": 720
+        }
+      },
+      "detail": {
+        "rect": {
+          "bottom": 2153,
+          "height": 2109,
+          "left": 129,
+          "right": 768,
+          "top": 44,
+          "width": 639
+        },
+        "visible": true
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": "panel",
+      "navigation": {
+        "drawerVisible": false,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": 0,
+          "right": 48,
+          "top": 0,
+          "width": 48
+        },
+        "sidebarVisibility": "visible",
+        "sidebarVisible": true
+      },
+      "pageTitle": {
+        "fontSize": "20px",
+        "text": "Issues"
+      },
+      "panel": {
+        "maxHeight": "none",
+        "position": "fixed",
+        "rect": {
+          "bottom": 900,
+          "height": 856,
+          "left": 128,
+          "right": 768,
+          "top": 44,
+          "width": 640
+        },
+        "top": "44px",
+        "visible": true
+      },
+      "projectOverview": {
+        "maxWidth": null,
+        "rect": null
+      },
+      "projectTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "properties": {
+        "controls": "issue-properties-90a8a8f0-a643-447a-af20-04544a7986df",
+        "expanded": "true",
+        "regionDisplay": "grid",
+        "regionExists": true,
+        "regionHidden": false,
+        "regionVisible": true,
+        "toggleDisplay": "none",
+        "toggleVisible": false,
+        "validControl": true
+      },
+      "resizer": {
+        "display": "none",
+        "position": "static",
+        "visible": false
+      },
+      "screen": "issue-detail-live-resize",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 768
+      },
+      "url": "http://127.0.0.1:4284/?view=issues&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=90a8a8f0-a643-447a-af20-04544a7986df",
+      "issueId": "90a8a8f0-a643-447a-af20-04544a7986df",
+      "passed": true
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 936,
+          "height": 892,
+          "left": 48,
+          "right": 1199,
+          "top": 44,
+          "width": 1151
+        }
+      },
+      "detail": {
+        "rect": {
+          "bottom": 2045,
+          "height": 2001,
+          "left": 560,
+          "right": 1199,
+          "top": 44,
+          "width": 639
+        },
+        "visible": true
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": "panel",
+      "navigation": {
+        "drawerVisible": false,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": 0,
+          "right": 48,
+          "top": 0,
+          "width": 48
+        },
+        "sidebarVisibility": "visible",
+        "sidebarVisible": true
+      },
+      "pageTitle": {
+        "fontSize": "20px",
+        "text": "Issues"
+      },
+      "panel": {
+        "maxHeight": "none",
+        "position": "fixed",
+        "rect": {
+          "bottom": 900,
+          "height": 856,
+          "left": 559,
+          "right": 1199,
+          "top": 44,
+          "width": 640
+        },
+        "top": "44px",
+        "visible": true
+      },
+      "projectOverview": {
+        "maxWidth": null,
+        "rect": null
+      },
+      "projectTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "properties": {
+        "controls": "issue-properties-90a8a8f0-a643-447a-af20-04544a7986df",
+        "expanded": "true",
+        "regionDisplay": "grid",
+        "regionExists": true,
+        "regionHidden": false,
+        "regionVisible": true,
+        "toggleDisplay": "none",
+        "toggleVisible": false,
+        "validControl": true
+      },
+      "resizer": {
+        "display": "none",
+        "position": "static",
+        "visible": false
+      },
+      "screen": "issue-detail-live-resize",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1199
+      },
+      "url": "http://127.0.0.1:4284/?view=issues&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=90a8a8f0-a643-447a-af20-04544a7986df",
+      "issueId": "90a8a8f0-a643-447a-af20-04544a7986df",
+      "passed": true
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 1014,
+          "height": 970,
+          "left": 232,
+          "right": 1200,
+          "top": 44,
+          "width": 968
+        }
+      },
+      "detail": {
+        "rect": {
+          "bottom": 2069,
+          "height": 2001,
+          "left": 604,
+          "right": 1164,
+          "top": 68,
+          "width": 560
+        },
+        "visible": true
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": "panel",
+      "navigation": {
+        "drawerVisible": false,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": 0,
+          "right": 232,
+          "top": 0,
+          "width": 232
+        },
+        "sidebarVisibility": "visible",
+        "sidebarVisible": true
+      },
+      "pageTitle": {
+        "fontSize": "20px",
+        "text": "Issues"
+      },
+      "panel": {
+        "maxHeight": "831px",
+        "position": "sticky",
+        "rect": {
+          "bottom": 899,
+          "height": 831,
+          "left": 604,
+          "right": 1164,
+          "top": 68,
+          "width": 560
+        },
+        "top": "57px",
+        "visible": true
+      },
+      "projectOverview": {
+        "maxWidth": null,
+        "rect": null
+      },
+      "projectTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "properties": {
+        "controls": "issue-properties-90a8a8f0-a643-447a-af20-04544a7986df",
+        "expanded": "true",
+        "regionDisplay": "grid",
+        "regionExists": true,
+        "regionHidden": false,
+        "regionVisible": true,
+        "toggleDisplay": "none",
+        "toggleVisible": false,
+        "validControl": true
+      },
+      "resizer": {
+        "display": "grid",
+        "position": "sticky",
+        "visible": true
+      },
+      "screen": "issue-detail-live-resize",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1200
+      },
+      "url": "http://127.0.0.1:4284/?view=issues&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=90a8a8f0-a643-447a-af20-04544a7986df",
+      "issueId": "90a8a8f0-a643-447a-af20-04544a7986df",
+      "passed": true
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 936,
+          "height": 892,
+          "left": 48,
+          "right": 1199,
+          "top": 44,
+          "width": 1151
+        }
+      },
+      "detail": {
+        "rect": {
+          "bottom": 2045,
+          "height": 2001,
+          "left": 560,
+          "right": 1199,
+          "top": 44,
+          "width": 639
+        },
+        "visible": true
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": "panel",
+      "navigation": {
+        "drawerVisible": false,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": 0,
+          "right": 48,
+          "top": 0,
+          "width": 48
+        },
+        "sidebarVisibility": "visible",
+        "sidebarVisible": true
+      },
+      "pageTitle": {
+        "fontSize": "20px",
+        "text": "Issues"
+      },
+      "panel": {
+        "maxHeight": "none",
+        "position": "fixed",
+        "rect": {
+          "bottom": 900,
+          "height": 856,
+          "left": 559,
+          "right": 1199,
+          "top": 44,
+          "width": 640
+        },
+        "top": "44px",
+        "visible": true
+      },
+      "projectOverview": {
+        "maxWidth": null,
+        "rect": null
+      },
+      "projectTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "properties": {
+        "controls": "issue-properties-90a8a8f0-a643-447a-af20-04544a7986df",
+        "expanded": "true",
+        "regionDisplay": "grid",
+        "regionExists": true,
+        "regionHidden": false,
+        "regionVisible": true,
+        "toggleDisplay": "none",
+        "toggleVisible": false,
+        "validControl": true
+      },
+      "resizer": {
+        "display": "none",
+        "position": "static",
+        "visible": false
+      },
+      "screen": "issue-detail-live-resize",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 1199
+      },
+      "url": "http://127.0.0.1:4284/?view=issues&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=90a8a8f0-a643-447a-af20-04544a7986df",
+      "issueId": "90a8a8f0-a643-447a-af20-04544a7986df",
+      "passed": true
+    },
+    {
+      "denseContent": {
+        "maxWidth": "none",
+        "rect": {
+          "bottom": 1956,
+          "height": 1912,
+          "left": 0,
+          "right": 767,
+          "top": 44,
+          "width": 767
+        }
+      },
+      "detail": {
+        "rect": {
+          "bottom": 1896,
+          "height": 1824,
+          "left": 12,
+          "right": 755,
+          "top": 72,
+          "width": 743
+        },
+        "visible": true
+      },
+      "documentOverflowX": 0,
+      "issuePresentation": "route",
+      "navigation": {
+        "drawerVisible": true,
+        "sidebarRect": {
+          "bottom": 900,
+          "height": 900,
+          "left": -248,
+          "right": 0,
+          "top": 0,
+          "width": 248
+        },
+        "sidebarVisibility": "hidden",
+        "sidebarVisible": false
+      },
+      "pageTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "panel": {
+        "maxHeight": null,
+        "position": null,
+        "rect": null,
+        "top": null,
+        "visible": false
+      },
+      "projectOverview": {
+        "maxWidth": null,
+        "rect": null
+      },
+      "projectTitle": {
+        "fontSize": null,
+        "text": null
+      },
+      "properties": {
+        "controls": "issue-properties-90a8a8f0-a643-447a-af20-04544a7986df",
+        "expanded": "false",
+        "regionDisplay": "none",
+        "regionExists": true,
+        "regionHidden": true,
+        "regionVisible": false,
+        "toggleDisplay": "grid",
+        "toggleVisible": true,
+        "validControl": true
+      },
+      "resizer": {
+        "display": null,
+        "position": null,
+        "visible": false
+      },
+      "screen": "issue-detail-live-resize",
+      "theme": "dark",
+      "topbar": {
+        "backdrop": "none",
+        "background": "rgb(23, 23, 25)",
+        "height": 44
+      },
+      "viewport": {
+        "height": 900,
+        "width": 767
+      },
+      "url": "http://127.0.0.1:4284/?view=issues&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=90a8a8f0-a643-447a-af20-04544a7986df",
+      "issueId": "90a8a8f0-a643-447a-af20-04544a7986df",
+      "passed": true
+    }
+  ],
+  "properties_operation": {
+    "theme": "dark",
+    "viewport": {
+      "width": 767,
+      "height": 900
+    },
+    "steps": [
+      {
+        "active": false,
+        "expanded": "false",
+        "focusVisible": false,
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "regionDisplay": "none",
+        "regionHidden": true,
+        "step": "initial",
+        "toggleDisplay": "grid"
+      },
+      {
+        "active": true,
+        "expanded": "true",
+        "focusVisible": false,
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "regionDisplay": "grid",
+        "regionHidden": false,
+        "step": "pointer-open",
+        "toggleDisplay": "grid"
+      },
+      {
+        "active": true,
+        "expanded": "false",
+        "focusVisible": false,
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "regionDisplay": "none",
+        "regionHidden": true,
+        "step": "pointer-close",
+        "toggleDisplay": "grid"
+      },
+      {
+        "active": true,
+        "expanded": "true",
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "regionDisplay": "grid",
+        "regionHidden": false,
+        "step": "keyboard-open",
+        "toggleDisplay": "grid"
+      },
+      {
+        "active": false,
+        "expanded": "true",
+        "focusVisible": false,
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "regionDisplay": "grid",
+        "regionHidden": false,
+        "step": "resize-768",
+        "toggleDisplay": "none"
+      },
+      {
+        "active": false,
+        "expanded": "false",
+        "focusVisible": false,
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "regionDisplay": "none",
+        "regionHidden": true,
+        "step": "resize-767",
+        "toggleDisplay": "grid"
+      }
+    ],
+    "passed": true
+  },
+  "summary": {
+    "pinned_states": 24,
+    "pinned_passed": 24,
+    "pinned_failed": 0,
+    "pinned_exact_historical_geometry_matches": 24,
+    "live_resize_states": 6,
+    "live_resize_passed": 6,
+    "live_resize_failed": 0,
+    "properties_pointer_keyboard_passed": true,
+    "maximum_project_overview_width": 920,
+    "page_title_font_sizes": [
+      "20px"
+    ],
+    "project_title_font_sizes": [
+      "24px"
+    ],
+    "maximum_document_overflow_x": 0
+  },
+  "limitations": [
+    "Pending/error-forced mobile Properties visibility and the live operating-system System appearance direction change remain separate open checks.",
+    "This structured matrix complements, but does not replace, a current-revision 60-image visual inspection; the existing 60-image set binds to historical revision 7665027."
+  ],
+  "raw_evidence": {
+    "private_ref": ".control-tower/evidence/CT-12/responsive-breakpoints-670a9f9-raw.json",
+    "private_sha256": "5e11f3e2a5c04747ca0c1d5ef5bd0d0db50cad22a33c01c99ef37e26aec65630"
+  },
+  "outcomes_claimed": []
+}

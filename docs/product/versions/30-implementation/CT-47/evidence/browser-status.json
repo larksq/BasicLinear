@@ -1,0 +1,32 @@
+{
+  "schema_version": "ct47-browser-status-v1",
+  "recorded_at": "2026-08-20T09:34:14Z",
+  "status": "deferred_permission_denied",
+  "planned_target": "http://127.0.0.1:4180/",
+  "synthetic_fixture": true,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "Access to the local browser surface remains denied by the active security policy. The denied browser outcome was not retried through another surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": [
+    "Project create dialog rich overview",
+    "Project edit dialog rich overview",
+    "Project overview semantic document",
+    "Archived project overview",
+    "Project rich-overview activity"
+  ],
+  "required_assertions": [
+    "heading paragraph mark list quote code and HTTP(S) link controls are keyboard reachable and visibly stateful",
+    "create edit cancel and save preserve the exact normalized rich document without accidental submission",
+    "empty longest and deeply nested accepted fixtures retain stable dialog and overview geometry",
+    "same-shape same-length edits commit and activity reports only node and character summaries",
+    "archived projects render rich content and safe links without edit controls",
+    "semantic heading list quote code and link output remains readable to assistive technology",
+    "desktop tablet and mobile layouts retain visible focus and explicit bounded scrolling",
+    "zero uncontained positive horizontal overflow overlap duplicate IDs hidden focus console warnings and console errors"
+  ]
+}

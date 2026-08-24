@@ -1,0 +1,35 @@
+{
+  "schema_version": "ct33-implementation-result-v1",
+  "captured_at": "2026-08-20T04:31:45Z",
+  "verdict": "IMPLEMENTED_AWAITING_BROWSER_VERIFICATION",
+  "issue": {
+    "identifier": "CT-33",
+    "id": "459cf377-d8c9-43e8-9066-9d1834a86099",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "checks": {
+    "focused_test_files": 1,
+    "focused_tests_passed": 4,
+    "combined_focused_test_files": 3,
+    "combined_focused_tests_passed": 15,
+    "complete_test_files": 14,
+    "complete_tests_passed": 81,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1917,
+    "css_bytes": 63366,
+    "projects_chunk_bytes": 28758,
+    "index_chunk_bytes": 277341,
+    "issues_chunk_bytes": 490953,
+    "browser_captures": 0,
+    "browser_verification": "deferred_permission_denied"
+  },
+  "source_hashes": {
+    "apps/web/src/App.tsx": "7edf1175ce7f976107f4133f4f21e24920f9cde0f1c18cc104a13515a77a9c1c",
+    "apps/web/src/issues.tsx": "df48e444c3652859bbc6f5bd3e6a2edfe071b13e44784894b30e37a2f1e0f9a2",
+    "apps/web/src/projects.tsx": "dcf5a4ecfb0db0c7fee59b6ab2b2501082d635f382f21b65a485120da72317f1",
+    "apps/web/tests/table-semantics.test.ts": "fb67473d147f20bd8aa371077d06ee095610f02509277f637400c14e784b9639"
+  },
+  "outcomes_claimed": []
+}

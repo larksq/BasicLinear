@@ -1,0 +1,38 @@
+{
+  "schema_version": "ct56-browser-status-v1",
+  "recorded_at": "2026-08-20T15:08:17Z",
+  "status": "deferred_permission_denied",
+  "planned_targets": {
+    "list": "http://127.0.0.1:4181/?view=projects&archive=active&order=position&direction=asc&density=default&fixture=project-route",
+    "overview": "http://127.0.0.1:4181/?view=projects&archive=active&order=position&direction=asc&density=default&project=50000000-0000-4000-8000-000000000023&projectTab=overview&fixture=project-route",
+    "milestone_issues": "http://127.0.0.1:4181/?view=projects&archive=active&order=position&direction=asc&density=default&project=50000000-0000-4000-8000-000000000023&projectTab=issues&milestone=52000000-0000-4000-8000-000000000023&fixture=project-route",
+    "activity": "http://127.0.0.1:4181/?view=projects&archive=active&order=position&direction=asc&density=default&project=50000000-0000-4000-8000-000000000023&projectTab=activity&fixture=project-route"
+  },
+  "synthetic_fixture": true,
+  "host_checks": 6,
+  "host_checks_passed": 6,
+  "captures": 0,
+  "assertions_claimed": 0,
+  "reason": "The exact production bundle and project/milestone fixture APIs are reachable from the host, but access to the approved browser surface remains denied by the active security policy. The denied browser outcome was not retried through another browser surface or indirect browser command.",
+  "required_viewports": [
+    {"width": 1440, "height": 900},
+    {"width": 1024, "height": 768},
+    {"width": 390, "height": 844}
+  ],
+  "required_surfaces": [
+    "Owner project list state and row keyboard or pointer open",
+    "Owner direct Overview Issues milestone Issues and Activity routes",
+    "Owner command-result created-project Back Forward reload and explicit close paths",
+    "Guest project list detail tabs and read-only milestone issue scope",
+    "Workspace transition invalid route loading empty offline and error states"
+  ],
+  "required_assertions": [
+    "query filters archive ordering direction density project tab and milestone state restore exactly",
+    "one Back action returns an app-pushed detail to its originating list while direct close stays in the application",
+    "project row or search focus returns by stable identity and tab aria-current remains correct",
+    "malformed route values fail closed and unavailable targets retain an operable Projects return path",
+    "command-result and created-project opens expose canonical shareable detail URLs",
+    "guest controls remain read-only and workspace transitions expose no stale project milestone selection or menu state",
+    "desktop tablet and mobile layouts have zero overlap unintended wrapping clipped focus positive overflow duplicate IDs console warnings and console errors"
+  ]
+}

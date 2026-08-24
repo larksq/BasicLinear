@@ -1,0 +1,63 @@
+{
+  "schema_version": "ct83-reconciliation-result-v1",
+  "captured_at": "2026-08-21T07:25:59.835Z",
+  "verdict": "RECONCILIATION_COMPLETE_ACCEPTANCE_PENDING",
+  "issue": {
+    "identifier": "CT-83",
+    "id": "bdf4102e-3599-47dd-9409-70ce3b95a8ca",
+    "starting_revision": 1,
+    "expected_completion_revision": 2,
+    "completion_revision": 2,
+    "status": "Done"
+  },
+  "audit": {
+    "issues": 43,
+    "result_files": 43,
+    "evidence_files": 43,
+    "implemented_verdicts": 43,
+    "supported_done": 38,
+    "superseded_canceled": 5,
+    "mutation_conflicts": 0,
+    "stable_ids_preserved": 43,
+    "milestones_preserved": 43,
+    "projection_changes": 0
+  },
+  "current_source_evidence": {
+    "focused_test_files": 3,
+    "focused_tests_passed": 20,
+    "complete_test_files": 56,
+    "complete_tests_passed": 386,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1946,
+    "release_audit_tests_passed": 2,
+    "live_runtime_smoke": "passed_implementation_smoke",
+    "source_mutated_by_ct83": false
+  },
+  "digests": {
+    "readback_sha256": "57d2e8840791dcf0d4ee0e99611f293259408c2a24633f060fceae4974db443f",
+    "backup_manifest_sha256": "ce9d86f02f3df7fd4e5ac76564832a861a64064bc8735b5615e4209d8c4aa475"
+  },
+  "control_tower_readback": {
+    "authority": "local",
+    "store": "tasks-v0.8.sqlite3",
+    "health": "ready",
+    "CT-83": "Done@2",
+    "CT-12": "In Progress@59",
+    "CT-13": "Todo@60",
+    "counts": {
+      "active": 6,
+      "completed_or_canceled": 77,
+      "trash": 0
+    },
+    "implementation_milestone": {
+      "issue_count": 68,
+      "completed_count": 63,
+      "progress": 0.9264705882352942,
+      "active_issues": 0
+    },
+    "completion_backup_sha256": "377c5bf13a8da9669b7e8387a15646389366392d6c3a307d41fd162347a0df57",
+    "provider_projection": "disabled_not_synced"
+  },
+  "outcomes_claimed": []
+}

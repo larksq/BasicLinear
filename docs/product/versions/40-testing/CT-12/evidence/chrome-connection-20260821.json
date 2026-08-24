@@ -1,0 +1,43 @@
+{
+  "schema_version": "ct12-chrome-connection-v7",
+  "captured_at": "2026-08-21T13:11:23Z",
+  "browser_family": "chrome",
+  "chrome_running": true,
+  "chrome_version": "151.0.7922.170",
+  "selected_profile": {
+    "directory": "Profile 1",
+    "extension_id": "hehggadaopoacecdllhhajmbjkdcmajg",
+    "extension_installed": true,
+    "extension_registered": true,
+    "extension_enabled": true,
+    "extension_versions": [
+      "1.2.27221.15725_0",
+      "1.2.27236.6274_0",
+      "1.2.27259.19709_0",
+      "1.2.27267.15375_0",
+      "1.2.27268.51612_0"
+    ]
+  },
+  "native_host": {
+    "manifest_exists": true,
+    "host_name_matches": true,
+    "required_origins_present": true,
+    "status": "correct"
+  },
+  "connection_attempts": 10,
+  "latest_attempts": 2,
+  "retry_delay_ms": 2000,
+  "connection_result": "browser_unavailable",
+  "connection_error": "Browser is not available: -d9ec-49bc-bd92-647d2d8ab43d",
+  "page_opened": false,
+  "provider_state_accessed": false,
+  "screenshots_captured": 0,
+  "fallback_browser_used": false,
+  "profile_open_recovery_attempted": true,
+  "profile_open_recovery_result": "rejected_requires_execution_time_user_approval",
+  "acceptance_claimed": false,
+  "action_time_permission_required": true,
+  "required_recovery": "Grant direct execution-time permission to open a Chrome Profile 1 window and retry. If transport remains unavailable, reinstall the Browser plugin from the Codex plugin UI.",
+  "ct3_authenticated_linear_pause_preserved": true,
+  "control_tower_readback": "CT-12 In Progress@72; expected synchronization revision 73"
+}

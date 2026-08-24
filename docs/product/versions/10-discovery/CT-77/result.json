@@ -1,0 +1,78 @@
+{
+  "schema_version": "ct77-result-v1",
+  "issue": {
+    "identifier": "CT-77",
+    "id": "c73592c4-f220-456b-b6d6-8d1940e9e0a6"
+  },
+  "supersedes": {
+    "identifier": "CT-1",
+    "id": "7c3fc01c-770b-4b0d-9833-f220355935d1",
+    "status": "Canceled"
+  },
+  "status": "completed",
+  "completed": true,
+  "completed_at": "2026-08-21T02:52:41Z",
+  "control_tower_readback": {
+    "status": "Done",
+    "revision": 2,
+    "store_health": "ready",
+    "projection": "not_synced",
+    "active_issues": 51,
+    "completed_issues": 26,
+    "trashed_issues": 0
+  },
+  "method": "large_sample_online_statistics",
+  "source_count": 4,
+  "declared_survey_sample_lower_bound": 61246,
+  "telemetry": {
+    "platform_users": 1000000,
+    "jira_tickets": 24000000
+  },
+  "decision": {
+    "ranked_workflow_families": [
+      "issue_capture_and_lifecycle",
+      "find_and_focus",
+      "project_and_milestone_planning",
+      "data_ownership_and_recovery",
+      "context_and_traceability"
+    ],
+    "stable_top_three_across_sensitivity_models": true,
+    "v0_1_supported_users": 1,
+    "v0_1_supported_workspaces": 1,
+    "v0_1_supported_teams": 1
+  },
+  "privacy": {
+    "interviews": 0,
+    "outreach": 0,
+    "personal_data": false,
+    "authenticated_competitor_access": false
+  },
+  "authority": {
+    "control_tower": "project-local v0.8 store",
+    "provider_projection": "not_synced",
+    "linear_api_or_mcp_calls": 0,
+    "linear_task_writes": 0
+  },
+  "artifacts": [
+    "source-register.json",
+    "extracted-statistics.csv",
+    "scoring-model.md",
+    "decision.md",
+    "evidence.md"
+  ],
+  "validation": {
+    "command": "node /Users/qiaosun/Documents/codes_on_git/ControlTower/skills/ct-discover-product/scripts/validate-discovery.mjs docs/product/versions/v0.1.0/10-discovery/discovery-package.json",
+    "valid": true,
+    "errors": 0,
+    "warnings": 1,
+    "accepted_warning": "market-research.switching-cost remains partial because exact legacy import prevalence and switching effort are unmeasured"
+  },
+  "artifact_sha256": {
+    "source-register.json": "c0099b90fba453d0ddc6726c3abb71787dac7d1f8889cdd457008db2b5f96ff6",
+    "extracted-statistics.csv": "c745a69041fd36b83279315a45ff7cebb94a7f146b34d4f30061a278a781899e",
+    "scoring-model.md": "8077fcb703984f9adc481450da069565283d56c21ca63574a7fcd66f7086b7a0",
+    "decision.md": "db0afdea1533499219e8e22e618b2751bd7f401cfcce0e456072af0b9c178aa3",
+    "evidence.md": "a03f84e2f2c48ac3d599ecaee37dcf04450677604f9d6b584fed2898f49e1501",
+    "discovery-package.json": "ce775b6d035f318837aabbaa427393a24e591b739d50546632aad2e3e57a055f"
+  }
+}

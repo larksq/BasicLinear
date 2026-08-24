@@ -1,0 +1,38 @@
+{
+  "schema_version": "ct38-implementation-result-v1",
+  "captured_at": "2026-08-20T05:36:28Z",
+  "verdict": "IMPLEMENTED_AWAITING_BROWSER_VERIFICATION",
+  "issue": {
+    "identifier": "CT-38",
+    "id": "b0a977c4-a5c0-404d-8f94-cd5697fe06ed",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "checks": {
+    "focused_test_files": 1,
+    "focused_tests_passed": 6,
+    "focused_integration_test_files": 2,
+    "focused_integration_tests_passed": 10,
+    "combined_focused_test_files": 7,
+    "combined_focused_tests_passed": 32,
+    "complete_test_files": 19,
+    "complete_tests_passed": 105,
+    "complete_tests_failed": 0,
+    "workspaces_typechecked": 8,
+    "vite_modules": 1920,
+    "css_bytes": 63366,
+    "projects_chunk_bytes": 28964,
+    "index_chunk_bytes": 278211,
+    "issues_chunk_bytes": 493311,
+    "browser_captures": 0,
+    "browser_verification": "deferred_permission_denied"
+  },
+  "source_hashes": {
+    "apps/web/src/issues.tsx": "2806f2490eeaf2526b6b76e6b5562f19c0115d9c64c202ecb6ceceeeb9c88b62",
+    "apps/web/src/local-keyboard-actions.ts": "80f995b1d2b35d7e9bcd41a3a4660acdad9ed74e3b50df6434df58c8b215a30c",
+    "apps/web/src/projects.tsx": "244795f9e17896373590efa6f44c67a66dd2d3abdad2015aaa8bac1297a79d41",
+    "apps/web/tests/board-accessibility.test.ts": "6727c5abbaaca76af732ba51b04c8972a23176b20d2dcb6f50afb659bdf66b8f",
+    "apps/web/tests/local-keyboard-actions.test.ts": "5e5838d17234b59196fa61f6f793dd1d0d2e886d67e05e747527f19dfe1596d2"
+  },
+  "outcomes_claimed": []
+}

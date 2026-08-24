@@ -1,0 +1,65 @@
+{
+  "schema_version": "ct26-implementation-result-v1",
+  "captured_at": "2026-08-20T02:31:20Z",
+  "verdict": "OUTPUT_DONE_FOR_CT12",
+  "issue": {
+    "identifier": "CT-26",
+    "id": "e28a18fd-2d95-49be-9d15-51d20520ce4b",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "checks": {
+    "focused_test_files": 2,
+    "focused_tests_passed": 8,
+    "unit_test_files": 11,
+    "unit_tests_passed": 49,
+    "typecheck_workspaces": 8,
+    "production_build_passed": true,
+    "vite_modules_transformed": 1916,
+    "issue_chunk_bytes": 490224,
+    "direct_desktop_issue_rows": 0,
+    "direct_desktop_visible_controls": 45,
+    "direct_desktop_unnamed_controls": 0,
+    "direct_desktop_outside_controls": 0,
+    "direct_desktop_duplicate_ids": 0,
+    "direct_desktop_overflow_px": 0,
+    "contextual_desktop_issue_rows": 2,
+    "contextual_desktop_list_px": 549,
+    "contextual_desktop_panel_px": 560,
+    "contextual_desktop_separator_px": 12,
+    "contextual_desktop_overflow_px": 0,
+    "contextual_mobile_maximum_width_px": 767,
+    "contextual_panel_minimum_width_px": 768,
+    "direct_mobile_issue_rows": 0,
+    "direct_mobile_visible_controls": 35,
+    "direct_mobile_unnamed_controls": 0,
+    "direct_mobile_outside_controls": 0,
+    "direct_mobile_duplicate_ids": 0,
+    "direct_mobile_overflow_px": 0,
+    "direct_route_h1_count": 1,
+    "contextual_panel_h1_count": 1,
+    "direct_escape_returned_list_rows": 2,
+    "contextual_focus_restored": true,
+    "console_warnings": 0,
+    "console_errors": 0
+  },
+  "source_hashes": {
+    "apps/web/src/issue-detail-route.ts": "5130f96a8f53644a0baac8d0ce386d42c9d62dfca00ee53a161282c47e9ec480",
+    "apps/web/src/issues.tsx": "83ef7f60041284928e3c6a19067f4431b38a72ce9f35aaf4f76e248d8eebfbf2",
+    "apps/web/src/styles.css": "ddf71f6a2c6defdd51686b7bdc14bece0a435dc15a4d80140b2fc9ad97332225",
+    "apps/web/tests/issue-detail-route.test.ts": "fbeb0f434706a9c39a743c6776a71980b7772d43dc940521385a607e65222654",
+    "apps/web/tests/layout-contract.test.ts": "8de6ac01e2181976fd4cadd1e8cf5e8059981c88c7f98e7685a085a4c4db3ca5"
+  },
+  "screenshot_hashes": {
+    "direct_desktop": "d3a84004a29ce3894457c7ac0fb7bc960488b3d58862e756c4743fc3ce6cd517",
+    "contextual_desktop": "3977a8874cd0fd04a9cb3fddc1cd53605c294a4bb7572cf3fc86916b07292c38",
+    "direct_mobile": "cc16690e257e8d35f022b5e1c71da23cea12c3031262c33ec81cbb44d86adcfd"
+  },
+  "browser_environment": {
+    "fixture_browser": "Playwright Chromium",
+    "chrome_connected": true,
+    "chrome_new_bundle_navigation": "blocked_mac_locked",
+    "authenticated_product_evidence_changed": false
+  },
+  "outcomes_claimed": []
+}

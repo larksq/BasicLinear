@@ -1,0 +1,34 @@
+{
+  "schema_version": "ct112-implementation-handoff-v1",
+  "stage": "implementation.review-gate",
+  "status": "implementation_complete_review_pending",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issue": {
+    "identifier": "CT-112",
+    "stable_id": "6bc35315-4b0d-4795-9f91-82d38f3ce426",
+    "created_revision": 1,
+    "evidence_revision": 2,
+    "status": "In Progress"
+  },
+  "source": {
+    "revision": "7665027c0266fa5f0be0070dd75c2541959a9eb5",
+    "tree": "573f0747c927aa0b35a1688de73c508c70665978"
+  },
+  "changed_files_ref": "docs/product/versions/v0.1.0/30-implementation/CT-112/changed-files.txt",
+  "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-112/evidence/verification-summary.json",
+  "next": {
+    "skill": "ct-implement-sprint",
+    "issue": "CT-112",
+    "scope": "obtain a distinct application review of board and skeleton density geometry; enter CT-12 testing only after review passes"
+  },
+  "blockers": [
+    "Distinct application review is pending.",
+    "CT-12 P-T19 and P-T20 remain incomplete at 20 of 60 named captures.",
+    "P-T21 qualification is stale for product revision 7665027."
+  ],
+  "outcomes_claimed": []
+}

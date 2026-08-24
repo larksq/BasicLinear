@@ -1,0 +1,58 @@
+{
+  "schema_version": "ct-independent-application-review-receipt-v1",
+  "captured_at": "2026-08-22T17:14:32Z",
+  "issue": "CT-114",
+  "review": {
+    "actor": "codex-independent-application-review-ct114-ct115",
+    "session": "CT115-INDEPENDENT-REVIEW-20260822T170318Z",
+    "distinct_from_implementation": true,
+    "verdict": "PASSED_DISTINCT_APPLICATION_REVIEW",
+    "findings": []
+  },
+  "bindings": {
+    "implementation_revision": "3a09041dc58086ebe44d1a547419ce8853ea65e8",
+    "implementation_tree": "722605485351b1fce693d03416929ae989830aaf",
+    "reviewed_product_revision": "279a9b230c1e1e1b46354327f4858b7825270ba0",
+    "reviewed_product_tree": "ae76a837785d211899af4c075124a609a0498e5b",
+    "implementation_preserved_by_reviewed_product": true,
+    "reviewed_evidence_revision": "00ef1e92c9366cccbefbc0edea82377c68fdf295"
+  },
+  "checks": {
+    "minimum_contrast": 5.451002,
+    "required_contrast": 4.5,
+    "appearances_passed": [
+      "light",
+      "dark",
+      "system-dark"
+    ],
+    "destructive_consumers_bound": 4,
+    "focused_tests": {
+      "files": 1,
+      "passed": 6,
+      "failed": 0
+    },
+    "complete_regression": {
+      "files": 71,
+      "passed": 471,
+      "failed": 0
+    },
+    "workspaces_typechecked": 8,
+    "release_audit": {
+      "passed": 10,
+      "failed": 0
+    },
+    "build_modules": 1950,
+    "build_warnings": 0
+  },
+  "raw_evidence": {
+    "ref": ".control-tower/evidence/CT-115/independent-review-279a9b2.json",
+    "mode": "0600",
+    "sha256": "0c33fcaf8271112cd9650dddf79ede2183c199285ebba0b292cfbbfd501319b4"
+  },
+  "boundaries": {
+    "ct12_acceptance_claimed": false,
+    "P-T21_claimed": false,
+    "release_claimed": false,
+    "outcomes_claimed": []
+  }
+}

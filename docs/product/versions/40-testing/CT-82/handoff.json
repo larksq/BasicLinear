@@ -1,0 +1,79 @@
+{
+  "schema_version": "ct82-testing-handoff-v1",
+  "stage": "testing",
+  "status": "passed",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "inputs": {
+    "issue": "CT-82",
+    "issue_id": "0103a501-2a94-41d2-8db6-751827501b27",
+    "issue_revision": 17,
+    "implementation_handoffs": [
+      "docs/product/versions/v0.1.0/30-implementation/CT-88/handoff.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-104/handoff.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-105/handoff.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-106/handoff.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-107/handoff.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-110/handoff.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-111/handoff.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-112/handoff.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-113/handoff.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-114/handoff.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-115/handoff.json",
+      "docs/product/versions/v0.1.0/30-implementation/CT-116/handoff.json"
+    ],
+    "source_revision": "f7c362562fdf0657114a862331b893e470b824c0",
+    "source_tree": "7b5f5af4d6f0b5ead0f403f69d4695b82779194c"
+  },
+  "outputs": {
+    "evidence_map": "docs/product/versions/v0.1.0/40-testing/CT-82/evidence-map.json",
+    "evidence": "docs/product/versions/v0.1.0/40-testing/CT-82/evidence.md",
+    "decision": "docs/product/versions/v0.1.0/40-testing/CT-82/decision.md",
+    "result": "docs/product/versions/v0.1.0/40-testing/CT-82/result.json",
+    "tracked_receipt": "docs/product/versions/v0.1.0/40-testing/CT-82/evidence/qualification-f7c3625.json",
+    "private_raw_evidence": ".control-tower/evidence/CT-82/qualification-f7c3625.json"
+  },
+  "validation": {
+    "tests": [
+      "P-T03",
+      "P-T14",
+      "P-T15",
+      "P-T16",
+      "P-T18",
+      "P-T21"
+    ],
+    "requirements": [
+      "R-013",
+      "R-014",
+      "R-101",
+      "R-106",
+      "R-107",
+      "R-109"
+    ],
+    "required_surfaces": [
+      "automated",
+      "manual",
+      "uat",
+      "regression"
+    ],
+    "independent_runtime": "passed",
+    "result": "pass"
+  },
+  "bug_loops": [],
+  "blockers": [],
+  "outcomes": {
+    "evaluated": false,
+    "claimed": []
+  },
+  "next": {
+    "skill": "ct-test-sprint",
+    "issues": [
+      "CT-12"
+    ],
+    "reason": "P-T21 is independently accepted for exact product revision f7c3625; Chrome P-T18/P-T19/P-T20 execution remains in progress and incomplete."
+  }
+}

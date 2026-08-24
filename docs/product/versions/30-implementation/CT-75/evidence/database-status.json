@@ -1,0 +1,24 @@
+{
+  "schema_version": "ct75-database-status-v1",
+  "captured_at": "2026-08-21T04:04:16Z",
+  "status": "skipped_unconfigured",
+  "runner": "npm run test:integration -- --reporter=dot",
+  "test_files_discovered": 7,
+  "tests_discovered": 17,
+  "test_files_skipped": 7,
+  "tests_skipped": 17,
+  "tests_passed": 0,
+  "required_environment": ["TEST_MIGRATION_DATABASE_URL", "TEST_APP_PASSWORD"],
+  "required_environment_present": false,
+  "docker_started": false,
+  "scenario_present": [
+    "source and replacement revision conflicts",
+    "cross-team and unauthorized rejection",
+    "active and archived issue reassignment",
+    "issue and progress revision updates",
+    "activity and outbox evidence",
+    "source deletion",
+    "final-status retention"
+  ],
+  "claim": "Test source is typechecked but database behavior is not counted as executed or passed."
+}

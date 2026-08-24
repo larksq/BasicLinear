@@ -1,0 +1,50 @@
+{
+  "schema_version": "ct24-implementation-result-v1",
+  "captured_at": "2026-08-20T01:35:10Z",
+  "verdict": "OUTPUT_DONE_FOR_CT12",
+  "issue": {
+    "identifier": "CT-24",
+    "id": "3a9b2a07-82bf-4fba-a873-86065f6b299e",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "checks": {
+    "focused_test_files": 2,
+    "focused_tests_passed": 8,
+    "unit_test_files": 9,
+    "unit_tests_passed": 36,
+    "typecheck_workspaces": 8,
+    "production_build_passed": true,
+    "vite_modules_transformed": 1913,
+    "desktop_default_rail_px": 232,
+    "tablet_default_rail_px": 48,
+    "tablet_explicit_rail_px": 232,
+    "mobile_drawer_px": 248,
+    "tablet_minimum_width_px": 768,
+    "tablet_maximum_width_px": 1199,
+    "desktop_minimum_width_px": 1200,
+    "live_unconfigured_resize_passed": true,
+    "explicit_preference_reload_passed": true,
+    "mobile_closed_visibility": "hidden",
+    "mobile_closed_pointer_events": "none",
+    "mobile_detail_visible_width_px": 375,
+    "console_warnings": 0,
+    "console_errors": 0
+  },
+  "source_hashes": {
+    "apps/web/src/App.tsx": "e50ec569a5d89082895e14f5ff921cacee828ce6ec2956093d9f4f71c2a53f4d",
+    "apps/web/src/layout-preferences.ts": "5288535830aaa51d3ad31436a4e9991aafcb843dc3070253f5a7f44ec4c78377",
+    "apps/web/src/styles.css": "25843fb3953ba08394a683b87c3b42f00ad59ac41ddcb4f260ce763b836bb709",
+    "apps/web/tests/layout-contract.test.ts": "19af35447eba6965c7b4ec55ebb397084fe80369ff16a5b24075257223e9ebff",
+    "apps/web/tests/layout-preferences.test.ts": "e0794a1916e5ce8518ddcfa7d3508cafec2609334c392634fb6c1830b04d6a79"
+  },
+  "screenshot_hashes": {
+    "desktop_default": "bc837788b31f4b37688f422db5dd62399ab2f29c64c030e4311cfc47ca24b334",
+    "tablet_default": "dcddedafa60cf353b75f76b6a32a880e59636697c8e5c631ac6bdbede63172a5",
+    "tablet_explicit": "3d8c9663fcaaa445f8e7a470409e5626b99bfc5c84e367081db1dc178e410a6d",
+    "tablet_768": "868683b99c23113c1db673c0fbf2201a70324bc57a746c1d30141e2ed61c077c",
+    "mobile_closed": "9e01baae950ff6f718ab7dae068eda21701cdf15b8cf27ce94bac972407695cc",
+    "mobile_open": "49f0bd9f3cc5a46ec978268dd786c5875397fffb86e577977bba58333aff8dc9"
+  },
+  "outcomes_claimed": []
+}

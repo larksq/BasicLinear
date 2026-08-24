@@ -1,0 +1,35 @@
+{
+  "schema_version": "ct108-evidence-integrity-result-v1",
+  "captured_at": "2026-08-22T10:17:37Z",
+  "verdict": "EVIDENCE_MEDIA_EXTENSIONS_CORRECTED",
+  "issue": {
+    "identifier": "CT-108",
+    "id": "31ce5581-20c9-48e0-8b64-25d26edf056a",
+    "created_revision": 1,
+    "scope_revision": 2,
+    "initial_completion_revision": 3,
+    "reopen_revision": 4,
+    "completion_revision": 5
+  },
+  "scope": {
+    "tracked_v0_1_jpeg_under_png": 65,
+    "private_ct104_jpeg_under_png": 4,
+    "total_renamed": 69,
+    "genuine_png_preserved": 19
+  },
+  "acceptance": {
+    "all_bytes_identical": true,
+    "jpeg_under_png_count": 0,
+    "stale_reference_count": 0,
+    "genuine_png_count": 19,
+    "governed_json_documents_parsed": 323,
+    "git_diff_check": "passed",
+    "comparison_inventory_excluded_from_stale_reference_scan": true,
+    "passed": true
+  },
+  "evidence": "docs/product/versions/v0.1.0/40-testing/CT-108/evidence/media-rename-verification.json",
+  "product_revision_changed": false,
+  "browser_acceptance_claimed": false,
+  "release_claimed": false,
+  "outcomes_claimed": []
+}

@@ -1,0 +1,11 @@
+{
+  "name": "openlinear-ct-4-prototype",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "verify:postgres": "./scripts/verify-postgres.sh"
+  }
+}
