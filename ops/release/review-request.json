@@ -3,7 +3,7 @@
   "issue": "CT-13",
   "status": "accountable_review_required",
   "candidate": {
-    "source_revision": "928767ea12c59aca28b94e9bcb91bca03eb1febe",
+    "source_revision": "dbdcbfb867727356fd0290614ab0812370e0c66d",
     "source_file_count": 1672,
     "source_sha256": "84bab4cabbf0f725e3c627dcabee75bb7ed7dd6e11f2844d088bc710015a9702"
   },
@@ -51,7 +51,7 @@
         {
           "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-request.json",
           "exists": true,
-          "sha256": "b62a60b7342eec25bf5c4dbee24ce6a14d1c68243ba311db49c6bc1d5bcb857e"
+          "sha256": "d9eaf5d9b92f57cda3165aed57760e8246a7251efd20feff6317ae6d0006a121"
         },
         {
           "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-acceptance.json",
