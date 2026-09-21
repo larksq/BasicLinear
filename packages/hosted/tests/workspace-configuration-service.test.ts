@@ -1,11 +1,14 @@
 import {describe, expect, it} from 'vitest';
 import {
   CollaborationService,
+  IssueObservationService,
+  ProjectManagementService,
   MemoryCollaborationRepository,
   MemoryWorkspaceAuthorizationEvidenceWriter,
   MemoryWorkspaceMembershipReader,
   WorkspaceAuthorizationService,
   WorkspaceConfigurationService,
+  hostedWorkflowStatusCategories,
 } from '../src/index.js';
 import {proEntitlementPolicyForTests} from './fixtures/entitlement.js';
 
@@ -54,15 +57,90 @@ function fixture() {
     clock: () => now,
     idFactory,
   });
+  repository.seedDocument(`workspaces/${workspaceId}`, {
+    schemaVersion: 1, id: workspaceId, workspaceId, name: 'Configuration workspace', ownerUid: ownerId,
+    authority: 'firebase-hosted', createdAt: '2027-04-01T00:00:00.000Z', revision: 1,
+  });
+  const observations = new IssueObservationService(repository, authorization, {
+    secret: 'configuration-collaboration-secret-at-least-32-bytes', clock: () => now,
+  });
+  const projects = new ProjectManagementService(repository, authorization, {
+    secret: 'configuration-pm-secret-at-least-32-bytes', clock: () => now, idFactory, entitlementPolicy: proEntitlementPolicyForTests,
+  });
   return {
     repository,
     configuration,
     collaboration,
+    observations,
+    projects,
     setNow(value: string) { now = new Date(value); },
   };
 }
 
 describe('WorkspaceConfigurationService', () => {
+  it.each(['foreign', 'future', 'extra-field', 'duplicate', 'missing', 'wrong-team'] as const)(
+    'fails closed when an issue workflow definition is %s', async (corruption) => {
+      const services = fixture();
+      const context = {principal: principal(ownerId), workspaceId, requestId: 'configuration_category_integrity'};
+      const defaults = await services.configuration.ensureDefaults({...context, idempotencyKey: 'integrity-defaults-key-0001'});
+      const status = await services.configuration.createStatus({...context, teamId: defaults.team.id, name: 'Review',
+        category: 'started', color: '#A970FF', idempotencyKey: 'integrity-status-key-0001'});
+      const issue = await services.collaboration.createIssue({...context, title: 'Existing issue', statusId: status.id,
+        idempotencyKey: 'integrity-issue-key-0001'});
+      const path = `workspaces/${workspaceId}/workflowStatuses/${status.id}`;
+      if (corruption === 'foreign') services.repository.seedDocument(path, {...status, workspaceId: 'ws_foreign'});
+      if (corruption === 'future') services.repository.seedDocument(path, {...status, updatedAt: '2027-04-03T00:00:00.000Z'});
+      if (corruption === 'extra-field') services.repository.seedDocument(path, {...status, unexpected: true});
+      if (corruption === 'duplicate') services.repository.seedDocument(`${path}_duplicate`, {...status});
+      if (corruption === 'wrong-team') services.repository.seedDocument(path, {...status, teamId: `team_${'f'.repeat(32)}`});
+      if (corruption === 'missing') services.repository.seedDocument(`workspaces/${workspaceId}/issues/${issue.id}`,
+        {...issue, statusId: `status_${'f'.repeat(32)}`});
+      const before = services.repository.snapshot();
+      await expect(services.collaboration.getIssue({...context, issueId: issue.id}))
+        .rejects.toMatchObject({code: 'COLLABORATION_SERVICE_UNAVAILABLE'});
+      await expect(services.collaboration.listIssues(context))
+        .rejects.toMatchObject({code: 'COLLABORATION_SERVICE_UNAVAILABLE'});
+      await expect(services.projects.exportWorkspace(context)).rejects.toMatchObject({code: 'PM_SERVICE_UNAVAILABLE'});
+      expect(services.repository.snapshot()).toEqual(before);
+    },
+  );
+
+  it.each(hostedWorkflowStatusCategories.flatMap(from => hostedWorkflowStatusCategories.map(to => ({from, to}))))(
+    'reflects $from → $to in existing issues, exports, and due notifications', async ({from, to}) => {
+      const services = fixture();
+      const context = {principal: principal(ownerId), workspaceId, requestId: 'configuration_category_regression'};
+      const defaults = await services.configuration.ensureDefaults({...context, idempotencyKey: 'category-defaults-key-0001'});
+      const status = await services.configuration.createStatus({...context, teamId: defaults.team.id, name: 'Review',
+        category: from, color: '#A970FF', position: 3, idempotencyKey: 'category-status-create-key-0001'});
+      const create = {...context, title: 'Existing issue', teamId: defaults.team.id, statusId: status.id,
+        dueAt: '2027-04-01T23:59:00.000Z', idempotencyKey: 'category-issue-create-key-0001'};
+      const issue = await services.collaboration.createIssue(create);
+      const storedBefore = services.repository.readDocument(`workspaces/${workspaceId}/issues/${issue.id}`);
+      services.setNow('2027-04-02T00:01:00.000Z');
+      const update = {...context, statusId: status.id, expectedRevision: status.revision, patch: {category: to},
+        idempotencyKey: 'category-status-update-key-0001'};
+      const changedStatus = await services.configuration.updateStatus(update);
+      expect(await services.configuration.updateStatus(update)).toEqual(changedStatus);
+      const expected = to === 'started' ? 'in_progress' : ['completed', 'canceled'].includes(to) ? 'done' : 'todo';
+      const detail = await services.collaboration.getIssue({...context, issueId: issue.id});
+      expect(detail).toMatchObject({status: expected, revision: 1, updatedAt: issue.updatedAt});
+      expect(await services.collaboration.listIssues(context)).toEqual([detail]);
+      expect(await services.collaboration.createIssue(create)).toEqual(detail);
+      const exported = await services.projects.exportWorkspace(context);
+      expect(exported.data.issues[0]?.status).toBe(expected);
+      expect(exported.data.workflowStatuses.find(value => value.id === status.id)?.category).toBe(to);
+      const notifications = await services.observations.listNotifications(context);
+      expect(notifications.some(value => value.action === 'issue.due')).toBe(expected !== 'done');
+      expect(services.repository.readDocument(`workspaces/${workspaceId}/issues/${issue.id}`)).toEqual(storedBefore);
+      const edited = await services.collaboration.updateIssue({...context, issueId: issue.id, expectedRevision: 1,
+        patch: {title: 'Edited after category change'}, idempotencyKey: 'category-issue-edit-key-0001'});
+      expect(edited).toMatchObject({status: expected, revision: 2});
+      await expect(services.collaboration.updateIssue({...context, issueId: issue.id, expectedRevision: 1,
+        patch: {title: 'Stale edit'}, idempotencyKey: 'category-stale-edit-key-0001'}))
+        .rejects.toMatchObject({code: 'COLLABORATION_CONFLICT'});
+    },
+  );
+
   it('creates durable teams, custom workflows, saved views, and issue placement', async () => {
     const context = fixture();
     const defaults = await context.configuration.ensureDefaults({

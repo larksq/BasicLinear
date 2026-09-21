@@ -1092,7 +1092,7 @@ export function HostedWorkspaceApplication({
         mutationKey(storageKey),
       );
       clearMutationKey(storageKey);
-      await refreshConfiguration();
+      await Promise.all([refreshConfiguration(), refreshCore(), refreshNotifications()]);
       setSelectedTeamId(status.teamId);
       setEditingStatusId(null);
       setModal(null);

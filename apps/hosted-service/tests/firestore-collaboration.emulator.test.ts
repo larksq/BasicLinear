@@ -25,6 +25,10 @@ async function fixture() {
   const clock = () => new Date('2026-09-21T00:00:00.000Z');
   const memberships = new MemoryWorkspaceMembershipReader();
   memberships.set({schemaVersion: 1, workspaceId, userId, role: 'owner', status: 'active', revision: 1});
+  await firestore.doc(`workspaces/${workspaceId}`).set({
+    schemaVersion: 1, id: workspaceId, workspaceId, name: 'Transaction regression', ownerUid: userId,
+    authority: 'firebase-hosted', createdAt: '2026-09-01T00:00:00.000Z', revision: 1,
+  });
   await firestore.doc(`workspaces/${workspaceId}/memberships/${userId}`).set({
     schemaVersion: 1, id: 'mem_transactions', workspaceId, userId, role: 'owner', status: 'active',
     createdAt: '2026-09-01T00:00:00.000Z', revision: 1,
@@ -41,6 +45,26 @@ async function fixture() {
 }
 
 describe('Collaboration transactions on the Firestore emulator', () => {
+  it('derives completion after a workflow edit without changing unrelated issues or revisions', async () => {
+    const {service, configuration, projects, command} = await fixture();
+    const unrelated = await service.createIssue(command);
+    const status = await configuration.createStatus({...command, teamId: unrelated.teamId, name: 'Review',
+      category: 'started', color: '#A970FF', idempotencyKey: 'emulator-category-status-key-0001'});
+    const issue = await service.createIssue({...command, statusId: status.id,
+      title: 'In review', idempotencyKey: 'emulator-category-issue-key-0001'});
+    await configuration.updateStatus({...command, statusId: status.id, expectedRevision: 1,
+      patch: {category: 'completed'}, idempotencyKey: 'emulator-category-update-key-0001'});
+    expect(await service.getIssue({...command, issueId: issue.id})).toMatchObject({status: 'done', revision: 1});
+    expect(await service.getIssue({...command, issueId: unrelated.id})).toEqual(unrelated);
+    expect((await projects.exportWorkspace(command)).data.issues.find(value => value.id === issue.id))
+      .toMatchObject({status: 'done', statusId: status.id, revision: 1});
+    const changed = await service.updateIssue({...command, issueId: issue.id, expectedRevision: 1,
+      patch: {title: 'Completed review'}, idempotencyKey: 'emulator-category-title-key-0001'});
+    expect(changed).toMatchObject({status: 'done', revision: 2});
+    expect((await firestore.doc(`workspaces/${command.workspaceId}/issues/${issue.id}`).get()).data())
+      .toMatchObject({status: 'done', revision: 2});
+  });
+
   it('creates the first issue, lazy child status, cycle, and later placement before replaying safely', async () => {
     const {service, configuration, projects, command} = await fixture();
     const parent = await service.createIssue(command);

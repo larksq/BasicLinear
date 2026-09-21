@@ -688,6 +688,26 @@ async function readTrustedIssueState(
   const issues = numberedCount === 0
     ? migratedIssues
     : stored as CollaborationIssue[];
+  if (issues.length > 0) {
+    const statuses = (await transaction.list(
+      `workspaces/${workspaceId}/workflowStatuses`, hostedOperationsPolicyV1.queries.maximumTransactionListRecords,
+    )).map(value => trustedHostedWorkflowStatusRecord(value, workspaceId));
+    const statusById = new Map(statuses.map(status => [status.id, status]));
+    if (statusById.size !== statuses.length) throw unavailable();
+    for (const status of statuses) {
+      assertAtOrBefore(status.createdAt, now);
+      assertAtOrBefore(status.updatedAt, now);
+    }
+    for (const issue of issues) {
+      const status = statusById.get(issue.statusId)
+        ?? buildDefaultHostedWorkflowStatusRecords(workspaceId, issue.teamId, issue.createdAt)
+          .find(candidate => candidate.id === issue.statusId);
+      if (status === undefined || status.teamId !== issue.teamId) throw unavailable();
+      // Completion follows the shared workflow definition. Reading a category
+      // edit must not rewrite every issue or discard its revision history.
+      issue.status = legacyStatusForCategory(status.category);
+    }
+  }
   const numbers = issues.map((issue) => issue.number).sort((left, right) => left - right);
   if (numbers.some((number, index) => number !== index + 1)) throw unavailable();
   const nextNumber = issues.length + 1;
