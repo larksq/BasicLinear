@@ -4,7 +4,7 @@ Status: `sponsor_decision_recorded_review_required`
 
 Date: 2026-08-21
 
-Engineering review refreshed: 2026-08-22
+Engineering review refreshed: 2026-09-21
 
 Decision class: legal / brand / release
 
@@ -21,8 +21,8 @@ Which license and distinct public identity should govern the project, and what r
 ## Recorded Sponsor Decision and Assessment
 
 1. The sponsor selected `AGPL-3.0-only`. The canonical GNU license text and package metadata now apply that exact SPDX choice. Qualified compatibility, notice, source-offer, and contribution review remains pending.
-2. The sponsor selected **Scopefold** as the project identity and requested **OpenLinear** as the main and final product brand. This two-name model is recorded exactly; it is not treated as clearance.
-3. The 2026-08-22 name recheck contradicts closing the brand gate. An active project-management product already uses OpenLinear, including `openlinear.tech` and a public GitHub repository with 700 commits, and Linear's official brand guidance identifies Linear as its company and application brand. Scopefold still has no obvious indexed exact-string collision, but that remains only a preliminary screen.
+2. The sponsor selected **Scopefold** as the project identity and requested **OpenLinear** as the main and final product brand. The sponsor reconfirmed the requested final brand on 2026-09-21. This two-name model is recorded exactly; it is not treated as clearance.
+3. The 2026-09-21 name recheck contradicts closing the brand gate. An active project-management product already uses OpenLinear, including `openlinear.tech` and a public GitHub repository with 700 commits, and Linear's official brand guidance identifies Linear as its company and application brand. Scopefold still has no obvious indexed exact-string collision, but that remains only a preliminary screen.
 4. Keep [clean-room-policy.md](./clean-room-policy.md) as the restrictive engineering rule. It pauses further authenticated Linear observation and quarantines existing authenticated-reference measurements from publication until qualified review.
 5. Publish only synthetic product data and independently created product screenshots. Never publish Linear screenshots, workspace data, logos, icons, fonts, copy, or other vendor assets.
 6. Require a generated third-party attribution manifest, license texts, asset provenance, and an approved public identity before release. The current dependency metadata screen is recorded in [dependency-license-inventory.json](./dependency-license-inventory.json); it is not the final distribution audit.
@@ -32,12 +32,12 @@ Which license and distinct public identity should govern the project, and what r
 | Protected choice | Recommendation | Sponsor | Qualified reviewer | Current effect |
 |---|---|---|---|---|
 | Repository license | `AGPL-3.0-only` | Accepted 2026-08-21 | Pending | Applied to `LICENSE` and all package manifests; release review remains open |
-| Project and product identity | Scopefold project identity; OpenLinear final product brand | Accepted 2026-08-21 | Pending clearance | Public release blocked by an exact OpenLinear market collision and unresolved Linear-name risk |
+| Project and product identity | Scopefold project identity; OpenLinear final product brand | Accepted 2026-08-21; final-brand request reconfirmed 2026-09-21 | Pending clearance | Public release blocked by an exact OpenLinear market collision and unresolved Linear-name risk |
 | Clean-room release boundary | Accept the restrictive policy in this packet | Pending for release | Pending | Restrictive engineering hold is active |
 | Existing authenticated-reference aggregates | Internal quarantine; do not publish or market | Pending disposition | Pending | Retained locally for review only |
 | Public comparative claims | No claims until evidence and terms review | Pending | Pending | Blocked |
 
-The sponsor instruction is acceptance of the recorded license and two-name choice. It is not a qualified license, trademark, trade-dress, asset, notice, or clean-room opinion. The 2026-08-22 engineering recheck confirms that Scopefold does not cure the exact OpenLinear product-name collision. Account access, automated research capability, or continued implementation does not satisfy the qualified-review column.
+The sponsor instruction is acceptance of the recorded license and two-name choice. The 2026-09-21 confirmation retains OpenLinear as the requested final public product brand. Neither is a qualified license, trademark, trade-dress, asset, notice, or clean-room opinion. The 2026-09-21 engineering recheck confirms that Scopefold does not cure the exact OpenLinear product-name collision. Account access, automated research capability, or continued implementation does not satisfy the qualified-review column.
 
 ## Evidence
 
@@ -92,6 +92,6 @@ CT-3 can move to Done only when:
 
 The first item is now satisfied and the deterministic review contract is implemented. No qualified acceptance exists. The remaining items are not satisfied, so CT-3 must remain `In Progress`.
 
-## Current Candidate Refresh: 2026-08-23
+## Current Sponsor and Evidence Refresh: 2026-09-21
 
-The exact current candidate is `96a696c63cf19a138977f76410ac98c6e5cec175` and includes the bounded responsive milestone-date correction from `9d55621` plus the sealed sponsor-decision packet. The prior CT-12/CT-82 qualification remains bound to historical revision `5a33d28`; CT-126 was verified locally, and fresh independent qualification is required before the prior acceptance is reused. This does not change the unresolved qualified identity/legal decision. The regenerated request is valid for the exact candidate; `qualified-review-acceptance.json` remains absent. CT-3 stays a Todo human-review gate in local Control Tower. AGPL-3.0-only and Scopefold remain the accepted sponsor inputs; OpenLinear remains uncleared for public release.
+The sponsor reconfirmed OpenLinear as the requested final public product brand. The public source recheck still finds an exact active project-management use of that name and Linear's published brand restriction. This keeps the qualified identity, trademark, trade-dress, clean-room, contribution, and notice review open. A regenerated request must bind the exact release candidate and evidence set; `qualified-review-acceptance.json` remains absent. CT-3 therefore remains an in-progress qualified-review gate. AGPL-3.0-only and Scopefold remain the accepted sponsor inputs; OpenLinear remains uncleared for public release.

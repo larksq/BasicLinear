@@ -3,9 +3,9 @@
   "issue": "CT-13",
   "status": "accountable_review_required",
   "candidate": {
-    "source_revision": "9bbb74df8b3df23431481b68010b281060707375",
-    "source_file_count": 1681,
-    "source_sha256": "351d3faab071b08f24f1e38ae6a696c97fb2226d2846fb74cfbac172ddf55666"
+    "source_revision": "d6259a3323f2ea14198151c472a793d4acbd5bb5",
+    "source_file_count": 1682,
+    "source_sha256": "e2ca4fdbd299b706b82dda96779010dd04f48648882d71ada414be518593d6d0"
   },
   "scopes": [
     {
@@ -46,12 +46,12 @@
         {
           "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/result.json",
           "exists": true,
-          "sha256": "8afa63e748fa0d2a9033a204d49214da2145c2f6713176503b1cde377b035993"
+          "sha256": "9a4552f80e318bd654ceb5d32d1c452ad454f95925858a5f61d886278b9ada27"
         },
         {
           "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-request.json",
           "exists": true,
-          "sha256": "636fde1bfbb1da33b9062a0d31e116284e45cd0b1cba4f0521211eacae9bcff2"
+          "sha256": "92262dc5a3b2a2ef7226d0c1d5f4620f366c19dc6d8fc00dba152562535e5d2e"
         },
         {
           "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-acceptance.json",
@@ -70,7 +70,7 @@
         {
           "path": "ops/release/audit-policy.json",
           "exists": true,
-          "sha256": "eb8e1c42b632243f7e40c53ba2dd6f35f4f3afe47dd8681f40d39a9fac2df1f3"
+          "sha256": "04f76f6050894c4bb21b6dc13697727865522fd31c3daeac0c9406714a27c5c1"
         },
         {
           "path": "LICENSE",

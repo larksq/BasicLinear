@@ -1,6 +1,6 @@
 # Preliminary Public-Name Screen
 
-Date: 2026-08-22
+Date: 2026-09-21
 
 Status: preliminary engineering screen only; not trademark, corporate-name, domain, package, or app-store clearance
 
@@ -8,7 +8,7 @@ Status: preliminary engineering screen only; not trademark, corporate-name, doma
 
 **Scopefold** remains the preferred distinct candidate for qualified review. It is semantically related to organizing work without copying the incumbent's name, and the refreshed exact-string screen found no obvious indexed software or project-management collision.
 
-The sponsor selected Scopefold as the project identity and requested OpenLinear as the main and final product brand. The 2026-08-22 recheck confirms that combination does not clear the product name: `openlinear.tech` actively markets project-management software under the exact OpenLinear name, its public repository reports 700 commits, and the name still incorporates Linear's company/application brand. Do not publish, reserve, register, rename packages, or create external accounts under either name until a qualified reviewer resolves the two-name model.
+The sponsor selected Scopefold as the project identity and reconfirmed OpenLinear as the requested final product brand on 2026-09-21. The current recheck confirms that combination does not clear the product name: `openlinear.tech` actively markets project-management software under the exact OpenLinear name, its public repository reports 700 commits, and the name still incorporates Linear's company/application brand. Do not publish, reserve, register, rename packages, or create external accounts under either name until a qualified reviewer resolves the two-name model.
 
 ## Screen Method
 
@@ -20,7 +20,7 @@ The screen used exact and category-qualified web searches, including exact term,
 | Workstitch | A software-related Canadian trademark record appeared | Reject from shortlist |
 | Threadmark | Multiple current apps and firms appeared, including team collaboration and knowledge products | Reject from shortlist |
 | Roadweave | Existing software and an unrelated unfavorable slang meaning appeared | Reject from shortlist |
-| OpenLinear | Incorporates the incumbent's full brand name and directly collides with an active project-management product at `openlinear.tech` and `github.com/kaizen403/openlinear`; both were directly rechecked on 2026-08-22 | Sponsor-requested final product brand; not cleared; public use blocked |
+| OpenLinear | Incorporates the incumbent's full brand name and directly collides with an active project-management product at `openlinear.tech` and `github.com/kaizen403/openlinear`; both were directly rechecked on 2026-09-21 | Sponsor-requested final product brand; not cleared; public use blocked |
 
 ## Qualified Review Checklist
 

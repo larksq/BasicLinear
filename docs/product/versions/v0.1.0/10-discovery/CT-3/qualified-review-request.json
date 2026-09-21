@@ -3,8 +3,8 @@
   "issue": "CT-3",
   "status": "qualified_review_required",
   "candidate": {
-    "source_revision": "2382fc930bdf09a3f6ebd854ba43fb95348ceb9b",
-    "evidence_set_sha256": "43648e12c945b210ff3cf784b1a1a39ad0de5822bef4f88fb7618827735ed6a1"
+    "source_revision": "1d7105c32cf8817670406f306a2069cee9faae83",
+    "evidence_set_sha256": "a981e6bef7b2e18d28ccf31c8b424d014411660ed0c6682fdf3de2a6b1fa14fa"
   },
   "sponsor_decision": {
     "license": "AGPL-3.0-only",
@@ -40,7 +40,12 @@
     {
       "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/decision-record.md",
       "exists": true,
-      "sha256": "96e9ddb1249d14ee5e27a193acbe89d9901cf0e767ddff29761739e3627e84f6"
+      "sha256": "b335f333ef354107dd3936968e4d0fdb9099f2a91bf2e70b5dc3d043e095a0dc"
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/sponsor-confirmation.md",
+      "exists": true,
+      "sha256": "8101280dada6a3efb1443a223f871d81e0f055554818b6f29ef812c4ea7a01a9"
     },
     {
       "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/license-comparison.md",
@@ -55,17 +60,17 @@
     {
       "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/name-screen.md",
       "exists": true,
-      "sha256": "623642d73ac80f4166dafe49f8df2113601869a4545a02050d9e811d434f6fa9"
+      "sha256": "79ffcc16d47de93935778f631dc71e9de787399e55eacd539065715d004896e0"
     },
     {
       "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/source-register.json",
       "exists": true,
-      "sha256": "8ec0e10843c3604d19d44b5135f690af9057c123c4d01a0d5044811d14aa7da4"
+      "sha256": "94066f736cd7b66a02f041c9748dc71f87a5047f44e3f38d9da480516fad6e5f"
     },
     {
       "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/evidence.md",
       "exists": true,
-      "sha256": "7f679817a6d6d46493d1964fcbe86aae0778f6a879b394f1edfe15851e3663b6"
+      "sha256": "bb6eb3ea73f766b750fa0bced80c23d45eb1738dbbd1566926d2ae0b843a60a0"
     },
     {
       "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-guide.md",

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "issue": "CT-3",
-  "accessed_on": "2026-08-22",
+  "accessed_on": "2026-09-21",
   "sources": [
     {
       "id": "CT3-S-001",
@@ -90,7 +90,7 @@
       "authority": "Linear Orbit, Inc.",
       "claim": "Linear identifies Linear as the brand name of both its company and application.",
       "verification": "verified",
-      "rechecked_on": "2026-08-22",
+      "rechecked_on": "2026-09-21",
       "risk": "high"
     },
     {
@@ -100,7 +100,7 @@
       "authority": "Current public repository",
       "claim": "An active open-source project-management product uses the exact OpenLinear name; the directly rechecked public page reports 700 commits.",
       "verification": "verified",
-      "rechecked_on": "2026-08-22",
+      "rechecked_on": "2026-09-21",
       "risk": "high"
     },
     {
@@ -110,7 +110,7 @@
       "authority": "Current product website",
       "claim": "The exact OpenLinear name is in active public use for a project-management product.",
       "verification": "verified",
-      "rechecked_on": "2026-08-22",
+      "rechecked_on": "2026-09-21",
       "risk": "high"
     }
   ]

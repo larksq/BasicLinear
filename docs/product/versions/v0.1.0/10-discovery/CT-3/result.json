@@ -6,7 +6,7 @@
   },
   "status": "sponsor_decision_recorded_review_required",
   "completed": false,
-  "reviewed_on": "2026-08-22",
+  "reviewed_on": "2026-09-21",
   "engineering_research": "complete",
   "public_release_gate": "blocked",
   "controls": {
@@ -18,6 +18,7 @@
   },
   "sponsor_decision": {
     "recorded_on": "2026-08-21",
+    "reconfirmed_on": "2026-09-21",
     "license": "AGPL-3.0-only",
     "project_identity": "Scopefold",
     "requested_final_product_brand": "OpenLinear"
@@ -27,24 +28,21 @@
     "scopefold_indexed_exact_collision": false,
     "openlinear_exact_market_collision": true,
     "openlinear_incorporates_linear_brand_name": true,
-    "name_screen_refreshed_on": "2026-08-22",
+    "name_screen_refreshed_on": "2026-09-21",
     "qualified_clearance_complete": false,
     "ct3_closure_permitted": false
   },
   "current_verification": {
-    "product_revision": "96a696c63cf19a138977f76410ac98c6e5cec175",
-    "evidence_revision": "bound_in_qualified_review_request",
-    "application_tests": "73 files / 481 tests passed",
-    "workspace_typechecks": "8 passed",
-    "production_build": "1,953 modules / warning-free",
-    "release_contract_tests": "10/10 passed",
-    "independent_runtime": "P-T21 receipt remains independently passed for historical exact revision 5a33d28; CT-126 is a bounded post-acceptance responsive correction and requires fresh qualification before prior acceptance is reused",
+    "product_revision": "1d7105c32cf8817670406f306a2069cee9faae83",
+    "evidence_revision": "qualified-review request bound to the exact source and evidence set",
+    "release_contract_tests": "10/10 passed on 2026-09-21",
     "release_audit": "NOT_READY: 8 PASS / 0 FAIL / 6 BLOCKED; qualified CT-3 acceptance, provenance approvals, and accountable CT-13 review remain absent",
     "authoritative_release_result": "docs/product/versions/v0.1.0/50-outcome-review/CT-13/result.json"
   },
   "qualified_review_contract": {
     "guide": "qualified-review-guide.md",
     "request": "qualified-review-request.json",
+    "request_sha256": "92262dc5a3b2a2ef7226d0c1d5f4620f366c19dc6d8fc00dba152562535e5d2e",
     "acceptance": "qualified-review-acceptance.json",
     "request_state": "qualified_review_required",
     "acceptance_state": "not_recorded",
@@ -88,6 +86,7 @@
   "affected_outcomes": ["O-005"],
   "artifacts": [
     "decision-record.md",
+    "sponsor-confirmation.md",
     "license-comparison.md",
     "clean-room-policy.md",
     "name-screen.md",
@@ -97,13 +96,14 @@
     "evidence.md"
   ],
   "artifact_hashes": {
-    "decision-record.md": "8aa82b2360807ec99b956862c3c2caff30b3149d5f0a2368a93e8d9237c773c9",
+    "decision-record.md": "b335f333ef354107dd3936968e4d0fdb9099f2a91bf2e70b5dc3d043e095a0dc",
+    "sponsor-confirmation.md": "8101280dada6a3efb1443a223f871d81e0f055554818b6f29ef812c4ea7a01a9",
     "license-comparison.md": "a951d8bdc242e30be9749263ba4b239a9564b7188fd7d173ff48fa423bfaaeac",
     "clean-room-policy.md": "b61006b71881b872b75c31c3e18ce390d23036cd376996aecc23e2fedd95980b",
-    "name-screen.md": "623642d73ac80f4166dafe49f8df2113601869a4545a02050d9e811d434f6fa9",
+    "name-screen.md": "79ffcc16d47de93935778f631dc71e9de787399e55eacd539065715d004896e0",
     "dependency-license-inventory.json": "71fe12f6bbf2e57e454ef884333e34a3a39e8a7d7cb8896402d89940bc666c26",
-    "source-register.json": "8ec0e10843c3604d19d44b5135f690af9057c123c4d01a0d5044811d14aa7da4",
+    "source-register.json": "94066f736cd7b66a02f041c9748dc71f87a5047f44e3f38d9da480516fad6e5f",
     "qualified-review-guide.md": "25f55c501a437134f83b7d4d3490bc67e6e5d21e4b5cdc38a8a803d647860f52",
-    "evidence.md": "d614a2559b357bc8705a79889adc159f2972377372f9903d65e18e684eb82b45"
+    "evidence.md": "bb6eb3ea73f766b750fa0bced80c23d45eb1738dbbd1566926d2ae0b843a60a0"
   }
 }
