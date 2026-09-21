@@ -3,8 +3,8 @@
   "issue": "CT-3",
   "status": "qualified_review_required",
   "candidate": {
-    "source_revision": "a0594043401ff8073e8081ce16f18b161eae5eb9",
-    "evidence_set_sha256": "fed80591d62bf667c8f492ce652373cd05098f5f3b5b45db1921f1d5cf1295c2"
+    "source_revision": "18850fb4f894be6e8fa0901c8af030e795f73724",
+    "evidence_set_sha256": "7f9536ec0a91a2e7d952fe8a38c20221207c7fdee06b265e892e4ebe06ed36a2"
   },
   "sponsor_decision": {
     "license": "AGPL-3.0-only",
@@ -75,7 +75,7 @@
     {
       "path": "ops/release/dependency-license-inventory.json",
       "exists": true,
-      "sha256": "29ee9a788cfb9b491ee0411a37281dfab6a52944c61cbd937fcca13a9748d55e"
+      "sha256": "1acd52bf41e3b9a1db0c679ad58710c24528e02cfbfbcee845a7f0e03d9de29b"
     },
     {
       "path": "ops/release/third-party-notices.json",
@@ -85,12 +85,12 @@
     {
       "path": "ops/release/asset-provenance.json",
       "exists": true,
-      "sha256": "ef1f0dcbded08d22421f6fe78d09a42e6a572437d6097f7aa4217169f10e3a32"
+      "sha256": "4336aa3d7b17c6e31627d2ab02ef2bb0e2b47a69530f29fb89b8bbf9fae8a233"
     },
     {
       "path": "ops/release/copy-provenance.json",
       "exists": true,
-      "sha256": "78b3d7aa6c8d582101433349b0a0882bd0b312b2a43e33d8e37af89c0e44a73d"
+      "sha256": "f0aaa867d34fe38128b579e90bb0077f9f6ede2d3ecebf04a7ebe34a908fd815"
     }
   ],
   "evidence_state": {
@@ -102,7 +102,7 @@
     "copy_provenance": {
       "status": "ready_for_accountable_review",
       "review_status": "pending",
-      "records": 67
+      "records": 69
     },
     "third_party_notices": {
       "status": "ready_for_accountable_review",
