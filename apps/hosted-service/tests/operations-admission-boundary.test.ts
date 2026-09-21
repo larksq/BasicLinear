@@ -70,6 +70,7 @@ function context(kind: 'rate_limit' | 'clock_regression') {
     clock: () => now,
   });
   const handler = createHostedHttpHandler({
+    readinessCheck: async () => {},
     identityVerifier: {
       verifyGoogleIdToken: async () => {
         identityCalls += 1;
@@ -93,6 +94,18 @@ function context(kind: 'rate_limit' | 'clock_regression') {
 }
 
 describe('hosted operations rejection transport boundary', () => {
+  it('keeps liveness available when operations admission is unavailable', async () => {
+    const current = context('clock_regression');
+    await current.handler(healthRequest(), responseFixture('none').response);
+    current.regressClock();
+    const readyResponse = responseFixture('none');
+    await current.handler(healthRequest(), readyResponse.response);
+    expect(readyResponse.snapshot().status).toBe(503);
+    const liveResponse = responseFixture('none');
+    await current.handler({...healthRequest(), url: '/health/live'} as IncomingMessage, liveResponse.response);
+    expect(liveResponse.snapshot().status).toBe(200);
+  });
+
   it.each([
     ['rate_limit', 'writeHead', 429, 'rejected'],
     ['rate_limit', 'end', 429, 'rejected'],

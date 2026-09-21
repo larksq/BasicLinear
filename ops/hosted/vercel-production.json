@@ -13,6 +13,7 @@
     {"source": "/mcp", "destination": "https://openlinear-hosted-api-1073376700903.us-central1.run.app/mcp"},
     {"source": "/oauth/:path*", "destination": "https://openlinear-hosted-api-1073376700903.us-central1.run.app/oauth/:path*"},
     {"source": "/", "has": [{"type": "query", "key": "app"}], "destination": "/hosted.html"},
+    {"source": "/", "has": [{"type": "query", "key": "billing"}], "destination": "/hosted.html"},
     {"source": "/", "has": [{"type": "query", "key": "oauth_request"}], "destination": "/hosted.html"},
     {"source": "/", "has": [{"type": "query", "key": "oauth_workspace"}], "destination": "/hosted.html"},
     {"source": "/", "destination": "/homepage.html"}
@@ -20,6 +21,7 @@
   "headers": [
     {"source": "/(.*)", "missing": [{"type": "host", "value": "openlinear.qiaosun.me"}], "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}]},
     {"source": "/(.*)", "has": [{"type": "query", "key": "app"}], "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}]},
+    {"source": "/(.*)", "has": [{"type": "query", "key": "billing"}], "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}]},
     {"source": "/(.*)", "has": [{"type": "query", "key": "oauth_request"}], "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}]},
     {"source": "/(.*)", "has": [{"type": "query", "key": "oauth_workspace"}], "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}]},
     {"source": "/hosted.html", "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}]},

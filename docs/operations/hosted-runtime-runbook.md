@@ -9,9 +9,15 @@
 
 ## Readiness and rollback
 
-Readiness requires successful configuration parsing, Firestore access, and operations-control construction. A configuration or telemetry repository problem fails closed for paid activation. Roll back to the last sealed image if error rate, latency, rejected legitimate traffic, or billing reconciliation breaches the reviewed threshold. Do not weaken Origin, authorization, tenant, provider-signature, idempotency, or revision checks during an incident.
+The MCP discovery documents link to `/mcp-guide.html`, a public static setup guide shipped with the web build. It must be reachable at the configured public origin without a session; its commands use that deployment’s MCP endpoint.
+
+`GET /health/ready` requires successful configuration parsing, operations admission, and a read of `_health/readiness` in the configured Firestore database. The document need not exist; the probe writes no data. Missing probe configuration, denied access, and database errors return a redacted HTTP 503. Reads have a two-second HTTP deadline, successful results are cached for five seconds, and concurrent probes share one read. After a timeout, readiness stays unavailable until the outstanding read settles and a fresh probe succeeds. `GET /health/live` checks only the running HTTP process and bypasses dependency and operations admission checks. Use liveness for process restarts and readiness for dependency availability.
+
+A configuration or telemetry repository problem fails closed for paid activation. Roll back to the last sealed image if error rate, latency, rejected legitimate traffic, or billing reconciliation breaches the reviewed threshold. Do not weaken Origin, authorization, tenant, provider-signature, idempotency, or revision checks during an incident.
 
 ## Telemetry review
+
+Restore evidence must cover every collection group in `hostedOperationsPolicyV1.backup.requiredCollectionGroups`, including workspace configuration, observation/idempotency records, issue sequences, verification access, and Creem checkout attempts. The entire-database backup remains unfiltered. Adding a persisted collection requires updating this inventory and regenerating signed operations review/restore evidence for the new policy digest; prior evidence does not authorize the changed policy.
 
 Use structured Cloud Logging fields and Cloud Trace correlation. Alert on sustained 5xx, 429 ratio by route class, budget-notice authentication failures, stale budget state, provider webhook failures, query-budget failures, and billing activation blocks. Retain request telemetry for 30 days and signed budget/restore evidence for 400 days. Access should be least privilege and audited.
 

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Connect Codex or Claude Code to a hosted OpenLinear workspace using MCP and OAuth." />
+    <title>Connect AI clients with MCP — OpenLinear</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <style>
+      :root { color-scheme: light dark; font: 16px/1.6 system-ui, sans-serif; }
+      body { max-width: 760px; margin: auto; padding: 32px 20px 64px; }
+      nav { display: flex; flex-wrap: wrap; gap: 24px; }
+      h1 { line-height: 1.2; margin-top: 48px; }
+      h2 { margin-top: 32px; }
+      a { color: light-dark(#3559b3, #a4bbff); }
+      pre { padding: 16px; border: 1px solid light-dark(#d9dce4, #444a58); border-radius: 8px; overflow-x: auto; }
+      code { font: .9em/1.6 ui-monospace, monospace; }
+      footer { margin-top: 48px; border-top: 1px solid light-dark(#d9dce4, #444a58); padding-top: 16px; }
+    </style>
+    <script src="/openlinear-mcp-guide.js" defer></script>
+  </head>
+  <body>
+    <nav aria-label="OpenLinear navigation"><a href="/">OpenLinear home</a><a href="/?app">Open online workspace</a></nav>
+    <main>
+      <h1>Connect AI clients with MCP</h1>
+      <p>Use Codex or Claude Code to read and manage a hosted OpenLinear workspace. MCP uses OAuth with PKCE. Sign in with Google, choose your workspace, and approve the scopes your client needs.</p>
+      <p>Your local SQLite workspace remains separate. Connecting an AI client does not upload or synchronize local data.</p>
+      <p>MCP endpoint: <code data-mcp-endpoint>https://openlinear.qiaosun.me/mcp</code></p>
+      <h2 id="codex">Codex</h2>
+      <p>Run these commands in your terminal, then complete sign-in in your browser:</p>
+      <pre><code data-mcp-commands>codex mcp add openlinear --url https://openlinear.qiaosun.me/mcp
+codex mcp login openlinear
+codex mcp list</code></pre>
+      <p><a href="https://learn.chatgpt.com/docs/extend/mcp">Codex MCP documentation</a></p>
+      <h2 id="claude-code">Claude Code</h2>
+      <pre><code data-mcp-commands>claude mcp add --transport http openlinear https://openlinear.qiaosun.me/mcp
+claude mcp login openlinear
+claude mcp list</code></pre>
+      <p>CLI login requires Claude Code 2.1.186 or later. On older versions, open Claude Code, run <code>/mcp</code>, and select OpenLinear to sign in.</p>
+      <p><a href="https://code.claude.com/docs/en/mcp">Claude Code MCP documentation</a></p>
+      <h2 id="authorization">Choose your access</h2>
+      <p>After signing in, select the workspace and review the requested scopes before approving. OpenLinear checks workspace membership and permissions on each call. A personal access token is not needed for this OAuth flow.</p>
+      <p>Start with a read-only request: “Use OpenLinear to list the workspaces I can access. Do not change anything.” Before updates, ask your client to read the current issue revision.</p>
+      <h2 id="self-hosting">Using your own deployment</h2>
+      <p>This page uses the current deployment’s domain in its setup commands when JavaScript is enabled. You can also find your deployment’s endpoint in the workspace’s “Use OpenLinear with AI” guide. Check the domain before connecting.</p>
+    </main>
+    <footer><a href="/openlinear-license.txt">AGPL-3.0-only license</a> · An independent project inspired by Linear.</footer>
+  </body>
+</html>

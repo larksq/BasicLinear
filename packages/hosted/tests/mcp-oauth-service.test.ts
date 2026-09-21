@@ -116,10 +116,12 @@ describe('MCP OAuth service', () => {
     const context = fixture();
     expect(context.service.protectedResourceMetadata()).toMatchObject({
       resource: `${origin}/mcp`, authorization_servers: [origin], bearer_methods_supported: ['header'],
+      resource_documentation: `${origin}/mcp-guide.html`,
     });
     expect(context.service.authorizationServerMetadata()).toMatchObject({
       issuer: origin, code_challenge_methods_supported: ['S256'], token_endpoint_auth_methods_supported: ['none'],
       authorization_response_iss_parameter_supported: false,
+      service_documentation: `${origin}/mcp-guide.html`,
     });
 
     const result = await context.authorize('workspace:read projects:read projects:write');

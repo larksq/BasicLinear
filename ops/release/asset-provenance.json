@@ -3,7 +3,7 @@
   "issue": "CT-13",
   "status": "ready_for_accountable_review",
   "review_status": "pending",
-  "source_set_sha256": "84bab4cabbf0f725e3c627dcabee75bb7ed7dd6e11f2844d088bc710015a9702",
+  "source_set_sha256": "46d2b166b80e66f00985be3b54dc070b91744981057ca03af7bfcbc39377013f",
   "entries": [
     {
       "path": "apps/web/public/favicon.ico",

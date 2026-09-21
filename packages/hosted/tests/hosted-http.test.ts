@@ -1,6 +1,6 @@
 import { Readable } from 'node:stream';
 import type { IncomingHttpHeaders, IncomingMessage, ServerResponse } from 'node:http';
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import {
   createHostedHttpHandler,
   InvitationService,
@@ -44,6 +44,7 @@ function createFixture(
     repository?: InvitationRepository;
     identities?: Readonly<Record<string, VerifiedGoogleIdentity>>;
   } = {},
+  readinessCheck: (() => Promise<void>) | null = async () => {},
 ) {
   const memberships = authorization.memberships ?? new MemoryWorkspaceMembershipReader();
   const evidence = authorization.evidence ?? new MemoryWorkspaceAuthorizationEvidenceWriter();
@@ -55,6 +56,7 @@ function createFixture(
     })(),
   });
   const handler = createHostedHttpHandler({
+    ...(readinessCheck === null ? {} : {readinessCheck}),
     identityVerifier: {
       verifyGoogleIdToken: async (token) => {
         const resolved = invitation.identities?.[token]
@@ -114,6 +116,77 @@ function createFixture(
     return { status, headers: responseHeaders, body: payload === '' ? null : JSON.parse(payload) };
   };
 }
+
+describe('dependency readiness and process liveness', () => {
+  afterEach(() => { vi.useRealTimers(); });
+
+  it('fails closed when no dependency probe is configured', async () => {
+    const invoke = createFixture(undefined, [], {}, {}, null);
+    expect((await invoke('GET', '/health/ready')).status).toBe(503);
+    expect((await invoke('GET', '/health/live')).body).toEqual({status: 'live', authority: 'firebase-hosted'});
+  });
+
+  it('redacts dependency failures, recovers, and caches success for at most five seconds', async () => {
+    vi.useFakeTimers();
+    const check = vi.fn<() => Promise<void>>()
+      .mockRejectedValueOnce(new Error('private Firestore credential detail'))
+      .mockResolvedValueOnce(undefined)
+      .mockRejectedValue(new Error('private database outage'));
+    const invoke = createFixture(undefined, [], {}, {}, check);
+    const failed = await invoke('GET', '/health/ready');
+    expect(failed.status).toBe(503);
+    expect(failed.headers['cache-control']).toContain('no-store');
+    expect(failed.body).toMatchObject({error: {code: 'SERVICE_UNAVAILABLE'}});
+    expect(JSON.stringify(failed.body)).not.toContain('private');
+    expect((await invoke('GET', '/health/ready')).status).toBe(200);
+    expect((await invoke('GET', '/health/ready')).status).toBe(200);
+    expect(check).toHaveBeenCalledTimes(2);
+    await vi.advanceTimersByTimeAsync(5_000);
+    expect((await invoke('GET', '/health/ready')).status).toBe(503);
+    expect(check).toHaveBeenCalledTimes(3);
+    expect((await invoke('GET', '/health/live')).status).toBe(200);
+    expect(check).toHaveBeenCalledTimes(3);
+  });
+
+  it.each(['resolve', 'reject'] as const)('bounds hung and concurrent probes and ignores a late %s', async settlement => {
+    vi.useFakeTimers();
+    let resolveRead!: () => void;
+    let rejectRead!: (error: Error) => void;
+    const check = vi.fn<() => Promise<void>>()
+      .mockImplementationOnce(() => new Promise<void>((resolve, reject) => {
+        resolveRead = resolve;
+        rejectRead = reject;
+      }))
+      .mockResolvedValue(undefined);
+    const invoke = createFixture(undefined, [], {}, {}, check);
+    const first = invoke('GET', '/health/ready');
+    const second = invoke('GET', '/health/ready');
+    await vi.advanceTimersByTimeAsync(1_999);
+    expect(check).toHaveBeenCalledTimes(1);
+    expect((await invoke('GET', '/health/live')).status).toBe(200);
+    await vi.advanceTimersByTimeAsync(1);
+    expect((await first).status).toBe(503);
+    expect((await second).status).toBe(503);
+    expect((await invoke('GET', '/health/ready')).status).toBe(503);
+    expect(check).toHaveBeenCalledTimes(1);
+    if (settlement === 'resolve') resolveRead();
+    else rejectRead(new Error('late private failure'));
+    await vi.advanceTimersByTimeAsync(0);
+    expect((await invoke('GET', '/health/ready')).status).toBe(200);
+    expect(check).toHaveBeenCalledTimes(2);
+  });
+
+  it('restricts both health endpoints to GET without probing on other methods', async () => {
+    const check = vi.fn(async () => {});
+    const invoke = createFixture(undefined, [], {}, {}, check);
+    for (const route of ['/health/live', '/health/ready']) {
+      const response = await invoke('POST', route);
+      expect(response.status).toBe(405);
+      expect(response.headers.allow).toBe('GET');
+    }
+    expect(check).not.toHaveBeenCalled();
+  });
+});
 
 const bootstrapHeaders = (key: string) => ({
   authorization: 'Bearer verified-google-token-123456789',
@@ -245,12 +318,13 @@ describe('hosted HTTP foundation', () => {
     }
   });
 
-  it('exposes only the health check and bounded bootstrap route', async () => {
+  it('exposes readiness and the bounded bootstrap route', async () => {
     const invoke = createFixture();
     const ready = await invoke('GET', '/health/ready');
     const localSession = await invoke('POST', '/api/v1/local-owner-session');
     const wrongMethod = await invoke('GET', '/api/v1/hosted/bootstrap');
     expect(ready.body).toEqual({ status: 'ready', authority: 'firebase-hosted' });
+    expect(ready.status).toBe(200);
     expect(localSession.status).toBe(404);
     expect(wrongMethod.status).toBe(405);
     expect(wrongMethod.headers.allow).toBe('POST');

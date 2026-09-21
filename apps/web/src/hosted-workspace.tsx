@@ -1,4 +1,5 @@
 import { BrandMark } from './brand-mark.js';
+import { isBillingReturn } from './homepage-entry.js';
 import {
   useEffect,
   useId,
@@ -395,9 +396,10 @@ export function HostedWorkspaceApplication({
   automationPanel,
 }: HostedWorkspaceApplicationProps) {
   const environment = readHostedBrowserEnvironment();
-  const [view, setView] = useState<WorkspaceView>('issues');
-  const [navigationScope, setNavigationScope] = useState<NavigationScope>('team');
-  const [settingsTab, setSettingsTab] = useState<SettingsTab>('general');
+  const billingReturn = role === 'owner' && isBillingReturn(window.location.search);
+  const [view, setView] = useState<WorkspaceView>(billingReturn ? 'settings' : 'issues');
+  const [navigationScope, setNavigationScope] = useState<NavigationScope>(billingReturn ? 'workspace' : 'team');
+  const [settingsTab, setSettingsTab] = useState<SettingsTab>(billingReturn ? 'billing' : 'general');
   const [issues, setIssues] = useState<HostedIssue[]>([]);
   const [projects, setProjects] = useState<HostedProject[]>([]);
   const [milestones, setMilestones] = useState<HostedMilestone[]>([]);

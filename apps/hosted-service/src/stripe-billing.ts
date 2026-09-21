@@ -126,8 +126,8 @@ export class StripeBillingProvider implements BillingProvider {
       line_items: [{price: input.priceId, quantity: input.quantity}],
       allow_promotion_codes: false,
       automatic_tax: {enabled: true},
-      success_url: `${this.#publicOrigin}/?billing=success&session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${this.#publicOrigin}/?billing=cancelled`,
+      success_url: `${this.#publicOrigin}/?app&billing=success&session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${this.#publicOrigin}/?app&billing=cancelled`,
       metadata: metadataValue,
       subscription_data: {metadata: metadataValue},
     }, {idempotencyKey: input.idempotencyReference});

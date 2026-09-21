@@ -38,7 +38,7 @@ describe('Creem billing provider', () => {
     expect(calls.map(c => c.url)).toEqual(['https://test-api.creem.io/v1/products?product_id=prod_monthly123',
       'https://test-api.creem.io/v1/checkouts']);
     expect(JSON.parse(calls[1]!.init.body as string)).toMatchObject({product_id: product.id, units: 2,
-      metadata, success_url: 'https://online.example.com/?billing=success'});
+      metadata, success_url: 'https://online.example.com/?app&billing=success'});
     expect(calls[1]!.init.redirect).toBe('error');
   });
   it('accepts the observed Creem sandbox checkout path', async () => {

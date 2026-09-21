@@ -124,7 +124,7 @@ export class CreemBillingProvider implements BillingProvider {
       : await this.#request('checkouts', {
       product_id: input.priceId, units: input.quantity,
       request_id: `olm_${createHash('sha256').update(input.idempotencyReference).digest('hex').slice(0, 32)}`,
-      success_url: `${this.#options.publicOrigin}/?billing=success`, metadata,
+        success_url: `${this.#options.publicOrigin}/?app&billing=success`, metadata,
     });
     const resultId = reference(result.id, 'ch');
     if (attempt.state === 'new') await this.#options.checkoutAttemptStore.complete(attemptId, resultId);

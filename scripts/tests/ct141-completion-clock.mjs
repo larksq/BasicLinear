@@ -176,6 +176,7 @@ for (const [kind, failure, expectedStatus] of [
   });
   let identityCalls = 0;
   const boundaryHandler = createHostedHttpHandler({
+    readinessCheck: async () => {},
     identityVerifier: {verifyGoogleIdToken: async () => { identityCalls += 1; throw new Error('unused'); }},
     bootstrapService: {},
     workspaceAuthorizationService: {},

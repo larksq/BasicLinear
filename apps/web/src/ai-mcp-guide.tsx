@@ -12,7 +12,7 @@ import {
   X,
 } from 'lucide-react';
 
-const EXAMPLE_MCP_URL = 'https://your-openlinear-host.example/mcp';
+const ONLINE_MCP_URL = 'https://openlinear.qiaosun.me/mcp';
 
 export interface AiMcpGuideProps {
   serverUrl?: string;
@@ -52,6 +52,7 @@ function ClientCommands({
           <span>{copied ? 'Copied' : 'Copy'}</span>
         </button>
       </div>
+      {client === 'Claude Code' && <p className="ai-mcp-client-note">CLI login requires Claude Code 2.1.186 or later. On older versions, open Claude Code, run <code>/mcp</code>, and select OpenLinear to sign in.</p>}
     </section>
   );
 }
@@ -63,7 +64,7 @@ export function AiMcpGuide({serverUrl, surface, collapsed = false}: AiMcpGuidePr
   const descriptionId = useId();
   const [open, setOpen] = useState(false);
   const [copiedClient, setCopiedClient] = useState<'codex' | 'claude' | null>(null);
-  const mcpUrl = serverUrl ?? EXAMPLE_MCP_URL;
+  const mcpUrl = serverUrl ?? ONLINE_MCP_URL;
   const codexCommands = `codex mcp add openlinear --url ${mcpUrl}\ncodex mcp login openlinear\ncodex mcp list`;
   const claudeCommands = `claude mcp add --transport http openlinear ${mcpUrl}\nclaude mcp login openlinear\nclaude mcp list`;
 
@@ -141,7 +142,7 @@ export function AiMcpGuide({serverUrl, surface, collapsed = false}: AiMcpGuidePr
           {surface === 'local' ? (
             <div className="ai-mcp-boundary-note">
               <ShieldCheck size={17} />
-              <div><strong>Your local workspace stays local.</strong><span>MCP OAuth operates a hosted OpenLinear workspace; it does not upload or synchronize this SQLite workspace. Replace the example URL below with the MCP URL shown by your hosted workspace.</span></div>
+              <div><strong>Your local workspace stays local.</strong><span>These commands connect to <a href="https://openlinear.qiaosun.me/?app" target="_blank" rel="noreferrer">OpenLinear Online</a>; it does not upload or synchronize this SQLite workspace. For a self-hosted workspace, use the MCP endpoint shown in that workspace’s AI guide.</span></div>
             </div>
           ) : (
             <div className="ai-mcp-endpoint">
@@ -154,7 +155,7 @@ export function AiMcpGuide({serverUrl, surface, collapsed = false}: AiMcpGuidePr
             <div className="ai-mcp-step-number">1</div>
             <div>
               <h3 id={`${titleId}-connect`}>Connect your client</h3>
-              <p>{surface === 'local' ? 'Use the MCP URL from the hosted workspace you want AI to operate.' : 'Add this workspace as a remote Streamable HTTP MCP server.'}</p>
+              <p>{surface === 'local' ? 'Connect to OpenLinear Online, then choose the hosted workspace you want AI to operate.' : 'Add this workspace as a remote Streamable HTTP MCP server.'}</p>
               <div className="ai-mcp-client-grid">
                 <ClientCommands
                   client="Codex"

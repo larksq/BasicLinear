@@ -132,7 +132,8 @@ if (
 const firebaseApp = existingFirebaseApp ?? initializeApp({projectId: firebaseProjectId});
 
 const auth = getAuth(firebaseApp);
-const firestore = getFirestore(firebaseApp, firestoreDatabaseId) as unknown as FirestoreLike
+const runtimeFirestore = getFirestore(firebaseApp, firestoreDatabaseId);
+const firestore = runtimeFirestore as unknown as FirestoreLike
   & FirestoreAuthorizationLike
   & FirestoreBillingLike
   & FirestoreInvitationLike
@@ -315,6 +316,11 @@ const mcpHttpHandler = createMcpHttpHandler({
   billingService,
 });
 const handler = createHostedHttpHandler({
+  readinessCheck: async () => {
+    // A missing document is fine: a completed read proves database/IAM access.
+    // Never write health state or inspect customer documents for this probe.
+    await runtimeFirestore.doc('_health/readiness').get();
+  },
   identityVerifier,
   bootstrapService,
   workspaceAuthorizationService,

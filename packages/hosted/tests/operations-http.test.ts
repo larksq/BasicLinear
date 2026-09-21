@@ -127,6 +127,7 @@ async function fixture(options: {controlClock?: () => Date} = {}) {
   let verifierCalls = 0;
   const telemetrySink = new MemoryHostedOperationsTelemetrySink();
   const handler = createHostedHttpHandler({
+    readinessCheck: async () => {},
     identityVerifier: {verifyGoogleIdToken: async () => { throw new Error('unused'); }},
     bootstrapService: new OwnerBootstrapService(new MemoryOwnerBootstrapRepository()),
     workspaceAuthorizationService: authorization,

@@ -3,7 +3,7 @@
 (() => {
   const query = new URLSearchParams(window.location.search);
   const fragment = new URLSearchParams(window.location.hash.replace(/^#/, ''));
-  const privateEntry = ['app', 'oauth_request', 'oauth_workspace'].some(key => query.has(key))
+  const privateEntry = ['app', 'billing', 'oauth_request', 'oauth_workspace'].some(key => query.has(key))
     || ['invite', 'issue'].some(key => fragment.has(key));
   if (window.location.hostname === 'openlinear.qiaosun.me' && !privateEntry) return;
   let robots = document.querySelector('meta[name="robots"]');

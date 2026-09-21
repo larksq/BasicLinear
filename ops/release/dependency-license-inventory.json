@@ -1,7 +1,7 @@
 {
   "schema_version": "release-dependency-license-inventory-v1",
   "issue": "CT-13",
-  "generated_at": "2026-09-21T02:16:58.735Z",
+  "generated_at": "2026-09-21T02:54:09.796Z",
   "status": "metadata_screen_complete_distribution_audit_pending",
   "source": {
     "path": "package-lock.json",

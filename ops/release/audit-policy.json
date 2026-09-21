@@ -105,7 +105,7 @@
     ".woff",
     ".woff2"
   ],
-  "public_copy_roots": ["apps/web/index.html", "apps/web/src"],
+  "public_copy_roots": ["apps/web/index.html", "apps/web/hosted.html", "apps/web/src", "apps/web/public/mcp-guide.html"],
   "ignore_contract": {
     ".gitignore": [".control-tower/", ".env", ".env.*", ".playwright-mcp/", "/backups/"]
   }

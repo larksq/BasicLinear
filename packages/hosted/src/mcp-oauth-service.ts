@@ -935,7 +935,7 @@ export class McpOAuthService {
       authorization_servers: [this.#publicOrigin],
       bearer_methods_supported: ['header'],
       scopes_supported: [...mcpOAuthScopes],
-      resource_documentation: `${this.#publicOrigin}/hosted.html#mcp`,
+      resource_documentation: `${this.#publicOrigin}/mcp-guide.html`,
     };
   }
 
@@ -957,7 +957,7 @@ export class McpOAuthService {
       authorization_response_iss_parameter_supported: false,
       scopes_supported: [...mcpOAuthScopes],
       resource_indicators_supported: true,
-      service_documentation: `${this.#publicOrigin}/hosted.html#mcp`,
+      service_documentation: `${this.#publicOrigin}/mcp-guide.html`,
     };
   }
 

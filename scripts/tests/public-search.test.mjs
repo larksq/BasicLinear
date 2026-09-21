@@ -60,6 +60,8 @@ test('fragment deep links, app queries, and other hosts receive noindex before t
     [`${canonical}?utm_source=mail&app`, true],
     [`${canonical}?oauth_request=example`, true],
     [`${canonical}?oauth_workspace=select`, true],
+    [`${canonical}?billing=success&session_id=private-session`, true],
+    [`${canonical}?billing=cancelled`, true],
     [`${canonical}#invite=example`, true],
     [`${canonical}#issue=example`, true],
     ['https://openlinear-gray.vercel.app/', true],
@@ -78,5 +80,17 @@ test('fragment deep links, app queries, and other hosts receive noindex before t
       },
     });
     assert.equal(robots?.content.includes('noindex') ?? false, excluded, url);
+  }
+});
+
+test('billing callbacks use private hosted HTML and noindex at the production edge', async () => {
+  const config = JSON.parse(await readFile(resolve(root, 'ops/hosted/vercel-production.json'), 'utf8'));
+  for (const search of ['?billing=success&session_id=private-session', '?billing=cancelled', '?app&billing=success']) {
+    const query = new URLSearchParams(search);
+    const matches = rule => rule.has === undefined || rule.has.every(condition => condition.type === 'query' && query.has(condition.key));
+    const rewrite = config.rewrites.find(rule => rule.source === '/' && matches(rule));
+    assert.equal(rewrite?.destination, '/hosted.html', search);
+    assert.ok(config.headers.some(rule => rule.source === '/(.*)' && rule.has && matches(rule)
+      && rule.headers.some(header => header.key === 'X-Robots-Tag' && header.value.includes('noindex'))), search);
   }
 });

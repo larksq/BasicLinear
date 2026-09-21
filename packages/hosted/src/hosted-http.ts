@@ -1,5 +1,6 @@
 import { randomUUID } from 'node:crypto';
 import type { IncomingMessage, ServerResponse } from 'node:http';
+import { createReadinessProbe } from './readiness.js';
 import {
   OwnerBootstrapInputError,
   type OwnerBootstrapResult,
@@ -76,6 +77,8 @@ export interface GoogleIdentityVerifier {
 }
 
 export interface HostedHttpHandlerOptions {
+  /** Read-only dependency access check. Omission makes readiness fail closed. */
+  readinessCheck?: () => Promise<void>;
   identityVerifier: GoogleIdentityVerifier;
   bootstrapService: OwnerBootstrapService;
   workspaceAuthorizationService: WorkspaceAuthorizationService;
@@ -2659,22 +2662,27 @@ async function handleBillingWebhook(
 
 export function createHostedHttpHandler(options: HostedHttpHandlerOptions) {
   const configuredOrigins = new Set(options.allowedOrigins ?? []);
+  const probeReadiness = createReadinessProbe(options.readinessCheck);
   const dispatch = async (
     request: IncomingMessage,
     response: ServerResponse,
     correlationId: string,
     url: URL,
   ): Promise<void> => {
-    if (options.mcpHttpHandler !== undefined
-      && await options.mcpHttpHandler(request, response, correlationId, url)) {
-      return;
-    }
     if (url.pathname === '/health/ready') {
       if (request.method !== 'GET') {
         writeJson(response, 405, errorBody('METHOD_NOT_ALLOWED', 'Method not allowed.', correlationId), correlationId, { allow: 'GET' });
         return;
       }
-      writeJson(response, 200, { status: 'ready', authority: 'firebase-hosted' }, correlationId);
+      if (await probeReadiness()) {
+        writeJson(response, 200, { status: 'ready', authority: 'firebase-hosted' }, correlationId);
+      } else {
+        writeJson(response, 503, errorBody('SERVICE_UNAVAILABLE', 'The hosted service is not ready.', correlationId), correlationId);
+      }
+      return;
+    }
+    if (options.mcpHttpHandler !== undefined
+      && await options.mcpHttpHandler(request, response, correlationId, url)) {
       return;
     }
     if (url.pathname === '/api/v1/hosted/operations/budget-notice') {
@@ -3125,6 +3133,16 @@ export function createHostedHttpHandler(options: HostedHttpHandlerOptions) {
         errorBody('ORIGIN_NOT_ALLOWED', 'This origin is not allowed.', correlationId),
         correlationId,
       );
+      return;
+    }
+    // Liveness must not restart a healthy process because a dependency or the
+    // operations admission controls are unavailable.
+    if (url.pathname === '/health/live') {
+      if (request.method !== 'GET') {
+        writeJson(response, 405, errorBody('METHOD_NOT_ALLOWED', 'Method not allowed.', correlationId), correlationId, {allow: 'GET'});
+      } else {
+        writeJson(response, 200, {status: 'live', authority: 'firebase-hosted'}, correlationId);
+      }
       return;
     }
     const admissionInput = {

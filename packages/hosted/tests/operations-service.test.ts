@@ -365,7 +365,7 @@ describe('hosted budget signals and paid activation', () => {
 
 describe('hosted Firestore restore-drill evidence', () => {
   it('binds an entire-database PITR restore into an isolated project and rejects chronology tamper', async () => {
-    const evidence = buildHostedRestoreDrillEvidence({
+    const drillInput = {
       drillId: 'drill-2026-08-01',
       evidenceClass: 'synthetic_fixture',
       sourceProject: 'openlinear-production',
@@ -382,12 +382,15 @@ describe('hosted Firestore restore-drill evidence', () => {
         'authorizationEvents',
         'billing', 'billingCheckoutLocks', 'billingCheckoutSessions', 'billingCheckouts',
         'billingIdempotency', 'billingWebhooks', 'collaborationIdempotency', 'comments',
+        'configurationIdempotency', 'creemCheckoutAttempts', 'cycles',
         'entitlements', 'hostedUsers', 'invitationIdempotency', 'invitations', 'issues',
+        'issueObservationIdempotency', 'issueObservers', 'issueSequences',
         'memberships', 'milestones', 'mutationAudits', 'oauthAccessTokens',
         'oauthAuthorizationCodes', 'oauthAuthorizationRequests', 'oauthClients',
         'oauthGrants', 'oauthRefreshTokens', 'oauthTokenFamilies', 'operationsActivation',
         'operationsBudgetSignals', 'operationsBudgetState', 'operationsRestoreDrills',
         'personalTokens', 'pmIdempotency', 'productEvents', 'projects', 'tokenIdempotency',
+        'savedViews', 'teamMemberships', 'teams', 'verificationAccess', 'workflowStatuses',
         'workspaces',
       ].reverse(),
       sourceDocumentCount: 12_345,
@@ -396,8 +399,18 @@ describe('hosted Firestore restore-drill evidence', () => {
       restoredManifestSha256: 'a'.repeat(64),
       applicationSmokePassed: true,
       rulesIsolationPassed: true,
-    }, secret);
+    } satisfies Parameters<typeof buildHostedRestoreDrillEvidence>[0];
+    const evidence = buildHostedRestoreDrillEvidence(drillInput, secret);
     expect(() => assertHostedRestoreDrillEvidence(evidence, secret)).not.toThrow();
+    for (const omitted of ['teams', 'teamMemberships', 'workflowStatuses', 'cycles', 'savedViews',
+      'configurationIdempotency', 'issueObservers', 'issueObservationIdempotency', 'issueSequences',
+      'creemCheckoutAttempts', 'verificationAccess']) {
+      const incomplete = {...evidence, collectionGroups: evidence.collectionGroups.filter(group => group !== omitted)};
+      expect(() => assertHostedRestoreDrillEvidence(incomplete, secret), omitted)
+        .toThrowError(expect.objectContaining({code: 'INVALID_RESTORE_DRILL'}));
+      expect(() => buildHostedRestoreDrillEvidence({...drillInput, collectionGroups: incomplete.collectionGroups}, secret), omitted)
+        .toThrowError(expect.objectContaining({code: 'INVALID_RESTORE_DRILL'}));
+    }
     const context = fixture();
     await expect(context.service.recordRestoreDrill(evidence)).resolves.toEqual({changed: true});
     await expect(context.service.recordRestoreDrill(evidence)).resolves.toEqual({changed: false});

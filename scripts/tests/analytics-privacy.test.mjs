@@ -38,7 +38,7 @@ test('opt-in sends exactly one page view and safe campaign/referrer values', () 
   assert.equal(JSON.stringify(r.events()).includes('SECRET'), false);
 });
 test('authorization, invitations, development and local pages never load analytics', () => {
-  for (const href of ['https://openlinear.qiaosun.me/?oauth_request=secret', 'https://openlinear.qiaosun.me/#invite=secret', 'https://openlinear.qiaosun.me/?code=secret', 'https://openlinear-development.vercel.app/', 'http://localhost:5173/']) {
+  for (const href of ['https://openlinear.qiaosun.me/?oauth_request=secret', 'https://openlinear.qiaosun.me/#invite=secret', 'https://openlinear.qiaosun.me/?code=secret', 'https://openlinear.qiaosun.me/?billing=success&session_id=secret', 'https://openlinear.qiaosun.me/?app&billing=cancelled', 'https://openlinear-development.vercel.app/', 'http://localhost:5173/']) {
     const r = run(href, 'granted');
     assert.equal(r.nodes.length, 0, href);
     assert.equal(r.events().length, 0, href);

@@ -126,6 +126,7 @@
 .ai-mcp-client-card header span { color: var(--ol-text-muted, #8d8d96); font-size: 9px; }
 .ai-mcp-client-card header a { width: 26px; height: 26px; display: grid; place-items: center; border-radius: 4px; color: var(--ol-text-muted, #8d8d96); }
 .ai-mcp-client-card header a:hover { color: inherit; background: var(--ol-surface-subtle, #252529); }
+.ai-mcp-client-note { margin: 0; padding: 10px 12px; color: var(--ol-text-muted, #8d8d96); font-size: 11px; line-height: 1.5; }
 .ai-mcp-command-block { position: relative; min-width: 0; }
 .ai-mcp-command-block pre { min-height: 98px; margin: 0; padding: 12px 58px 12px 12px; overflow: auto; color: var(--ol-text, #dedee2); background: color-mix(in srgb, var(--ol-bg, #111112) 82%, black); font-size: 10px; line-height: 1.65; white-space: pre-wrap; overflow-wrap: anywhere; }
 .ai-mcp-command-block code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }

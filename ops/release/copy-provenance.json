@@ -3,8 +3,18 @@
   "issue": "CT-13",
   "status": "ready_for_accountable_review",
   "review_status": "pending",
-  "source_set_sha256": "84bab4cabbf0f725e3c627dcabee75bb7ed7dd6e11f2844d088bc710015a9702",
+  "source_set_sha256": "46d2b166b80e66f00985be3b54dc070b91744981057ca03af7bfcbc39377013f",
   "entries": [
+    {
+      "path": "apps/web/hosted.html",
+      "sha256": "224eedbade54d7590707a93b43325c25eb47d88344b3d62b8148557e22ac05d4",
+      "size": 1116,
+      "origin": "independently_authored_project_source",
+      "source_reference": "project_source:apps/web/hosted.html",
+      "rights_basis": "First-party project copy; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
     {
       "path": "apps/web/index.html",
       "sha256": "b71c821a79e9902c00a77edfcf9552412c36c971c885dbcfc19d90e0fdfe250a",
@@ -16,9 +26,19 @@
       "review_status": "pending"
     },
     {
+      "path": "apps/web/public/mcp-guide.html",
+      "sha256": "11668c4b0c5e1438d662b1fa16ce3ffe3dbc6cc8cb6ad480d4f83f5889fc511d",
+      "size": 3487,
+      "origin": "independently_authored_project_source",
+      "source_reference": "project_source:apps/web/public/mcp-guide.html",
+      "rights_basis": "First-party project copy; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
       "path": "apps/web/src/ai-mcp-guide.css",
-      "sha256": "ab46f5cea91d48d5a5e2c537643002883527ddf935f744b482b01f2cb20254e9",
-      "size": 9371,
+      "sha256": "d0f8a837e64770bd839e3fd1575555412b78aaed0df7ed5cfab9c4611906b748",
+      "size": 9499,
       "origin": "independently_authored_project_source",
       "source_reference": "project_source:apps/web/src/ai-mcp-guide.css",
       "rights_basis": "First-party project copy; accountable rights review remains pending.",
@@ -27,8 +47,8 @@
     },
     {
       "path": "apps/web/src/ai-mcp-guide.tsx",
-      "sha256": "26f7119d071b31601116ac756bcd51d050d318d976755444c6891fb0f4f92990",
-      "size": 8619,
+      "sha256": "be15cb0449056552e987be1c79daedc73ab6efcae42772c115b3d26d9cd401f7",
+      "size": 8934,
       "origin": "independently_authored_project_source",
       "source_reference": "project_source:apps/web/src/ai-mcp-guide.tsx",
       "rights_basis": "First-party project copy; accountable rights review remains pending.",
@@ -127,8 +147,8 @@
     },
     {
       "path": "apps/web/src/homepage-entry.ts",
-      "sha256": "f4532b109828ff86fd1ecbb960a27a07988b4927d416c72e4946830757a4e2c8",
-      "size": 421,
+      "sha256": "2f55cc32a990f738f26b4c9d6d26737e5a430e0bc83abad4ed32c09075f35807",
+      "size": 735,
       "origin": "independently_authored_project_source",
       "source_reference": "project_source:apps/web/src/homepage-entry.ts",
       "rights_basis": "First-party project copy; accountable rights review remains pending.",
@@ -147,8 +167,8 @@
     },
     {
       "path": "apps/web/src/homepage.tsx",
-      "sha256": "301c074804695f174d78afb8ddd50ab595d2e45c999802c8254a4a62017baba9",
-      "size": 16811,
+      "sha256": "8f0333f6f354709635c0b8edfe3dd8ac825c137e6049c4eb6f85798add84aaa1",
+      "size": 16967,
       "origin": "independently_authored_project_source",
       "source_reference": "project_source:apps/web/src/homepage.tsx",
       "rights_basis": "First-party project copy; accountable rights review remains pending.",
@@ -247,8 +267,8 @@
     },
     {
       "path": "apps/web/src/hosted-workspace.tsx",
-      "sha256": "58769026fae9c54fc36d50c41bd2e7a9b47a0074fbe673f3a9b08aba7e718ed6",
-      "size": 127029,
+      "sha256": "80bce64806a40d48e05d901e9e09d4d91a3c75d51be1e7502fba15cd1b2f096c",
+      "size": 127256,
       "origin": "independently_authored_project_source",
       "source_reference": "project_source:apps/web/src/hosted-workspace.tsx",
       "rights_basis": "First-party project copy; accountable rights review remains pending.",
