@@ -69,6 +69,23 @@ scannerTest('detects credentials removed from the current tree but still in hist
   assert.ok(!JSON.stringify(report).includes(credential), 'Reports must redact credentials');
 });
 
+scannerTest('limits the workflow fixture exception to its exact path and value', async (t) => {
+  const root = await fixture(t);
+  const path = 'packages/hosted/tests/workspace-configuration-service.test.ts';
+  const fixtureId = ['integrity', 'defaults', 'key', '0001'].join('-');
+  const synthetic = `const idempotencyKey = '${fixtureId}';\n`;
+  await write(root, path, synthetic);
+  assert.equal((await auditSecrets(root, {binary, config})).status, 'PASS');
+  await write(root, 'packages/hosted/src/credential.ts', synthetic);
+  let report = await auditSecrets(root, {binary, config});
+  assert.ok(report.findings.some(finding => finding.path === 'packages/hosted/src/credential.ts'));
+  const credential = randomBytes(32).toString('base64url');
+  await write(root, path, `${synthetic}const api_key = '${credential}';\n`);
+  report = await auditSecrets(root, {binary, config});
+  assert.ok(report.findings.some(finding => finding.path === path && finding.rule === 'generic-api-key'));
+  assert.ok(!JSON.stringify(report).includes(credential));
+});
+
 scannerTest('detects staged-only secrets and new untracked files, including tests and docs', async (t) => {
   const root = await fixture(t);
   const credential = 'ghp_' + randomBytes(18).toString('hex');
