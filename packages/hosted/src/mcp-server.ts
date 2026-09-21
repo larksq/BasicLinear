@@ -762,7 +762,7 @@ function validateMirroredHeaders(request: IncomingMessage, rpc: JsonRpcRequest):
 function validateStandardHeaders(
   request: IncomingMessage,
   method: string,
-  initialize = false,
+  proposedVersion?: string,
 ): void {
   let version: string | null;
   let mirroredMethod: string | null;
@@ -772,8 +772,8 @@ function validateStandardHeaders(
   } catch {
     throw headerMismatch();
   }
-  if ((!initialize && version !== mcpStandardProtocolVersion)
-    || (initialize && version !== null && version !== mcpStandardProtocolVersion)
+  if ((proposedVersion === undefined && version !== mcpStandardProtocolVersion)
+    || (proposedVersion !== undefined && version !== null && version !== proposedVersion)
     || (mirroredMethod !== null && mirroredMethod !== method)) {
     throw new McpHttpError(400, -32022, 'Unsupported protocol version', {
       supported: [mcpStandardProtocolVersion],
@@ -1575,13 +1575,13 @@ export function createMcpHttpHandler(options: McpHttpHandlerOptions): McpHttpHan
           initialize.params, ['protocolVersion', 'capabilities', 'clientInfo', '_meta'],
           ['protocolVersion', 'capabilities', 'clientInfo'],
         );
-        if (params.protocolVersion !== mcpStandardProtocolVersion
+        if (!metadataString(params.protocolVersion, 1, 32)
           || record(params.capabilities) === null || !validClientInfo(params.clientInfo)) {
-          throw new McpHttpError(400, -32022, 'Unsupported protocol version', {
-            supported: [mcpStandardProtocolVersion], requested: params.protocolVersion,
-          });
+          throw invalidParams();
         }
-        validateStandardHeaders(request, candidateMethod, true);
+        // An initialize proposal is not an agreed version. Advertise the standard
+        // version we support so compatible clients can negotiate down to it.
+        validateStandardHeaders(request, candidateMethod, params.protocolVersion);
         const grant = await options.oauthService.authenticateAccessToken(bearer(request));
         writeJson(response, 200, {
           jsonrpc: '2.0', id: initialize.id, result: {

@@ -271,6 +271,69 @@ function standardMcpHeaders(extra: Record<string, string | string[]> = {}): Reco
 }
 
 describe('MCP 2026-07-28 Streamable HTTP adapter', () => {
+  it.each(['2025-06-18', '2025-11-25', '2024-11-05', '2030-01-01'].flatMap((version) => (
+    [false, true].map((withHeader) => ({version, withHeader}))
+  )))('negotiates $version with initialization header=$withHeader', async ({version, withHeader}) => {
+    const context = fixture();
+    const handler = context.createHandler();
+    const tokens = await context.issueToken('workspace:read');
+    const authorization = {authorization: `Bearer ${tokens.access_token}`};
+    const headers: Record<string, string> = {
+      accept: 'application/json, text/event-stream', 'content-type': 'application/json', ...authorization,
+      ...(withHeader ? {'mcp-protocol-version': version} : {}),
+    };
+    const initialized = await context.invoke(handler, 'POST', '/mcp', headers, JSON.stringify({
+      jsonrpc: '2.0', id: 1, method: 'initialize', params: {
+        protocolVersion: version, capabilities: {}, clientInfo: {name: 'SDK compatibility regression', version: '1'},
+      },
+    }));
+    expect(initialized.status).toBe(200);
+    expect(initialized.body).toMatchObject({id: 1, result: {protocolVersion: '2025-06-18'}});
+    expect(initialized.headers['mcp-protocol-version']).toBe('2025-06-18');
+    const ready = await context.invoke(handler, 'POST', '/mcp', standardMcpHeaders(authorization), JSON.stringify({
+      jsonrpc: '2.0', method: 'notifications/initialized',
+    }));
+    expect(ready.status).toBe(202);
+    const listed = await context.invoke(handler, 'POST', '/mcp', standardMcpHeaders(authorization), JSON.stringify({
+      jsonrpc: '2.0', id: 2, method: 'tools/list', params: {},
+    }));
+    expect(listed.status).toBe(200);
+    if (version !== '2025-06-18') {
+      const wrongVersion = await context.invoke(handler, 'POST', '/mcp', {
+        ...standardMcpHeaders(authorization), 'mcp-protocol-version': version,
+      }, JSON.stringify({jsonrpc: '2.0', id: 3, method: 'ping'}));
+      expect(wrongVersion.status).toBe(400);
+    }
+  });
+
+  it.each([null, 20250618, '', 'v'.repeat(33), '2025\n06\n18'])('rejects malformed initialization version %j', async (version) => {
+    const context = fixture();
+    const result = await context.invoke(context.createHandler(), 'POST', '/mcp', standardMcpHeaders(), JSON.stringify({
+      jsonrpc: '2.0', id: 1, method: 'initialize', params: {
+        protocolVersion: version, capabilities: {}, clientInfo: {name: 'Invalid version', version: '1'},
+      },
+    }));
+    expect(result.status).toBe(400);
+    expect(result.body).toMatchObject({id: 1, error: {code: -32602}});
+  });
+
+  it('rejects conflicting or duplicate initialization headers and still authenticates negotiated clients', async () => {
+    const context = fixture();
+    const body = JSON.stringify({jsonrpc: '2.0', id: 1, method: 'initialize', params: {
+      protocolVersion: '2025-11-25', capabilities: {}, clientInfo: {name: 'Untrusted client', version: '1'},
+    }});
+    for (const version of ['2025-06-18', ['2025-11-25', '2025-11-25']]) {
+      const response = await context.invoke(context.createHandler(), 'POST', '/mcp', {
+        ...standardMcpHeaders(), 'mcp-protocol-version': version,
+      }, body);
+      expect(response.status).toBe(400);
+    }
+    const unauthenticated = await context.invoke(context.createHandler(), 'POST', '/mcp', {
+      ...standardMcpHeaders(), 'mcp-protocol-version': '2025-11-25',
+    }, body);
+    expect(unauthenticated.status).toBe(401);
+  });
+
   it('negotiates the standard MCP lifecycle and injects the OAuth-bound workspace for Codex clients', async () => {
     const context = fixture();
     const handler = context.createHandler();
