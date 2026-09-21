@@ -1,0 +1,195 @@
+{
+  "capturedAt": "2026-09-15T01:05:19.374Z",
+  "project": "openlinear-online",
+  "sourceDeployment": "dpl_ByUZBAonF5SnMbZwd2ZqEq95Hw1G",
+  "requestedWindow": {
+    "since": "2026-09-08T00:27:00Z",
+    "until": "2026-09-15T00:27:00Z"
+  },
+  "effectiveQuery": {
+    "metric": "vercel.request.count",
+    "aggregation": "sum",
+    "groupBy": [
+      "request_path"
+    ],
+    "filter": "environment eq 'production' and route eq '/404.html'",
+    "startTime": "2026-09-08T00:00:00.000Z",
+    "endTime": "2026-09-15T04:00:00.000Z",
+    "granularity": {
+      "hours": 4
+    }
+  },
+  "note": "Vercel rounds the query to four-hour buckets. Totals reconcile with the original 316-request dashboard baseline: the /404.html route contains 79 requests. This is route attribution, not all HTTP 404 responses. Bot classifications are independent of path classifications.",
+  "paths": [
+    {
+      "vercel_request_count_sum": 10,
+      "request_path": "/favicon.ico"
+    },
+    {
+      "vercel_request_count_sum": 5,
+      "request_path": "/robots.txt"
+    },
+    {
+      "vercel_request_count_sum": 3,
+      "request_path": "/assets/js/auth.js"
+    },
+    {
+      "vercel_request_count_sum": 3,
+      "request_path": "/assets/js/message.js"
+    },
+    {
+      "vercel_request_count_sum": 3,
+      "request_path": "/assets/js/qr_modal.js"
+    },
+    {
+      "vercel_request_count_sum": 3,
+      "request_path": "/bot-connect.js"
+    },
+    {
+      "vercel_request_count_sum": 3,
+      "request_path": "/css/support_parent.css"
+    },
+    {
+      "vercel_request_count_sum": 3,
+      "request_path": "/js/antibot-client.js"
+    },
+    {
+      "vercel_request_count_sum": 3,
+      "request_path": "/js/lkk_ch.js"
+    },
+    {
+      "vercel_request_count_sum": 3,
+      "request_path": "/js/qrcode_twint.js"
+    },
+    {
+      "vercel_request_count_sum": 3,
+      "request_path": "/js/raif_ch.js"
+    },
+    {
+      "vercel_request_count_sum": 3,
+      "request_path": "/js/twint_ch.js"
+    },
+    {
+      "vercel_request_count_sum": 3,
+      "request_path": "/licensor.js"
+    },
+    {
+      "vercel_request_count_sum": 3,
+      "request_path": "/static/style/protect/index.js"
+    },
+    {
+      "vercel_request_count_sum": 3,
+      "request_path": "/static/style/sys_files/index.js"
+    },
+    {
+      "vercel_request_count_sum": 2,
+      "request_path": "/.DS_Store"
+    },
+    {
+      "vercel_request_count_sum": 2,
+      "request_path": "/___proxy_subdomain_whm/login"
+    },
+    {
+      "vercel_request_count_sum": 2,
+      "request_path": "/config.json"
+    },
+    {
+      "vercel_request_count_sum": 2,
+      "request_path": "/open/visitors/info/gets"
+    },
+    {
+      "vercel_request_count_sum": 2,
+      "request_path": "/server-status"
+    },
+    {
+      "vercel_request_count_sum": 1,
+      "request_path": "/.env"
+    },
+    {
+      "vercel_request_count_sum": 1,
+      "request_path": "/.git/config"
+    },
+    {
+      "vercel_request_count_sum": 1,
+      "request_path": "/___proxy_subdomain_cpanel"
+    },
+    {
+      "vercel_request_count_sum": 1,
+      "request_path": "/about"
+    },
+    {
+      "vercel_request_count_sum": 1,
+      "request_path": "/actuator/env"
+    },
+    {
+      "vercel_request_count_sum": 1,
+      "request_path": "/ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application"
+    },
+    {
+      "vercel_request_count_sum": 1,
+      "request_path": "/health"
+    },
+    {
+      "vercel_request_count_sum": 1,
+      "request_path": "/info.php"
+    },
+    {
+      "vercel_request_count_sum": 1,
+      "request_path": "/login.action"
+    },
+    {
+      "vercel_request_count_sum": 1,
+      "request_path": "/products.json"
+    },
+    {
+      "vercel_request_count_sum": 1,
+      "request_path": "/s/1363e21323e26373e26373/_/;/META-INF/maven/com.atlassian.jira/jira-webapp-dist/pom.properties"
+    },
+    {
+      "vercel_request_count_sum": 1,
+      "request_path": "/server"
+    },
+    {
+      "vercel_request_count_sum": 1,
+      "request_path": "/telescope/requests"
+    },
+    {
+      "vercel_request_count_sum": 1,
+      "request_path": "/trace.axd"
+    },
+    {
+      "vercel_request_count_sum": 1,
+      "request_path": "/v2/_catalog"
+    }
+  ],
+  "botCategories": [
+    {
+      "vercel_request_count_sum": 46,
+      "bot_category": "browser_impersonation"
+    },
+    {
+      "vercel_request_count_sum": 18,
+      "bot_category": "scanner"
+    },
+    {
+      "vercel_request_count_sum": 9,
+      "bot_category": ""
+    },
+    {
+      "vercel_request_count_sum": 3,
+      "bot_category": "http_client"
+    },
+    {
+      "vercel_request_count_sum": 1,
+      "bot_category": "ai_assistant"
+    },
+    {
+      "vercel_request_count_sum": 1,
+      "bot_category": "ai_crawler"
+    },
+    {
+      "vercel_request_count_sum": 1,
+      "bot_category": "webhook"
+    }
+  ]
+}

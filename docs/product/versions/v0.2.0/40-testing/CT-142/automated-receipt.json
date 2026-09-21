@@ -1,0 +1,98 @@
+{
+  "schema_version": "ct142-automated-receipt-v1",
+  "captured_at": "2026-08-26T03:38:56Z",
+  "scope": "nonsecurity_only",
+  "verdict": "PASSED_WITH_REQUIRED_SECURITY_SKIP",
+  "exact_selected_test_command": "node scripts/tests/ct142-nonsecurity-gates.mjs",
+  "runs": [
+    {
+      "id": "integrated-journey",
+      "command": "See the integrated-journey group in scripts/tests/ct142-nonsecurity-gates.mjs",
+      "status": "passed",
+      "files_passed": 1,
+      "tests_passed": 1,
+      "coverage": [
+        "Google owner bootstrap retry",
+        "exact 30 x 24 hour trial",
+        "owner invitation and member acceptance",
+        "two active seats",
+        "single-assignee issue",
+        "member update and durable comment",
+        "monthly $2-per-seat fixture for $4 total",
+        "active paid subscription",
+        "unpaid Free fallback with owner continuity and paused member/automation writes"
+      ]
+    },
+    {
+      "id": "core-positive-paths",
+      "command": "See the exact core-positive-paths files and --testNamePattern in scripts/tests/ct142-nonsecurity-gates.mjs",
+      "status": "passed",
+      "files_passed": 4,
+      "tests_passed": 13,
+      "tests_skipped_by_positive_name_filter": 49
+    },
+    {
+      "id": "automation-positive-paths",
+      "command": "See the exact automation-positive-paths files and --testNamePattern in scripts/tests/ct142-nonsecurity-gates.mjs",
+      "status": "passed",
+      "files_passed": 4,
+      "tests_passed": 9,
+      "tests_skipped_by_positive_name_filter": 14
+    },
+    {
+      "id": "web-positive-paths",
+      "command": "See the exact web-positive-paths files and --testNamePattern in scripts/tests/ct142-nonsecurity-gates.mjs",
+      "status": "passed",
+      "files_passed": 6,
+      "tests_passed": 14,
+      "tests_skipped_by_positive_name_filter": 6
+    },
+    {
+      "id": "evidence-positive-paths",
+      "command": "See the exact evidence-positive-paths files and --testNamePattern in scripts/tests/ct142-nonsecurity-gates.mjs",
+      "status": "passed",
+      "files_passed": 4,
+      "tests_passed": 9,
+      "tests_skipped_by_positive_name_filter": 18
+    },
+    {
+      "id": "workspace-typecheck",
+      "command": "npm run typecheck",
+      "status": "passed",
+      "workspace_scripts_passed": 11
+    },
+    {
+      "id": "production-build",
+      "command": "npm run build",
+      "status": "passed",
+      "local_modules": 1953,
+      "hosted_modules": 30,
+      "hosted_assets": [
+        "hosted-BzId5ayJ.css",
+        "hosted-i5pNlIVL.js",
+        "hosted.html"
+      ]
+    }
+  ],
+  "totals": {
+    "selected_test_files_passed": 19,
+    "selected_tests_passed": 46,
+    "workspace_typechecks_passed": 11,
+    "builds_passed": 1
+  },
+  "not_run": [
+    "security tests",
+    "adversarial or hostile-input tests",
+    "Firestore security-rules emulator",
+    "cross-workspace attack simulations",
+    "token, invitation, webhook, origin, replay, enumeration, or parser attack matrices",
+    "full regression suite",
+    "security or vulnerability audit"
+  ],
+  "claims": {
+    "full_regression": false,
+    "security": false,
+    "provider_or_deployment": false,
+    "outcomes": false
+  }
+}

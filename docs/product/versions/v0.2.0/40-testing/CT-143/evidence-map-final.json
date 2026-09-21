@@ -1,0 +1,80 @@
+{
+  "schema_version": "ct143-test-evidence-v2",
+  "stage": "testing.evidence-map",
+  "status": "passed",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled_not_synced",
+    "linear_used": false
+  },
+  "implementation_handoff_ref": "docs/product/versions/v0.2.0/30-implementation/CT-143/remediation-handoff.json",
+  "implementation_actor_ids": ["codex-primary"],
+  "implementation_session_ids": ["CT143-IMPLEMENTATION-20260827", "CT143-REMEDIATION-P3-20260827"],
+  "independent_acceptance": {
+    "status": "accepted",
+    "independent": true,
+    "decision_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/decision.md",
+    "authorized_by": "sponsor current Codex task 2026-08-27",
+    "evidence_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/review-2.md",
+    "actor_id": "codex-testing-ct143-independent",
+    "session_id": "CT143-INDEPENDENT-REMEDIATION-REVIEW-20260827"
+  },
+  "required_surfaces": ["automated", "manual", "uat", "regression"],
+  "issues": [
+    {
+      "issue_id": "CT-143",
+      "requirement_refs": ["CT143-R1", "CT143-R2", "CT143-R3", "CT143-R4", "CT143-R5", "CT143-R6", "CT143-R7"],
+      "acceptance_refs": ["CT143-AC1", "CT143-AC2", "CT143-AC3", "CT143-AC4", "CT143-AC5", "CT143-AC6", "CT143-AC7"]
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "CT143-POSITIVE-AUTOMATED",
+      "surface": "automated",
+      "status": "passed",
+      "issue_refs": ["CT-143"],
+      "requirement_refs": ["CT143-R1", "CT143-R2", "CT143-R3", "CT143-R4", "CT143-R5", "CT143-R7"],
+      "acceptance_refs": ["CT143-AC1", "CT143-AC2", "CT143-AC3", "CT143-AC4", "CT143-AC5", "CT143-AC7"],
+      "evidence_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/automated-receipt.json"
+    },
+    {
+      "check_id": "CT143-CHROME-MANUAL",
+      "surface": "manual",
+      "status": "passed",
+      "issue_refs": ["CT-143"],
+      "requirement_refs": ["CT143-R1", "CT143-R2", "CT143-R3", "CT143-R4", "CT143-R5", "CT143-R6", "CT143-R7"],
+      "acceptance_refs": ["CT143-AC1", "CT143-AC2", "CT143-AC3", "CT143-AC4", "CT143-AC5", "CT143-AC6", "CT143-AC7"],
+      "evidence_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/production-uat-review-1.json"
+    },
+    {
+      "check_id": "CT143-POSITIVE-REGRESSION",
+      "surface": "regression",
+      "status": "passed",
+      "issue_refs": ["CT-143"],
+      "requirement_refs": ["CT143-R1", "CT143-R2", "CT143-R3", "CT143-R4", "CT143-R5", "CT143-R7"],
+      "acceptance_refs": ["CT143-AC1", "CT143-AC2", "CT143-AC3", "CT143-AC4", "CT143-AC5", "CT143-AC7"],
+      "evidence_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/automated-receipt.json"
+    },
+    {
+      "check_id": "CT143-INDEPENDENT-UAT",
+      "surface": "uat",
+      "status": "passed",
+      "issue_refs": ["CT-143"],
+      "requirement_refs": ["CT143-R1", "CT143-R2", "CT143-R3", "CT143-R4", "CT143-R5", "CT143-R6", "CT143-R7"],
+      "acceptance_refs": ["CT143-AC1", "CT143-AC2", "CT143-AC3", "CT143-AC4", "CT143-AC5", "CT143-AC6", "CT143-AC7"],
+      "evidence_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/review-2.md"
+    }
+  ],
+  "bug_loops": [
+    {
+      "bug_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/review-1.md#findings",
+      "implementation_fix_ref": "docs/product/versions/v0.2.0/30-implementation/CT-143/remediation-p3-session.json",
+      "focused_rerun_ref": "apps/web/tests/hosted-session-refresh.test.ts",
+      "regression_rerun_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/automated-receipt.json",
+      "status": "resolved"
+    }
+  ],
+  "outcome_status": "pending",
+  "blockers": []
+}

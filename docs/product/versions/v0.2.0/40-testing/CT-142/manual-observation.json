@@ -1,0 +1,47 @@
+{
+  "schema_version": "ct142-manual-observation-v1",
+  "captured_at": "2026-08-26T03:38:56Z",
+  "scope": "nonsecurity_local_hosted_entry_observation",
+  "environment": {
+    "surface": "Codex in-app browser",
+    "url": "http://127.0.0.1:4186/hosted.html",
+    "provider_calls": false,
+    "login_submitted": false,
+    "external_state_changed": false
+  },
+  "observations": [
+    {
+      "viewport": "1440x900",
+      "status": "passed",
+      "horizontal_overflow": false,
+      "unnamed_interactive_controls": 0,
+      "heading_order": ["h1", "h2"],
+      "visible_copy": [
+        "OpenLinear Online",
+        "Plan the work. Bring the team.",
+        "Continue with Google",
+        "30 days",
+        "$2 per user / month",
+        "$12 per user / year",
+        "Firebase-hosted data is a separate authority from the local app"
+      ]
+    },
+    {
+      "viewport": "390x844",
+      "status": "passed",
+      "horizontal_overflow": false,
+      "document_height_px": 1391,
+      "google_sign_in_within_viewport_width": true,
+      "focusable_named_controls": ["Home", "Continue with Google"],
+      "visible_copy": ["30 days", "$2 per user / month", "$12 per user / year"]
+    }
+  ],
+  "keyboard_boundary": {
+    "actual_tab_traversal_claimed": false,
+    "reason": "The browser locator did not produce a reliable actual Tab sequence, so the observation claims only named enabled native focus targets. Existing selected UI tests cover native controls and delayed Save focus behavior."
+  },
+  "cleanup": {
+    "browser_tab_closed": true,
+    "loopback_server_stopped": true
+  }
+}

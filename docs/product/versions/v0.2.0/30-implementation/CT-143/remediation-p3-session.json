@@ -1,0 +1,55 @@
+{
+  "schema_version": "ct143-remediation-session-v1",
+  "session_id": "CT143-REMEDIATION-P3-20260827",
+  "actor_id": "codex-primary",
+  "captured_at": "2026-08-27T05:22:31Z",
+  "issue": "CT-143",
+  "finding_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/review-1.md#findings",
+  "mode": "code_mutating",
+  "scope": "refresh one stale Firebase ID token after a trusted 401 and retry the exact same idempotent hosted request without losing its draft",
+  "changed_files": [
+    "apps/web/src/hosted-auth.ts",
+    "apps/web/src/hosted-api.ts",
+    "apps/web/src/hosted-app.tsx",
+    "apps/web/tests/hosted-auth.test.ts",
+    "apps/web/tests/hosted-session-refresh.test.ts",
+    "scripts/tests/ct143-nonsecurity-gates.mjs",
+    "scripts/prepare-ct143-review.mjs",
+    "ops/hosted/environments/development.json",
+    "ops/hosted/environments/production.json",
+    "ops/hosted/README.md"
+  ],
+  "behavior": {
+    "trigger": "401 AUTHENTICATION_REQUIRED on a same-origin request already carrying a Firebase bearer token",
+    "recovery": "force-refresh the current verified Google user's Firebase ID token, publish it to the mounted owner session, and retry once",
+    "mutation_safety": "reuse the exact request body and idempotency key; never retry more than once",
+    "no_user": "return the original bounded authentication error without retry"
+  },
+  "checks": [
+    "3 focused files / 9 tests passed",
+    "CT-143 runner: 12 file selections / 19 selected tests passed",
+    "11/11 workspace typechecks passed",
+    "full production build passed at 1,953 local / 1,821 hosted modules",
+    "environment validator passed",
+    "diff check passed",
+    "development and production Vercel aliases returned HTTP 200"
+  ],
+  "deployments": {
+    "development": {
+      "id": "dpl_2qQ9nJEyiTQobwngbMozPN7CGJ6M",
+      "url": "https://openlinear-development.vercel.app",
+      "ready": true
+    },
+    "production": {
+      "id": "dpl_DXVv1pV7eijjWwAwiDdj2pLJc1Um",
+      "url": "https://openlinear-gray.vercel.app",
+      "ready": true
+    }
+  },
+  "claim_boundary": {
+    "security_testing": "not performed",
+    "payment_testing": "not performed",
+    "backend_or_database_changed": false,
+    "outcome_or_release_approval": false
+  }
+}

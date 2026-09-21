@@ -1,0 +1,13 @@
+{
+  "auth": {
+    "providers": {
+      "anonymous": false,
+      "emailPassword": false,
+      "googleSignIn": {
+        "oAuthBrandDisplayName": "OpenLinear",
+        "supportEmail": "larksq@gmail.com",
+        "authorizedRedirectUris": []
+      }
+    }
+  }
+}

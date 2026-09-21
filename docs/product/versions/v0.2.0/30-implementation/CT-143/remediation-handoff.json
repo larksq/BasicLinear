@@ -1,0 +1,46 @@
+{
+  "schema_version": "ct143-remediation-handoff-v1",
+  "prepared_at": "2026-08-27T05:22:31Z",
+  "stage": "implementation",
+  "status": "ready_for_independent_testing",
+  "issue": {
+    "identifier": "CT-143",
+    "stable_id": "1f065874-a1d3-433b-ae4e-63b9d69c8d4d",
+    "revision": 7,
+    "ct_status": "In Progress",
+    "milestone": "S4 — Testing"
+  },
+  "finding": {
+    "severity": "P3",
+    "review_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/review-1.md",
+    "behavior": "an already-open authenticated production tab could submit with an expired cached Firebase ID token"
+  },
+  "implementation": {
+    "actor_id": "codex-primary",
+    "session_id": "CT143-REMEDIATION-P3-20260827",
+    "session_ref": "docs/product/versions/v0.2.0/30-implementation/CT-143/remediation-p3-session.json",
+    "output": "one refresh-and-retry on trusted authentication failure, exact body/idempotency preservation, mounted owner-token update, bounded no-user failure"
+  },
+  "checks": {
+    "focused": "3 files / 9 tests passed",
+    "ct143_positive": "12 file selections / 19 selected tests passed",
+    "typecheck": "11/11 passed",
+    "build": "1,953 local / 1,821 hosted modules passed",
+    "environment_validator": "passed",
+    "deployment_readback": "development and production READY; both aliases HTTP 200"
+  },
+  "deployments": {
+    "development": "dpl_2qQ9nJEyiTQobwngbMozPN7CGJ6M",
+    "production": "dpl_DXVv1pV7eijjWwAwiDdj2pLJc1Um"
+  },
+  "claim_boundary": {
+    "security_or_adversarial_testing": "not performed",
+    "payment_or_provider_testing": "not performed",
+    "outcomes": "pending",
+    "release_approval": false
+  },
+  "next": {
+    "skill": "ct-test-sprint",
+    "action": "Run a separately independent remediation review against the new exact candidate and deployed production readback."
+  }
+}

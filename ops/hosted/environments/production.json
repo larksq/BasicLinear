@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "openlinear.hosted-environment.v1",
+  "deploymentEnvironment": "production",
+  "hostedControlEnvironment": "production",
+  "firebaseProjectId": "openlinear-prod-larksq",
+  "firebaseWebAppId": "1:1073376700903:web:ef4a5cd62c3cbabee2f542",
+  "firebaseAuthDomain": "openlinear-prod-larksq.firebaseapp.com",
+  "firestoreDatabaseId": "(default)",
+  "firestoreDeleteProtection": "enabled",
+  "googleSignInEnabled": true,
+  "googleCloudBillingEnabled": true,
+  "stripeMode": "live",
+  "paymentMode": "creem",
+  "stripeConnected": false,
+  "verificationAccountCount": 1,
+  "backend": {
+    "provider": "google-cloud-run",
+    "region": "us-central1",
+    "service": "openlinear-hosted-api",
+    "status": "deployed",
+    "url": "https://openlinear-hosted-api-1073376700903.us-central1.run.app",
+    "revision": "openlinear-hosted-api-00013-g79"
+  },
+  "frontend": {
+    "provider": "vercel",
+    "project": "openlinear-online",
+    "providerStatus": "ready",
+    "url": "https://openlinear-gray.vercel.app",
+    "deploymentId": "dpl_F8P4wRvQq8zfJcSHv3JdJvPHp5pD",
+    "deployedAt": "2026-09-18T07:02:38.409000Z",
+    "customDomain": "https://openlinear.qiaosun.me",
+    "customDomainStatus": "https_and_auth_verified"
+  },
+  "deploymentState": "deployed_verification_payment_mode",
+  "creemConnected": true,
+  "creemMode": "live",
+  "paidCheckoutActivation": "blocked-missing-first-customer-review"
+}

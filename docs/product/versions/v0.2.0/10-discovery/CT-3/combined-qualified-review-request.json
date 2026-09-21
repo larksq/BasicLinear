@@ -1,0 +1,306 @@
+{
+  "schema_version": "qualified-combined-boundary-review-request-v1",
+  "prepared_at": "2026-08-27T05:52:20.885Z",
+  "issue": {
+    "identifier": "CT-3",
+    "stable_id": "a1a09256-3273-4f2f-9f8a-e74f5589325d",
+    "expected_revision": 45,
+    "expected_status": "Todo",
+    "expected_milestone": "S1 — Discovery"
+  },
+  "status": "qualified_review_required",
+  "candidate": {
+    "product": "combined OpenLinear v0.1 local + v0.2 hosted",
+    "evidence_file_count": 55,
+    "evidence_set_sha256": "5b3104e4ef601497ef39dc5ffbb5f7ede84b7ca96fe697df97d1ef2776d7fa82",
+    "ct143_candidate_file_count": 573,
+    "ct143_candidate_aggregate_sha256": "1e4b7c6d633a2feee7f0a2644a3f998002aab0bf42da9bb739a4eab66b8b47a9",
+    "ct143_independent_review": "PASS; P0/P1/P2/P3 all zero after one closed P3 remediation loop; CT-143 revision 8 Done",
+    "worktree_state": "uncommitted combined candidate; exact evidence is bound by content digests rather than an inferred clean Git revision"
+  },
+  "sponsor_inputs": {
+    "license": "AGPL-3.0-only",
+    "project_identity": "Scopefold",
+    "requested_final_product_brand": "OpenLinear",
+    "trial": "one-time exact 30-day Pro access",
+    "monthly_price": "USD $2 per active user per month",
+    "annual_price": "USD $12 per active user per year",
+    "verification_accounts": "no-charge Pro through 9999-12-31T23:59:59.999Z with Checkout disabled"
+  },
+  "review_scopes": [
+    "license_identity_clean_room",
+    "local_hosted_authority",
+    "commercial_payment_boundary",
+    "privacy_security_data_handling",
+    "pm_automation_and_exclusions",
+    "evidence_and_claim_boundary"
+  ],
+  "explicit_gaps": [
+    "CT-142 Option A is selected and its exact external-review handoff is prepared: the full public paid-launch contract is preserved, but signed external R-204/R-219 evidence and full P-T210 reconciliation remain absent.",
+    "Stripe Checkout, subscriptions, charges, and live payment verification were not performed.",
+    "O-001 through O-005 and O-201 through O-204 are not outcome-proven; hosted observation windows have not matured.",
+    "CT-13 accountable release approval is separate and remains pending."
+  ],
+  "excluded_product_scope": [
+    "AI agents",
+    "code review",
+    "repositories",
+    "pull requests",
+    "local/cloud synchronization",
+    "presence",
+    "custom roles",
+    "SSO or SCIM",
+    "attachments",
+    "mentions",
+    "notifications"
+  ],
+  "evidence": [
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "2a7d172ceae6be4c95018e42bef58dddb561d17cbc305acde5c47cd6ee9648f4"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "acc05c67ce58808cf1bc47f4b46b0ccb82599e16314ee0700e9ac77cf326ac8b"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "19ec59372c85259cc14258c9f4187968a078ab263f79313a9247ee2bb450ff67"
+    },
+    {
+      "path": "design-qa.md",
+      "sha256": "4f4949ff4a17f202198257af2647e3289dc780df723886b7347a046e5315bad0"
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/clean-room-policy.md",
+      "sha256": "b61006b71881b872b75c31c3e18ce390d23036cd376996aecc23e2fedd95980b"
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/decision-record.md",
+      "sha256": "96e9ddb1249d14ee5e27a193acbe89d9901cf0e767ddff29761739e3627e84f6"
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/evidence.md",
+      "sha256": "7f679817a6d6d46493d1964fcbe86aae0778f6a879b394f1edfe15851e3663b6"
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/license-comparison.md",
+      "sha256": "a951d8bdc242e30be9749263ba4b239a9564b7188fd7d173ff48fa423bfaaeac"
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/name-screen.md",
+      "sha256": "623642d73ac80f4166dafe49f8df2113601869a4545a02050d9e811d434f6fa9"
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-request.json",
+      "sha256": "f90c1c383acc5e43e8509cc21d28d3065a065b0f349660696b711efd0e320bee"
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/source-register.json",
+      "sha256": "8ec0e10843c3604d19d44b5135f690af9057c123c4d01a0d5044811d14aa7da4"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/10-discovery/CT-3/combined-qualified-review-guide.md",
+      "sha256": "f5307e3637bc1457638f50a822068d973549b9e753089ffddd7f422341aa2e59"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/10-discovery/discovery-package.json",
+      "sha256": "d47f179f0d7982a60f006047766e9348aa95b4f257dfe9095edd26af27ac2f50"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/10-discovery/outcomes.md",
+      "sha256": "e11bfb3546fe076b5caaeac9af696d8ac10fc2cbaaaa378c3b8f63150048fee4"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/10-discovery/requirements-analysis.md",
+      "sha256": "4ad18bac09c7e2798988c25730813db3a19cee79a51cc555b790c802a7f23939"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/20-planning/acceptance-criteria.md",
+      "sha256": "100b70b6d844d9ef7d6dd21f8dcef35db4eb0c2a6c45b9925f68634f1ee173c3"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/20-planning/combined-release-gates.md",
+      "sha256": "d02b8bef1d599cfdabf97287c1cdc951ce29bd1c28e683928fb4e1bb8785f97d"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/20-planning/ct142-security-skip-resolution-options.md",
+      "sha256": "f40926e2ecc3944422366fd9eb48c215cd8348a5d055babb9549f65376d36e2d"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/20-planning/ct142-security-skip-sponsor-decision.json",
+      "sha256": "e66852c3488a4946f5b3f287b5c55f13669e252a835aa7eb27f92090670b91fd"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/20-planning/ct142-security-skip-sponsor-decision.template.json",
+      "sha256": "2ac31ab01aee4dea7a91f9e61b4c27c125eef6374b03f71550c1a912c7121de9"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/20-planning/planning-package.json",
+      "sha256": "4dbf36c44d7f7520a359e89e22859204c2443fc54b3d40c6651f9af67ee2a016"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/20-planning/risk-analysis.md",
+      "sha256": "625559b99705320744227bbb8239ab22142d98eb06c24311843321a98b6ba975"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/checkpoint.json",
+      "sha256": "53858ae9c0ee2c70c5bc5aaab0ca13f0b1aa991c42249972e33f77b767ff7d0c"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/environment-separation.md",
+      "sha256": "ed5c00a25ba6a2fa5d0599c3aaa28c0b2b08c357bb85397425cc4b20206e1820"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/remediation-handoff.json",
+      "sha256": "ca279505ea38844b3bc7f4952b0bea286971cebb7a107eddd01edc2c9aece2a2"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/remediation-p3-session.json",
+      "sha256": "c3f409fb30f37de8eae02c8db55379dfccf043e256c2ee4b2ca50264112374e6"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-142/evidence-map.json",
+      "sha256": "d59afdbe3de82974bfa2b766134ce46b512da20cfa10f0b8e9f1845ea3b33632"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-142/external-security-result.template.json",
+      "sha256": "33b9abc544496534ea80b8ecf87942ed09fd708fc3c240f88b813c389e9654e5"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-142/external-security-result.template.json.sha256",
+      "sha256": "e09f42cdb4e51994e5ed82834c1280b4ac22cafc5b781e6ea7f5f263e9263f01"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-142/external-security-review-request.json",
+      "sha256": "823ae1d62d5d3be2eded62b790ab2fb9860b00ff350a36b49c85ef6ee09484c3"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-142/external-security-review-request.json.sha256",
+      "sha256": "efb78f4477ad47d2660fdbdb052edff7775bb8c2b78facec3bdc330a07a5ae99"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-142/option-a-handoff.json",
+      "sha256": "4b77625ac80ffb09779c55bf8ef063d6c17a11de08614cdbc6528901ad9a77cd"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-142/result.json",
+      "sha256": "8bb6d8f7b8d1518262bbfec194fab842edd2afc9e4bf6ea8e3914f703b308ccb"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-142/review.md",
+      "sha256": "f9b65d276d143e3539ae5ba02a0e308e03aed6fb5a54ea2822ec7718f82a3049"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-142/sponsor-security-skip.json",
+      "sha256": "0c027cc06ceffeb9a41a937884982f919bc9ea5c480f8cd0ceee8083b61cf1ee"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-143/automated-receipt.json",
+      "sha256": "962d7214f56175beca97c43ac07f96b14c0f8e6534238786b44475db5f653f57"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-143/candidate.sha256",
+      "sha256": "e9661101dec6ca71d0cb2d76e978764e2ee27d5a89e3f3d5429ea9a47ca57cc1"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-143/control-tower-reconciliation.json",
+      "sha256": "af2e77db6a5eae41ec8a02f3d614b3d1a4f27aa56dfd8ae318a35b4c97426563"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-143/decision.md",
+      "sha256": "478434a9163f6b0b7303e228755bf89e19b6d7058e71fe97a75c666b449e829c"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-143/evidence-map-final.json",
+      "sha256": "05c5321b8ca4a447f6fe0cdbfbf9b6a5dea94db513ad96f5680aa4a43c674fcc"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-143/evidence-map.json",
+      "sha256": "3a3684da8746b2e11a456f96b77dfbc4895806c0bcf206ac0c0d82eefbc702b9"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-143/manual-observation.json",
+      "sha256": "d3d6e318f1fe02178811945c7cf4068f6ee8a383af67e0848511dc2a00d7b9f9"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-143/production-uat-review-1.json",
+      "sha256": "b6b22d96d1cf72eb9c94d043eaf850c5c8fecb8555186e80136bf2b9aca131ef"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-143/result.json",
+      "sha256": "eecb8228ffd6ab9f9f7cdf354d0af04c70ce13cf5aa34676abc6e05cbd50717f"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-143/review-2.md",
+      "sha256": "855a1edd900c21d76092d6836e34eeabef4c94c06b51790daa9badedae91d45b"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/50-outcome-review/CT-14/outcome-readiness.json",
+      "sha256": "cb06e6a09400487843ae72edbf62d0f25f14e5d9455a7da2eb77ab35a10050e4"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/completion-audit-2026-08-27.md",
+      "sha256": "8555ff088d8c9eb0e1d7c300c9f0e14e2e2ae1f47ebb7c0fca81469df1649802"
+    },
+    {
+      "path": "ops/hosted/README.md",
+      "sha256": "63681364b3ca550a5657913e007f5a8c11ac0b0f257738a9772c3ca6e76ccaa0"
+    },
+    {
+      "path": "ops/hosted/environments/development.json",
+      "sha256": "f8b501a7653d050b7b9efa1e6c265fed330421cd30ce212a03d56fe62c154c4f"
+    },
+    {
+      "path": "ops/hosted/environments/production.json",
+      "sha256": "2c5238ae898edc2a6517fff9a4334d7165a2f0accacbe585ddb36246a861dd0b"
+    },
+    {
+      "path": "ops/release/asset-provenance.json",
+      "sha256": "e36b2fa28594bb2f0c6d7146e68a7f036eb544e11456ff1abdf033158ff9af70"
+    },
+    {
+      "path": "ops/release/copy-provenance.json",
+      "sha256": "6ebb46f1dd68eb76588d273fc9554dc7db189fe95f9383f4854471040d0cf9e4"
+    },
+    {
+      "path": "ops/release/dependency-license-inventory.json",
+      "sha256": "6dba383bc3b554743409f6bd71f6609fe0934dbf188948b26b5b640fdff34e14"
+    },
+    {
+      "path": "ops/release/third-party-notices.json",
+      "sha256": "fb626e1bd4905f0ac0cfbb2460425f21b73c234bb1c551ab29404a9d586f63bc"
+    }
+  ],
+  "reviewer_contract": {
+    "guide": "docs/product/versions/v0.2.0/10-discovery/CT-3/combined-qualified-review-guide.md",
+    "acceptance_schema_version": "qualified-combined-boundary-acceptance-v1",
+    "allowed_statuses": [
+      "accepted",
+      "remediation_required"
+    ],
+    "required_reviewer_fields": [
+      "name",
+      "role",
+      "qualification"
+    ],
+    "required_fields": [
+      "reviewed_at",
+      "jurisdictions",
+      "request_sha256",
+      "accepted_scopes"
+    ],
+    "self_approval_prohibited": true
+  },
+  "prohibited_claims": [
+    "legal advice",
+    "security qualification from a skipped test",
+    "accountable release approval",
+    "provider payment verification",
+    "validated product outcomes"
+  ]
+}

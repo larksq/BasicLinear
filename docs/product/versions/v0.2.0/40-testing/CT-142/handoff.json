@@ -1,0 +1,44 @@
+{
+  "schema_version": "ct142-testing-handoff-v1",
+  "prepared_at": "2026-08-26T04:03:09Z",
+  "stage": "testing",
+  "status": "yellow",
+  "issue": {
+    "identifier": "CT-142",
+    "stable_id": "9a320485-76d5-43c4-ab7f-d6a601f4583f",
+    "revision": 4,
+    "ct_status": "In Progress",
+    "milestone": "S4 — Testing",
+    "plan_id": "I-210",
+    "acceptance": ["P-T210"]
+  },
+  "accepted_output": {
+    "scope": "nonsecurity_only",
+    "review_ref": "docs/product/versions/v0.2.0/40-testing/CT-142/review.md",
+    "decision_ref": "docs/product/versions/v0.2.0/40-testing/CT-142/decision.md",
+    "evidence_map_ref": "docs/product/versions/v0.2.0/40-testing/CT-142/evidence-map.json",
+    "result_ref": "docs/product/versions/v0.2.0/40-testing/CT-142/result.json"
+  },
+  "required_skip": {
+    "decision_ref": "docs/product/versions/v0.2.0/40-testing/CT-142/sponsor-security-skip.json",
+    "requirement_refs": ["R-204", "R-219"],
+    "acceptance_refs": ["P-T210"],
+    "resolved": false
+  },
+  "claims": {
+    "nonsecurity_uat_accepted": true,
+    "p_t210_fully_qualified": false,
+    "ct142_done_eligible": false,
+    "outcomes_validated": false,
+    "provider_or_deployment_changed": false,
+    "combined_release_accepted": false,
+    "legal_privacy_security_approved": false
+  },
+  "next": {
+    "action": "Keep CT-142 In Progress on S4. Do not advance the combined candidate to qualified approval while the required security acceptance remains omitted.",
+    "allowed_resolution_paths": [
+      "Attach an authorized external security-review result that satisfies R-204/R-219 without Codex performing the prohibited work, then independently reconcile P-T210.",
+      "Explicitly revise the accepted Planning/approval contract through the proper sponsor and qualified-review gates; a skip alone is not a pass."
+    ]
+  }
+}

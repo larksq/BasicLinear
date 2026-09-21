@@ -1,0 +1,57 @@
+{
+  "schema_version": "ct143-automated-receipt-v1",
+  "captured_at": "2026-08-27T05:22:31Z",
+  "environment": {
+    "project_root": "/Users/qiaosun/Documents/ChatGPT/OpenLinear",
+    "provider_projection": "disabled_not_synced",
+    "security_or_adversarial_suites_run": false,
+    "provider_or_external_mutation_performed": true,
+    "external_mutation_scope": "authorized Vercel frontend deployment only; no Firebase data, Cloud Run, Stripe, invitation, token, Checkout, subscription, or charge mutation"
+  },
+  "commands": [
+    {
+      "command": "node scripts/tests/ct143-nonsecurity-gates.mjs",
+      "status": "passed",
+      "selected_file_executions": 12,
+      "selected_tests_passed": 19,
+      "unselected_tests_skipped": 41,
+      "groups": [
+        {"id": "environment-and-google-entry", "files": 5, "passed": 8, "skipped": 12},
+        {"id": "rich-workspace-data-flow", "files": 3, "passed": 3, "skipped": 14},
+        {"id": "browser-product-surface", "files": 2, "passed": 5, "skipped": 4},
+        {"id": "rest-and-mcp-parity", "files": 2, "passed": 3, "skipped": 11}
+      ]
+    },
+    {
+      "command": "npm run typecheck",
+      "status": "passed",
+      "workspace_scripts_passed": 11
+    },
+    {
+      "command": "npm run build",
+      "status": "passed",
+      "local_modules": 1953,
+      "hosted_modules": 1821,
+      "hosted_outputs": ["hosted.html", "hosted-kMC2eFMw.css", "hosted-CdLdLFv_.js"]
+    },
+    {
+      "command": "node scripts/validate-hosted-environments.mjs",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    },
+    {
+      "command": "vercel deploy --prod --yes (development project)",
+      "status": "passed",
+      "deployment_id": "dpl_2qQ9nJEyiTQobwngbMozPN7CGJ6M"
+    },
+    {
+      "command": "vercel deploy --prod --yes (production project)",
+      "status": "passed",
+      "deployment_id": "dpl_DXVv1pV7eijjWwAwiDdj2pLJc1Um"
+    }
+  ],
+  "result": "passed_positive_nonsecurity_boundary"
+}

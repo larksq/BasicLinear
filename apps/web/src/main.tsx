@@ -1,8 +1,10 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import '@fontsource-variable/inter/wght.css';
 import '@openlinear/ui/tokens.css';
 import './styles.css';
+import './ai-mcp-guide.css';
 import { App } from './App.js';
 
 const queryClient = new QueryClient({

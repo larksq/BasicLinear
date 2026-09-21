@@ -1,0 +1,7 @@
+interface:
+  display_name: "OpenLinear Product Management"
+  short_description: "Operate hosted OpenLinear PM work through scoped MCP tools"
+  default_prompt: "Use $openlinear-product-management to inspect or update the user's hosted OpenLinear product-management workspace safely."
+
+policy:
+  allow_implicit_invocation: true

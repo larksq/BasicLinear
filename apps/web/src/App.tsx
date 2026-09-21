@@ -1,3 +1,4 @@
+import { BrandMark } from './brand-mark.js';
 import {
   Fragment,
   lazy,
@@ -21,6 +22,7 @@ import {
   ArrowUp,
   Bookmark,
   Check,
+  ChevronRight,
   CircleDot,
   FolderKanban,
   GripVertical,
@@ -40,6 +42,7 @@ import {
 } from 'lucide-react';
 import { api, ApiError } from './api.js';
 import { ConnectionBanner, Dialog, ErrorNotice, LoadingSkeleton, QueryErrorState, Spinner } from './components.js';
+import {AiMcpGuide} from './ai-mcp-guide.js';
 import { resolveGlobalShortcutAction } from './global-shortcuts.js';
 import { createLocalServiceRecovery } from './local-service-recovery.js';
 import {
@@ -138,7 +141,7 @@ interface WorkflowStatusDragState {
 }
 
 function Mark() {
-  return <span className="mark" aria-hidden="true"><span /><span /></span>;
+  return <BrandMark className="mark" />;
 }
 
 function HighlightedSearchText({ value, query }: { value: string; query: string }) {
@@ -1299,28 +1302,34 @@ function WorkspaceApp({
       <aside className={`sidebar ${mobileOpen ? 'sidebar-open' : ''}`}>
         <div className="owner-brand">
           <Mark />
-          <strong>OpenLinear</strong>
+          <span><strong>{workspace.name}</strong><small>Local workspace</small></span>
         </div>
         <div className="sidebar-scroll">
-          <nav className="nav-list" aria-label="Primary navigation">
+          <nav className="nav-list nav-list-global" aria-label="Personal navigation">
             <button className={view === 'my-work' ? 'active' : ''} aria-label="My work" aria-current={view === 'my-work' ? 'page' : undefined} title="My work" onClick={() => navigate('my-work')}>
               <UserRound size={16} /><span>My work</span>
-            </button>
-            <button className={view === 'projects' ? 'active' : ''} aria-label="Projects" aria-current={view === 'projects' ? 'page' : undefined} title="Projects" onClick={() => navigate('projects', { reset: true })}>
-              <FolderKanban size={16} /><span>Projects</span>
             </button>
             <button className={view === 'issues' ? 'active' : ''} aria-label="Issues" aria-current={view === 'issues' ? 'page' : undefined} title="Issues" onClick={() => navigate('issues', { reset: true })}>
               <CircleDot size={16} /><span>Issues</span>
             </button>
-            <button className={view === 'views' ? 'active' : ''} aria-label="Views" aria-current={view === 'views' ? 'page' : undefined} title="Views" onClick={() => navigate('views')}>
-              <Bookmark size={16} /><span>Views</span>
-            </button>
-            <button className={view === 'workflow' ? 'active' : ''} aria-label="Workflow" aria-current={view === 'workflow' ? 'page' : undefined} title="Workflow" onClick={() => navigate('workflow')}>
-              <Workflow size={16} /><span>Workflow</span>
-            </button>
           </nav>
+          <section className="sidebar-section" aria-labelledby="local-workspace-navigation-title">
+            <span id="local-workspace-navigation-title">Workspace</span>
+            <nav className="nav-list" aria-label="Workspace navigation">
+              <button className={view === 'projects' ? 'active' : ''} aria-label="Projects" aria-current={view === 'projects' ? 'page' : undefined} title="Projects" onClick={() => navigate('projects', { reset: true })}>
+                <FolderKanban size={16} /><span>Projects</span>
+              </button>
+              <button className={view === 'views' ? 'active' : ''} aria-label="Views" aria-current={view === 'views' ? 'page' : undefined} title="Views" onClick={() => navigate('views')}>
+                <Bookmark size={16} /><span>Views</span>
+              </button>
+              <button className={view === 'workflow' ? 'active' : ''} aria-label="Workflow" aria-current={view === 'workflow' ? 'page' : undefined} title="Workflow" onClick={() => navigate('workflow')}>
+                <Workflow size={16} /><span>Workflow</span>
+              </button>
+            </nav>
+          </section>
         </div>
         <div className="sidebar-footer">
+          <AiMcpGuide surface="local" collapsed={railCollapsed} />
           <button className="sidebar-collapse" aria-label={railCollapsed ? 'Expand navigation' : 'Collapse navigation'} title={railCollapsed ? 'Expand navigation' : 'Collapse navigation'} onClick={toggleNavigationRail}>
             {railCollapsed ? <PanelLeftOpen size={16} /> : <PanelLeftClose size={16} />}<span>{railCollapsed ? 'Expand navigation' : 'Collapse navigation'}</span>
           </button>
@@ -1329,10 +1338,10 @@ function WorkspaceApp({
 
       <main className="workspace-main">
         <header className="topbar">
-          <div className="topbar-context"><strong>{workspaceViewLabel(view)}</strong></div>
+          <div className="topbar-context"><Mark /><span>{workspace.name}</span><ChevronRight size={13} /><strong>{workspaceViewLabel(view)}</strong></div>
           <div className="topbar-actions">
+            <button className="topbar-search" aria-label="Search and commands" title="Search and commands" onClick={() => { setCommandOpen(true); setCommandIndex(firstCommandIndex); }}><Search size={14} /><span>Search workspace</span><kbd>⌘ K</kbd></button>
             <AppearanceMenu value={appearance} onChange={onAppearanceChange} />
-            <button className="icon-button" aria-label="Search and commands" title="Search and commands" onClick={() => { setCommandOpen(true); setCommandIndex(firstCommandIndex); }}><Search size={15} /></button>
           </div>
         </header>
         <ConnectionBanner

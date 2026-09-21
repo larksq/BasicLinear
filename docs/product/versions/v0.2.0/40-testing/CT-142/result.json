@@ -1,0 +1,44 @@
+{
+  "schema_version": "ct142-test-result-v1",
+  "captured_at": "2026-08-26T03:38:56Z",
+  "verdict": "YELLOW_NONSECURITY_ACCEPTED_REQUIRED_SECURITY_SKIP",
+  "overall_status_ceiling": "yellow",
+  "issue": {
+    "identifier": "CT-142",
+    "id": "9a320485-76d5-43c4-ab7f-d6a601f4583f",
+    "testing_revision": 4,
+    "status": "In Progress"
+  },
+  "nonsecurity": {
+    "integrated_journey": "passed",
+    "selected_test_files_passed": 19,
+    "selected_tests_passed": 46,
+    "typecheck_workspaces_passed": 11,
+    "build": "passed",
+    "desktop_observation": "passed",
+    "mobile_observation": "passed",
+    "independent_acceptance": "accepted"
+  },
+  "independent_review": {
+    "actor_id": "codex-testing-ct142-independent",
+    "session_id": "CT142-NONSECURITY-REVIEW-20260826",
+    "findings": {"P0": 0, "P1": 0, "P2": 0, "P3": 0},
+    "sealed_files": 513,
+    "sealed_mismatches": 0,
+    "aggregate_sha256": "b80ef66bf37e3b0fe8b222f24ffb7917ce4fccf2497e615679a3227bb53ed544",
+    "envelope_sha256": "5ac73238f6df46be26521784a0852a1f7fb68bb672f50bf0bf8767d09c5fa35d"
+  },
+  "required_skip": {
+    "check_id": "CT142-SECURITY-R219",
+    "requirement_refs": ["R-204", "R-219"],
+    "acceptance_refs": ["P-T210"],
+    "authorized": true,
+    "done_eligible": false
+  },
+  "outcomes": {
+    "O-201": "baseline_needed",
+    "O-202": "baseline_needed",
+    "O-203": "baseline_needed",
+    "O-204": "baseline_needed"
+  }
+}

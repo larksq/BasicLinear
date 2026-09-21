@@ -1,0 +1,143 @@
+{
+  "schema_version": "qualified-identity-review-request-v1",
+  "issue": "CT-3",
+  "status": "qualified_review_required",
+  "candidate": {
+    "source_revision": "928767ea12c59aca28b94e9bcb91bca03eb1febe",
+    "evidence_set_sha256": "fed80591d62bf667c8f492ce652373cd05098f5f3b5b45db1921f1d5cf1295c2"
+  },
+  "sponsor_decision": {
+    "license": "AGPL-3.0-only",
+    "project_identity": "Scopefold",
+    "requested_final_product_brand": "OpenLinear"
+  },
+  "accepted_identity_patterns": [
+    "OpenLinear",
+    "openlinear",
+    "@openlinear/"
+  ],
+  "evidence": [
+    {
+      "path": "LICENSE",
+      "exists": true,
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "exists": true,
+      "sha256": "25e43ff2fa5e5554698581f3d2ca61ca77be3058f506cc206385f036f0ac2df5"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "exists": true,
+      "sha256": "ef93b5435447d86589bd00ca2d61c0eb9b09d28bb051fa443015673e87eddad5"
+    },
+    {
+      "path": "SECURITY.md",
+      "exists": true,
+      "sha256": "bbe0463ff8a691a502d45da89e3cc127dfb7d7f224a2f975489b01fbc8d7bad3"
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/decision-record.md",
+      "exists": true,
+      "sha256": "96e9ddb1249d14ee5e27a193acbe89d9901cf0e767ddff29761739e3627e84f6"
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/license-comparison.md",
+      "exists": true,
+      "sha256": "a951d8bdc242e30be9749263ba4b239a9564b7188fd7d173ff48fa423bfaaeac"
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/clean-room-policy.md",
+      "exists": true,
+      "sha256": "b61006b71881b872b75c31c3e18ce390d23036cd376996aecc23e2fedd95980b"
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/name-screen.md",
+      "exists": true,
+      "sha256": "623642d73ac80f4166dafe49f8df2113601869a4545a02050d9e811d434f6fa9"
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/source-register.json",
+      "exists": true,
+      "sha256": "8ec0e10843c3604d19d44b5135f690af9057c123c4d01a0d5044811d14aa7da4"
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/evidence.md",
+      "exists": true,
+      "sha256": "7f679817a6d6d46493d1964fcbe86aae0778f6a879b394f1edfe15851e3663b6"
+    },
+    {
+      "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-guide.md",
+      "exists": true,
+      "sha256": "25f55c501a437134f83b7d4d3490bc67e6e5d21e4b5cdc38a8a803d647860f52"
+    },
+    {
+      "path": "ops/release/dependency-license-inventory.json",
+      "exists": true,
+      "sha256": "29ee9a788cfb9b491ee0411a37281dfab6a52944c61cbd937fcca13a9748d55e"
+    },
+    {
+      "path": "ops/release/third-party-notices.json",
+      "exists": true,
+      "sha256": "3740766464422ac2a4a91539345810bcf1840da393259d7dceedeecba4740684"
+    },
+    {
+      "path": "ops/release/asset-provenance.json",
+      "exists": true,
+      "sha256": "ef1f0dcbded08d22421f6fe78d09a42e6a572437d6097f7aa4217169f10e3a32"
+    },
+    {
+      "path": "ops/release/copy-provenance.json",
+      "exists": true,
+      "sha256": "78b3d7aa6c8d582101433349b0a0882bd0b312b2a43e33d8e37af89c0e44a73d"
+    }
+  ],
+  "evidence_state": {
+    "asset_provenance": {
+      "status": "ready_for_accountable_review",
+      "review_status": "pending",
+      "records": 301
+    },
+    "copy_provenance": {
+      "status": "ready_for_accountable_review",
+      "review_status": "pending",
+      "records": 67
+    },
+    "third_party_notices": {
+      "status": "ready_for_accountable_review",
+      "review_status": "pending",
+      "records": 499
+    }
+  },
+  "acceptance_contract": {
+    "schema_version": "qualified-identity-review-acceptance-v1",
+    "statuses": [
+      "accepted",
+      "remediation_required"
+    ],
+    "required_reviewer_fields": [
+      "name",
+      "role",
+      "qualification"
+    ],
+    "required_fields": [
+      "reviewed_at",
+      "jurisdictions",
+      "request_sha256",
+      "dispositions"
+    ],
+    "accepted_dispositions": {
+      "license_compatibility": "agpl_3_0_only_accepted",
+      "project_identity": "scopefold_cleared",
+      "product_identity": "openlinear_cleared",
+      "trademark_and_trade_dress": "independent_expression_cleared",
+      "clean_room_method": "restrictive_boundary_accepted",
+      "existing_reference_evidence": "private_quarantine_accepted",
+      "public_comparative_claims": "qualified_independent_evidence_only",
+      "contribution_intake": "agpl_contribution_terms_accepted",
+      "asset_copy_and_notices": "qualified_disposition_accepted"
+    },
+    "remediation_value": "remediation_required"
+  }
+}

@@ -1,0 +1,372 @@
+{
+  "schema_version": "1.0",
+  "stage": "implementation.checkpoint",
+  "status": "implementation_output_done",
+  "prepared_at": "2026-08-25T21:10:02.674Z",
+  "issue": {
+    "plan_id": "I-207",
+    "local_issue_id": "CT-139",
+    "stable_id": "a9a28433-589a-4a2d-9af8-7e2800f1ba44",
+    "revision": 11,
+    "status": "Done",
+    "milestone": "S3 — Implementation",
+    "accepted": true,
+    "blocked": false,
+    "requirement_refs": ["R-211", "R-212", "R-215", "R-216", "R-218", "R-219"],
+    "acceptance_refs": ["P-T207"],
+    "outcome_refs": ["O-204"]
+  },
+  "task_readback": {
+    "authority": "project-local-v0.8",
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "projection": "disabled_not_synced",
+    "dependency_readback": [
+      {"issue": "CT-135", "status": "Done", "revision": 7},
+      {"issue": "CT-137", "status": "Done", "revision": 9},
+      {"issue": "CT-138", "status": "Done", "revision": 19}
+    ],
+    "start_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T13-59-54-393Z-4fa903fe-74e7-4433-8603-18d9df2cf1c3.json",
+    "start_backup_sha256": "182e6b2218d08c23470d12c1ae3a623ef69c882182948de9f9efd191078d5432",
+    "start_backup_raw_file_sha256": "c845c44a9be1a523de7b321f2f4ba91c148777749a12c07e12f3133c02c11f0d",
+    "review1_dispatch_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T18-33-29-332Z-dc42021a-126c-4bc1-b46e-9c79922d66cf.json",
+    "review1_dispatch_backup_sha256": "98891ae009c65282f0d73214287fc573011b9395badaea9e2b84a43fbbec3568",
+    "review1_dispatch_backup_raw_file_sha256": "7de14f524418df25ccaddb37437e4cbcb6cc691ca30d0b499b888b794c9d8b5b",
+    "review1_failure_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T19-05-36-077Z-c6c64164-af9a-45d6-ba93-3b2ff564e630.json",
+    "review1_failure_backup_sha256": "702dfbda7d91be3ffbf9598dba7e092e968b100fd72f09123dd5a6767edcb02e",
+    "review1_failure_backup_raw_file_sha256": "59fb58f0da4e3c4c4a3f7305f2bc5b21231c466d49c8ed23ab020e048d353b41",
+    "review2_dispatch_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T19-19-35-219Z-527db59f-ffe0-4693-b6d4-c8b05470f539.json",
+    "review2_dispatch_backup_sha256": "d1f621a8f502d1eb000f25b65bcec2ef26a80e04c7485c5e5ccb4a3012ec127f",
+    "review2_dispatch_backup_raw_file_sha256": "39ab85f882b251e6e9021a623622709e72e405279e4b42bb6ec3fac2c62d53a2",
+    "review2_failure_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T20-04-32-284Z-539dd5b2-e4b8-4166-9805-e5bc025a1f4b.json",
+    "review2_failure_backup_sha256": "54a9e055958910f3c3bf100c85d2c2b5aaea2b3ecd91ad47baec690a3adf8312",
+    "review2_failure_backup_raw_file_sha256": "827f88dae6ccaa3a1aa1e20b48cce669e38b1fd3867f60ae29f75c5be7936c06",
+    "review3_dispatch_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T20-19-59-448Z-596f5cc1-da8a-4fda-8cb5-5485c389c9a5.json",
+    "review3_dispatch_backup_sha256": "c2b9b7888c248dbce684828cf4c636649f5b1a65dec747bc2660ab2ddbbc0712",
+    "review3_dispatch_backup_raw_file_sha256": "25f3737d25365a2b0bbbf435b0e83f77dfca1977783d986b0395b6ed1da7fc3b",
+    "review3_failure_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T20-37-41-568Z-ef8ce716-a06b-489a-bbcd-34a07eafa820.json",
+    "review3_failure_backup_sha256": "fa37d5b9a979214d8f387bb84fbd6b7802601ea8317eabf3a17274b94c46ff2f",
+    "review3_failure_backup_raw_file_sha256": "7268a1919eadc9507014f4989d1741251b3440dc99db8fe12d731230482d193e",
+    "review4_dispatch_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T20-41-59-283Z-7c40fec5-6376-43e8-a9fc-b66f59841f6a.json",
+    "review4_dispatch_backup_sha256": "354e18a6685c4104ca9ef6aa6f4bcd7ca0acfb1379f8274c5bf8df3ff874e9fd",
+    "review4_dispatch_backup_raw_file_sha256": "4f4aa5ed38a909faa3ee07376901ff6a097f1ea4e1f494ff672ed3ef9399c506",
+    "completion_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T21-10-02-655Z-dfbed8f8-28d6-4100-a473-98343e50fa05.json",
+    "completion_backup_sha256": "785f1c074d6a82ecf043ac2d7196c50a7fbc8bd5f1a009947d6411bb6f1a8b00",
+    "completion_backup_raw_file_sha256": "b314da973b22d0b1e310eed1da32520359231f1b340930075ac3687400143188",
+    "backup_checksum_note": "The first SHA-256 is the export package's embedded semantic checksum; raw_file_sha256 hashes the serialized JSON bytes."
+  },
+  "entry": {
+    "operating_profile": "project-local-v0.8",
+    "authority": "current user goal and standing CT-134-through-CT-142 independent-review authorization",
+    "linear_used": false,
+    "control_tower_ui_used": false,
+    "milestone_reused": "S3 — Implementation",
+    "new_version_milestone_created": false
+  },
+  "sessions": [
+    {
+      "session_id": "CT-139-S1",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating",
+      "allowed_paths": [
+        ".env.example",
+        "firestore.rules",
+        "packages/hosted/",
+        "apps/hosted-service/",
+        "apps/web/src/hosted-api.ts",
+        "apps/web/src/hosted-app.tsx",
+        "apps/web/src/hosted.css",
+        "apps/web/tests/hosted-automation.test.ts",
+        "packages/config/tests/foundation-static.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-139/"
+      ]
+    },
+    {
+      "session_id": "CT-139-S2",
+      "actor_id": "codex-primary",
+      "mode": "verification_readonly",
+      "outputs": [
+        "focused/full/emulator/typecheck/build/dependency/audit evidence",
+        "OpenAPI reference and response closure",
+        "record-1001 cursor enumeration",
+        "token restart/revoke/scope/privacy evidence",
+        "export determinism/round-trip/digest/leakage evidence"
+      ]
+    },
+    {
+      "session_id": "CT-139-S3",
+      "actor_id": "codex-primary",
+      "mode": "evidence_mutating",
+      "allowed_paths": [
+        ".control-tower/request-update-issue-139-review1-dispatch.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-139/"
+      ]
+    },
+    {
+      "session_id": "CT-139-IR1",
+      "actor_id": "ct139-independent-review",
+      "mode": "independent_review_readonly",
+      "status": "completed_fail",
+      "severity": {"p0": 0, "p1": 1, "p2": 5, "p3": 3}
+    },
+    {
+      "session_id": "CT-139-S4",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating",
+      "purpose": "Independent Review 1 remediation"
+    },
+    {
+      "session_id": "CT-139-S5",
+      "actor_id": "codex-primary",
+      "mode": "verification_readonly",
+      "outputs": [
+        "nine Review 1 counterexample regressions",
+        "focused/full/emulator/typecheck/build/dependency/audit evidence",
+        "expanded candidate input inventory"
+      ]
+    },
+    {
+      "session_id": "CT-139-S6",
+      "actor_id": "codex-primary",
+      "mode": "evidence_mutating",
+      "allowed_paths": [
+        ".control-tower/request-update-issue-139-review2-dispatch.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-139/"
+      ]
+    },
+    {
+      "session_id": "CT-139-IR2",
+      "actor_id": "ct139-independent-review",
+      "mode": "independent_review_readonly",
+      "status": "completed_fail",
+      "severity": {"p0": 0, "p1": 1, "p2": 2, "p3": 2}
+    },
+    {
+      "session_id": "CT-139-S7",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating",
+      "purpose": "Independent Review 2 remediation"
+    },
+    {
+      "session_id": "CT-139-S8",
+      "actor_id": "codex-primary",
+      "mode": "verification_readonly",
+      "outputs": [
+        "five Review 2 counterexample regressions",
+        "official emulator canonical timestamp/date/chronology matrix",
+        "pre-credential malformed-framing repository invariance",
+        "real raw parser-error response",
+        "focused/full/typecheck/build/dependency/offline-audit evidence"
+      ]
+    },
+    {
+      "session_id": "CT-139-S9",
+      "actor_id": "codex-primary",
+      "mode": "evidence_mutating",
+      "allowed_paths": [
+        ".control-tower/request-update-issue-139-review2-failure.json",
+        ".control-tower/request-update-issue-139-review3-dispatch.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-139/"
+      ]
+    },
+    {
+      "session_id": "CT-139-IR3",
+      "actor_id": "ct139-independent-review",
+      "mode": "independent_review_readonly",
+      "status": "completed_fail",
+      "severity": {"p0": 0, "p1": 0, "p2": 1, "p3": 0}
+    },
+    {
+      "session_id": "CT-139-S10",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating",
+      "purpose": "Independent Review 3 zero-byte required-body remediation"
+    },
+    {
+      "session_id": "CT-139-S11",
+      "actor_id": "codex-primary",
+      "mode": "verification_readonly",
+      "outputs": [
+        "13-route zero-byte pre-authentication repository-invariance matrix",
+        "focused/full/emulator/typecheck/build/dependency/offline-audit evidence",
+        "hosted asset, diff, and JSON checks"
+      ]
+    },
+    {
+      "session_id": "CT-139-S12",
+      "actor_id": "codex-primary",
+      "mode": "evidence_mutating",
+      "allowed_paths": [
+        ".control-tower/request-update-issue-139-review3-failure.json",
+        ".control-tower/request-update-issue-139-review4-dispatch.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-139/",
+        "scripts/prepare-ct139-review4.mjs"
+      ]
+    },
+    {
+      "session_id": "CT-139-IR4",
+      "actor_id": "ct139-independent-review",
+      "mode": "independent_review_readonly",
+      "status": "completed_pass",
+      "severity": {"p0": 0, "p1": 0, "p2": 0, "p3": 0},
+      "seal": "409/409 before and after",
+      "backup_pairs": "9/9 embedded-semantic, recomputed-semantic, and raw before and after"
+    },
+    {
+      "session_id": "CT-139-S13",
+      "actor_id": "codex-primary",
+      "mode": "evidence_mutating",
+      "status": "completed",
+      "outputs": [
+        "Independent Review 4 PASS recorded",
+        "revision-checked CT-139 10 to 11 Done API transition",
+        "fresh CT-139 Done and CT-140 Todo dependency readback"
+      ]
+    }
+  ],
+  "implementation": {
+    "openapi": {
+      "version": "3.1.1",
+      "base_path": "/api/v1",
+      "schema_dialect": "https://json-schema.org/draft/2020-12/schema",
+      "routes": [
+        "workspace read",
+        "project list/create/read/update",
+        "milestone list/create/read/update",
+        "issue list/create/read/update/assign",
+        "comment list/create/read/edit/soft-delete",
+        "member list/remove",
+        "invitation list/create/resend/revoke",
+        "billing read",
+        "canonical workspace export"
+      ],
+      "controls": [
+        "exact request/response/error schemas",
+        "scope extensions",
+        "Idempotency-Key",
+        "If-Match and ETag",
+        "opaque HMAC-bound cursors",
+        "uncollapsed duplicate-sensitive header validation",
+        "pre-credential mutation header/body/JSON framing validation for POST/PATCH/PUT/DELETE",
+        "zero-byte required-body rejection before credential use across every mutation",
+        "application/json mutation media enforcement",
+        "redacted parser-level client-error responses",
+        "exact route query allowlists",
+        "versioned export response media",
+        "no-store and nosniff",
+        "recursive local reference closure"
+      ]
+    },
+    "personal_tokens": {
+      "browser_owner_management_only": true,
+      "audience": "openlinear-api-v1",
+      "scope_count": 15,
+      "expiry_days": {"minimum": 1, "maximum": 365, "ui_options": [30, 90, 365]},
+      "raw_display": "first successful create only",
+      "stored": [
+        "id/workspace/creator/name/prefix",
+        "sorted scopes and audience",
+        "SHA-256 credential digest",
+        "created/expiry/last-used/revoked lifecycle",
+        "revision and HMAC binding"
+      ],
+      "never_stored": ["raw personal token", "raw idempotency key"],
+      "create_replay": "exact unused and unrevoked revision-1 outcome only",
+      "download_recovery": "temporary URL revoked and manual-save guidance on synchronous failure",
+      "revocation": "transactional and immediately denied on the next authentication attempt",
+      "free_boundary": "browser owner may revoke; creation and personal-token writes remain denied",
+      "startup_secret_domain_separation": true
+    },
+    "project_management": {
+      "entities": ["workspace", "project", "milestone"],
+      "shared_services": ["issue", "assignment", "comment", "member", "invitation", "billing"],
+      "controls": [
+        "exact trusted schemas",
+        "transaction-time membership and entitlement",
+        "HMAC-bound idempotency",
+        "optimistic revision",
+        "exported creator/assignee/author membership referential integrity",
+        "field-level privacy-safe audit",
+        "fail-closed future chronology"
+      ]
+    },
+    "export": {
+      "schema": "openlinear.workspace-export.v1",
+      "media_type": "application/vnd.openlinear.workspace-export+json;version=1",
+      "included": [
+        "workspace",
+        "active and removed memberships",
+        "sanitized invitations",
+        "projects",
+        "milestones",
+        "issues",
+        "comments including tombstones"
+      ],
+      "excluded": [
+        "raw or digested personal credentials",
+        "invitation token ledgers",
+        "idempotency records",
+        "audit and product-event evidence",
+        "billing/provider/Checkout/webhook records",
+        "foreign workspaces",
+        "local SQLite data"
+      ],
+      "digest": "SHA-256 over recursive key-sorted canonical inner data"
+    },
+    "firestore": {
+      "direct_writes": "deny",
+      "private_ledgers": "deny read/write",
+      "membership_schema": "exact persisted base or expanded lifecycle schema; extra fields deny authorization",
+      "timestamp_and_date_schema": "fixed-width canonical UTC millisecond timestamps, real calendar target dates, and ordered lifecycle chronology",
+      "workspace_project_milestone_schema": "exact public keys, canonical generated IDs, bounded normalized text, and positive revision",
+      "legacy_nested_collections": "deny read/write",
+      "issues_and_comments": "trusted API only",
+      "project_and_milestone_get": "active-member exact-record read",
+      "project_and_milestone_list": "deny; trusted API only"
+    }
+  },
+  "verification": {
+    "focused": "10 files / 87 tests passed",
+    "firestore_emulator": "1 file / 6 groups passed with clean shutdown after expected restricted EPERM and authorized loopback rerun",
+    "full_regression": "99 files / 657 tests passed",
+    "typecheck": "11/11 workspaces passed",
+    "build": "1,953-module local graph plus isolated 30-module hosted graph passed",
+    "hosted_assets": "3/3 references resolved; no local/editor/modulepreload reference",
+    "dependency_tree": "npm ls --omit=dev --omit=optional --all exited 0",
+    "runtime_audit": {
+      "current_offline": "0 vulnerabilities",
+      "fresh_online": "not run: scoped escalation was policy-rejected because it would disclose dependency metadata",
+      "inherited_online": "CT-138 Review 8 registry audit reported 0 vulnerabilities",
+      "identity_basis": "The current .npmrc, package-lock.json, root package.json, apps/hosted-service/package.json, packages/hosted/package.json, and apps/web/package.json SHA-256 values exactly equal the CT-138 Review 8 sealed inputs."
+    },
+    "diff_check": "passed",
+    "openapi": "3.1.1, all local references resolve, replay/405/ETag/vendor-media responses covered",
+    "pagination": "record 1,001 enumerated; signature/resource/workspace/page-size binding covered",
+    "review1_counterexamples": "all nine remain closed by exact executable or source-level regressions",
+    "review2_counterexamples": "all five have exact emulator, service, unit, or raw-TCP regressions",
+    "review3_counterexample": "all 13 declared REST mutation routes reject zero-byte required bodies before token use with byte-identical repository state",
+    "evidence_manifest": "expanded to every workspace-owned apps/packages/scripts/ops/root-config and relevant v0.2/CT evidence input for the required gates",
+    "privacy": "raw credential, invitation digest, idempotency key, request body, private ledgers, orphan user references, and foreign-workspace exclusions covered",
+    "scope_scan": "no autonomous-agent, code-review, repository, pull-request, MCP, OAuth, or billing-purchase route"
+  },
+  "review_gate": {
+    "required": true,
+    "authorized_by": "user",
+    "reviewer_must_be_distinct": true,
+    "mode": "read_only",
+    "decision": "review4_pass",
+    "done_eligible": true
+  },
+  "claims": {
+    "implementation_candidate_prepared": true,
+    "implementation_output_done": true,
+    "independent_review_passed": true,
+    "pt207_qualified": false,
+    "o204_achieved": false,
+    "public_api_active": false,
+    "mcp_or_oauth_added": false,
+    "production_deployed": false,
+    "release_approved": false,
+    "legal_privacy_security_approved": false
+  },
+  "next": "Start CT-140 I-208 from fresh CT-139 revision 11 Done and CT-140 revision 2 Todo API readbacks on the existing shared S3 milestone."
+}

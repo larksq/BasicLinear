@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "stage": "implementation.handoff",
+  "status": "accepted",
+  "prepared_at": "2026-08-25T21:10:02.674Z",
+  "issue": {
+    "identifier": "CT-139",
+    "stable_id": "a9a28433-589a-4a2d-9af8-7e2800f1ba44",
+    "revision": 11,
+    "status": "Done",
+    "milestone": "S3 — Implementation",
+    "plan_id": "I-207",
+    "requirements": ["R-211", "R-212", "R-215", "R-216", "R-218", "R-219"],
+    "acceptance": ["P-T207"],
+    "outcomes": ["O-204"]
+  },
+  "output": {
+    "rest": "OpenAPI 3.1.1 PM-only /api/v1 with exact schemas, stable errors, opaque pagination, idempotency, and optimistic revision semantics",
+    "personal_tokens": "owner-created, hashed, scoped, workspace/audience/expiry-bound tokens with one-time raw display and immediate revocation",
+    "export": "canonical versioned workspace export with membership-ledger reference integrity and foreign-workspace exclusion",
+    "security": "pre-credential Origin, framing, header, media, query, body, JSON, authorization, entitlement, and privacy validation",
+    "authority_separation": "hosted Firebase and local SQLite authorities remain separate with no upload or synchronization",
+    "excluded_scope": "no autonomous agent, code review, repository, pull request, MCP, OAuth, or billing-purchase capability"
+  },
+  "verification": {
+    "independent_review": "PASS",
+    "review_round": 4,
+    "severity_findings": {"P0": 0, "P1": 0, "P2": 0, "P3": 0},
+    "seal": "409/409 before and after",
+    "backup_pairs": "9/9 embedded-semantic, recomputed-semantic, and raw before and after",
+    "focused": "10 files / 87 tests",
+    "firestore_emulator": "1 file / 6 groups",
+    "full_regression": "99 files / 657 tests",
+    "typecheck": "11/11 workspaces",
+    "build": "1,953-module local graph plus isolated 30-module hosted graph; 3/3 hosted references",
+    "runtime_audit": "offline supported-runtime audit 0; dependency inputs byte-identical to the registry-audited CT-138 Review 8 boundary",
+    "adversarial": "13 zero-byte routes, 90 token/lifecycle probes, 40 query probes, 26 OpenAPI operations/345 references, 1,001-record pagination, and export/privacy/Firestore/UI/prohibited-scope matrices"
+  },
+  "control_tower": {
+    "authority": "project-local-v0.8",
+    "projection": "disabled_not_synced",
+    "completion_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T21-10-02-655Z-dfbed8f8-28d6-4100-a473-98343e50fa05.json",
+    "completion_backup_sha256": "785f1c074d6a82ecf043ac2d7196c50a7fbc8bd5f1a009947d6411bb6f1a8b00",
+    "completion_backup_raw_file_sha256": "b314da973b22d0b1e310eed1da32520359231f1b340930075ac3687400143188"
+  },
+  "claims": {
+    "implementation_output_done": true,
+    "independent_review_passed": true,
+    "pt207_qualified": false,
+    "o204_achieved": false,
+    "public_api_active": false,
+    "mcp_or_oauth_added": false,
+    "production_deployed": false,
+    "release_approved": false,
+    "legal_privacy_security_approved": false
+  },
+  "next": {
+    "issue": "CT-140",
+    "scope": "current-protocol Streamable HTTP MCP, OAuth authorization bridge, exact PM tool parity, and reusable openlinear-product-management skill"
+  }
+}

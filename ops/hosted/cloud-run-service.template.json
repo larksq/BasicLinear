@@ -1,0 +1,22 @@
+{
+  "apiVersion": "run.googleapis.com/v2",
+  "evidenceBoundary": "template_not_applied",
+  "name": "projects/${GOOGLE_CLOUD_PROJECT}/locations/us-central1/services/openlinear-hosted-api",
+  "ingress": "INGRESS_TRAFFIC_INTERNAL_LOAD_BALANCER",
+  "template": {
+    "serviceAccount": "openlinear-hosted-runtime@${GOOGLE_CLOUD_PROJECT}.iam.gserviceaccount.com",
+    "timeout": "30s",
+    "maxInstanceRequestConcurrency": 40,
+    "scaling": {
+      "minInstanceCount": 0,
+      "maxInstanceCount": 3
+    },
+    "containers": [
+      {
+        "image": "us-central1-docker.pkg.dev/${GOOGLE_CLOUD_PROJECT}/openlinear/hosted-api@${IMAGE_DIGEST}",
+        "ports": [{"containerPort": 8080}],
+        "resources": {"limits": {"cpu": "1", "memory": "512Mi"}}
+      }
+    ]
+  }
+}

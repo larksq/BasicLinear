@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "stage": "implementation.handoff",
+  "status": "accepted",
+  "prepared_at": "2026-08-25T11:39:08Z",
+  "issue": {
+    "identifier": "CT-137",
+    "stable_id": "ae2cdebe-f10f-4cd8-bcac-9be2ff1d9157",
+    "revision": 9,
+    "status": "Done",
+    "milestone": "S3 — Implementation",
+    "plan_id": "I-205",
+    "requirements": ["R-207", "R-208", "R-215", "R-216"],
+    "acceptance": ["P-T205"],
+    "outcomes": ["O-202", "O-204"]
+  },
+  "output": {
+    "single_assignee_tasks": "accepted implementation output",
+    "durable_comments": "accepted implementation output",
+    "authorization_and_concurrency": "transaction-time membership, exact role, optimistic revision, and HMAC-bound retry contracts accepted",
+    "privacy_and_history": "body-free evidence and durable soft-delete tombstones accepted",
+    "accessibility": "entry, Cancel, delayed Save, no-op, and removed-assignee recovery accepted",
+    "build_provenance": "local and hosted production entries use isolated Vite graphs; local-only inputs cannot alter hosted output",
+    "authority_separation": "Firebase hosted and local SQLite authorities remain separate"
+  },
+  "verification": {
+    "independent_review": "PASS",
+    "review_round": 4,
+    "severity_findings": {"P0":0,"P1":0,"P2":0,"P3":0},
+    "seal": "78/78 before and after",
+    "focused": "5 files / 23 tests",
+    "firestore_emulator": "1 file / 6 isolation groups",
+    "full_regression": "87 files / 584 tests",
+    "typecheck": "10/10 workspaces",
+    "build": "1,953-module local graph plus isolated 30-module hosted graph; 3/3 hosted references",
+    "runtime_audit": "primary online supported-runtime audit 0; independent offline omit profile 0 because registry access was policy-blocked",
+    "adversarial": "all Review 1–3 UI/build findings plus 60/60 tamper, 6/6 key reuse, 6/6 replay after removal, HTTP/privacy/Firestore/O-202/exclusion cases closed"
+  },
+  "control_tower": {
+    "authority": "project-local-v0.8",
+    "projection": "disabled_not_synced",
+    "completion_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T11-39-08-848Z-a61a9e9c-ca73-4148-91ba-4f8b7c09fa79.json",
+    "completion_backup_sha256": "15c0fc0eb14daec1c340da16e021a92218eabf8bf6986fe07fde63453d8f1170"
+  },
+  "claims": {
+    "implementation_output_done": true,
+    "independent_review_passed": true,
+    "pt205_qualified": false,
+    "production_deployed": false,
+    "release_approved": false,
+    "legal_privacy_security_approved": false,
+    "o202_achieved": false,
+    "o204_achieved": false
+  },
+  "next": {
+    "issue": "CT-138",
+    "scope": "30-day Pro trial, server-owned monthly/annual per-active-seat checkout, subscription convergence, entitlement, and one-writer Free fallback"
+  }
+}

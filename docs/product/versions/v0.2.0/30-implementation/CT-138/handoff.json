@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "stage": "implementation.handoff",
+  "status": "accepted",
+  "prepared_at": "2026-08-25T17:24:37Z",
+  "issue": {
+    "identifier": "CT-138",
+    "stable_id": "8db3d1ce-7a74-4dd9-86d5-f8a84d76876f",
+    "revision": 19,
+    "status": "Done",
+    "milestone": "S3 — Implementation",
+    "plan_id": "I-206",
+    "requirements": ["R-203", "R-209", "R-210", "R-217"],
+    "acceptance": ["P-T206"],
+    "outcomes": ["O-201", "O-203"]
+  },
+  "output": {
+    "trial": "one immutable exact 30×24-hour Pro trial per eligible Firebase identity/workspace",
+    "pricing": "server-owned USD $2 per active user/month and USD $12 per active user/year before automatically calculated tax",
+    "subscription": "one-workspace Checkout/subscription singularity with verified current-provider convergence and active-seat reconciliation",
+    "lifecycle": "explicit active, past-due, unpaid, canceled, incomplete, paused, and terminal handling with paid-through boundaries",
+    "free_fallback": "data remains readable and export-eligible; one verified owner retains basic interactive writes while collaboration and automation writes pause",
+    "authorization_and_privacy": "workspace/role/entitlement checks, authenticated idempotency, redacted errors, and privacy-safe audit/measurement evidence",
+    "authority_separation": "Firebase hosted and local SQLite authorities remain separate with no upload or synchronization"
+  },
+  "verification": {
+    "independent_review": "PASS",
+    "review_round": 8,
+    "severity_findings": {"P0": 0, "P1": 0, "P2": 0, "P3": 0},
+    "seal": "137/137 before and after",
+    "backup_pairs": "16/16 semantic and raw before and after",
+    "config": "1 file / 4 tests; real shared JSON export; 11 in-memory relation corruptions rejected",
+    "focused": "7 files / 51 tests",
+    "firestore_emulator": "1 file / 6 isolation groups",
+    "full_regression": "93 files / 633 tests",
+    "typecheck": "11/11 workspaces",
+    "build": "1,953-module local graph plus isolated 30-module hosted graph; 3/3 hosted references",
+    "runtime_audit": "registry-backed supported-runtime audit 0 vulnerabilities",
+    "adversarial": "final-transaction atomicity, 14 direct-recovery binding dimensions, and all Review 1–7 historical counterexamples closed"
+  },
+  "control_tower": {
+    "authority": "project-local-v0.8",
+    "projection": "disabled_not_synced",
+    "completion_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T17-24-37-423Z-e99c1933-05d4-42ab-9eb5-6eee41a6fb39.json",
+    "completion_backup_sha256": "28a609d442f32153c15b850191afad2dafa1470c07d2fb0761e4dea9e728f24a",
+    "completion_backup_raw_file_sha256": "3e64df642859cff4d693353427ba56a4086e629d861532a681deab2f09a6381b"
+  },
+  "claims": {
+    "implementation_output_done": true,
+    "independent_review_passed": true,
+    "pt206_qualified": false,
+    "live_billing_enabled": false,
+    "production_deployed": false,
+    "release_approved": false,
+    "legal_privacy_security_approved": false,
+    "o201_achieved": false,
+    "o203_achieved": false
+  },
+  "next": {
+    "issue": "CT-139",
+    "scope": "OpenAPI 3.1.1 PM REST API, scoped personal-token lifecycle, and deterministic workspace export"
+  }
+}

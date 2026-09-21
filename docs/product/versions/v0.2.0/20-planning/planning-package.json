@@ -1,0 +1,1515 @@
+{
+  "version": "v0.2.0",
+  "stage_milestones": {
+    "authority": "project-local-v0.8",
+    "implementation": {
+      "id": "3d0a4a91-9b7b-468c-909f-07371f42d19f",
+      "name": "S3 — Implementation",
+      "issue_ids": ["I-201", "I-202", "I-203", "I-204", "I-205", "I-206", "I-207", "I-208", "I-209"]
+    },
+    "testing": {
+      "id": "4a88d006-6056-4d53-8026-ddbc70721931",
+      "name": "S4 — Testing",
+      "issue_ids": ["I-210"]
+    },
+    "qualification": {
+      "id": "350612cb-69c9-450e-889c-e8704fc664cc",
+      "name": "S1 — Discovery",
+      "local_issue_ids": ["CT-3"]
+    },
+    "approval_and_outcomes": {
+      "id": "db5d135c-7261-46ba-a3ed-6601f21236b7",
+      "name": "S5 — Outcome Review",
+      "local_issue_ids": ["CT-13", "CT-14"]
+    },
+    "retrospective": {
+      "id": "2a103e0c-36aa-436a-937f-bd9f17cfe6e6",
+      "name": "S6 — Retrospective",
+      "local_issue_ids": ["CT-15"]
+    }
+  },
+  "implementation_resolutions": [
+    {
+      "id": "IR-201",
+      "source_task": "T-SECURITY-MCP",
+      "status": "accepted_technical_refinement",
+      "evidence_ref": "docs/product/versions/v0.2.0/30-implementation/research/T-SECURITY-MCP.md",
+      "applies_to_issue_ids": ["I-207", "I-208", "I-210"],
+      "decision": "Keep owner-created scoped personal access tokens on REST and require OAuth 2.1 discovery, PKCE, consent, audience/resource binding, short-lived access tokens, rotation, and revocation for remote MCP. PAT-only remote MCP and downstream token passthrough are prohibited.",
+      "scope_effect": "No product capability is added; this selects the standards-compatible authorization mechanism required to deliver the already accepted PM-only remote MCP scope."
+    },
+    {
+      "id": "IR-202",
+      "source_task": "I-202 architecture verification",
+      "status": "accepted_technical_refinement",
+      "evidence_ref": "https://firebase.google.com/docs/app-hosting/frameworks-tooling",
+      "applies_to_issue_ids": ["I-202", "I-209", "I-210"],
+      "decision": "Serve the existing Vite SPA with Firebase Hosting and rewrite trusted API, MCP, and OAuth traffic to Cloud Run/Functions instead of converting the app to Next.js/Angular or relying on an unsupported App Hosting adapter.",
+      "scope_effect": "The product remains Firebase-hosted with Firestore authority; this removes an unsupported deployment assumption without adding product scope."
+    }
+  ],
+  "artifacts": {
+    "prd": {
+      "status": "passed",
+      "ref": "docs/product/versions/v0.2.0/20-planning/prd.md"
+    },
+    "architecture": {
+      "status": "passed",
+      "ref": "docs/product/versions/v0.2.0/20-planning/architecture.md"
+    },
+    "ux": {
+      "status": "passed",
+      "ref": "docs/product/versions/v0.2.0/20-planning/ux-design.md"
+    },
+    "risk_analysis": {
+      "status": "passed",
+      "ref": "docs/product/versions/v0.2.0/20-planning/risk-analysis.md"
+    },
+    "acceptance_criteria": {
+      "status": "passed",
+      "ref": "docs/product/versions/v0.2.0/20-planning/acceptance-criteria.md"
+    },
+    "backlog": {
+      "status": "passed",
+      "ref": "docs/product/versions/v0.2.0/20-planning/backlog.md"
+    },
+    "sprint_plan": {
+      "status": "passed",
+      "ref": "docs/product/versions/v0.2.0/20-planning/sprint-plan.md"
+    },
+    "quality_review": {
+      "status": "passed",
+      "ref": "docs/product/versions/v0.2.0/20-planning/quality-review.md"
+    },
+    "critical_qa": {
+      "status": "passed",
+      "ref": "docs/product/versions/v0.2.0/20-planning/critical-qa.md"
+    },
+    "combined_release_gates": {
+      "status": "passed",
+      "ref": "docs/product/versions/v0.2.0/20-planning/combined-release-gates.md"
+    }
+  },
+  "discovery_validation": {
+    "valid": true,
+    "artifact_ref": "docs/product/versions/v0.2.0/10-discovery/discovery-package.json",
+    "artifact_sha256": "d47f179f0d7982a60f006047766e9348aa95b4f257dfe9095edd26af27ac2f50",
+    "errors": 0,
+    "warnings": 1
+  },
+  "discovery_outcomes": [
+    {
+      "id": "O-201",
+      "contract_version": "1.0",
+      "contract_sha256": "448f81b8cd3e89de28e4d6547cd946750e834c9040d1473d99dfe21f17505ee5",
+      "kind": "outcome",
+      "subject": "target_user",
+      "target_segment_or_system": "eligible first-time hosted workspace owners",
+      "expected_change": "complete the first useful planning action shortly after Google sign-in",
+      "metric": {
+        "name": "ten-minute hosted activation rate",
+        "definition": "share of eligible first-time owners who complete Google sign-in, workspace bootstrap, project creation, and first issue creation within ten minutes",
+        "unit": "percent",
+        "direction": "increase",
+        "aggregation": "rate",
+        "population": "first-time owner accounts with successful Google sign-in and no prior trial eligibility record",
+        "workload": "one initial hosted workspace bootstrap per eligible owner"
+      },
+      "baseline": {
+        "status": "measurement_required",
+        "value": null,
+        "period": null,
+        "evidence_ref": null
+      },
+      "baseline_measurement_task_id": "T-BASELINE-201",
+      "target": {
+        "operator": ">=",
+        "value": 70
+      },
+      "measurement": {
+        "method": "cohort query",
+        "source": "versioned product event ledger",
+        "owner": "Product Analytics",
+        "observation_window": {
+          "start": "2026-11-01",
+          "end": "2026-11-30",
+          "earliest_review_at": "2026-12-01"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-201",
+          "name": "owner bootstrap error rate",
+          "metric_definition": "share of eligible owner bootstrap attempts ending in an unhandled or unrecoverable error",
+          "source": "product event ledger and error telemetry",
+          "operator": "<=",
+          "value": 1,
+          "unit": "percent"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "ten-minute hosted activation rate",
+        "operator": "<",
+        "value": 35,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "Google sign-in availability is not the dominant failure mode",
+        "the provisional observation window follows a usable release"
+      ],
+      "evidence_refs": [
+        "E-201",
+        "E-204"
+      ],
+      "confidence": "low",
+      "status": "baseline_needed"
+    },
+    {
+      "id": "O-202",
+      "contract_version": "1.0",
+      "contract_sha256": "bcfe93fc4da8f188c0fbd47dbe9b06f8940711a1342ec954193ba1fe5ea61c4e",
+      "kind": "outcome",
+      "subject": "target_user",
+      "target_segment_or_system": "eligible trial workspaces with at least one sent invitation",
+      "expected_change": "complete a durable owner-to-member collaboration loop",
+      "metric": {
+        "name": "seven-day collaboration-loop completion rate",
+        "definition": "share of eligible workspaces with one accepted invite, one non-owner action on an assigned issue, and one non-owner comment within seven days of the first invite",
+        "unit": "percent",
+        "direction": "increase",
+        "aggregation": "rate",
+        "population": "trial workspaces sending their first valid member invitation",
+        "workload": "one first invitation and resulting assigned-work loop per workspace"
+      },
+      "baseline": {
+        "status": "measurement_required",
+        "value": null,
+        "period": null,
+        "evidence_ref": null
+      },
+      "baseline_measurement_task_id": "T-BASELINE-202",
+      "target": {
+        "operator": ">=",
+        "value": 60
+      },
+      "measurement": {
+        "method": "cohort query",
+        "source": "authoritative workspace and product event ledger",
+        "owner": "Product Analytics",
+        "observation_window": {
+          "start": "2026-11-01",
+          "end": "2026-12-15",
+          "earliest_review_at": "2026-12-23"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-202",
+          "name": "unwanted or duplicate accepted membership rate",
+          "metric_definition": "share of accepted memberships created without one valid intended invitation and matching signed-in email",
+          "source": "membership and invitation audit ledger",
+          "operator": "=",
+          "value": 0,
+          "unit": "percent"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "seven-day collaboration-loop completion rate",
+        "operator": "<",
+        "value": 25,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "one assignee and two roles cover the first collaboration loop",
+        "the provisional observation window follows a usable release"
+      ],
+      "evidence_refs": [
+        "E-201",
+        "E-205",
+        "E-206"
+      ],
+      "confidence": "low",
+      "status": "baseline_needed"
+    },
+    {
+      "id": "O-203",
+      "contract_version": "1.0",
+      "contract_sha256": "596a14ecd667db599039a6c28616f2adf141afebb7e5a584f84b0acbaddf2b88",
+      "kind": "outcome",
+      "subject": "target_user",
+      "target_segment_or_system": "eligible workspace owners whose 30-day Pro trial ends",
+      "expected_change": "choose and maintain a paid hosted subscription at the sponsor-confirmed price",
+      "metric": {
+        "name": "seven-day trial-to-paid conversion rate",
+        "definition": "share of eligible workspaces activating a paid monthly or annual subscription within seven days after the 30-day trial ends",
+        "unit": "percent",
+        "direction": "increase",
+        "aggregation": "rate",
+        "population": "non-abusive workspaces completing a first 30-day Pro trial during the window",
+        "workload": "one trial-expiry and subscription decision per eligible workspace"
+      },
+      "baseline": {
+        "status": "measurement_required",
+        "value": null,
+        "period": null,
+        "evidence_ref": null
+      },
+      "baseline_measurement_task_id": "T-BASELINE-203",
+      "target": {
+        "operator": ">=",
+        "value": 12
+      },
+      "measurement": {
+        "method": "billing cohort reconciliation",
+        "source": "server-owned entitlement ledger and verified Stripe readback",
+        "owner": "Product Analytics",
+        "observation_window": {
+          "start": "2026-12-01",
+          "end": "2027-01-31",
+          "earliest_review_at": "2027-02-08"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-203",
+          "name": "variable service cost share",
+          "metric_definition": "Firebase, payment processing, and directly attributable hosted variable costs divided by recognized subscription revenue for the cohort",
+          "source": "Firebase billing export and Stripe balance/revenue records",
+          "operator": "<=",
+          "value": 50,
+          "unit": "percent"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "seven-day trial-to-paid conversion rate",
+        "operator": "<",
+        "value": 5,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "USD before applicable taxes is acceptable for launch",
+        "one-user Free fallback avoids coercive data loss",
+        "the annual discount remains sponsor-approved"
+      ],
+      "evidence_refs": [
+        "E-201",
+        "E-207",
+        "E-208",
+        "E-209"
+      ],
+      "confidence": "low",
+      "status": "baseline_needed"
+    },
+    {
+      "id": "O-204",
+      "contract_version": "1.0",
+      "contract_sha256": "167bfa36eb6b8a58424b9cb417db9f1fa9aed3a7cce864f519ea5be5a8f1db1e",
+      "kind": "outcome",
+      "subject": "system",
+      "target_segment_or_system": "versioned OpenLinear REST and MCP product-management surfaces",
+      "expected_change": "complete canonical PM operations correctly and safely through either automation surface",
+      "metric": {
+        "name": "canonical automation task success rate",
+        "definition": "share of canonical project, milestone, issue, assignment, comment, membership, and read-only billing tasks returning the expected durable state through both REST and MCP without manual repair",
+        "unit": "percent",
+        "direction": "increase",
+        "aggregation": "rate",
+        "population": "approved canonical automation task/environment matrix",
+        "workload": "one deterministic run per task through REST and MCP for owner and member roles"
+      },
+      "baseline": {
+        "status": "measurement_required",
+        "value": null,
+        "period": null,
+        "evidence_ref": null
+      },
+      "baseline_measurement_task_id": "T-BASELINE-204",
+      "target": {
+        "operator": ">=",
+        "value": 95
+      },
+      "measurement": {
+        "method": "deterministic UAT matrix",
+        "source": "API/MCP structured results, audit ledger, and authoritative Firestore readback",
+        "owner": "Quality Lead",
+        "observation_window": {
+          "start": "2026-10-01",
+          "end": "2026-10-31",
+          "earliest_review_at": "2026-11-01"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-204",
+          "name": "successful cross-workspace unauthorized operations",
+          "metric_definition": "count of unauthorized cross-workspace reads or mutations that return protected data or change protected state",
+          "source": "cross-workspace security suite and audit ledger",
+          "operator": "=",
+          "value": 0,
+          "unit": "count"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "canonical automation task success rate",
+        "operator": "<",
+        "value": 80,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "scoped personal tokens pass T-SECURITY-MCP",
+        "the provisional observation window follows an implementation candidate"
+      ],
+      "evidence_refs": [
+        "E-201",
+        "E-210",
+        "E-211",
+        "E-212",
+        "E-213"
+      ],
+      "confidence": "low",
+      "status": "baseline_needed"
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "O-201",
+      "contract_version": "1.0",
+      "contract_sha256": "448f81b8cd3e89de28e4d6547cd946750e834c9040d1473d99dfe21f17505ee5",
+      "kind": "outcome",
+      "subject": "target_user",
+      "target_segment_or_system": "eligible first-time hosted workspace owners",
+      "expected_change": "complete the first useful planning action shortly after Google sign-in",
+      "metric": {
+        "name": "ten-minute hosted activation rate",
+        "definition": "share of eligible first-time owners who complete Google sign-in, workspace bootstrap, project creation, and first issue creation within ten minutes",
+        "unit": "percent",
+        "direction": "increase",
+        "aggregation": "rate",
+        "population": "first-time owner accounts with successful Google sign-in and no prior trial eligibility record",
+        "workload": "one initial hosted workspace bootstrap per eligible owner"
+      },
+      "baseline": {
+        "status": "measurement_required",
+        "value": null,
+        "period": null,
+        "evidence_ref": null
+      },
+      "baseline_measurement_task_id": "T-BASELINE-201",
+      "target": {
+        "operator": ">=",
+        "value": 70
+      },
+      "measurement": {
+        "method": "cohort query",
+        "source": "versioned product event ledger",
+        "owner": "Product Analytics",
+        "observation_window": {
+          "start": "2026-11-01",
+          "end": "2026-11-30",
+          "earliest_review_at": "2026-12-01"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-201",
+          "name": "owner bootstrap error rate",
+          "metric_definition": "share of eligible owner bootstrap attempts ending in an unhandled or unrecoverable error",
+          "source": "product event ledger and error telemetry",
+          "operator": "<=",
+          "value": 1,
+          "unit": "percent"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "ten-minute hosted activation rate",
+        "operator": "<",
+        "value": 35,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "Google sign-in availability is not the dominant failure mode",
+        "the provisional observation window follows a usable release"
+      ],
+      "evidence_refs": [
+        "E-201",
+        "E-204"
+      ],
+      "confidence": "low",
+      "status": "baseline_needed"
+    },
+    {
+      "id": "O-202",
+      "contract_version": "1.0",
+      "contract_sha256": "bcfe93fc4da8f188c0fbd47dbe9b06f8940711a1342ec954193ba1fe5ea61c4e",
+      "kind": "outcome",
+      "subject": "target_user",
+      "target_segment_or_system": "eligible trial workspaces with at least one sent invitation",
+      "expected_change": "complete a durable owner-to-member collaboration loop",
+      "metric": {
+        "name": "seven-day collaboration-loop completion rate",
+        "definition": "share of eligible workspaces with one accepted invite, one non-owner action on an assigned issue, and one non-owner comment within seven days of the first invite",
+        "unit": "percent",
+        "direction": "increase",
+        "aggregation": "rate",
+        "population": "trial workspaces sending their first valid member invitation",
+        "workload": "one first invitation and resulting assigned-work loop per workspace"
+      },
+      "baseline": {
+        "status": "measurement_required",
+        "value": null,
+        "period": null,
+        "evidence_ref": null
+      },
+      "baseline_measurement_task_id": "T-BASELINE-202",
+      "target": {
+        "operator": ">=",
+        "value": 60
+      },
+      "measurement": {
+        "method": "cohort query",
+        "source": "authoritative workspace and product event ledger",
+        "owner": "Product Analytics",
+        "observation_window": {
+          "start": "2026-11-01",
+          "end": "2026-12-15",
+          "earliest_review_at": "2026-12-23"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-202",
+          "name": "unwanted or duplicate accepted membership rate",
+          "metric_definition": "share of accepted memberships created without one valid intended invitation and matching signed-in email",
+          "source": "membership and invitation audit ledger",
+          "operator": "=",
+          "value": 0,
+          "unit": "percent"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "seven-day collaboration-loop completion rate",
+        "operator": "<",
+        "value": 25,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "one assignee and two roles cover the first collaboration loop",
+        "the provisional observation window follows a usable release"
+      ],
+      "evidence_refs": [
+        "E-201",
+        "E-205",
+        "E-206"
+      ],
+      "confidence": "low",
+      "status": "baseline_needed"
+    },
+    {
+      "id": "O-203",
+      "contract_version": "1.0",
+      "contract_sha256": "596a14ecd667db599039a6c28616f2adf141afebb7e5a584f84b0acbaddf2b88",
+      "kind": "outcome",
+      "subject": "target_user",
+      "target_segment_or_system": "eligible workspace owners whose 30-day Pro trial ends",
+      "expected_change": "choose and maintain a paid hosted subscription at the sponsor-confirmed price",
+      "metric": {
+        "name": "seven-day trial-to-paid conversion rate",
+        "definition": "share of eligible workspaces activating a paid monthly or annual subscription within seven days after the 30-day trial ends",
+        "unit": "percent",
+        "direction": "increase",
+        "aggregation": "rate",
+        "population": "non-abusive workspaces completing a first 30-day Pro trial during the window",
+        "workload": "one trial-expiry and subscription decision per eligible workspace"
+      },
+      "baseline": {
+        "status": "measurement_required",
+        "value": null,
+        "period": null,
+        "evidence_ref": null
+      },
+      "baseline_measurement_task_id": "T-BASELINE-203",
+      "target": {
+        "operator": ">=",
+        "value": 12
+      },
+      "measurement": {
+        "method": "billing cohort reconciliation",
+        "source": "server-owned entitlement ledger and verified Stripe readback",
+        "owner": "Product Analytics",
+        "observation_window": {
+          "start": "2026-12-01",
+          "end": "2027-01-31",
+          "earliest_review_at": "2027-02-08"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-203",
+          "name": "variable service cost share",
+          "metric_definition": "Firebase, payment processing, and directly attributable hosted variable costs divided by recognized subscription revenue for the cohort",
+          "source": "Firebase billing export and Stripe balance/revenue records",
+          "operator": "<=",
+          "value": 50,
+          "unit": "percent"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "seven-day trial-to-paid conversion rate",
+        "operator": "<",
+        "value": 5,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "USD before applicable taxes is acceptable for launch",
+        "one-user Free fallback avoids coercive data loss",
+        "the annual discount remains sponsor-approved"
+      ],
+      "evidence_refs": [
+        "E-201",
+        "E-207",
+        "E-208",
+        "E-209"
+      ],
+      "confidence": "low",
+      "status": "baseline_needed"
+    },
+    {
+      "id": "O-204",
+      "contract_version": "1.0",
+      "contract_sha256": "167bfa36eb6b8a58424b9cb417db9f1fa9aed3a7cce864f519ea5be5a8f1db1e",
+      "kind": "outcome",
+      "subject": "system",
+      "target_segment_or_system": "versioned OpenLinear REST and MCP product-management surfaces",
+      "expected_change": "complete canonical PM operations correctly and safely through either automation surface",
+      "metric": {
+        "name": "canonical automation task success rate",
+        "definition": "share of canonical project, milestone, issue, assignment, comment, membership, and read-only billing tasks returning the expected durable state through both REST and MCP without manual repair",
+        "unit": "percent",
+        "direction": "increase",
+        "aggregation": "rate",
+        "population": "approved canonical automation task/environment matrix",
+        "workload": "one deterministic run per task through REST and MCP for owner and member roles"
+      },
+      "baseline": {
+        "status": "measurement_required",
+        "value": null,
+        "period": null,
+        "evidence_ref": null
+      },
+      "baseline_measurement_task_id": "T-BASELINE-204",
+      "target": {
+        "operator": ">=",
+        "value": 95
+      },
+      "measurement": {
+        "method": "deterministic UAT matrix",
+        "source": "API/MCP structured results, audit ledger, and authoritative Firestore readback",
+        "owner": "Quality Lead",
+        "observation_window": {
+          "start": "2026-10-01",
+          "end": "2026-10-31",
+          "earliest_review_at": "2026-11-01"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-204",
+          "name": "successful cross-workspace unauthorized operations",
+          "metric_definition": "count of unauthorized cross-workspace reads or mutations that return protected data or change protected state",
+          "source": "cross-workspace security suite and audit ledger",
+          "operator": "=",
+          "value": 0,
+          "unit": "count"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "canonical automation task success rate",
+        "operator": "<",
+        "value": 80,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "scoped personal tokens pass T-SECURITY-MCP",
+        "the provisional observation window follows an implementation candidate"
+      ],
+      "evidence_refs": [
+        "E-201",
+        "E-210",
+        "E-211",
+        "E-212",
+        "E-213"
+      ],
+      "confidence": "low",
+      "status": "baseline_needed"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "R-201",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-201",
+        "E-207",
+        "E-216"
+      ],
+      "outcome_refs": [
+        "O-201"
+      ],
+      "validation_method": "deployment fixture and local/hosted authority boundary test"
+    },
+    {
+      "id": "R-202",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-201",
+        "E-204"
+      ],
+      "outcome_refs": [
+        "O-201"
+      ],
+      "validation_method": "auth emulator/provider contract and browser UAT"
+    },
+    {
+      "id": "R-203",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-201",
+        "E-206"
+      ],
+      "outcome_refs": [
+        "O-201",
+        "O-203"
+      ],
+      "validation_method": "transaction, idempotency, timezone boundary, and UAT tests"
+    },
+    {
+      "id": "R-204",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-205"
+      ],
+      "outcome_refs": [
+        "O-202",
+        "O-204"
+      ],
+      "validation_method": "Firebase rules emulator and trusted-handler cross-workspace security matrix"
+    },
+    {
+      "id": "R-205",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-201",
+        "E-205",
+        "E-206"
+      ],
+      "outcome_refs": [
+        "O-202"
+      ],
+      "validation_method": "invite lifecycle integration and replay/enumeration tests"
+    },
+    {
+      "id": "R-206",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-201",
+        "E-205"
+      ],
+      "outcome_refs": [
+        "O-202",
+        "O-204"
+      ],
+      "validation_method": "role matrix across UI, rules, REST, and MCP"
+    },
+    {
+      "id": "R-207",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-201",
+        "E-205"
+      ],
+      "outcome_refs": [
+        "O-202"
+      ],
+      "validation_method": "domain unit and cross-workspace assignment tests"
+    },
+    {
+      "id": "R-208",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-201",
+        "E-205"
+      ],
+      "outcome_refs": [
+        "O-202"
+      ],
+      "validation_method": "comment permission, revision, activity, and accessibility tests"
+    },
+    {
+      "id": "R-209",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-201",
+        "E-209"
+      ],
+      "outcome_refs": [
+        "O-203"
+      ],
+      "validation_method": "Stripe test-mode price, quantity, proration, and copy UAT"
+    },
+    {
+      "id": "R-210",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-201",
+        "E-209"
+      ],
+      "outcome_refs": [
+        "O-203"
+      ],
+      "validation_method": "entitlement state-machine and duplicate/out-of-order webhook tests"
+    },
+    {
+      "id": "R-211",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-201",
+        "E-213"
+      ],
+      "outcome_refs": [
+        "O-204"
+      ],
+      "validation_method": "OpenAPI schema, adapter contract, and pagination tests"
+    },
+    {
+      "id": "R-212",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-210",
+        "E-212"
+      ],
+      "outcome_refs": [
+        "O-204"
+      ],
+      "validation_method": "token lifecycle, scope, replay, log-redaction, and revocation tests"
+    },
+    {
+      "id": "R-213",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-201",
+        "E-210",
+        "E-211",
+        "E-212"
+      ],
+      "outcome_refs": [
+        "O-204"
+      ],
+      "validation_method": "MCP protocol, schema, parity, cancellation, and security tests"
+    },
+    {
+      "id": "R-214",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-201",
+        "E-212"
+      ],
+      "outcome_refs": [
+        "O-204"
+      ],
+      "validation_method": "skill lint, tool-map fixture, and prohibited-capability scan"
+    },
+    {
+      "id": "R-215",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-203",
+        "E-212"
+      ],
+      "outcome_refs": [
+        "O-202",
+        "O-204"
+      ],
+      "validation_method": "audit fixture and source-parity tests"
+    },
+    {
+      "id": "R-216",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-206",
+        "E-211",
+        "E-212"
+      ],
+      "outcome_refs": [
+        "O-204"
+      ],
+      "validation_method": "concurrent mutation, idempotency, webhook replay, and restart tests"
+    },
+    {
+      "id": "R-217",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-207",
+        "E-208"
+      ],
+      "outcome_refs": [
+        "O-203",
+        "O-204"
+      ],
+      "validation_method": "billing-export fixture, budget configuration review, and rate-limit load test"
+    },
+    {
+      "id": "R-218",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-203",
+        "E-205"
+      ],
+      "outcome_refs": [
+        "O-204"
+      ],
+      "validation_method": "canonical export digest and cross-workspace leakage test"
+    },
+    {
+      "id": "R-219",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-205",
+        "E-210",
+        "E-212"
+      ],
+      "outcome_refs": [
+        "O-204"
+      ],
+      "validation_method": "security boundary and adversarial integration suite"
+    },
+    {
+      "id": "R-220",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-201"
+      ],
+      "outcome_refs": [
+        "O-201",
+        "O-204"
+      ],
+      "validation_method": "route, schema, navigation, OpenAPI, MCP, skill, and copy scope scan"
+    }
+  ],
+  "issues": [
+    {
+      "id": "I-201",
+      "title": "Instrument hosted outcomes, audit sources, and cost baselines",
+      "requirement_refs": [
+        "R-203",
+        "R-215",
+        "R-217"
+      ],
+      "outcome_refs": [
+        "O-201",
+        "O-202",
+        "O-203",
+        "O-204"
+      ],
+      "test_refs": [
+        "P-T201"
+      ],
+      "depends_on": [],
+      "blocked_by": [],
+      "implementation_ready": true,
+      "done": {
+        "output": [
+          "A versioned event, audit, and cost-measurement contract covers all four outcome baselines."
+        ],
+        "quality": [
+          "Event identity, provenance, privacy, and reconciliation fixtures pass without double counting."
+        ],
+        "outcome": [
+          "Baseline tasks can produce reviewable O-201 through O-204 evidence without claiming success early."
+        ]
+      }
+    },
+    {
+      "id": "I-202",
+      "title": "Deliver Firebase hosting, Google sign-in, and idempotent trial bootstrap",
+      "requirement_refs": [
+        "R-201",
+        "R-202",
+        "R-203",
+        "R-216",
+        "R-220"
+      ],
+      "outcome_refs": [
+        "O-201",
+        "O-203",
+        "O-204"
+      ],
+      "test_refs": [
+        "P-T202"
+      ],
+      "depends_on": [
+        "I-201"
+      ],
+      "blocked_by": [],
+      "implementation_ready": true,
+      "done": {
+        "output": [
+          "A hosted Firebase entry point, Google authentication flow, and transactional first-owner bootstrap are available."
+        ],
+        "quality": [
+          "Auth, retry, concurrency, timezone, local-authority separation, and excluded-surface checks pass."
+        ],
+        "outcome": [
+          "Eligible owners can enter a measurable hosted activation and trial journey."
+        ]
+      }
+    },
+    {
+      "id": "I-203",
+      "title": "Enforce workspace isolation and owner/member authorization",
+      "requirement_refs": [
+        "R-204",
+        "R-206",
+        "R-219"
+      ],
+      "outcome_refs": [
+        "O-202",
+        "O-204"
+      ],
+      "test_refs": [
+        "P-T203"
+      ],
+      "depends_on": [
+        "I-202"
+      ],
+      "blocked_by": [],
+      "implementation_ready": true,
+      "done": {
+        "output": [
+          "Owner/member authorization is enforced at Firestore and trusted server boundaries."
+        ],
+        "quality": [
+          "The complete role and cross-workspace adversarial matrix has zero unauthorized successful operations."
+        ],
+        "outcome": [
+          "Collaboration and automation can operate on a trustworthy workspace-scoped authority."
+        ]
+      }
+    },
+    {
+      "id": "I-204",
+      "title": "Add invitation and membership lifecycle",
+      "requirement_refs": [
+        "R-205",
+        "R-206",
+        "R-215",
+        "R-216"
+      ],
+      "outcome_refs": [
+        "O-202",
+        "O-204"
+      ],
+      "test_refs": [
+        "P-T204"
+      ],
+      "depends_on": [
+        "I-203"
+      ],
+      "blocked_by": [],
+      "implementation_ready": true,
+      "done": {
+        "output": [
+          "Owners can send, inspect, revoke, and safely accept email-bound invitations."
+        ],
+        "quality": [
+          "Expiry, replay, enumeration, duplicate acceptance, role, audit, and accessibility tests pass."
+        ],
+        "outcome": [
+          "A workspace can enter the measurable owner-to-member collaboration loop."
+        ]
+      }
+    },
+    {
+      "id": "I-205",
+      "title": "Add single-assignee tasks and durable comments",
+      "requirement_refs": [
+        "R-207",
+        "R-208",
+        "R-215",
+        "R-216"
+      ],
+      "outcome_refs": [
+        "O-202",
+        "O-204"
+      ],
+      "test_refs": [
+        "P-T205"
+      ],
+      "depends_on": [
+        "I-203"
+      ],
+      "blocked_by": [],
+      "implementation_ready": true,
+      "done": {
+        "output": [
+          "Issues support one active same-workspace assignee and durable authored comment history."
+        ],
+        "quality": [
+          "Permission, revision, retry, soft-delete, ordering, activity, and accessibility tests pass."
+        ],
+        "outcome": [
+          "Members can complete the assigned-work and comment actions measured by O-202."
+        ]
+      }
+    },
+    {
+      "id": "I-206",
+      "title": "Add 30-day Pro trial, per-seat subscriptions, and Free fallback",
+      "requirement_refs": [
+        "R-203",
+        "R-209",
+        "R-210",
+        "R-217"
+      ],
+      "outcome_refs": [
+        "O-201",
+        "O-203"
+      ],
+      "test_refs": [
+        "P-T206"
+      ],
+      "depends_on": [
+        "I-201",
+        "I-203"
+      ],
+      "blocked_by": [],
+      "implementation_ready": true,
+      "done": {
+        "output": [
+          "Server-owned trial, monthly/annual checkout, seat quantity, entitlement, and one-writer Free fallback states are available."
+        ],
+        "quality": [
+          "Price, proration, webhook replay/order, expiry, downgrade, data preservation, budget, and copy tests pass."
+        ],
+        "outcome": [
+          "Eligible owners can make a measurable trial-to-paid choice at the sponsor-confirmed prices."
+        ]
+      }
+    },
+    {
+      "id": "I-207",
+      "title": "Publish the scoped PM REST API, token lifecycle, and workspace export",
+      "requirement_refs": [
+        "R-211",
+        "R-212",
+        "R-215",
+        "R-216",
+        "R-218",
+        "R-219"
+      ],
+      "outcome_refs": [
+        "O-204"
+      ],
+      "test_refs": [
+        "P-T207"
+      ],
+      "depends_on": [
+        "I-203",
+        "I-205"
+      ],
+      "blocked_by": [],
+      "implementation_ready": true,
+      "done": {
+        "output": [
+          "A versioned OpenAPI 3.1.1 PM API, scoped token lifecycle, and workspace export are published."
+        ],
+        "quality": [
+          "Schema, authorization, pagination, idempotency, revision, audit, redaction, revocation, and leakage tests pass."
+        ],
+        "outcome": [
+          "Canonical product-management operations are available for deterministic REST measurement."
+        ]
+      }
+    },
+    {
+      "id": "I-208",
+      "title": "Expose PM-only MCP tools and the reusable skill",
+      "requirement_refs": [
+        "R-213",
+        "R-214",
+        "R-215",
+        "R-219",
+        "R-220"
+      ],
+      "outcome_refs": [
+        "O-204"
+      ],
+      "test_refs": [
+        "P-T208"
+      ],
+      "depends_on": [
+        "I-207"
+      ],
+      "blocked_by": [],
+      "implementation_ready": true,
+      "done": {
+        "output": [
+          "Streamable HTTP MCP tools and an openlinear-product-management skill expose the bounded PM operation map."
+        ],
+        "quality": [
+          "Protocol, schema, API parity, cancellation, authorization, audit, and prohibited-capability scans pass."
+        ],
+        "outcome": [
+          "Canonical product-management operations are available for deterministic MCP measurement."
+        ]
+      }
+    },
+    {
+      "id": "I-209",
+      "title": "Establish hosted operations, abuse, security, and cost controls",
+      "requirement_refs": [
+        "R-201",
+        "R-217",
+        "R-219"
+      ],
+      "outcome_refs": [
+        "O-203",
+        "O-204"
+      ],
+      "test_refs": [
+        "P-T209"
+      ],
+      "depends_on": [
+        "I-201",
+        "I-202",
+        "I-203",
+        "I-206",
+        "I-207"
+      ],
+      "blocked_by": [],
+      "implementation_ready": true,
+      "done": {
+        "output": [
+          "Budgets, limits, operational telemetry, abuse defenses, incident procedures, and cost-per-paid-seat reporting are configured."
+        ],
+        "quality": [
+          "Configuration review, boundary security suite, rate-limit load test, restore drill, and billing reconciliation pass."
+        ],
+        "outcome": [
+          "The price and automation surfaces have reviewable safety and unit-economics guardrail evidence."
+        ]
+      }
+    },
+    {
+      "id": "I-210",
+      "title": "Run integrated owner/member/billing/API/MCP acceptance",
+      "requirement_refs": [
+        "R-201",
+        "R-202",
+        "R-203",
+        "R-204",
+        "R-205",
+        "R-206",
+        "R-207",
+        "R-208",
+        "R-209",
+        "R-210",
+        "R-211",
+        "R-212",
+        "R-213",
+        "R-214",
+        "R-215",
+        "R-216",
+        "R-217",
+        "R-218",
+        "R-219",
+        "R-220"
+      ],
+      "outcome_refs": [
+        "O-201",
+        "O-202",
+        "O-203",
+        "O-204"
+      ],
+      "test_refs": [
+        "P-T210"
+      ],
+      "depends_on": [
+        "I-204",
+        "I-205",
+        "I-206",
+        "I-208",
+        "I-209"
+      ],
+      "blocked_by": [],
+      "implementation_ready": true,
+      "done": {
+        "output": [
+          "The integrated acceptance matrix covers owner, member, billing, REST, MCP, export, accessibility, security, and exclusions."
+        ],
+        "quality": [
+          "Every required scenario has durable evidence and all release-blocking defects are resolved or explicitly stopped."
+        ],
+        "outcome": [
+          "A candidate can enter independent Testing while all four outcome baselines and success claims remain pending."
+        ]
+      }
+    }
+  ],
+  "tests": [
+    {
+      "id": "P-T201",
+      "level": "fixture",
+      "requirement_refs": [
+        "R-203",
+        "R-215",
+        "R-217"
+      ],
+      "issue_refs": [
+        "I-201"
+      ],
+      "method": "fixture verification for instrument hosted outcomes, audit sources, and cost baselines",
+      "expected": "All R-203, R-215, R-217 acceptance criteria pass with durable evidence."
+    },
+    {
+      "id": "P-T202",
+      "level": "adapter_contract",
+      "requirement_refs": [
+        "R-201",
+        "R-202",
+        "R-203",
+        "R-216",
+        "R-220"
+      ],
+      "issue_refs": [
+        "I-202"
+      ],
+      "method": "adapter_contract verification for deliver firebase hosting, google sign-in, and idempotent trial bootstrap",
+      "expected": "All R-201, R-202, R-203, R-216, R-220 acceptance criteria pass with durable evidence."
+    },
+    {
+      "id": "P-T203",
+      "level": "security",
+      "requirement_refs": [
+        "R-204",
+        "R-206",
+        "R-219"
+      ],
+      "issue_refs": [
+        "I-203"
+      ],
+      "method": "security verification for enforce workspace isolation and owner/member authorization",
+      "expected": "All R-204, R-206, R-219 acceptance criteria pass with durable evidence."
+    },
+    {
+      "id": "P-T204",
+      "level": "boundary",
+      "requirement_refs": [
+        "R-205",
+        "R-206",
+        "R-215",
+        "R-216"
+      ],
+      "issue_refs": [
+        "I-204"
+      ],
+      "method": "boundary verification for add invitation and membership lifecycle",
+      "expected": "All R-205, R-206, R-215, R-216 acceptance criteria pass with durable evidence."
+    },
+    {
+      "id": "P-T205",
+      "level": "regression",
+      "requirement_refs": [
+        "R-207",
+        "R-208",
+        "R-215",
+        "R-216"
+      ],
+      "issue_refs": [
+        "I-205"
+      ],
+      "method": "regression verification for add single-assignee tasks and durable comments",
+      "expected": "All R-207, R-208, R-215, R-216 acceptance criteria pass with durable evidence."
+    },
+    {
+      "id": "P-T206",
+      "level": "boundary",
+      "requirement_refs": [
+        "R-203",
+        "R-209",
+        "R-210",
+        "R-217"
+      ],
+      "issue_refs": [
+        "I-206"
+      ],
+      "method": "boundary verification for add 30-day pro trial, per-seat subscriptions, and free fallback",
+      "expected": "All R-203, R-209, R-210, R-217 acceptance criteria pass with durable evidence."
+    },
+    {
+      "id": "P-T207",
+      "level": "adapter_contract",
+      "requirement_refs": [
+        "R-211",
+        "R-212",
+        "R-215",
+        "R-216",
+        "R-218",
+        "R-219"
+      ],
+      "issue_refs": [
+        "I-207"
+      ],
+      "method": "adapter_contract verification for publish the scoped pm rest api, token lifecycle, and workspace export",
+      "expected": "All R-211, R-212, R-215, R-216, R-218, R-219 acceptance criteria pass with durable evidence."
+    },
+    {
+      "id": "P-T208",
+      "level": "adapter_contract",
+      "requirement_refs": [
+        "R-213",
+        "R-214",
+        "R-215",
+        "R-219",
+        "R-220"
+      ],
+      "issue_refs": [
+        "I-208"
+      ],
+      "method": "adapter_contract verification for expose pm-only mcp tools and the reusable skill",
+      "expected": "All R-213, R-214, R-215, R-219, R-220 acceptance criteria pass with durable evidence."
+    },
+    {
+      "id": "P-T209",
+      "level": "ci_release",
+      "requirement_refs": [
+        "R-201",
+        "R-217",
+        "R-219"
+      ],
+      "issue_refs": [
+        "I-209"
+      ],
+      "method": "ci_release verification for establish hosted operations, abuse, security, and cost controls",
+      "expected": "All R-201, R-217, R-219 acceptance criteria pass with durable evidence."
+    },
+    {
+      "id": "P-T210",
+      "level": "uat",
+      "requirement_refs": [
+        "R-201",
+        "R-202",
+        "R-203",
+        "R-204",
+        "R-205",
+        "R-206",
+        "R-207",
+        "R-208",
+        "R-209",
+        "R-210",
+        "R-211",
+        "R-212",
+        "R-213",
+        "R-214",
+        "R-215",
+        "R-216",
+        "R-217",
+        "R-218",
+        "R-219",
+        "R-220"
+      ],
+      "issue_refs": [
+        "I-210"
+      ],
+      "method": "uat verification for run integrated owner/member/billing/api/mcp acceptance",
+      "expected": "All R-201, R-202, R-203, R-204, R-205, R-206, R-207, R-208, R-209, R-210, R-211, R-212, R-213, R-214, R-215, R-216, R-217, R-218, R-219, R-220 acceptance criteria pass with durable evidence."
+    }
+  ],
+  "critical_qa": [
+    {
+      "id": "scope-truth",
+      "status": "Pass"
+    },
+    {
+      "id": "traceability",
+      "status": "Pass"
+    },
+    {
+      "id": "outcome-focus",
+      "status": "Pass"
+    },
+    {
+      "id": "evidence-handoff",
+      "status": "Pass"
+    },
+    {
+      "id": "architecture",
+      "status": "Pass"
+    },
+    {
+      "id": "ux",
+      "status": "Pass"
+    },
+    {
+      "id": "provider-sync",
+      "status": "Pass"
+    },
+    {
+      "id": "ai-boundaries",
+      "status": "Pass"
+    },
+    {
+      "id": "testing",
+      "status": "Pass"
+    },
+    {
+      "id": "release-path",
+      "status": "Pass"
+    }
+  ],
+  "readiness": {
+    "decision": "yellow",
+    "rationale": "The bounded implementation graph is complete and blocker-free, but demand evidence and all four outcome baselines remain unmeasured. An accepted Discovery contract permits implementation only while keeping baseline collection, public billing, and outcome claims pending.",
+    "allowed_scope": [
+      "I-201",
+      "I-202",
+      "I-203",
+      "I-204",
+      "I-205",
+      "I-206",
+      "I-207",
+      "I-208",
+      "I-209",
+      "I-210"
+    ],
+    "blockers": [],
+    "automatic_resolutions": [
+      {
+        "resolution_id": "AUTO-201",
+        "attention_class": "no_human_attention",
+        "decision_mode": "auto",
+        "automation_basis": "accepted_contract",
+        "automation_basis_ref": "docs/product/versions/v0.2.0/10-discovery/discovery-package.json#outcomes",
+        "effect": "outcome_baseline_nonblocking",
+        "applies_to_issue_ids": [
+          "I-201",
+          "I-202",
+          "I-203",
+          "I-204",
+          "I-205",
+          "I-206",
+          "I-207",
+          "I-208",
+          "I-209",
+          "I-210"
+        ],
+        "outcome_ids": [
+          "O-201",
+          "O-202",
+          "O-203",
+          "O-204"
+        ],
+        "rationale": "Validated Discovery explicitly owns baseline measurement tasks and permits bounded implementation while outcome-success claims remain pending."
+      }
+    ]
+  }
+}

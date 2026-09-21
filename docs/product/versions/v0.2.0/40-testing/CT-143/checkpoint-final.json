@@ -1,0 +1,31 @@
+{
+  "schema_version": "ct143-testing-checkpoint-final-v1",
+  "captured_at": "2026-08-27T05:38:38Z",
+  "stage": "testing",
+  "status": "passed_done_eligible",
+  "issue": {
+    "identifier": "CT-143",
+    "stable_id": "1f065874-a1d3-433b-ae4e-63b9d69c8d4d",
+    "revision_before_reconciliation": 7,
+    "ct_status_before_reconciliation": "In Progress",
+    "milestone": "S4 — Testing"
+  },
+  "acceptance": {
+    "reviewer": "codex-testing-ct143-independent",
+    "session": "CT143-INDEPENDENT-REMEDIATION-REVIEW-20260827",
+    "decision": "PASS",
+    "findings": {"P0": 0, "P1": 0, "P2": 0, "P3": 0},
+    "prior_p3": "resolved",
+    "evidence_map": "docs/product/versions/v0.2.0/40-testing/CT-143/evidence-map-final.json"
+  },
+  "candidate": {
+    "sealed_files": 573,
+    "aggregate_sha256": "1e4b7c6d633a2feee7f0a2644a3f998002aab0bf42da9bb739a4eab66b8b47a9",
+    "primary_final_seal": "passed"
+  },
+  "control_tower": {
+    "authority": "project-local-v0.8",
+    "projection": "disabled_not_synced",
+    "next_update": "expected revision 7 to Done on the existing S4 milestone"
+  }
+}

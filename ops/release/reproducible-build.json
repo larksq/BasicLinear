@@ -12,56 +12,132 @@
   },
   "inputs": [
     {
-      "path": "package-lock.json",
-      "sha256": "fd719192d99ee14779bc3dc5fcc910da030ac889a45d78600b93e515cce67cca"
+      "path": ".github/workflows/ci.yml",
+      "sha256": "a352a677d1417b792756b3b8addcab4a586358a05df9feae1843818027ab2e14"
     },
     {
-      "path": "package.json",
-      "sha256": "f107ff1154c9dededacd0d63ae6de07d3949c122539856bdde9c7cfd84ba6165"
+      "path": ".gitleaks.toml",
+      "sha256": "ba3e039c42d611b795ba20d6f11d72e03833bf8ee23bfc77f9b1473b3179bb21"
     },
     {
-      "path": "apps/api/package.json",
-      "sha256": "60d3812d72fdab296ea442a57144e3cc32ff02b4bbbc76e0bca5d197bfc9b50d"
+      "path": ".npmrc",
+      "sha256": "857e18055c0f5d75719d253033954c10511c4b16ae5bd68bc45bb75d93a411bc"
     },
     {
-      "path": "apps/web/package.json",
-      "sha256": "7e9b956a0383a63351b91f81d42d72b2b3324117a3afdebc26a51b436f234096"
-    },
-    {
-      "path": "ops/cli/package.json",
-      "sha256": "69e814219f87c6adc6ac7398c4b6bf1153ff48f91755c68441bbe0eed1526b1f"
-    },
-    {
-      "path": "packages/config/package.json",
-      "sha256": "f28ac6c095d42439093eec2f7093fff2533d14bcc6259d34fb31e690a5dd87af"
-    },
-    {
-      "path": "packages/contracts/package.json",
-      "sha256": "d914916fea1ff80034abe959c7fd9eb753c7342c6860596655aa36ddcc2d303f"
-    },
-    {
-      "path": "packages/db/package.json",
-      "sha256": "b6d1b86400f0febefac71a6bfe1d357097f1a32fa5b9c11f78d2d72cc7447fdc"
-    },
-    {
-      "path": "packages/domain/package.json",
-      "sha256": "bdad17cd8270118024be72a4d4cd21a8dc2a368a14b30947251210d00ca80f85"
-    },
-    {
-      "path": "packages/test-fixtures/package.json",
-      "sha256": "5bbd30a5128e58183c803eccb552c0a2abe52d78a8637bf288c3c06d3b3956d8"
-    },
-    {
-      "path": "packages/ui/package.json",
-      "sha256": "4594421e1498f9b1dc7c835a3cba318c22e95b2cda8186536bafba1fd84c42cf"
+      "path": ".nvmrc",
+      "sha256": "55075b5ec4e8b31936cbbc282b8829116d1fd48f2f2f1856dee592a6650700ce"
     },
     {
       "path": "LICENSE",
       "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
     },
     {
+      "path": "apps/api/package.json",
+      "sha256": "60d3812d72fdab296ea442a57144e3cc32ff02b4bbbc76e0bca5d197bfc9b50d"
+    },
+    {
+      "path": "apps/api/tsconfig.json",
+      "sha256": "8ad8b8a1fe13988d6e86d76a7dd1b841f69a867359f6679c1911b8abbc992e52"
+    },
+    {
+      "path": "apps/hosted-service/package.json",
+      "sha256": "dd26f451f2f31fe85e5afaef864988050846f085bcf5ddc35daf0750223ea068"
+    },
+    {
+      "path": "apps/hosted-service/tsconfig.json",
+      "sha256": "da8e5fc294f2cc905f61b463c3e663497ed45bb51e637d406901b597a5cfbc23"
+    },
+    {
+      "path": "apps/web/package.json",
+      "sha256": "e6f230b4153889782492693a35b9a8091db6cf0da0e98532546b1b4f91375583"
+    },
+    {
+      "path": "apps/web/tsconfig.json",
+      "sha256": "e52c0e1dc66fb530eeac544f441d486db80a97b5bb7e9780e99bb3bcb5342043"
+    },
+    {
+      "path": "apps/web/vite.config.ts",
+      "sha256": "2b15af6af8b46894639d5cd4efc2ce40f84f12aa3221ffc8c457a0204a7c0310"
+    },
+    {
+      "path": "ops/cli/package.json",
+      "sha256": "69e814219f87c6adc6ac7398c4b6bf1153ff48f91755c68441bbe0eed1526b1f"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "3c068793aa7506bd88f664ff2b05b78baae75d32c48a495fa81e6068f998258b"
+    },
+    {
+      "path": "package.json",
+      "sha256": "6661360965bd45eb2b2ad446021b910a2c5eea191f59db24d6a28f405326004f"
+    },
+    {
+      "path": "packages/config/package.json",
+      "sha256": "320d382ea1ff63e60ccd1462144a58dd35726da6ddfc123fc0703d65a20c16fe"
+    },
+    {
+      "path": "packages/config/tsconfig.json",
+      "sha256": "1b6ecef48f5521687b1e5e9b2c05525ed9ca325172b68151c13a6ebbc1d69caa"
+    },
+    {
+      "path": "packages/contracts/package.json",
+      "sha256": "d914916fea1ff80034abe959c7fd9eb753c7342c6860596655aa36ddcc2d303f"
+    },
+    {
+      "path": "packages/contracts/tsconfig.json",
+      "sha256": "8ad8b8a1fe13988d6e86d76a7dd1b841f69a867359f6679c1911b8abbc992e52"
+    },
+    {
+      "path": "packages/db/package.json",
+      "sha256": "b6d1b86400f0febefac71a6bfe1d357097f1a32fa5b9c11f78d2d72cc7447fdc"
+    },
+    {
+      "path": "packages/db/tsconfig.json",
+      "sha256": "f5deffb86c1bc8df82e47cad7d2040610eb5b2a978a25711cc25e7abc27046dd"
+    },
+    {
+      "path": "packages/domain/package.json",
+      "sha256": "bdad17cd8270118024be72a4d4cd21a8dc2a368a14b30947251210d00ca80f85"
+    },
+    {
+      "path": "packages/domain/tsconfig.json",
+      "sha256": "8ad8b8a1fe13988d6e86d76a7dd1b841f69a867359f6679c1911b8abbc992e52"
+    },
+    {
+      "path": "packages/hosted/package.json",
+      "sha256": "2e23835430a5316fc4e803ae1f1ebb8d2e37fae18a807a5a51e1c09a86564c76"
+    },
+    {
+      "path": "packages/hosted/tsconfig.json",
+      "sha256": "bb8199c5c0897eb869517fd5dd95d1dc377e9222804b969aa06c851a6e8ef14e"
+    },
+    {
+      "path": "packages/test-fixtures/package.json",
+      "sha256": "5bbd30a5128e58183c803eccb552c0a2abe52d78a8637bf288c3c06d3b3956d8"
+    },
+    {
+      "path": "packages/test-fixtures/tsconfig.json",
+      "sha256": "8ad8b8a1fe13988d6e86d76a7dd1b841f69a867359f6679c1911b8abbc992e52"
+    },
+    {
+      "path": "packages/ui/package.json",
+      "sha256": "4594421e1498f9b1dc7c835a3cba318c22e95b2cda8186536bafba1fd84c42cf"
+    },
+    {
+      "path": "packages/ui/tsconfig.json",
+      "sha256": "8ad8b8a1fe13988d6e86d76a7dd1b841f69a867359f6679c1911b8abbc992e52"
+    },
+    {
       "path": "scripts/clean-build-output.mjs",
-      "sha256": "e174f2d98a122a7d0a26d8d9211f0f3fff4e6e7bd1c87e4a3f1733bf2b713fa8"
+      "sha256": "62c7875e070afa767ac00f2d62850e90bec7e84dd21719a1c1e4a0093691ee4f"
+    },
+    {
+      "path": "scripts/prepare-release-metadata.mjs",
+      "sha256": "00f5bed7c56e975c8a535db551c020a419fdeb1f82c8a1e76fc097c09b21d031"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "adc032271697d49f7556295ef0f7ca42ff6bb5cfc0d0a6e55522bf1b51982c76"
     }
   ],
   "commands": [

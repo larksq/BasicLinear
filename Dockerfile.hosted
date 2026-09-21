@@ -1,0 +1,22 @@
+FROM node:24-bookworm-slim AS build
+
+WORKDIR /app
+COPY . .
+RUN npm ci
+RUN npm run build -w @openlinear/hosted
+RUN npm run build -w @openlinear/hosted-service
+RUN npm prune --omit=dev --omit=optional
+
+FROM node:24-bookworm-slim AS runtime
+
+ENV NODE_ENV=production
+WORKDIR /app
+COPY --from=build /app/package.json /app/package-lock.json ./
+COPY --from=build /app/node_modules ./node_modules
+COPY --from=build /app/packages/hosted/package.json ./packages/hosted/package.json
+COPY --from=build /app/packages/hosted/dist ./packages/hosted/dist
+COPY --from=build /app/apps/hosted-service/package.json ./apps/hosted-service/package.json
+COPY --from=build /app/apps/hosted-service/dist ./apps/hosted-service/dist
+
+USER node
+CMD ["node", "apps/hosted-service/dist/index.js"]

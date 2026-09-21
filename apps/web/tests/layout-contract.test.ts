@@ -26,7 +26,7 @@ describe('desktop density-control contract', () => {
     expect(app).toContain('onClick={toggleNavigationRail}');
     expect(app).toContain("railCollapsed ? 'rail-collapsed' : ''");
     expect(app).toContain("railCollapsed ? 'Expand navigation' : 'Collapse navigation'");
-    expect(styles).toContain('.app-shell { --ol-sidebar-width: 232px; }');
+    expect(styles).toContain('.app-shell { --ol-sidebar-width: 238px; }');
     expect(styles).toContain('.app-shell.rail-collapsed { grid-template-columns: 48px minmax(0, 1fr); }');
     expect(styles).toContain('.sidebar-collapse { display: none !important; }');
     expect(styles).toContain('@media (min-width: 768px)');

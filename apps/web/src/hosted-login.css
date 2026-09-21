@@ -1,0 +1,60 @@
+body:has(.ol-login) { background: #090a0c; }
+.hosted-shell:has(.ol-login) { display: flex; flex-direction: column; min-height: 100svh; background: #090a0c; }
+.hosted-shell:has(.ol-login) > .hosted-header,
+.hosted-shell:has(.ol-login) > .hosted-footer { display: none; }
+.hosted-shell:has(.ol-login) > .hosted-development-banner { background: #191b22; border-color: #303340; color: #bfc4d4; font-size: 11px; font-weight: 500; }
+.ol-login { flex: 1; min-height: 100svh; display: grid; grid-template-columns: 52% 48%; padding: 24px; color: #f2f3f5; font-family: 'Inter Variable', Inter, sans-serif; }
+.hosted-shell:has(.hosted-development-banner) .ol-login { min-height: 0; }
+.ol-login a { color: inherit; text-decoration: none; }
+.ol-login a:hover { color: #fff; }
+.ol-login a:focus-visible, .ol-login button:focus-visible { outline: 2px solid #a5b4fc; outline-offset: 6px; }
+.ol-login-art { position: relative; overflow: hidden; border: 1px solid #303239; border-radius: 22px; min-height: 650px; background: #0e1014; isolation: isolate; }
+.ol-login-art > img { position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+.ol-login-art::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, #090a0c30 0%, transparent 52%, #090a0ce0 100%); z-index: -1; }
+.ol-login-brand { position: absolute; top: 30px; left: 32px; display: flex; align-items: center; gap: 12px; font-size: 19px; font-weight: 500; letter-spacing: -.7px; }
+.ol-login-mark { width: 40px; height: 40px; object-fit: contain; filter: brightness(0) invert(1); }
+.ol-login-brand .ol-login-mark { width: 24px; height: 24px; }
+.ol-login-art-copy { position: absolute; bottom: 46px; left: 32px; right: 24px; }
+.ol-login-art-copy p { font-size: clamp(32px, 3.35vw, 52px); line-height: 1.13; font-weight: 400; letter-spacing: -2px; margin: 0 0 24px; }
+.ol-login-art-copy span { color: #a2a5af; font-size: 14px; }
+.ol-login-panel { display: flex; flex-direction: column; align-items: center; padding: 8px 32px; }
+.ol-login-back, .ol-login-about { align-self: flex-end; display: inline-flex; align-items: center; gap: 10px; color: #b8bbc4 !important; font-size: 13px; min-height: 40px; }
+.ol-login-form { width: min(100%, 414px); margin: auto 0; padding: 70px 0; text-align: center; }
+.ol-login-symbol { display: flex; justify-content: center; margin-bottom: 34px; }
+.ol-login-form h1 { font-size: clamp(26px, 2.6vw, 38px); font-weight: 400; line-height: 1.15; letter-spacing: -1.5px; margin: 0 0 18px; }
+.ol-login-subtitle { font-size: 15px; color: #a2a5af; line-height: 1.6; margin: 0 0 36px; }
+.ol-login-google { width: 100%; min-height: 52px; display: flex; gap: 12px; align-items: center; justify-content: center; padding: 12px 18px; border: 1px solid #fff; border-radius: 99px; background: #f7f8fa; color: #141519; font-size: 14px; font-weight: 550; cursor: pointer; transition: background .18s, box-shadow .18s; }
+.ol-login-google:hover:not(:disabled) { background: #fff; box-shadow: 0 0 24px #ffffff1a; }
+.ol-login-google:disabled { cursor: wait; background: #d1d3da; border-color: #d1d3da; }
+.ol-login-account { color: #a2a5af; font-size: 12px; line-height: 1.6; margin: 20px 0 0; }
+.ol-login-status { font-size: 12px; color: #b3b9cd; line-height: 1.6; }
+.ol-login-status:empty { display: none; }
+.ol-login-status > p { margin: 16px 0 0; }
+.ol-login-error { text-align: left; margin-top: 20px; padding: 14px 16px; border: 1px solid #6b3845; background: #29191f; border-radius: 10px; color: #f1b8c4; overflow-wrap: anywhere; }
+.ol-login-error p { margin: 5px 0 0; }
+.ol-login-trust { text-align: left; margin-top: 40px; }
+.ol-login-trust h2 { margin: 0 0 12px; color: #a5adbc; font-size: 10px; line-height: 16px; letter-spacing: 2px; font-weight: 550; text-transform: uppercase; }
+.ol-login-trust-card { display: grid; gap: 28px; padding: 27px 24px; border: 1px solid #2b303a; border-radius: 16px; background: #101216; }
+.ol-login-trust-row { display: grid; grid-template-columns: 54px minmax(0, 1fr); align-items: start; gap: 16px; }
+.ol-login-trust-icon { width: 54px; height: 54px; display: grid; place-items: center; border-radius: 13px; background: #17263a; color: #b0d0fa; }
+.ol-login-trust-row h3 { margin: 6px 0 4px; color: #f0f1f4; font-size: 14px; font-weight: 550; line-height: 1.5; letter-spacing: -.1px; }
+.ol-login-trust-row p { margin: 0; color: #a5adbc; font-size: 14px; line-height: 1.5; }
+@media (max-width: 1000px) and (min-width: 761px), (max-width: 380px) {
+  .ol-login-trust-card { padding: 20px 16px; gap: 22px; }
+  .ol-login-trust-row { grid-template-columns: 38px minmax(0, 1fr); gap: 12px; }
+  .ol-login-trust-icon { width: 38px; height: 38px; border-radius: 10px; }
+  .ol-login-trust-icon svg { width: 23px; height: 23px; }
+  .ol-login-trust-row h3 { margin-top: 0; }
+}
+.ol-login-spinner { animation: ol-login-spin 1.2s linear infinite; }
+@keyframes ol-login-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .ol-login-spinner { animation: none; } .ol-login-google { transition: none; } }
+@media (max-width: 760px) {
+  .ol-login { grid-template-columns: 1fr; padding: 20px; }
+  .ol-login-art { display: none; }
+  .ol-login-panel { padding: 0 4px; }
+  .ol-login-form { padding: 56px 0; max-width: 380px; }
+  .ol-login-form h1 { font-size: 29px; letter-spacing: -1px; }
+  .ol-login-subtitle { font-size: 14px; }
+  .ol-login-about { align-self: center; }
+}

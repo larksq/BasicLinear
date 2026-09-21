@@ -30,7 +30,7 @@ describe('document geometry and title-scale contract', () => {
     expect(tokens).toContain('--ol-project-title-size: 24px;');
   });
 
-  it('caps only the project overview while preserving fluid work surfaces', async () => {
+  it('caps only the project overview while letting work surfaces use the available width', async () => {
     const [projects, styles] = await Promise.all([
       source('apps/web/src/projects.tsx'),
       source('apps/web/src/styles.css'),
@@ -39,7 +39,8 @@ describe('document geometry and title-scale contract', () => {
     expect(projects).toContain('className={`project-detail project-detail-${tab}`}');
     expect(rule(styles, '.project-detail-overview')).toContain('max-width: var(--ol-document-content-width);');
     expect(rule(styles, '.project-detail-overview')).toContain('margin-inline: auto;');
-    expect(rule(styles, '.content-projects')).toContain('width: min(1280px, 100%);');
+    expect(rule(styles, '.content-projects')).toContain('width: 100%;');
+    expect(rule(styles, '.content')).toContain('width: 100%;');
     expect(styles).not.toContain('.project-detail-issues {');
     expect(styles).not.toContain('.project-detail-activity {');
   });

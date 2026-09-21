@@ -1,0 +1,124 @@
+{
+  "schema_version": "ct142-external-security-review-request-v1",
+  "request_id": "CT142-OPTION-A-EXTERNAL-SECURITY-20260827",
+  "prepared_at": "2026-08-27T05:49:00Z",
+  "status": "awaiting_authorized_external_reviewer",
+  "control_tower": {
+    "issue": "CT-142",
+    "stable_id": "9a320485-76d5-43c4-ab7f-d6a601f4583f",
+    "revision": 7,
+    "status": "In Progress",
+    "milestone": "S4 — Testing",
+    "authority": "project-local-v0.8",
+    "projection": "disabled_not_synced"
+  },
+  "sponsor_decision": {
+    "option": "A_preserve_full_public_paid_launch_and_require_external_security_review",
+    "decision_ref": "docs/product/versions/v0.2.0/20-planning/ct142-security-skip-sponsor-decision.json",
+    "skip_is_pass": false,
+    "codex_security_testing_authorized": false
+  },
+  "objective": "Provide independent, authorized external evidence for R-204 and R-219 before a separate full P-T210 reconciliation.",
+  "authorization_requirements": {
+    "reviewer_must_attest_explicit_authority": true,
+    "target_environment_must_be_named": true,
+    "target_accounts_and_workspaces_must_be_named_or_redacted_by_digest": true,
+    "production_testing": "prohibited unless the sponsor separately authorizes exact production targets and side effects in writing",
+    "financial_provider_calls": "prohibited for this request",
+    "destructive_or_persistent_side_effects": "prohibited unless separately enumerated and approved",
+    "secret_or_personal_data_disclosure": "prohibited; evidence must be redacted"
+  },
+  "required_scopes": [
+    {
+      "id": "tenant_isolation",
+      "requirement_refs": ["R-204", "R-219"],
+      "required_disposition": true
+    },
+    {
+      "id": "owner_member_role_authorization",
+      "requirement_refs": ["R-204", "R-219"],
+      "required_disposition": true
+    },
+    {
+      "id": "invitation_and_membership_lifecycle",
+      "requirement_refs": ["R-204", "R-219"],
+      "required_disposition": true
+    },
+    {
+      "id": "personal_token_and_oauth_token_lifecycle",
+      "requirement_refs": ["R-204", "R-219"],
+      "required_disposition": true
+    },
+    {
+      "id": "webhook_authentication_and_replay",
+      "requirement_refs": ["R-204", "R-219"],
+      "required_disposition": true
+    },
+    {
+      "id": "origin_and_cross_site_request_boundary",
+      "requirement_refs": ["R-204", "R-219"],
+      "required_disposition": true
+    },
+    {
+      "id": "replay_and_enumeration_resistance",
+      "requirement_refs": ["R-204", "R-219"],
+      "required_disposition": true
+    },
+    {
+      "id": "paid_to_free_downgrade_authorization",
+      "requirement_refs": ["R-204", "R-219"],
+      "required_disposition": true
+    },
+    {
+      "id": "firestore_authorization_boundary",
+      "requirement_refs": ["R-204", "R-219"],
+      "required_disposition": true
+    }
+  ],
+  "required_result": {
+    "template_ref": "docs/product/versions/v0.2.0/40-testing/CT-142/external-security-result.template.json",
+    "allowed_decisions": ["pass", "fail", "inconclusive"],
+    "pass_requires_every_scope_pass": true,
+    "required_reviewer_fields": ["name", "organization", "role", "qualification"],
+    "required_authorization_fields": ["authorized_by", "authorization_ref", "environment", "started_at", "completed_at"],
+    "required_evidence_fields": ["scope_dispositions", "finding_counts", "redacted_evidence_digest", "signature"],
+    "raw_credentials_or_private_records_forbidden": true
+  },
+  "evidence_package": [
+    {
+      "path": "docs/product/versions/v0.2.0/20-planning/ct142-security-skip-sponsor-decision.json",
+      "sha256": "e66852c3488a4946f5b3f287b5c55f13669e252a835aa7eb27f92090670b91fd"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-142/option-a-handoff.json",
+      "sha256": "4b77625ac80ffb09779c55bf8ef063d6c17a11de08614cdbc6528901ad9a77cd"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-142/result.json",
+      "sha256": "8bb6d8f7b8d1518262bbfec194fab842edd2afc9e4bf6ea8e3914f703b308ccb"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-142/evidence-map.json",
+      "sha256": "d59afdbe3de82974bfa2b766134ce46b512da20cfa10f0b8e9f1845ea3b33632"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-142/review.md",
+      "sha256": "f9b65d276d143e3539ae5ba02a0e308e03aed6fb5a54ea2822ec7718f82a3049"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-142/sponsor-security-skip.json",
+      "sha256": "0c027cc06ceffeb9a41a937884982f919bc9ea5c480f8cd0ceee8083b61cf1ee"
+    }
+  ],
+  "reconciliation_after_pass": {
+    "required": true,
+    "independent_from_implementation_and_external_reviewer": true,
+    "objective": "Reconcile the signed external result with the already accepted nonsecurity evidence and decide the complete P-T210 map without broadening any claim."
+  },
+  "claim_boundary": [
+    "This request is not a security pass.",
+    "It does not authorize Codex to perform security testing.",
+    "It does not activate Checkout, payments, public billing, or a release.",
+    "It does not approve legal, privacy, security, outcomes, or the combined release."
+  ]
+}

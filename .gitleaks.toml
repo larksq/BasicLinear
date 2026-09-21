@@ -1,0 +1,56 @@
+title = "OpenLinear source and history secret scan"
+
+[extend]
+useDefault = true
+
+# Keep documentation and tests in the scan. Exceptions require both a specific
+# context and a known non-secret value; no directory or commit is allowlisted.
+[[allowlists]]
+description = "SHA-256 artifact evidence, keyed by source filename or image digest"
+targetRules = ["generic-api-key"]
+condition = "AND"
+paths = ['''(^|/)docs/product/versions/[^/]+/.+\.json$''']
+regexTarget = "match"
+regexes = ['''^(?:[A-Za-z0-9_-]+\.(?:test\.)?(?:ts|css|md)|api_image_id|api_app_sha256)":\s*"(?:sha256:)?[a-f0-9]{64}"$''']
+
+[[allowlists]]
+description = "Published container image tag, not an API credential"
+targetRules = ["generic-api-key"]
+condition = "AND"
+paths = ['''(^|/)docs/operations/creem-billing-runbook\.md$''']
+regexTarget = "match"
+regexes = ['''^hosted-api:creem-20260914-durable`$''']
+
+[[allowlists]]
+description = "Reviewed deterministic test identifiers and HMAC fixture strings"
+targetRules = ["generic-api-key"]
+condition = "AND"
+paths = ['''(^|/)(?:apps/web|packages/hosted)/tests/[^/]+\.test\.ts$''']
+regexTarget = "secret"
+regexes = [
+  '''^(?:observation-test|pm-collaboration|collaboration-test)-secret-at-least-32-bytes-long$''',
+  '''^ct142-(?:invitation|collaboration|billing)-secret-at-least-thirty-two-bytes$''',
+  '''^tokref_0123456789abcdef0123456789abcdef$''',
+  '''^(?:billing-remove-key-0001|billing-shape-key-0001|observation-assign-key-0001|observation-unsubscribe-key-0001|ct142-invite-accept-key-0001|pat-missing-key-0001|remove-integrity-key-0001|duplicate-convergence-0001)$''',
+  '''^idempotency-(?:invite-revoke-0001|accept-revoked-0001|accept-correct-0002|revoke-owner-race-0001|accept-ledger-diverged-0001|invite-returning-0001|accept-returning-0001)$''',
+]
+
+[[allowlists]]
+description = "Exact fabricated credential used to test telemetry rejection"
+targetRules = ["stripe-access-token"]
+condition = "AND"
+paths = ['''(^|/)packages/hosted/tests/measurement\.test\.ts$''']
+regexTarget = "secret"
+regexes = ['''^sk_live_rawCredentialExample123$''']
+
+[[rules]]
+id = "openlinear-personal-token"
+description = "OpenLinear personal access token"
+regex = '''\bol_pat_v1\.[a-f0-9]{32}\.[A-Za-z0-9_-]{4,171}\.[A-Za-z0-9_-]{43}\b'''
+keywords = ["ol_pat_v1."]
+
+[[rules]]
+id = "openlinear-mcp-token"
+description = "OpenLinear MCP OAuth access or refresh token"
+regex = '''\bolm_(?:at|rt)_[A-Za-z0-9_-]{43}\b'''
+keywords = ["olm_at_", "olm_rt_"]

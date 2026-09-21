@@ -4,7 +4,10 @@ This repository is in a governed pre-release stage. The sponsor selected `AGPL-3
 
 ## Development workflow
 
-Use Node 24 and the npm version declared in `package.json`. Start from an issue in the repository's local Control Tower database, keep the change within that issue's accepted scope, and run:
+Use Node 24 and the npm version declared in `package.json`. Describe the problem,
+scope, and validation in the proposed change. Maintainers can associate that
+proposal with the private planning ledger; contributors do not need access to
+that database. Run:
 
 ```sh
 npm ci
@@ -17,10 +20,14 @@ Changes to release controls must also run:
 
 ```sh
 npm run test:release-audit
+npm run test:secret-audit
+npm run audit:secrets
 npm run audit:release
 ```
 
 The release audit intentionally fails while a protected decision or required artifact is unresolved.
+The secret checks require Gitleaks; installation and the release sequence are
+documented in [the release guide](docs/operations/open-source-release.md).
 
 ## Change requirements
 

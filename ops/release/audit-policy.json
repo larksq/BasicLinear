@@ -6,13 +6,17 @@
     ".git",
     ".control-tower",
     ".playwright-mcp",
+    ".vercel",
+    ".firebase",
+    ".local-data",
+    "outputs",
     "node_modules",
     "dist",
     "build",
     "coverage",
     "backups"
   ],
-  "ignored_file_names": [".DS_Store"],
+  "ignored_file_names": [".DS_Store", "firestore-debug.log"],
   "ignored_paths": [
     "docs/product/versions/v0.1.0/50-outcome-review/CT-13/preflight-result.json",
     "docs/product/versions/v0.1.0/50-outcome-review/CT-13/result.json"

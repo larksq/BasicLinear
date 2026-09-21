@@ -1,0 +1,490 @@
+{
+  "schema_version": "1.0",
+  "stage": "implementation.independent-review-request",
+  "status": "completed_fail",
+  "review_round": 7,
+  "prepared_at": "2026-08-25T16:52:00.000Z",
+  "authorized_at": "2026-08-25T04:22:18.000Z",
+  "dispatched_at": "2026-08-25T16:52:00.000Z",
+  "completed_at": "2026-08-25T17:03:45.000Z",
+  "review_result": {
+    "decision": "fail",
+    "done_eligible": false,
+    "initial_seal": "128 of 128 exact",
+    "final_seal": "128 of 128 exact",
+    "severity_totals": {"P0": 0, "P1": 0, "P2": 2, "P3": 0},
+    "findings": [
+      {
+        "severity": "P2",
+        "id": "config_workspace_typecheck_omission",
+        "evidence": "@openlinear/config owns an executable Vitest TypeScript test selected by the full suite but declared no tsconfig or typecheck; its package export also referenced a nonexistent typescript.json, contradicting the sealed typecheck-universe claim."
+      },
+      {
+        "severity": "P2",
+        "id": "config_evidence_manifest_omission",
+        "evidence": "packages/config/package.json and its executable test were outside the 128-file seal and intentional exclusions even though the Review 7 correction depended on their contents; the claimed exported JSON did not exist."
+      }
+    ],
+    "substantive_implementation_result": "All billing implementation, atomicity, binding, historical-counterexample, build, dependency, audit, privacy, and scope checks passed with no active substantive finding.",
+    "no_claims": [
+      "P-T206 qualified",
+      "live billing enabled",
+      "production deployed",
+      "release accepted",
+      "O-201 or O-203 achieved"
+    ]
+  },
+  "authorization": {
+    "authorized_by": "user",
+    "scope": [
+      "CT-134",
+      "CT-135",
+      "CT-136",
+      "CT-137",
+      "CT-138",
+      "CT-139",
+      "CT-140",
+      "CT-141",
+      "CT-142"
+    ],
+    "standing": true
+  },
+  "issue": {
+    "identifier": "CT-138",
+    "stable_id": "8db3d1ce-7a74-4dd9-86d5-f8a84d76876f",
+    "revision": 16,
+    "status": "In Progress",
+    "milestone": "S3 — Implementation",
+    "plan_id": "I-206",
+    "requirements": [
+      "R-203",
+      "R-209",
+      "R-210",
+      "R-217"
+    ],
+    "acceptance": [
+      "P-T206"
+    ],
+    "outcomes": [
+      "O-201",
+      "O-203"
+    ]
+  },
+  "authority": {
+    "profile": "project-local-v0.8",
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "projection": "disabled_not_synced",
+    "dependencies": [
+      {
+        "identifier": "CT-133",
+        "status": "Done",
+        "revision": 8
+      },
+      {
+        "identifier": "CT-135",
+        "status": "Done",
+        "revision": 7
+      },
+      {
+        "identifier": "CT-137",
+        "status": "Done",
+        "revision": 9
+      }
+    ],
+    "backup_checksum_note": "Each sha256 is the export package's embedded semantic checksum; raw_file_sha256 hashes the serialized JSON bytes.",
+    "backups": [
+      {
+        "kind": "start",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T11-41-05-882Z-4c5b4c23-29f9-441c-8eaa-502db53a03f8.json",
+        "sha256": "ad463e443811fc5767e7fc5e805e50fb3384b3711511a3d71888ead0dac7345d",
+        "raw_file_sha256": "bfa7ffdf1280691558435ced99f20c082a75836290f881d40970783879417766"
+      },
+      {
+        "kind": "candidate_checkpoint",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T13-05-24-613Z-bb51e6d5-5fa9-4fe5-b613-a50636b37d51.json",
+        "sha256": "f4e815a96b6fc1ed760bd3012d6bc9e939c8827e1beb097ba68ddc7f6fa4ec10",
+        "raw_file_sha256": "905d55242156a330eebfd5db26ad108bfca7c9c84750a1c4e853afb8775a96f2"
+      },
+      {
+        "kind": "review1_failure",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T13-41-09-529Z-77fcbc02-d9dc-4cfc-8709-0266d2bb4041.json",
+        "sha256": "be73b0b49a7d2ab516daa6858e5473e84ba0a4ef96550f52810b6fd1bc3ae7f5",
+        "raw_file_sha256": "b38fb519121915885c5c2382e483018523aab1b3ea49b15412c6108822aa7044"
+      },
+      {
+        "kind": "review2_dispatch",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T13-55-19-122Z-6752c09a-1897-4454-b7fe-8917bd6857aa.json",
+        "sha256": "f6e6aa05152b1b55147dfbdacfd8692ec4437ba8f3856866fdb036773b6b4bb4",
+        "raw_file_sha256": "db4abfb55468de3bc2f1eee2b1bf65a16aeb599fead1a30ee91d0d2bae5a1a4a"
+      },
+      {
+        "kind": "review2_failure",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T14-19-07-799Z-de1edfb9-95a0-4579-89f2-94aa6805582a.json",
+        "sha256": "c33b6cf4ed6d8aeebd3bd0be38409fd65d24e8128b89b6ebc39decefd16871e3",
+        "raw_file_sha256": "0d3021aa26296d4601627357fc9562545874521a385068c0bc2e53a15d474c95"
+      },
+      {
+        "kind": "review3_dispatch",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T14-38-30-017Z-01a7143f-d356-4ac2-bf85-0ebf637fd7f6.json",
+        "sha256": "8d54483be679e789659a11422793be2062326ccf67333e80774d35a14eead7f6",
+        "raw_file_sha256": "f73f22b171891208f1b1f8f15f925e338882226340ccbb67d777d196c551a834"
+      },
+      {
+        "kind": "review3_failure",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T15-06-28-198Z-f40285df-eff4-4e58-ba6f-b27b4f3f17ba.json",
+        "sha256": "eab2d1f44c87b47b731f0fda664ab7738f6bd1aff02670ea1ce0e25b76c93910",
+        "raw_file_sha256": "50978e91cfb12f541061ada38645f68a313d2b3d62a50e10e7a2d7d1b2bcd7a8"
+      },
+      {
+        "kind": "review4_dispatch",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T15-16-00-815Z-c32179ed-9647-4730-92cd-b5d00ebbd899.json",
+        "sha256": "ea06ac1e50141ec762233707510da561e9cd4e61e2bb810f8953c06ce01eec2e",
+        "raw_file_sha256": "4f070e193d10d9624d45866ec54870a2b22ab961059757a439d4672f65be3e2c"
+      },
+      {
+        "kind": "review4_failure",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T15-45-17-025Z-f9ecc2f5-e2c1-47be-94cd-83f0caf54473.json",
+        "sha256": "1fee1f2bd4c89355b2482ccf0b848a41d889b0f712d521abc8271a43d4bdba60",
+        "raw_file_sha256": "d179c8525b66b1424a6f50192dba4bcffb70f6155a705bb1261a992207952130"
+      },
+      {
+        "kind": "review5_dispatch",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T15-56-23-835Z-65fabebd-3a4b-4c8e-b97f-e0852cea04db.json",
+        "sha256": "4a30257d062453865f9ded4f200fef2f4ba73c4192e8bece1906affa6d6661c8",
+        "raw_file_sha256": "2744f521aee9061837683a8199ca2554042533f428b1d2b78d77fefb9222a420"
+      },
+      {
+        "kind": "review5_failure",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T16-22-01-353Z-53e1fb07-6786-4bd2-bd24-86b04433509d.json",
+        "sha256": "81dfb1ff9a824c32e85b428bf7c5974ad3c8cfc496a8da4e38f498c1bf445779",
+        "raw_file_sha256": "e2510e8645446c9a9b44c29195dfc4382be41d1e2e887758b7bd525226624c1d"
+      },
+      {
+        "kind": "review6_dispatch",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T16-26-20-466Z-cf40bf51-6621-43a5-a337-ac746ed4228c.json",
+        "sha256": "8f0e029990eb394ed139c34ed80cb3dabb0ff92d41c2faf45857ad79d8295659",
+        "raw_file_sha256": "c6ba03d697165fbb65c069185c8e0f3d03bca88630638c63e42881e407045260"
+      },
+      {
+        "kind": "review6_failure",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T16-49-18-355Z-83cc0728-400d-4498-9d4c-7f1e24ec79fc.json",
+        "sha256": "b6d5db89bcfec598424dfcd38ddf660caf686046d017ae371d9f7161bf019c6f",
+        "raw_file_sha256": "5653090791cf99bd8cfb0881a00da2df72768884b551d7e590aa49e9476005a6"
+      },
+      {
+        "kind": "review7_dispatch",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T16-50-44-271Z-d9fb6855-090a-4e61-89a3-32207b9ecefc.json",
+        "sha256": "3033bddda09121491eba686372996fb34517fe000502ad7e2e7c25d93cdcf65a",
+        "raw_file_sha256": "d8d6eea3b231acb08dbc5eb7e072fb845f00608c207bb94eb81855d5ac992b39"
+      }
+    ]
+  },
+  "independence": {
+    "required": true,
+    "primary_actor_id": "codex-primary",
+    "reviewer_actor_id": "ct138-independent-review",
+    "reviewer_must_be_distinct": true,
+    "mode": "read_only",
+    "prohibited_actions": [
+      "editing any file",
+      "mutating Control Tower",
+      "creating a commit",
+      "changing external state"
+    ],
+    "dispatch_state": "dispatched"
+  },
+  "candidate": {
+    "summary": "Review 6 evidence-corrected billing candidate: the substantive implementation is unchanged and independently green; the Review 7 decision contract now enumerates the exact 11-workspace universe and requires all 10 declared typecheck scripts to pass.",
+    "intentionally_unsealed_inputs": {
+      "files": [
+        "apps/web/index.html, apps/web/src/main.tsx, and the local entry transitive graph",
+        "generated dist files",
+        "live provider accounts, credentials, prices, customers, subscriptions, payments, and deployment state",
+        "this Review 7 request file"
+      ],
+      "reason": "Hosted output has a separately tested isolated graph; generated files derive from sealed inputs; live provider and deployment mutations are unauthorized; and this Review 7 instruction cannot hash itself."
+    },
+    "sealed_file_count": 128,
+    "sha256": {
+      ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T16-49-18-355Z-83cc0728-400d-4498-9d4c-7f1e24ec79fc.json": "5653090791cf99bd8cfb0881a00da2df72768884b551d7e590aa49e9476005a6",
+      ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T16-50-44-271Z-d9fb6855-090a-4e61-89a3-32207b9ecefc.json": "d8d6eea3b231acb08dbc5eb7e072fb845f00608c207bb94eb81855d5ac992b39",
+      ".control-tower/request-update-issue-138-review6-fail.json": "2a1385ec7e95444108c206008d1210edb65eb1bb950691ebe34da102f1476479",
+      ".control-tower/request-update-issue-138-review7-dispatch.json": "eaa4ed14a2664da8641c38b18926e88fbed71445cd8d8da667df121d1524192d",
+      ".env.example": "6a386cff84e6fea457306111b2ade85fdd6b882d82e022a007e4ed993639440d",
+      ".npmrc": "857e18055c0f5d75719d253033954c10511c4b16ae5bd68bc45bb75d93a411bc",
+      "apps/hosted-service/package.json": "07c581a62999b38788f43b2dea95aa0fe474d507c24fbf856bf8b8394bb40603",
+      "apps/hosted-service/src/firebase-identity.ts": "343a52a38eb928c13e9c814e43c2cafad9b52eaee0a3aeab459e2a3424b99df8",
+      "apps/hosted-service/src/hosted-config.ts": "62db0bdf6dc43483107560e6ae34874c76cf24ea9ba807072776d9605b8cce92",
+      "apps/hosted-service/src/index.ts": "86bcfca01a26389b07adf44cc2242415ff3b2de17eed20589ef9145b5e4da307",
+      "apps/hosted-service/src/stripe-billing.ts": "0996feb49f7fde8c8013a6d6259b5ef431ba7b74a3c7d865cccea60a922ad073",
+      "apps/hosted-service/tests/firebase-identity.test.ts": "535da7ba21e3df87e203b5487bfa24cba7491715c986ec5f33da6988a86ec947",
+      "apps/hosted-service/tests/hosted-config.test.ts": "829ccd906179637a9d4e7e18fdfd9b98c6e1e122937e9c3149dd7224004e79a0",
+      "apps/hosted-service/tests/stripe-billing.test.ts": "8ccb6586b076ee26ea19eeaa33005977a8e67383b4a625507412816a35655932",
+      "apps/hosted-service/tsconfig.json": "da8e5fc294f2cc905f61b463c3e663497ed45bb51e637d406901b597a5cfbc23",
+      "apps/web/hosted.html": "310362c5e2fc5a142404693dd6f547a04e07d49a70eaf789340513017e6eb781",
+      "apps/web/package.json": "b126a82326fd95c4c740d8f9924d9a3318f95fe1770dfd88621fbe428ef515d6",
+      "apps/web/public/favicon.svg": "e20e5b6aef8e5d5adf0051059838a750a49516ec5cd2063ffff9147c75a22ba1",
+      "apps/web/public/theme-bootstrap.js": "921e98da5ed6e0d060da2b744a62eb3a055c9a427e99968fd211279c78694a81",
+      "apps/web/src/hosted-api.ts": "1f8a4795484c0e8e8dd64978cb0314264ded930075404cdcf7a70f3fbe04e2c6",
+      "apps/web/src/hosted-app.tsx": "bc4a91ec7d4215f522958deab2f0e486647a803bd903978e422f8c8a29a5e082",
+      "apps/web/src/hosted-auth.ts": "cc3ede863d73398332120d54beb95a5ee77b3f413af72c51349706643517ded3",
+      "apps/web/src/hosted-main.tsx": "35432f3101e555e3117f5f9530c1badf3da566912a5c9eb989232df414546458",
+      "apps/web/src/hosted.css": "5f3a76b5da15f6cae7f564d3e1d2a86c33ed59e48bb419568e24539e23c46366",
+      "apps/web/tests/hosted-billing.test.ts": "f822222024a20ae48b7c4f3c06d4b9a44e078c7fa9de0e813a8ae0ba3f79f980",
+      "apps/web/tests/hosted-collaboration.test.ts": "0a14a56207e4a7ae7821e65ffa1e0928b300494398d7c2cf7d2ee85fdeb0765b",
+      "apps/web/tests/hosted-foundation.test.ts": "f3184a1e47dfcc8eac21fb9eb8964f3f4e0f1c28ba94982d8374d1e9b492c93a",
+      "apps/web/tests/hosted-invitation.test.ts": "86e384a192cbb858f440a6a4647c2398949ed18e7e97b3ffc9211e0e71d46d5a",
+      "apps/web/tsconfig.json": "e52c0e1dc66fb530eeac544f441d486db80a97b5bb7e9780e99bb3bcb5342043",
+      "apps/web/vite.config.ts": "bff34c4db37de6bb9204fd422e3539bae89bf58542d3a0243e53aaa67637c3a2",
+      "docs/product/versions/v0.2.0/20-planning/README.md": "151599f3b515879f6670e5f1c18f0d1514fad7ef2cc3339549505af75aba1597",
+      "docs/product/versions/v0.2.0/20-planning/acceptance-criteria.md": "100b70b6d844d9ef7d6dd21f8dcef35db4eb0c2a6c45b9925f68634f1ee173c3",
+      "docs/product/versions/v0.2.0/20-planning/architecture.md": "1306b2ba5f0e69720bace76ffb353d39c110289888c86225511a203e786675bf",
+      "docs/product/versions/v0.2.0/20-planning/backlog.md": "0347bb2d8f3b42a385260b0d32fdd6f5d8e900c2028ae431f9a56a968ad71eef",
+      "docs/product/versions/v0.2.0/20-planning/combined-release-gates.md": "d02b8bef1d599cfdabf97287c1cdc951ce29bd1c28e683928fb4e1bb8785f97d",
+      "docs/product/versions/v0.2.0/20-planning/critical-qa.md": "cbd7a443054d27b5b602eaf7cfd37e311edc612e229829ea48ebaf9d8f2ab4cd",
+      "docs/product/versions/v0.2.0/20-planning/handoff.md": "cdeab245336fa2a70e23d550b3fdeda5c445e0f79dfbdd050bc1478eef35c447",
+      "docs/product/versions/v0.2.0/20-planning/planning-package.json": "4dbf36c44d7f7520a359e89e22859204c2443fc54b3d40c6651f9af67ee2a016",
+      "docs/product/versions/v0.2.0/20-planning/prd.md": "327d9c773e482373af01ebc2dda06d6115497d340a733a49421857baf584f612",
+      "docs/product/versions/v0.2.0/20-planning/quality-review.md": "bd83012ea2d2df909476c386b1384aaddafea9cc40bd443a4051312c1e4fc900",
+      "docs/product/versions/v0.2.0/20-planning/risk-analysis.md": "625559b99705320744227bbb8239ab22142d98eb06c24311843321a98b6ba975",
+      "docs/product/versions/v0.2.0/20-planning/sprint-plan.md": "4a094a0deb50340e9ccf7ece3cb3e0a5b1a0bc75a02c527c1e6e970177f60ce6",
+      "docs/product/versions/v0.2.0/20-planning/ux-design.md": "aaccdea9554378a9f89c6c833762ecebee2b8925373f911c13ef6d043e340190",
+      "docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json": "cf27f9509ee20c6e10521e56736f56a5266f568b519adca6727356a902303a5a",
+      "docs/product/versions/v0.2.0/30-implementation/CT-133/handoff.json": "573e09cf559f323890252fcc8a95325bc2678f02e7a1770964e782d05500acfe",
+      "docs/product/versions/v0.2.0/30-implementation/CT-133/measurement-contract.md": "3b20fec47c572ba7035e0d6b8dfdb9286c1f05c4fdf3003e50c3a97036797179",
+      "docs/product/versions/v0.2.0/30-implementation/CT-133/review.md": "27f3833ef4a9f09d83d684193147ca41ef0430e8d56f06e6f8beb9c42ead5488",
+      "docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json": "5560188f00762b7e32312ebe3ac77db8c85b54391723dcab2a6bf43855a47fc5",
+      "docs/product/versions/v0.2.0/30-implementation/CT-134/handoff.json": "aab89839301bd7c39cf6a3dcc6113b1899b17655a3a7189d9d3323cefb864fd7",
+      "docs/product/versions/v0.2.0/30-implementation/CT-134/hosting-bootstrap-contract.md": "f12cf144e528ba69ad112757e917553d4636fc0c7d3603618d28ed5b42b054d0",
+      "docs/product/versions/v0.2.0/30-implementation/CT-134/review-request.json": "095ba5ee02d1bcbb35a52219902d920fa81108dd061534fd950a05b52f5a5101",
+      "docs/product/versions/v0.2.0/30-implementation/CT-134/review.md": "130aeef48046730db35ea3cd64e2c710f13fb1082143123cd4bfec5938255e98",
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/checkpoint.json": "21e91c073ba4047ff186cf9485cf5cdb76d9f32209102e985c28ed7410a5fd7b",
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/handoff.json": "54b92168b336d48904f0a9310b9eee7b5d411d65a80848e0d0a0e457ad01dbca",
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/review-request-2.json": "480fa42a521e3c7bf719720829665cd79088648de0ae22b897ef9c054ee8379e",
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/review-request.json": "7bba5c46d4ef1e467edf4a189ff7a33409b4ace1bb1ef791c4a6844043ef964d",
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/review.md": "c8fb98f241fc393cba367d14d750cfaa92ded1eaa32ea9472d92ab7a714833f0",
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/workspace-authorization-contract.md": "a94fb7aa798d8948836a2e112fe5330dd3decd5b1b6d3cb20801af6d256919c7",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/checkpoint.json": "0b6900978336185b133c47a715cdbb6085c28645e5f7559579b38824a7645372",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/handoff.json": "8b52798c2fa3090ab8e02b8134426612b01ca8c3a24dd160b416dd4d63622456",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/invitation-membership-contract.md": "342ef232bf2d8b4a75737ac8c82aa8a9f219b860c52c7bbd870a6f81826c4728",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request-2.json": "aeef8f6e49c6cef32705af185aa450e0d9aabfc3354e9d73312417b378974dc6",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request-3.json": "fa8861129bc3fcf9b30d4f49c2218c448e8ef161be345a207d7a7e2f7ee2dee2",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request-4.json": "f790bad274fa6e971f9e040a340da61eb65a6ee65a3615ff27812d738c57a3f8",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request-5.json": "e618cf48c21756ac4339bdcfc2237dabc2c4cd4991878758978c41a2ed36c1c4",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request-6.json": "e04b9b9f117862df580ce7e96cc13542896f254d7ba33e962b22a09e5bbe4e35",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request.json": "6a4047e8373eadf14f8c5b9e3e43bad2cf0f3f82ec87adb7a52dab2f57235129",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review.md": "e05049855e55503ff41532f02a95e16b2a6fa478c3a9e0e1e0700c8673d62d58",
+      "docs/product/versions/v0.2.0/30-implementation/CT-137/checkpoint.json": "4be23e570f54d70c8c89df5b434f6df533af13750240d705a8a299035cc22868",
+      "docs/product/versions/v0.2.0/30-implementation/CT-137/collaboration-contract.md": "c8ff5b1427b87160d166017b5048fc8bfc79744d5bef82e7b18589a58f7e045e",
+      "docs/product/versions/v0.2.0/30-implementation/CT-137/handoff.json": "06c6b9140e1207c3592dea5181d30c7ff3d141a0b562d97994ef6633a293ea3d",
+      "docs/product/versions/v0.2.0/30-implementation/CT-137/review-request-2.json": "953e0e40fb007c24aa07bd7fb06c446d47386f63e16ad322c6f88c7d76818d27",
+      "docs/product/versions/v0.2.0/30-implementation/CT-137/review-request-3.json": "c3b39a36597add3535eeb590b3ef3c1ca0a68e1fce6480f58828ba4e0f5a6d01",
+      "docs/product/versions/v0.2.0/30-implementation/CT-137/review-request-4.json": "ae6d736e8c1528425bc0f560a581dbefc36570cd79cfa241e27f256e3dbc44bf",
+      "docs/product/versions/v0.2.0/30-implementation/CT-137/review-request.json": "f7bff69a71fcb6e5956da273b61e2392c4d372d53fc97e05a3f4388633cc1347",
+      "docs/product/versions/v0.2.0/30-implementation/CT-137/review.md": "90f8f6ef10711cab36d9b82c8339b19ea4ebdd949ef177c45b9e99565bcd582f",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/billing-entitlement-contract.md": "a97d0c69342766f48a9c19d2dde3b9bea6ad89fb9af348998897d023615146e4",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/checkpoint.json": "5127349392527808528a970c2548938f2050e43b5d88cdf5c8197c524a544e59",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review-request-2.json": "7646e9a65e9d25570fb0a0d27228ea56aaddceb67f70a752500504067151913e",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review-request-3.json": "a9560917abbd9c579c6ee84d6e5c61435d1a9f90c90852ff0c6f8166e006f3b1",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review-request-4.json": "6bae4c71ec9cccd642d11be41ac718360cb34fe38bf2359f416b95a1f3addd0f",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review-request-5.json": "4bfc7b199382a27ae70513e6b7857996cb1b2f88e05405b866ceeee4e99dc0da",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review-request-6.json": "1c1c5fea35c5315b78d08199f637795ff9b8f5b2bc3d728fc513fdd4bc37b5cd",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review-request.json": "090da4fb0f3cd152f403e85ae84e5542e5aa10f858890e5c65c3911ee026c52d",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review.md": "ce1889a207317fecb50ca665ec1420749f0f929d8c68c3ba0cb673c340ec69d8",
+      "firebase.json": "745ee50dfa4a07ee72c618e8caf9ef105f6c53898960433dd249ec4d60cb5ce9",
+      "firestore.rules": "1a82c33fe4840eaebacd854337e5bd8f0f4225d6872d21d0aff36e5c8154a79f",
+      "package-lock.json": "52151246dce9e40f5c035e8d84af45cc4b457042e5cefb2a046d3ba644873fbe",
+      "package.json": "31a18c4b3728178d9bfd46324206389e155abc9e7f198a407ef1a0974bc566d2",
+      "packages/hosted/package.json": "2e23835430a5316fc4e803ae1f1ebb8d2e37fae18a807a5a51e1c09a86564c76",
+      "packages/hosted/src/billing-service.ts": "b06905f799274780ee952ec1a9a0a7a00c5f20b95e5ec323008c948bde894cd1",
+      "packages/hosted/src/collaboration-service.ts": "39b2b2222f4082689a86d4926fc16356c1959be1977be579d6c2bcd6ab4bdb6f",
+      "packages/hosted/src/firebase-billing-repository.ts": "03f0b4a75444708d7384143d63c6f085a5a4c572f549c6841ef4f44769fc17d1",
+      "packages/hosted/src/firebase-collaboration-repository.ts": "b2060aaa1901772a631cc5c0c1dbd7ce4917bf53c23b6728c87837a9d958c373",
+      "packages/hosted/src/firebase-invitation-repository.ts": "45709cedeb078148a4fca989b361679f126ed973e4c286953e98b0e23076b7e6",
+      "packages/hosted/src/firebase-owner-bootstrap.ts": "7d712eaf93d6b28b0e93f37677ab54c0c036eeb43a0cc1c8a7c9a8a4c7499a92",
+      "packages/hosted/src/firebase-workspace-authorization.ts": "d572ad34873cdf8e6d11fbf163a22b7a35cadaf0db380b08c247d80a55558b3e",
+      "packages/hosted/src/hosted-http.ts": "a8f75749e2bd626e2a2c4b2e176133e9c8825fc3a8f2c625041d858920617fae",
+      "packages/hosted/src/index.ts": "e23876627b40a54d7cf2542d32f87569d832d95cd7989935cab89629131f2f39",
+      "packages/hosted/src/invitation-service.ts": "cb69d86e2dda0d8b6f5d4116fadc3ab7d000ccccd6fd6a744c82adac790fc493",
+      "packages/hosted/src/measurement-contract.ts": "02b9dcc7e8cb696d96b9abf1b9703be8130410797d6d5cfa0470d07b18933928",
+      "packages/hosted/src/outcome-report.ts": "3a821e489d0d8b45a3ed1692a4ec196d19ae205289a781ebc2c09b9a8882d854",
+      "packages/hosted/src/owner-bootstrap.ts": "37bd722ca408c2ca52833c0b9be19175dc7da76ef2b384e250c6b34c76135bc9",
+      "packages/hosted/src/workspace-authorization.ts": "933a52389198330bc1fe640f4c4adaec9eb876210409817fade3b644b3b6ec14",
+      "packages/hosted/tests/billing-entitlement-integration.test.ts": "6c2f10bc196aef87d7068e1c06641ee3b55ac8dc8d15dc0353a623be81e0607d",
+      "packages/hosted/tests/billing-http.test.ts": "02a9e32539f0925cee6fe7f6ab910d8e60e09a3ee459fb50f5114c070f729f7c",
+      "packages/hosted/tests/billing-service.test.ts": "59f8d06ece325273f9ed2f2987cdb53c26ab722e98492ffcb501778ae34754ac",
+      "packages/hosted/tests/collaboration-http.test.ts": "7d18526315f55b386831546b9b94ffa96f516daec6a5d3bf358206f3ff4787a5",
+      "packages/hosted/tests/collaboration-service.test.ts": "8bff9ccfc8335f49b784f2c3ae285d1631c81918cec5e73e367d6f494a484f6a",
+      "packages/hosted/tests/firebase-billing-repository.test.ts": "b5c679a371d0fce21c2f97bb8a4270365e4ba6114359317bcc49f20c3aa4465f",
+      "packages/hosted/tests/firebase-collaboration-repository.test.ts": "946892cdfd5f0c8413c4dbd2995a493bc9f824ad335960f669c2e5e1d46e50ab",
+      "packages/hosted/tests/firebase-invitation-repository.test.ts": "4c5405dd98dd7146d0cef7f52bc6791fec1028d6fe67d0db5da7dcda7f1d2a86",
+      "packages/hosted/tests/firestore-rules.emulator.test.ts": "20311b9ceda8978273ac357ffe78c0c6b71e65e54f438998f270bae24d8529e0",
+      "packages/hosted/tests/fixtures/entitlement.ts": "5ef4bc088e639369638be215d972ce23247c5d8a2cd47c75afd327da4b41c443",
+      "packages/hosted/tests/hosted-http.test.ts": "b3e82813f1a07814fbf20d37b7afdc6f8e0ad009e654bc6af6228a1dec3a592c",
+      "packages/hosted/tests/invitation-service.test.ts": "967c9ffeb331df6fd7ff4bfeec03ceed22af733023117a104d28a043f0f92ed1",
+      "packages/hosted/tests/measurement.test.ts": "b179a9bc9e22f42227f9b95ff73108a42e523fed86c29e593c7aed4671628aeb",
+      "packages/hosted/tests/owner-bootstrap.test.ts": "f33967b9fb545d6fd14fbe79eccb4f413adfe5643446e86c6688a281b2b9ce95",
+      "packages/hosted/tests/workspace-authorization.test.ts": "97ec7b869b0e15435a89b82ed3dac10f1308f18d4bad4b76602fced59e9e85cb",
+      "packages/hosted/tsconfig.json": "bb8199c5c0897eb869517fd5dd95d1dc377e9222804b969aa06c851a6e8ef14e",
+      "packages/ui/package.json": "4594421e1498f9b1dc7c835a3cba318c22e95b2cda8186536bafba1fd84c42cf",
+      "packages/ui/src/index.ts": "acbe821b7be2bf0de8fb21ea8255cf3aa838404348579a3efa85c7ba2728d4ca",
+      "packages/ui/src/tokens.css": "00961d40141953883f8c20602a880fb4ba2b85148186112671407aadd76fe4fd",
+      "packages/ui/tsconfig.json": "8ad8b8a1fe13988d6e86d76a7dd1b841f69a867359f6679c1911b8abbc992e52",
+      "scripts/clean-build-output.mjs": "62c7875e070afa767ac00f2d62850e90bec7e84dd21719a1c1e4a0093691ee4f",
+      "tsconfig.json": "adc032271697d49f7556295ef0f7ca42ff6bb5cfc0d0a6e55522bf1b51982c76",
+      "vitest.config.ts": "487d9f14b343f3af43ef2298eee1b6e80b0746d5228dd2ea6c8c11042ef8bd32",
+      "vitest.firestore.config.ts": "d3679907aa3d271f218c85395f82eb3125e13288fda501432214caadc3f46186"
+    },
+    "changed_since_review5": [
+      "packages/hosted/src/billing-service.ts",
+      "packages/hosted/tests/billing-service.test.ts",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/billing-entitlement-contract.md",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/checkpoint.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review.md",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review-request-5.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review-request-6.json"
+    ]
+  },
+  "required_checks": [
+    {
+      "command": "verify all 128 candidate SHA-256 entries before and after checks",
+      "expected": "128 of 128 exact at both boundaries"
+    },
+    {
+      "command": "recompute all fourteen embedded semantic and raw-byte CT backup checksums",
+      "expected": "14 of 14 pairs exact"
+    },
+    {
+      "command": "fresh-read CT-138 and CT-133/135/137 through the project-local v0.8 API",
+      "expected": "CT-138 r16 In Progress/S3; dependencies Done; projection disabled/not_synced"
+    },
+    {
+      "command": "npx vitest run packages/hosted/tests/billing-service.test.ts packages/hosted/tests/billing-entitlement-integration.test.ts packages/hosted/tests/firebase-billing-repository.test.ts packages/hosted/tests/billing-http.test.ts apps/hosted-service/tests/stripe-billing.test.ts apps/hosted-service/tests/hosted-config.test.ts apps/web/tests/hosted-billing.test.ts --config vitest.config.ts",
+      "expected": "7 files and 51 tests pass"
+    },
+    {
+      "command": "npm run test:hosted-rules",
+      "expected": "official Firestore emulator passes 1 file and 6 isolation groups and shuts down cleanly"
+    },
+    {
+      "command": "npm test",
+      "expected": "93 files and 632 tests pass"
+    },
+    {
+      "command": "npm query .workspace --json and inspect each workspace package scripts/source surface",
+      "expected": "exactly 11 workspaces; 10 declared typecheck scripts; @openlinear/config exports only typescript.json and has no executable TypeScript source"
+    },
+    {
+      "command": "npm run typecheck",
+      "expected": "10 of 10 declared workspace typecheck scripts pass across the exact enumerated 11-workspace universe; @openlinear/config remains configuration-only and declares no script"
+    },
+    {
+      "command": "npm run build plus independent hosted-asset/graph inspection",
+      "expected": "local and isolated hosted builds pass; hosted favicon/JS/CSS resolve 3 of 3; no local/editor preload"
+    },
+    {
+      "command": "npm ls --omit=dev --omit=optional --all",
+      "expected": "supported production dependency tree resolves"
+    },
+    {
+      "command": "npm run audit:hosted-runtime",
+      "expected": "fresh registry-backed supported-runtime audit reports 0 vulnerabilities, or exact independent limitation is recorded without overclaim"
+    },
+    {
+      "command": "git diff --check, CT-138 JSON validation, privacy/scope/manifest inspection, and prohibited-capability scan",
+      "expected": "all pass with AI agents, code review, repositories, and PRs absent"
+    }
+  ],
+  "historical_findings": {
+    "review1": [
+      "subscription_singularity",
+      "prepared_checkout_permanent_lock",
+      "inactive_notice_proration",
+      "seat_update_idempotency_collision",
+      "automatic_tax_validation_and_disclosure",
+      "export_availability_overclaim"
+    ],
+    "review2": [
+      "completed_checkout_unbound_after_drift",
+      "provider_idempotency_retention_orphan",
+      "automatic_tax_validation_after_mutation",
+      "duplicate_notice_plan_convergence"
+    ],
+    "review3": [
+      "global_recovery_pagination_cap",
+      "subscription_update_relative_binding_toctou",
+      "future_provider_time_fallback_lock"
+    ],
+    "review4": [
+      "future_completed_checkout_unbound_lock"
+    ],
+    "review5": [
+      "notice_recovery_non_atomic_binding"
+    ],
+    "review6": [
+      "typecheck_evidence_contract_mismatch"
+    ]
+  },
+  "adversarial_requirements": [
+    "Independently enumerate every workspace and its scripts/source surface; prove exactly 11 total, exactly 10 declared typecheck scripts, all 10 executed and passed by the root command, and @openlinear/config remains configuration-only JSON with no executable TypeScript surface.",
+    "Start from the exact primary-persistence outage: one far-future completed provider session, one authenticated prepared Checkout/lock, providerAttempt 1, no session binding, and no billing ledger.",
+    "Force active-seat reconciliation after notice preflight, inject failure into final persistence, and prove the repository remains byte-for-byte at the prepared snapshot with zero binding, billing, webhook, or activation.",
+    "Retry with both the same verified notice and a different valid notice; prove one completed Checkout, one paid billing revision, one activation, bounded webhook receipts, one provider session/subscription, and no second Checkout attempt.",
+    "Change every direct-recovery binding dimension—workspace, owner, lock, session reference/state, customer, subscription, plan, price, quantity, chronology, event time, automatic tax, and current provider state—and prove fail-closed/no mutation/no disclosure.",
+    "Independently inspect that preflight never calls transaction.set/create for a recovered binding and that only the final transaction can persist recovery alongside billing, completion, webhook, and activation.",
+    "Rerun every Review 1 through Review 6 counterexample, including record 1001, cursor non-progression, relative subscription TOCTOU, future open/complete chronology, provider retention/rearm, inactive lifecycle, membership drift, seat-key stability, and current-plan convergence.",
+    "Inspect Firestore default denial, HTTP signature/body ordering and redaction, Free entitlement behavior, privacy-safe evidence, outcome non-overclaim, build-graph completeness, and prohibited product scope."
+  ],
+  "review_questions": [
+    "Does the sealed evidence contract exactly match the current workspace/typecheck universe without omitting an executable TypeScript workspace or demanding a nonexistent script?",
+    "Is direct completed-session recovery strictly read-only during notice preflight, including when quantity reconciliation occurs before final persistence?",
+    "Can an injected failure in the final notice transaction leave any ready Checkout, session binding, billing ledger, webhook receipt, or activation evidence behind?",
+    "Does the successful final transaction repeat every exact workspace, owner, lock, session, customer, subscription, plan, price, quantity, chronology, and provider-state check before atomically persisting binding, completion, billing, webhook, and activation?",
+    "Do the failed notice, a later different valid notice, replay of the original notice, same/different Checkout keys, and repeated recovery retain one provider session/subscription, one completed Checkout, one billing revision, and one activation without disclosure?",
+    "Do every Review 1 through Review 6 historical counterexample and the Review 5 partial-commit counterexample remain closed under independent source and fault-injection review?",
+    "Are all 128 sealed inputs and all fourteen backup pairs complete and unchanged after the review?"
+  ],
+  "decision_contract": {
+    "pass": "No actionable P0-P3 finding; all required checks, the exact Review 5 atomicity counterexample, the Review 6 evidence-universe correction, and every historical counterexample pass; 128-file post-seal exact. CT-138 becomes Done-eligible only after the review is recorded and a revision-checked API update/readback succeeds.",
+    "fail": "Any actionable P0-P3, seal drift, missing required evidence, second-subscription path, invalid canonical chronology, permanent lock, unauthenticated entitlement, privacy leak, scope expansion, or manifest omission keeps CT-138 In Progress and requires remediation plus another independent review.",
+    "no_claims": [
+      "P-T206 qualified",
+      "live billing enabled",
+      "production deployed",
+      "release accepted",
+      "legal/privacy/security approved",
+      "O-201 achieved",
+      "O-203 achieved"
+    ]
+  },
+  "reviewer_instructions": [
+    "Operate strictly read-only. Do not edit files, mutate CT, create commits, deploy, or touch provider/Firebase state.",
+    "Read this request completely, verify the 128-entry seal and fourteen backup pairs first, then fresh-read CT state through the project-local API.",
+    "Run every required command and independent adversarial probe; do not accept primary assertions or existing tests without source and counterexample review.",
+    "Verify the seal again after all checks and return an explicit severity-ranked PASS or FAIL with exact evidence and Done-eligibility boundary."
+  ],
+  "typecheck_universe": {
+    "total_workspaces": 11,
+    "required_script_count": 10,
+    "required_workspaces": [
+      "@openlinear/api",
+      "@openlinear/hosted-service",
+      "@openlinear/web",
+      "@openlinear/contracts",
+      "@openlinear/db",
+      "@openlinear/domain",
+      "@openlinear/hosted",
+      "@openlinear/operator",
+      "@openlinear/test-fixtures",
+      "@openlinear/ui"
+    ],
+    "configuration_only_workspace": {
+      "name": "@openlinear/config",
+      "export": "./typescript.json",
+      "executable_typescript_surface": false,
+      "typecheck_script": false
+    },
+    "invariant": "Every workspace that declares executable TypeScript must declare and pass typecheck; any future executable source under @openlinear/config requires adding a typecheck script and updating this contract."
+  }
+}
+

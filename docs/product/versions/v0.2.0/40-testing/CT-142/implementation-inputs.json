@@ -1,0 +1,86 @@
+{
+  "schema_version": "ct142-implementation-inputs-v1",
+  "captured_at": "2026-08-26T03:38:56Z",
+  "authority": {
+    "profile": "project-local-v0.8",
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled_not_synced",
+    "linear_used": false
+  },
+  "issue": {
+    "identifier": "CT-142",
+    "stable_id": "9a320485-76d5-43c4-ab7f-d6a601f4583f",
+    "revision": 3,
+    "status": "In Progress",
+    "milestone": "S4 — Testing",
+    "plan_id": "I-210",
+    "acceptance": ["P-T210"]
+  },
+  "handoffs": [
+    {
+      "issue": "CT-134",
+      "ref": "docs/product/versions/v0.2.0/30-implementation/CT-134/handoff.json",
+      "sha256": "aab89839301bd7c39cf6a3dcc6113b1899b17655a3a7189d9d3323cefb864fd7"
+    },
+    {
+      "issue": "CT-135",
+      "ref": "docs/product/versions/v0.2.0/30-implementation/CT-135/handoff.json",
+      "sha256": "54b92168b336d48904f0a9310b9eee7b5d411d65a80848e0d0a0e457ad01dbca"
+    },
+    {
+      "issue": "CT-136",
+      "revision": 15,
+      "ref": "docs/product/versions/v0.2.0/30-implementation/CT-136/handoff.json",
+      "sha256": "8b52798c2fa3090ab8e02b8134426612b01ca8c3a24dd160b416dd4d63622456"
+    },
+    {
+      "issue": "CT-137",
+      "revision": 9,
+      "ref": "docs/product/versions/v0.2.0/30-implementation/CT-137/handoff.json",
+      "sha256": "06c6b9140e1207c3592dea5181d30c7ff3d141a0b562d97994ef6633a293ea3d"
+    },
+    {
+      "issue": "CT-138",
+      "revision": 19,
+      "ref": "docs/product/versions/v0.2.0/30-implementation/CT-138/handoff.json",
+      "sha256": "26a26b4e63efa92bf7e75dd623351b24102c07cdb8469e280b796df4e50c003b"
+    },
+    {
+      "issue": "CT-139",
+      "revision": 11,
+      "ref": "docs/product/versions/v0.2.0/30-implementation/CT-139/handoff.json",
+      "sha256": "5f1c056be419fba34b1f011c8630bc16df180f7fa6f6e53c0bdf95bee4fcb3a9"
+    },
+    {
+      "issue": "CT-140",
+      "revision": 9,
+      "ref": "docs/product/versions/v0.2.0/30-implementation/CT-140/handoff.json",
+      "sha256": "408c3f3b9bb87ed3c432da434238a910d49e5b65870b47f2a96c8419c1a2268f"
+    },
+    {
+      "issue": "CT-141",
+      "revision": 10,
+      "ref": "docs/product/versions/v0.2.0/30-implementation/CT-141/handoff.json",
+      "sha256": "1444c1fd7757d4839584ac3ef463db0cd2ac4f5a195a09517ffe45c7ff37cdd6"
+    }
+  ],
+  "planning_refs": [
+    "docs/product/versions/v0.2.0/20-planning/planning-package.json",
+    "docs/product/versions/v0.2.0/20-planning/acceptance-criteria.md",
+    "docs/product/versions/v0.2.0/20-planning/combined-release-gates.md"
+  ],
+  "testing_delta": {
+    "ref": "packages/hosted/tests/ct142-nonsecurity-journey.test.ts",
+    "sha256": "f0a7b02e0e937fa8e6cccabc89baaa79d7413eba9abc881a31cc9e19b3753695",
+    "purpose": "Provider-free positive-path integrated owner/member/collaboration/billing/Free-fallback journey."
+  },
+  "nonsecurity_gate_runner": {
+    "ref": "scripts/tests/ct142-nonsecurity-gates.mjs",
+    "sha256": "584f5d84ac228a018dd6482f69a65c104c7dd52176ceab917f3f88c28fd60554",
+    "purpose": "Executable exact file-and-test-name boundary for every selected nonsecurity Vitest group."
+  },
+  "ct_start_backup": {
+    "ref": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-26T03-25-29-517Z-8735c1f5-e7ce-48d5-a9ac-a7b32fb63d62.json",
+    "raw_sha256": "c70e81acb4a6306244bd55067b51be131ded89a8d36d2ac90a0b258f7ce19a6a"
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "schema_version": "1.0",
+  "stage": "implementation.checkpoint",
+  "status": "output_done",
+  "issue": {
+    "plan_id": "I-201",
+    "local_issue_id": "CT-133",
+    "stable_id": "c72158f3-a691-4e2a-94cf-91b9b037fb3d",
+    "milestone": "S3 — Implementation",
+    "accepted": true,
+    "blocked": false,
+    "requirement_refs": ["R-203", "R-215", "R-217"],
+    "acceptance_refs": ["P-T201"],
+    "outcome_refs": ["O-201", "O-202", "O-203", "O-204"]
+  },
+  "task_readback": {
+    "revision": 8,
+    "status": "Done",
+    "milestone": "S3 — Implementation",
+    "blocked_by": [],
+    "projection": "disabled_not_synced",
+    "checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T03-30-43-021Z-05469708-b6fc-4955-833d-19186a33545a.json",
+    "checkpoint_backup_sha256": "6d7ca63badca9b2da22170c2ba88b91921147ec2781bcf2adb59c9be15572707"
+  },
+  "entry": {
+    "operating_profile": "project-local-v0.8",
+    "authority": "current user request plus fresh project-local task readback",
+    "planning_validation": {
+      "valid": true,
+      "errors": 0,
+      "warnings": 23,
+      "warning_boundary": "accepted outcome-baseline exception authorizes implementation only"
+    },
+    "linear_projection": "disabled_not_synced",
+    "linear_only_guard_applicable": false,
+    "linear_only_guard_reason": "The installed implementation-entry guard requires linear-only-v0.6, while this governed project uses project-local-v0.8. It was not misrepresented as authority."
+  },
+  "sessions": [
+    {
+      "session_id": "CT-133-S1",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating",
+      "allowed_paths": [
+        "package.json",
+        "package-lock.json",
+        "packages/hosted/",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/"
+      ],
+      "outputs": [
+        "package.json",
+        "package-lock.json",
+        "packages/hosted/package.json",
+        "packages/hosted/tsconfig.json",
+        "packages/hosted/src/index.ts",
+        "packages/hosted/src/measurement-contract.ts",
+        "packages/hosted/src/outcome-report.ts",
+        "packages/hosted/tests/measurement.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/measurement-contract.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/review.md"
+      ]
+    },
+    {
+      "session_id": "CT-133-S2",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating",
+      "input_refs": [
+        "independent review by /root/ct133_independent_review: FAIL with seven finding groups"
+      ],
+      "allowed_paths": [
+        "packages/hosted/src/measurement-contract.ts",
+        "packages/hosted/src/outcome-report.ts",
+        "packages/hosted/tests/measurement.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/"
+      ],
+      "outputs": [
+        "packages/hosted/src/measurement-contract.ts",
+        "packages/hosted/src/outcome-report.ts",
+        "packages/hosted/tests/measurement.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/measurement-contract.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/review.md"
+      ]
+    },
+    {
+      "session_id": "CT-133-S3",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating",
+      "input_refs": [
+        "independent remediation review CT-133-R2: FAIL with five remaining finding groups"
+      ],
+      "allowed_paths": [
+        "packages/hosted/src/measurement-contract.ts",
+        "packages/hosted/src/outcome-report.ts",
+        "packages/hosted/tests/measurement.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/"
+      ],
+      "outputs": [
+        "packages/hosted/src/measurement-contract.ts",
+        "packages/hosted/src/outcome-report.ts",
+        "packages/hosted/tests/measurement.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/measurement-contract.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/review.md"
+      ]
+    },
+    {
+      "session_id": "CT-133-S4",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating",
+      "input_refs": [
+        "independent remediation review CT-133-R3: FAIL with one complete-ledger boundary finding"
+      ],
+      "allowed_paths": [
+        "packages/hosted/src/outcome-report.ts",
+        "packages/hosted/tests/measurement.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/"
+      ],
+      "outputs": [
+        "packages/hosted/src/outcome-report.ts",
+        "packages/hosted/tests/measurement.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/measurement-contract.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/review.md"
+      ]
+    },
+    {
+      "session_id": "CT-133-S5",
+      "actor_id": "codex-primary",
+      "mode": "docs_only",
+      "input_refs": [
+        "independent review CT-133-R4: PASS with no actionable findings",
+        "project-local CT-133 Done readback revision 8"
+      ],
+      "allowed_paths": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/"
+      ],
+      "outputs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/review.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/handoff.json"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "CT-133-C1",
+      "command": "npm run typecheck -w @openlinear/hosted",
+      "status": "passed",
+      "result": "TypeScript completed with zero errors."
+    },
+    {
+      "check_id": "CT-133-C2",
+      "command": "npx vitest run packages/hosted/tests/measurement.test.ts --config vitest.config.ts",
+      "status": "passed",
+      "result": "1 file passed; 15 tests passed after the third independent-review remediation."
+    },
+    {
+      "check_id": "CT-133-C3",
+      "command": "npm test",
+      "status": "passed",
+      "result": "74 files passed; 499 tests passed after the third independent-review remediation."
+    },
+    {
+      "check_id": "CT-133-C4",
+      "command": "npm run typecheck",
+      "status": "passed",
+      "result": "All workspace typechecks passed, including @openlinear/hosted."
+    },
+    {
+      "check_id": "CT-133-C5",
+      "command": "npm run build",
+      "status": "passed",
+      "result": "All packages and the production web bundle built successfully."
+    },
+    {
+      "check_id": "CT-133-C6",
+      "command": "git diff --check",
+      "status": "passed",
+      "result": "No whitespace errors."
+    },
+    {
+      "check_id": "CT-133-C7",
+      "command": "node /Users/qiaosun/.codex/skills/ct-implement-sprint/scripts/verify-implementation-handoff.mjs docs/product/versions/v0.2.0/30-implementation/CT-133/handoff.json",
+      "status": "passed",
+      "result": "The implementation checkpoint-handoff contract is valid with zero errors."
+    }
+  ],
+  "output": {
+    "status": "done",
+    "summary": "A strict versioned hosted event, audit, and economics contract plus deterministic O-201 through O-204 and G-201 through G-204 reporting fixture is implemented."
+  },
+  "quality": {
+    "automated_checks": "passed",
+    "independent_review": "passed",
+    "issue_status": "Done"
+  },
+  "reviews": [
+    {
+      "review_id": "CT-133-R1",
+      "reviewer_id": "/root/ct133_independent_review",
+      "independent": true,
+      "status": "failed",
+      "finding_groups": 7,
+      "review_ref": "docs/product/versions/v0.2.0/30-implementation/CT-133/review.md",
+      "remediation_session_id": "CT-133-S2"
+    },
+    {
+      "review_id": "CT-133-R2",
+      "reviewer_id": "/root/ct133_independent_review",
+      "independent": true,
+      "status": "failed",
+      "finding_groups": 5,
+      "review_ref": "docs/product/versions/v0.2.0/30-implementation/CT-133/review.md",
+      "remediation_session_id": "CT-133-S3"
+    },
+    {
+      "review_id": "CT-133-R3",
+      "reviewer_id": "/root/ct133_independent_review",
+      "independent": true,
+      "status": "failed",
+      "finding_groups": 1,
+      "review_ref": "docs/product/versions/v0.2.0/30-implementation/CT-133/review.md",
+      "remediation_session_id": "CT-133-S4"
+    },
+    {
+      "review_id": "CT-133-R4",
+      "reviewer_id": "/root/ct133_independent_review",
+      "independent": true,
+      "status": "passed",
+      "finding_groups": 0,
+      "review_ref": "docs/product/versions/v0.2.0/30-implementation/CT-133/review.md"
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["P-T201"],
+    "changed_file_refs": [
+      "package.json",
+      "package-lock.json",
+      "packages/hosted/package.json",
+      "packages/hosted/tsconfig.json",
+      "packages/hosted/src/index.ts",
+      "packages/hosted/src/measurement-contract.ts",
+      "packages/hosted/src/outcome-report.ts",
+      "packages/hosted/tests/measurement.test.ts"
+    ],
+    "regression_areas": [
+      "event schema privacy and stable retry identity",
+      "exact event-to-audit reconciliation",
+      "outcome cohort joins and maturity tails",
+      "complete invitation-ledger date boundaries",
+      "workspace-scoped economics and automation tuple identity",
+      "prohibited agent and code-review scope"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-133/review.md",
+      "docs/product/versions/v0.2.0/30-implementation/CT-133/measurement-contract.md"
+    ],
+    "implementation_actor_ids": ["codex-primary"],
+    "implementation_session_ids": ["CT-133-S1", "CT-133-S2", "CT-133-S3", "CT-133-S4"]
+  },
+  "outcomes": [
+    {"outcome_id":"O-201","status":"baseline_needed"},
+    {"outcome_id":"O-202","status":"baseline_needed"},
+    {"outcome_id":"O-203","status":"baseline_needed"},
+    {"outcome_id":"O-204","status":"baseline_needed"}
+  ],
+  "blockers": []
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "openlinear.cloud-armor-rate-policy.v1",
+  "evidenceBoundary": "template_not_applied",
+  "name": "openlinear-hosted-edge",
+  "type": "CLOUD_ARMOR_EDGE_WITH_SERVERLESS_NEG",
+  "previewFirst": true,
+  "backend": "openlinear-hosted-api-serverless-neg",
+  "requiredCloudRunIngress": "INGRESS_TRAFFIC_INTERNAL_LOAD_BALANCER",
+  "rules": [
+    {
+      "priority": 100,
+      "description": "Provider and hosted write paths",
+      "expression": "request.path.startsWith('/api/v1/hosted/') && request.method == 'POST'",
+      "action": "throttle",
+      "rateLimitThreshold": {"count": 180, "intervalSec": 60},
+      "conformAction": "allow",
+      "exceedAction": "deny(429)",
+      "enforceOnKey": "IP"
+    },
+    {
+      "priority": 200,
+      "description": "OAuth and MCP paths",
+      "expression": "request.path.startsWith('/oauth/') || request.path == '/mcp' || request.path.startsWith('/.well-known/')",
+      "action": "throttle",
+      "rateLimitThreshold": {"count": 180, "intervalSec": 60},
+      "conformAction": "allow",
+      "exceedAction": "deny(429)",
+      "enforceOnKey": "IP"
+    },
+    {
+      "priority": 2147483647,
+      "description": "Bound all remaining traffic",
+      "expression": "true",
+      "action": "throttle",
+      "rateLimitThreshold": {"count": 300, "intervalSec": 60},
+      "conformAction": "allow",
+      "exceedAction": "deny(429)",
+      "enforceOnKey": "IP"
+    }
+  ]
+}

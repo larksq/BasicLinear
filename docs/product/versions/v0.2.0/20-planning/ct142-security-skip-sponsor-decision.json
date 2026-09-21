@@ -1,0 +1,31 @@
+{
+  "schema_version": "ct142-security-skip-sponsor-decision-v1",
+  "status": "selected",
+  "issue": "CT-142",
+  "decision_artifact": "docs/product/versions/v0.2.0/20-planning/ct142-security-skip-resolution-options.md",
+  "decision_artifact_sha256": "f40926e2ecc3944422366fd9eb48c215cd8348a5d055babb9549f65376d36e2d",
+  "decided_at": "2026-08-27T05:02:31Z",
+  "actor": "sponsor",
+  "decision_ref": "current Codex task: user explicitly directed `CT-142 with option A`",
+  "selected_option": "A_preserve_full_public_paid_launch_and_require_external_security_review",
+  "allowed_options": [
+    "A_preserve_full_public_paid_launch_and_require_external_security_review",
+    "B_narrow_to_allowlisted_no_charge_verification_release"
+  ],
+  "rationale": "Preserve the accepted general multi-tenant public paid-launch contract and require qualified external security evidence instead of narrowing v0.2 or treating the sponsor-authorized Codex skip as a pass.",
+  "accepted_consequences": [
+    "R-204, R-219, P-T210, O-204/G-204, CT-142, CT-13, and the public payment-activation gate remain unchanged.",
+    "CT-142 remains yellow and In Progress until an authorized external security-review result passes and its signed result plus exact evidence digest are imported.",
+    "The external review must cover the accepted tenant, role, invitation, token, webhook, origin, replay, enumeration, downgrade, and Firestore boundaries.",
+    "Codex will not perform the prohibited security or adversarial testing and will not infer a security result from the skip.",
+    "A separate independent reconciliation of the full P-T210 acceptance map is required after the external evidence is imported.",
+    "Public payment activation and combined release approval remain prohibited until their applicable gates pass; CT-13 remains a separate accountable decision."
+  ],
+  "acknowledgements": {
+    "skipped_security_is_not_passed": true,
+    "no_security_claim": true,
+    "no_outcome_claim": true,
+    "no_payment_activation_without_applicable_gate": true,
+    "ct13_remains_separate_accountable_decision": true
+  }
+}

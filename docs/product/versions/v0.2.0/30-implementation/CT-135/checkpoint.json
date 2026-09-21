@@ -1,0 +1,263 @@
+{
+  "schema_version": "1.0",
+  "stage": "implementation.checkpoint",
+  "status": "output_done_review_passed",
+  "issue": {
+    "plan_id": "I-203",
+    "local_issue_id": "CT-135",
+    "stable_id": "91e864f0-9713-4d97-b539-0578f713754a",
+    "milestone": "S3 — Implementation",
+    "accepted": true,
+    "blocked": false,
+    "requirement_refs": ["R-204", "R-206", "R-219"],
+    "acceptance_refs": ["P-T203"],
+    "outcome_refs": ["O-202", "O-204"]
+  },
+  "task_readback": {
+    "revision": 7,
+    "status": "Done",
+    "milestone": "S3 — Implementation",
+    "dependency_readback": [{"issue":"CT-134","status":"Done","revision":6}],
+    "projection": "disabled_not_synced",
+    "start_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T04-54-19-922Z-22f95170-b702-4019-b502-fadc52f04d13.json",
+    "start_backup_sha256": "11cc5f526f1b921bc950df1c41e52d003c0bfd2132da8eafe33805fe58602de4",
+    "output_checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T05-09-49-816Z-aae1df8e-ef89-4cba-ab8d-678da36354ea.json",
+    "output_checkpoint_backup_sha256": "836de7f7b9878b9764f636b87aa5ce2e510e12f0b6b8a2adf807112e0d8f2238",
+    "review1_checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T05-24-09-792Z-53b6de47-2e35-40af-a7f3-f4b8aea1b357.json",
+    "review1_checkpoint_backup_sha256": "e3ef5d01b8fc1d74e7451da0b8d85b71f0cea98242ab1d2ca66e4a1130138581",
+    "remediation_checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T05-31-10-746Z-a8aed54f-2ae1-40e4-9fa3-baa5a3c87e75.json",
+    "remediation_checkpoint_backup_sha256": "562d8e86bab66873b2f66c71165e25ee277fee8139812534dee69367f053b399",
+    "done_checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T05-47-30-673Z-8536697c-901f-4ffb-bdc5-2806c3ca6041.json",
+    "done_checkpoint_backup_sha256": "6a0a874f2bcceb85b3be4bf538d7491019bb3a29815047437bcd5812efcdb424"
+  },
+  "entry": {
+    "operating_profile": "project-local-v0.8",
+    "authority": "current user goal plus fresh project-local CT-135 and completed CT-134 readback",
+    "planning_validation": {
+      "valid": true,
+      "errors": 0,
+      "warnings": 23,
+      "warning_boundary": "accepted outcome-baseline exception authorizes implementation only"
+    },
+    "linear_projection": "disabled_not_synced",
+    "linear_only_guard_applicable": false,
+    "linear_only_guard_reason": "The installed implementation-entry guard requires linear-only-v0.6, while this governed project uses project-local-v0.8. It was not misrepresented as authority."
+  },
+  "sessions": [
+    {
+      "session_id": "CT-135-S1",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating",
+      "allowed_paths": [
+        "package.json",
+        "package-lock.json",
+        "firestore.rules",
+        "vitest.config.ts",
+        "vitest.firestore.config.ts",
+        "packages/hosted/",
+        "apps/hosted-service/src/index.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-135/"
+      ],
+      "outputs": [
+        "package.json",
+        "package-lock.json",
+        "firestore.rules",
+        "vitest.config.ts",
+        "vitest.firestore.config.ts",
+        "packages/hosted/src/index.ts",
+        "packages/hosted/src/workspace-authorization.ts",
+        "packages/hosted/src/firebase-workspace-authorization.ts",
+        "packages/hosted/src/firebase-owner-bootstrap.ts",
+        "packages/hosted/src/hosted-http.ts",
+        "packages/hosted/tests/workspace-authorization.test.ts",
+        "packages/hosted/tests/firestore-rules.emulator.test.ts",
+        "packages/hosted/tests/owner-bootstrap.test.ts",
+        "packages/hosted/tests/hosted-http.test.ts",
+        "apps/hosted-service/src/index.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-135/workspace-authorization-contract.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-135/review.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-135/checkpoint.json"
+      ]
+    },
+    {
+      "session_id": "CT-135-S2",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating",
+      "input_refs": [
+        "Independent Review 1 FAIL from /root/ct135_independent_review",
+        "project-local CT-135 In Progress readback revision 5"
+      ],
+      "allowed_paths": [
+        "firestore.rules",
+        "packages/hosted/src/workspace-authorization.ts",
+        "packages/hosted/src/hosted-http.ts",
+        "packages/hosted/tests/workspace-authorization.test.ts",
+        "packages/hosted/tests/hosted-http.test.ts",
+        "packages/hosted/tests/firestore-rules.emulator.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-135/"
+      ],
+      "outputs": [
+        "firestore.rules",
+        "packages/hosted/src/workspace-authorization.ts",
+        "packages/hosted/src/hosted-http.ts",
+        "packages/hosted/tests/workspace-authorization.test.ts",
+        "packages/hosted/tests/hosted-http.test.ts",
+        "packages/hosted/tests/firestore-rules.emulator.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-135/workspace-authorization-contract.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-135/review.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-135/checkpoint.json"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "CT-135-C1",
+      "command": "npx vitest run packages/hosted/tests/workspace-authorization.test.ts packages/hosted/tests/hosted-http.test.ts packages/hosted/tests/owner-bootstrap.test.ts --config vitest.config.ts",
+      "status": "passed",
+      "result": "3 files passed; 18 tests passed."
+    },
+    {
+      "check_id": "CT-135-C2",
+      "command": "npm run test:hosted-rules",
+      "status": "passed",
+      "result": "Official Firestore emulator: 1 file passed; 6 tests passed."
+    },
+    {
+      "check_id": "CT-135-C3",
+      "command": "npm test",
+      "status": "passed",
+      "result": "80 files passed; 529 tests passed."
+    },
+    {
+      "check_id": "CT-135-C4",
+      "command": "npm run typecheck",
+      "status": "passed",
+      "result": "All workspace typechecks passed."
+    },
+    {
+      "check_id": "CT-135-C5",
+      "command": "npm run build",
+      "status": "passed",
+      "result": "All workspaces and the local/hosted Vite production bundle built successfully."
+    },
+    {
+      "check_id": "CT-135-C6",
+      "command": "hosted.html generated-asset resolution probe",
+      "status": "passed",
+      "result": "All 7 absolute hosted bundle asset references resolve."
+    },
+    {
+      "check_id": "CT-135-C7",
+      "command": "npm run audit:hosted-runtime",
+      "status": "passed",
+      "result": "Registry-backed supported runtime audit reports 0 vulnerabilities."
+    },
+    {
+      "check_id": "CT-135-C8",
+      "command": "git diff --check and prohibited-scope scan",
+      "status": "passed",
+      "result": "No whitespace errors and no prohibited product capability found in the CT-135 code boundary."
+    },
+    {
+      "check_id": "CT-135-C9",
+      "command": "npx vitest run packages/hosted/tests/workspace-authorization.test.ts packages/hosted/tests/hosted-http.test.ts packages/hosted/tests/owner-bootstrap.test.ts --config vitest.config.ts",
+      "status": "passed",
+      "result": "Remediated targeted suite: 3 files passed; 22 tests passed."
+    },
+    {
+      "check_id": "CT-135-C10",
+      "command": "npm run test:hosted-rules",
+      "status": "passed",
+      "result": "Remediated official Firestore emulator: 1 file passed; 6 scenario groups passed, including malformed roster assertions."
+    },
+    {
+      "check_id": "CT-135-C11",
+      "command": "npm test",
+      "status": "passed",
+      "result": "Remediated full suite: 80 files passed; 533 tests passed."
+    },
+    {
+      "check_id": "CT-135-C12",
+      "command": "npm run typecheck",
+      "status": "passed",
+      "result": "All workspace typechecks passed after remediation."
+    },
+    {
+      "check_id": "CT-135-C13",
+      "command": "npm run build",
+      "status": "passed",
+      "result": "All workspaces and the local/hosted Vite production bundle built after remediation."
+    },
+    {
+      "check_id": "CT-135-C14",
+      "command": "hosted.html generated-asset resolution probe",
+      "status": "passed",
+      "result": "All 7 absolute hosted bundle asset references resolve after remediation."
+    },
+    {
+      "check_id": "CT-135-C15",
+      "command": "npm run audit:hosted-runtime",
+      "status": "passed",
+      "result": "Registry-backed supported runtime audit reports 0 vulnerabilities after remediation."
+    },
+    {
+      "check_id": "CT-135-C16",
+      "command": "git diff --check, JSON validation, and prohibited-scope scan",
+      "status": "passed",
+      "result": "No whitespace or JSON errors and no prohibited product capability found."
+    },
+    {
+      "check_id": "CT-135-C17",
+      "command": "standing-authorized Independent Review 2 by /root/ct135_independent_review",
+      "status": "passed",
+      "result": "No actionable P0-P3 finding; 19/19 sealed hashes matched before and after all required checks and independent probes."
+    }
+  ],
+  "output": {
+    "status": "done",
+    "summary": "Exact-workspace owner/member authorization is enforced by a shared trusted-handler service, privacy-safe authorization evidence, a protected hosted HTTP proof route, and deny-by-default emulator-tested Firestore rules."
+  },
+  "quality": {
+    "automated_checks": "passed",
+    "independent_review": "review1_failed_remediated_review2_passed",
+    "issue_status": "Done"
+  },
+  "reviews": [
+    {
+      "review_id": "CT-135-IR1",
+      "reviewer_actor_id": "codex-subagent:/root/ct135_independent_review",
+      "mode": "read_only",
+      "decision": "failed",
+      "finding_count": 5,
+      "highest_severity": "P2",
+      "remediation_status": "completed_and_independently_verified"
+    },
+    {
+      "review_id": "CT-135-IR2",
+      "reviewer_actor_id": "codex-subagent:/root/ct135_independent_review",
+      "mode": "read_only",
+      "decision": "passed",
+      "finding_count": 0,
+      "highest_severity": null,
+      "sealed_hashes_before": "19/19",
+      "sealed_hashes_after": "19/19",
+      "done_eligible": true
+    }
+  ],
+  "outcomes": [
+    {"outcome_id":"O-202","status":"baseline_needed"},
+    {"outcome_id":"O-204","status":"baseline_needed"}
+  ],
+  "scope_exclusions": [
+    "invitation lifecycle is CT-136",
+    "assignment and comments are CT-137",
+    "subscription and entitlement are CT-138",
+    "REST token and export flows are CT-139",
+    "MCP and the PM skill are CT-140",
+    "agents, code review, repositories, and pull requests remain prohibited"
+  ],
+  "blockers": [],
+  "next": {
+    "action": "fresh-read CT-136 and begin the bounded invitation and membership-lifecycle implementation slice"
+  }
+}

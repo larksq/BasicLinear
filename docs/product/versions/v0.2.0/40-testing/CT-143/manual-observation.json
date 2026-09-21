@@ -1,0 +1,47 @@
+{
+  "schema_version": "ct143-manual-observation-v1",
+  "captured_at": "2026-08-27T03:45:00Z",
+  "observer": {
+    "actor_id": "codex-primary",
+    "session_id": "CT143-IMPLEMENTATION-20260827",
+    "independent": false,
+    "browser": "user-selected Chrome"
+  },
+  "development": {
+    "url": "https://openlinear-development.vercel.app",
+    "deployment_id": "dpl_65aGDM7x2rMaqUksCysoY5mV2QCe",
+    "cloud_run_revision": "openlinear-hosted-api-dev-00003-r6z",
+    "result": "passed",
+    "pages": ["Home", "Issues", "Views", "Cycles", "Projects", "Project detail", "People", "Billing", "API and MCP"],
+    "controls": ["View options", "saved views", "workspace menu", "Product collapse", "Invite people", "Status", "Priority", "Assignee", "Project", "Milestone"],
+    "real_data": "A rich issue description, one resource, one sub-issue, one comment, and four visible durable activity records survived reload."
+  },
+  "production": {
+    "url": "https://openlinear-gray.vercel.app",
+    "deployment_id": "dpl_DLgNcNg2o2RvABkHj24dSQtd3RvU",
+    "cloud_run_revision": "openlinear-hosted-api-00005-s2j",
+    "result": "passed_read_only",
+    "pages": ["Home", "Issues", "Views", "Issue detail"],
+    "controls": ["View options", "Invite people", "Status", "Priority", "Assignee", "Project", "Milestone"],
+    "production_record_mutation": false
+  },
+  "screenshots": {
+    "comparison": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/13-linear-reference-comparison.jpg",
+    "development_rich_issue": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/15-dev-final-rich-issue.jpg",
+    "production_issue": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/16-production-issue-detail.jpg",
+    "production_views": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/17-production-views.jpg",
+    "production_invitation": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/18-production-invite-modal.jpg"
+  },
+  "defects_closed": [
+    "Invite modal horizontal overflow",
+    "Comment activity double-count",
+    "First-enabled-click Google popup initialization"
+  ],
+  "claim_boundary": {
+    "invitation_created_or_accepted": false,
+    "personal_access_token_created": false,
+    "payment_or_provider_call": false,
+    "security_or_adversarial_test": false,
+    "independent_uat": false
+  }
+}

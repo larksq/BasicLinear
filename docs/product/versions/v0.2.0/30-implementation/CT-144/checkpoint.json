@@ -1,0 +1,223 @@
+{
+  "schema_version": "1.0",
+  "issue": {
+    "id": "6d8b19cf-19bb-4348-9543-6d42781c29eb",
+    "identifier": "CT-144",
+    "revision": 7,
+    "status": "In Progress",
+    "milestone": "S3 — Implementation"
+  },
+  "authority": {
+    "kind": "project-local-control-tower-v0.8",
+    "projection_enabled": false,
+    "projection_state": "not_synced",
+    "last_mutation_backup": {
+      "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-31T02-04-10-163Z-063c0fc0-ccef-4995-8016-1ac80d5ddbb3.json",
+      "semantic_sha256": "eb4eb3779eeaa2f567422193c1ff779f2ced319570bcb04dba8f9ad469db790c",
+      "raw_sha256": "7a73c61fb39de77ede0701a21aa2c27b6987d643688dc71ff91573deb35b3097"
+    }
+  },
+  "operating_profile": {
+    "workflow": "ct-implement-sprint",
+    "exception": "The project-local v0.8 task store is the accepted authority for this repository; no Linear service or Control Tower UI is used.",
+    "product_scope": "project-management-only",
+    "security_testing": "skipped-by-sponsor-safety-boundary",
+    "payment_execution": "prohibited"
+  },
+  "audit": {
+    "reference": "Authenticated Linear observed read-only in the user's selected Chrome session",
+    "candidate": "https://openlinear-gray.vercel.app/",
+    "captured_at": "2026-08-31T02:02:13Z",
+    "journeys": [
+      "issue-detail",
+      "team-home",
+      "team-issues",
+      "team-cycles",
+      "team-projects",
+      "team-views",
+      "invite-people",
+      "workspace-settings",
+      "team-creation",
+      "workflow-statuses",
+      "priority-menu",
+      "workspace-directory-and-switching",
+      "google-profile-member-labels",
+      "issue-subscription-and-inbox"
+    ],
+    "contract": "linear-parity-contract.md"
+  },
+  "implementation": {
+    "state": "implementation_ready_for_independent_review_after_typography_alignment",
+    "changed_files": [
+      "apps/web/package.json",
+      "apps/web/src/hosted-main.tsx",
+      "apps/hosted-service/src/index.ts",
+      "apps/web/src/hosted-api.ts",
+      "apps/web/src/hosted-app.tsx",
+      "apps/web/src/hosted-workspace.css",
+      "apps/web/src/hosted-workspace.tsx",
+      "apps/web/src/main.tsx",
+      "apps/web/tests/hosted-team-home-layout.test.ts",
+      "apps/web/tests/hosted-properties-rail.test.ts",
+      "apps/web/tests/hosted-collaboration.test.ts",
+      "apps/web/tests/hosted-invitation.test.ts",
+      "apps/web/tests/hosted-workspace-observation.test.ts",
+      "apps/web/tests/hosted-typography.test.ts",
+      "firebase.json",
+      "firestore.indexes.json",
+      "firestore.rules",
+      "ops/hosted/cloudbuild.yaml",
+      "packages/hosted/src/billing-service.ts",
+      "packages/hosted/src/collaboration-service.ts",
+      "packages/hosted/src/firebase-workspace-directory-repository.ts",
+      "packages/hosted/src/hosted-http.ts",
+      "packages/hosted/src/index.ts",
+      "packages/hosted/src/invitation-service.ts",
+      "packages/hosted/src/issue-observation-service.ts",
+      "packages/hosted/src/project-management-service.ts",
+      "packages/hosted/src/rest-api.ts",
+      "packages/hosted/src/workspace-directory-service.ts",
+      "packages/hosted/src/workspace-configuration-service.ts",
+      "packages/hosted/tests/collaboration-http.test.ts",
+      "packages/hosted/tests/collaboration-service.test.ts",
+      "packages/hosted/tests/hosted-http.test.ts",
+      "packages/hosted/tests/invitation-service.test.ts",
+      "packages/hosted/tests/issue-observation-service.test.ts",
+      "packages/hosted/tests/rest-api.test.ts",
+      "packages/hosted/tests/workspace-directory-service.test.ts",
+      "packages/hosted/tests/workspace-configuration-service.test.ts",
+      "package-lock.json",
+      "design-qa.md",
+      "docs/product/versions/v0.2.0/30-implementation/CT-144/linear-parity-contract.md",
+      "docs/product/versions/v0.2.0/30-implementation/CT-144/checkpoint.json"
+    ],
+    "checks": [
+      {
+        "command": "npm test -- --run apps/web/tests/hosted-collaboration.test.ts apps/web/tests/hosted-invitation.test.ts packages/hosted/tests/workspace-configuration-service.test.ts packages/hosted/tests/collaboration-service.test.ts packages/hosted/tests/hosted-http.test.ts packages/hosted/tests/ct142-nonsecurity-journey.test.ts",
+        "result": "pass: 6 files, 34 tests"
+      },
+      {
+        "command": "npm test -- --run apps/web/tests/hosted-collaboration.test.ts",
+        "result": "pass after final More-menu correction: 1 file, 6 tests"
+      },
+      {
+        "command": "npm test -- --run packages/hosted/tests/workspace-directory-service.test.ts packages/hosted/tests/issue-observation-service.test.ts packages/hosted/tests/collaboration-service.test.ts packages/hosted/tests/collaboration-http.test.ts packages/hosted/tests/hosted-http.test.ts apps/web/tests/hosted-workspace-observation.test.ts apps/web/tests/hosted-collaboration.test.ts apps/web/tests/hosted-foundation.test.ts",
+        "result": "pass: 8 files, 41 tests"
+      },
+      {
+        "command": "npm run typecheck",
+        "result": "pass: all 11 declared workspace typechecks"
+      },
+      {
+        "command": "Vercel production and development builds",
+        "result": "pass: environment validator; 1,821 isolated hosted modules; expected hosted HTML, CSS, and JS"
+      },
+      {
+        "command": "npm test -- --run apps/web/tests/hosted-properties-rail.test.ts apps/web/tests/hosted-collaboration.test.ts",
+        "result": "pass: 2 files, 9 tests"
+      },
+      {
+        "command": "npm run typecheck --workspace @openlinear/web && npm run typecheck",
+        "result": "pass: focused web typecheck and all 11 declared workspace typechecks"
+      },
+      {
+        "command": "npm run build:hosted --workspace @openlinear/web",
+        "result": "pass: 1,821 isolated hosted modules; hosted HTML, CSS, and JavaScript emitted"
+      },
+      {
+        "command": "npm test -- --run apps/web/tests/hosted-team-home-layout.test.ts apps/web/tests/hosted-properties-rail.test.ts",
+        "result": "pass: 2 files, 5 tests"
+      },
+      {
+        "command": "npm run typecheck --workspace @openlinear/web && npm run typecheck",
+        "result": "pass: focused web typecheck and all 11 declared workspace typechecks"
+      },
+      {
+        "command": "npm run build:hosted --workspace @openlinear/web plus development and production Vercel builds",
+        "result": "pass: 1,821 isolated hosted modules; environment validator; expected hosted HTML, CSS, and JavaScript"
+      },
+      {
+        "command": "npm test -- packages/hosted/tests/collaboration-service.test.ts packages/hosted/tests/project-management-service.test.ts packages/hosted/tests/issue-observation-service.test.ts packages/hosted/tests/collaboration-http.test.ts packages/hosted/tests/rest-api.test.ts apps/web/tests/hosted-collaboration.test.ts apps/web/tests/hosted-team-home-layout.test.ts packages/hosted/tests/operations-config.test.ts",
+        "result": "pass: 8 files, 37 positive nonsecurity tests; deterministic legacy 1/2 projection, persisted 3 allocation, HTTP/API schema, browser rendering, and operations-policy digest relation"
+      },
+      {
+        "command": "npm run typecheck && npm run build",
+        "result": "pass: all 11 declared workspace typechecks; 1,953 local modules; 1,821 hosted modules"
+      },
+      {
+        "command": "npm test -- apps/web/tests/hosted-typography.test.ts apps/web/tests/hosted-collaboration.test.ts apps/web/tests/hosted-team-home-layout.test.ts apps/web/tests/hosted-properties-rail.test.ts apps/web/tests/hosted-invitation.test.ts apps/web/tests/hosted-workspace-observation.test.ts",
+        "result": "pass: 6 files, 19 positive nonsecurity tests"
+      },
+      {
+        "command": "npm run typecheck && npm run build:hosted --workspace @openlinear/web && npm ls @fontsource-variable/inter --workspace @openlinear/web && git diff --check",
+        "result": "pass: all 11 declared workspace typechecks; 1,822 isolated hosted modules with self-hosted Inter variable assets; pinned font resolved; diff clean"
+      }
+    ],
+    "deployments": [
+      {
+        "environment": "development",
+        "site": "https://openlinear-development.vercel.app",
+        "vercel_deployment": "dpl_FmBbQLPk96QH2LHqZBfzCT1mKxS7",
+        "cloud_run_revision": "openlinear-hosted-api-dev-00008-k49",
+        "firestore_membership_index": "READY",
+        "state": "READY"
+      },
+      {
+        "environment": "production",
+        "site": "https://openlinear-gray.vercel.app",
+        "vercel_deployment": "dpl_9VK7NtaqjGxWV5LJCjSNX17DcZEZ",
+        "cloud_run_revision": "openlinear-hosted-api-00008-q6r",
+        "firestore_membership_index": "READY",
+        "state": "READY"
+      }
+    ],
+    "visual_iterations": [
+      {
+        "environment": "development",
+        "evidence": "/private/tmp/openlinear-ct144-development-final.png",
+        "result": "Multiple-team, custom-status, cycle, issue-view, project-view, project-scope, issue-detail, invite-team, keyboard-dropdown, edit, reorder, and reload journeys passed with isolated durable data."
+      },
+      {
+        "environment": "production",
+        "evidence": "/private/tmp/openlinear-ct144-r3/production-member-final.jpg",
+        "result": "Sponsor-authorized real two-account PM journey passed: production invitation to Product, Google acceptance, recognizable member name, explicit issue subscription, owner-to-member assignment, unread Inbox delivery and mark-read, invited-member comment, and full reload persistence. No payment/security action ran."
+      },
+      {
+        "environment": "reference-comparison",
+        "evidence": "/private/tmp/openlinear-ct144-r3/linear-vs-production.jpg",
+        "result": "The authenticated Linear issue-detail reference and final production member state were captured at the same Chrome width and inspected together; the core document, properties, activity, subscribers, resources, sub-issues, comments, and navigation hierarchy remain aligned within the CT-144 audited boundary."
+      },
+      {
+        "environment": "property-rail-reference-comparison",
+        "evidence": "/private/tmp/openlinear-ct144-properties/16-rail-comparison-clean.jpg",
+        "result": "Same-width authenticated Linear and deployed production captures were normalized to the same absolute 400 by 560 property region. The final issue title measures x=724/width=791 and the property rail x=1571/width=400, matching the Linear source within 0.5px; value rows, typography, grouping, icons, and neutral interaction treatment have no remaining P0/P1/P2 visual finding within the supported property set."
+      },
+      {
+        "environment": "development-property-interactions",
+        "evidence": "/private/tmp/openlinear-ct144-properties/03-development-pass1.jpg",
+        "result": "Status, Priority, Project, Team, Cycle, and Milestone each opened a labelled listbox with real options, closed on Escape, restored focus to the trigger, and made no data mutation."
+      },
+      {
+        "environment": "team-home-issue-key-comparison",
+        "evidence": "/private/tmp/openlinear-ct144-home-nowrap/05-production-before-after.png",
+        "result": "Fresh same-state 2461 by 1326 production captures show the pre-fix 70px identifier track wrapping four keys to 30px text height and the deployed 78px no-wrap track keeping all five identifiers at 15px inside 38px rows. The 1286 by 900 development check had no horizontal overflow; full-row issue navigation remained functional."
+      },
+      {
+        "environment": "development-and-production-continuous-issue-identifiers",
+        "evidence": "/private/tmp/openlinear-ct144-sequential-dev-created.png and /private/tmp/openlinear-ct144-sequential-production.png",
+        "result": "Development historical records rendered as OL-1 through OL-4; a bounded real-data creation atomically received OL-5 and retained it after full reload. Production remained read-only and rendered its unchanged five records as the continuous set OL-1 through OL-5, including the former hash-labelled CT-143 parent/child as OL-4/OL-5."
+      },
+      {
+        "environment": "linear-typography-reference-and-deployed-environments",
+        "evidence": "/private/tmp/openlinear-ct144-typography-issue-focused-pass1.png, /private/tmp/openlinear-ct144-typography-development-issue-final.png, /private/tmp/openlinear-ct144-typography-development-home-final.png, /private/tmp/openlinear-ct144-typography-production-final.png, and /private/tmp/openlinear-ct144-typography-production-home-final.png",
+        "result": "Authenticated Linear measurements established the exact type roles. Development and production computed styles match at 24/32/600 display, 15/24/450 body, 15/23/600 sections, 13/20/500 navigation and rows, 12/16.8/500 tabs, and 12/16.8/450 metadata. Settings and create-issue modal were also visually checked; Chrome reported no warnings or font-loading errors; production data was not mutated."
+      }
+    ],
+    "review_gate": {
+      "state": "pending_separate_authorization",
+      "required": true,
+      "note": "Implementation evidence does not self-accept CT-144 or move it to Done."
+    }
+  },
+  "claim_boundary": "No independent acceptance, security/adversarial, payment/provider, outcome, combined-release, legal/privacy/security approval, AI-agent, code-review, repository, pull-request, or synchronization claim."
+}

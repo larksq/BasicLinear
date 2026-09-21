@@ -3,9 +3,9 @@
   "issue": "CT-13",
   "status": "accountable_review_required",
   "candidate": {
-    "source_revision": "b5996f930252fb5a20ff4f57dd87354ecea0d4f3",
-    "source_file_count": 1279,
-    "source_sha256": "6049dde44f36c97a3776ca2eaee18c8a946c89137056e9bef314c43323a08fd8"
+    "source_revision": "928767ea12c59aca28b94e9bcb91bca03eb1febe",
+    "source_file_count": 1672,
+    "source_sha256": "84bab4cabbf0f725e3c627dcabee75bb7ed7dd6e11f2844d088bc710015a9702"
   },
   "scopes": [
     {
@@ -14,14 +14,14 @@
         {
           "path": "ops/release/asset-provenance.json",
           "exists": true,
-          "sha256": "e36b2fa28594bb2f0c6d7146e68a7f036eb544e11456ff1abdf033158ff9af70"
+          "sha256": "ef1f0dcbded08d22421f6fe78d09a42e6a572437d6097f7aa4217169f10e3a32"
         }
       ],
       "state": {
         "technical_complete": true,
         "manifest_status": "ready_for_accountable_review",
         "review_status": "pending",
-        "records": 266
+        "records": 301
       }
     },
     {
@@ -30,14 +30,14 @@
         {
           "path": "ops/release/copy-provenance.json",
           "exists": true,
-          "sha256": "6ebb46f1dd68eb76588d273fc9554dc7db189fe95f9383f4854471040d0cf9e4"
+          "sha256": "78b3d7aa6c8d582101433349b0a0882bd0b312b2a43e33d8e37af89c0e44a73d"
         }
       ],
       "state": {
         "technical_complete": true,
         "manifest_status": "ready_for_accountable_review",
         "review_status": "pending",
-        "records": 50
+        "records": 67
       }
     },
     {
@@ -51,7 +51,7 @@
         {
           "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-request.json",
           "exists": true,
-          "sha256": "1c6ccbdac3a7ad034909a3562fefd1c6f84767bb755f27f52303da32b21c5a12"
+          "sha256": "b62a60b7342eec25bf5c4dbee24ce6a14d1c68243ba311db49c6bc1d5bcb857e"
         },
         {
           "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-acceptance.json",
@@ -70,7 +70,7 @@
         {
           "path": "ops/release/audit-policy.json",
           "exists": true,
-          "sha256": "ce43807a2c6e6f53a1012e20169c8d2aaa3cc708aefe40ee5dda8ea6e09ea3af"
+          "sha256": "65140977bcc2395017a23cd7df1f2eaa64ba65aabe9b6ed3984566e8c4fb1cc1"
         },
         {
           "path": "LICENSE",
@@ -80,22 +80,22 @@
         {
           "path": "package.json",
           "exists": true,
-          "sha256": "f107ff1154c9dededacd0d63ae6de07d3949c122539856bdde9c7cfd84ba6165"
+          "sha256": "6661360965bd45eb2b2ad446021b910a2c5eea191f59db24d6a28f405326004f"
         },
         {
           "path": "package-lock.json",
           "exists": true,
-          "sha256": "fd719192d99ee14779bc3dc5fcc910da030ac889a45d78600b93e515cce67cca"
+          "sha256": "3c068793aa7506bd88f664ff2b05b78baae75d32c48a495fa81e6068f998258b"
         },
         {
           "path": "ops/release/dependency-license-inventory.json",
           "exists": true,
-          "sha256": "6dba383bc3b554743409f6bd71f6609fe0934dbf188948b26b5b640fdff34e14"
+          "sha256": "29ee9a788cfb9b491ee0411a37281dfab6a52944c61cbd937fcca13a9748d55e"
         },
         {
           "path": "ops/release/reproducible-build.json",
           "exists": true,
-          "sha256": "972502b5d5c235ee9c72832ffd8536f3683fb7219d09373e6793487fe7873804"
+          "sha256": "c0e532c9314b39f969c451f688c370aade0beb34009fcb15240897e4fcaefa10"
         },
         {
           "path": "docs/product/versions/v0.1.0/40-testing/CT-12/result.json",
@@ -166,19 +166,19 @@
         {
           "path": "THIRD_PARTY_NOTICES.md",
           "exists": true,
-          "sha256": "19ec59372c85259cc14258c9f4187968a078ab263f79313a9247ee2bb450ff67"
+          "sha256": "25e43ff2fa5e5554698581f3d2ca61ca77be3058f506cc206385f036f0ac2df5"
         },
         {
           "path": "ops/release/third-party-notices.json",
           "exists": true,
-          "sha256": "fb626e1bd4905f0ac0cfbb2460425f21b73c234bb1c551ab29404a9d586f63bc"
+          "sha256": "3740766464422ac2a4a91539345810bcf1840da393259d7dceedeecba4740684"
         }
       ],
       "state": {
         "technical_complete": true,
         "manifest_status": "ready_for_accountable_review",
         "review_status": "pending",
-        "records": 252
+        "records": 499
       }
     }
   ],

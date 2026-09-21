@@ -1,0 +1,155 @@
+import {createHash} from 'node:crypto';
+import {readFileSync, writeFileSync} from 'node:fs';
+
+const requestPath = 'docs/product/versions/v0.2.0/10-discovery/CT-3/combined-qualified-review-request.json';
+const requestHashPath = `${requestPath}.sha256`;
+
+const evidencePaths = [
+  'LICENSE',
+  'THIRD_PARTY_NOTICES.md',
+  'CONTRIBUTING.md',
+  'SECURITY.md',
+  'docs/product/versions/v0.1.0/10-discovery/CT-3/decision-record.md',
+  'docs/product/versions/v0.1.0/10-discovery/CT-3/license-comparison.md',
+  'docs/product/versions/v0.1.0/10-discovery/CT-3/clean-room-policy.md',
+  'docs/product/versions/v0.1.0/10-discovery/CT-3/name-screen.md',
+  'docs/product/versions/v0.1.0/10-discovery/CT-3/source-register.json',
+  'docs/product/versions/v0.1.0/10-discovery/CT-3/evidence.md',
+  'docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-request.json',
+  'docs/product/versions/v0.2.0/10-discovery/discovery-package.json',
+  'docs/product/versions/v0.2.0/10-discovery/CT-3/combined-qualified-review-guide.md',
+  'docs/product/versions/v0.2.0/10-discovery/outcomes.md',
+  'docs/product/versions/v0.2.0/10-discovery/requirements-analysis.md',
+  'docs/product/versions/v0.2.0/20-planning/planning-package.json',
+  'docs/product/versions/v0.2.0/20-planning/acceptance-criteria.md',
+  'docs/product/versions/v0.2.0/20-planning/risk-analysis.md',
+  'docs/product/versions/v0.2.0/20-planning/combined-release-gates.md',
+  'docs/product/versions/v0.2.0/20-planning/ct142-security-skip-resolution-options.md',
+  'docs/product/versions/v0.2.0/20-planning/ct142-security-skip-sponsor-decision.json',
+  'docs/product/versions/v0.2.0/20-planning/ct142-security-skip-sponsor-decision.template.json',
+  'docs/product/versions/v0.2.0/40-testing/CT-142/evidence-map.json',
+  'docs/product/versions/v0.2.0/40-testing/CT-142/result.json',
+  'docs/product/versions/v0.2.0/40-testing/CT-142/review.md',
+  'docs/product/versions/v0.2.0/40-testing/CT-142/sponsor-security-skip.json',
+  'docs/product/versions/v0.2.0/40-testing/CT-142/option-a-handoff.json',
+  'docs/product/versions/v0.2.0/40-testing/CT-142/external-security-review-request.json',
+  'docs/product/versions/v0.2.0/40-testing/CT-142/external-security-review-request.json.sha256',
+  'docs/product/versions/v0.2.0/40-testing/CT-142/external-security-result.template.json',
+  'docs/product/versions/v0.2.0/40-testing/CT-142/external-security-result.template.json.sha256',
+  'docs/product/versions/v0.2.0/30-implementation/CT-143/environment-separation.md',
+  'docs/product/versions/v0.2.0/30-implementation/CT-143/checkpoint.json',
+  'docs/product/versions/v0.2.0/30-implementation/CT-143/remediation-handoff.json',
+  'docs/product/versions/v0.2.0/30-implementation/CT-143/remediation-p3-session.json',
+  'docs/product/versions/v0.2.0/40-testing/CT-143/evidence-map.json',
+  'docs/product/versions/v0.2.0/40-testing/CT-143/evidence-map-final.json',
+  'docs/product/versions/v0.2.0/40-testing/CT-143/automated-receipt.json',
+  'docs/product/versions/v0.2.0/40-testing/CT-143/manual-observation.json',
+  'docs/product/versions/v0.2.0/40-testing/CT-143/production-uat-review-1.json',
+  'docs/product/versions/v0.2.0/40-testing/CT-143/review-2.md',
+  'docs/product/versions/v0.2.0/40-testing/CT-143/decision.md',
+  'docs/product/versions/v0.2.0/40-testing/CT-143/result.json',
+  'docs/product/versions/v0.2.0/40-testing/CT-143/control-tower-reconciliation.json',
+  'docs/product/versions/v0.2.0/40-testing/CT-143/candidate.sha256',
+  'docs/product/versions/v0.2.0/50-outcome-review/CT-14/outcome-readiness.json',
+  'docs/product/versions/v0.2.0/completion-audit-2026-08-27.md',
+  'ops/hosted/environments/development.json',
+  'ops/hosted/environments/production.json',
+  'ops/hosted/README.md',
+  'ops/release/dependency-license-inventory.json',
+  'ops/release/third-party-notices.json',
+  'ops/release/asset-provenance.json',
+  'ops/release/copy-provenance.json',
+  'design-qa.md',
+];
+
+const evidence = evidencePaths.sort().map((path) => ({
+  path,
+  sha256: createHash('sha256').update(readFileSync(path)).digest('hex'),
+}));
+const evidenceSet = evidence.map(({path, sha256}) => `${sha256}  ${path}`).join('\n');
+
+const request = {
+  schema_version: 'qualified-combined-boundary-review-request-v1',
+  prepared_at: new Date().toISOString(),
+  issue: {
+    identifier: 'CT-3',
+    stable_id: 'a1a09256-3273-4f2f-9f8a-e74f5589325d',
+    expected_revision: 45,
+    expected_status: 'Todo',
+    expected_milestone: 'S1 — Discovery',
+  },
+  status: 'qualified_review_required',
+  candidate: {
+    product: 'combined OpenLinear v0.1 local + v0.2 hosted',
+    evidence_file_count: evidence.length,
+    evidence_set_sha256: createHash('sha256').update(evidenceSet).digest('hex'),
+    ct143_candidate_file_count: 573,
+    ct143_candidate_aggregate_sha256: '1e4b7c6d633a2feee7f0a2644a3f998002aab0bf42da9bb739a4eab66b8b47a9',
+    ct143_independent_review: 'PASS; P0/P1/P2/P3 all zero after one closed P3 remediation loop; CT-143 revision 8 Done',
+    worktree_state: 'uncommitted combined candidate; exact evidence is bound by content digests rather than an inferred clean Git revision',
+  },
+  sponsor_inputs: {
+    license: 'AGPL-3.0-only',
+    project_identity: 'Scopefold',
+    requested_final_product_brand: 'OpenLinear',
+    trial: 'one-time exact 30-day Pro access',
+    monthly_price: 'USD $2 per active user per month',
+    annual_price: 'USD $12 per active user per year',
+    verification_accounts: 'no-charge Pro through 9999-12-31T23:59:59.999Z with Checkout disabled',
+  },
+  review_scopes: [
+    'license_identity_clean_room',
+    'local_hosted_authority',
+    'commercial_payment_boundary',
+    'privacy_security_data_handling',
+    'pm_automation_and_exclusions',
+    'evidence_and_claim_boundary',
+  ],
+  explicit_gaps: [
+    'CT-142 Option A is selected and its exact external-review handoff is prepared: the full public paid-launch contract is preserved, but signed external R-204/R-219 evidence and full P-T210 reconciliation remain absent.',
+    'Stripe Checkout, subscriptions, charges, and live payment verification were not performed.',
+    'O-001 through O-005 and O-201 through O-204 are not outcome-proven; hosted observation windows have not matured.',
+    'CT-13 accountable release approval is separate and remains pending.',
+  ],
+  excluded_product_scope: [
+    'AI agents',
+    'code review',
+    'repositories',
+    'pull requests',
+    'local/cloud synchronization',
+    'presence',
+    'custom roles',
+    'SSO or SCIM',
+    'attachments',
+    'mentions',
+    'notifications',
+  ],
+  evidence,
+  reviewer_contract: {
+    guide: 'docs/product/versions/v0.2.0/10-discovery/CT-3/combined-qualified-review-guide.md',
+    acceptance_schema_version: 'qualified-combined-boundary-acceptance-v1',
+    allowed_statuses: ['accepted', 'remediation_required'],
+    required_reviewer_fields: ['name', 'role', 'qualification'],
+    required_fields: ['reviewed_at', 'jurisdictions', 'request_sha256', 'accepted_scopes'],
+    self_approval_prohibited: true,
+  },
+  prohibited_claims: [
+    'legal advice',
+    'security qualification from a skipped test',
+    'accountable release approval',
+    'provider payment verification',
+    'validated product outcomes',
+  ],
+};
+
+const body = `${JSON.stringify(request, null, 2)}\n`;
+writeFileSync(requestPath, body);
+const requestSha256 = createHash('sha256').update(body).digest('hex');
+writeFileSync(requestHashPath, `${requestSha256}  ${requestPath}\n`);
+console.log(JSON.stringify({
+  prepared: true,
+  request: requestPath,
+  request_sha256: requestSha256,
+  evidence_file_count: evidence.length,
+  evidence_set_sha256: request.candidate.evidence_set_sha256,
+}, null, 2));

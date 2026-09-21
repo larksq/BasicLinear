@@ -1,0 +1,14 @@
+{
+  "development": {
+    "deploymentId": "dpl_GcDo1Cq39K2vBdbjepeaqZKe8Bgm",
+    "readyState": "READY",
+    "readyAt": "2026-09-18T07:02:12.924000Z",
+    "url": "https://openlinear-development.vercel.app"
+  },
+  "production": {
+    "deploymentId": "dpl_F8P4wRvQq8zfJcSHv3JdJvPHp5pD",
+    "readyState": "READY",
+    "readyAt": "2026-09-18T07:02:38.409000Z",
+    "url": "https://openlinear.qiaosun.me"
+  }
+}

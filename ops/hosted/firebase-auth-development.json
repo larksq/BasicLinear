@@ -1,0 +1,15 @@
+{
+  "auth": {
+    "providers": {
+      "anonymous": false,
+      "emailPassword": false,
+      "googleSignIn": {
+        "oAuthBrandDisplayName": "OpenLinear Development",
+        "supportEmail": "larksq@gmail.com",
+        "authorizedRedirectUris": [
+          "https://openlinear-development.vercel.app"
+        ]
+      }
+    }
+  }
+}

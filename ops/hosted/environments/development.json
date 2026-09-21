@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "openlinear.hosted-environment.v1",
+  "deploymentEnvironment": "development",
+  "hostedControlEnvironment": "uat",
+  "firebaseProjectId": "openlinear-dev-larksq",
+  "firebaseWebAppId": "1:957696487111:web:81032180603537bf7598e2",
+  "firebaseAuthDomain": "openlinear-dev-larksq.firebaseapp.com",
+  "firestoreDatabaseId": "(default)",
+  "firestoreDeleteProtection": "disabled",
+  "googleSignInEnabled": true,
+  "googleCloudBillingEnabled": true,
+  "stripeMode": "test",
+  "paymentMode": "creem",
+  "stripeConnected": false,
+  "verificationAccountCount": 1,
+  "backend": {
+    "provider": "google-cloud-run",
+    "region": "us-central1",
+    "service": "openlinear-hosted-api-dev",
+    "status": "deployed",
+    "url": "https://openlinear-hosted-api-dev-957696487111.us-central1.run.app",
+    "revision": "openlinear-hosted-api-dev-00015-nb2"
+  },
+  "frontend": {
+    "provider": "vercel",
+    "project": "openlinear-development",
+    "providerStatus": "ready",
+    "url": "https://openlinear-development.vercel.app",
+    "deploymentId": "dpl_GcDo1Cq39K2vBdbjepeaqZKe8Bgm",
+    "deployedAt": "2026-09-18T07:02:12.924000Z"
+  },
+  "deploymentState": "deployed_verification_payment_mode",
+  "creemConnected": true,
+  "creemMode": "test"
+}

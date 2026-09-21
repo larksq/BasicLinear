@@ -1,10 +1,13 @@
 # Project status
 
-OpenLinear is a `v0.1.0` release candidate. This page separates implemented
-product behavior from release decisions that still require a qualified human.
-Control Tower's local v0.8 store is the authoritative task record.
+Updated September 21, 2026. OpenLinear has a `v0.1.0` local release candidate
+and a deployed `v0.2.0` online implementation at
+[openlinear.qiaosun.me](https://openlinear.qiaosun.me/).
+This page separates implemented product behavior, deployed services, and
+outstanding release decisions. Control Tower's local v0.8 store remains the
+maintainers' task record.
 
-## Done
+## Local edition
 
 - One-owner, one-implicit-workspace/team local scope is enforced.
 - Projects, milestones, issues, relations, comments, activity, saved views,
@@ -13,19 +16,49 @@ Control Tower's local v0.8 store is the authoritative task record.
 - SQLite durability, backup, canonical transfer, restart readback, revision
   conflict handling, archive/restore/purge flows, and the operator CLI are
   implemented.
-- The current candidate has passed the independent functional, visual,
-  accessibility, and protected-performance checks recorded by CT-131.
+- CT-131 records the earlier independent local functional, visual,
+  accessibility, and protected-performance review; it is historical evidence,
+  not a new review of the combined source tree.
 - The repository has AGPL-3.0-only metadata, a third-party notice inventory,
   contribution/security policies, deterministic build inputs, and local-only
   runtime controls.
 
-## Not done
+## Online edition
 
-- Multi-user collaboration, invitations, multiple teams/workspaces, hosted
-  accounts, Google/OIDC/OAuth, cloud sync, email, or external identity.
-- Linear API/MCP/UI integrations, Docker, PostgreSQL, background jobs,
-  webhooks, native mobile clients, or a hosted deployment.
-- Public release publication and contribution intake.
+- The public homepage and authenticated app are deployed at the custom domain.
+  [Open the app](https://openlinear.qiaosun.me/?app) and sign in with Google.
+- Hosted workspaces, owner/member roles, teams, invitations, assignments,
+  comments, activity, subscriptions, inbox, and due-time reminders are implemented.
+- Personal API tokens, the versioned REST API, OAuth-authorized MCP, and
+  in-app client connection guidance are implemented.
+- The React frontend runs on Vercel; the trusted API runs on Cloud Run with
+  Firebase Authentication and Firestore. Development and production are separate.
+- Current payment configuration uses Creem. Paid checkout activation remains
+  blocked by the first-customer review described in the
+  [billing runbook](operations/creem-billing-runbook.md). Deployment and a passing
+  sandbox provider test do not establish a completed live paid-entitlement test.
+
+See [hosted operations](../ops/hosted/README.md) for current configuration and
+[v0.2.0 product evidence](product/versions/v0.2.0/README.md) for scope and history.
+
+## Product boundaries
+
+- Local SQLite data and hosted Firestore workspaces do not automatically sync.
+- The local edition remains single-owner; hosted collaboration requires the
+  online service and its provider configuration.
+- Native mobile clients, cycles/sprints, real-time presence, attachments,
+  mentions, custom roles, and enterprise identity are outside the current
+  [hosted scope](product/versions/v0.2.0/UAT-SCOPE.md).
+- Final open-source release publication and public contribution intake remain
+  subject to the release reviews below.
+
+## Latest repository validation
+
+The [September 21 release audit](operations/open-source-audit-2026-09-21.md)
+records the secret scan, dependency repairs, 834 passing checks, successful
+local and hosted builds, and a local startup smoke test. The README screenshots
+were recaptured on September 21; [capture provenance](screenshots/README.md)
+distinguishes the live homepage from the local build's sample data.
 
 ## Open release gates
 

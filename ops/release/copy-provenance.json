@@ -3,7 +3,7 @@
   "issue": "CT-13",
   "status": "ready_for_accountable_review",
   "review_status": "pending",
-  "source_set_sha256": "6049dde44f36c97a3776ca2eaee18c8a946c89137056e9bef314c43323a08fd8",
+  "source_set_sha256": "84bab4cabbf0f725e3c627dcabee75bb7ed7dd6e11f2844d088bc710015a9702",
   "entries": [
     {
       "path": "apps/web/index.html",
@@ -11,6 +11,26 @@
       "size": 514,
       "origin": "independently_authored_project_source",
       "source_reference": "project_source:apps/web/index.html",
+      "rights_basis": "First-party project copy; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "apps/web/src/ai-mcp-guide.css",
+      "sha256": "ab46f5cea91d48d5a5e2c537643002883527ddf935f744b482b01f2cb20254e9",
+      "size": 9371,
+      "origin": "independently_authored_project_source",
+      "source_reference": "project_source:apps/web/src/ai-mcp-guide.css",
+      "rights_basis": "First-party project copy; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "apps/web/src/ai-mcp-guide.tsx",
+      "sha256": "26f7119d071b31601116ac756bcd51d050d318d976755444c6891fb0f4f92990",
+      "size": 8619,
+      "origin": "independently_authored_project_source",
+      "source_reference": "project_source:apps/web/src/ai-mcp-guide.tsx",
       "rights_basis": "First-party project copy; accountable rights review remains pending.",
       "reviewer": null,
       "review_status": "pending"
@@ -27,8 +47,8 @@
     },
     {
       "path": "apps/web/src/App.tsx",
-      "sha256": "a9dcfd81d530a56aaca8946becf59a0019552c8127e6ef185c7d1f12a805df33",
-      "size": 80459,
+      "sha256": "2d06d0876e372e16da4a405c0e10af798d297ba47d060d8ecc3bfcbd9d170eb5",
+      "size": 81077,
       "origin": "independently_authored_project_source",
       "source_reference": "project_source:apps/web/src/App.tsx",
       "rights_basis": "First-party project copy; accountable rights review remains pending.",
@@ -41,6 +61,16 @@
       "size": 1976,
       "origin": "independently_authored_project_source",
       "source_reference": "project_source:apps/web/src/appearance-preferences.ts",
+      "rights_basis": "First-party project copy; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "apps/web/src/brand-mark.tsx",
+      "sha256": "5d99aa65ba289012755ec94463efd8ac0f661fa6f5f9c5954ba31178fae2d5c5",
+      "size": 231,
+      "origin": "independently_authored_project_source",
+      "source_reference": "project_source:apps/web/src/brand-mark.tsx",
       "rights_basis": "First-party project copy; accountable rights review remains pending.",
       "reviewer": null,
       "review_status": "pending"
@@ -91,6 +121,146 @@
       "size": 1074,
       "origin": "independently_authored_project_source",
       "source_reference": "project_source:apps/web/src/global-shortcuts.ts",
+      "rights_basis": "First-party project copy; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "apps/web/src/homepage-entry.ts",
+      "sha256": "f4532b109828ff86fd1ecbb960a27a07988b4927d416c72e4946830757a4e2c8",
+      "size": 421,
+      "origin": "independently_authored_project_source",
+      "source_reference": "project_source:apps/web/src/homepage-entry.ts",
+      "rights_basis": "First-party project copy; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "apps/web/src/homepage.css",
+      "sha256": "e34bcc2aeb8eced2eae378c6c531e8c0dd8002a95c80f0b5e2b6e32a3e7e1a43",
+      "size": 17035,
+      "origin": "independently_authored_project_source",
+      "source_reference": "project_source:apps/web/src/homepage.css",
+      "rights_basis": "First-party project copy; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "apps/web/src/homepage.tsx",
+      "sha256": "301c074804695f174d78afb8ddd50ab595d2e45c999802c8254a4a62017baba9",
+      "size": 16811,
+      "origin": "independently_authored_project_source",
+      "source_reference": "project_source:apps/web/src/homepage.tsx",
+      "rights_basis": "First-party project copy; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "apps/web/src/hosted-api.ts",
+      "sha256": "0025218d62bc3de7e4c91cc913b4b3b86933be6a4ea07b553ea662e158c92f4c",
+      "size": 37118,
+      "origin": "independently_authored_project_source",
+      "source_reference": "project_source:apps/web/src/hosted-api.ts",
+      "rights_basis": "First-party project copy; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "apps/web/src/hosted-app.tsx",
+      "sha256": "39b382b4e6bc224140617ee114da11b81e7cec9bf2b95a9788d5d09a6a25de88",
+      "size": 80314,
+      "origin": "independently_authored_project_source",
+      "source_reference": "project_source:apps/web/src/hosted-app.tsx",
+      "rights_basis": "First-party project copy; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "apps/web/src/hosted-auth.ts",
+      "sha256": "5d5c9c853bd0e83390df0ce92fd8a39898f4a04c6bb01eea06a948541e1927e1",
+      "size": 5379,
+      "origin": "independently_authored_project_source",
+      "source_reference": "project_source:apps/web/src/hosted-auth.ts",
+      "rights_basis": "First-party project copy; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "apps/web/src/hosted-environment.ts",
+      "sha256": "c7baa5df4a3d14b48a79fcfd1f9c3cbe2e309c5ce4716aa79350d0c90bbc4f01",
+      "size": 3333,
+      "origin": "independently_authored_project_source",
+      "source_reference": "project_source:apps/web/src/hosted-environment.ts",
+      "rights_basis": "First-party project copy; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "apps/web/src/hosted-login.css",
+      "sha256": "c7a1059e8fde904f80be1d97760dd4720a550c2125f1abfce68db5dcde37a830",
+      "size": 5428,
+      "origin": "independently_authored_project_source",
+      "source_reference": "project_source:apps/web/src/hosted-login.css",
+      "rights_basis": "First-party project copy; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "apps/web/src/hosted-login.tsx",
+      "sha256": "4d52ab27d58e6445c1772127049fc5f322f3018131149d0c2b6bfb8f4107cb3e",
+      "size": 4522,
+      "origin": "independently_authored_project_source",
+      "source_reference": "project_source:apps/web/src/hosted-login.tsx",
+      "rights_basis": "First-party project copy; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "apps/web/src/hosted-main.tsx",
+      "sha256": "1c573bc554cd90e92a9d2174594c1bdd7d8adfca8edef7469d6c4b8fd4e61d5f",
+      "size": 1814,
+      "origin": "independently_authored_project_source",
+      "source_reference": "project_source:apps/web/src/hosted-main.tsx",
+      "rights_basis": "First-party project copy; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "apps/web/src/hosted-owner-entry.ts",
+      "sha256": "d0a60075864d3ef1469c7a2ac12c211221bfd802ff1d3a4b2fa83386cc4c5e6d",
+      "size": 983,
+      "origin": "independently_authored_project_source",
+      "source_reference": "project_source:apps/web/src/hosted-owner-entry.ts",
+      "rights_basis": "First-party project copy; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "apps/web/src/hosted-workspace.css",
+      "sha256": "7667e083e717786db6140b8d71ce6375fbcb087aea8b25ac2654e0d4bb3af333",
+      "size": 61736,
+      "origin": "independently_authored_project_source",
+      "source_reference": "project_source:apps/web/src/hosted-workspace.css",
+      "rights_basis": "First-party project copy; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "apps/web/src/hosted-workspace.tsx",
+      "sha256": "58769026fae9c54fc36d50c41bd2e7a9b47a0074fbe673f3a9b08aba7e718ed6",
+      "size": 127029,
+      "origin": "independently_authored_project_source",
+      "source_reference": "project_source:apps/web/src/hosted-workspace.tsx",
+      "rights_basis": "First-party project copy; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "apps/web/src/hosted.css",
+      "sha256": "1f7c0ce7b11c09bc993f8604712de45a0f6cfab363e74c6fd398f47c15ab0101",
+      "size": 20136,
+      "origin": "independently_authored_project_source",
+      "source_reference": "project_source:apps/web/src/hosted.css",
       "rights_basis": "First-party project copy; accountable rights review remains pending.",
       "reviewer": null,
       "review_status": "pending"
@@ -317,8 +487,8 @@
     },
     {
       "path": "apps/web/src/main.tsx",
-      "sha256": "708bb7871943364e32be94b4536f56efebe60f8a6b6f6e1d24996022639ce687",
-      "size": 738,
+      "sha256": "f5a9edab35cceff41992d558db07e15ff5c2f3f2cb06f44638e4cde984a739e4",
+      "size": 813,
       "origin": "independently_authored_project_source",
       "source_reference": "project_source:apps/web/src/main.tsx",
       "rights_basis": "First-party project copy; accountable rights review remains pending.",
@@ -447,8 +617,8 @@
     },
     {
       "path": "apps/web/src/styles.css",
-      "sha256": "beb8ec3a71a09218e8c1982779983f773253943341094bea05f10aabb99750fb",
-      "size": 114805,
+      "sha256": "d07ee45544dc233719093b19e10441f32a440ccc20ebf6be72f5e63e1c77615c",
+      "size": 116289,
       "origin": "independently_authored_project_source",
       "source_reference": "project_source:apps/web/src/styles.css",
       "rights_basis": "First-party project copy; accountable rights review remains pending.",

@@ -19,6 +19,21 @@ async function runtimeFiles(directory: string): Promise<string[]> {
 }
 
 describe('P-T03 locked foundation', () => {
+  it('publishes the exact shared TypeScript configuration and typechecks this workspace', async () => {
+    const [manifestText, rootConfigText, sharedConfigText] = await Promise.all([
+      text('packages/config/package.json'),
+      text('tsconfig.json'),
+      text('packages/config/typescript.json'),
+    ]);
+    const manifest = JSON.parse(manifestText) as {
+      scripts?: Record<string, string>;
+      exports?: Record<string, string>;
+    };
+    expect(manifest.scripts?.typecheck).toBe('tsc -p tsconfig.json --noEmit');
+    expect(manifest.exports?.['./typescript']).toBe('./typescript.json');
+    expect(JSON.parse(sharedConfigText)).toEqual(JSON.parse(rootConfigText));
+  });
+
   it('locks one loopback Node process to one embedded SQLite file', async () => {
     const [pkg, config, entry, database, paths] = await Promise.all([
       text('package.json'),
@@ -57,7 +72,7 @@ describe('P-T03 locked foundation', () => {
     }
   });
 
-  it('has no required Google, Linear, or paid runtime endpoint', async () => {
+  it('keeps local mode credential-free and separates documented hosted configuration', async () => {
     const files = [
       ...await runtimeFiles('apps'),
       ...await runtimeFiles('packages'),
@@ -67,7 +82,17 @@ describe('P-T03 locked foundation', () => {
     expect(runtime).not.toMatch(/https?:\/\/(?:[^\s/]+\.)?(?:linear\.app|googleapis\.com)/i);
     const environment = await text('.env.example');
     expect(environment).toContain('needs no environment file');
-    expect(environment).not.toMatch(/TOKEN|PASSWORD|DATABASE_URL|OIDC/);
+    const [localEnvironment = '', hostedEnvironment = ''] = environment.split(
+      '# OpenLinear Online public Firebase web configuration.',
+    );
+    expect(localEnvironment).not.toMatch(/TOKEN|PASSWORD|DATABASE_URL|OIDC/);
+    expect(hostedEnvironment).toContain('OPENLINEAR_PERSONAL_TOKEN_SECRET=');
+    expect(hostedEnvironment).toContain('OPENLINEAR_REST_CURSOR_SECRET=');
+    for (const line of hostedEnvironment.split('\n')) {
+      if (/^(?:OPENLINEAR_.+_SECRET|VITE_FIREBASE_API_KEY)=/u.test(line)) {
+        expect(line.endsWith('=')).toBe(true);
+      }
+    }
     const vite = await text('apps/web/vite.config.ts');
     expect(vite).toContain("'/api': 'http://127.0.0.1:4174'");
     expect(vite).toContain('sourcemap: false');

@@ -3,14 +3,54 @@
   "issue": "CT-13",
   "status": "ready_for_accountable_review",
   "review_status": "pending",
-  "source_set_sha256": "6049dde44f36c97a3776ca2eaee18c8a946c89137056e9bef314c43323a08fd8",
+  "source_set_sha256": "84bab4cabbf0f725e3c627dcabee75bb7ed7dd6e11f2844d088bc710015a9702",
   "entries": [
+    {
+      "path": "apps/web/public/favicon.ico",
+      "sha256": "54f50c0709189bb88976d1b7e9fa5ad100058147426a16f05efb6fc16431bcbd",
+      "size": 377,
+      "origin": "first_party_project_asset",
+      "source_reference": "project_source:apps/web/public/favicon.ico",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
     {
       "path": "apps/web/public/favicon.svg",
       "sha256": "e20e5b6aef8e5d5adf0051059838a750a49516ec5cd2063ffff9147c75a22ba1",
       "size": 252,
       "origin": "first_party_project_asset",
       "source_reference": "project_source:apps/web/public/favicon.svg",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "apps/web/public/images/login-sculpture.jpg",
+      "sha256": "7b55e15d6d7eca67ddd048c3b70fd270bd2e6f986444d45287f04628209b3a29",
+      "size": 261290,
+      "origin": "first_party_project_asset",
+      "source_reference": "project_source:apps/web/public/images/login-sculpture.jpg",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/design/login-image2-reference.png",
+      "sha256": "27a023d884db0e0028095a421841f9dbcb25390d7a0943ff7c6e6c69e8992775",
+      "size": 1571381,
+      "origin": "first_party_project_asset",
+      "source_reference": "project_source:docs/design/login-image2-reference.png",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/design/login-trust-image2-reference.png",
+      "sha256": "f6990fc8723c3f4364865571bb529cd51dead8c61b231644a1b17ab640f2747e",
+      "size": 1052026,
+      "origin": "first_party_project_asset",
+      "source_reference": "project_source:docs/design/login-trust-image2-reference.png",
       "rights_basis": "First-party project artifact; accountable rights review remains pending.",
       "reviewer": null,
       "review_status": "pending"
@@ -2556,9 +2596,319 @@
       "review_status": "pending"
     },
     {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-current/01-current-workspace.png",
+      "sha256": "b3b36eb6c06ceb16b77a4ab36adad36a30847eb7a9ffc53636b6e9213eefb89e",
+      "size": 75516,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-current/02-current-projects.png",
+      "sha256": "4252a9176510f51edc45d86abf2c4e611064a0e4648546ca858343759b6a9247",
+      "size": 61426,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-current/03-current-project-detail.png",
+      "sha256": "2363d0552645e068129e2800de38c8fbb82f3da38fb5c59972f7b8289c746b9f",
+      "size": 75932,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-current/04-current-invite.png",
+      "sha256": "5d2226a62589d06bc072752aff5ffbcc3566df778e65908a266549399566422f",
+      "size": 61944,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-current/05-current-issues-list.png",
+      "sha256": "e32040340080ca60200a87abfe8283ed3e17ff3385e904308c7fc8fe8e613dcb",
+      "size": 61998,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/01-dev-issue-detail.jpg",
+      "sha256": "5fadbb3aad8c8627ceae00fe194e1e2c0d44ad5ac481db684b723777b27bec52",
+      "size": 82861,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/02-dev-views.jpg",
+      "sha256": "3db6b381ee94ca3ca9a634af3903531bf2bc21fcafcd9a5322a85120df4d3a6b",
+      "size": 63755,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/03-dev-cycles.jpg",
+      "sha256": "617af6be5ebafad1befdc94e7d2cf877701d02946c8b681dbe93ac66b5e00a5b",
+      "size": 54666,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/04-dev-projects.jpg",
+      "sha256": "93bfa8b0c4e1f362d8e2c37a4e12d0438af21abad937ec5785af279390273eac",
+      "size": 64131,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/05-dev-project-detail.jpg",
+      "sha256": "f5dc9ae770cc15a2dadb9d7c584c2f7847892eff00e0fd38c5d60cf4ba272446",
+      "size": 79401,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/06-dev-issues-view-options.jpg",
+      "sha256": "1e530d567b52d31af394fffca3d48c37d99f05065838f77588a72f89aae64d09",
+      "size": 70699,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/07-dev-home.jpg",
+      "sha256": "65e7ae5691049c80cad1cdb1a5fc9078db2512efb7f10880f6e54f6a3fb58103",
+      "size": 72354,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/08-dev-invite-modal-fixed.jpg",
+      "sha256": "d0651da601376afb7018987b1f0266e8143bc028aeac7fde49178741c76771d3",
+      "size": 50669,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/08-dev-invite-modal.jpg",
+      "sha256": "25f12f1887168c6cc976e690044c9e1a6810848a08796212f740c0032baf6a09",
+      "size": 50951,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/09-dev-issue-status-menu.jpg",
+      "sha256": "20bcbbebc3ac95a6ba1b64f3c00ef633ca0b547af19ba17da78656feb0e578e8",
+      "size": 82761,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/10-dev-settings-people.jpg",
+      "sha256": "3bf95cb9aba1efc48dcd62391709d2370b4a34460299a7954ff67669a9bbdb6a",
+      "size": 71462,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/11-dev-settings-billing.jpg",
+      "sha256": "66e3b9d9866149b6cd65a5b086da40fb15d5cc96339b4a88d029679fbe3df889",
+      "size": 93291,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/12-dev-settings-api-mcp.jpg",
+      "sha256": "eeafc31cc2ddb9f9f52fb2fc0ce3a9fe9e594848412cebb723ae8a14fef8a6e3",
+      "size": 113549,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/13-linear-reference-comparison.jpg",
+      "sha256": "50b6463c1db509805624f6c795b88dd369edc848fccbf3d0314c1feae0532d6d",
+      "size": 269547,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/14-dev-rich-issue-detail.jpg",
+      "sha256": "35c18a7968ffaa5ce779563434729b4d3a4cd03e6c7ceed8724c2459e4c051b1",
+      "size": 101399,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/15-dev-final-rich-issue.jpg",
+      "sha256": "8489f3ca654661beb9dbb4e35b94c6eb3426b7aadf826b558f5da57cb99c98f2",
+      "size": 108165,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/16-production-issue-detail.jpg",
+      "sha256": "94735190bb3e798247b928e83d5142066ac73ed5667f4cc5284faf9f035b6e19",
+      "size": 73144,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/17-production-views.jpg",
+      "sha256": "5541c02a3bb103a36c98cf4abc97f1785ae254eff4619fa749acc0869e8e385d",
+      "size": 58699,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/audit-final/18-production-invite-modal.jpg",
+      "sha256": "6d3f7b9fa277f36cedcf4b060077c271e72c937ba9b712e79d4f67b1c7c4c673",
+      "size": 47918,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/screenshots/dev-workspace-final.png",
+      "sha256": "597278f5df45797c94440a6cd0f2fa310d16154d65cfef553c5a00d5bfc9b0f3",
+      "size": 74389,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/screenshots/dev-workspace-issue.png",
+      "sha256": "6cf1d1a85d67a4350de15fc0f89c8d2bb946ae7d26e93dfac24877830b8d312a",
+      "size": 75766,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/screenshots/dev-workspace-mobile.png",
+      "sha256": "cec0121b1b790d080d1ad1c823e34962213879e4e53d4fb30c0131f2b4c24a9f",
+      "size": 27275,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/screenshots/production-workspace-final.png",
+      "sha256": "7e78b0c129086b8e922290e50185615915bc9e8c9d61f77021bbe9a97ece51f0",
+      "size": 71196,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/screenshots/reference-vs-dev-workspace-final.png",
+      "sha256": "4b893bbdff77d938d64da8f5521e74be20cca943373c4415cc8c290ec0c1a6c7",
+      "size": 836293,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/30-implementation/CT-143/screenshots/reference-vs-dev-workspace.png",
+      "sha256": "c86e5be763aae0723cc25c24aec11145d906f69e51d146677dc8315efaed1bb7",
+      "size": 841884,
+      "origin": "first_party_project_asset",
+      "source_reference": "CT-143",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
+      "path": "docs/screenshots/issue-board.jpg",
+      "sha256": "475cfa6c938857d7fdd5d568612232c7b5b9e438836efafa6fabc5bfd48cafa6",
+      "size": 48353,
+      "origin": "first_party_project_asset",
+      "source_reference": "project_source:docs/screenshots/issue-board.jpg",
+      "rights_basis": "First-party project artifact; accountable rights review remains pending.",
+      "reviewer": null,
+      "review_status": "pending"
+    },
+    {
       "path": "docs/screenshots/issue-detail-mobile.jpg",
-      "sha256": "497a581bff2f0f59c7c763ef538ac7f48743eb12ffb90b249f086c1f4af36de2",
-      "size": 23723,
+      "sha256": "a0cccd3bad788a6c927925e06be4185be1b59d95adadbc3b4215b66333712016",
+      "size": 21260,
       "origin": "first_party_project_asset",
       "source_reference": "project_source:docs/screenshots/issue-detail-mobile.jpg",
       "rights_basis": "First-party project artifact; accountable rights review remains pending.",
@@ -2567,8 +2917,8 @@
     },
     {
       "path": "docs/screenshots/issue-detail.jpg",
-      "sha256": "d345544e8573daeb288c3c8cf2b83c30e63cdb4415601d5097f09177989cac1f",
-      "size": 59111,
+      "sha256": "0dddc2dda1387a393f20f1f259dc148c8763d52dee84ae8ff85ce1780f99a464",
+      "size": 100499,
       "origin": "first_party_project_asset",
       "source_reference": "project_source:docs/screenshots/issue-detail.jpg",
       "rights_basis": "First-party project artifact; accountable rights review remains pending.",
@@ -2576,19 +2926,19 @@
       "review_status": "pending"
     },
     {
-      "path": "docs/screenshots/project-milestones.jpg",
-      "sha256": "17bd9d9993b352f32d8aa3b770416d06f0ab02701d2e03e4ed704fce642fc522",
-      "size": 61958,
+      "path": "docs/screenshots/online-homepage.jpg",
+      "sha256": "44e54c24c4321fb163ab4201cbf27a26926f762860131ef2c47ee6521bb7640e",
+      "size": 95638,
       "origin": "first_party_project_asset",
-      "source_reference": "project_source:docs/screenshots/project-milestones.jpg",
+      "source_reference": "project_source:docs/screenshots/online-homepage.jpg",
       "rights_basis": "First-party project artifact; accountable rights review remains pending.",
       "reviewer": null,
       "review_status": "pending"
     },
     {
       "path": "docs/screenshots/project-overview.jpg",
-      "sha256": "17bd9d9993b352f32d8aa3b770416d06f0ab02701d2e03e4ed704fce642fc522",
-      "size": 61958,
+      "sha256": "ca5058ac3d732b4038302f9580cb3d4b9023de6451aff102af3365d9e8b9b56d",
+      "size": 79958,
       "origin": "first_party_project_asset",
       "source_reference": "project_source:docs/screenshots/project-overview.jpg",
       "rights_basis": "First-party project artifact; accountable rights review remains pending.",
@@ -2597,8 +2947,8 @@
     },
     {
       "path": "docs/screenshots/saved-views.jpg",
-      "sha256": "3881337c80c6ade3622ad3f7330813a0f2a1a994ff2c66ecbfe170dc8dc8b657",
-      "size": 39615,
+      "sha256": "962d518887a13259356738f1df50f633c724063e34893c2e973f6286e97bbddb",
+      "size": 43021,
       "origin": "first_party_project_asset",
       "source_reference": "project_source:docs/screenshots/saved-views.jpg",
       "rights_basis": "First-party project artifact; accountable rights review remains pending.",

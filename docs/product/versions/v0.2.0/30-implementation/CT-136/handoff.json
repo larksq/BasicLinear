@@ -1,0 +1,103 @@
+{
+  "schema_version": "ct136-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "passed",
+  "authority": {
+    "profile": "project-local-v0.8",
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled_not_synced",
+    "linear_used": false,
+    "issue_revision": 15,
+    "issue_status": "Done",
+    "checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T09-09-30-227Z-acce3564-9bca-46e5-8226-b245033fee02.json",
+    "checkpoint_backup_sha256": "7bb614a75d68bf14ad9b993a8b1e0ded5faa57939c7bef49ade6e3edff29e0e1"
+  },
+  "issue": {
+    "issue_id": "CT-136",
+    "stable_id": "ffae9729-d827-4d3e-ac20-6df3d95b0687",
+    "plan_id": "I-204",
+    "accepted": true,
+    "blocked": false,
+    "output_status": "done",
+    "requirement_refs": ["R-205", "R-206", "R-215", "R-216"],
+    "acceptance_refs": ["P-T204"],
+    "outcome_refs": ["O-202", "O-204"],
+    "milestone": "S3 — Implementation"
+  },
+  "output": {
+    "summary": "Owners can create, list, resend, and revoke seven-day email-bound invitations. A verified invited Google account atomically activates one exact-workspace membership; pending invitations add no seat.",
+    "contracts": [
+      "digest-only invitation secrets with server-authenticated token records",
+      "complete HMAC authentication for every idempotency record",
+      "outcome-specific replay validation for all acceptance states",
+      "transaction-sampled trusted time and in-transaction owner rereads",
+      "privacy-safe mutation events and audits",
+      "strict local/hosted authority separation"
+    ],
+    "artifact_refs": [
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/invitation-membership-contract.md",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/checkpoint.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review.md",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request-2.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request-3.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request-4.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request-5.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request-6.json"
+    ],
+    "sealed_candidate_ref": "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request-6.json",
+    "sealed_file_count": 51
+  },
+  "quality": {
+    "independent_reviewer": "codex-subagent:/root/ct136_independent_review",
+    "independent_review_round": 6,
+    "decision": "PASS",
+    "actionable_findings": 0,
+    "sealed_hashes_before": "51/51",
+    "sealed_hashes_after": "51/51",
+    "focused_suite": "7 files / 65 tests passed",
+    "firestore_emulator": "1 file / 6 groups passed with clean shutdown",
+    "full_suite": "83 files / 565 tests passed",
+    "typecheck": "10/10 workspaces passed",
+    "build": "passed with 7/7 hosted references",
+    "runtime_audit": "0 vulnerabilities",
+    "adversarial_matrices": [
+      "40/40 idempotency single-field mutations failed closed",
+      "6/6 acceptance outcomes remained exact after later lifecycle changes",
+      "9/9 historical counterexamples closed"
+    ]
+  },
+  "scope_boundary": {
+    "included": [
+      "owner-managed invitation lifecycle",
+      "Google-email-bound membership acceptance",
+      "one active-seat transition",
+      "web owner and invitee flows",
+      "trusted HTTP/Firebase persistence and privacy rules",
+      "O-202 invitation and membership evidence"
+    ],
+    "excluded": [
+      "assignment and comments (CT-137)",
+      "subscription quantity and billing (CT-138)",
+      "REST token and export flows (CT-139)",
+      "MCP and reusable PM skill (CT-140)",
+      "notifications, custom roles, SSO, and SCIM",
+      "AI agents, code review, repositories, and pull requests"
+    ]
+  },
+  "claims": {
+    "implementation_output_done": true,
+    "pt204_qualified": false,
+    "production_deployed": false,
+    "release_approved": false,
+    "legal_privacy_security_approved": false,
+    "billing_reconciled": false,
+    "o202_achieved": false,
+    "o204_achieved": false
+  },
+  "next": {
+    "issue": "CT-137",
+    "plan_id": "I-205",
+    "action": "implement one same-workspace active-member assignee and durable authored comments under the shared CT-135 authorization boundary"
+  }
+}

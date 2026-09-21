@@ -1,0 +1,31 @@
+{
+  "schema_version": "ct143-testing-handoff-final-v1",
+  "prepared_at": "2026-08-27T05:38:38Z",
+  "stage": "testing",
+  "status": "passed",
+  "issue": {
+    "identifier": "CT-143",
+    "stable_id": "1f065874-a1d3-433b-ae4e-63b9d69c8d4d",
+    "expected_revision": 7,
+    "requested_status": "Done",
+    "milestone": "S4 — Testing"
+  },
+  "evidence": {
+    "decision_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/decision.md",
+    "result_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/result.json",
+    "review_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/review-2.md",
+    "evidence_map_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/evidence-map-final.json",
+    "candidate_manifest_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/candidate.sha256",
+    "production_uat_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/production-uat-review-1.json"
+  },
+  "next": {
+    "action": "Apply one optimistic project-local v0.8 issue update at revision 7, preserve S4 — Testing, and read back revision 8 Done with projection disabled/not_synced."
+  },
+  "claims": {
+    "ct143_testing_passed": true,
+    "ct142_or_p_t210_qualified": false,
+    "security_or_payment_approved": false,
+    "outcomes_validated": false,
+    "combined_release_accepted": false
+  }
+}
