@@ -9,6 +9,7 @@ import {
   type WorkspaceMutationEntitlementPolicy,
 } from './billing-service.js';
 import { hostedOperationsPolicyV1 } from './operations-control.js';
+import {readWorkspaceExportConfiguration, type WorkspaceExportConfiguration} from './workspace-export-configuration.js';
 import {
   readTrustedCollaborationIssues,
   trustedCollaborationCommentRecord,
@@ -88,7 +89,7 @@ export interface ExportedMembership {
   revision: number;
 }
 
-export interface WorkspaceExportData {
+export interface WorkspaceExportData extends WorkspaceExportConfiguration {
   schemaVersion: 'openlinear.workspace-export.v1';
   workspace: HostedWorkspace;
   memberships: ExportedMembership[];
@@ -821,8 +822,12 @@ export class ProjectManagementService {
         if (issues.length > hostedOperationsPolicyV1.queries.maximumExportIssueQueries) {
           throw unavailable();
         }
+        const configuration = await readWorkspaceExportConfiguration(
+          transaction, workspace, now, membershipIds, issues, invitations,
+        );
         let exportRecordCount = 1 + memberships.length + invitations.length
-          + projects.length + milestones.length + issues.length;
+          + projects.length + milestones.length + issues.length
+          + Object.values(configuration).reduce((total, values) => total + values.length, 0);
         if (exportRecordCount > hostedOperationsPolicyV1.queries.maximumExportRecords) {
           throw unavailable();
         }
@@ -860,6 +865,7 @@ export class ProjectManagementService {
           milestones,
           issues,
           comments,
+          ...configuration,
         };
         return {
           mediaType: workspaceExportMediaType,

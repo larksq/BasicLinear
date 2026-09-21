@@ -385,6 +385,11 @@ export interface HostedWorkspaceExport {
     milestones: Array<Record<string, unknown>>;
     issues: Array<Record<string, unknown>>;
     comments: Array<Record<string, unknown>>;
+    teams: Array<Record<string, unknown>>;
+    teamMemberships: Array<Record<string, unknown>>;
+    workflowStatuses: Array<Record<string, unknown>>;
+    cycles: Array<Record<string, unknown>>;
+    savedViews: Array<Record<string, unknown>>;
   };
 }
 

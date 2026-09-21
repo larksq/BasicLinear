@@ -34,6 +34,10 @@ import {
   type WorkspaceAction,
   type WorkspacePrincipal,
 } from './workspace-authorization.js';
+import {
+  hostedWorkflowStatusCategories, hostedWorkflowStatusIcons, hostedCycleStates,
+  hostedSavedViewTypes, hostedSavedViewPredicates,
+} from './workspace-configuration-service.js';
 
 export interface RestApiHandlerOptions {
   personalTokenService: PersonalTokenService;
@@ -1268,6 +1272,14 @@ export function openLinearOpenApiDocument(): Record<string, unknown> {
   const exact = (properties: Record<string, unknown>, required: string[]) => ({
     type: 'object', properties, required, additionalProperties: false,
   });
+  const configurationRecord = (fields: Record<string, unknown>) => {
+    const properties = {schemaVersion: {const: 1}, workspaceId: workspaceReference,
+      createdAt: timestamp, updatedAt: timestamp, revision, ...fields};
+    return exact(properties, Object.keys(properties));
+  };
+  const teamReference = {type: 'string', pattern: '^team_[a-f0-9]{32}$'};
+  const statusReference = {type: 'string', pattern: '^status_[a-f0-9]{32}$'};
+  const configurationColor = {type: 'string', pattern: '^#[0-9A-F]{6}$'};
   const projectWrite = exact({
     name: {type: 'string', minLength: 1, maxLength: 80},
     summary: {type: 'string', maxLength: 280},
@@ -1476,6 +1488,10 @@ export function openLinearOpenApiDocument(): Record<string, unknown> {
           description: {type: 'string', maxLength: 10000},
           status: {type: 'string', enum: ['todo', 'in_progress', 'done']},
           priority: {type: 'string', enum: ['no_priority', 'low', 'medium', 'high', 'urgent']},
+          teamId: teamReference,
+          statusId: statusReference,
+          cycleId: {type: ['string', 'null'], pattern: '^cycle_[a-f0-9]{32}$'},
+          dueAt: {type: ['string', 'null'], format: 'date-time'},
           projectId: {type: ['string', 'null'], pattern: '^project_[a-f0-9]{32}$'},
           milestoneId: {type: ['string', 'null'], pattern: '^milestone_[a-f0-9]{32}$'},
           parentIssueId: {type: ['string', 'null'], pattern: '^issue_[a-f0-9]{32}$'},
@@ -1489,6 +1505,7 @@ export function openLinearOpenApiDocument(): Record<string, unknown> {
           'schemaVersion', 'id', 'number', 'workspaceId', 'title', 'description', 'status', 'priority', 'projectId',
           'milestoneId', 'parentIssueId', 'resources', 'assigneeUserId', 'createdByUserId',
           'createdAt', 'updatedAt', 'revision',
+          'teamId', 'statusId', 'cycleId', 'dueAt',
         ]),
         Comment: exact({
           schemaVersion: {const: 1},
@@ -1526,6 +1543,7 @@ export function openLinearOpenApiDocument(): Record<string, unknown> {
           sendCount: {type: 'integer', minimum: 1, maximum: 10},
           activeSeatApplied: {type: 'boolean'},
           revision,
+          teamIds: {type: 'array', items: teamReference, uniqueItems: true},
         }, [
           'id', 'workspaceId', 'invitedEmail', 'inviterDisplayName', 'workspaceName', 'role',
           'state', 'createdAt', 'lastSentAt', 'expiresAt', 'acceptedAt', 'revokedAt',
@@ -1583,6 +1601,30 @@ export function openLinearOpenApiDocument(): Record<string, unknown> {
             'extraMemberWritesPaused', 'automationWritesPaused',
           ]),
         }, ['workspaceId', 'mode', 'trial', 'seats', 'prices', 'subscription', 'free']),
+        Team: configurationRecord({
+          id: teamReference, name: {type: 'string', minLength: 1, maxLength: 80},
+          key: {type: 'string', pattern: '^[A-Z][A-Z0-9]{0,9}$'}, color: configurationColor,
+          description: {type: 'string', maxLength: 500}, createdByUserId: stringId, archivedAt: {type: 'null'},
+        }),
+        TeamMembership: configurationRecord({
+          id: {type: 'string', pattern: '^team_member_[a-f0-9]{32}$'}, teamId: teamReference, userId: stringId,
+          role: {type: 'string', enum: ['owner', 'member']}, status: {type: 'string', enum: ['active', 'left']},
+        }),
+        WorkflowStatus: configurationRecord({
+          id: statusReference, teamId: teamReference, name: {type: 'string', minLength: 1, maxLength: 60},
+          category: {type: 'string', enum: hostedWorkflowStatusCategories}, color: configurationColor,
+          icon: {type: 'string', enum: hostedWorkflowStatusIcons}, position: {type: 'integer', minimum: 0}, isDefault: {type: 'boolean'},
+        }),
+        Cycle: configurationRecord({
+          id: {type: 'string', pattern: '^cycle_[a-f0-9]{32}$'}, teamId: teamReference, number: {type: 'integer', minimum: 1},
+          name: {type: 'string', minLength: 1, maxLength: 80}, startDate: {type: 'string', format: 'date'},
+          endDate: {type: 'string', format: 'date'}, state: {type: 'string', enum: hostedCycleStates}, createdByUserId: stringId,
+        }),
+        SavedView: configurationRecord({
+          id: {type: 'string', pattern: '^view_[a-f0-9]{32}$'}, teamId: teamReference, name: {type: 'string', minLength: 1, maxLength: 80},
+          viewType: {type: 'string', enum: hostedSavedViewTypes}, predicate: {type: 'string', enum: hostedSavedViewPredicates},
+          createdByUserId: stringId,
+        }),
         WorkspaceExportData: exact({
           schemaVersion: {const: 'openlinear.workspace-export.v1'},
           workspace: {$ref: '#/components/schemas/Workspace'},
@@ -1597,9 +1639,15 @@ export function openLinearOpenApiDocument(): Record<string, unknown> {
           milestones: {type: 'array', items: {$ref: '#/components/schemas/Milestone'}},
           issues: {type: 'array', items: {$ref: '#/components/schemas/Issue'}},
           comments: {type: 'array', items: {$ref: '#/components/schemas/Comment'}},
+          teams: {type: 'array', items: {$ref: '#/components/schemas/Team'}},
+          teamMemberships: {type: 'array', items: {$ref: '#/components/schemas/TeamMembership'}},
+          workflowStatuses: {type: 'array', items: {$ref: '#/components/schemas/WorkflowStatus'}},
+          cycles: {type: 'array', items: {$ref: '#/components/schemas/Cycle'}},
+          savedViews: {type: 'array', items: {$ref: '#/components/schemas/SavedView'}},
         }, [
           'schemaVersion', 'workspace', 'memberships', 'invitations', 'projects',
           'milestones', 'issues', 'comments',
+          'teams', 'teamMemberships', 'workflowStatuses', 'cycles', 'savedViews',
         ]),
         ProjectPageEnvelope: pageEnvelope({$ref: '#/components/schemas/Project'}),
         MilestonePageEnvelope: pageEnvelope({$ref: '#/components/schemas/Milestone'}),

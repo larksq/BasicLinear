@@ -15,6 +15,17 @@ The MCP discovery documents link to `/mcp-guide.html`, a public static setup gui
 
 A configuration or telemetry repository problem fails closed for paid activation. Roll back to the last sealed image if error rate, latency, rejected legitimate traffic, or billing reconciliation breaches the reviewed threshold. Do not weaken Origin, authorization, tenant, provider-signature, idempotency, or revision checks during an incident.
 
+## Workspace exports
+
+The owner-only workspace export includes teams, team memberships (including left
+memberships), workflow statuses, cycles, and saved views alongside issues,
+projects, milestones, comments, sanitized invitations, and workspace memberships.
+Configuration records count toward the existing collection and total export
+limits. References, record shapes, and timestamps are validated before returning
+the snapshot. Known legacy issue defaults are included deterministically without
+writing to storage; missing custom configuration fails the export. The OpenAPI
+document describes every exported collection and the issue configuration fields.
+
 ## Telemetry review
 
 Restore evidence must cover every collection group in `hostedOperationsPolicyV1.backup.requiredCollectionGroups`, including workspace configuration, observation/idempotency records, issue sequences, verification access, and Creem checkout attempts. The entire-database backup remains unfiltered. Adding a persisted collection requires updating this inventory and regenerating signed operations review/restore evidence for the new policy digest; prior evidence does not authorize the changed policy.
