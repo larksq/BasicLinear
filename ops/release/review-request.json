@@ -3,9 +3,9 @@
   "issue": "CT-13",
   "status": "accountable_review_required",
   "candidate": {
-    "source_revision": "dbdcbfb867727356fd0290614ab0812370e0c66d",
-    "source_file_count": 1672,
-    "source_sha256": "84bab4cabbf0f725e3c627dcabee75bb7ed7dd6e11f2844d088bc710015a9702"
+    "source_revision": "7ba798906588357a75c228035cd8dd2dc49fc888",
+    "source_file_count": 1678,
+    "source_sha256": "46d2b166b80e66f00985be3b54dc070b91744981057ca03af7bfcbc39377013f"
   },
   "scopes": [
     {
@@ -14,7 +14,7 @@
         {
           "path": "ops/release/asset-provenance.json",
           "exists": true,
-          "sha256": "ef1f0dcbded08d22421f6fe78d09a42e6a572437d6097f7aa4217169f10e3a32"
+          "sha256": "4336aa3d7b17c6e31627d2ab02ef2bb0e2b47a69530f29fb89b8bbf9fae8a233"
         }
       ],
       "state": {
@@ -30,14 +30,14 @@
         {
           "path": "ops/release/copy-provenance.json",
           "exists": true,
-          "sha256": "78b3d7aa6c8d582101433349b0a0882bd0b312b2a43e33d8e37af89c0e44a73d"
+          "sha256": "f0aaa867d34fe38128b579e90bb0077f9f6ede2d3ecebf04a7ebe34a908fd815"
         }
       ],
       "state": {
         "technical_complete": true,
         "manifest_status": "ready_for_accountable_review",
         "review_status": "pending",
-        "records": 67
+        "records": 69
       }
     },
     {
@@ -51,7 +51,7 @@
         {
           "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-request.json",
           "exists": true,
-          "sha256": "d9eaf5d9b92f57cda3165aed57760e8246a7251efd20feff6317ae6d0006a121"
+          "sha256": "597a0a9c99fb81a0cee069b22caab62f1c9acd9128493bf4ef055b25dfa73d0e"
         },
         {
           "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-acceptance.json",
@@ -70,7 +70,7 @@
         {
           "path": "ops/release/audit-policy.json",
           "exists": true,
-          "sha256": "65140977bcc2395017a23cd7df1f2eaa64ba65aabe9b6ed3984566e8c4fb1cc1"
+          "sha256": "eb8e1c42b632243f7e40c53ba2dd6f35f4f3afe47dd8681f40d39a9fac2df1f3"
         },
         {
           "path": "LICENSE",
@@ -90,7 +90,7 @@
         {
           "path": "ops/release/dependency-license-inventory.json",
           "exists": true,
-          "sha256": "29ee9a788cfb9b491ee0411a37281dfab6a52944c61cbd937fcca13a9748d55e"
+          "sha256": "1acd52bf41e3b9a1db0c679ad58710c24528e02cfbfbcee845a7f0e03d9de29b"
         },
         {
           "path": "ops/release/reproducible-build.json",
