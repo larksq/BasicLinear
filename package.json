@@ -35,6 +35,7 @@
     "typecheck": "npm run typecheck --workspaces --if-present",
     "test": "vitest run --config vitest.config.ts",
     "test:hosted-rules": "firebase emulators:exec --project demo-openlinear --only firestore \"npx vitest run packages/hosted/tests/firestore-rules.emulator.test.ts --config vitest.firestore.config.ts\"",
+    "test:hosted-transactions": "firebase emulators:exec --project demo-openlinear --only firestore \"npx vitest run apps/hosted-service/tests/firestore-collaboration.emulator.test.ts --config vitest.firestore.config.ts\"",
     "test:release-audit": "node --test scripts/tests/audit-public-release.test.mjs",
     "test:secret-audit": "node --test scripts/tests/audit-secrets.test.mjs",
     "audit:secrets": "node scripts/audit-secrets.mjs",

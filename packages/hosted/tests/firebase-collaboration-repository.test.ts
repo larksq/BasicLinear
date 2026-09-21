@@ -1,11 +1,17 @@
 import { describe, expect, it } from 'vitest';
 import {
   FirestoreCollaborationRepository,
+  CollaborationService,
+  MemoryWorkspaceAuthorizationEvidenceWriter,
+  MemoryWorkspaceMembershipReader,
+  WorkspaceAuthorizationService,
   type FirestoreCollaborationDocumentReferenceLike,
   type FirestoreCollaborationLike,
   type FirestoreCollaborationQueryLike,
   type FirestoreCollaborationTransactionLike,
 } from '../src/index.js';
+import {proEntitlementPolicyForTests} from './fixtures/entitlement.js';
+import {defaultHostedStatusId} from '../src/workspace-configuration-service.js';
 
 class FakeFirestore implements FirestoreCollaborationLike {
   readonly documents = new Map<string, Record<string, unknown>>();
@@ -76,6 +82,77 @@ class FakeFirestore implements FirestoreCollaborationLike {
 }
 
 describe('Firestore collaboration repository adapter', () => {
+  function collaboration() {
+    const firestore = new FakeFirestore();
+    const repository = new FirestoreCollaborationRepository(firestore);
+    const workspaceId = 'ws_lazy_defaults';
+    const userId = 'owner_lazy_defaults';
+    const memberships = new MemoryWorkspaceMembershipReader();
+    memberships.set({schemaVersion: 1, workspaceId, userId, role: 'owner', status: 'active', revision: 1});
+    firestore.documents.set(`workspaces/${workspaceId}/memberships/${userId}`, {
+      schemaVersion: 1, id: 'mem_lazy_defaults', workspaceId, userId, role: 'owner', status: 'active',
+      createdAt: '2026-09-01T00:00:00.000Z', revision: 1,
+    });
+    const clock = () => new Date('2026-09-21T00:00:00.000Z');
+    const authorization = new WorkspaceAuthorizationService(memberships, new MemoryWorkspaceAuthorizationEvidenceWriter(), {clock});
+    const service = new CollaborationService(repository, authorization, {
+      clock, secret: 'lazy-defaults-regression-secret-at-least-32-bytes', entitlementPolicy: proEntitlementPolicyForTests,
+    });
+    const command = {
+      workspaceId, principal: {kind: 'user' as const, userId, source: 'web' as const},
+      requestId: 'lazy_defaults_regression', idempotencyKey: 'lazy-defaults-regression-0001', title: 'First task',
+    };
+    return {firestore, service, command};
+  }
+
+  it('creates defaults on the first issue and replays without duplicate writes', async () => {
+    const {firestore, service, command} = collaboration();
+    const issue = await service.createIssue(command);
+    const snapshot = structuredClone([...firestore.documents]);
+    expect(issue).toMatchObject({number: 1, status: 'todo'});
+    expect(firestore.documents.has(`workspaces/${command.workspaceId}/teams/${issue.teamId}`)).toBe(true);
+    expect(firestore.documents.has(`workspaces/${command.workspaceId}/workflowStatuses/${issue.statusId}`)).toBe(true);
+    expect(await service.createIssue(command)).toEqual(issue);
+    expect([...firestore.documents]).toEqual(snapshot);
+  });
+
+  it('finishes parent and membership reads before lazily creating a child status', async () => {
+    const {service, command} = collaboration();
+    const parent = await service.createIssue(command);
+    const child = await service.createIssue({
+      ...command, idempotencyKey: 'lazy-child-regression-key-0001', parentIssueId: parent.id,
+      statusId: defaultHostedStatusId(command.workspaceId, parent.teamId, 'in_progress'),
+    });
+    expect(child).toMatchObject({number: 2, parentIssueId: parent.id, status: 'in_progress'});
+  });
+
+  it('finishes update placement and parent reads before creating a missing status', async () => {
+    const {firestore, service, command} = collaboration();
+    const parent = await service.createIssue(command);
+    const child = await service.createIssue({...command, idempotencyKey: 'lazy-update-child-key-0001', parentIssueId: parent.id});
+    const projectId = `project_${'a'.repeat(32)}`;
+    const milestoneId = `milestone_${'b'.repeat(32)}`;
+    const timestamps = {createdAt: child.createdAt, updatedAt: child.updatedAt};
+    firestore.documents.set(`workspaces/${command.workspaceId}/projects/${projectId}`, {
+      schemaVersion: 1, id: projectId, workspaceId: command.workspaceId, archivedAt: null, ...timestamps,
+    });
+    firestore.documents.set(`workspaces/${command.workspaceId}/milestones/${milestoneId}`, {
+      schemaVersion: 1, id: milestoneId, workspaceId: command.workspaceId, projectId, archivedAt: null, ...timestamps,
+    });
+    const update = {...command, issueId: child.id, expectedRevision: 1, idempotencyKey: 'lazy-update-regression-key-0001',
+      patch: {status: 'done' as const, projectId, milestoneId}};
+    expect(await service.updateIssue(update)).toMatchObject({status: 'done', revision: 2, parentIssueId: parent.id, projectId, milestoneId});
+    expect(await service.updateIssue(update)).toMatchObject({status: 'done', revision: 2});
+  });
+
+  it('does not persist defaults if a later parent validation fails', async () => {
+    const {firestore, service, command} = collaboration();
+    const before = structuredClone([...firestore.documents]);
+    await expect(service.createIssue({...command, parentIssueId: `issue_${'f'.repeat(32)}`}))
+      .rejects.toMatchObject({code: 'COLLABORATION_NOT_FOUND'});
+    expect([...firestore.documents]).toEqual(before);
+  });
+
   it('preserves Firestore read-before-write transaction ordering', async () => {
     const firestore = new FakeFirestore();
     firestore.documents.set('workspaces/ws_adapter/issues/issue_one', { id: 'issue_one', revision: 1 });

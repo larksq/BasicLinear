@@ -1121,7 +1121,7 @@ export class CollaborationService {
       const creatorObservationPath = issueObservationPath(context.workspaceId, id, grant.userId);
       if (await transaction.get(creatorObservationPath) !== null) throw unavailable();
       await this.#assertIssuePlacement(transaction, context.workspaceId, projectId, milestoneId, now);
-      const status = await this.#assertIssueConfiguration(
+      const configuration = await this.#readIssueConfiguration(
         transaction,
         context.workspaceId,
         teamId,
@@ -1133,13 +1133,14 @@ export class CollaborationService {
       await this.#assertIssueParent(transaction, context.workspaceId, id, parentIssueId, now);
       const issue: CollaborationIssue = {
         schemaVersion: 1, id, number: issueState.nextNumber,
-        workspaceId: context.workspaceId, title, description, status,
+        workspaceId: context.workspaceId, title, description, status: configuration.status,
         priority: 'no_priority', teamId, statusId, cycleId, projectId, milestoneId, parentIssueId, resources, dueAt,
         assigneeUserId: null, createdByUserId: grant.userId,
         createdAt: now, updatedAt: now, revision: 1,
       };
       await this.#activeActor(transaction, grant, now);
       const evidence = this.#issueCreatedEvidence(context, issue, now);
+      configuration.persistDefaults();
       persistIssueState(transaction, context.workspaceId, issueState, now, issue.number + 1);
       transaction.create(paths.issue(context.workspaceId, id), { ...issue });
       transaction.create(creatorObservationPath, {
@@ -1217,7 +1218,7 @@ export class CollaborationService {
           patch.status === 'in_progress' ? 'in_progress' : patch.status === 'done' ? 'done' : 'todo',
         );
       }
-      const status = await this.#assertIssueConfiguration(
+      const configuration = await this.#readIssueConfiguration(
         transaction,
         context.workspaceId,
         teamId,
@@ -1226,14 +1227,14 @@ export class CollaborationService {
         now,
         grant.userId,
       );
-      if (patch.status !== undefined && patch.status !== status) throw invalidRequest();
+      if (patch.status !== undefined && patch.status !== configuration.status) throw invalidRequest();
       const after: CollaborationIssue = {
         ...before,
         ...patch,
         teamId,
         statusId,
         cycleId,
-        status,
+        status: configuration.status,
         updatedAt: now,
         revision: before.revision + 1,
       };
@@ -1258,6 +1259,7 @@ export class CollaborationService {
         'projectId', 'milestoneId', 'parentIssueId', 'resources', 'dueAt',
       ] as const).filter((field) => stable(before[field]) !== stable(after[field]));
       if (changedFields.length === 0) throw conflict();
+      configuration.persistDefaults();
       persistIssueState(transaction, context.workspaceId, issueState, now);
       transaction.set(paths.issue(context.workspaceId, issueId), { ...after });
       this.#writeAudit(transaction, this.#audit(context, 'issue', issueId, 'issue.update', before.revision, after.revision,
@@ -1632,7 +1634,7 @@ export class CollaborationService {
     assertAtOrBefore(milestone.updatedAt, now);
   }
 
-  async #assertIssueConfiguration(
+  async #readIssueConfiguration(
     transaction: CollaborationTransaction,
     workspaceId: string,
     teamId: string,
@@ -1640,12 +1642,11 @@ export class CollaborationService {
     cycleId: string | null,
     now: string,
     actorUserId: string,
-  ): Promise<CollaborationIssueStatus> {
+  ): Promise<{status: CollaborationIssueStatus; persistDefaults(): void}> {
     const rawTeam = await transaction.get(paths.team(workspaceId, teamId));
     const team = rawTeam === null && teamId === defaultHostedTeamId(workspaceId)
       ? buildDefaultHostedTeamRecord(workspaceId, actorUserId, now)
       : trustedHostedTeamRecord(rawTeam, workspaceId, teamId);
-    if (rawTeam === null) transaction.create(paths.team(workspaceId, teamId), {...team});
     assertAtOrBefore(team.createdAt, now);
     assertAtOrBefore(team.updatedAt, now);
     const rawStatus = await transaction.get(paths.status(workspaceId, statusId));
@@ -1654,7 +1655,6 @@ export class CollaborationService {
     const workflowStatus = rawStatus === null && defaultStatus !== null
       ? defaultStatus
       : trustedHostedWorkflowStatusRecord(rawStatus, workspaceId, statusId);
-    if (rawStatus === null) transaction.create(paths.status(workspaceId, statusId), {...workflowStatus});
     if (workflowStatus.teamId !== teamId) throw invalidRequest();
     assertAtOrBefore(workflowStatus.createdAt, now);
     assertAtOrBefore(workflowStatus.updatedAt, now);
@@ -1668,7 +1668,14 @@ export class CollaborationService {
       assertAtOrBefore(cycle.createdAt, now);
       assertAtOrBefore(cycle.updatedAt, now);
     }
-    return legacyStatusForCategory(workflowStatus.category);
+    return {
+      status: legacyStatusForCategory(workflowStatus.category),
+      // The caller must finish its parent, placement, and actor reads first.
+      persistDefaults() {
+        if (rawTeam === null) transaction.create(paths.team(workspaceId, teamId), {...team});
+        if (rawStatus === null) transaction.create(paths.status(workspaceId, statusId), {...workflowStatus});
+      },
+    };
   }
 
   async #assertIssueParent(

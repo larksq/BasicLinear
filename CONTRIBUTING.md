@@ -16,6 +16,16 @@ npm test
 npm run build
 ```
 
+Hosted storage changes also require the Firebase CLI and a compatible Java runtime:
+
+```sh
+npm run test:hosted-rules
+npm run test:hosted-transactions
+```
+
+These suites run against the isolated `demo-openlinear` Firestore emulator. The
+transaction suite covers lazy defaults, retries, concurrent creation, and rollback.
+
 Changes to release controls must also run:
 
 ```sh
