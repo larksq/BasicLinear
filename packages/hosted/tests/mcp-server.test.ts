@@ -390,6 +390,51 @@ describe('MCP 2026-07-28 Streamable HTTP adapter', () => {
     expect(resources.body).toEqual({jsonrpc: '2.0', id: 4, result: {resources: []}});
   });
 
+  it('discovers only authorized tools when standard list parameters are omitted', async () => {
+    const context = fixture();
+    const handler = context.createHandler();
+    const tokens = await context.issueToken('workspace:read');
+    const headers = standardMcpHeaders({authorization: `Bearer ${tokens.access_token}`});
+    const omitted = await context.invoke(handler, 'POST', '/mcp', headers, JSON.stringify({
+      jsonrpc: '2.0', id: 1, method: 'tools/list',
+    }));
+    const explicit = await context.invoke(handler, 'POST', '/mcp', headers, JSON.stringify({
+      jsonrpc: '2.0', id: 1, method: 'tools/list', params: {},
+    }));
+    expect(omitted.status).toBe(200);
+    expect(omitted.body).toEqual(explicit.body);
+    expect((omitted.body as {result: {tools: Array<{name: string}>}}).result.tools.map(tool => tool.name))
+      .toEqual(['workspace.get']);
+    const unauthenticated = await context.invoke(handler, 'POST', '/mcp', standardMcpHeaders(), JSON.stringify({
+      jsonrpc: '2.0', id: 2, method: 'tools/list',
+    }));
+    expect(unauthenticated.status).toBe(401);
+  });
+
+  it.each([null, [], '', 1])('rejects explicit malformed tools/list parameters %j', async (params) => {
+    const context = fixture();
+    const response = await context.invoke(context.createHandler(), 'POST', '/mcp', standardMcpHeaders(), JSON.stringify({
+      jsonrpc: '2.0', id: 1, method: 'tools/list', params,
+    }));
+    expect(response.status).toBe(400);
+    expect(response.body).toMatchObject({error: {code: -32602}});
+  });
+
+  it('still requires tool arguments and modern protocol metadata', async () => {
+    const context = fixture();
+    for (const method of ['tools/call', 'server/discover']) {
+      const response = await context.invoke(context.createHandler(), 'POST', '/mcp', standardMcpHeaders(), JSON.stringify({
+        jsonrpc: '2.0', id: 1, method,
+      }));
+      expect(response.status).toBe(400);
+      expect(response.body).toMatchObject({error: {code: -32602}});
+    }
+    const modernList = await context.invoke(context.createHandler(), 'POST', '/mcp', mcpHeaders('tools/list'), JSON.stringify({
+      jsonrpc: '2.0', id: 1, method: 'tools/list',
+    }));
+    expect(modernList.status).toBe(400);
+  });
+
   it('completes the public-client HTTP registration, PKCE consent, token, refresh, and revoke flow', async () => {
     const context = fixture();
     const handler = context.createHandler();

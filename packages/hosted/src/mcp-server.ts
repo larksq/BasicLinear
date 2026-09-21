@@ -629,7 +629,7 @@ function acceptsMcp(request: IncomingMessage): boolean {
 }
 
 function parseRpcRequest(value: unknown): JsonRpcRequest {
-  const body = exactObject(value, ['jsonrpc', 'id', 'method', 'params'], ['jsonrpc', 'id', 'method', 'params']);
+  const body = exactObject(value, ['jsonrpc', 'id', 'method', 'params'], ['jsonrpc', 'id', 'method']);
   if (body.jsonrpc !== '2.0'
     || (typeof body.id !== 'string' && typeof body.id !== 'number')
     || (typeof body.id === 'number' && !Number.isSafeInteger(body.id))
@@ -637,9 +637,9 @@ function parseRpcRequest(value: unknown): JsonRpcRequest {
     if (typeof body.method === 'string') throw methodNotFound();
     throw new McpHttpError(400, -32600, 'Invalid Request');
   }
-  const params = record(body.params);
+  const params = body.method === 'tools/list' && body.params === undefined ? {} : record(body.params);
   if (params === null) throw invalidParams();
-  return body as unknown as JsonRpcRequest;
+  return {...body, params} as unknown as JsonRpcRequest;
 }
 
 function validMetaKey(value: string): boolean {
