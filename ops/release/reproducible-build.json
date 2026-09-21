@@ -65,11 +65,11 @@
     },
     {
       "path": "package-lock.json",
-      "sha256": "3c068793aa7506bd88f664ff2b05b78baae75d32c48a495fa81e6068f998258b"
+      "sha256": "126ae476e62d0a439ab0ee9333654eba52541c09bf03b2218fbc5022af5fd093"
     },
     {
       "path": "package.json",
-      "sha256": "6661360965bd45eb2b2ad446021b910a2c5eea191f59db24d6a28f405326004f"
+      "sha256": "874549ed19a28a57e832f753d3c17dfd8d51f9386bb9dda7e336d014f07dd3bd"
     },
     {
       "path": "packages/config/package.json",

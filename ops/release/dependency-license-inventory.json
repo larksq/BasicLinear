@@ -1,11 +1,11 @@
 {
   "schema_version": "release-dependency-license-inventory-v1",
   "issue": "CT-13",
-  "generated_at": "2026-09-21T02:54:09.796Z",
+  "generated_at": "2026-09-21T07:26:17.493Z",
   "status": "metadata_screen_complete_distribution_audit_pending",
   "source": {
     "path": "package-lock.json",
-    "sha256": "3c068793aa7506bd88f664ff2b05b78baae75d32c48a495fa81e6068f998258b",
+    "sha256": "126ae476e62d0a439ab0ee9333654eba52541c09bf03b2218fbc5022af5fd093",
     "method": "Count non-link lockfile records, separating the root, project workspaces, and third-party packages."
   },
   "counts": {

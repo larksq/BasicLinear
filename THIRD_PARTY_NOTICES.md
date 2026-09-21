@@ -2,7 +2,7 @@
 
 Technical status: COMPLETE; accountable review state is recorded in `ops/release/third-party-notices.json`.
 
-Lockfile SHA-256: `3c068793aa7506bd88f664ff2b05b78baae75d32c48a495fa81e6068f998258b`
+Lockfile SHA-256: `126ae476e62d0a439ab0ee9333654eba52541c09bf03b2218fbc5022af5fd093`
 
 This inventory covers every third-party package record in the exact npm lockfile. Distribution scope is derived from locked npm metadata; local license and NOTICE evidence is hash-bound when installed. Accountable review remains a separate release gate.
 

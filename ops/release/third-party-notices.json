@@ -9,9 +9,9 @@
     "architecture": "arm64",
     "node": "v24.18.0"
   },
-  "lockfile_sha256": "3c068793aa7506bd88f664ff2b05b78baae75d32c48a495fa81e6068f998258b",
+  "lockfile_sha256": "126ae476e62d0a439ab0ee9333654eba52541c09bf03b2218fbc5022af5fd093",
   "notice_file": "THIRD_PARTY_NOTICES.md",
-  "notice_file_sha256": "25e43ff2fa5e5554698581f3d2ca61ca77be3058f506cc206385f036f0ac2df5",
+  "notice_file_sha256": "824e44d4f76d14b44fa1242c954c6f78234241602e3c19d73935f249feb53041",
   "entries_sha256": "912e961b478885bbc6f619e985af34f5790962e0becc8295120bff4b46b6df86",
   "counts": {
     "records": 499,

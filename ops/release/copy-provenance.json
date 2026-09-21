@@ -3,7 +3,7 @@
   "issue": "CT-13",
   "status": "ready_for_accountable_review",
   "review_status": "pending",
-  "source_set_sha256": "46d2b166b80e66f00985be3b54dc070b91744981057ca03af7bfcbc39377013f",
+  "source_set_sha256": "26b91e97f89f26681c195a2e274f0f7ecdd2b83eafb21ddd1aed0dc599f5418f",
   "entries": [
     {
       "path": "apps/web/hosted.html",
@@ -177,8 +177,8 @@
     },
     {
       "path": "apps/web/src/hosted-api.ts",
-      "sha256": "0025218d62bc3de7e4c91cc913b4b3b86933be6a4ea07b553ea662e158c92f4c",
-      "size": 37118,
+      "sha256": "e581b19223bcaf4ddb8e0b370b58ea71b2a3c9d2a5d01fd4af8e126861a01ee4",
+      "size": 37360,
       "origin": "independently_authored_project_source",
       "source_reference": "project_source:apps/web/src/hosted-api.ts",
       "rights_basis": "First-party project copy; accountable rights review remains pending.",
@@ -267,8 +267,8 @@
     },
     {
       "path": "apps/web/src/hosted-workspace.tsx",
-      "sha256": "80bce64806a40d48e05d901e9e09d4d91a3c75d51be1e7502fba15cd1b2f096c",
-      "size": 127256,
+      "sha256": "b0711d250f7ceee4306287f4c4a1970ec6f2b6c728185f15969a849ef5be9551",
+      "size": 127310,
       "origin": "independently_authored_project_source",
       "source_reference": "project_source:apps/web/src/hosted-workspace.tsx",
       "rights_basis": "First-party project copy; accountable rights review remains pending.",
