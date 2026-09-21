@@ -3,7 +3,7 @@
   "issue": "CT-3",
   "status": "qualified_review_required",
   "candidate": {
-    "source_revision": "928767ea12c59aca28b94e9bcb91bca03eb1febe",
+    "source_revision": "a0594043401ff8073e8081ce16f18b161eae5eb9",
     "evidence_set_sha256": "fed80591d62bf667c8f492ce652373cd05098f5f3b5b45db1921f1d5cf1295c2"
   },
   "sponsor_decision": {
