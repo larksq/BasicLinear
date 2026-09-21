@@ -3,8 +3,8 @@
   "issue": "CT-3",
   "status": "qualified_review_required",
   "candidate": {
-    "source_revision": "18850fb4f894be6e8fa0901c8af030e795f73724",
-    "evidence_set_sha256": "7f9536ec0a91a2e7d952fe8a38c20221207c7fdee06b265e892e4ebe06ed36a2"
+    "source_revision": "2382fc930bdf09a3f6ebd854ba43fb95348ceb9b",
+    "evidence_set_sha256": "43648e12c945b210ff3cf784b1a1a39ad0de5822bef4f88fb7618827735ed6a1"
   },
   "sponsor_decision": {
     "license": "AGPL-3.0-only",
@@ -25,12 +25,12 @@
     {
       "path": "THIRD_PARTY_NOTICES.md",
       "exists": true,
-      "sha256": "25e43ff2fa5e5554698581f3d2ca61ca77be3058f506cc206385f036f0ac2df5"
+      "sha256": "824e44d4f76d14b44fa1242c954c6f78234241602e3c19d73935f249feb53041"
     },
     {
       "path": "CONTRIBUTING.md",
       "exists": true,
-      "sha256": "ef93b5435447d86589bd00ca2d61c0eb9b09d28bb051fa443015673e87eddad5"
+      "sha256": "82af91de9199b4dfd4c33613d9e5835a39dcf65be1a892af70dbd96047279897"
     },
     {
       "path": "SECURITY.md",
@@ -75,22 +75,22 @@
     {
       "path": "ops/release/dependency-license-inventory.json",
       "exists": true,
-      "sha256": "1acd52bf41e3b9a1db0c679ad58710c24528e02cfbfbcee845a7f0e03d9de29b"
+      "sha256": "2b5ed91d92fb889866e525c4ebc0a223b3a52d17b147c7acbd54e2fc489a9388"
     },
     {
       "path": "ops/release/third-party-notices.json",
       "exists": true,
-      "sha256": "3740766464422ac2a4a91539345810bcf1840da393259d7dceedeecba4740684"
+      "sha256": "53ac63bccb2c6733aa89181295899cc5369df302757bbc27fa642caa2cd04bd1"
     },
     {
       "path": "ops/release/asset-provenance.json",
       "exists": true,
-      "sha256": "4336aa3d7b17c6e31627d2ab02ef2bb0e2b47a69530f29fb89b8bbf9fae8a233"
+      "sha256": "2034a6d2131b181ceb3530c64aeeb2c2cee646b4ba3ba11a72057589771d8a0a"
     },
     {
       "path": "ops/release/copy-provenance.json",
       "exists": true,
-      "sha256": "f0aaa867d34fe38128b579e90bb0077f9f6ede2d3ecebf04a7ebe34a908fd815"
+      "sha256": "b8856157cfabc7b29d1b7954de099e7869db85fca3a24f36f5da7157fb53e2a0"
     }
   ],
   "evidence_state": {
