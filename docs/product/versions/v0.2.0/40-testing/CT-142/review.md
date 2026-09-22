@@ -2,7 +2,7 @@
 
 Decision: PASS for the nonsecurity UAT evidence only.
 
-Reviewer: `codex-testing-ct142-independent`  
+Reviewer: `codex-testing-ct142-independent`
 Session: `CT142-NONSECURITY-REVIEW-20260826`
 
 The reviewer independently verified the sealed CT-142 nonsecurity candidate, the project-local Control Tower state, the current test-evidence schema, and the exact bounded positive-path runner. Findings were P0 0, P1 0, P2 0, and P3 0.

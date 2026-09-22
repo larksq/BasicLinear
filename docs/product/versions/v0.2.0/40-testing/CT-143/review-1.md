@@ -1,7 +1,7 @@
 # CT-143 independent review 1
 
-Reviewer: `codex-testing-ct143-independent`  
-Session: `CT143-INDEPENDENT-PRODUCTION-REVIEW-20260827`  
+Reviewer: `codex-testing-ct143-independent`
+Session: `CT143-INDEPENDENT-PRODUCTION-REVIEW-20260827`
 Decision: PASS for bounded independent nonsecurity production UAT.
 
 ## Findings

@@ -2,7 +2,7 @@
   "schema_version": "asset-provenance-v1",
   "release": "BasicLinear open-source release",
   "status": "complete",
-  "source_set_sha256": "a4de038264d426143fa46af78eee1af88e1cd21cd0b4cba32941db688c97455c",
+  "source_set_sha256": "6a272c0696aa0693c8ae2fdd61a349a0a3660d8914fafe2bc719216b6bde9d49",
   "entries": [
     {
       "path": "apps/web/public/favicon.ico",

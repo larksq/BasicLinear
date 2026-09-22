@@ -1,7 +1,7 @@
 # CT-143 independent remediation review 2
 
-Reviewer: `codex-testing-ct143-independent`  
-Session: `CT143-INDEPENDENT-REMEDIATION-REVIEW-20260827`  
+Reviewer: `codex-testing-ct143-independent`
+Session: `CT143-INDEPENDENT-REMEDIATION-REVIEW-20260827`
 Decision: PASS; CT-143 is Done-eligible for the primary agent's revision-checked project-local reconciliation.
 
 ## Findings
