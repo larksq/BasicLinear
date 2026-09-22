@@ -5,8 +5,8 @@ import { CreemBillingProvider } from '../src/creem-billing.js';
 
 const now = '2026-09-14T00:00:00.000Z';
 const secret = 'test-webhook-secret-at-least-32-bytes';
-const metadata = {openlinear_checkout_reference: 'a'.repeat(64), openlinear_workspace_id: 'ws_creem_test',
-  openlinear_owner_user_id: 'owner_creem_test', openlinear_plan: 'monthly', openlinear_attempted_at: now};
+const metadata = {basiclinear_checkout_reference: 'a'.repeat(64), basiclinear_workspace_id: 'ws_creem_test',
+  basiclinear_owner_user_id: 'owner_creem_test', basiclinear_plan: 'monthly', basiclinear_attempted_at: now};
 const product = {id: 'prod_monthly123', mode: 'test', currency: 'USD', price: 200,
   billing_type: 'recurring', billing_period: 'every-month', tax_mode: 'exclusive'};
 const checkout = {id: 'ch_checkout123', mode: 'test', status: 'pending', metadata, product, units: 2,
@@ -26,8 +26,8 @@ function fixture(responses: unknown[]) {
     }) as typeof fetch});
   return {provider, calls};
 }
-const input = {workspaceId: metadata.openlinear_workspace_id, ownerUserId: metadata.openlinear_owner_user_id,
-  checkoutReference: metadata.openlinear_checkout_reference, plan: 'monthly' as const, priceId: product.id,
+const input = {workspaceId: metadata.basiclinear_workspace_id, ownerUserId: metadata.basiclinear_owner_user_id,
+  checkoutReference: metadata.basiclinear_checkout_reference, plan: 'monthly' as const, priceId: product.id,
   quantity: 2, idempotencyReference: 'trusted-idempotency-key', attemptedAt: now};
 
 describe('Creem billing provider', () => {
@@ -51,12 +51,12 @@ describe('Creem billing provider', () => {
     {...checkout, checkout_url: 'https://www.creem.io.attacker.example/checkout/prod_monthly123/ch_checkout123'},
     {...checkout, checkout_url: 'https://www.creem.io/checkout/prod_other123/ch_checkout123'},
     {...checkout, units: 0}, {...checkout, status: 'completed'},
-    {...checkout, metadata: {...metadata, openlinear_plan: 'unknown'}},
+    {...checkout, metadata: {...metadata, basiclinear_plan: 'unknown'}},
   ])('rejects invalid provider state %#', async value => {
     await expect(fixture([value]).provider.retrieveCheckoutSession(checkout.id)).rejects.toThrow();
   });
   it('rejects returned cross-workspace checkout before returning the payment link', async () => {
-    await expect(fixture([product, {...checkout, metadata: {...metadata, openlinear_workspace_id: 'ws_foreign'}}])
+    await expect(fixture([product, {...checkout, metadata: {...metadata, basiclinear_workspace_id: 'ws_foreign'}}])
       .provider.createCheckoutSession(input)).rejects.toThrow('CREEM_CHECKOUT_BINDING_INVALID');
   });
   it('verifies raw-body signatures and extracts provider references', () => {

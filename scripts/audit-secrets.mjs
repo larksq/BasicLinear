@@ -63,7 +63,7 @@ export async function auditSecrets(rootInput = process.cwd(), options = {}) {
   const historicalPaths = paths(git(root, ['log', '--all', '--format=', '--name-only', '-z', '--diff-filter=A']))
     .map((path) => path.replace(/^\n+/u, ''));
   const privatePaths = [...new Set([...files, ...historicalPaths].filter(isPrivatePath))].sort();
-  const temporary = await mkdtemp(join(tmpdir(), 'openlinear-secrets-'));
+  const temporary = await mkdtemp(join(tmpdir(), 'basiclinear-secrets-'));
   const findings = [];
   const scans = [];
   try {
@@ -103,7 +103,7 @@ export async function auditSecrets(rootInput = process.cwd(), options = {}) {
       })));
     }
     return {
-      schema_version: 'openlinear-secret-audit-v1',
+      schema_version: 'basiclinear-secret-audit-v1',
       status: findings.length === 0 && privatePaths.length === 0 ? 'PASS' : 'FAIL',
       scanner: `gitleaks ${version.stdout.trim()}`,
       head: git(root, ['rev-parse', 'HEAD']).trim(),

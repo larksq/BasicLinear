@@ -34,7 +34,7 @@ import {
   type FirestoreLike,
   type FirestoreWorkspaceDirectoryLike,
   type FirestoreOperationsLike,
-} from '@openlinear/hosted';
+} from '@basiclinear/hosted';
 import { verifiedGoogleIdentity } from './firebase-identity.js';
 import { installHostedClientErrorHandler } from './client-error.js';
 import { FirestoreCreemCheckoutAttemptStore } from './creem-checkout-attempts.js';
@@ -78,36 +78,36 @@ import {
 } from './hosted-config.js';
 
 const deploymentEnvironment = readHostedDeploymentEnvironment(
-  process.env.OPENLINEAR_DEPLOYMENT_ENVIRONMENT,
+  process.env.BASICLINEAR_DEPLOYMENT_ENVIRONMENT,
 );
 const developmentFirebaseProjectId = readFirebaseProjectId(
-  process.env.OPENLINEAR_DEVELOPMENT_FIREBASE_PROJECT_ID,
-  'OPENLINEAR_DEVELOPMENT_FIREBASE_PROJECT_ID',
+  process.env.BASICLINEAR_DEVELOPMENT_FIREBASE_PROJECT_ID,
+  'BASICLINEAR_DEVELOPMENT_FIREBASE_PROJECT_ID',
 );
 const productionFirebaseProjectId = readFirebaseProjectId(
-  process.env.OPENLINEAR_PRODUCTION_FIREBASE_PROJECT_ID,
-  'OPENLINEAR_PRODUCTION_FIREBASE_PROJECT_ID',
+  process.env.BASICLINEAR_PRODUCTION_FIREBASE_PROJECT_ID,
+  'BASICLINEAR_PRODUCTION_FIREBASE_PROJECT_ID',
 );
 const firebaseProjectId = readFirebaseProjectId(
-  process.env.OPENLINEAR_FIREBASE_PROJECT_ID,
-  'OPENLINEAR_FIREBASE_PROJECT_ID',
+  process.env.BASICLINEAR_FIREBASE_PROJECT_ID,
+  'BASICLINEAR_FIREBASE_PROJECT_ID',
 );
 const firestoreDatabaseId = readFirestoreDatabaseId(
-  process.env.OPENLINEAR_FIRESTORE_DATABASE_ID,
+  process.env.BASICLINEAR_FIRESTORE_DATABASE_ID,
 );
-const hostedEnvironment = readHostedEnvironment(process.env.OPENLINEAR_HOSTED_ENVIRONMENT);
+const hostedEnvironment = readHostedEnvironment(process.env.BASICLINEAR_HOSTED_ENVIRONMENT);
 const configuredGoogleCloudProjectId = readGoogleCloudProjectId(
   process.env.GOOGLE_CLOUD_PROJECT ?? process.env.GCLOUD_PROJECT,
 );
-const paymentMode = readHostedPaymentMode(process.env.OPENLINEAR_PAYMENT_MODE);
+const paymentMode = readHostedPaymentMode(process.env.BASICLINEAR_PAYMENT_MODE);
 const verificationAccessEmails = readVerificationAccessEmails(
-  process.env.OPENLINEAR_VERIFICATION_ACCESS_EMAILS,
+  process.env.BASICLINEAR_VERIFICATION_ACCESS_EMAILS,
 );
 const verificationAccessEmailSet = new Set(verificationAccessEmails);
 const stripeSecret = paymentMode === 'stripe'
-  ? readStripeSecret(process.env.OPENLINEAR_STRIPE_SECRET)
+  ? readStripeSecret(process.env.BASICLINEAR_STRIPE_SECRET)
   : null;
-const creemApiKey = paymentMode === 'creem' ? readCreemApiKey(process.env.OPENLINEAR_CREEM_API_KEY) : null;
+const creemApiKey = paymentMode === 'creem' ? readCreemApiKey(process.env.BASICLINEAR_CREEM_API_KEY) : null;
 assertHostedDeploymentBinding({
   deploymentEnvironment,
   hostedEnvironment,
@@ -127,7 +127,7 @@ if (
   && existingFirebaseApp.options.projectId !== undefined
   && existingFirebaseApp.options.projectId !== firebaseProjectId
 ) {
-  throw new Error('The initialized Firebase app does not match OPENLINEAR_FIREBASE_PROJECT_ID.');
+  throw new Error('The initialized Firebase app does not match BASICLINEAR_FIREBASE_PROJECT_ID.');
 }
 const firebaseApp = existingFirebaseApp ?? initializeApp({projectId: firebaseProjectId});
 
@@ -144,52 +144,52 @@ const workspaceAuthorizationService = new WorkspaceAuthorizationService(
   new FirestoreWorkspaceMembershipReader(firestore),
   new FirestoreWorkspaceAuthorizationEvidenceWriter(firestore),
 );
-const allowedOrigins = readAllowedOrigins(process.env.OPENLINEAR_HOSTED_ORIGINS);
-const publicOrigin = readHostedPublicOrigin(process.env.OPENLINEAR_HOSTED_PUBLIC_ORIGIN);
+const allowedOrigins = readAllowedOrigins(process.env.BASICLINEAR_HOSTED_ORIGINS);
+const publicOrigin = readHostedPublicOrigin(process.env.BASICLINEAR_HOSTED_PUBLIC_ORIGIN);
 if (!allowedOrigins.includes(publicOrigin)) {
-  throw new Error('OPENLINEAR_HOSTED_PUBLIC_ORIGIN must appear in OPENLINEAR_HOSTED_ORIGINS.');
+  throw new Error('BASICLINEAR_HOSTED_PUBLIC_ORIGIN must appear in BASICLINEAR_HOSTED_ORIGINS.');
 }
 const monthlyPriceId = paymentMode === 'stripe'
   ? readStripePriceId(
-    process.env.OPENLINEAR_STRIPE_MONTHLY_PRICE_ID,
-    'OPENLINEAR_STRIPE_MONTHLY_PRICE_ID',
+    process.env.BASICLINEAR_STRIPE_MONTHLY_PRICE_ID,
+    'BASICLINEAR_STRIPE_MONTHLY_PRICE_ID',
   )
   : paymentMode === 'creem'
-    ? readCreemProductId(process.env.OPENLINEAR_CREEM_MONTHLY_PRODUCT_ID, 'OPENLINEAR_CREEM_MONTHLY_PRODUCT_ID')
+    ? readCreemProductId(process.env.BASICLINEAR_CREEM_MONTHLY_PRODUCT_ID, 'BASICLINEAR_CREEM_MONTHLY_PRODUCT_ID')
     : 'price_verification_monthly_v1';
 const annualPriceId = paymentMode === 'stripe'
   ? readStripePriceId(
-    process.env.OPENLINEAR_STRIPE_ANNUAL_PRICE_ID,
-    'OPENLINEAR_STRIPE_ANNUAL_PRICE_ID',
+    process.env.BASICLINEAR_STRIPE_ANNUAL_PRICE_ID,
+    'BASICLINEAR_STRIPE_ANNUAL_PRICE_ID',
   )
   : paymentMode === 'creem'
-    ? readCreemProductId(process.env.OPENLINEAR_CREEM_ANNUAL_PRODUCT_ID, 'OPENLINEAR_CREEM_ANNUAL_PRODUCT_ID')
+    ? readCreemProductId(process.env.BASICLINEAR_CREEM_ANNUAL_PRODUCT_ID, 'BASICLINEAR_CREEM_ANNUAL_PRODUCT_ID')
     : 'price_verification_annual_v1';
-const billingSecret = readBillingSecret(process.env.OPENLINEAR_BILLING_SECRET);
-const invitationSecret = readInvitationSecret(process.env.OPENLINEAR_INVITATION_SECRET);
-const collaborationSecret = readCollaborationSecret(process.env.OPENLINEAR_COLLABORATION_SECRET);
-const personalTokenSecret = readPersonalTokenSecret(process.env.OPENLINEAR_PERSONAL_TOKEN_SECRET);
-const projectManagementSecret = readProjectManagementSecret(process.env.OPENLINEAR_PM_SECRET);
-const restCursorSecret = readRestCursorSecret(process.env.OPENLINEAR_REST_CURSOR_SECRET);
-const mcpOAuthSecret = readMcpOAuthSecret(process.env.OPENLINEAR_MCP_OAUTH_SECRET);
-const operationsSecret = readOperationsSecret(process.env.OPENLINEAR_OPERATIONS_SECRET);
+const billingSecret = readBillingSecret(process.env.BASICLINEAR_BILLING_SECRET);
+const invitationSecret = readInvitationSecret(process.env.BASICLINEAR_INVITATION_SECRET);
+const collaborationSecret = readCollaborationSecret(process.env.BASICLINEAR_COLLABORATION_SECRET);
+const personalTokenSecret = readPersonalTokenSecret(process.env.BASICLINEAR_PERSONAL_TOKEN_SECRET);
+const projectManagementSecret = readProjectManagementSecret(process.env.BASICLINEAR_PM_SECRET);
+const restCursorSecret = readRestCursorSecret(process.env.BASICLINEAR_REST_CURSOR_SECRET);
+const mcpOAuthSecret = readMcpOAuthSecret(process.env.BASICLINEAR_MCP_OAUTH_SECRET);
+const operationsSecret = readOperationsSecret(process.env.BASICLINEAR_OPERATIONS_SECRET);
 const googleCloudProjectId = requireHostedTelemetryProject(
   hostedEnvironment,
   configuredGoogleCloudProjectId,
 );
 const budgetPushAudience = readBudgetPushAudience(
-  process.env.OPENLINEAR_BUDGET_PUSH_AUDIENCE,
+  process.env.BASICLINEAR_BUDGET_PUSH_AUDIENCE,
 );
 assertBudgetPushAudienceOrigin(budgetPushAudience, publicOrigin);
 assertDistinctHostedSecrets({
-  OPENLINEAR_BILLING_SECRET: billingSecret,
-  OPENLINEAR_INVITATION_SECRET: invitationSecret,
-  OPENLINEAR_COLLABORATION_SECRET: collaborationSecret,
-  OPENLINEAR_PERSONAL_TOKEN_SECRET: personalTokenSecret,
-  OPENLINEAR_PM_SECRET: projectManagementSecret,
-  OPENLINEAR_REST_CURSOR_SECRET: restCursorSecret,
-  OPENLINEAR_MCP_OAUTH_SECRET: mcpOAuthSecret,
-  OPENLINEAR_OPERATIONS_SECRET: operationsSecret,
+  BASICLINEAR_BILLING_SECRET: billingSecret,
+  BASICLINEAR_INVITATION_SECRET: invitationSecret,
+  BASICLINEAR_COLLABORATION_SECRET: collaborationSecret,
+  BASICLINEAR_PERSONAL_TOKEN_SECRET: personalTokenSecret,
+  BASICLINEAR_PM_SECRET: projectManagementSecret,
+  BASICLINEAR_REST_CURSOR_SECRET: restCursorSecret,
+  BASICLINEAR_MCP_OAUTH_SECRET: mcpOAuthSecret,
+  BASICLINEAR_OPERATIONS_SECRET: operationsSecret,
 });
 const operationsService = new HostedOperationsService(
   new FirestoreHostedOperationsRepository(firestore),
@@ -202,13 +202,13 @@ const operationsControl = new HostedOperationsControl({
 const budgetNoticeVerifier = new GoogleBudgetNoticeVerifier({
   audience: budgetPushAudience,
   serviceAccountEmail: readBudgetPushServiceAccount(
-    process.env.OPENLINEAR_BUDGET_PUSH_SERVICE_ACCOUNT,
+    process.env.BASICLINEAR_BUDGET_PUSH_SERVICE_ACCOUNT,
   ),
 });
 const billingProvider = paymentMode === 'stripe'
   ? new StripeBillingProvider({
     secretKey: stripeSecret as string,
-    webhookSecret: readStripeWebhookSecret(process.env.OPENLINEAR_STRIPE_WEBHOOK_SECRET),
+    webhookSecret: readStripeWebhookSecret(process.env.BASICLINEAR_STRIPE_WEBHOOK_SECRET),
     monthlyPriceId,
     annualPriceId,
     publicOrigin,
@@ -217,7 +217,7 @@ const billingProvider = paymentMode === 'stripe'
     ? new CreemBillingProvider({
       checkoutAttemptStore: new FirestoreCreemCheckoutAttemptStore(getFirestore(firebaseApp, firestoreDatabaseId)),
       apiKey: creemApiKey as string,
-      webhookSecret: readCreemWebhookSecret(process.env.OPENLINEAR_CREEM_WEBHOOK_SECRET),
+      webhookSecret: readCreemWebhookSecret(process.env.BASICLINEAR_CREEM_WEBHOOK_SECRET),
       mode: deploymentEnvironment === 'production' ? 'live' : 'test',
       monthlyProductId: monthlyPriceId, annualProductId: annualPriceId, publicOrigin,
     })
@@ -349,13 +349,13 @@ installHostedClientErrorHandler(server);
 
 const port = readHostedPort(process.env.PORT);
 server.listen(port, '0.0.0.0', () => {
-  console.info(`OpenLinear hosted service listening on port ${port}.`);
+  console.info(`BasicLinear hosted service listening on port ${port}.`);
 });
 
 const close = (): void => {
   server.close((error) => {
     if (error !== undefined) {
-      console.error('OpenLinear hosted service shutdown failed.');
+      console.error('BasicLinear hosted service shutdown failed.');
       process.exitCode = 1;
     }
   });

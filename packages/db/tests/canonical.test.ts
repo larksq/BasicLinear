@@ -4,7 +4,7 @@ import type {
   DatabaseBackupV1,
   MigrationDescriptorV1,
   WorkspaceExportV1,
-} from '@openlinear/contracts';
+} from '@basiclinear/contracts';
 import { describe, expect, it } from 'vitest';
 import {
   buildDatabaseBackupDigests,
@@ -109,7 +109,7 @@ function collections(): CanonicalWorkspaceCollectionsV1 {
 function workspaceExport(): WorkspaceExportV1 {
   const data = collections();
   return {
-    format: 'openlinear.workspace-export',
+    format: 'basiclinear.workspace-export',
     version: 1,
     generatedAt: timestamp,
     source: { productVersion: '0.1.0', buildId: 'test', migrations },
@@ -213,7 +213,7 @@ describe('P-T14 canonical transfer contract', () => {
       updatedAt: timestamp,
     }];
     const backup: DatabaseBackupV1 = {
-      format: 'openlinear.database-backup',
+      format: 'basiclinear.database-backup',
       version: 1,
       generatedAt: timestamp,
       source: {

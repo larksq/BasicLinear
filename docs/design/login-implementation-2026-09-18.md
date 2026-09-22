@@ -1,4 +1,4 @@
-# Dedicated OpenLinear app login
+# Dedicated BasicLinear app login
 
 ## Content and design
 

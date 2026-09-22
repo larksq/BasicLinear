@@ -44,8 +44,8 @@ CT-10 owns canonical export/import and operator recovery semantics. It does not 
 
 ## Implemented outputs
 
-- `openlinear.workspace-export` version 1 serializes one authorized workspace with explicit field allowlists, deterministic collection order, per-collection SHA-256 digests, and a complete canonical digest.
-- `openlinear.database-backup` version 1 preserves local credential hashes and every workspace while excluding sessions, idempotency state, outbox delivery state, and derived projections.
+- `basiclinear.workspace-export` version 1 serializes one authorized workspace with explicit field allowlists, deterministic collection order, per-collection SHA-256 digests, and a complete canonical digest.
+- `basiclinear.database-backup` version 1 preserves local credential hashes and every workspace while excluding sessions, idempotency state, outbox delivery state, and derived projections.
 - Import and restore validate structure, migration compatibility, identifiers, references, and every digest before mutation, then perform serializable writes and in-transaction digest readback before commit.
 - The non-interactive operator provides `doctor`, `health`, `migrate plan`, `migrate apply`, `user recover`, `export`, `import`, `seed`, `backup`, `backup verify`, and `restore` with structured secret-safe output.
 - Populated migration plans require a verified current backup; clean targets skip the unnecessary backup gate. Output files use atomic replacement and owner-only mode `0600`.

@@ -42,8 +42,8 @@ import type {
   UpdateIssueRequest,
   WorkflowStatus,
   Workspace,
-} from '@openlinear/contracts';
-import { hasCapability } from '@openlinear/domain';
+} from '@basiclinear/contracts';
+import { hasCapability } from '@basiclinear/domain';
 import {
   AlertCircle,
   Archive,
@@ -2904,16 +2904,16 @@ function IssueDetail({
     return () => window.removeEventListener('keydown', close);
   }, [onBack]);
   useEffect(() => {
-    if (issue.data === undefined || performance.getEntriesByName('openlinear-issue-navigation-start', 'mark').length === 0) return;
-    performance.mark('openlinear-issue-navigation-end');
+    if (issue.data === undefined || performance.getEntriesByName('basiclinear-issue-navigation-start', 'mark').length === 0) return;
+    performance.mark('basiclinear-issue-navigation-end');
     const navigation = performance.measure(
-      'openlinear-issue-navigation',
-      'openlinear-issue-navigation-start',
-      'openlinear-issue-navigation-end',
+      'basiclinear-issue-navigation',
+      'basiclinear-issue-navigation-start',
+      'basiclinear-issue-navigation-end',
     );
     document.documentElement.dataset.issueNavigationMs = navigation.duration.toFixed(2);
-    performance.clearMarks('openlinear-issue-navigation-start');
-    performance.clearMarks('openlinear-issue-navigation-end');
+    performance.clearMarks('basiclinear-issue-navigation-start');
+    performance.clearMarks('basiclinear-issue-navigation-end');
   }, [issue.data]);
 
   if (issue.isLoading) return <LoadingSkeleton variant="detail" panel={panel} label="Loading issue details" />;
@@ -3852,8 +3852,8 @@ export function IssuesView({
       selectedIssueId,
       id,
     );
-    performance.clearMarks('openlinear-issue-navigation-start');
-    performance.mark('openlinear-issue-navigation-start');
+    performance.clearMarks('basiclinear-issue-navigation-start');
+    performance.mark('basiclinear-issue-navigation-start');
     setSelectedIssueId(id);
     setDetailMode(nextDetailMode);
     if (!embedded && invalidUrlFilter === null) {

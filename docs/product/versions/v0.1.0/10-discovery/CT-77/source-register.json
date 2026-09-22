@@ -89,7 +89,7 @@
         "Sixty-seven percent reported that their software-development lifecycle was mostly or completely automated."
       ],
       "limitations": [
-        "The survey is vendor-sponsored and promotes an integrated platform category.",
+        "The survey is vendor-maintainered and promotes an integrated platform category.",
         "Toolchain consolidation is not direct evidence for any single issue-tracker feature."
       ],
       "conflict_of_interest": "GitLab directly benefits from platform-consolidation conclusions; this source is never used alone for a priority score."
@@ -113,7 +113,7 @@
         "The reported high-performing-team cohort was 1.6 times more likely to plan and track work consistently."
       ],
       "limitations": [
-        "The survey is vendor-sponsored and team-oriented, while v0.1 exposes one owner.",
+        "The survey is vendor-maintainered and team-oriented, while v0.1 exposes one owner.",
         "The public page does not publish enough detail to independently reproduce every cohort calculation.",
         "Team-collaboration findings support information architecture, not multi-user scope for v0.1."
       ],

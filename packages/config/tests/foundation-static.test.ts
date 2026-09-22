@@ -43,7 +43,7 @@ describe('P-T03 locked foundation', () => {
       text('packages/db/src/sqlite/paths.ts'),
     ]);
     expect(pkg).toContain('"start": "node apps/api/dist/index.js"');
-    expect(pkg).not.toContain('"start": "npm run start -w @openlinear/api"');
+    expect(pkg).not.toContain('"start": "npm run start -w @basiclinear/api"');
     expect(pkg).toContain('"build": "node scripts/clean-build-output.mjs');
     expect(pkg).not.toContain('compose:');
     expect(config).toContain("host !== '127.0.0.1' && host !== '::1'");
@@ -51,7 +51,7 @@ describe('P-T03 locked foundation', () => {
     expect(entry).toContain('buildApp({ config, serveWeb: true })');
     expect(entry).toContain('app.listen({ host: config.host, port: config.port })');
     expect(database).toContain("from 'node:sqlite'");
-    expect(paths).toContain("databasePath: join(dataDirectory, 'openlinear.sqlite3')");
+    expect(paths).toContain("databasePath: join(dataDirectory, 'basiclinear.sqlite3')");
   });
 
   it('uses a single exact npm lock without ranged external versions', async () => {
@@ -66,7 +66,7 @@ describe('P-T03 locked foundation', () => {
         ...pkg.dependencies,
         ...pkg.devDependencies,
       })) {
-        if (name.startsWith('@openlinear/')) expect(version).toBe('*');
+        if (name.startsWith('@basiclinear/')) expect(version).toBe('*');
         else expect(version).not.toMatch(/^[~^><=*]/);
       }
     }
@@ -83,13 +83,13 @@ describe('P-T03 locked foundation', () => {
     const environment = await text('.env.example');
     expect(environment).toContain('needs no environment file');
     const [localEnvironment = '', hostedEnvironment = ''] = environment.split(
-      '# OpenLinear Online public Firebase web configuration.',
+      '# BasicLinear Online public Firebase web configuration.',
     );
     expect(localEnvironment).not.toMatch(/TOKEN|PASSWORD|DATABASE_URL|OIDC/);
-    expect(hostedEnvironment).toContain('OPENLINEAR_PERSONAL_TOKEN_SECRET=');
-    expect(hostedEnvironment).toContain('OPENLINEAR_REST_CURSOR_SECRET=');
+    expect(hostedEnvironment).toContain('BASICLINEAR_PERSONAL_TOKEN_SECRET=');
+    expect(hostedEnvironment).toContain('BASICLINEAR_REST_CURSOR_SECRET=');
     for (const line of hostedEnvironment.split('\n')) {
-      if (/^(?:OPENLINEAR_.+_SECRET|VITE_FIREBASE_API_KEY)=/u.test(line)) {
+      if (/^(?:BASICLINEAR_.+_SECRET|VITE_FIREBASE_API_KEY)=/u.test(line)) {
         expect(line.endsWith('=')).toBe(true);
       }
     }

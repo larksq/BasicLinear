@@ -141,15 +141,15 @@ function clearSessionIdempotencyKey(storageKey: string): void {
 }
 
 function bootstrapIdempotencyKey(uid: string): string {
-  return sessionIdempotencyKey(`openlinear.hosted.bootstrap.${uid}`);
+  return sessionIdempotencyKey(`basiclinear.hosted.bootstrap.${uid}`);
 }
 
 function invitationAcceptanceStorageKey(invitationId: string, uid: string): string {
-  return `openlinear.hosted.invitation.accept.${encodeURIComponent(invitationId)}.${encodeURIComponent(uid)}`;
+  return `basiclinear.hosted.invitation.accept.${encodeURIComponent(invitationId)}.${encodeURIComponent(uid)}`;
 }
 
 function activeWorkspaceStorageKey(uid: string): string {
-  return `openlinear.hosted.active-workspace.${encodeURIComponent(uid)}`;
+  return `basiclinear.hosted.active-workspace.${encodeURIComponent(uid)}`;
 }
 
 function invitationTokenFromLocation(): string | null {
@@ -270,7 +270,7 @@ function InvitationManager({
     const nextLinks: Array<{email: string; url: string}> = [];
     try {
       for (const email of requestedEmails) {
-        const storageKey = `openlinear.hosted.invitation.create.${encodeURIComponent(email)}`;
+        const storageKey = `basiclinear.hosted.invitation.create.${encodeURIComponent(email)}`;
         const result = await createHostedInvitation(
           idToken,
           workspaceId,
@@ -303,7 +303,7 @@ function InvitationManager({
     )) return;
     setPending(true);
     setShareLinks([]);
-    const storageKey = `openlinear.hosted.invitation.${action}.${invitation.id}`;
+    const storageKey = `basiclinear.hosted.invitation.${action}.${invitation.id}`;
     try {
       const result = action === 'resend'
         ? await resendHostedInvitation(
@@ -509,8 +509,8 @@ export function WorkspaceBoard({
         setStatus(safeErrorMessage(error));
       });
     };
-    window.addEventListener('openlinear:members-changed', refreshMembers);
-    return () => { window.removeEventListener('openlinear:members-changed', refreshMembers); };
+    window.addEventListener('basiclinear:members-changed', refreshMembers);
+    return () => { window.removeEventListener('basiclinear:members-changed', refreshMembers); };
   }, [idToken, workspaceId]);
 
   useEffect(() => {
@@ -529,7 +529,7 @@ export function WorkspaceBoard({
 
   const createIssue = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const storageKey = `openlinear.hosted.issue.create.${workspaceId}`;
+    const storageKey = `basiclinear.hosted.issue.create.${workspaceId}`;
     setPending(true);
     try {
       const issue = await createHostedIssue(
@@ -562,7 +562,7 @@ export function WorkspaceBoard({
       setStatus('No task changes to save.');
       return;
     }
-    const storageKey = `openlinear.hosted.issue.update.${selectedIssue.id}`;
+    const storageKey = `basiclinear.hosted.issue.update.${selectedIssue.id}`;
     setPending(true);
     try {
       const updated = await updateHostedIssue(
@@ -592,7 +592,7 @@ export function WorkspaceBoard({
 
   const assign = async (event: React.ChangeEvent<HTMLSelectElement>) => {
     if (selectedIssue === null) return;
-    const storageKey = `openlinear.hosted.issue.assign.${selectedIssue.id}`;
+    const storageKey = `basiclinear.hosted.issue.assign.${selectedIssue.id}`;
     clearSessionIdempotencyKey(storageKey);
     setPending(true);
     try {
@@ -615,7 +615,7 @@ export function WorkspaceBoard({
   const createComment = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (selectedIssue === null) return;
-    const storageKey = `openlinear.hosted.comment.create.${selectedIssue.id}`;
+    const storageKey = `basiclinear.hosted.comment.create.${selectedIssue.id}`;
     setPending(true);
     try {
       await createHostedComment(
@@ -635,7 +635,7 @@ export function WorkspaceBoard({
 
   const saveComment = async (comment: HostedComment) => {
     if (selectedIssue === null) return;
-    const storageKey = `openlinear.hosted.comment.edit.${comment.id}`;
+    const storageKey = `basiclinear.hosted.comment.edit.${comment.id}`;
     setPending(true);
     try {
       await editHostedComment(
@@ -656,7 +656,7 @@ export function WorkspaceBoard({
 
   const removeComment = async (comment: HostedComment) => {
     if (selectedIssue === null || !window.confirm('Delete this comment? A content-free history tombstone will remain.')) return;
-    const storageKey = `openlinear.hosted.comment.delete.${comment.id}`;
+    const storageKey = `basiclinear.hosted.comment.delete.${comment.id}`;
     setPending(true);
     try {
       await deleteHostedComment(
@@ -695,7 +695,7 @@ export function WorkspaceBoard({
           <input id="hosted-new-task" required maxLength={200} value={newTitle} disabled={pending}
             placeholder="A concrete product-management task"
             onChange={(event) => {
-              clearSessionIdempotencyKey(`openlinear.hosted.issue.create.${workspaceId}`);
+              clearSessionIdempotencyKey(`basiclinear.hosted.issue.create.${workspaceId}`);
               setNewTitle(event.currentTarget.value);
             }} />
           <button className="hosted-button primary" type="submit" disabled={pending}>Create task</button>
@@ -740,7 +740,7 @@ export function WorkspaceBoard({
                 </label>
               ) : <p className="hosted-assignee-note">Assignee: {memberLabel(selectedIssue.assigneeUserId)}</p>}
               <form key={`${selectedIssue.id}:${selectedIssue.revision}`} className="hosted-task-edit"
-                onSubmit={(event) => { void editIssue(event); }} onChange={() => clearSessionIdempotencyKey(`openlinear.hosted.issue.update.${selectedIssue.id}`)}>
+                onSubmit={(event) => { void editIssue(event); }} onChange={() => clearSessionIdempotencyKey(`basiclinear.hosted.issue.update.${selectedIssue.id}`)}>
                 <label>Title<input name="title" required maxLength={200} defaultValue={selectedIssue.title} disabled={!canEditSelected || pending} /></label>
                 <div>
                   <label>Status<select name="status" defaultValue={selectedIssue.status} disabled={!canEditSelected || pending}>
@@ -767,7 +767,7 @@ export function WorkspaceBoard({
                             </label>
                             <textarea id={`hosted-comment-edit-${comment.id}`} autoFocus maxLength={4000}
                               value={editingBody} disabled={pending} onChange={(event) => {
-                              clearSessionIdempotencyKey(`openlinear.hosted.comment.edit.${comment.id}`);
+                              clearSessionIdempotencyKey(`basiclinear.hosted.comment.edit.${comment.id}`);
                               setEditingBody(event.currentTarget.value);
                             }} />
                             <div><button className="hosted-button secondary" type="button" disabled={pending} onClick={() => { void saveComment(comment); }}>Save</button>
@@ -800,7 +800,7 @@ export function WorkspaceBoard({
                   <label htmlFor="hosted-new-comment">Add comment</label>
                   <textarea id="hosted-new-comment" required maxLength={4000} value={commentDraft} disabled={pending}
                     onChange={(event) => {
-                      clearSessionIdempotencyKey(`openlinear.hosted.comment.create.${selectedIssue.id}`);
+                      clearSessionIdempotencyKey(`basiclinear.hosted.comment.create.${selectedIssue.id}`);
                       setCommentDraft(event.currentTarget.value);
                     }} />
                   <button className="hosted-button primary" type="submit" disabled={pending}>Comment</button>
@@ -887,7 +887,7 @@ function AutomationPanel({idToken, workspaceId}: {idToken: string; workspaceId: 
 
   const create = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const storageKey = `openlinear.hosted.personal-token.create.${workspaceId}`;
+    const storageKey = `basiclinear.hosted.personal-token.create.${workspaceId}`;
     setPending(true);
     setRawToken(null);
     try {
@@ -901,7 +901,7 @@ function AutomationPanel({idToken, workspaceId}: {idToken: string; workspaceId: 
       setRawToken(result.rawToken);
       setStatus(result.rawToken === null
         ? 'The retry was accepted, but the secret was already shown. Create another token if you did not save it.'
-        : 'Token created. Copy or download it now; OpenLinear will not show the secret again.');
+        : 'Token created. Copy or download it now; BasicLinear will not show the secret again.');
       await load();
     } catch (error) {
       setStatus(safeErrorMessage(error));
@@ -912,7 +912,7 @@ function AutomationPanel({idToken, workspaceId}: {idToken: string; workspaceId: 
 
   const revoke = async (token: HostedPersonalToken) => {
     if (!window.confirm(`Revoke ${token.name}? API calls using ${token.prefix} will stop immediately.`)) return;
-    const storageKey = `openlinear.hosted.personal-token.revoke.${workspaceId}.${token.id}`;
+    const storageKey = `basiclinear.hosted.personal-token.revoke.${workspaceId}.${token.id}`;
     setPending(true);
     try {
       const result = await revokeHostedPersonalToken(
@@ -937,7 +937,7 @@ function AutomationPanel({idToken, workspaceId}: {idToken: string; workspaceId: 
     try {
       const exported = await getHostedWorkspaceExport(idToken, workspaceId);
       downloadText(
-        `openlinear-${workspaceId}-export-v1.json`,
+        `basiclinear-${workspaceId}-export-v1.json`,
         `${JSON.stringify(exported, null, 2)}\n`,
         exported.mediaType,
       );
@@ -991,7 +991,7 @@ function AutomationPanel({idToken, workspaceId}: {idToken: string; workspaceId: 
           <p>Use <code>Authorization: Bearer …</code> with an explicit workspace route. Mutations also require an idempotency key; updates require the current revision ETag.</p>
           <a className="hosted-button secondary" href="/api/v1/openapi.json" target="_blank" rel="noreferrer">Open OpenAPI 3.1.1</a>
           <h3>MCP 2026-07-28</h3>
-          <p>Connect a compatible remote MCP client to <code>{window.location.origin}/mcp</code>. OpenLinear uses Google sign-in, explicit workspace/scope consent, PKCE, short access tokens, and rotating refresh tokens. REST personal tokens are not accepted by MCP.</p>
+          <p>Connect a compatible remote MCP client to <code>{window.location.origin}/mcp</code>. BasicLinear uses Google sign-in, explicit workspace/scope consent, PKCE, short access tokens, and rotating refresh tokens. REST personal tokens are not accepted by MCP.</p>
           <button className="hosted-button secondary" type="button" disabled={pending}
             onClick={() => { void downloadExport(); }}>Download workspace export</button>
           <p className="hosted-api-warning">Never paste a personal access token into chat, issue text, comments, logs, or source control.</p>
@@ -1009,7 +1009,7 @@ function AutomationPanel({idToken, workspaceId}: {idToken: string; workspaceId: 
             }}>Copy token</button>
             <button className="hosted-button secondary" type="button" onClick={() => {
               try {
-                downloadText('openlinear-personal-token.txt', `${rawToken}\n`, 'text/plain');
+                downloadText('basiclinear-personal-token.txt', `${rawToken}\n`, 'text/plain');
                 setStatus('Token download started. Store it in a secret manager.');
               } catch {
                 setStatus('Download failed. Select the token and save it manually.');
@@ -1098,7 +1098,7 @@ function BillingPanel({idToken, workspaceId}: {idToken: string; workspaceId: str
   }, [idToken, workspaceId]);
 
   const choose = async (plan: HostedBillingPlan) => {
-    const storageKey = `openlinear.hosted.billing.checkout.${workspaceId}.${plan}`;
+    const storageKey = `basiclinear.hosted.billing.checkout.${workspaceId}.${plan}`;
     setPendingPlan(plan);
     setStatus(`Preparing the trusted ${plan} total…`);
     try {
@@ -1124,7 +1124,7 @@ function BillingPanel({idToken, workspaceId}: {idToken: string; workspaceId: str
     if (!window.confirm(
       `Remove ${member.userId} from this workspace? Their access and active seat will end, but workspace data stays preserved.`,
     )) return;
-    const storageKey = `openlinear.hosted.billing.member.remove.${workspaceId}.${member.userId}`;
+    const storageKey = `basiclinear.hosted.billing.member.remove.${workspaceId}.${member.userId}`;
     setPendingMemberUserId(member.userId);
     setStatus('Removing the member and reconciling the trusted active-seat quantity…');
     try {
@@ -1136,7 +1136,7 @@ function BillingPanel({idToken, workspaceId}: {idToken: string; workspaceId: str
       );
       clearSessionIdempotencyKey(storageKey);
       await load();
-      window.dispatchEvent(new CustomEvent('openlinear:members-changed', {detail: workspaceId}));
+      window.dispatchEvent(new CustomEvent('basiclinear:members-changed', {detail: workspaceId}));
       setStatus(result.changed
         ? `Member removed. The workspace now has ${result.activeSeats} active ${result.activeSeats === 1 ? 'seat' : 'seats'}.`
         : 'That member was already removed. Trusted seat totals are current.');
@@ -1594,7 +1594,7 @@ function OAuthWorkspaceSelectionFlow({request}: {request: HostedOAuthWorkspaceSe
             ))}
           </fieldset>
         ) : (
-          <div className="hosted-notice" role="note">This Google account has no active OpenLinear Online workspace. Ask an owner for an invitation, or use another account.</div>
+          <div className="hosted-notice" role="note">This Google account has no active BasicLinear Online workspace. Ask an owner for an invitation, or use another account.</div>
         )
       ) : null}
       <div className="hosted-oauth-actions">
@@ -1709,7 +1709,7 @@ function OAuthConsentFlow({requestId}: {requestId: string}) {
         <ul>{view.scopes.map((scope) => <li key={scope}><code>{scope}</code></li>)}</ul>
       </div>
       <div className="hosted-notice" role="note">
-        OpenLinear will issue an MCP-only, audience-bound access token. The client never receives your Google credential or a REST personal token. Destructive tools still require confirmation in the packaged OpenLinear skill.
+        BasicLinear will issue an MCP-only, audience-bound access token. The client never receives your Google credential or a REST personal token. Destructive tools still require confirmation in the packaged BasicLinear skill.
       </div>
       <div className="hosted-oauth-actions">
         <button className="hosted-button primary" type="button" disabled={busy}
@@ -1738,7 +1738,7 @@ export function HostedApp() {
   return (
     <main className="hosted-shell">
       <header className="hosted-header">
-        <a className="hosted-brand" href="/" aria-label="OpenLinear Online home"><Mark /><strong>OpenLinear</strong><span>{environment.label}</span></a>
+        <a className="hosted-brand" href="/" aria-label="BasicLinear Online home"><Mark /><strong>BasicLinear</strong><span>{environment.label}</span></a>
         <span className="hosted-header-note">Focused product management</span>
       </header>
       {environment.environment === 'development' ? (
@@ -1761,7 +1761,7 @@ export function HostedApp() {
           </section>
         )
         : oauthRequest !== null ? <OAuthConsentFlow requestId={oauthRequest} /> : <OwnerEntry providerStatus={environment.providerStatus} />}
-      <footer className="hosted-footer">OpenLinear Online · {environment.label} · Firebase-hosted workspace</footer>
+      <footer className="hosted-footer">BasicLinear Online · {environment.label} · Firebase-hosted workspace</footer>
     </main>
   );
 }

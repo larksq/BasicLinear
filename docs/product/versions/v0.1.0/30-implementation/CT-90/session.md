@@ -7,7 +7,7 @@
 
 ## Finding
 
-The retained Linear references are dark, while OpenLinear previously followed only the operating-system color-scheme media query. That made current visual comparison nondeterministic and provided no user-controlled way to inspect or retain light and dark appearances.
+The retained Linear references are dark, while BasicLinear previously followed only the operating-system color-scheme media query. That made current visual comparison nondeterministic and provided no user-controlled way to inspect or retain light and dark appearances.
 
 ## Implementation
 

@@ -1,0 +1,7 @@
+interface:
+  display_name: "BasicLinear Product Management"
+  short_description: "Operate hosted BasicLinear PM work through scoped MCP tools"
+  default_prompt: "Use $basiclinear-product-management to inspect or update the user's hosted BasicLinear product-management workspace safely."
+
+policy:
+  allow_implicit_invocation: true

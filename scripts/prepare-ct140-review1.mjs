@@ -125,7 +125,7 @@ const request = {
     dispatch_state: 'dispatched',
   },
   candidate: {
-    summary: 'Stable 2026-07-28 stateless PM-only MCP, exact OAuth/PKCE/consent and signed token-family lifecycle, shared-service parity, explicit hosted consent UX, direct-Firestore ledger denial, and validated openlinear-product-management skill; all agent/code-review/repository/PR/token-admin/billing-purchase capabilities remain absent.',
+    summary: 'Stable 2026-07-28 stateless PM-only MCP, exact OAuth/PKCE/consent and signed token-family lifecycle, shared-service parity, explicit hosted consent UX, direct-Firestore ledger denial, and validated basiclinear-product-management skill; all agent/code-review/repository/PR/token-admin/billing-purchase capabilities remain absent.',
     intentionally_unsealed_inputs: {
       files: [
         'this Review 1 request file and the future reviewer-authored review.md/handoff.json',

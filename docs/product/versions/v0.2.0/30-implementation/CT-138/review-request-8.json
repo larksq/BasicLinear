@@ -196,7 +196,7 @@
     "dispatch_state": "dispatched"
   },
   "candidate": {
-    "summary": "Review 7-remediated evidence-complete candidate: @openlinear/config publishes a real shared TypeScript policy, typechecks its executable tests, and is fully sealed; the substantive billing implementation remains independently green.",
+    "summary": "Review 7-remediated evidence-complete candidate: @basiclinear/config publishes a real shared TypeScript policy, typechecks its executable tests, and is fully sealed; the substantive billing implementation remains independently green.",
     "intentionally_unsealed_inputs": {
       "files": [
         "apps/web/index.html, apps/web/src/main.tsx, and the local entry transitive graph",
@@ -383,7 +383,7 @@
     },
     {
       "command": "npm query .workspace --json and inspect each workspace package scripts/source surface",
-      "expected": "exactly 11 workspaces; all 11 declare typecheck; @openlinear/config exports a real typescript.json, its tsconfig includes executable tests, and its package/test/config files are sealed"
+      "expected": "exactly 11 workspaces; all 11 declare typecheck; @basiclinear/config exports a real typescript.json, its tsconfig includes executable tests, and its package/test/config files are sealed"
     },
     {
       "command": "npx vitest run packages/config/tests/foundation-static.test.ts --config vitest.config.ts",
@@ -391,7 +391,7 @@
     },
     {
       "command": "npm run typecheck",
-      "expected": "11 of 11 workspace typecheck scripts pass, including @openlinear/config executable tests"
+      "expected": "11 of 11 workspace typecheck scripts pass, including @basiclinear/config executable tests"
     },
     {
       "command": "npm run build plus independent hosted-asset/graph inspection",
@@ -446,7 +446,7 @@
   },
   "adversarial_requirements": [
     "Verify packages/config/package.json, tsconfig.json, typescript.json, and tests/foundation-static.test.ts are all sealed; resolve the package export; prove the shared JSON parses and exactly matches the root TypeScript policy; then mutate each relation in memory to demonstrate the regression would fail.",
-    "Independently enumerate every workspace and its scripts/source surface; prove exactly 11 total, all 11 declare and pass typecheck, and @openlinear/config has a real exported typescript.json plus a tsconfig that includes its executable Vitest test.",
+    "Independently enumerate every workspace and its scripts/source surface; prove exactly 11 total, all 11 declare and pass typecheck, and @basiclinear/config has a real exported typescript.json plus a tsconfig that includes its executable Vitest test.",
     "Start from the exact primary-persistence outage: one far-future completed provider session, one authenticated prepared Checkout/lock, providerAttempt 1, no session binding, and no billing ledger.",
     "Force active-seat reconciliation after notice preflight, inject failure into final persistence, and prove the repository remains byte-for-byte at the prepared snapshot with zero binding, billing, webhook, or activation.",
     "Retry with both the same verified notice and a different valid notice; prove one completed Checkout, one paid billing revision, one activation, bounded webhook receipts, one provider session/subscription, and no second Checkout attempt.",
@@ -457,7 +457,7 @@
   ],
   "review_questions": [
     "Does the sealed evidence contract exactly match all 11 workspaces and all 11 declared typechecks, including the config workspace executable test?",
-    "Is @openlinear/config export resolution real, typechecked, regression-protected, and completely represented in the 137-file seal?",
+    "Is @basiclinear/config export resolution real, typechecked, regression-protected, and completely represented in the 137-file seal?",
     "Is direct completed-session recovery strictly read-only during notice preflight, including when quantity reconciliation occurs before final persistence?",
     "Can an injected failure in the final notice transaction leave any ready Checkout, session binding, billing ledger, webhook receipt, or activation evidence behind?",
     "Does the successful final transaction repeat every exact workspace, owner, lock, session, customer, subscription, plan, price, quantity, chronology, and provider-state check before atomically persisting binding, completion, billing, webhook, and activation?",
@@ -488,20 +488,20 @@
     "total_workspaces": 11,
     "required_script_count": 11,
     "required_workspaces": [
-      "@openlinear/api",
-      "@openlinear/hosted-service",
-      "@openlinear/web",
-      "@openlinear/config",
-      "@openlinear/contracts",
-      "@openlinear/db",
-      "@openlinear/domain",
-      "@openlinear/hosted",
-      "@openlinear/operator",
-      "@openlinear/test-fixtures",
-      "@openlinear/ui"
+      "@basiclinear/api",
+      "@basiclinear/hosted-service",
+      "@basiclinear/web",
+      "@basiclinear/config",
+      "@basiclinear/contracts",
+      "@basiclinear/db",
+      "@basiclinear/domain",
+      "@basiclinear/hosted",
+      "@basiclinear/operator",
+      "@basiclinear/test-fixtures",
+      "@basiclinear/ui"
     ],
     "config_workspace": {
-      "name": "@openlinear/config",
+      "name": "@basiclinear/config",
       "export": "./typescript.json",
       "export_exists": true,
       "tsconfig": "packages/config/tsconfig.json",
@@ -511,4 +511,3 @@
     "invariant": "Every workspace declares and passes typecheck; the config export, tsconfig, package manifest, and executable test are all sealed."
   }
 }
-

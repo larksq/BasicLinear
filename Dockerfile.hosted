@@ -3,8 +3,8 @@ FROM node:24-bookworm-slim AS build
 WORKDIR /app
 COPY . .
 RUN npm ci
-RUN npm run build -w @openlinear/hosted
-RUN npm run build -w @openlinear/hosted-service
+RUN npm run build -w @basiclinear/hosted
+RUN npm run build -w @basiclinear/hosted-service
 RUN npm prune --omit=dev --omit=optional
 
 FROM node:24-bookworm-slim AS runtime

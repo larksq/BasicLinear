@@ -4,7 +4,7 @@ Status: implementation evidence only. This contract makes the four hosted outcom
 
 ## Versioned records
 
-`@openlinear/hosted` defines `openlinear.hosted-measurement.v1` records for:
+`@basiclinear/hosted` defines `basiclinear.hosted-measurement.v1` records for:
 
 - product events with stable event ID, actor identity, workspace, source (`web`, `rest`, `mcp`, `system`, or `stripe`), occurrence and receipt timestamps, correlation ID, and an event-specific allowlisted payload;
 - mutation audits with actor, source, request, entity/revision, result, and before/after SHA-256 semantics; and

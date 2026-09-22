@@ -120,8 +120,8 @@ function builtHealthRequest() {
   return {
     method: 'GET',
     url: '/health/ready',
-    headers: {host: 'openlinear.test'},
-    rawHeaders: ['Host', 'openlinear.test'],
+    headers: {host: 'basiclinear.test'},
+    rawHeaders: ['Host', 'basiclinear.test'],
     socket: {remoteAddress: '203.0.113.201'},
   };
 }

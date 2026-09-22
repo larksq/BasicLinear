@@ -12,7 +12,7 @@
   "authority": {
     "task_store": "project-local Control Tower v0.8 API",
     "projection": "disabled_not_synced",
-    "reviewer_authorization": "granted_by_sponsor_2026-08-27",
+    "reviewer_authorization": "granted_by_maintainer_2026-08-27",
     "authorization_ref": "current Codex task: CT-143 authorized; review should at least try the production deployed environment with real data flows"
   },
   "review_mode": {
@@ -20,11 +20,11 @@
     "read_only": false,
     "nonsecurity_only": true,
     "production_first": true,
-    "production_url": "https://openlinear-gray.vercel.app",
+    "production_url": "https://basiclinear-gray.vercel.app",
     "production_data_flow": {
       "required_attempt": true,
       "browser": "the user's selected Chrome browser and existing Google session only",
-      "mutation_scope": "one clearly prefixed CT-143 independent-review project-management journey inside the sponsor's own production workspace",
+      "mutation_scope": "one clearly prefixed CT-143 independent-review project-management journey inside the maintainer's own production workspace",
       "allowed_mutations": [
         "create one clearly prefixed project or use the dedicated verification project",
         "create one clearly prefixed parent issue with a description",

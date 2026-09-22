@@ -56,6 +56,6 @@
   },
   "next": {
     "issue": "CT-140",
-    "scope": "current-protocol Streamable HTTP MCP, OAuth authorization bridge, exact PM tool parity, and reusable openlinear-product-management skill"
+    "scope": "current-protocol Streamable HTTP MCP, OAuth authorization bridge, exact PM tool parity, and reusable basiclinear-product-management skill"
   }
 }

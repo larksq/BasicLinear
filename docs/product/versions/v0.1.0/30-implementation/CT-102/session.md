@@ -27,7 +27,7 @@ The accepted responsive contract moves issue property controls into an explicit 
 - Typecheck: all 8 workspaces passed.
 - Production build: 1,949 modules, 105 output files, and 1,893,145 output bytes, without warnings.
 - Release-audit regression: 6 / 6 tests passed.
-- Isolated rebuilt process: `ready` and `live` at `http://127.0.0.1:4283/` from `/tmp/openlinear-ct102-20260822-1251`.
+- Isolated rebuilt process: `ready` and `live` at `http://127.0.0.1:4283/` from `/tmp/basiclinear-ct102-20260822-1251`.
 - All 9 web artifacts, including `issues-8x3N-I_b.js` and `index-BctJbKwJ.css`, returned HTTP 200 and matched the local build byte for byte.
 - Rendered Chrome captures: 0.
 

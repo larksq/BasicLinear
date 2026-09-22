@@ -17,7 +17,7 @@
       {
         "severity": "P2",
         "id": "typecheck_evidence_contract_mismatch",
-        "evidence": "The sealed request required 12 of 12 workspace typechecks, but npm query proves 11 workspaces and the exact root command executes 10 declared typecheck scripts; @openlinear/config is configuration-only and declares none. All 10 runnable scripts passed, but the sealed decision contract could not be satisfied as written."
+        "evidence": "The sealed request required 12 of 12 workspace typechecks, but npm query proves 11 workspaces and the exact root command executes 10 declared typecheck scripts; @basiclinear/config is configuration-only and declares none. All 10 runnable scripts passed, but the sealed decision contract could not be satisfied as written."
       }
     ],
     "substantive_implementation_result": "All billing implementation, atomicity, historical-counterexample, build, dependency, audit, privacy, scope, and manifest checks passed with no active substantive finding.",

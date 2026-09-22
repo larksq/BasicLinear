@@ -1,6 +1,6 @@
 # v0.1.0 Discovery
 
-Discovery frames a clean-room, self-hostable alternative focused on projects, issues, milestones, views, search, and keyboard workflows. It uses sponsor input, repository inspection, official product documentation, official open-source repositories, primary technical documentation, and historical private authenticated UI observations. CT-3 paused further authenticated observation on 2026-08-20 and quarantined the historical evidence from public release pending qualified review. On 2026-08-21 the sponsor selected and applied `AGPL-3.0-only`, while the requested OpenLinear product brand remained blocked by current collision evidence and qualified review.
+Discovery frames a clean-room, self-hostable alternative focused on projects, issues, milestones, views, search, and keyboard workflows. It uses maintainer input, repository inspection, official product documentation, official open-source repositories, primary technical documentation, and historical private authenticated UI observations. CT-3 paused further authenticated observation on 2026-08-20 and quarantined the historical evidence from public release pending qualified review. On 2026-08-21 the maintainer selected and applied `AGPL-3.0-only`, while the requested BasicLinear product brand remained blocked by current collision evidence and qualified review.
 
 ## Outputs
 

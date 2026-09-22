@@ -68,7 +68,7 @@ describe('PersonalTokenService', () => {
     });
     expect((await context.service.listTokens({
       principal: owner, workspaceId, requestId: 'request_pat_list',
-    }))[0]).toMatchObject({lastUsedAt: '2027-01-02T00:01:00.000Z', audience: 'openlinear-api-v1'});
+    }))[0]).toMatchObject({lastUsedAt: '2027-01-02T00:01:00.000Z', audience: 'basiclinear-api-v1'});
     expect(Object.values(context.repository.snapshot())).toContainEqual(expect.objectContaining({
       action: 'token.use', source: 'rest', actor: expect.objectContaining({kind: 'personal_token'}),
       changes: [expect.objectContaining({field: 'lastUsedAt'})],

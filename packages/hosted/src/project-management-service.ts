@@ -36,7 +36,7 @@ export const hostedProjectStatuses = [
 export type HostedProjectStatus = (typeof hostedProjectStatuses)[number];
 
 export const workspaceExportMediaType =
-  'application/vnd.openlinear.workspace-export+json;version=1' as const;
+  'application/vnd.basiclinear.workspace-export+json;version=1' as const;
 
 export interface HostedWorkspace {
   schemaVersion: 1;
@@ -90,7 +90,7 @@ export interface ExportedMembership {
 }
 
 export interface WorkspaceExportData extends WorkspaceExportConfiguration {
-  schemaVersion: 'openlinear.workspace-export.v1';
+  schemaVersion: 'basiclinear.workspace-export.v1';
   workspace: HostedWorkspace;
   memberships: ExportedMembership[];
   invitations: InvitationOwnerView[];
@@ -857,7 +857,7 @@ export class ProjectManagementService {
           || (value.deletedAt !== null && Date.parse(value.deletedAt) > Date.parse(now))
           || !membershipIds.has(value.authorUserId))) throw unavailable();
         const data: WorkspaceExportData = {
-          schemaVersion: 'openlinear.workspace-export.v1',
+          schemaVersion: 'basiclinear.workspace-export.v1',
           workspace,
           memberships,
           invitations,

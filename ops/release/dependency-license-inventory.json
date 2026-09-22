@@ -1,11 +1,11 @@
 {
-  "schema_version": "release-dependency-license-inventory-v1",
-  "issue": "CT-13",
-  "generated_at": "2026-09-21T07:28:52.575Z",
-  "status": "metadata_screen_complete_distribution_audit_pending",
+  "schema_version": "release-dependency-license-inventory-v2",
+  "release": "BasicLinear open-source release",
+  "generated_at": "2026-09-22T02:43:23.851Z",
+  "status": "complete",
   "source": {
     "path": "package-lock.json",
-    "sha256": "126ae476e62d0a439ab0ee9333654eba52541c09bf03b2218fbc5022af5fd093",
+    "sha256": "368142c0e87eb686e62bb60812d004f0f3d4f95b7fcb55c55dc8ae6e64d5120d",
     "method": "Count non-link lockfile records, separating the root, project workspaces, and third-party packages."
   },
   "counts": {
@@ -34,15 +34,12 @@
     "workspace_license_declared_count": 11,
     "workspace_license_undeclared_count": 0,
     "declared_license": "AGPL-3.0-only",
-    "reason": "Existing project license preserved; qualified compatibility review remains separate."
+    "reason": "Package metadata is complete for technical release auditing."
   },
   "missing_third_party_license_metadata": [],
   "findings": [
     "0 third-party package records have missing license metadata.",
-    "Metadata screening does not establish license compatibility or replace review of license and NOTICE files.",
+    "Metadata screening records declared licenses and local notice evidence; it does not make a legal conclusion.",
     "The inventory includes local, hosted, development, and optional dependency records from the same lockfile."
-  ],
-  "historical_input": "docs/product/versions/v0.1.0/10-discovery/CT-3/dependency-license-inventory.json",
-  "owner": "CT-13 release audit with qualified review",
-  "decision_dependency": "DEC-003"
+  ]
 }

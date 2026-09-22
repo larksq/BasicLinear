@@ -666,7 +666,7 @@
       "evidence": {
         "occurrences": 602,
         "patterns": {
-          "OpenLinear": {
+          "BasicLinear": {
             "occurrences": 156,
             "files": [
               "README.md",
@@ -691,7 +691,7 @@
               "packages/db/src/view-repository.ts"
             ]
           },
-          "openlinear": {
+          "basiclinear": {
             "occurrences": 307,
             "files": [
               "README.md",
@@ -785,7 +785,7 @@
               "packages/ui/package.json"
             ]
           },
-          "@openlinear/": {
+          "@basiclinear/": {
             "occurrences": 139,
             "files": [
               "README.md",

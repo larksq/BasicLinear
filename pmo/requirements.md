@@ -64,7 +64,7 @@ Evidence references resolve in the centralized source register. Planning may ref
 
 The repository cannot rely on proprietary source, assets, fonts, or hidden endpoints. Private Linear screenshots remain untracked. Control Tower local v0.8 owns live project work. The application must run locally on commodity hardware with reproducible locked dependencies and no mandatory cloud control plane. v0.1 has no required runtime secrets.
 
-The requested OpenLinear product brand has no public clearance; Scopefold remains the distinct project-identity candidate. The sponsor selected `AGPL-3.0-only`, while qualified compatibility, notices, and clean-room release review remain governed gates. Google/OIDC and remote authentication are deferred. First-release architecture assumes one owner, one automatically provisioned internal workspace/team context, one loopback process, and one SQLite authority. Internal workspace/team IDs remain in metadata and canonical transfer for identifier and migration compatibility; membership and role records are outside the local runtime.
+BasicLinear is the public product identity. The maintainer selected `AGPL-3.0-only`; the technical release audit verifies metadata, notices, provenance, and clean-room publication controls. Google/OIDC and remote authentication are deferred. First-release architecture assumes one owner, one automatically provisioned internal workspace/team context, one loopback process, and one SQLite authority. Internal workspace/team IDs remain in metadata and canonical transfer for identifier and migration compatibility; membership and role records are outside the local runtime.
 
 ## Validation
 
@@ -74,4 +74,4 @@ Independent Testing maps every Must requirement to evidence and records environm
 
 ## Evidence and sources
 
-The [Research and evidence](./research-and-evidence.md) register links requirements to sponsor input, official product and open-source sources, Node/SQLite, Playwright, WCAG 2.2, and CT-77 statistical evidence E-020 through E-023. E-016/E-017 document the superseded PostgreSQL direction; E-024 through E-026 support CT-79 feasibility only. None supplies product acceptance results.
+The [Research and evidence](./research-and-evidence.md) register links requirements to maintainer input, official product and open-source sources, Node/SQLite, Playwright, WCAG 2.2, and CT-77 statistical evidence E-020 through E-023. E-016/E-017 document the superseded PostgreSQL direction; E-024 through E-026 support CT-79 feasibility only. None supplies product acceptance results.

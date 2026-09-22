@@ -2,7 +2,7 @@
   "schema_version": "ct12-recovery-evidence-v1",
   "captured_at": "2026-08-19T23:30:25Z",
   "source_backup": {
-    "format": "openlinear.database-backup",
+    "format": "basiclinear.database-backup",
     "version": 1,
     "canonical_digest": "a1c1ab400bd7508158b4c386cf8acbcf0795253ccdf4892fa8e106eca39ac5a6",
     "workspace_count": 2,

@@ -14,7 +14,7 @@ describe('hosted parser-error response', () => {
     expect(head).toContain('Cache-Control: no-store');
     expect(head).toContain('Content-Type: application/json; charset=utf-8');
     expect(head).toContain('X-Content-Type-Options: nosniff');
-    expect(head).toContain('X-OpenLinear-Request-Id: parser-request-id');
+    expect(head).toContain('X-BasicLinear-Request-Id: parser-request-id');
     expect(JSON.parse(serialized ?? '')).toEqual({
       error: {
         code: 'INVALID_REQUEST',

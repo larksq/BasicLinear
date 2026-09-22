@@ -2,7 +2,7 @@
 
 ## Product decision
 
-Deliver v0.2.0 — Online Collaboration as the first hosted OpenLinear release within the existing S1 through S6 Control Tower lifecycle. Preserve the local product as a separate authority and give small teams a narrow online path: Google sign-in, one hosted workspace, owner/member collaboration, a one-time 30-day Pro trial, and subscriptions at USD $2 per active user monthly or USD $12 per active user yearly.
+Deliver v0.2.0 — Online Collaboration as the first hosted BasicLinear release within the existing S1 through S6 Control Tower lifecycle. Preserve the local product as a separate authority and give small teams a narrow online path: Google sign-in, one hosted workspace, owner/member collaboration, a one-time 30-day Pro trial, and subscriptions at USD $2 per active user monthly or USD $12 per active user yearly.
 
 The hosted service must be operable by humans and external AI clients through the same PM semantics. REST, MCP, and the packaged skill do not introduce an agent runtime. No code-review or repository model is added.
 
@@ -33,4 +33,4 @@ AI agents, agent orchestration, code review, repositories, pull requests, presen
 
 ## Outcomes and release rule
 
-O-201 through O-204 remain unchanged from Discovery. Implementation output cannot satisfy an outcome. Public billing activation requires passing the full security/billing/cost gate, a keep/change/stop pricing memo, and sponsor action for any proposed change to price or trial length. Release may proceed only when the exact requirement/test matrix passes and CT-13 explicitly approves the combined v0.1 local plus v0.2 hosted candidate; Outcome Review waits for mature windows.
+O-201 through O-204 remain unchanged from Discovery. Implementation output cannot satisfy an outcome. Public billing activation requires passing the full security/billing/cost gate, a keep/change/stop pricing memo, and maintainer action for any proposed change to price or trial length. Release may proceed only when the exact requirement/test matrix passes and CT-13 explicitly approves the combined v0.1 local plus v0.2 hosted candidate; Outcome Review waits for mature windows.

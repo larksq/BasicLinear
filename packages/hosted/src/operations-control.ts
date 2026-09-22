@@ -1,7 +1,7 @@
 import { createHash, createHmac } from 'node:crypto';
 
-export const hostedOperationsPolicySchemaVersion = 'openlinear.hosted-operations-policy.v1' as const;
-export const hostedOperationsTelemetrySchemaVersion = 'openlinear.hosted-operations-telemetry.v1' as const;
+export const hostedOperationsPolicySchemaVersion = 'basiclinear.hosted-operations-policy.v1' as const;
+export const hostedOperationsTelemetrySchemaVersion = 'basiclinear.hosted-operations-telemetry.v1' as const;
 
 export type HostedOperationsRouteClass =
   | 'health'
@@ -22,7 +22,7 @@ export interface HostedOperationsLimitProfile {
 
 export interface HostedOperationsPolicy {
   schemaVersion: typeof hostedOperationsPolicySchemaVersion;
-  policyId: 'openlinear-online-initial-guardrails';
+  policyId: 'basiclinear-online-initial-guardrails';
   windowSeconds: 60;
   clockRegressionToleranceSeconds: 5;
   maxTrackedBuckets: 20_000;
@@ -130,7 +130,7 @@ const requiredCollectionGroups = [
 
 export const hostedOperationsPolicyV1: HostedOperationsPolicy = deepFreeze({
   schemaVersion: hostedOperationsPolicySchemaVersion,
-  policyId: 'openlinear-online-initial-guardrails',
+  policyId: 'basiclinear-online-initial-guardrails',
   windowSeconds: 60,
   clockRegressionToleranceSeconds: 5,
   maxTrackedBuckets: 20_000,
@@ -374,7 +374,7 @@ export class HostedOperationsControl {
       try {
         console.error(JSON.stringify({
           severity: 'ERROR',
-          message: 'OpenLinear structured telemetry sink unavailable.',
+          message: 'BasicLinear structured telemetry sink unavailable.',
           component: 'hosted-operations',
           correlationId: event.correlationId,
         }));

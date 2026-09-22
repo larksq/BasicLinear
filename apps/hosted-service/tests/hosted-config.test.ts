@@ -32,9 +32,9 @@ import {
 describe('hosted service configuration', () => {
   it('accepts canonical HTTPS and literal loopback emulator origins', () => {
     expect(readAllowedOrigins(
-      'https://openlinear.web.app, http://127.0.0.1:5000,http://localhost:5000,http://[::1]:5000',
+      'https://basiclinear.web.app, http://127.0.0.1:5000,http://localhost:5000,http://[::1]:5000',
     )).toEqual([
-      'https://openlinear.web.app',
+      'https://basiclinear.web.app',
       'http://127.0.0.1:5000',
       'http://localhost:5000',
       'http://[::1]:5000',
@@ -43,10 +43,10 @@ describe('hosted service configuration', () => {
 
   it('rejects non-loopback HTTP and non-origin URL components', () => {
     for (const value of [
-      'http://openlinear.web.app',
-      'https://openlinear.web.app/path',
-      'https://openlinear.web.app?tenant=one',
-      'https://user:secret@openlinear.web.app',
+      'http://basiclinear.web.app',
+      'https://basiclinear.web.app/path',
+      'https://basiclinear.web.app?tenant=one',
+      'https://user:secret@basiclinear.web.app',
     ]) {
       expect(() => readAllowedOrigins(value)).toThrow(/comma-separated origins/u);
     }
@@ -102,23 +102,23 @@ describe('hosted service configuration', () => {
     expect(readOperationsSecret('r'.repeat(32))).toBe('r'.repeat(32));
     expect(() => readOperationsSecret('short')).toThrow(/OPERATIONS_SECRET/u);
     expect(readBudgetPushAudience(
-      'https://api.openlinear.example/api/v1/hosted/operations/budget-notice',
-    )).toBe('https://api.openlinear.example/api/v1/hosted/operations/budget-notice');
+      'https://api.basiclinear.example/api/v1/hosted/operations/budget-notice',
+    )).toBe('https://api.basiclinear.example/api/v1/hosted/operations/budget-notice');
     expect(readBudgetPushAudience(
       'http://127.0.0.1:8080/api/v1/hosted/operations/budget-notice',
     )).toBe('http://127.0.0.1:8080/api/v1/hosted/operations/budget-notice');
     for (const invalid of [
-      'http://api.openlinear.example/api/v1/hosted/operations/budget-notice',
-      'https://api.openlinear.example/api/v1/hosted/operations/budget-notice?bypass=1',
-      'https://api.openlinear.example/api/v1/hosted/billing/stripe/webhook',
+      'http://api.basiclinear.example/api/v1/hosted/operations/budget-notice',
+      'https://api.basiclinear.example/api/v1/hosted/operations/budget-notice?bypass=1',
+      'https://api.basiclinear.example/api/v1/hosted/billing/stripe/webhook',
     ]) expect(() => readBudgetPushAudience(invalid)).toThrow(/exact budget push URL/u);
     expect(readBudgetPushServiceAccount(
-      'budget-push@openlinear-prod.iam.gserviceaccount.com',
-    )).toBe('budget-push@openlinear-prod.iam.gserviceaccount.com');
+      'budget-push@basiclinear-prod.iam.gserviceaccount.com',
+    )).toBe('budget-push@basiclinear-prod.iam.gserviceaccount.com');
     expect(() => readBudgetPushServiceAccount('owner@example.com')).toThrow(/service-account email/u);
-    expect(readGoogleCloudProjectId('openlinear-prod-1')).toBe('openlinear-prod-1');
+    expect(readGoogleCloudProjectId('basiclinear-prod-1')).toBe('basiclinear-prod-1');
     expect(readGoogleCloudProjectId(undefined)).toBeNull();
-    expect(() => readGoogleCloudProjectId('OpenLinear')).toThrow(/canonical/u);
+    expect(() => readGoogleCloudProjectId('BasicLinear')).toThrow(/canonical/u);
     expect(() => assertBudgetPushAudienceOrigin(
       'https://online.example.com/api/v1/hosted/operations/budget-notice',
       'https://online.example.com',
@@ -126,10 +126,10 @@ describe('hosted service configuration', () => {
     expect(() => assertBudgetPushAudienceOrigin(
       'https://api.example.com/api/v1/hosted/operations/budget-notice',
       'https://online.example.com',
-    )).toThrow(/must use OPENLINEAR_HOSTED_PUBLIC_ORIGIN/u);
+    )).toThrow(/must use BASICLINEAR_HOSTED_PUBLIC_ORIGIN/u);
     expect(requireHostedTelemetryProject('uat', null)).toBeNull();
-    expect(requireHostedTelemetryProject('production', 'openlinear-prod-1'))
-      .toBe('openlinear-prod-1');
+    expect(requireHostedTelemetryProject('production', 'basiclinear-prod-1'))
+      .toBe('basiclinear-prod-1');
     expect(() => requireHostedTelemetryProject('production', null))
       .toThrow(/required for production/u);
   });
@@ -143,7 +143,7 @@ describe('hosted service configuration', () => {
     expect(readFirebaseProjectId('openlinear-dev-larksq', 'DEV_PROJECT'))
       .toBe('openlinear-dev-larksq');
     expect(readFirestoreDatabaseId('(default)')).toBe('(default)');
-    expect(readFirestoreDatabaseId('openlinear-dev')).toBe('openlinear-dev');
+    expect(readFirestoreDatabaseId('basiclinear-dev')).toBe('basiclinear-dev');
     expect(() => readFirestoreDatabaseId('UPPERCASE')).toThrow(/canonical database/u);
 
     expect(() => assertHostedDeploymentBinding({

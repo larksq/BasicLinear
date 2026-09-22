@@ -17,10 +17,10 @@ const firebase = vi.hoisted(() => {
     authStateReady: vi.fn().mockResolvedValue(undefined),
   };
   return {
-    app: {name: 'openlinear-hosted'},
+    app: {name: 'basiclinear-hosted'},
     auth,
     getApps: vi.fn((): Array<{name: string}> => []),
-    initializeApp: vi.fn(() => ({name: 'openlinear-hosted'})),
+    initializeApp: vi.fn(() => ({name: 'basiclinear-hosted'})),
     getAuth: vi.fn(() => auth),
     initializePopupResolver,
     setPersistence: vi.fn().mockResolvedValue(undefined),
@@ -52,8 +52,8 @@ describe('hosted Google authentication preparation', () => {
   beforeEach(() => {
     vi.clearAllMocks();
     vi.stubEnv('VITE_FIREBASE_API_KEY', 'firebase-api-key');
-    vi.stubEnv('VITE_FIREBASE_AUTH_DOMAIN', 'openlinear-dev.example.test');
-    vi.stubEnv('VITE_FIREBASE_PROJECT_ID', 'openlinear-dev-test');
+    vi.stubEnv('VITE_FIREBASE_AUTH_DOMAIN', 'basiclinear-dev.example.test');
+    vi.stubEnv('VITE_FIREBASE_PROJECT_ID', 'basiclinear-dev-test');
     vi.stubEnv('VITE_FIREBASE_APP_ID', 'firebase-app-id');
   });
 

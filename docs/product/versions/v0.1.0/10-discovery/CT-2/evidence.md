@@ -2,11 +2,11 @@
 
 ## Decision
 
-`REFERENCE_BASELINE_MEASURED`. The eight read-only Linear reference tasks have a versioned, anonymized timing and interaction baseline, and all eight behaviorally corresponding OpenLinear tasks now complete under the same Chrome harness. CT-2's measurement output is complete; O-002 itself is not validated.
+`REFERENCE_BASELINE_MEASURED`. The eight read-only Linear reference tasks have a versioned, anonymized timing and interaction baseline, and all eight behaviorally corresponding BasicLinear tasks now complete under the same Chrome harness. CT-2's measurement output is complete; O-002 itself is not validated.
 
 ## Results
 
-| Measure | Linear reference | OpenLinear diagnostic |
+| Measure | Linear reference | BasicLinear diagnostic |
 |---|---:|---:|
 | Measured attempts | 24 | 24 |
 | Attempt errors | 0 | 0 |
@@ -14,11 +14,11 @@
 | Eight-task interactions | 11 | 9 |
 | Median task-level reference-relative overhead | Baseline | -89.1% |
 
-The negative diagnostic overhead is not a human-speed claim. Several reference timings are dominated by the browser-control visible-ready interval, OpenLinear runs locally, T05 is only analogous, and no eligible target user participated. The retained value proves that the task suite is executable and supplies a controlled baseline for later study; it cannot satisfy the O-002 population or observation window.
+The negative diagnostic overhead is not a human-speed claim. Several reference timings are dominated by the browser-control visible-ready interval, BasicLinear runs locally, T05 is only analogous, and no eligible target user participated. The retained value proves that the task suite is executable and supplies a controlled baseline for later study; it cannot satisfy the O-002 population or observation window.
 
 ## Task Completion
 
-All reference tasks completed without mutation. O-T04 initially had no OpenLinear path, producing CT-22. After CT-22, the milestone count opens a visibly filtered project issue list in one interaction; warm-up was 342.7 ms and the three measured attempts were 373.3, 340.6, and 343.4 ms, for a 343.4 ms median.
+All reference tasks completed without mutation. O-T04 initially had no BasicLinear path, producing CT-22. After CT-22, the milestone count opens a visibly filtered project issue list in one interaction; warm-up was 342.7 ms and the three measured attempts were 373.3, 340.6, and 343.4 ms, for a 343.4 ms median.
 
 The complete samples, medians, interactions, hashes, environment, and limitations are in `reference-baseline.json` and `matched-comparison.json`.
 
@@ -28,7 +28,7 @@ Task semantics were cross-checked against Linear's first-party [Search](https://
 
 ## Privacy Review
 
-Repository artifacts contain no private Linear workspace name, project or issue title, identifier, URL, raw DOM, screenshot, cookie, session value, or account credential. The reference JSON contains generic task names and numerical aggregates only. OpenLinear screenshots contain only the synthetic acceptance fixture.
+Repository artifacts contain no private Linear workspace name, project or issue title, identifier, URL, raw DOM, screenshot, cookie, session value, or account credential. The reference JSON contains generic task names and numerical aggregates only. BasicLinear screenshots contain only the synthetic acceptance fixture.
 
 ## Outcome Boundary
 

@@ -14,8 +14,8 @@ import {
   type ReactNode,
 } from 'react';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import type { SearchResult, Session, WorkflowStatus } from '@openlinear/contracts';
-import { hasCapability } from '@openlinear/domain';
+import type { SearchResult, Session, WorkflowStatus } from '@basiclinear/contracts';
+import { hasCapability } from '@basiclinear/domain';
 import {
   AlertCircle,
   ArrowDown,
@@ -198,7 +198,7 @@ function GateFrame({ title, children }: { title: string; children: ReactNode }) 
   return (
     <main className="gate">
       <section className="auth-panel" aria-labelledby="auth-title">
-        <div className="auth-brand"><Mark /><strong>OpenLinear</strong></div>
+        <div className="auth-brand"><Mark /><strong>BasicLinear</strong></div>
         <h1 id="auth-title">{title}</h1>
         {children}
       </section>
@@ -220,7 +220,7 @@ function LocalOwnerGate({ onAuthenticated }: { onAuthenticated: (session: Sessio
   }, []);
 
   return (
-    <GateFrame title="Starting OpenLinear">
+    <GateFrame title="Starting BasicLinear">
       {mutation.isPending || mutation.isIdle ? <LoadingSkeleton variant="gate" label="Preparing local workspace" /> : null}
       <ErrorNotice error={mutation.error} />
       {mutation.isError ? <button className="button primary wide" onClick={() => mutation.mutate()}>
@@ -1865,7 +1865,7 @@ export function App() {
   />;
   if (session.isLoading || serviceHealth.isLoading) return <LoadingScreen />;
   if (serviceHealth.error !== null) return (
-    <GateFrame title="OpenLinear is unavailable">
+    <GateFrame title="BasicLinear is unavailable">
       <QueryErrorState
         compact
         title="Could not reach the local service"
@@ -1879,7 +1879,7 @@ export function App() {
     return <LocalOwnerGate onAuthenticated={authenticated} />;
   }
   if (session.error !== null) return (
-    <GateFrame title="OpenLinear could not start">
+    <GateFrame title="BasicLinear could not start">
       <QueryErrorState
         compact
         title="Could not load the local session"

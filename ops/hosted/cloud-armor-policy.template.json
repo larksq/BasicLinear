@@ -1,7 +1,7 @@
 {
-  "schemaVersion": "openlinear.cloud-armor-rate-policy.v1",
+  "schemaVersion": "basiclinear.cloud-armor-rate-policy.v1",
   "evidenceBoundary": "template_not_applied",
-  "name": "openlinear-hosted-edge",
+  "name": "basiclinear-hosted-edge",
   "type": "CLOUD_ARMOR_EDGE_WITH_SERVERLESS_NEG",
   "previewFirst": true,
   "backend": "openlinear-hosted-api-serverless-neg",

@@ -498,7 +498,7 @@ export function HostedWorkspaceApplication({
 
   const refreshConfiguration = async () => {
     if (role === 'owner') {
-      const storageKey = `openlinear.hosted.configuration.bootstrap.${workspaceId}`;
+      const storageKey = `basiclinear.hosted.configuration.bootstrap.${workspaceId}`;
       await bootstrapHostedWorkspaceConfiguration(
         idToken,
         workspaceId,
@@ -631,8 +631,8 @@ export function HostedWorkspaceApplication({
       if (!(event instanceof CustomEvent) || event.detail !== workspaceId) return;
       void refreshCore().catch((error: unknown) => setNotice(safeMessage(error)));
     };
-    window.addEventListener('openlinear:members-changed', refreshMembers);
-    return () => window.removeEventListener('openlinear:members-changed', refreshMembers);
+    window.addEventListener('basiclinear:members-changed', refreshMembers);
+    return () => window.removeEventListener('basiclinear:members-changed', refreshMembers);
   }, [idToken, workspaceId]);
 
   const sortedIssues = useMemo(() => [...issues].sort((left, right) => (
@@ -703,7 +703,7 @@ export function HostedWorkspaceApplication({
   }, [idToken, issues, workspaceId]);
 
   const changeTeamMembership = async (team: HostedTeam, joining: boolean) => {
-    const storageKey = `openlinear.hosted.team-membership.${joining ? 'join' : 'leave'}.${team.id}`;
+    const storageKey = `basiclinear.hosted.team-membership.${joining ? 'join' : 'leave'}.${team.id}`;
     clearMutationKey(storageKey);
     setPendingTeamId(team.id);
     try {
@@ -726,14 +726,14 @@ export function HostedWorkspaceApplication({
   const removeOrganizationMember = async (member: HostedCollaborationMember) => {
     if (role !== 'owner' || member.role !== 'member') return;
     if (!window.confirm(`Remove ${memberLabel(member.userId)} from ${workspaceName}? They will lose organization access immediately.`)) return;
-    const storageKey = `openlinear.hosted.member.remove.${workspaceId}.${member.userId}`;
+    const storageKey = `basiclinear.hosted.member.remove.${workspaceId}.${member.userId}`;
     clearMutationKey(storageKey);
     setPendingMemberUserId(member.userId);
     try {
       await removeHostedMember(idToken, workspaceId, member.userId, mutationKey(storageKey));
       clearMutationKey(storageKey);
       await Promise.all([refreshCore(), refreshConfiguration()]);
-      window.dispatchEvent(new CustomEvent('openlinear:members-changed', {detail: workspaceId}));
+      window.dispatchEvent(new CustomEvent('basiclinear:members-changed', {detail: workspaceId}));
       setNotice(`${memberLabel(member.userId)} was removed from the organization`);
     } catch (error) {
       setNotice(safeMessage(error));
@@ -809,7 +809,7 @@ export function HostedWorkspaceApplication({
     dueAt?: string | null;
   }) => {
     if (selectedIssue === null) return;
-    const storageKey = `openlinear.hosted.issue.update.${selectedIssue.id}`;
+    const storageKey = `basiclinear.hosted.issue.update.${selectedIssue.id}`;
     clearMutationKey(storageKey);
     setPending(true);
     try {
@@ -836,7 +836,7 @@ export function HostedWorkspaceApplication({
 
   const assignIssue = async (assigneeUserId: string | null) => {
     if (selectedIssue === null) return;
-    const storageKey = `openlinear.hosted.issue.assign.${selectedIssue.id}`;
+    const storageKey = `basiclinear.hosted.issue.assign.${selectedIssue.id}`;
     clearMutationKey(storageKey);
     setPending(true);
     try {
@@ -860,7 +860,7 @@ export function HostedWorkspaceApplication({
   const toggleIssueSubscription = async () => {
     if (selectedIssue === null || observation === null) return;
     const subscribed = !observation.subscribed;
-    const storageKey = `openlinear.hosted.issue.subscription.${selectedIssue.id}.${subscribed ? 'on' : 'off'}`;
+    const storageKey = `basiclinear.hosted.issue.subscription.${selectedIssue.id}.${subscribed ? 'on' : 'off'}`;
     clearMutationKey(storageKey);
     setPending(true);
     try {
@@ -887,7 +887,7 @@ export function HostedWorkspaceApplication({
     if (issue === undefined) return;
     openIssue(issue);
     if (!notification.unread) return;
-    const storageKey = `openlinear.hosted.issue.notifications.read.${notification.issueId}`;
+    const storageKey = `basiclinear.hosted.issue.notifications.read.${notification.issueId}`;
     clearMutationKey(storageKey);
     try {
       const next = await markHostedIssueNotificationsRead(
@@ -918,7 +918,7 @@ export function HostedWorkspaceApplication({
     const projectId = String(data.get('projectId') ?? '') || null;
     const milestoneId = String(data.get('milestoneId') ?? '') || null;
     const dueAt = canonicalDueAt(String(data.get('dueAt') ?? ''));
-    const storageKey = `openlinear.hosted.issue.create.${workspaceId}`;
+    const storageKey = `basiclinear.hosted.issue.create.${workspaceId}`;
     clearMutationKey(storageKey);
     setPending(true);
     try {
@@ -958,7 +958,7 @@ export function HostedWorkspaceApplication({
   const createProject = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const storageKey = `openlinear.hosted.project.create.${workspaceId}`;
+    const storageKey = `basiclinear.hosted.project.create.${workspaceId}`;
     clearMutationKey(storageKey);
     setPending(true);
     try {
@@ -983,7 +983,7 @@ export function HostedWorkspaceApplication({
   const createTeam = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const storageKey = `openlinear.hosted.team.create.${workspaceId}`;
+    const storageKey = `basiclinear.hosted.team.create.${workspaceId}`;
     clearMutationKey(storageKey);
     setPending(true);
     try {
@@ -1012,7 +1012,7 @@ export function HostedWorkspaceApplication({
     event.preventDefault();
     if (editingTeam === null) return;
     const data = new FormData(event.currentTarget);
-    const storageKey = `openlinear.hosted.team.update.${editingTeam.id}`;
+    const storageKey = `basiclinear.hosted.team.update.${editingTeam.id}`;
     clearMutationKey(storageKey);
     setPending(true);
     try {
@@ -1042,7 +1042,7 @@ export function HostedWorkspaceApplication({
     event.preventDefault();
     if (selectedTeam === null) return;
     const data = new FormData(event.currentTarget);
-    const storageKey = `openlinear.hosted.workflow-status.create.${selectedTeam.id}`;
+    const storageKey = `basiclinear.hosted.workflow-status.create.${selectedTeam.id}`;
     clearMutationKey(storageKey);
     setPending(true);
     try {
@@ -1072,7 +1072,7 @@ export function HostedWorkspaceApplication({
     event.preventDefault();
     if (editingStatus === null) return;
     const data = new FormData(event.currentTarget);
-    const storageKey = `openlinear.hosted.workflow-status.update.${editingStatus.id}`;
+    const storageKey = `basiclinear.hosted.workflow-status.update.${editingStatus.id}`;
     clearMutationKey(storageKey);
     setPending(true);
     try {
@@ -1112,8 +1112,8 @@ export function HostedWorkspaceApplication({
     const index = siblings.findIndex((candidate) => candidate.id === status.id);
     const neighbor = siblings[index + direction];
     if (status.isDefault || neighbor === undefined || neighbor.isDefault) return;
-    const statusStorageKey = `openlinear.hosted.workflow-status.reorder.${status.id}`;
-    const neighborStorageKey = `openlinear.hosted.workflow-status.reorder.${neighbor.id}`;
+    const statusStorageKey = `basiclinear.hosted.workflow-status.reorder.${status.id}`;
+    const neighborStorageKey = `basiclinear.hosted.workflow-status.reorder.${neighbor.id}`;
     clearMutationKey(statusStorageKey);
     clearMutationKey(neighborStorageKey);
     setPending(true);
@@ -1139,7 +1139,7 @@ export function HostedWorkspaceApplication({
     const data = new FormData(event.currentTarget);
     const teamId = String(data.get('teamId') ?? selectedTeam?.id ?? '');
     if (!teams.some((team) => team.id === teamId)) return;
-    const storageKey = `openlinear.hosted.saved-view.create.${teamId}`;
+    const storageKey = `basiclinear.hosted.saved-view.create.${teamId}`;
     clearMutationKey(storageKey);
     setPending(true);
     try {
@@ -1176,7 +1176,7 @@ export function HostedWorkspaceApplication({
       setNotice('No project changes to save');
       return;
     }
-    const storageKey = `openlinear.hosted.project.update.${selectedProject.id}`;
+    const storageKey = `basiclinear.hosted.project.update.${selectedProject.id}`;
     clearMutationKey(storageKey);
     setPending(true);
     try {
@@ -1200,7 +1200,7 @@ export function HostedWorkspaceApplication({
     if (selectedProject === null) return;
     const form = event.currentTarget;
     const data = new FormData(form);
-    const storageKey = `openlinear.hosted.milestone.create.${selectedProject.id}`;
+    const storageKey = `basiclinear.hosted.milestone.create.${selectedProject.id}`;
     clearMutationKey(storageKey);
     setPending(true);
     try {
@@ -1221,7 +1221,7 @@ export function HostedWorkspaceApplication({
   };
 
   const updateMilestoneDate = async (milestone: HostedMilestone, targetDate: string | null) => {
-    const storageKey = `openlinear.hosted.milestone.update.${milestone.id}`;
+    const storageKey = `basiclinear.hosted.milestone.update.${milestone.id}`;
     clearMutationKey(storageKey);
     setPending(true);
     try {
@@ -1243,7 +1243,7 @@ export function HostedWorkspaceApplication({
   const addComment = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (selectedIssue === null) return;
-    const storageKey = `openlinear.hosted.comment.create.${selectedIssue.id}`;
+    const storageKey = `basiclinear.hosted.comment.create.${selectedIssue.id}`;
     clearMutationKey(storageKey);
     setPending(true);
     try {
@@ -1269,7 +1269,7 @@ export function HostedWorkspaceApplication({
 
   const saveComment = async (comment: HostedComment) => {
     if (selectedIssue === null) return;
-    const storageKey = `openlinear.hosted.comment.edit.${comment.id}`;
+    const storageKey = `basiclinear.hosted.comment.edit.${comment.id}`;
     clearMutationKey(storageKey);
     setPending(true);
     try {
@@ -1295,7 +1295,7 @@ export function HostedWorkspaceApplication({
 
   const deleteComment = async (comment: HostedComment) => {
     if (selectedIssue === null || !window.confirm('Delete this comment? Its content-free history will remain.')) return;
-    const storageKey = `openlinear.hosted.comment.delete.${comment.id}`;
+    const storageKey = `basiclinear.hosted.comment.delete.${comment.id}`;
     clearMutationKey(storageKey);
     setPending(true);
     try {

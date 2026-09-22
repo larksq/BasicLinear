@@ -64,7 +64,7 @@ describe('hosted entry and Firebase Hosting contract', () => {
     const transformedHtmlEntries: string[] = [];
     const transformedModules: string[] = [];
     const boundaryProbe: Plugin = {
-      name: 'openlinear-hosted-build-boundary-probe',
+      name: 'basiclinear-hosted-build-boundary-probe',
       enforce: 'pre',
       transformIndexHtml(html, context) {
         transformedHtmlEntries.push(context.filename);
@@ -97,7 +97,7 @@ describe('hosted entry and Firebase Hosting contract', () => {
 
     let localMutationApplications = 0;
     const localEntryMutation: Plugin = {
-      name: 'openlinear-local-entry-mutation-probe',
+      name: 'basiclinear-local-entry-mutation-probe',
       enforce: 'pre',
       transformIndexHtml(html, context) {
         if (context.filename.replaceAll('\\', '/').endsWith('/apps/web/index.html')) {
@@ -155,7 +155,7 @@ describe('hosted entry and Firebase Hosting contract', () => {
     const fetcher = vi.fn<typeof fetch>().mockResolvedValue(new Response(JSON.stringify({ data: {
       created: true,
       user: { id: 'uid', email: 'owner@example.com', displayName: null, provider: 'google.com' },
-      workspace: { id: 'ws_1', name: 'OpenLinear workspace', authority: 'firebase-hosted' },
+      workspace: { id: 'ws_1', name: 'BasicLinear workspace', authority: 'firebase-hosted' },
       membership: { id: 'mem_1', role: 'owner', status: 'active' },
       trial: {
         id: 'trial_1', plan: 'pro', status: 'active',

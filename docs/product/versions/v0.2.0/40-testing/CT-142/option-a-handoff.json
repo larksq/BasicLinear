@@ -13,9 +13,9 @@
     "plan_id": "I-210",
     "acceptance": ["P-T210"]
   },
-  "sponsor_decision": {
+  "maintainer_decision": {
     "selected_option": "A_preserve_full_public_paid_launch_and_require_external_security_review",
-    "decision_ref": "docs/product/versions/v0.2.0/20-planning/ct142-security-skip-sponsor-decision.json",
+    "decision_ref": "docs/product/versions/v0.2.0/20-planning/ct142-security-skip-maintainer-decision.json",
     "options_ref": "docs/product/versions/v0.2.0/20-planning/ct142-security-skip-resolution-options.md",
     "options_sha256": "f40926e2ecc3944422366fd9eb48c215cd8348a5d055babb9549f65376d36e2d"
   },

@@ -1,4 +1,4 @@
-# OpenLinear workspace design QA
+# BasicLinear workspace design QA
 
 ## Open-source UI alignment and AI onboarding — 2026-09-01
 
@@ -12,7 +12,7 @@
 
 The open-source edition now uses the hosted product's shell hierarchy: a fixed 238px navigation rail, 44px breadcrumb/search bar, full-width content surface, Inter typography, compact controls, and bottom-left utility placement. The compared content states intentionally differ—the hosted reference is a populated project detail while the local implementation is an empty Projects list—but the shared frame, alignment, density, tokens, icon family, dividers, and navigation rhythm match. Local-only labels and the SQLite authority boundary remain intentionally distinct.
 
-The bottom-left AI entry is visible without competing with primary navigation. Its native dialog fits inside the desktop viewport, uses existing Lucide icons and OpenLinear tokens, contains real Codex and Claude Code commands, and wraps long commands without horizontal document overflow. No placeholder image, custom SVG, CSS illustration, or fake product asset was introduced.
+The bottom-left AI entry is visible without competing with primary navigation. Its native dialog fits inside the desktop viewport, uses existing Lucide icons and BasicLinear tokens, contains real Codex and Claude Code commands, and wraps long commands without horizontal document overflow. No placeholder image, custom SVG, CSS illustration, or fake product asset was introduced.
 
 ### Interaction, accessibility, and viewport evidence
 
@@ -39,7 +39,7 @@ The bottom-left AI entry is visible without competing with primary navigation. I
 
 ## Visual comparison
 
-The new combined comparison was inspected as one image at equal height after the live Chrome pass. The implementation matches the reference hierarchy and proportions: fixed workspace navigation, compact command bar, centered issue canvas, detailed activity and comment flow, and a persistent right-hand properties rail. It uses the existing OpenLinear mark and Lucide icon assets rather than simulated symbols or drawn placeholders.
+The new combined comparison was inspected as one image at equal height after the live Chrome pass. The implementation matches the reference hierarchy and proportions: fixed workspace navigation, compact command bar, centered issue canvas, detailed activity and comment flow, and a persistent right-hand properties rail. It uses the existing BasicLinear mark and Lucide icon assets rather than simulated symbols or drawn placeholders.
 
 The shell is now the operating product rather than a temporary information page. Workspace-level navigation exposes Projects and Views. Team-level navigation exposes Home, Issues, Cycles, Projects, and Views. The issue page contains description, sub-issues, resources, durable activity, comments, and clickable Status, Priority, Assignee, Project, and Milestone menus.
 
@@ -57,26 +57,26 @@ The shell is now the operating product rather than a temporary information page.
 
 ## CT-144 issue-property rail correction — 2026-08-28
 
-- Source visual truth: authenticated Linear capture at `/private/tmp/openlinear-ct144-properties/04-linear-current.jpg`.
-- Rendered implementation: deployed production capture at `/private/tmp/openlinear-ct144-properties/14-production-clean.jpg`.
+- Source visual truth: authenticated Linear capture at `/private/tmp/basiclinear-ct144-properties/04-linear-current.jpg`.
+- Rendered implementation: deployed production capture at `/private/tmp/basiclinear-ct144-properties/14-production-clean.jpg`.
 - Viewport normalization: both captures are 2461 CSS px wide. The Linear source is 2461 × 1382 and production is 2461 × 1326; both report device pixel ratio 2 while the browser capture is delivered in CSS-pixel dimensions. The focused comparison uses the same absolute 400 × 560 crop at x=1571, y=74.
 - State: dark desktop issue detail with the property rail visible; dynamic issue names and values intentionally differ, while hierarchy, rail geometry, typography, spacing, icons, and interaction treatment are compared.
-- Full-view evidence: `/private/tmp/openlinear-ct144-properties/17-full-comparison-clean.jpg`.
-- Focused final evidence: `/private/tmp/openlinear-ct144-properties/16-rail-comparison-clean.jpg`.
+- Full-view evidence: `/private/tmp/basiclinear-ct144-properties/17-full-comparison-clean.jpg`.
+- Focused final evidence: `/private/tmp/basiclinear-ct144-properties/16-rail-comparison-clean.jpg`.
 
 ### Comparison history
 
-1. The pre-fix OpenLinear rail was 284px wide, pinned to the far-right viewport edge, and rendered every value in a compressed 92px label/value table. Its title began at x=2196 while Linear's 400px rail began at x=1571.
-2. The first correction introduced the measured 1733px issue composition, 400px rail, 851px issue document, value-first 32px rows, 28px pill controls, 13px typography, grouped Project/Team sections, and an avatar-bearing static assignee state. Development evidence: `/private/tmp/openlinear-ct144-properties/03-development-pass1.jpg`.
-3. The final production capture measures the issue title at x=724, width=791 and the property rail at x=1571, width=400, matching the Linear source's x=724.5/width=791 and x=1571.5/width=400 geometry. Its neutral focused crop has no actionable P0/P1/P2 visual difference within OpenLinear's supported property set.
+1. The pre-fix BasicLinear rail was 284px wide, pinned to the far-right viewport edge, and rendered every value in a compressed 92px label/value table. Its title began at x=2196 while Linear's 400px rail began at x=1571.
+2. The first correction introduced the measured 1733px issue composition, 400px rail, 851px issue document, value-first 32px rows, 28px pill controls, 13px typography, grouped Project/Team sections, and an avatar-bearing static assignee state. Development evidence: `/private/tmp/basiclinear-ct144-properties/03-development-pass1.jpg`.
+3. The final production capture measures the issue title at x=724, width=791 and the property rail at x=1571, width=400, matching the Linear source's x=724.5/width=791 and x=1571.5/width=400 geometry. Its neutral focused crop has no actionable P0/P1/P2 visual difference within BasicLinear's supported property set.
 
 ### Required fidelity surfaces
 
 - Fonts and typography: 13px/500 value and section text now matches Linear's measured Inter Variable fallback hierarchy; headings and values no longer use the prior 11px compressed table treatment.
 - Spacing and layout rhythm: 32px row pitch, 28px controls, 31px section separation, 400px rail, and issue/rail horizontal positions match the reference geometry.
-- Colors and visual tokens: muted heading and bright value tokens preserve the existing OpenLinear dark system while matching the reference foreground balance; focus and hover states remain visible.
+- Colors and visual tokens: muted heading and bright value tokens preserve the existing BasicLinear dark system while matching the reference foreground balance; focus and hover states remain visible.
 - Image quality and assets: existing Lucide property icons, workflow glyphs, team color, and real member avatars are used. No drawn, placeholder, or generated asset was introduced.
-- Copy and content: the visible hierarchy is `Properties`, core values, `Project`, and `Team`; dynamic OpenLinear property values remain authoritative and are not replaced with reference fixtures.
+- Copy and content: the visible hierarchy is `Properties`, core values, `Project`, and `Team`; dynamic BasicLinear property values remain authoritative and are not replaced with reference fixtures.
 
 ### Interaction and responsive evidence
 
@@ -88,11 +88,11 @@ No unresolved P0, P1, or P2 visual defect remains in the selected property-rail 
 
 ## CT-144 Team Overview issue-key correction — 2026-08-31
 
-- Source visual truth: user-supplied Team Overview screenshot at `/var/folders/07/v7lgsxcd0gx9n1wksl_qgfjc0000gq/T/codex-clipboard-cf4fa222-4559-4553-b9a6-b7f2a12760cb.png`, corroborated by the fresh production pre-fix capture at `/private/tmp/openlinear-ct144-home-nowrap/01-production-before.png`.
-- Rendered implementation: deployed production capture at `/private/tmp/openlinear-ct144-home-nowrap/04-production-1286-after.png`.
+- Source visual truth: user-supplied Team Overview screenshot at `/var/folders/07/v7lgsxcd0gx9n1wksl_qgfjc0000gq/T/codex-clipboard-cf4fa222-4559-4553-b9a6-b7f2a12760cb.png`, corroborated by the fresh production pre-fix capture at `/private/tmp/basiclinear-ct144-home-nowrap/01-production-before.png`.
+- Rendered implementation: deployed production capture at `/private/tmp/basiclinear-ct144-home-nowrap/04-production-1286-after.png`.
 - Viewport and normalization: the fresh before/after production captures are both 2461 × 1326 CSS pixels at device pixel ratio 2 and show the same signed-in workspace, Product team, Overview tab, five issue rows, data, theme, and interaction state. No density normalization was required.
-- Full-view comparison evidence: `/private/tmp/openlinear-ct144-home-nowrap/05-production-before-after.png`.
-- Focused row comparison evidence: `/private/tmp/openlinear-ct144-home-nowrap/06-row-before-after.png`.
+- Full-view comparison evidence: `/private/tmp/basiclinear-ct144-home-nowrap/05-production-before-after.png`.
+- Focused row comparison evidence: `/private/tmp/basiclinear-ct144-home-nowrap/06-row-before-after.png`.
 
 ### Comparison history
 
@@ -125,19 +125,19 @@ No unresolved P0, P1, or P2 visual defect remains in the selected property-rail 
 - Local positive evidence: the focused collaboration/project-export/observation/HTTP/REST/browser suite passed 8 files and 37 tests. The service regression explicitly projected two legacy records as 1/2 without a write, created 3, persisted the legacy backfill, and advanced the next number to 4; retry replay remained number 1. All 11 workspace typechecks and the full local/hosted production build passed.
 - Development deployment: Cloud Run `openlinear-hosted-api-dev-00008-k49` and Vercel `dpl_HVhzd3UxJRxo8JTBtSb9oNsXNK1o` are READY. The Product home showed historical `OL-1`, `OL-2`, `OL-3`; Engineering showed `OL-4`. A development-only real-data create produced durable issue `issue_72dcb390b2884e35b050f72d9a01126d` as `OL-5`, and a full browser reload preserved the same number and description.
 - Production deployment: Cloud Run `openlinear-hosted-api-00008-q6r` and Vercel `dpl_CKAjoq8oK8ThU58CYQkPUG6EENCL` are READY. Signed-in Chrome showed the complete unchanged production records as the continuous set `OL-1` through `OL-5`; the former hash-labelled CT-143 parent now appears as `OL-4` and its child as `OL-5`. No production PM record was created or changed for this verification.
-- Visual evidence: `/private/tmp/openlinear-ct144-sequential-dev.png`, `/private/tmp/openlinear-ct144-sequential-dev-created.png`, and `/private/tmp/openlinear-ct144-sequential-production.png`.
+- Visual evidence: `/private/tmp/basiclinear-ct144-sequential-dev.png`, `/private/tmp/basiclinear-ct144-sequential-dev-created.png`, and `/private/tmp/basiclinear-ct144-sequential-production.png`.
 - Boundary: positive nonsecurity tests only. No payment, provider-subscription, security/adversarial, or independent-acceptance claim.
 
 ## CT-144 workspace typography alignment — 2026-08-31
 
-- Source visual truth: fresh authenticated Linear issue-detail and Team Home captures at `/private/tmp/openlinear-ct144-typography-linear-before.png` and `/private/tmp/openlinear-ct144-typography-linear-home-before.png`.
-- Final implementation: development issue, Team Home, Settings, and create-issue modal captures at `/private/tmp/openlinear-ct144-typography-development-issue-final.png`, `/private/tmp/openlinear-ct144-typography-development-home-final.png`, `/private/tmp/openlinear-ct144-typography-development-settings-final.png`, and `/private/tmp/openlinear-ct144-typography-development-modal-final.png`; production issue and Team Home captures at `/private/tmp/openlinear-ct144-typography-production-final.png` and `/private/tmp/openlinear-ct144-typography-production-home-final.png`.
+- Source visual truth: fresh authenticated Linear issue-detail and Team Home captures at `/private/tmp/basiclinear-ct144-typography-linear-before.png` and `/private/tmp/basiclinear-ct144-typography-linear-home-before.png`.
+- Final implementation: development issue, Team Home, Settings, and create-issue modal captures at `/private/tmp/basiclinear-ct144-typography-development-issue-final.png`, `/private/tmp/basiclinear-ct144-typography-development-home-final.png`, `/private/tmp/basiclinear-ct144-typography-development-settings-final.png`, and `/private/tmp/basiclinear-ct144-typography-development-modal-final.png`; production issue and Team Home captures at `/private/tmp/basiclinear-ct144-typography-production-final.png` and `/private/tmp/basiclinear-ct144-typography-production-home-final.png`.
 - Viewport normalization: reference and candidate desktop captures are 2403 × 1312 CSS pixels at device pixel ratio 2 from the same Chrome capture path. No scaling or density normalization was applied before comparison.
-- Combined comparison evidence: full issue-detail comparison `/private/tmp/openlinear-ct144-typography-issue-comparison-pass1.png`, focused issue comparison `/private/tmp/openlinear-ct144-typography-issue-focused-pass1.png`, and final Team Home comparison `/private/tmp/openlinear-ct144-typography-home-comparison-final.png`.
+- Combined comparison evidence: full issue-detail comparison `/private/tmp/basiclinear-ct144-typography-issue-comparison-pass1.png`, focused issue comparison `/private/tmp/basiclinear-ct144-typography-issue-focused-pass1.png`, and final Team Home comparison `/private/tmp/basiclinear-ct144-typography-home-comparison-final.png`.
 
 ### Comparison history
 
-1. The first audit found one P2 system-wide hierarchy mismatch: OpenLinear used the browser/system fallback at mostly 13px/400, while authenticated Linear used Inter Variable with 15px/450 body copy, 15px/600 section headings, 13px/500 navigation, 12px/450 metadata, and more precise title tracking.
+1. The first audit found one P2 system-wide hierarchy mismatch: BasicLinear used the browser/system fallback at mostly 13px/400, while authenticated Linear used Inter Variable with 15px/450 body copy, 15px/600 section headings, 13px/500 navigation, 12px/450 metadata, and more precise title tracking.
 2. The first correction self-hosted Inter Variable and mapped every workspace surface to measured display, section, body, UI, and metadata roles. Development issue-detail measurements then matched Linear at 24/32/600/−0.16px title, 15/24/450/−0.1px description, 15/23/600 section, 13/20/500 navigation, and 12/16.8/450 metadata.
 3. The second comparison found one residual P2: Team Home tabs were 12px/450 instead of Linear's 12px/500. The shared tab role was corrected and recaptured at 12px/500.
 4. Final development and production Chrome passes found no actionable P0/P1/P2 typography difference. Both deployed environments loaded the self-hosted family without console warnings or external font requests.
@@ -174,10 +174,10 @@ final result: passed
 
 ### Fidelity surfaces
 
-- Typography: local Inter Variable, restrained medium weights, large tightly spaced left-aligned headline, muted second line, and consistent body/label hierarchy. Original OpenLinear copy intentionally changes headline wrapping from Linear. Mobile headline wraps without clipping.
-- Layout: thin sticky navigation border, generous hero whitespace, prominent wide product preview, aligned section rules, two-column section headings, three-column features/workflow, and stacked mobile sections. This is an adaptation for OpenLinear, not a pixel-identical reproduction of Linear's longer marketing page.
+- Typography: local Inter Variable, restrained medium weights, large tightly spaced left-aligned headline, muted second line, and consistent body/label hierarchy. Original BasicLinear copy intentionally changes headline wrapping from Linear. Mobile headline wraps without clipping.
+- Layout: thin sticky navigation border, generous hero whitespace, prominent wide product preview, aligned section rules, two-column section headings, three-column features/workflow, and stacked mobile sections. This is an adaptation for BasicLinear, not a pixel-identical reproduction of Linear's longer marketing page.
 - Color: near-black canvas, subtly elevated panels, muted gray secondary copy, off-white CTAs, and restrained violet/gold status accents. Main canvas and scrollbar now share the dark color scheme.
-- Assets: existing OpenLinear favicon and installed Lucide line icons. The central preview is semantic, interactive sample issue UI, clearly labeled as a preview; no Linear brand or customer assets are reused.
+- Assets: existing BasicLinear favicon and installed Lucide line icons. The central preview is semantic, interactive sample issue UI, clearly labeled as a preview; no Linear brand or customer assets are reused.
 - Content: independent open-source positioning, explicit non-affiliation, local and hosted data boundaries, documented local setup, and license. No invented customer counts, repository stars, or availability claims.
 
 ### Comparison history and fixes
@@ -220,4 +220,4 @@ Verification: local and hosted builds/typecheck passed; 15 targeted login, found
 
 ## 2026-09-18 — Shared brand mark and release
 
-All app logo placements consume the same `BrandMark` component and canonical favicon asset. The login's generated outline mark was replaced with the existing two-bar OpenLinear identity. Browser checked both login placements loading the correct asset locally and on development/production. Both live homepage navigation checks passed. Local/hosted builds and 32 targeted tests passed. Both deployments READY. Final result: passed.
+All app logo placements consume the same `BrandMark` component and canonical favicon asset. The login's generated outline mark was replaced with the existing two-bar BasicLinear identity. Browser checked both login placements loading the correct asset locally and on development/production. Both live homepage navigation checks passed. Local/hosted builds and 32 targeted tests passed. Both deployments READY. Final result: passed.

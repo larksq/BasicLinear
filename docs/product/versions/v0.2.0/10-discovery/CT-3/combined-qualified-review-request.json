@@ -10,7 +10,7 @@
   },
   "status": "qualified_review_required",
   "candidate": {
-    "product": "combined OpenLinear v0.1 local + v0.2 hosted",
+    "product": "combined BasicLinear v0.1 local + v0.2 hosted",
     "evidence_file_count": 55,
     "evidence_set_sha256": "5b3104e4ef601497ef39dc5ffbb5f7ede84b7ca96fe697df97d1ef2776d7fa82",
     "ct143_candidate_file_count": 573,
@@ -18,10 +18,10 @@
     "ct143_independent_review": "PASS; P0/P1/P2/P3 all zero after one closed P3 remediation loop; CT-143 revision 8 Done",
     "worktree_state": "uncommitted combined candidate; exact evidence is bound by content digests rather than an inferred clean Git revision"
   },
-  "sponsor_inputs": {
+  "maintainer_inputs": {
     "license": "AGPL-3.0-only",
-    "project_identity": "Scopefold",
-    "requested_final_product_brand": "OpenLinear",
+    "project_identity": "BasicLinear",
+    "requested_final_product_brand": "BasicLinear",
     "trial": "one-time exact 30-day Pro access",
     "monthly_price": "USD $2 per active user per month",
     "annual_price": "USD $12 per active user per year",
@@ -132,11 +132,11 @@
       "sha256": "f40926e2ecc3944422366fd9eb48c215cd8348a5d055babb9549f65376d36e2d"
     },
     {
-      "path": "docs/product/versions/v0.2.0/20-planning/ct142-security-skip-sponsor-decision.json",
+      "path": "docs/product/versions/v0.2.0/20-planning/ct142-security-skip-maintainer-decision.json",
       "sha256": "e66852c3488a4946f5b3f287b5c55f13669e252a835aa7eb27f92090670b91fd"
     },
     {
-      "path": "docs/product/versions/v0.2.0/20-planning/ct142-security-skip-sponsor-decision.template.json",
+      "path": "docs/product/versions/v0.2.0/20-planning/ct142-security-skip-maintainer-decision.template.json",
       "sha256": "2ac31ab01aee4dea7a91f9e61b4c27c125eef6374b03f71550c1a912c7121de9"
     },
     {
@@ -196,7 +196,7 @@
       "sha256": "f9b65d276d143e3539ae5ba02a0e308e03aed6fb5a54ea2822ec7718f82a3049"
     },
     {
-      "path": "docs/product/versions/v0.2.0/40-testing/CT-142/sponsor-security-skip.json",
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-142/maintainer-security-skip.json",
       "sha256": "0c027cc06ceffeb9a41a937884982f919bc9ea5c480f8cd0ceee8083b61cf1ee"
     },
     {

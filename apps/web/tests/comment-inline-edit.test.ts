@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import type { Comment, IssueRichTextDocument } from '@openlinear/contracts';
+import type { Comment, IssueRichTextDocument } from '@basiclinear/contracts';
 import { describe, expect, it } from 'vitest';
 import {
   commentEditDraft,

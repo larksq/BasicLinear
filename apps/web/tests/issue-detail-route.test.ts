@@ -11,18 +11,18 @@ describe('issue detail routing', () => {
       issueId: 'issue-1',
       detailMode: 'direct',
     });
-    expect(readIssueRoute('?view=issues', { openlinearIssue: true })).toEqual({
+    expect(readIssueRoute('?view=issues', { basiclinearIssue: true })).toEqual({
       issueId: null,
       detailMode: null,
     });
   });
 
   it('restores contextual intent only from the matching history entry', () => {
-    expect(readIssueRoute('?issue=issue-1', { openlinearIssue: true })).toEqual({
+    expect(readIssueRoute('?issue=issue-1', { basiclinearIssue: true })).toEqual({
       issueId: 'issue-1',
       detailMode: 'contextual',
     });
-    expect(readIssueRoute('?issue=issue-1', { openlinearIssue: false })).toEqual({
+    expect(readIssueRoute('?issue=issue-1', { basiclinearIssue: false })).toEqual({
       issueId: 'issue-1',
       detailMode: 'direct',
     });
@@ -31,15 +31,15 @@ describe('issue detail routing', () => {
   it('writes route intent without discarding unrelated history state', () => {
     expect(issueRouteHistoryState({ retained: 1 }, 'issue-1', 'contextual')).toEqual({
       retained: 1,
-      openlinearIssue: true,
+      basiclinearIssue: true,
     });
     expect(issueRouteHistoryState({ retained: 1 }, 'issue-1', 'direct')).toEqual({
       retained: 1,
-      openlinearIssue: false,
+      basiclinearIssue: false,
     });
     expect(issueRouteHistoryState({ retained: 1 }, null, null)).toEqual({
       retained: 1,
-      openlinearIssue: false,
+      basiclinearIssue: false,
     });
   });
 

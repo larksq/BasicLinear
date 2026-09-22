@@ -1,5 +1,5 @@
 {
-  "name": "@openlinear/hosted-service",
+  "name": "@basiclinear/hosted-service",
   "version": "0.2.0",
   "license": "AGPL-3.0-only",
   "private": true,
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@google-cloud/firestore": "8.7.1",
-    "@openlinear/hosted": "*",
+    "@basiclinear/hosted": "*",
     "firebase-admin": "14.4.0",
     "google-auth-library": "10.9.1",
     "stripe": "22.5.0"

@@ -1,5 +1,5 @@
 {
-  "schema_version": "openlinear.readme-captures.v1",
+  "schema_version": "basiclinear.readme-captures.v1",
   "captured_on": "2026-09-21",
   "browser": "Chrome",
   "base_commit": "928767ea12c59aca28b94e9bcb91bca03eb1febe",
@@ -19,7 +19,7 @@
     {
       "file": "online-homepage.jpg",
       "captured_at": "2026-09-21T02:08:50.687Z",
-      "source": "https://openlinear.qiaosun.me/",
+      "source": "https://basiclinear.qiaosun.me/",
       "edition": "public_homepage",
       "width": 2072,
       "height": 1340,

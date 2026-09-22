@@ -31,4 +31,4 @@ The hosted core must preserve v0.1's keyboard/accessibility expectations. Securi
 
 ## Traceability and decision boundaries
 
-Every Must requirement maps to at least one Planning issue, concrete test, and outcome. Requirements R-209 and R-210 preserve the sponsor's prices and trial length; changing them requires sponsor direction. T-VALIDATE-PRICING may recommend a change or stop, not silently apply one. R-213 does not authorize arbitrary AI actions: MCP callers receive exactly the same bounded permissions as a human user.
+Every Must requirement maps to at least one Planning issue, concrete test, and outcome. Requirements R-209 and R-210 preserve the maintainer's prices and trial length; changing them requires maintainer direction. T-VALIDATE-PRICING may recommend a change or stop, not silently apply one. R-213 does not authorize arbitrary AI actions: MCP callers receive exactly the same bounded permissions as a human user.

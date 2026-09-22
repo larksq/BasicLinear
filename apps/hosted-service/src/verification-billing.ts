@@ -5,7 +5,7 @@ import type {
   BillingProviderSubscriptionUpdateExpectation,
   BillingPlan,
   VerifiedBillingNotice,
-} from '@openlinear/hosted';
+} from '@basiclinear/hosted';
 
 const disabled = (): Error => new Error('VERIFICATION_PAYMENT_PROVIDER_DISABLED');
 

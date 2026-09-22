@@ -1,8 +1,8 @@
 {
-  "schemaVersion": "openlinear.google-cloud-budget.v1",
+  "schemaVersion": "basiclinear.google-cloud-budget.v1",
   "evidenceBoundary": "template_not_applied",
   "budget": {
-    "displayName": "OpenLinear pilot budget",
+    "displayName": "BasicLinear pilot budget",
     "budgetFilter": {"projects": ["projects/${GOOGLE_CLOUD_PROJECT_NUMBER}"]},
     "amount": {"specifiedAmount": {"currencyCode": "USD", "units": "25"}},
     "thresholdRules": [
@@ -11,18 +11,18 @@
       {"thresholdPercent": 1, "spendBasis": "CURRENT_SPEND"}
     ],
     "allUpdatesRule": {
-      "pubsubTopic": "projects/${GOOGLE_CLOUD_PROJECT}/topics/openlinear-budget-status",
+      "pubsubTopic": "projects/${GOOGLE_CLOUD_PROJECT}/topics/openlinear-budget-alerts",
       "schemaVersion": "1.0"
     }
   },
   "pushSubscription": {
-    "name": "projects/${GOOGLE_CLOUD_PROJECT}/subscriptions/openlinear-budget-status-push",
-    "topic": "projects/${GOOGLE_CLOUD_PROJECT}/topics/openlinear-budget-status",
+    "name": "projects/${GOOGLE_CLOUD_PROJECT}/subscriptions/openlinear-budget-push",
+    "topic": "projects/${GOOGLE_CLOUD_PROJECT}/topics/openlinear-budget-alerts",
     "pushConfig": {
-      "pushEndpoint": "${OPENLINEAR_BUDGET_PUSH_AUDIENCE}",
+      "pushEndpoint": "${BASICLINEAR_BUDGET_PUSH_AUDIENCE}",
       "oidcToken": {
-        "serviceAccountEmail": "${OPENLINEAR_BUDGET_PUSH_SERVICE_ACCOUNT}",
-        "audience": "${OPENLINEAR_BUDGET_PUSH_AUDIENCE}"
+        "serviceAccountEmail": "${BASICLINEAR_BUDGET_PUSH_SERVICE_ACCOUNT}",
+        "audience": "${BASICLINEAR_BUDGET_PUSH_AUDIENCE}"
       }
     },
     "retryPolicy": {"minimumBackoff": "10s", "maximumBackoff": "600s"}

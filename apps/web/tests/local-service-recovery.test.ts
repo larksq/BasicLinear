@@ -24,7 +24,7 @@ describe('local service recovery', () => {
     await expect(api.session()).rejects.toEqual(expect.objectContaining({
       name: 'TransportError',
       code: 'LOCAL_SERVICE_UNAVAILABLE',
-      message: 'The local OpenLinear service could not be reached.',
+      message: 'The local BasicLinear service could not be reached.',
     }));
     expect(fetchMock).toHaveBeenCalledWith('/api/v1/session', expect.objectContaining({
       credentials: 'same-origin',

@@ -2,7 +2,7 @@
 
 ## Verdict
 
-`IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING`. OpenLinear now provides the planned irreversible project-purge boundary after recoverable archive. The exact-name, revision-checked owner action permanently removes only the archived project plus its milestones and resources; every referenced active or archived issue survives with project and milestone references cleared in the same SQLite transaction.
+`IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING`. BasicLinear now provides the planned irreversible project-purge boundary after recoverable archive. The exact-name, revision-checked owner action permanently removes only the archived project plus its milestones and resources; every referenced active or archived issue survives with project and milestone references cleared in the same SQLite transaction.
 
 ## Behavior
 

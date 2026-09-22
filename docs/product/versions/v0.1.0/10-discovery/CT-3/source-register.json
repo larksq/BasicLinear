@@ -79,7 +79,7 @@
         "npm exact term",
         "trademark exact term"
       ],
-      "claim": "The Scopefold exact-string sample produced no obvious indexed collision; other shortlisted names produced current collisions.",
+      "claim": "The BasicLinear exact-string sample produced no obvious indexed collision; other shortlisted names produced current collisions.",
       "verification": "preliminary_only",
       "limitation": "Search-engine results are not trademark clearance or an availability guarantee."
     },
@@ -98,7 +98,7 @@
       "type": "current_name_collision",
       "url": "https://github.com/kaizen403/openlinear",
       "authority": "Current public repository",
-      "claim": "An active open-source project-management product uses the exact OpenLinear name; the directly rechecked public page reports 700 commits.",
+      "claim": "An active open-source project-management product uses the exact BasicLinear name; the directly rechecked public page reports 700 commits.",
       "verification": "verified",
       "rechecked_on": "2026-09-21",
       "risk": "high"
@@ -108,7 +108,7 @@
       "type": "current_name_collision",
       "url": "https://openlinear.tech/",
       "authority": "Current product website",
-      "claim": "The exact OpenLinear name is in active public use for a project-management product.",
+      "claim": "The exact BasicLinear name is in active public use for a project-management product.",
       "verification": "verified",
       "rechecked_on": "2026-09-21",
       "risk": "high"

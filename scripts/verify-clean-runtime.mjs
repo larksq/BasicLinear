@@ -206,11 +206,11 @@ function cleanEnvironment({ dataDirectory, port, auditPath, buildId, homeDirecto
     USERPROFILE: homeDirectory,
     LOCALAPPDATA: join(homeDirectory, 'AppData', 'Local'),
     XDG_DATA_HOME: join(homeDirectory, '.local', 'share'),
-    OPENLINEAR_DATA_DIR: dataDirectory,
-    OPENLINEAR_HOST: '127.0.0.1',
-    OPENLINEAR_PORT: String(port),
-    OPENLINEAR_BUILD_ID: buildId,
-    OPENLINEAR_NETWORK_AUDIT_PATH: auditPath,
+    BASICLINEAR_DATA_DIR: dataDirectory,
+    BASICLINEAR_HOST: '127.0.0.1',
+    BASICLINEAR_PORT: String(port),
+    BASICLINEAR_BUILD_ID: buildId,
+    BASICLINEAR_NETWORK_AUDIT_PATH: auditPath,
     LOG_LEVEL: 'warn',
   };
 }
@@ -320,7 +320,7 @@ async function jsonRequest(origin, path, options = {}) {
   const method = options.method ?? 'GET';
   const headers = { accept: 'application/json', ...(options.headers ?? {}) };
   if (options.cookie) headers.cookie = options.cookie;
-  if (options.csrf) headers['x-openlinear-csrf'] = options.csrf;
+  if (options.csrf) headers['x-basiclinear-csrf'] = options.csrf;
   if (options.body !== undefined) {
     headers.origin = options.origin ?? origin;
     headers['content-type'] = 'application/json';
@@ -358,7 +358,7 @@ function rawHostStatus(port, hostHeader) {
 
 function sessionHeaders(result) {
   const cookie = result.response.headers.get('set-cookie')?.split(';', 1)[0] ?? '';
-  const csrf = result.response.headers.get('x-openlinear-csrf-token') ?? '';
+  const csrf = result.response.headers.get('x-basiclinear-csrf-token') ?? '';
   check(cookie !== '' && csrf !== '', 'The local owner session did not issue strict session material.');
   return { cookie, csrf };
 }
@@ -402,7 +402,7 @@ async function ownerWorkflow(runtime) {
 
   const tabTwo = await jsonRequest(runtime.origin, '/api/v1/session', { cookie });
   check(tabTwo.response.status === 200, 'A second local tab could not renew CSRF state.');
-  const csrfTwo = tabTwo.response.headers.get('x-openlinear-csrf-token') ?? '';
+  const csrfTwo = tabTwo.response.headers.get('x-basiclinear-csrf-token') ?? '';
   check(csrfTwo !== '' && csrfTwo !== csrf, 'Separate tabs did not receive distinct CSRF proofs.');
 
   const teams = await jsonRequest(runtime.origin, `/api/v1/workspaces/${workspaceId}/teams`, { cookie });
@@ -711,11 +711,11 @@ async function legacyFixture(workDirectory, environment) {
   const fixturePath = join(workDirectory, 'legacy-database-backup-v1.json');
   writeFileSync(fixturePath, `${fixture.canonicalText}\n`, { mode: 0o600 });
   const fixtureFileBefore = fileSha256(fixturePath);
-  const ambiguousTarget = join(workDirectory, 'legacy-ambiguous', 'openlinear.sqlite3');
+  const ambiguousTarget = join(workDirectory, 'legacy-ambiguous', 'basiclinear.sqlite3');
   const ambiguous = await operator(['import', '--input', fixturePath, '--database', ambiguousTarget, '--yes'], environment, false);
   check(ambiguous.code !== 0 && ambiguous.payload?.error?.code === 'AMBIGUOUS_SCOPE', 'Ambiguous legacy scope was not rejected.');
   check(!existsSync(dirname(ambiguousTarget)), 'Ambiguous legacy import created its target directory.');
-  const selectedTarget = join(workDirectory, 'legacy-selected', 'openlinear.sqlite3');
+  const selectedTarget = join(workDirectory, 'legacy-selected', 'basiclinear.sqlite3');
   const selected = await operator([
     'import', '--input', fixturePath, '--database', selectedTarget,
     '--workspace', fixture.ids.workspace, '--yes',
@@ -788,12 +788,12 @@ async function qualify(options) {
   base.environment.npm = npmResult.stdout.trim();
   if (options.planOnly) return { ...base, verdict: 'PLAN_READY', checks: {} };
 
-  const workDirectory = await mkdtemp(join(tmpdir(), 'openlinear-clean-runtime-'));
+  const workDirectory = await mkdtemp(join(tmpdir(), 'basiclinear-clean-runtime-'));
   const homeDirectory = join(workDirectory, 'home');
   const dataDirectory = join(workDirectory, 'data');
   mkdirSync(homeDirectory, { recursive: true, mode: 0o700 });
   mkdirSync(dataDirectory, { recursive: true, mode: 0o700 });
-  const databasePath = join(dataDirectory, 'openlinear.sqlite3');
+  const databasePath = join(dataDirectory, 'basiclinear.sqlite3');
   const buildId = `ct88-${artifact.digest.slice(0, 20)}`;
   const audits = [];
   try {
@@ -821,7 +821,7 @@ async function qualify(options) {
     const backupPermission = assertOwnerMode(backupPath);
     const exportPermission = assertOwnerMode(exportPath);
 
-    const restoredPath = join(workDirectory, 'restored', 'openlinear.sqlite3');
+    const restoredPath = join(workDirectory, 'restored', 'basiclinear.sqlite3');
     const restored = await operator(['restore', '--input', backupPath, '--database', restoredPath, '--yes'], environment);
     const restoredExportPath = join(workDirectory, 'restored-export.json');
     const restoredExport = await operator(['export', '--database', restoredPath, '--output', restoredExportPath], environment);
@@ -833,7 +833,7 @@ async function qualify(options) {
     check(corruptRestore.code !== 0 && corruptRestore.payload?.error?.code === 'DATABASE_CORRUPT', 'Corrupt restore was not rejected.');
     check(fileSha256(restoredPath) === restoredBeforeCorruptAttempt, 'Corrupt restore mutated the last known-good database.');
 
-    const importedPath = join(workDirectory, 'imported', 'openlinear.sqlite3');
+    const importedPath = join(workDirectory, 'imported', 'basiclinear.sqlite3');
     const imported = await operator(['import', '--input', exportPath, '--database', importedPath, '--yes'], environment);
     const importedExportPath = join(workDirectory, 'imported-export.json');
     const importedExport = await operator(['export', '--database', importedPath, '--output', importedExportPath], environment);
@@ -842,7 +842,7 @@ async function qualify(options) {
 
     const upgradeDirectory = join(workDirectory, 'upgrade');
     mkdirSync(upgradeDirectory, { recursive: true, mode: 0o700 });
-    const upgradePath = join(upgradeDirectory, 'openlinear.sqlite3');
+    const upgradePath = join(upgradeDirectory, 'basiclinear.sqlite3');
     createPriorVersionFixture(databasePath, upgradePath);
     const preUpgradeBackup = join(workDirectory, 'pre-upgrade.sqlite3');
     copyFileSync(upgradePath, preUpgradeBackup);
@@ -863,7 +863,7 @@ async function qualify(options) {
 
     const futureDirectory = join(workDirectory, 'future');
     mkdirSync(futureDirectory, { recursive: true, mode: 0o700 });
-    const futurePath = join(futureDirectory, 'openlinear.sqlite3');
+    const futurePath = join(futureDirectory, 'basiclinear.sqlite3');
     createFutureVersionFixture(databasePath, futurePath);
     const futureBefore = fileSha256(futurePath);
     const futureAudit = join(workDirectory, 'network-future.jsonl');
@@ -874,7 +874,7 @@ async function qualify(options) {
 
     const rejectedDirectory = join(workDirectory, 'rejected');
     mkdirSync(rejectedDirectory, { recursive: true, mode: 0o700 });
-    const rejectedPath = join(rejectedDirectory, 'openlinear.sqlite3');
+    const rejectedPath = join(rejectedDirectory, 'basiclinear.sqlite3');
     createRejectedMigrationFixture(rejectedPath);
     const rejectedBefore = fileSha256(rejectedPath);
     const rejectedAudit = join(workDirectory, 'network-rejected.jsonl');
@@ -889,7 +889,7 @@ async function qualify(options) {
 
     const scaleDirectory = join(workDirectory, 'scale');
     mkdirSync(scaleDirectory, { recursive: true, mode: 0o700 });
-    const scalePath = join(scaleDirectory, 'openlinear.sqlite3');
+    const scalePath = join(scaleDirectory, 'basiclinear.sqlite3');
     const scaleCounts = seedAcceptedScale(databasePath, scalePath, {
       ownerId: workflow.ownerId,
       statusId,

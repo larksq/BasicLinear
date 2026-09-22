@@ -10,7 +10,7 @@ Use this screener verbally or in a private form. Do not place contact details or
 4. Have you used an issue or project tracker at least weekly during the last three months?
 5. Does your team face at least one material constraint involving source openness, self-hosting, data residency, software cost, extensibility, or vendor independence?
 6. Can you evaluate a desktop web prototype using entirely synthetic data without opening your employer's systems?
-7. Are you independent of this project's sponsor and implementation contributors?
+7. Are you independent of this project's maintainer and implementation contributors?
 
 An eligible participant answers yes to all seven questions.
 

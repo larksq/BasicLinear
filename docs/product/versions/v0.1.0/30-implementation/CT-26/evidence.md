@@ -6,7 +6,7 @@
 
 ## Correction
 
-The previous client inferred only whether an issue ID existed. Its URL synchronization rewrote every direct load as `openlinearIssue: true`, so a fresh link at 1440x900 retained two list rows, a 549px list region, a 560px sticky `aside`, and a 12px separator. The correction:
+The previous client inferred only whether an issue ID existed. Its URL synchronization rewrote every direct load as `basiclinearIssue: true`, so a fresh link at 1440x900 retained two list rows, a 549px list region, a 560px sticky `aside`, and a 12px separator. The correction:
 
 - models `direct` and `contextual` intent independently from presentation;
 - derives fresh `?issue=` navigation as direct unless its history entry explicitly records contextual origin;

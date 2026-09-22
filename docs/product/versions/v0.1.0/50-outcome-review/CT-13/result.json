@@ -1634,7 +1634,7 @@
             }
           ],
           "state": {
-            "decision_status": "sponsor_decision_recorded_review_required",
+            "decision_status": "maintainer_decision_recorded_review_required",
             "completed": false
           }
         },
@@ -1791,15 +1791,15 @@
         "source_revision": "96a696c63cf19a138977f76410ac98c6e5cec175",
         "evidence_set_sha256": "dc8797aac1d51303a2d1e600590b78ce2e3b7a223b23eb3e16e8bc111b3b9614"
       },
-      "sponsor_decision": {
+      "maintainer_decision": {
         "license": "AGPL-3.0-only",
-        "project_identity": "Scopefold",
-        "requested_final_product_brand": "OpenLinear"
+        "project_identity": "BasicLinear",
+        "requested_final_product_brand": "BasicLinear"
       },
       "accepted_identity_patterns": [
-        "OpenLinear",
-        "openlinear",
-        "@openlinear/"
+        "BasicLinear",
+        "basiclinear",
+        "@basiclinear/"
       ],
       "evidence": [
         {
@@ -1914,8 +1914,8 @@
         ],
         "accepted_dispositions": {
           "license_compatibility": "agpl_3_0_only_accepted",
-          "project_identity": "scopefold_cleared",
-          "product_identity": "openlinear_cleared",
+          "project_identity": "basiclinear_cleared",
+          "product_identity": "basiclinear_cleared",
           "trademark_and_trade_dress": "independent_expression_cleared",
           "clean_room_method": "restrictive_boundary_accepted",
           "existing_reference_evidence": "private_quarantine_accepted",
@@ -1948,7 +1948,7 @@
       "summary": "The exact CT-3 qualified-review request is ready, but acceptance is absent.",
       "evidence": {
         "result": "docs/product/versions/v0.1.0/10-discovery/CT-3/result.json",
-        "status": "sponsor_decision_recorded_review_required",
+        "status": "maintainer_decision_recorded_review_required",
         "completed": false,
         "qualified_review": {
           "request": {
@@ -1974,7 +1974,7 @@
       "evidence": {
         "occurrences": 592,
         "patterns": {
-          "OpenLinear": {
+          "BasicLinear": {
             "occurrences": 182,
             "files": [
               "README.md",
@@ -2003,7 +2003,7 @@
               "packages/db/tests/sqlite.test.ts"
             ]
           },
-          "openlinear": {
+          "basiclinear": {
             "occurrences": 268,
             "files": [
               "README.md",
@@ -2097,7 +2097,7 @@
               "packages/ui/package.json"
             ]
           },
-          "@openlinear/": {
+          "@basiclinear/": {
             "occurrences": 142,
             "files": [
               "apps/api/package.json",
@@ -2182,9 +2182,9 @@
           }
         },
         "accepted_identity_patterns": [
-          "OpenLinear",
-          "openlinear",
-          "@openlinear/"
+          "BasicLinear",
+          "basiclinear",
+          "@basiclinear/"
         ],
         "unresolved_patterns": [],
         "accepted_as_public_identity": false

@@ -75,10 +75,12 @@ historical qualification evidence is not a fresh acceptance of this candidate.
 
 ## Remaining publication work
 
-The release audit still requires qualified identity/clean-room review,
-asset/copy and notice approval, and accountable release acceptance. The source
-revision must be frozen and independently qualified. No Git remote is configured;
-the public destination and a functioning private vulnerability-reporting route
+This historical snapshot predates the simplified technical release policy. The
+current release audit verifies identity anchors, clean-room controls,
+asset/copy provenance, notices, and secret indicators without a sponsor,
+reviewer, or separate acceptance gate. The source revision must be frozen for
+the audit. No Git remote is configured; the public destination and a functioning
+private vulnerability-reporting route
 must be established before publication.
 
 All preparation changes remain uncommitted alongside the existing work. No push,

@@ -5,20 +5,20 @@ import {
   mcpProtocolVersion,
 } from '../src/index.js';
 
-const skillRoot = new URL('../../../skills/openlinear-product-management/', import.meta.url);
+const skillRoot = new URL('../../../skills/basiclinear-product-management/', import.meta.url);
 
 async function skillFile(relativePath: string): Promise<string> {
   return readFile(new URL(relativePath, skillRoot), 'utf8');
 }
 
-describe('packaged OpenLinear product-management skill', () => {
+describe('packaged BasicLinear product-management skill', () => {
   it('maps exactly the MCP PM allowlist and its stable protocol', async () => {
     const [skill, toolMap, safety] = await Promise.all([
       skillFile('SKILL.md'),
       skillFile('references/tool-map.md'),
       skillFile('references/safety.md'),
     ]);
-    expect(skill).toMatch(/^---\nname: openlinear-product-management\n/u);
+    expect(skill).toMatch(/^---\nname: basiclinear-product-management\n/u);
     expect(skill).toContain(`stable \`${mcpProtocolVersion}\` protocol`);
     expect(safety).toContain(`stable \`${mcpProtocolVersion}\` stateless Streamable HTTP profile`);
     expect(safety).toContain('There is no GET event stream or persistent MCP session.');
@@ -45,7 +45,7 @@ describe('packaged OpenLinear product-management skill', () => {
     expect(skill).toContain('Do not invent or seek tools for autonomous agents');
     expect(safety).toContain('Do not use MCP to buy or change a subscription.');
     expect(skill).not.toMatch(/(?:^|\n)#+\s+(?:Agent|Code review|Repository|Pull request)/iu);
-    expect(agentMetadata).toContain('display_name: "OpenLinear Product Management"');
-    expect(agentMetadata).toContain('$openlinear-product-management');
+    expect(agentMetadata).toContain('display_name: "BasicLinear Product Management"');
+    expect(agentMetadata).toContain('$basiclinear-product-management');
   });
 });

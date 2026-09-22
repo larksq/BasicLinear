@@ -4,16 +4,16 @@ Status: reviewer procedure; no qualified decision is recorded by this document.
 
 ## Boundary
 
-This is one qualified review of the combined OpenLinear local and hosted candidate. It does not provide legal advice and does not infer trademark, privacy, security, payment, terms, data-handling, clean-room, or release clearance. Codex must not invent the reviewer, qualification, jurisdiction, disposition, or residual-risk acceptance.
+This is one qualified review of the combined BasicLinear local and hosted candidate. It does not provide legal advice and does not infer trademark, privacy, security, payment, terms, data-handling, clean-room, or release clearance. Codex must not invent the reviewer, qualification, jurisdiction, disposition, or residual-risk acceptance.
 
 The exact request binds the historical v0.1 license, identity, clean-room, source, asset, copy, and third-party evidence together with the accepted v0.2 Discovery/Planning package, hosted implementation/testing manifests, deployed environment boundary, and explicit test gaps. Hashing an artifact is not evidence that its claims passed.
 
 ## Required review scopes
 
-1. **License, identity, trademark, and trade dress.** Decide whether `AGPL-3.0-only`, project identity `Scopefold`, requested product identity `OpenLinear`, independent expression, existing reference quarantine, contribution terms, and public comparative-claim limits are acceptable in the stated jurisdictions.
+1. **License, identity, trademark, and trade dress.** Decide whether `AGPL-3.0-only`, project identity `BasicLinear`, requested product identity `BasicLinear`, independent expression, existing reference quarantine, contribution terms, and public comparative-claim limits are acceptable in the stated jurisdictions.
 2. **Local and hosted authority.** Review the separation between local SQLite authority and the isolated Firebase development/production authorities, including Google identity, owner/member roles, invitations, assignments, comments, export, and recovery.
 3. **Commercial and payment boundary.** Review the exact one-time 30-day Pro trial, $2 per active user monthly and $12 per active user yearly prices, pending-invite exclusion, Free fallback, taxes/terms disclosures, Stripe test/live separation, and the fact that current verification accounts bypass payment with Checkout disabled.
-4. **Privacy, security, and data handling.** Review Firebase, Google, Stripe, REST, MCP, skill, audit, retention, and hosted-operations boundaries. The sponsor-directed R-204/R-219 security skip remains untested and cannot be converted into security clearance by this packet.
+4. **Privacy, security, and data handling.** Review Firebase, Google, Stripe, REST, MCP, skill, audit, retention, and hosted-operations boundaries. The maintainer-directed R-204/R-219 security skip remains untested and cannot be converted into security clearance by this packet.
 5. **Automation and scope.** Review the PM-only REST, MCP, and reusable skill surfaces and the explicit exclusion of AI agents, code review, repositories, pull requests, synchronization, presence, custom roles, SSO/SCIM, attachments, mentions, and notifications.
 6. **Evidence limitations.** Distinguish technical output, independent nonsecurity UAT, deployment evidence, qualified boundary approval, accountable release approval, and product outcomes. None is a substitute for another.
 

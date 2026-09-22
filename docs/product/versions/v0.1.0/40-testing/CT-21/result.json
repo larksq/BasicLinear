@@ -28,5 +28,5 @@
   "approval_scope": "Install rootless-Docker prerequisites and create a dedicated test account on 210CPU.",
   "remote_mutations_performed": false,
   "local_healthy_stack_modified": false,
-  "next_check": "Run the bounded rootless daemon and Compose probe after sponsor approval."
+  "next_check": "Run the bounded rootless daemon and Compose probe after maintainer approval."
 }

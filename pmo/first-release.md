@@ -9,7 +9,7 @@ research_basis: "live-web-and-confirmed-input"
 
 ## Release outcome
 
-The first release succeeds when one technically capable owner can start OpenLinear locally and complete the approved project, milestone, issue, find/focus, and recovery workflow in the automatically provisioned workspace and team without a critical functional, local-security, accessibility, or recovery failure. The release must feel coherent under repeated daily use, not merely demonstrate isolated forms. Its accepted visual fixtures should preserve the reference product's spatial discipline while remaining an independent design.
+The first release succeeds when one technically capable owner can start BasicLinear locally and complete the approved project, milestone, issue, find/focus, and recovery workflow in the automatically provisioned workspace and team without a critical functional, local-security, accessibility, or recovery failure. The release must feel coherent under repeated daily use, not merely demonstrate isolated forms. Its accepted visual fixtures should preserve the reference product's spatial discipline while remaining an independent design.
 
 ## In scope
 
@@ -47,7 +47,7 @@ The release cannot claim parity from a single screenshot. Acceptance covers crea
 
 The release depends on accepted Discovery outcomes and requirements, a clean-room reference and branding policy, a selected open-source license, a stable SQLite schema and canonical PostgreSQL-export migration, a local-origin security design, a rich-text storage contract, an accessibility-tested component set, and deterministic visual-test infrastructure. No Google/OIDC credential, database credential, setup token, container runtime, or external service is a v0.1 input.
 
-Workflow scope no longer depends on five interviews: CT-77 completed the large-sample statistical ranking. Product acceptance still depends on controlled workflow measurements, independent rendered and accessibility checks, and valid outcome windows. Public release also depends on legal or qualified review of naming, trade dress, screenshots, copy, third-party licenses, and attribution.
+Workflow scope no longer depends on five interviews: CT-77 completed the large-sample statistical ranking. Product acceptance still depends on controlled workflow measurements, independent rendered and accessibility checks, and valid outcome windows. Public release uses the technical audit for identity anchors, clean-room controls, screenshots, copy, third-party notices, provenance, and attribution.
 
 ## Rollout
 

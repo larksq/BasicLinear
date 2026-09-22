@@ -10,7 +10,7 @@
 - Fastify serves production assets, extensionless SPA routes, health, and `/api` from the same loopback listener.
 - The process accepts only `127.0.0.1` or `::1`; remote bind configuration fails before database or listener startup.
 - Defaults require no environment file, token, password, credential, database server, container, TLS proxy, or outbound request.
-- Data resolves to a platform-standard directory containing `openlinear.sqlite3` and `backups/`. Optional port, data-directory, web-root, and bounded session-TTL overrides remain local operational controls.
+- Data resolves to a platform-standard directory containing `basiclinear.sqlite3` and `backups/`. Optional port, data-directory, web-root, and bounded session-TTL overrides remain local operational controls.
 - Automatic bootstrap creates exactly one owner, one implicit workspace/team/membership, five default statuses, and one issue sequence. No collaboration administration route is registered.
 - Sessions and CSRF state exist only in process memory. Restart expires the cookie's server-side state, the UI renews locally, and persisted product data is unchanged.
 

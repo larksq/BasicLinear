@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'node:url';
-import { resolveLocalStoragePaths, type LocalPathRuntime } from '@openlinear/db/sqlite';
-import { AppError } from '@openlinear/domain';
+import { resolveLocalStoragePaths, type LocalPathRuntime } from '@basiclinear/db/sqlite';
+import { AppError } from '@basiclinear/domain';
 
 export interface ApiConfig {
   host: '127.0.0.1' | '::1';
@@ -28,24 +28,24 @@ export function loadApiConfig(
     throw serviceError('NODE_ENV is invalid.', 'NODE_ENV');
   }
 
-  const host = (env.OPENLINEAR_HOST ?? env.HOST ?? '127.0.0.1').trim();
+  const host = (env.BASICLINEAR_HOST ?? env.HOST ?? '127.0.0.1').trim();
   if (host !== '127.0.0.1' && host !== '::1') {
     throw serviceError(
-      'OpenLinear supports loopback access only. OPENLINEAR_HOST must be 127.0.0.1 or ::1.',
-      'OPENLINEAR_HOST',
+      'BasicLinear supports loopback access only. BASICLINEAR_HOST must be 127.0.0.1 or ::1.',
+      'BASICLINEAR_HOST',
     );
   }
 
-  const port = Number(env.OPENLINEAR_PORT ?? env.PORT ?? '4174');
+  const port = Number(env.BASICLINEAR_PORT ?? env.PORT ?? '4174');
   if (!Number.isSafeInteger(port) || port < 1 || port > 65535) {
-    throw serviceError('OPENLINEAR_PORT must be an integer from 1 to 65535.', 'OPENLINEAR_PORT');
+    throw serviceError('BASICLINEAR_PORT must be an integer from 1 to 65535.', 'BASICLINEAR_PORT');
   }
 
-  const sessionTtlSeconds = Number(env.OPENLINEAR_SESSION_TTL_SECONDS ?? 60 * 60 * 12);
+  const sessionTtlSeconds = Number(env.BASICLINEAR_SESSION_TTL_SECONDS ?? 60 * 60 * 12);
   if (!Number.isSafeInteger(sessionTtlSeconds) || sessionTtlSeconds < 300 || sessionTtlSeconds > 86_400) {
     throw serviceError(
-      'OPENLINEAR_SESSION_TTL_SECONDS must be an integer from 300 to 86400.',
-      'OPENLINEAR_SESSION_TTL_SECONDS',
+      'BASICLINEAR_SESSION_TTL_SECONDS must be an integer from 300 to 86400.',
+      'BASICLINEAR_SESSION_TTL_SECONDS',
     );
   }
 
@@ -57,7 +57,7 @@ export function loadApiConfig(
     environment: environmentValue as ApiConfig['environment'],
     publicOrigin: `http://${originHost}:${port}`,
     ...storage,
-    webRoot: env.OPENLINEAR_WEB_ROOT?.trim()
+    webRoot: env.BASICLINEAR_WEB_ROOT?.trim()
       || fileURLToPath(new URL('../../web/dist', import.meta.url)),
     sessionCookieName: 'ol_local_session',
     sessionTtlSeconds,

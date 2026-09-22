@@ -1,12 +1,12 @@
 {
-  "schema_version": "ct142-sponsored-exception-v1",
+  "schema_version": "ct142-maintainered-exception-v1",
   "recorded_at": "2026-08-26T03:38:56Z",
   "decision_ref": "user-thread://2026-08-26/security-test-skip",
   "decision": "authorize_exception",
-  "authority": "sponsor",
-  "authorized_by": "sponsor",
+  "authority": "maintainer",
+  "authorized_by": "maintainer",
   "directive": "skip the security test since violating Codex's safety policy.",
-  "reason": "The sponsor explicitly directed the Testing stage not to perform security testing because that activity was stopped by the active Codex safety boundary.",
+  "reason": "The maintainer explicitly directed the Testing stage not to perform security testing because that activity was stopped by the active Codex safety boundary.",
   "scope": {
     "stage": "testing",
     "issue_id": "CT-142",

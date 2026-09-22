@@ -1,4 +1,4 @@
-# OpenLinear public homepage
+# BasicLinear public homepage
 
 ## Result
 
@@ -12,17 +12,17 @@ Implemented a Linear-inspired public homepage in the existing hosted entry. The 
 
 ## Content and interactions
 
-Dark, responsive layout with original OpenLinear branding and copy, interactive sample issue list/board/search, workflow instructions, local/online edition explanation, setup command copying, native FAQ disclosures, mobile navigation with Escape and focus return, skip link, focus styles, reduced-motion support, and page metadata.
+Dark, responsive layout with original BasicLinear branding and copy, interactive sample issue list/board/search, workflow instructions, local/online edition explanation, setup command copying, native FAQ disclosures, mobile navigation with Escape and focus return, skip link, focus styles, reduced-motion support, and page metadata.
 
-The issue preview uses explicitly labeled sample data; it does not modify a workspace. The local setup commands match the repository README. The source license is served at `/openlinear-license.txt`.
+The issue preview uses explicitly labeled sample data; it does not modify a workspace. The local setup commands match the repository README. The source license is served at `/basiclinear-license.txt`.
 
 ## Repository URL
 
-There is no Git remote configured in this checkout and no public source URL was supplied. The page therefore links to the bundled AGPL license and states that the repository link is coming soon. Set `VITE_OPENLINEAR_REPOSITORY_URL` to the actual public GitHub repository URL at web build time to activate the source links. This optional variable is documented in `.env.example`. A rebuild is required.
+There is no Git remote configured in this checkout and no public source URL was supplied. The page therefore links to the bundled AGPL license and states that the repository link is coming soon. Set `VITE_BASICLINEAR_REPOSITORY_URL` to the actual public GitHub repository URL at web build time to activate the source links. This optional variable is documented in `.env.example`. A rebuild is required.
 
 ## Verification
 
-- `npm run build -w @openlinear/web`: passed, including TypeScript and local/hosted Vite builds.
+- `npm run build -w @basiclinear/web`: passed, including TypeScript and local/hosted Vite builds.
 - Homepage routing plus hosted foundation, owner entry, and authentication suites: 20 tests passed across 4 files.
 - In-app browser: desktop 1280 × 720 and mobile 390 × 844.
 - Verified list/board state, search match, empty state and reset, clipboard contents, FAQ disclosure, mobile menu open/close/Escape, section links, missing-configuration app entry, and return to setup guide.

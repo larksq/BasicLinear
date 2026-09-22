@@ -101,6 +101,6 @@ describe('workspace capability projection', () => {
     expect(app).not.toContain('api.setupState');
     expect(app).not.toContain('LoginScreen');
     expect(api).toContain("localOwnerSession: () => request<Session>('/api/v1/local-owner-session', {");
-    expect(api).toContain("'x-openlinear-csrf': csrfToken");
+    expect(api).toContain("'x-basiclinear-csrf': csrfToken");
   });
 });

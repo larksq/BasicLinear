@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import type { Membership, SavedView } from '@openlinear/contracts';
-import { hasCapability } from '@openlinear/domain';
+import type { Membership, SavedView } from '@basiclinear/contracts';
+import { hasCapability } from '@basiclinear/domain';
 import {
   Archive,
   ArchiveRestore,

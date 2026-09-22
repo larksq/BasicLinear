@@ -34,7 +34,7 @@ Target coverage:
 - at least one team in the 3-10, 11-20, and 21-50 collaborator bands;
 - at least three participants who influence tooling or self-hosting decisions;
 - at least three different current issue-tracker contexts across the sample where feasible;
-- no project sponsor, current contributor, or person whose employer identity must enter the findings.
+- no project maintainer, current contributor, or person whose employer identity must enter the findings.
 
 The sample is purposive and qualitative. Counts and rankings may inform scope, but they must not be represented as market prevalence.
 

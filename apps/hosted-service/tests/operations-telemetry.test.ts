@@ -6,8 +6,8 @@ describe('ConsoleHostedOperationsTelemetrySink', () => {
 
   it('emits one structured Cloud Logging event with trace correlation and opaque fingerprints only', () => {
     const info = vi.spyOn(console, 'info').mockImplementation(() => {});
-    new ConsoleHostedOperationsTelemetrySink('openlinear-prod-1').write({
-      schemaVersion: 'openlinear.hosted-operations-telemetry.v1',
+    new ConsoleHostedOperationsTelemetrySink('basiclinear-prod-1').write({
+      schemaVersion: 'basiclinear.hosted-operations-telemetry.v1',
       id: 'request:request-telemetry-00000001',
       occurredAt: '2026-08-01T00:00:00.000Z',
       correlationId: 'request-telemetry-00000001',
@@ -29,7 +29,7 @@ describe('ConsoleHostedOperationsTelemetrySink', () => {
       component: 'hosted-operations',
       statusCode: 429,
       limited: true,
-      ['logging.googleapis.com/trace']: `projects/openlinear-prod-1/traces/${'d'.repeat(32)}`,
+      ['logging.googleapis.com/trace']: `projects/basiclinear-prod-1/traces/${'d'.repeat(32)}`,
     });
     expect(raw).not.toContain('Bearer ');
     expect(raw).not.toContain('example.com');

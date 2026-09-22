@@ -9,7 +9,7 @@
 - The real-PostgreSQL CT-11 matrix runs two simultaneous revision-1 writes for issue, project, milestone, label, saved view, workflow status, and comment entities.
 - Every case produces exactly one HTTP 200 and one HTTP 409. Each loser reports `currentRevision: 2`; persisted state is revision 2.
 - Per-case database assertions prove exactly one matching activity entry and one matching outbox effect. Sequential stale-write and idempotent-create behavior remains covered.
-- The immutable image `openlinear-test:ct11-final-r2` (`sha256:b073182b066e765bdda111ffa6f32a0befba85039e6cccd2794b781913cc325d`) passes typecheck, all 20 unit tests, and all 16 integration tests.
+- The immutable image `basiclinear-test:ct11-final-r2` (`sha256:b073182b066e765bdda111ffa6f32a0befba85039e6cccd2794b781913cc325d`) passes typecheck, all 20 unit tests, and all 16 integration tests.
 - The integration teardown uses bounded database-drop retries, avoiding forced backend termination and unhandled pool errors while preserving isolation.
 
 ## Requirement Trace

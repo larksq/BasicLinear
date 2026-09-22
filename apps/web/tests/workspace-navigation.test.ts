@@ -49,7 +49,7 @@ describe('single-owner navigation state', () => {
 
   it('canonicalizes explicit workspace selection and clears scoped record state', () => {
     const next = workspaceSelectionUrl(
-      'https://openlinear.test/?workspace=workspace-a&view=issues&issue=issue-a&project=project-a&layout=board&saved=view-a&q=release&fixture=workspace-route',
+      'https://basiclinear.test/?workspace=workspace-a&view=issues&issue=issue-a&project=project-a&layout=board&saved=view-a&q=release&fixture=workspace-route',
       'workspace-b',
       { resetSurface: true },
     );
@@ -64,7 +64,7 @@ describe('single-owner navigation state', () => {
 
   it('keeps supported same-surface state and removes all explicit scope', () => {
     const same = workspaceNavigationUrl(
-      'https://openlinear.test/?workspace=workspace-a&team=team-a&view=issues&layout=board&q=release&fixture=state',
+      'https://basiclinear.test/?workspace=workspace-a&team=team-a&view=issues&layout=board&q=release&fixture=state',
       'issues',
       'issues',
     );
@@ -82,7 +82,7 @@ describe('single-owner navigation state', () => {
 
   it('canonicalizes former team and saved-view navigation to owner scope', () => {
     const team = teamNavigationUrl(
-      'https://openlinear.test/?workspace=workspace-a&view=issues&team=team-a&issue=issue-a&fixture=team-route',
+      'https://basiclinear.test/?workspace=workspace-a&view=issues&team=team-a&issue=issue-a&fixture=team-route',
       'team-b',
       'projects',
     );
@@ -99,7 +99,7 @@ describe('single-owner navigation state', () => {
 
   it('clears record state from explicit legacy scopes and administration routes', () => {
     const scoped = ownerWorkspaceUrl(
-      'https://openlinear.test/?workspace=workspace-private&team=team-private&view=issues&issue=issue-private&fixture=legacy',
+      'https://basiclinear.test/?workspace=workspace-private&team=team-private&view=issues&issue=issue-private&fixture=legacy',
     );
     expect(scoped.searchParams.has('workspace')).toBe(false);
     expect(scoped.searchParams.has('team')).toBe(false);
@@ -108,7 +108,7 @@ describe('single-owner navigation state', () => {
     expect(scoped.searchParams.get('fixture')).toBe('legacy');
 
     const administration = ownerWorkspaceUrl(
-      'https://openlinear.test/?view=members&filter=private&fixture=legacy',
+      'https://basiclinear.test/?view=members&filter=private&fixture=legacy',
     );
     expect(administration.searchParams.get('view')).toBe('projects');
     expect(administration.searchParams.has('filter')).toBe(false);

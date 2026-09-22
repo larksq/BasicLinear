@@ -1,7 +1,7 @@
 import { StrictMode, lazy, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import '@fontsource-variable/inter/wght.css';
-import '@openlinear/ui/tokens.css';
+import '@basiclinear/ui/tokens.css';
 import './hosted.css';
 import { Homepage } from './homepage.js';
 import { isHostedApplicationEntry } from './homepage-entry.js';
@@ -25,7 +25,7 @@ const HostedApplication = lazy(async () => {
 function HostedUnavailable() {
   return <main className="hp hp-entry-status">
     <h1>The online app isn’t available here yet.</h1>
-    <p>This environment isn’t connected to the hosted service. You can still explore OpenLinear or follow the local setup guide.</p>
+    <p>This environment isn’t connected to the hosted service. You can still explore BasicLinear or follow the local setup guide.</p>
     <a className="hp-button" href={`${window.location.pathname}#getting-started`}>Back to setup guide</a>
   </main>;
 }
@@ -36,7 +36,7 @@ if (root === null) throw new Error('Application root is missing.');
 createRoot(root).render(
   <StrictMode>
     {isHostedApplicationEntry(window.location.search, window.location.hash)
-      ? <Suspense fallback={<main className="hosted-entry-loading" role="status">Opening OpenLinear…</main>}><HostedApplication /></Suspense>
+      ? <Suspense fallback={<main className="hosted-entry-loading" role="status">Opening BasicLinear…</main>}><HostedApplication /></Suspense>
       : <Homepage />}
   </StrictMode>,
 );

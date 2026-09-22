@@ -20,14 +20,14 @@ const memberUserId = 'member_google_456';
 const startedAt = '2026-08-01T00:00:00.000Z';
 const trialEndsAt = '2026-08-31T00:00:00.000Z';
 const secret = 'billing-secret-that-is-at-least-thirty-two-bytes';
-const monthlyPriceId = 'price_openlinear_monthly';
-const annualPriceId = 'price_openlinear_annual';
+const monthlyPriceId = 'price_basiclinear_monthly';
+const annualPriceId = 'price_basiclinear_annual';
 const principal: WorkspacePrincipal = {kind: 'user', userId: ownerUserId, source: 'web'};
 
 function seed(activeMember = true): Record<string, unknown> {
   return {
     [`workspaces/${workspaceId}`]: {
-      schemaVersion: 1, id: workspaceId, workspaceId, name: 'OpenLinear workspace',
+      schemaVersion: 1, id: workspaceId, workspaceId, name: 'BasicLinear workspace',
       ownerUid: ownerUserId, authority: 'firebase-hosted', createdAt: startedAt, revision: 1,
     },
     [`workspaces/${workspaceId}/entitlements/current`]: {
@@ -47,7 +47,7 @@ function seed(activeMember = true): Record<string, unknown> {
     } : {}),
     [`workspaces/${workspaceId}/invitations/inv_pending`]: {
       schemaVersion: 1, id: 'inv_pending', workspaceId, invitedEmail: 'pending@example.com',
-      inviterUserId: ownerUserId, inviterDisplayName: 'Owner', workspaceName: 'OpenLinear workspace',
+      inviterUserId: ownerUserId, inviterDisplayName: 'Owner', workspaceName: 'BasicLinear workspace',
       role: 'member', status: 'pending', createdAt: '2026-08-19T00:00:00.000Z',
       updatedAt: '2026-08-19T00:00:00.000Z', lastSentAt: '2026-08-19T00:00:00.000Z',
       expiresAt: '2026-08-26T00:00:00.000Z', acceptedAt: null, acceptedUserId: null,
@@ -904,8 +904,8 @@ describe('BillingService', () => {
       principal, workspaceId, requestId: 'request_billing_webhook_checkout',
       idempotencyKey: 'checkout-webhook-000001', plan: 'monthly',
     });
-    provider.subscriptions.set('sub_openlinear_1', {
-      id: 'sub_openlinear_1', customerId: 'cus_openlinear_1', workspaceId, ownerUserId,
+    provider.subscriptions.set('sub_basiclinear_1', {
+      id: 'sub_basiclinear_1', customerId: 'cus_basiclinear_1', workspaceId, ownerUserId,
       plan: 'monthly', priceId: monthlyPriceId, quantity: 1, status: 'active', automaticTaxEnabled: true,
       currentPeriodEnd: '2026-10-01T00:00:00.000Z', cancelAtPeriodEnd: false,
       providerUpdatedAt: '2026-09-01T00:00:00.000Z',
@@ -913,11 +913,11 @@ describe('BillingService', () => {
     const checkout = provider.sessions.get('cs_test_1');
     provider.sessions.set('cs_test_1', {
       ...(checkout as BillingProviderCheckoutSession), state: 'complete', url: null,
-      customerId: 'cus_openlinear_1', subscriptionId: 'sub_openlinear_1',
+      customerId: 'cus_basiclinear_1', subscriptionId: 'sub_basiclinear_1',
     });
     const notice = {
-      provider: billingProvider, eventId: 'evt_openlinear_1',
-      eventCreatedAt: '2026-09-01T00:05:01.000Z', subscriptionId: 'sub_openlinear_1',
+      provider: billingProvider, eventId: 'evt_basiclinear_1',
+      eventCreatedAt: '2026-09-01T00:05:01.000Z', subscriptionId: 'sub_basiclinear_1',
       checkoutSessionId: 'cs_test_1',
     };
     const first = await service.reconcileNotice(notice);
@@ -959,20 +959,20 @@ describe('BillingService', () => {
     expect(repository.readDocument(`workspaces/${workspaceId}/billing/current`))
       .toMatchObject({activeSeats: 2, status: 'active'});
 
-    provider.subscriptions.set('sub_openlinear_1', {
-      ...(provider.subscriptions.get('sub_openlinear_1') as BillingProviderSubscription),
+    provider.subscriptions.set('sub_basiclinear_1', {
+      ...(provider.subscriptions.get('sub_basiclinear_1') as BillingProviderSubscription),
       status: 'unpaid', providerUpdatedAt: '2026-09-01T00:06:00.000Z',
     });
     const unpaid = await service.reconcileNotice({
-      provider: billingProvider, eventId: 'evt_openlinear_2',
-      eventCreatedAt: '2026-09-01T00:06:00.000Z', subscriptionId: 'sub_openlinear_1',
+      provider: billingProvider, eventId: 'evt_basiclinear_2',
+      eventCreatedAt: '2026-09-01T00:06:00.000Z', subscriptionId: 'sub_basiclinear_1',
       checkoutSessionId: null,
     });
     expect(unpaid.mode).toBe('free');
     setNow('2026-09-01T00:07:00.000Z');
     const outOfOrder = await service.reconcileNotice({
-      provider: billingProvider, eventId: 'evt_openlinear_older',
-      eventCreatedAt: '2026-08-31T23:59:59.000Z', subscriptionId: 'sub_openlinear_1',
+      provider: billingProvider, eventId: 'evt_basiclinear_older',
+      eventCreatedAt: '2026-08-31T23:59:59.000Z', subscriptionId: 'sub_basiclinear_1',
       checkoutSessionId: null,
     });
     expect(outOfOrder.mode).toBe('free');
@@ -985,14 +985,14 @@ describe('BillingService', () => {
     })).rejects.toMatchObject({code: 'BILLING_CONFLICT'});
     expect(provider.sessions).toHaveLength(1);
 
-    provider.subscriptions.set('sub_openlinear_1', {
-      ...(provider.subscriptions.get('sub_openlinear_1') as BillingProviderSubscription),
+    provider.subscriptions.set('sub_basiclinear_1', {
+      ...(provider.subscriptions.get('sub_basiclinear_1') as BillingProviderSubscription),
       status: 'canceled', quantity: 1, providerUpdatedAt: '2026-09-01T00:07:00.000Z',
     });
     const quantityUpdatesBeforeCancellation = provider.quantityUpdates.length;
     const canceled = await service.reconcileNotice({
-      provider: billingProvider, eventId: 'evt_openlinear_canceled',
-      eventCreatedAt: '2026-09-01T00:07:00.000Z', subscriptionId: 'sub_openlinear_1',
+      provider: billingProvider, eventId: 'evt_basiclinear_canceled',
+      eventCreatedAt: '2026-09-01T00:07:00.000Z', subscriptionId: 'sub_basiclinear_1',
       checkoutSessionId: null,
     });
     expect(canceled).toMatchObject({mode: 'free', subscription: {status: 'canceled', activeSeats: 1}});
@@ -1003,8 +1003,8 @@ describe('BillingService', () => {
       principal, workspaceId, requestId: 'request_billing_terminal_recovery_checkout',
       idempotencyKey: 'checkout-terminal-recovery-01', plan: 'annual',
     });
-    provider.subscriptions.set('sub_openlinear_2', {
-      id: 'sub_openlinear_2', customerId: 'cus_openlinear_2', workspaceId, ownerUserId,
+    provider.subscriptions.set('sub_basiclinear_2', {
+      id: 'sub_basiclinear_2', customerId: 'cus_basiclinear_2', workspaceId, ownerUserId,
       plan: 'annual', priceId: annualPriceId, quantity: 1, status: 'active', automaticTaxEnabled: true,
       currentPeriodEnd: '2027-09-01T00:00:00.000Z', cancelAtPeriodEnd: false,
       providerUpdatedAt: '2026-09-01T00:08:00.000Z',
@@ -1012,29 +1012,29 @@ describe('BillingService', () => {
     const recoveryCheckout = provider.sessions.get('cs_test_2');
     provider.sessions.set('cs_test_2', {
       ...(recoveryCheckout as BillingProviderCheckoutSession), state: 'complete', url: null,
-      customerId: 'cus_openlinear_2', subscriptionId: 'sub_openlinear_2',
+      customerId: 'cus_basiclinear_2', subscriptionId: 'sub_basiclinear_2',
     });
     setNow('2026-09-01T00:08:02.000Z');
     const recovered = await service.reconcileNotice({
-      provider: billingProvider, eventId: 'evt_openlinear_recovered',
-      eventCreatedAt: '2026-09-01T00:08:01.000Z', subscriptionId: 'sub_openlinear_2',
+      provider: billingProvider, eventId: 'evt_basiclinear_recovered',
+      eventCreatedAt: '2026-09-01T00:08:01.000Z', subscriptionId: 'sub_basiclinear_2',
       checkoutSessionId: 'cs_test_2',
     });
     expect(recovered).toMatchObject({mode: 'paid_pro', subscription: {plan: 'annual', activeSeats: 2}});
     expect(repository.readDocument(`workspaces/${workspaceId}/billing/current`))
-      .toMatchObject({subscriptionId: 'sub_openlinear_2', customerId: 'cus_openlinear_2', plan: 'annual'});
-    expect(provider.quantityUpdates.at(-1)).toMatchObject({subscriptionId: 'sub_openlinear_2', quantity: 2});
+      .toMatchObject({subscriptionId: 'sub_basiclinear_2', customerId: 'cus_basiclinear_2', plan: 'annual'});
+    expect(provider.quantityUpdates.at(-1)).toMatchObject({subscriptionId: 'sub_basiclinear_2', quantity: 2});
     expect(new Set(provider.quantityUpdates.map((value) => value.idempotencyReference)).size)
       .toBe(provider.quantityUpdates.length);
 
     setNow('2026-09-01T00:09:00.000Z');
-    provider.subscriptions.set('sub_openlinear_2', {
-      ...(provider.subscriptions.get('sub_openlinear_2') as BillingProviderSubscription),
+    provider.subscriptions.set('sub_basiclinear_2', {
+      ...(provider.subscriptions.get('sub_basiclinear_2') as BillingProviderSubscription),
       cancelAtPeriodEnd: true, providerUpdatedAt: '2026-09-01T00:09:00.000Z',
     });
     const scheduled = await service.reconcileNotice({
-      provider: billingProvider, eventId: 'evt_openlinear_cancel_scheduled',
-      eventCreatedAt: '2026-09-01T00:09:00.000Z', subscriptionId: 'sub_openlinear_2',
+      provider: billingProvider, eventId: 'evt_basiclinear_cancel_scheduled',
+      eventCreatedAt: '2026-09-01T00:09:00.000Z', subscriptionId: 'sub_basiclinear_2',
       checkoutSessionId: null,
     });
     expect(scheduled).toMatchObject({mode: 'paid_pro', subscription: {cancelAtPeriodEnd: true}});

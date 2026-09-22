@@ -1,10 +1,8 @@
 # Hosted operations
 
-Updated September 21, 2026. The online edition is available at
-**[openlinear.qiaosun.me](https://openlinear.qiaosun.me/)**;
-[open the authenticated app](https://openlinear.qiaosun.me/?app) with Google
-sign-in. The custom-domain homepage and existing workspace access were checked
-in Chrome on September 21.
+Updated September 22, 2026. The public BasicLinear origin is
+**[basiclinear.qiaosun.me](https://basiclinear.qiaosun.me/)**. Its DNS record,
+Vercel binding, and HTTPS response are verified.
 
 The frontend runs on Vercel and calls a trusted Cloud Run API. Firebase
 Authentication supplies identity; Firestore stores hosted workspace data.
@@ -20,20 +18,27 @@ identities, Cloud Run services, and Vercel projects.
 
 | | Development | Production |
 | --- | --- | --- |
-| Frontend | [Development app](https://openlinear-development.vercel.app/) | [Canonical site](https://openlinear.qiaosun.me/) |
-| Vercel project | `openlinear-development` | `openlinear-online` |
+| Frontend | [Development app](https://basiclinear-development.vercel.app/) | [Public app](https://basiclinear.qiaosun.me/) |
+| Vercel project | `basiclinear-development` | `basiclinear-online` |
 | Cloud Run service | `openlinear-hosted-api-dev` | `openlinear-hosted-api` |
 | Current payment provider | Creem test mode | Creem live configuration |
 
-The production Vercel alias remains `openlinear-gray.vercel.app`; public links
-should use the custom domain. Development is the environment for test mutations.
-Building this repository does not create or configure provider resources.
+The canonical production URL is the BasicLinear custom domain. Development is
+the environment for test mutations. Cloud Run and Firebase resource identifiers
+retain their existing infrastructure names; they do not define the public
+product identity. Building this repository does not create or configure provider
+resources.
 
 The browser and service validate their selected environment and Firebase
 project bindings. The Vercel frontend contains public browser configuration;
 server credentials stay in Secret Manager and the API uses Application Default
 Credentials. The frontend routes `/api/**`, `/oauth/**`, `/mcp`, and supported
 discovery paths to its matching trusted backend.
+
+Deploy production with `ops/hosted/vercel-production.json` and development
+with `ops/hosted/vercel-development.json`. The root `vercel.json` is the
+production-safe default, so a deployment cannot accidentally route the public
+site to the development API.
 
 ## Billing and operational readiness
 
@@ -62,5 +67,5 @@ do not cap spending.
 - [Creem billing](../../docs/operations/creem-billing-runbook.md)
 - [Current product and release status](../../docs/status.md)
 
-Deployments and screenshots are implementation evidence. Final source release
-acceptance remains a separate review recorded by the release audit.
+Deployments and screenshots are implementation evidence. The source release is
+validated by the current technical release audit.

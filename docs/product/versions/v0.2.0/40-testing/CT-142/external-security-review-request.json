@@ -12,9 +12,9 @@
     "authority": "project-local-v0.8",
     "projection": "disabled_not_synced"
   },
-  "sponsor_decision": {
+  "maintainer_decision": {
     "option": "A_preserve_full_public_paid_launch_and_require_external_security_review",
-    "decision_ref": "docs/product/versions/v0.2.0/20-planning/ct142-security-skip-sponsor-decision.json",
+    "decision_ref": "docs/product/versions/v0.2.0/20-planning/ct142-security-skip-maintainer-decision.json",
     "skip_is_pass": false,
     "codex_security_testing_authorized": false
   },
@@ -23,7 +23,7 @@
     "reviewer_must_attest_explicit_authority": true,
     "target_environment_must_be_named": true,
     "target_accounts_and_workspaces_must_be_named_or_redacted_by_digest": true,
-    "production_testing": "prohibited unless the sponsor separately authorizes exact production targets and side effects in writing",
+    "production_testing": "prohibited unless the maintainer separately authorizes exact production targets and side effects in writing",
     "financial_provider_calls": "prohibited for this request",
     "destructive_or_persistent_side_effects": "prohibited unless separately enumerated and approved",
     "secret_or_personal_data_disclosure": "prohibited; evidence must be redacted"
@@ -86,7 +86,7 @@
   },
   "evidence_package": [
     {
-      "path": "docs/product/versions/v0.2.0/20-planning/ct142-security-skip-sponsor-decision.json",
+      "path": "docs/product/versions/v0.2.0/20-planning/ct142-security-skip-maintainer-decision.json",
       "sha256": "e66852c3488a4946f5b3f287b5c55f13669e252a835aa7eb27f92090670b91fd"
     },
     {
@@ -106,7 +106,7 @@
       "sha256": "f9b65d276d143e3539ae5ba02a0e308e03aed6fb5a54ea2822ec7718f82a3049"
     },
     {
-      "path": "docs/product/versions/v0.2.0/40-testing/CT-142/sponsor-security-skip.json",
+      "path": "docs/product/versions/v0.2.0/40-testing/CT-142/maintainer-security-skip.json",
       "sha256": "0c027cc06ceffeb9a41a937884982f919bc9ea5c480f8cd0ceee8083b61cf1ee"
     }
   ],

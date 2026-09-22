@@ -1,7 +1,7 @@
 import type {
   IssuePriority,
   UpdateIssueRequest,
-} from '@openlinear/contracts';
+} from '@basiclinear/contracts';
 import {
   nativeDateCommitDecision,
   nativeDateInputShouldSync,

@@ -2,7 +2,7 @@
 
 ## Recommendation
 
-Proceed to a bounded v0.2.0 plan for one hosted workspace, owner/member roles, Google sign-in, a no-card 30-day Pro trial, basic invite/assignment/comment collaboration, the sponsor's $2 monthly and $12 annual per-active-seat prices, and a PM-only REST/MCP/skill surface.
+Proceed to a bounded v0.2.0 plan for one hosted workspace, owner/member roles, Google sign-in, a no-card 30-day Pro trial, basic invite/assignment/comment collaboration, the maintainer's $2 monthly and $12 annual per-active-seat prices, and a PM-only REST/MCP/skill surface.
 
 ## Accepted boundaries
 

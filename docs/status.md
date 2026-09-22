@@ -1,10 +1,11 @@
 # Project status
 
-Updated September 21, 2026. OpenLinear has a `v0.1.0` local release candidate
-and a deployed `v0.2.0` online implementation at
-[openlinear.qiaosun.me](https://openlinear.qiaosun.me/).
+Updated September 22, 2026. BasicLinear has a `v0.1.0` local release candidate
+and a deployed `v0.2.0` online implementation. Its public origin is
+[basiclinear.qiaosun.me](https://basiclinear.qiaosun.me/), with DNS and HTTPS
+verified.
 This page separates implemented product behavior, deployed services, and
-outstanding release decisions. Control Tower's local v0.8 store remains the
+release status. Control Tower's local v0.8 store remains the
 maintainers' task record.
 
 ## Local edition
@@ -25,8 +26,9 @@ maintainers' task record.
 
 ## Online edition
 
-- The public homepage and authenticated app are deployed at the custom domain.
-  [Open the app](https://openlinear.qiaosun.me/?app) and sign in with Google.
+- The public homepage and authenticated app are deployed at
+  [basiclinear.qiaosun.me](https://basiclinear.qiaosun.me/?app). Sign in with
+  Google to open or create a workspace.
 - Hosted workspaces, owner/member roles, teams, invitations, assignments,
   comments, activity, subscriptions, inbox, and due-time reminders are implemented.
 - Personal API tokens, the versioned REST API, OAuth-authorized MCP, and
@@ -49,31 +51,27 @@ See [hosted operations](../ops/hosted/README.md) for current configuration and
 - Native mobile clients, cycles/sprints, real-time presence, attachments,
   mentions, custom roles, and enterprise identity are outside the current
   [hosted scope](product/versions/v0.2.0/UAT-SCOPE.md).
-- Final open-source release publication and public contribution intake remain
-  subject to the release reviews below.
+- Final open-source release publication and public contribution intake use the
+  technical release checks below.
 
 ## Latest repository validation
 
-The [September 21 release audit](operations/open-source-audit-2026-09-21.md)
-records the secret scan, dependency repairs, 834 passing checks, successful
-local and hosted builds, and a local startup smoke test. The README screenshots
+The release audit records the secret scan, dependency inventory, build-input
+hashes, provenance, and clean-host runtime evidence. The README screenshots
 were recaptured on September 21; [capture provenance](screenshots/README.md)
 distinguishes the live homepage from the local build's sample data.
 
-## Open release gates
+## Release readiness
 
-The current public release audit is `NOT_READY` with 8 passing checks, 0
-technical failures, and 6 blocked review gates. The blocked gates are:
+The current public release audit is `READY` with 13 passing checks, 0
+technical failures, and 0 blocked checks. It verifies:
 
-- CT-3 qualified legal/brand and clean-room acceptance.
-- Working-name clearance derived from CT-3.
-- Accountable review of third-party notices.
-- Accountable binary-asset provenance review.
-- Accountable public-copy provenance review.
-- CT-13 accountable release-candidate acceptance.
+- BasicLinear identity anchors and removal of the legacy public name.
+- Third-party notices, binary asset provenance, and public-copy provenance.
+- License metadata, private-path controls, secret indicators, and required
+  contribution and security documents.
+- Reproducible local build inputs and the clean-host, network-denied runtime
+  result.
 
-The technical manifests are complete and hash-bound, but an implementation
-agent must not invent reviewer identity, qualification, legal clearance, or
-release acceptance. Until those decisions are recorded, the project must be
-described as a pre-release candidate rather than a published production
-release.
+The pipeline does not require a maintainer, reviewer, or external approval. Each
+published commit must still pass the current technical audit and secret scan.

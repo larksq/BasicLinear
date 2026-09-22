@@ -18,7 +18,7 @@
     "secret_environment_files_copied": 0
   },
   "immutable_image": {
-    "name": "openlinear-test:ct11-final-r2",
+    "name": "basiclinear-test:ct11-final-r2",
     "id": "b073182b066e765bdda111ffa6f32a0befba85039e6cccd2794b781913cc325d",
     "size_bytes": 442958382
   },

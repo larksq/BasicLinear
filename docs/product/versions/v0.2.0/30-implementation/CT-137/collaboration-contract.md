@@ -30,4 +30,4 @@ Production local and hosted web entries are compiled in separate Vite input grap
 
 The boundary test performs two no-write hosted builds. The second injects an in-memory transform that would change the local HTML entry if Vite loaded it; the transform is never invoked, and every emitted hosted filename and byte remains identical. The generated hosted HTML resolves only its favicon, hosted JavaScript, and hosted stylesheet, with no local or editor preload. This makes local-entry inputs intentionally outside the hosted review seal while preserving the combined local/hosted build output.
 
-Local OpenLinear data remains a separate SQLite authority. No local upload, synchronization, or authority conversion is introduced.
+Local BasicLinear data remains a separate SQLite authority. No local upload, synchronization, or authority conversion is introduced.

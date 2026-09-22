@@ -3,11 +3,11 @@
   "environments": {
     "development": {
       "deploymentId": "dpl_DsyQFy5B8XCi6gge8obV3zzD441e",
-      "url": "https://openlinear-development-b137lbpvp-qsuns-projects.vercel.app",
+      "url": "https://basiclinear-development-b137lbpvp-qsuns-projects.vercel.app",
       "readyAt": "2026-09-18T06:29:15.986Z",
       "aliases": [
         "openlinear-development.vercel.app",
-        "openlinear-development-qsuns-projects.vercel.app"
+        "basiclinear-development-qsuns-projects.vercel.app"
       ],
       "state": "READY",
       "baseline": "dpl_9LEyatgZNCrRnYvcADjUbsVXRz5H"
@@ -17,7 +17,7 @@
       "url": "https://openlinear-online-p9xyhrfee-qsuns-projects.vercel.app",
       "readyAt": "2026-09-18T06:31:15.815Z",
       "aliases": [
-        "openlinear.qiaosun.me",
+        "basiclinear.qiaosun.me",
         "openlinear-gray.vercel.app",
         "openlinear-online-qsuns-projects.vercel.app"
       ],
@@ -31,7 +31,7 @@
     "apps/web/src/homepage-entry.ts": "f4532b109828ff86fd1ecbb960a27a07988b4927d416c72e4946830757a4e2c8",
     "apps/web/src/homepage.tsx": "342db4c9c2d625e0a57fc0d2d62d747ba91e5915d422a31d850af863852427fd",
     "apps/web/src/homepage.css": "e34bcc2aeb8eced2eae378c6c531e8c0dd8002a95c80f0b5e2b6e32a3e7e1a43",
-    "apps/web/public/openlinear-license.txt": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+    "apps/web/public/basiclinear-license.txt": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
     "apps/web/tests/homepage-entry.test.ts": "21706575d6d867ef14393d048126a3b4c1bab4ac13a07eb6631c01fa7809db33",
     "apps/web/tests/homepage-session.test.ts": "13dd6b32812beebc48859ea457740d411a2d1fcc52a53ff0d2dea224a7ef4590"
   },
@@ -53,7 +53,7 @@
         "type": "text/html; charset=utf-8"
       },
       {
-        "path": "/openlinear-license.txt",
+        "path": "/basiclinear-license.txt",
         "status": 200,
         "type": "text/plain; charset=utf-8"
       },
@@ -70,33 +70,33 @@
     ],
     "production": [
       {
-        "origin": "https://openlinear.qiaosun.me",
+        "origin": "https://basiclinear.qiaosun.me",
         "path": "/",
         "status": "200",
         "error": null,
-        "title": "OpenLinear \u2014 Open-source project management"
+        "title": "BasicLinear \u2014 Open-source project management"
       },
       {
-        "origin": "https://openlinear.qiaosun.me",
+        "origin": "https://basiclinear.qiaosun.me",
         "path": "/hosted.html",
         "status": "200",
         "error": null,
-        "title": "OpenLinear \u2014 Open-source project management"
+        "title": "BasicLinear \u2014 Open-source project management"
       },
       {
-        "origin": "https://openlinear.qiaosun.me",
-        "path": "/openlinear-license.txt",
+        "origin": "https://basiclinear.qiaosun.me",
+        "path": "/basiclinear-license.txt",
         "status": "200",
         "error": null
       },
       {
-        "origin": "https://openlinear.qiaosun.me",
+        "origin": "https://basiclinear.qiaosun.me",
         "path": "/api/v1/openapi.json",
         "status": "200",
         "error": null
       },
       {
-        "origin": "https://openlinear.qiaosun.me",
+        "origin": "https://basiclinear.qiaosun.me",
         "path": "/.well-known/oauth-authorization-server",
         "status": "200",
         "error": null
@@ -113,11 +113,11 @@
         "path": "/hosted.html",
         "status": "200",
         "error": null,
-        "title": "OpenLinear \u2014 Open-source project management"
+        "title": "BasicLinear \u2014 Open-source project management"
       },
       {
         "origin": "https://openlinear-gray.vercel.app",
-        "path": "/openlinear-license.txt",
+        "path": "/basiclinear-license.txt",
         "status": "200",
         "error": null
       },
@@ -149,7 +149,7 @@
       },
       {
         "origin": "https://openlinear-online-qsuns-projects.vercel.app",
-        "path": "/openlinear-license.txt",
+        "path": "/basiclinear-license.txt",
         "status": "200",
         "error": null
       },
@@ -169,7 +169,7 @@
         "origin": "https://openlinear-gray.vercel.app",
         "path": "/",
         "status": "200",
-        "title": "OpenLinear \u2014 Open-source project management",
+        "title": "BasicLinear \u2014 Open-source project management",
         "retry": true
       }
     ]

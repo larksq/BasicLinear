@@ -2,7 +2,7 @@
 
 ## Verdict
 
-`IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING`. OpenLinear now retains dirty issue content and new-comment drafts by issue identity while the Issues view remains mounted, restores the matching draft after navigation or responsive remount, and prevents draft or transient detail state from crossing issue or workspace identity.
+`IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING`. BasicLinear now retains dirty issue content and new-comment drafts by issue identity while the Issues view remains mounted, restores the matching draft after navigation or responsive remount, and prevents draft or transient detail state from crossing issue or workspace identity.
 
 ## Behavior
 

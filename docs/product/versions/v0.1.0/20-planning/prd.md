@@ -2,7 +2,7 @@
 
 ## Product statement
 
-OpenLinear is the internal working name for a free, self-hostable work-management system that lets one technically capable owner plan projects and milestones, execute issues, and review progress with reference-grade speed and information density. It is an independent clean-room implementation with distinct identity and no Linear runtime, synchronization, API, MCP, source, asset, or paid-service dependency.
+BasicLinear is the internal working name for a free, self-hostable work-management system that lets one technically capable owner plan projects and milestones, execute issues, and review progress with reference-grade speed and information density. It is an independent clean-room implementation with distinct identity and no Linear runtime, synchronization, API, MCP, source, asset, or paid-service dependency.
 
 `v0.1.0` succeeds when the owner can start one loopback process, receive the automatically provisioned owner and internal workspace/team context, complete the canonical project/milestone/issue/find/recovery workflow, preserve data through export and SQLite backup/restore, and pass the accepted trust and clean-room gates. The version is a coherent daily-use core, not a feature catalog.
 
@@ -84,4 +84,4 @@ Planning carries O-001 through O-005 byte-for-content unchanged from Discovery. 
 
 ## Release gates
 
-Implementation entry requires a valid Planning package and exact allowed Control Tower scope. CT-80 must prove SQLite persistence and canonical migration before CT-81 retires the supported Docker/PostgreSQL path. CT-82 independently proves clean local start, upgrade, backup, restore, rollback, and offline operation before CT-12 can close. Outcome Review waits for each original observation window. Public release additionally requires `CT-3`, `CT-13`, zero critical security/data-loss findings, current restore evidence, and complete clean-room audit. “OpenLinear” cannot appear as a cleared public brand until `CT-3` accepts it or replaces it.
+Implementation entry requires a valid Planning package and exact allowed Control Tower scope. CT-80 must prove SQLite persistence and canonical migration before CT-81 retires the supported Docker/PostgreSQL path. CT-82 independently proves clean local start, upgrade, backup, restore, rollback, and offline operation before CT-12 can close. Outcome Review waits for each original observation window. Public release additionally requires `CT-3`, `CT-13`, zero critical security/data-loss findings, current restore evidence, and complete clean-room audit. “BasicLinear” cannot appear as a cleared public brand until `CT-3` accepts it or replaces it.

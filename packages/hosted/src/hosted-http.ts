@@ -146,7 +146,7 @@ const writeJson = (
     'cache-control': 'no-store',
     'content-type': 'application/json; charset=utf-8',
     'x-content-type-options': 'nosniff',
-    'x-openlinear-request-id': correlationId,
+    'x-basiclinear-request-id': correlationId,
     ...extraHeaders,
   });
   response.end(JSON.stringify(body));
@@ -2601,8 +2601,8 @@ async function handleWorkspaceExport(
     });
     writeJson(response, 200, {data: exported}, correlationId, {
       'content-type': workspaceExportMediaType,
-      'content-disposition': `attachment; filename="openlinear-${workspaceId}-export-v1.json"`,
-      'x-openlinear-export-sha256': exported.sha256,
+      'content-disposition': `attachment; filename="basiclinear-${workspaceId}-export-v1.json"`,
+      'x-basiclinear-export-sha256': exported.sha256,
     });
   } catch (error) {
     writeProjectManagementServiceError(response, error, correlationId);
@@ -3108,7 +3108,7 @@ export function createHostedHttpHandler(options: HostedHttpHandlerOptions) {
         result.created ? 201 : 200,
         { data: publicResult(result) },
         correlationId,
-        { 'x-openlinear-bootstrap': result.created ? 'created' : 'existing' },
+        { 'x-basiclinear-bootstrap': result.created ? 'created' : 'existing' },
       );
     } catch (error) {
       if (error instanceof OwnerBootstrapInputError) {
@@ -3125,7 +3125,7 @@ export function createHostedHttpHandler(options: HostedHttpHandlerOptions) {
   };
   return async (request: IncomingMessage, response: ServerResponse): Promise<void> => {
     const correlationId = randomUUID();
-    const url = new URL(request.url ?? '/', 'https://openlinear.invalid');
+    const url = new URL(request.url ?? '/', 'https://basiclinear.invalid');
     if (!requestOriginAllowed(request, configuredOrigins)) {
       writeJson(
         response,

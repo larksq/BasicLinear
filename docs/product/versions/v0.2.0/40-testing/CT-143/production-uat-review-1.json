@@ -5,10 +5,10 @@
   "session": "CT143-INDEPENDENT-PRODUCTION-REVIEW-20260827",
   "environment": {
     "name": "production",
-    "url": "https://openlinear-gray.vercel.app",
+    "url": "https://basiclinear-gray.vercel.app",
     "browser": "user-selected Chrome",
-    "google_session": "existing sponsor account",
-    "project": "OpenLinear production launch"
+    "google_session": "existing maintainer account",
+    "project": "BasicLinear production launch"
   },
   "initial_auth_recovery": {
     "first_submit": "rejected_before_record_creation",
@@ -37,7 +37,7 @@
     "sub_issue_count": 1,
     "resource": {
       "label": "[CT-143 independent review 20260827] Production workspace",
-      "url": "https://openlinear-gray.vercel.app/"
+      "url": "https://basiclinear-gray.vercel.app/"
     },
     "visible_activity_count": 6
   },

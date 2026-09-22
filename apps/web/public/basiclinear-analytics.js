@@ -1,9 +1,9 @@
 /* Production-only GA4. No workspace content, raw URLs, or automatic form capture. */
 (() => {
   const measurementId = 'G-WP59LSRZSE';
-  const preferenceKey = 'openlinear.analytics-consent.v1';
+  const preferenceKey = 'basiclinear.analytics-consent.v1';
   const url = new URL(window.location.href);
-  if (url.hostname !== 'openlinear.qiaosun.me' || url.protocol !== 'https:') return;
+  if (url.hostname !== 'basiclinear.qiaosun.me' || url.protocol !== 'https:') return;
   if (!['/', '/hosted.html'].includes(url.pathname)) return;
   // Never load a third-party tag on authorization or private deep links.
   if ([...url.searchParams.keys()].some(key => !['app', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].includes(key))) return;
@@ -30,7 +30,7 @@
     window.gtag('config', measurementId, {
       send_page_view: false, allow_google_signals: false, allow_ad_personalization_signals: false,
       page_location: safeLocation.href, page_referrer: referrer,
-      page_title: url.searchParams.has('app') ? 'OpenLinear App' : 'OpenLinear Home',
+      page_title: url.searchParams.has('app') ? 'BasicLinear App' : 'BasicLinear Home',
     });
     window.gtag('event', 'page_view');
     const script = document.createElement('script');

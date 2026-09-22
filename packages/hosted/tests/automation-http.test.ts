@@ -95,7 +95,7 @@ function fixture() {
   });
   const mcpOAuthService = new McpOAuthService(repository, authorization, {
     secret: 'automation-http-mcp-oauth-secret-at-least-32',
-    publicOrigin: 'https://openlinear.test',
+    publicOrigin: 'https://basiclinear.test',
     clock: () => new Date('2027-01-02T00:00:00.000Z'),
     idFactory,
     randomSecret: () => new Uint8Array(32).fill(23),
@@ -119,7 +119,7 @@ function fixture() {
     projectManagementService: pmService,
     restApiHandler,
     mcpHttpHandler,
-    allowedOrigins: ['https://openlinear.test'],
+    allowedOrigins: ['https://basiclinear.test'],
   });
   const invoke = async (
     method: string,
@@ -127,7 +127,7 @@ function fixture() {
     headers: IncomingHttpHeaders = {},
     body = '',
   ): Promise<TestResponse> => {
-    const normalizedHeaders: IncomingHttpHeaders = {host: 'openlinear.test', ...headers};
+    const normalizedHeaders: IncomingHttpHeaders = {host: 'basiclinear.test', ...headers};
     const request = Readable.from(body === '' ? [] : [body]) as unknown as IncomingMessage;
     const headerEntries = Object.entries(normalizedHeaders).flatMap(([name, raw]) => (
       (Array.isArray(raw) ? raw : [raw]).flatMap((value) => (
@@ -160,7 +160,7 @@ function fixture() {
 
 const browserHeaders = (key?: string): IncomingHttpHeaders => ({
   authorization: 'Bearer owner-google-token-automation-http',
-  origin: 'https://openlinear.test',
+  origin: 'https://basiclinear.test',
   'content-type': 'application/json',
   ...(key === undefined ? {} : {'idempotency-key': key}),
 });
@@ -242,7 +242,7 @@ describe('hosted automation HTTP integration', () => {
 
     const apiHeaders = {
       authorization: `Bearer ${credential.rawToken}`,
-      origin: 'https://openlinear.test',
+      origin: 'https://basiclinear.test',
       'content-type': 'application/json',
       'idempotency-key': 'automation-http-project-key-0001',
     };
@@ -258,8 +258,8 @@ describe('hosted automation HTTP integration', () => {
     );
     expect(exported.status).toBe(200);
     expect(exported.headers['content-type'])
-      .toBe('application/vnd.openlinear.workspace-export+json;version=1');
-    expect(exported.headers['x-openlinear-export-sha256']).toMatch(/^[a-f0-9]{64}$/u);
+      .toBe('application/vnd.basiclinear.workspace-export+json;version=1');
+    expect(exported.headers['x-basiclinear-export-sha256']).toMatch(/^[a-f0-9]{64}$/u);
     expect(JSON.stringify(exported.body)).not.toContain(credential.rawToken);
 
     const revoked = await context.invoke(
@@ -269,7 +269,7 @@ describe('hosted automation HTTP integration', () => {
     expect(revoked.status).toBe(200);
     const denied = await context.invoke(
       'GET', `/api/v1/workspaces/${workspaceId}/projects`, {
-        authorization: `Bearer ${credential.rawToken}`, origin: 'https://openlinear.test',
+        authorization: `Bearer ${credential.rawToken}`, origin: 'https://basiclinear.test',
       },
     );
     expect(denied.status).toBe(401);
@@ -299,7 +299,7 @@ describe('hosted automation HTTP integration', () => {
       }},
     });
     const headers = {
-      origin: 'https://openlinear.test',
+      origin: 'https://basiclinear.test',
       accept: 'application/json, text/event-stream',
       'content-type': 'application/json',
       'content-length': String(Buffer.byteLength(body)),

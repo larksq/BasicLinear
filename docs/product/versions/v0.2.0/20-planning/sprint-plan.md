@@ -24,4 +24,4 @@ Use schema and static checks for OpenAPI/MCP/skill contracts; unit tests for dom
 
 ## Human and provider boundaries
 
-Creating a real Firebase project, enabling Google identity, registering OAuth clients/redirects, accepting service terms, adding billing, configuring Stripe, creating prices, or issuing production credentials requires separate runtime authority at the action point. Planning does none of those actions. T-SECURITY-MCP authorizes the standards-compatible design but not provider configuration. A pricing-change recommendation from T-VALIDATE-PRICING requires sponsor direction before altering $2/$12 or the 30-day trial.
+Creating a real Firebase project, enabling Google identity, registering OAuth clients/redirects, accepting service terms, adding billing, configuring Stripe, creating prices, or issuing production credentials requires separate runtime authority at the action point. Planning does none of those actions. T-SECURITY-MCP authorizes the standards-compatible design but not provider configuration. A pricing-change recommendation from T-VALIDATE-PRICING requires maintainer direction before altering $2/$12 or the 30-day trial.

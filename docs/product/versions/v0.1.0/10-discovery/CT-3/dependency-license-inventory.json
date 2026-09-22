@@ -30,7 +30,7 @@
     "workspace_license_declared_count": 9,
     "workspace_license_undeclared_count": 0,
     "declared_license": "AGPL-3.0-only",
-    "reason": "The sponsor selected AGPL-3.0-only on 2026-08-21; the root and all workspace manifests apply it."
+    "reason": "The maintainer selected AGPL-3.0-only on 2026-08-21; the root and all workspace manifests apply it."
   },
   "notable_groups": [
     {

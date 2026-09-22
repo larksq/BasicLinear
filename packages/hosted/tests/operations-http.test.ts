@@ -26,7 +26,7 @@ let now: Date;
 function sourceEconomics(): HostedEconomicsRecord[] {
   return [
     {
-      schemaVersion: 'openlinear.hosted-measurement.v1',
+      schemaVersion: 'basiclinear.hosted-measurement.v1',
       id: 'economics:http-cost',
       workspaceId: 'workspace-http-operations',
       provider: 'firebase',
@@ -40,7 +40,7 @@ function sourceEconomics(): HostedEconomicsRecord[] {
       retrievedAt: '2026-08-01T01:00:00.000Z',
     },
     {
-      schemaVersion: 'openlinear.hosted-measurement.v1',
+      schemaVersion: 'basiclinear.hosted-measurement.v1',
       id: 'economics:http-revenue',
       workspaceId: 'workspace-http-operations',
       provider: 'stripe',
@@ -58,7 +58,7 @@ function sourceEconomics(): HostedEconomicsRecord[] {
 
 function budgetEnvelope(): Record<string, unknown> {
   const payload = {
-    budgetDisplayName: 'OpenLinear pilot budget',
+    budgetDisplayName: 'BasicLinear pilot budget',
     costAmount: 13,
     costIntervalStart: '2026-08-01T00:00:00Z',
     budgetAmount: 25,
@@ -78,7 +78,7 @@ function budgetEnvelope(): Record<string, unknown> {
       messageId: '9876543210',
       publishTime: '2026-08-01T04:00:00Z',
     },
-    subscription: 'projects/openlinear-uat/subscriptions/budget-alerts',
+    subscription: 'projects/basiclinear-uat/subscriptions/budget-alerts',
   };
 }
 
@@ -105,15 +105,15 @@ async function fixture(options: {controlClock?: () => Date} = {}) {
     expiresAt: '2026-08-02T03:00:00.000Z',
     budgetIntervalStart: '2026-08-01T00:00:00.000Z',
     providerReferences: {
-      budgetDisplayName: 'OpenLinear pilot budget',
+      budgetDisplayName: 'BasicLinear pilot budget',
       billingAccountId: '000AAA-BBB111-CCC222',
       budgetId: 'budget-operations-http',
-      pubsubSubscription: 'projects/openlinear-uat/subscriptions/budget-alerts',
+      pubsubSubscription: 'projects/basiclinear-uat/subscriptions/budget-alerts',
       cloudRunService: 'openlinear-hosted-api',
-      cloudArmorPolicy: 'openlinear-hosted-edge',
-      billingExportDataset: 'openlinear_billing_export',
-      backupBucket: 'openlinear-firestore-backups',
-      restoreProject: 'restore-drill-openlinear-uat',
+      cloudArmorPolicy: 'basiclinear-hosted-edge',
+      billingExportDataset: 'basiclinear_billing_export',
+      backupBucket: 'basiclinear-firestore-backups',
+      restoreProject: 'restore-drill-basiclinear-uat',
     },
     paidWorkspaceIds: ['workspace-http-operations'],
     economics,
@@ -164,7 +164,7 @@ async function invoke(
   const tokens = options.tokens ?? [providerToken];
   const request = Readable.from([options.body]) as unknown as IncomingMessage;
   const rawHeaders = [
-    'Host', 'openlinear.test',
+    'Host', 'basiclinear.test',
     'Content-Type', contentType,
     'Content-Length', String(Buffer.byteLength(options.body, 'utf8')),
     ...tokens.flatMap((token) => ['Authorization', `Bearer ${token}`]),
@@ -173,7 +173,7 @@ async function invoke(
     method: 'POST',
     url: '/api/v1/hosted/operations/budget-notice',
     headers: {
-      host: 'openlinear.test',
+      host: 'basiclinear.test',
       'content-type': contentType,
       'content-length': String(Buffer.byteLength(options.body, 'utf8')),
       authorization: `Bearer ${tokens[0] ?? ''}`,
@@ -210,8 +210,8 @@ async function invokeHealth(
   Object.assign(request, {
     method: 'GET',
     url: '/health/ready',
-    headers: {host: 'openlinear.test'},
-    rawHeaders: ['Host', 'openlinear.test'],
+    headers: {host: 'basiclinear.test'},
+    rawHeaders: ['Host', 'basiclinear.test'],
   });
   let status = 0;
   let payload = '';

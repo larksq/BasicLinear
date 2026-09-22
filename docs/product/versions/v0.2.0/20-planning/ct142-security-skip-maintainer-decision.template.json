@@ -1,5 +1,5 @@
 {
-  "schema_version": "ct142-security-skip-sponsor-decision-v1",
+  "schema_version": "ct142-security-skip-maintainer-decision-v1",
   "status": "pending",
   "issue": "CT-142",
   "decision_artifact": "docs/product/versions/v0.2.0/20-planning/ct142-security-skip-resolution-options.md",

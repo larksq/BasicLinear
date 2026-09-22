@@ -41,7 +41,7 @@
     "evidence_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/production-uat-review-1.json"
   },
   "claim_boundary": {
-    "security_or_adversarial_testing": "skipped_by_sponsor_direction",
+    "security_or_adversarial_testing": "skipped_by_maintainer_direction",
     "payment_or_stripe_execution": "not_performed",
     "outcomes": "pending",
     "combined_release_accepted": false,

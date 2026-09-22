@@ -26,7 +26,7 @@ The shipped CSS consumed `var(--ol-text-subtle)` for connection correlation IDs,
 - Typecheck: all 8 workspaces passed.
 - Production build: 1,948 modules, 105 output files, and 1,890,920 output bytes, without warnings.
 - Release-audit regression: 6 / 6 tests passed.
-- Isolated rebuilt process: `ready` and `live` at `http://127.0.0.1:4281/` from `/tmp/openlinear-ct101-20260822-1206`.
+- Isolated rebuilt process: `ready` and `live` at `http://127.0.0.1:4281/` from `/tmp/basiclinear-ct101-20260822-1206`.
 - Served HTML references `index-DvgrHPGW.js` and `index-BVLPlYtU.css`; the CSS hash matches the local build, contains one Light and two Dark/System-Dark subtle values, three definitions and three consumers, no undefined `--ol-*` consumer, and the expected connection, query-error, and workflow-status rules.
 - Rendered Chrome captures: 0.
 

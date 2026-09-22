@@ -7,7 +7,7 @@
 ## Test Environment
 
 - Independent actor/session: `codex-testing-ct11` / `CT11-TEST-20260819T213417Z`.
-- Immutable test image: `openlinear-test:ct11-final-r2`, ID `b073182b066e765bdda111ffa6f32a0befba85039e6cccd2794b781913cc325d`, 442,958,382 bytes.
+- Immutable test image: `basiclinear-test:ct11-final-r2`, ID `b073182b066e765bdda111ffa6f32a0befba85039e6cccd2794b781913cc325d`, 442,958,382 bytes.
 - Matching release images: API `bfe66f44`, web `6a163b38`, operator `8c14b3de`.
 - Real disposable PostgreSQL databases were created per integration run. The exact immutable filesystem ran as image UID 503.
 - Live ingress: `http://localhost:4175`; readiness HTTP 200; synthetic owner remained authenticated in Chrome.

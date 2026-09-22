@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.invalid/openlinear/ct-1/session-record.schema.json",
+  "$id": "https://example.invalid/basiclinear/ct-1/session-record.schema.json",
   "title": "CT-1 anonymized session record",
   "type": "object",
   "additionalProperties": false,

@@ -1,12 +1,12 @@
-import type { WorkspaceEvent } from '@openlinear/contracts';
-import { AppError } from '@openlinear/domain';
-import type { OpenLinearDatabase } from './client.js';
+import type { WorkspaceEvent } from '@basiclinear/contracts';
+import { AppError } from '@basiclinear/domain';
+import type { BasicLinearDatabase } from './client.js';
 import { requireOwnerScope } from './helpers.js';
 
 const maximumCursor = 9_223_372_036_854_775_807n;
 
 export async function listWorkspaceEvents(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   afterCursor: string,

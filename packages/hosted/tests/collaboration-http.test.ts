@@ -83,7 +83,7 @@ function fixture() {
     body = '',
   ): Promise<TestResponse> => {
     const request = Readable.from(body === '' ? [] : [body]) as unknown as IncomingMessage;
-    Object.assign(request, { method, url: path, headers: { host: 'openlinear.test', ...headers } });
+    Object.assign(request, { method, url: path, headers: { host: 'basiclinear.test', ...headers } });
     let status = 0;
     let responseHeaders: Record<string, string> = {};
     let payload = '';

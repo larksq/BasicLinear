@@ -15,7 +15,7 @@ The canonical machine objects, including immutable digests, are in `discovery-pa
 
 ## O-002 Reference interaction efficiency
 
-- **Population:** the configured owner completing the eight approved project, milestone, issue, view, and detail tasks in matched OpenLinear and approved reference conditions.
+- **Population:** the configured owner completing the eight approved project, milestone, issue, view, and detail tasks in matched BasicLinear and approved reference conditions.
 - **Metric:** median percentage overhead in task completion time, with interaction count reported as a diagnostic.
 - **Baseline:** measurement required; `CT-2` produced an internal diagnostic, but qualified acceptance of the matched reference evidence remains required.
 - **Provisional target:** no more than `10%` median time overhead during 2026-09-05 through 2026-10-20; earliest review 2026-10-21. Planning cannot accept this threshold until the baseline is measured.
@@ -51,7 +51,7 @@ The canonical machine objects, including immutable digests, are in `discovery-pa
 - **Target:** `100%` during 2026-10-24 through 2026-11-12; earliest review 2026-11-13.
 - **Guardrail:** private authenticated reference artifacts found in the distribution must remain `0`.
 - **Invalidation:** any audit result below `100%` at release decision.
-- **Status:** ready for Planning; low confidence until `CT-3` resolves the requested public identity and qualified license/release review ownership. The sponsor-selected `AGPL-3.0-only` metadata is already applied.
+- **Status:** ready for Planning; low confidence until `CT-3` resolves the requested public identity and qualified license/release review ownership. The maintainer-selected `AGPL-3.0-only` metadata is already applied.
 
 ## Measurement integrity
 

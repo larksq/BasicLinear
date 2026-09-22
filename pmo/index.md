@@ -9,7 +9,7 @@ research_basis: "live-web-and-confirmed-input"
 
 ## Purpose
 
-This index is the governed entry point for OpenLinear's product-management corpus. The documents turn a broad ambition, replacing Linear's core experience with a free open-source product, into evidence-labeled scope, measurable outcomes, testable requirements, explicit risks, and a staged delivery path. They are decision support rather than implementation completion evidence. Control Tower owns live work state; these files own draft product intent and traceability.
+This index is the governed entry point for BasicLinear's product-management corpus. The documents turn a broad ambition, replacing Linear's core experience with a free open-source product, into evidence-labeled scope, measurable outcomes, testable requirements, explicit risks, and a staged delivery path. They are decision support rather than implementation completion evidence. Control Tower owns live work state; these files own draft product intent and traceability.
 
 ## Document map
 
@@ -31,15 +31,15 @@ This index is the governed entry point for OpenLinear's product-management corpu
 
 ## Reading order
 
-New contributors should read the project brief, research register, product definition, and first-release boundary first. Designers should then read the user journey, requirements, measures, and risk controls. Engineers should read requirements, operating loop, roadmap, and assumptions before proposing architecture. Reviewers should start with success measures and risk controls, then trace any disputed claim back through the requirements matrix to its source record.
+New contributors should read the project brief, research register, product definition, and first-release boundary first. Designers should then read the user journey, requirements, measures, and risk controls. Engineers should read requirements, operating loop, roadmap, and assumptions before proposing architecture. Anyone checking a disputed claim should start with success measures and risk controls, then trace it through the requirements matrix to its source record.
 
-The corpus uses stable identifiers across documents. Evidence is labeled `E-*`, outcomes `O-*`, requirements `R-*`, risks `RK-*`, and validation work `V-*`. A reference does not make a claim true; it makes the reasoning auditable. Verified facts, sponsor-confirmed input, inference, recommendation, assumption, and evidence gap remain distinguishable.
+The corpus uses stable identifiers across documents. Evidence is labeled `E-*`, outcomes `O-*`, requirements `R-*`, risks `RK-*`, and validation work `V-*`. A reference does not make a claim true; it makes the reasoning auditable. Verified facts, maintainer-confirmed input, inference, recommendation, assumption, and evidence gap remain distinguishable.
 
-## Review cadence
+## Working cadence
 
-The project uses the Control Tower lifecycle. Discovery artifacts are reviewed before Sprint Planning; Planning fixes architecture, acceptance, UX, and the issue graph; Implementation produces bounded candidate slices; Testing independently verifies functional, visual, accessibility, privacy, and migration behavior; Outcome Review waits for valid observation windows; Retrospective converts repeated friction into bounded improvements. Material scope, legal posture, security boundary, release readiness, and outcome decisions use the Heavy approval posture defined in the decision policy.
+The project uses the Control Tower lifecycle. Discovery records the evidence needed for Sprint Planning; Planning defines architecture, acceptance, UX, and the issue graph; Implementation produces bounded candidate slices; Testing verifies functional, visual, accessibility, privacy, and migration behavior; Outcome Review waits for valid observation windows; Retrospective converts repeated friction into bounded improvements. Material scope, legal posture, security boundary, release readiness, and outcome decisions are maintainer decisions supported by current evidence.
 
-At each stage gate, reviewers check document freshness, source accessibility, unresolved assumptions, task readback, requirement-to-test coverage, and whether new evidence invalidates an earlier conclusion. The index changes whenever a governed document is added, retired, or materially re-scoped. Ordinary wording corrections do not alter stage authority.
+Each stage checks document freshness, source accessibility, unresolved assumptions, task readback, requirement-to-test coverage, and whether new evidence invalidates an earlier conclusion. The index changes whenever a governed document is added, retired, or materially re-scoped. Ordinary wording corrections do not alter its purpose.
 
 ## Evidence and sources
 

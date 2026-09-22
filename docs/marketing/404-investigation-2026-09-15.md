@@ -36,7 +36,7 @@ Historical counts remain unchanged. Future requests for these two resources shou
 
 ## Released and verified
 
-Production deployment `dpl_48t9CKB3RZuiYQV45nqbXTfmwU3s` reached Ready on 2026-09-15 at 01:06 UTC and was assigned to `openlinear.qiaosun.me` and both existing Vercel aliases. It reuses 531 original source files and adds the two resources (the old file listing also contained an empty directory, which is not an uploaded file).
+Production deployment `dpl_48t9CKB3RZuiYQV45nqbXTfmwU3s` reached Ready on 2026-09-15 at 01:06 UTC and was assigned to `basiclinear.qiaosun.me` and both existing Vercel aliases. It reuses 531 original source files and adds the two resources (the old file listing also contained an empty directory, which is not an uploaded file).
 
 The remote production environment validation, TypeScript check, and Vite build passed. JS and CSS retained their original hashed filenames. At 01:07 UTC, all 11 HTTP checks passed on the main domain: the two fixed resources returned 200 with correct MIME types and byte-for-byte content; homepage, hosted entry, SVG, JS, CSS, OpenAPI and OAuth discovery returned 200; `.env` and `/about` still returned 404. [HTTP evidence](evidence/404-fix-verification-2026-09-15.json).
 

@@ -12,7 +12,7 @@ Make one owner, one implicit workspace, and one implicit team the only reachable
 
 ## Execution
 
-1. Reduced primary navigation to My work, Projects, Issues, Views, and Workflow, with one fixed OpenLinear brand and no account footer or administrative destinations.
+1. Reduced primary navigation to My work, Projects, Issues, Views, and Workflow, with one fixed BasicLinear brand and no account footer or administrative destinations.
 2. Added a bodyless local-owner session endpoint with fixed defaults. First run bootstraps the owner context; a returning fixed owner can receive a fresh session after cookie expiry. Non-loopback peers are rejected before database access.
 3. Removed setup, login, logout, password, OIDC, workspace creation, team creation, and membership creation methods from the web client.
 4. Canonicalized legacy workspace/team/admin URLs to the owner surface, deleting record-specific state when the former scope is present.
@@ -46,4 +46,4 @@ CT-78 implementation is complete. CT-80 must preserve the fixed owner/scope beha
 
 ## Completion Readback
 
-After explicit sponsor authorization, the local task helper backed up the authoritative store and advanced CT-78 from revision 4 to `Done@5`. Reconciliation then advanced CT-12 to `In Progress@58` and CT-13 to `Todo@59`. All three readbacks retained stable IDs, milestones, healthy local authority, and disabled/`not_synced` provider projection.
+After explicit maintainer authorization, the local task helper backed up the authoritative store and advanced CT-78 from revision 4 to `Done@5`. Reconciliation then advanced CT-12 to `In Progress@58` and CT-13 to `Todo@59`. All three readbacks retained stable IDs, milestones, healthy local authority, and disabled/`not_synced` provider projection.

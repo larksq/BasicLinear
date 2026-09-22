@@ -6,7 +6,7 @@ import {completeHostedOwnerSignIn} from '../src/hosted-owner-entry.js';
 const bootstrapResponse = {
   created: true,
   user: {id: 'owner-1', email: 'owner@example.com', displayName: 'Owner', provider: 'google.com'},
-  workspace: {id: 'workspace-1', name: 'OpenLinear workspace', authority: 'firebase-hosted'},
+  workspace: {id: 'workspace-1', name: 'BasicLinear workspace', authority: 'firebase-hosted'},
   membership: {id: 'membership-1', role: 'owner', status: 'active'},
   trial: {
     id: 'trial-1',

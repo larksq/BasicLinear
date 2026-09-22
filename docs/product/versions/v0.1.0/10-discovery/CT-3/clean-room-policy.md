@@ -1,6 +1,6 @@
 # Clean-Room Reference and Release Policy
 
-Status: restrictive working control; AGPL sponsor choice applied; identity and qualified release acceptance pending
+Status: restrictive working control; AGPL maintainer choice applied; identity and qualified release acceptance pending
 
 Effective: 2026-08-20
 
@@ -42,7 +42,7 @@ CT-2 retains only aggregate task timings and interaction counts in tracked Disco
 
 The product may pursue equivalent task coverage, dense information architecture, responsive behavior, accessibility, keyboard efficiency, and high visual quality. Acceptance must use independently created product baselines with synthetic data. Direct pixel comparison to authenticated vendor screens is paused.
 
-Public quality claims must describe measured behavior or eligible-user outcomes, not proprietary visual equivalence. The sponsor-requested OpenLinear product brand is not cleared and has a current exact-name collision; Scopefold remains the distinct project-identity candidate. The public product must use a name, logo, color system, typography, icon treatment, copy, and overall visual expression accepted by the qualified reviewer.
+Public quality claims must describe measured behavior or eligible-user outcomes, not proprietary visual equivalence. The maintainer-requested BasicLinear product brand is not cleared and has a current exact-name collision; BasicLinear remains the distinct project-identity candidate. The public product must use a name, logo, color system, typography, icon treatment, copy, and overall visual expression accepted by the qualified reviewer.
 
 ## Asset Provenance
 
@@ -59,7 +59,7 @@ Third-party code and icons require a locked inventory and applicable license or 
 
 ## Measurement Boundary
 
-Allowed now: OpenLinear-only performance tests, synthetic workflow completion, accessibility checks, responsive checks, public-document requirements traceability, and eligible-user studies that do not require authenticated competitor access.
+Allowed now: BasicLinear-only performance tests, synthetic workflow completion, accessibility checks, responsive checks, public-document requirements traceability, and eligible-user studies that do not require authenticated competitor access.
 
 Held for review: authenticated competitor task timings, screenshots, dimensions, DOM-derived measurements, automated navigation, and any comparative advertising based on those observations.
 
@@ -67,7 +67,7 @@ Held for review: authenticated competitor task timings, screenshots, dimensions,
 
 Public release is blocked until all of the following are recorded:
 
-- qualified acceptance of the sponsor-selected `AGPL-3.0-only` license and Scopefold/OpenLinear identity model;
+- qualified acceptance of the maintainer-selected `AGPL-3.0-only` license and BasicLinear/BasicLinear identity model;
 - qualified disposition of existing authenticated-reference evidence and measurements;
 - distinct identity and trade-dress review;
 - complete source, asset, font, icon, and copy provenance;

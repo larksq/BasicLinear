@@ -1,7 +1,6 @@
 {
-  "schema_version": "public-release-policy-v1",
-  "issue": "CT-13",
-  "test": "P-T22",
+  "schema_version": "public-release-policy-v2",
+  "release": "BasicLinear open-source release",
   "ignored_roots": [
     ".git",
     ".control-tower",
@@ -23,11 +22,7 @@
   ],
   "source_digest_exclusions": [
     "ops/release/asset-provenance.json",
-    "ops/release/copy-provenance.json",
-    "ops/release/review-request.json",
-    "ops/release/review-acceptance.json",
-    "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-request.json",
-    "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-acceptance.json"
+    "ops/release/copy-provenance.json"
   ],
   "private_file_suffixes": [
     ".db",
@@ -46,54 +41,66 @@
   ],
   "required_manifests": [
     "ops/release/asset-provenance.json",
-    "ops/release/copy-provenance.json",
-    "ops/release/review-acceptance.json"
+    "ops/release/copy-provenance.json"
   ],
-  "review_request_manifest": "ops/release/review-request.json",
-  "qualified_identity_review": {
-    "request_manifest": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-request.json",
-    "acceptance_manifest": "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-acceptance.json",
-    "required_sponsor_decision": {
-      "license": "AGPL-3.0-only",
-      "project_identity": "Scopefold",
-      "requested_final_product_brand": "OpenLinear"
-    },
-    "accepted_identity_patterns": ["OpenLinear", "openlinear", "@openlinear/"],
-    "evidence_documents": [
-      "LICENSE",
-      "THIRD_PARTY_NOTICES.md",
-      "CONTRIBUTING.md",
-      "SECURITY.md",
-      "docs/product/versions/v0.1.0/10-discovery/CT-3/decision-record.md",
-      "docs/product/versions/v0.1.0/10-discovery/CT-3/sponsor-confirmation.md",
-      "docs/product/versions/v0.1.0/10-discovery/CT-3/license-comparison.md",
-      "docs/product/versions/v0.1.0/10-discovery/CT-3/clean-room-policy.md",
-      "docs/product/versions/v0.1.0/10-discovery/CT-3/name-screen.md",
-      "docs/product/versions/v0.1.0/10-discovery/CT-3/source-register.json",
-      "docs/product/versions/v0.1.0/10-discovery/CT-3/evidence.md",
-      "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-guide.md",
-      "ops/release/dependency-license-inventory.json",
-      "ops/release/third-party-notices.json",
-      "ops/release/asset-provenance.json",
-      "ops/release/copy-provenance.json"
-    ]
+  "public_identity": {
+    "name": "BasicLinear",
+    "package_scope": "@basiclinear/",
+    "public_origin": "https://basiclinear.qiaosun.me"
   },
-  "decision_result": "docs/product/versions/v0.1.0/10-discovery/CT-3/result.json",
+  "identity_anchors": [
+    {"path": "package.json", "contains": "\"name\": \"basiclinear\""},
+    {"path": "README.md", "contains": "# BasicLinear"},
+    {"path": "apps/web/src/homepage.tsx", "contains": "BasicLinear"},
+    {"path": "apps/web/src/ai-mcp-guide.tsx", "contains": "https://basiclinear.qiaosun.me/mcp"},
+    {"path": "apps/web/public/basiclinear-analytics.js", "contains": "basiclinear.qiaosun.me"}
+  ],
+  "legacy_identity_patterns": ["OpenLinear", "openlinear", "@openlinear/", "Scopefold", "scopefold"],
+  "identity_scan_roots": [
+    "README.md",
+    "package.json",
+    "package-lock.json",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "apps/api/src",
+    "apps/hosted-service/src",
+    "apps/web/src",
+    "apps/web/public",
+    "packages",
+    "ops/cli",
+    "docs/README.md",
+    "docs/architecture.md",
+    "docs/configuration.md",
+    "docs/status.md",
+    "docs/operations",
+    "docs/marketing",
+    "pmo",
+    "prototypes",
+    "skills",
+    "scripts"
+  ],
+  "identity_scan_exclusions": [
+    "ops/release/audit-policy.json",
+    "scripts/tests/audit-public-release.test.mjs",
+    "scripts/tests/audit-secrets.test.mjs",
+    "scripts/prepare-combined-qualified-review.mjs",
+    "scripts/prepare-combined-release-preflight.mjs",
+    "scripts/prepare-combined-outcome-readiness.mjs",
+    "scripts/prepare-ct142-review1.mjs",
+    "scripts/prepare-ct143-review.mjs",
+    "docs/marketing",
+    "docs/operations/creem-billing-runbook.md",
+    "docs/operations/hosted-runtime-runbook.md",
+    "packages/hosted/tests",
+    "scripts/audit-search-indexing.mjs",
+    "scripts/tests/analytics-privacy.test.mjs",
+    "scripts/tests/public-search.test.mjs",
+    "scripts/validate-hosted-environments.mjs"
+  ],
   "dependency_inventory": "ops/release/dependency-license-inventory.json",
   "third_party_notices_manifest": "ops/release/third-party-notices.json",
   "testing_result": "docs/product/versions/v0.1.0/40-testing/CT-12/result.json",
   "build_manifest": "ops/release/reproducible-build.json",
-  "working_identity_patterns": ["OpenLinear", "openlinear", "@openlinear/"],
-  "identity_scan_roots": [
-    ".env.example",
-    "README.md",
-    "package.json",
-    "package-lock.json",
-    "apps",
-    "packages",
-    "ops/cli",
-    "docs/operations"
-  ],
   "asset_extensions": [
     ".gif",
     ".ico",
@@ -106,7 +113,12 @@
     ".woff",
     ".woff2"
   ],
-  "public_copy_roots": ["apps/web/index.html", "apps/web/hosted.html", "apps/web/src", "apps/web/public/mcp-guide.html"],
+  "public_copy_roots": [
+    "apps/web/index.html",
+    "apps/web/hosted.html",
+    "apps/web/src",
+    "apps/web/public/mcp-guide.html"
+  ],
   "ignore_contract": {
     ".gitignore": [".control-tower/", ".env", ".env.*", ".playwright-mcp/", "/backups/"]
   }

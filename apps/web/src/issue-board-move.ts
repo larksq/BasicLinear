@@ -7,7 +7,7 @@ import type {
   Project,
   UpdateIssueRequest,
   WorkflowStatus,
-} from '@openlinear/contracts';
+} from '@basiclinear/contracts';
 
 const issuePriorities: readonly IssuePriority[] = ['urgent', 'high', 'medium', 'low', 'none'];
 const defaultDragThreshold = 6;

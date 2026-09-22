@@ -13,7 +13,7 @@ Decision: PASS for bounded independent nonsecurity production UAT.
 
 ## Production journey
 
-The authorized production journey created parent `OL-6D82C5` / `issue_aa1845f47f4241799ddb9fdfd56d82c5` and child `OL-DA0B1C` / `issue_3548c12af0044de7aa9cede895da0b1c` in `OpenLinear production launch`. After reload, the parent was revision 5, In progress, High, assigned to Qiao Sun, with exactly one description, comment, resource, and child. Six activity records displayed the comment and property changes. A read-only development check showed the separate Development Preview authority and zero matching production-review records.
+The authorized production journey created parent `OL-6D82C5` / `issue_aa1845f47f4241799ddb9fdfd56d82c5` and child `OL-DA0B1C` / `issue_3548c12af0044de7aa9cede895da0b1c` in `BasicLinear production launch`. After reload, the parent was revision 5, In progress, High, assigned to Qiao Sun, with exactly one description, comment, resource, and child. Six activity records displayed the comment and property changes. A read-only development check showed the separate Development Preview authority and zero matching production-review records.
 
 ## Gates
 

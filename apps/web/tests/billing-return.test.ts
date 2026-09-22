@@ -10,7 +10,7 @@ vi.mock('../src/hosted-environment.js', () => ({
 describe('billing return navigation', () => {
   afterEach(() => { vi.unstubAllGlobals(); });
   const render = (search: string, role: 'owner' | 'member' = 'owner') => {
-    vi.stubGlobal('window', {location: new URL(`https://openlinear.qiaosun.me/${search}`)});
+    vi.stubGlobal('window', {location: new URL(`https://basiclinear.qiaosun.me/${search}`)});
     return renderToStaticMarkup(createElement(HostedWorkspaceApplication, {
       idToken: 'test-identity', workspaceId: 'ws_billing_return', workspaceName: 'Billing return test',
       currentUserId: 'owner', userEmail: 'owner@example.test', displayName: 'Owner', role,

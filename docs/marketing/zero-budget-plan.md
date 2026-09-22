@@ -1,8 +1,8 @@
-# OpenLinear 零营销预算增长计划
+# BasicLinear 零营销预算增长计划
 
-版本：v3，2026-09-18；计划负责人：Qiao Sun；执行预算假设：一人每周约 5 小时、无广告/付费目录/付费推广。现有云服务成本另计。数据基线见 [核查报告](baseline-2026-09-15.md)，每次决策写入 [实验与复盘台账](experiments.md)。
+版本：v4，2026-09-22；计划负责人：Qiao Sun；执行预算假设：一人每周约 5 小时、无广告/付费目录/付费推广。现有云服务成本另计。数据基线见 [核查报告](baseline-2026-09-15.md)，每次决策写入 [实验与复盘台账](experiments.md)。
 
-9/18 后续更新：GA4 已配置并接入生产，实时已收到访问与 CTA 点击，详见 [接入记录](ga4-setup-2026-09-18.md)。公开首页已上线。注册、激活、D7 和付费数据仍 NA；M00 部分完成，T0 未建立，E01/E02 正式计量窗口顺延。此前 09:00 复盘保留为历史快照。
+9/22 节点结论：GA4 已确认收到访问、CTA 和 app_entry。9/19–9/21 的 12 个事件均在排除 qa 来源后消失，尚无可用非 QA 获客样本；注册、激活、D7 和付费继续 NA。M00 部分完成，T0 未建立。公开首页抓取限制已于 9/20 修复并提交 Google，实际收录与效果待查。详见 [复盘台账](experiments.md)。
 
 ## 1. 目标与定位
 
@@ -28,9 +28,9 @@
 | P0 | 明确落地页与产品边界 | 产品负责人 | 一个主 CTA、一个实际使用示例、试用及本地/在线说明，不要求访客先理解 Firebase |
 | P1 | 核查 404 来源、别名与入口 | 开发负责人 | 营销链接及重定向无错误；扫描流量单列；正式落地页统一使用主域名 |
 | P1 | 首客付费阻塞处理 | 产品/开发负责人 | 运维策略与真实工作区支付权益端到端验证通过；完成前不以付费转化判断渠道优劣 |
-| P1 / E03 前置 | 区分公开营销页与私有工作区的索引策略 | 产品/开发负责人 | 公共页面发布后逐页验证可索引；工作区、邀请和 OAuth 入口继续保持原有保护。禁止直接全站解除限制 |
+| P1 / E03 前置（9/20 已实现） | 区分公开营销页与私有工作区的索引策略 | 产品/开发负责人 | 公共页面发布后逐页验证可索引；工作区、邀请和 OAuth 入口继续保持原有保护。禁止直接全站解除限制 |
 
-**T0 定义：前 3 项验收完成后的首个完整自然日。** 9 月 18 日检查未通过；下次 9 月 22 日复查，不预设新 T0。数据窗口和渠道实验顺延，不压缩七天观察期。可先做需求研究和准备内容。
+**T0 定义：前 3 项验收完成后的首个完整自然日。** 9 月 22 日仍未全部通过；下次 9 月 25 日复查，不预设新 T0。数据窗口和渠道实验顺延，不压缩七天观察期。可先做需求研究和准备内容。
 
 ## 3. 免费度量方案和事件合同（部分实施）
 
@@ -55,7 +55,7 @@
 
 归因：渠道链接固定 `utm_source=x&utm_medium=organic_social&utm_campaign=ol_202609_pilot&utm_content=e01_reply_a_001`；每条实际发布的内容独立 content。profile 使用 `e01_profile`，自有帖子使用 `e02_post_a_001`。只用主域名，首次来源保留 30 天，最近非直接来源用于辅助分析，不覆盖首次来源。
 
-示例：https://openlinear.qiaosun.me/?utm_source=x&utm_medium=organic_social&utm_campaign=ol_202609_pilot&utm_content=e01_reply_a_001
+示例：https://basiclinear.qiaosun.me/?utm_source=x&utm_medium=organic_social&utm_campaign=ol_202609_pilot&utm_content=e01_reply_a_001
 
 ### 指标口径
 
@@ -68,7 +68,7 @@
 
 ## 4. 搜索发现：X 值得小测，尚无获客效果证据
 
-9 月 15 日已在登录态 X 的 Latest 搜索中读取样本。宽泛的 `"linear" "alternative"` 混入物理、机器学习等内容；精确短语减少噪声但仍有同名词歧义。以下只是话题线索，不是 OpenLinear 潜在客户名单，更不是获客结果：
+9 月 15 日已在登录态 X 的 Latest 搜索中读取样本。宽泛的 `"linear" "alternative"` 混入物理、机器学习等内容；精确短语减少噪声但仍有同名词歧义。以下只是话题线索，不是 BasicLinear 潜在客户名单，更不是获客结果：
 
 | 线索 | 本次观察 | 使用方式 |
 | --- | --- | --- |
@@ -96,17 +96,17 @@
 
 线索评分：明确需求 0–2，目标人群匹配 0–2，现有能力能解决 0–2，近期且仍有讨论 0–1。5 分以上才考虑回复；不因账号粉丝多而优先。
 
-回复顺序：回应具体问题 → 给可执行建议 → 如直接相关再披露“我是 OpenLinear 作者” → 对方在找工具或要求演示时提供一条链接。回复不要复制粘贴相同文字、批量自动发、用无关热门词抢流量。X 明确限制批量、重复、无关的推广回复与纯链接活动。[X Authenticity](https://help.x.com/en/rules-and-policies/authenticity)
+回复顺序：回应具体问题 → 给可执行建议 → 如直接相关再披露“我是 BasicLinear 作者” → 对方在找工具或要求演示时提供一条链接。回复不要复制粘贴相同文字、批量自动发、用无关热门词抢流量。X 明确限制批量、重复、无关的推广回复与纯链接活动。[X Authenticity](https://help.x.com/en/rules-and-policies/authenticity)
 
 待发布回复素材（按原帖问题修改）：
 
-> For a solo project, I'd start with one milestone and three concrete next actions. That makes the next work session easier to pick up. I'm building OpenLinear around that workflow; happy to share a short demo if useful.
+> For a solo project, I'd start with one milestone and three concrete next actions. That makes the next work session easier to pick up. I'm building BasicLinear around that workflow; happy to share a short demo if useful.
 
-> The useful part of an AI task workflow is checking that changes actually reached the issue tracker. I’m building OpenLinear with a UI and MCP workflow. Which step is causing trouble for you: setup, task creation, or status updates?
+> The useful part of an AI task workflow is checking that changes actually reached the issue tracker. I’m building BasicLinear with a UI and MCP workflow. Which step is causing trouble for you: setup, task creation, or status updates?
 
 自有帖子草稿：
 
-> I’m building OpenLinear for indie developers and small teams. The workflow is simple: define a project, set a milestone, then turn it into actionable issues. I’m looking for feedback on the first-project experience. Here’s the current app: [带 UTM 的正式链接]
+> I’m building BasicLinear for indie developers and small teams. The workflow is simple: define a project, set a milestone, then turn it into actionable issues. I’m looking for feedback on the first-project experience. Here’s the current app: [带 UTM 的正式链接]
 
 发布前附实际截屏或 30–60 秒实录；不要宣称“节省 80% 时间”等未经测量的效果。本次只准备素材，未发布评论、私信或帖子。
 

@@ -139,7 +139,7 @@ describe('hosted invitation and membership lifecycle', () => {
       name: 'Engineering',
       key: 'ENG',
       color: '#4F8BD6',
-      description: 'Build OpenLinear.',
+      description: 'Build BasicLinear.',
       createdByUserId: ownerId,
       archivedAt: null,
       createdAt: '2026-12-01T00:00:00.000Z',

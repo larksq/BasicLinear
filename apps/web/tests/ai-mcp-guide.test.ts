@@ -20,24 +20,24 @@ describe('AI MCP onboarding guide', () => {
   });
 
   it('documents the supported OAuth setup commands for Codex and Claude Code', () => {
-    expect(guide).toContain('codex mcp add openlinear --url ${mcpUrl}');
-    expect(guide).toContain('codex mcp login openlinear');
-    expect(guide).toContain('claude mcp add --transport http openlinear ${mcpUrl}');
-    expect(guide).toContain('claude mcp login openlinear');
+    expect(guide).toContain('codex mcp add basiclinear --url ${mcpUrl}');
+    expect(guide).toContain('codex mcp login basiclinear');
+    expect(guide).toContain('claude mcp add --transport http basiclinear ${mcpUrl}');
+    expect(guide).toContain('claude mcp login basiclinear');
     expect(guide).toContain('https://learn.chatgpt.com/docs/extend/mcp');
     expect(guide).toContain('https://code.claude.com/docs/en/mcp');
   });
 
   it('renders a working online endpoint for local users and preserves self-hosted endpoints', () => {
     const local = renderToStaticMarkup(createElement(AiMcpGuide, {surface: 'local'}));
-    expect(local).toContain('codex mcp add openlinear --url https://openlinear.qiaosun.me/mcp');
-    expect(local).toContain('href="https://openlinear.qiaosun.me/?app"');
+    expect(local).toContain('codex mcp add basiclinear --url https://basiclinear.qiaosun.me/mcp');
+    expect(local).toContain('href="https://basiclinear.qiaosun.me/?app"');
     expect(local).not.toContain('.example/mcp');
     expect(local).toContain('2.1.186');
     expect(local).toContain('/mcp</code>');
     const hosted = renderToStaticMarkup(createElement(AiMcpGuide, {surface: 'hosted', serverUrl: 'https://team.example.test/mcp'}));
-    expect(hosted).toContain('codex mcp add openlinear --url https://team.example.test/mcp');
-    expect(hosted).not.toContain('https://openlinear.qiaosun.me/mcp');
+    expect(hosted).toContain('codex mcp add basiclinear --url https://team.example.test/mcp');
+    expect(hosted).not.toContain('https://basiclinear.qiaosun.me/mcp');
   });
 
   it('keeps the local authority boundary explicit and restores trigger focus on close', () => {

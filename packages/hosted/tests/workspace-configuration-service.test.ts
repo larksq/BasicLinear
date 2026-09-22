@@ -155,7 +155,7 @@ describe('WorkspaceConfigurationService', () => {
     const teamCommand = {
       principal: principal(ownerId), workspaceId, requestId: 'configuration_team_create',
       idempotencyKey: 'configuration-team-create-key-0001',
-      name: 'Engineering', key: 'ENG', color: '#4F8BD6', description: 'Build and operate OpenLinear.',
+      name: 'Engineering', key: 'ENG', color: '#4F8BD6', description: 'Build and operate BasicLinear.',
     };
     const teamResult = await context.configuration.createTeam(teamCommand);
     expect(await context.configuration.createTeam(teamCommand)).toEqual(teamResult);

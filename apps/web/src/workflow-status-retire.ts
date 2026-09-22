@@ -1,4 +1,4 @@
-import type { RetireStatusRequest, WorkflowStatus } from '@openlinear/contracts';
+import type { RetireStatusRequest, WorkflowStatus } from '@basiclinear/contracts';
 
 export interface WorkflowStatusRetirementScope {
   workspaceId: string;

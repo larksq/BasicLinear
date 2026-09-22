@@ -52,7 +52,7 @@
     {"round":3,"result":"FAIL","seal":"77/77 pre/post","findings":["P1 cross_entry_build_manifest_omission"],"all_functional_and_accessibility_cases":"closed","backend_adversarial":"passed"}
   ],
   "remediation": {
-    "production_build_graphs": "The web build now runs separate openlinear-local and openlinear-hosted Vite modes. Local clears dist; hosted preserves dist and accepts only hosted.html as input.",
+    "production_build_graphs": "The web build now runs separate basiclinear-local and basiclinear-hosted Vite modes. Local clears dist; hosted preserves dist and accepts only hosted.html as input.",
     "behavioral_invariance": "A no-write test builds hosted output twice, aims an in-memory transform at the local HTML on the second build, proves it is never invoked, and compares every emitted hosted filename and byte.",
     "artifact_boundary": "The real build transforms 1,953 local modules and 30 hosted modules. Generated hosted.html resolves 3/3 favicon/hosted-JS/hosted-CSS references and contains no local/editor preload."
   },

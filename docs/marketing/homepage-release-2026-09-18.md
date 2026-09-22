@@ -5,7 +5,7 @@
 | Environment | Public URL | Deployment |
 | --- | --- | --- |
 | Development | https://openlinear-development.vercel.app | `dpl_DsyQFy5B8XCi6gge8obV3zzD441e` |
-| Production | https://openlinear.qiaosun.me | `dpl_9exyLQKWnRusUnMfZ1CNimtTs1r8` |
+| Production | https://basiclinear.qiaosun.me | `dpl_9exyLQKWnRusUnMfZ1CNimtTs1r8` |
 
 Both deployments reached READY and their existing aliases were assigned. The production alias https://openlinear-gray.vercel.app also serves the homepage. The team-specific production alias retains its existing Vercel authentication protection.
 

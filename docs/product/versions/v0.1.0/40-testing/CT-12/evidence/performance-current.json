@@ -42,9 +42,9 @@
   },
   "interaction_timing": {
     "instrumentation": {
-      "start_mark": "openlinear-issue-navigation-start",
-      "end_mark": "openlinear-issue-navigation-end",
-      "measure": "openlinear-issue-navigation",
+      "start_mark": "basiclinear-issue-navigation-start",
+      "end_mark": "basiclinear-issue-navigation-end",
+      "measure": "basiclinear-issue-navigation",
       "visible_readback": "document.documentElement.dataset.issueNavigationMs",
       "measurement_scope": "in-page contextual issue selection to loaded visible issue detail",
       "automation_round_trip_excluded": true,

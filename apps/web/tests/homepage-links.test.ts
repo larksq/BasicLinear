@@ -5,7 +5,7 @@ import {afterEach, describe, expect, it, vi} from 'vitest';
 describe('public homepage destinations', () => {
   afterEach(() => { vi.unstubAllEnvs(); vi.resetModules(); });
   const render = async (repository = '') => {
-    vi.stubEnv('VITE_OPENLINEAR_REPOSITORY_URL', repository);
+    vi.stubEnv('VITE_BASICLINEAR_REPOSITORY_URL', repository);
     vi.resetModules();
     const {Homepage} = await import('../src/homepage.js');
     return renderToStaticMarkup(createElement(Homepage));
@@ -20,14 +20,14 @@ describe('public homepage destinations', () => {
       expect(href).not.toBe('');
       expect(href).not.toBe('#');
       if (href.startsWith('#')) expect(ids.has(href.slice(1)), href).toBe(true);
-      else expect(['/', '?app', '/openlinear-license.txt']).toContain(href);
+      else expect(['/', '?app', '/basiclinear-license.txt']).toContain(href);
     }
     expect(html).toContain('The source repository is not public yet.');
     expect(html).not.toContain('coming soon');
   });
 
   it('offers the configured source only when it is a GitHub repository URL', async () => {
-    expect(await render('https://github.com/larksq/openlinear')).toContain('href="https://github.com/larksq/openlinear"');
+    expect(await render('https://github.com/larksq/basiclinear')).toContain('href="https://github.com/larksq/basiclinear"');
     for (const invalid of ['javascript:alert(1)', 'https://github.com.attacker.test/repo/name']) {
       const html = await render(invalid);
       expect(html).not.toContain(invalid);

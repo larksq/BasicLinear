@@ -9,7 +9,7 @@ All 20 Must requirements map to at least one implementation issue, one concrete 
 - Local SQLite and hosted Firestore are separate authorities; no artifact promises silent upload or live sync.
 - Google is the only hosted sign-in provider; no password database or enterprise SSO is implied.
 - “Free Pro” is interpreted as a no-card 30-day trial; exact dates are shown and no automatic charge occurs without checkout.
-- The sponsor's $2/$12 prices are preserved; the pricing task can recommend but not mutate them.
+- The maintainer's $2/$12 prices are preserved; the pricing task can recommend but not mutate them.
 - MCP and skills enable external operation but do not add AI agents.
 - Comments and assignment are basic: one assignee, no mentions/notifications/files/presence.
 - v0.2 reuses the existing S1 through S6 lifecycle; it creates no version-specific milestone or separate human approval path.

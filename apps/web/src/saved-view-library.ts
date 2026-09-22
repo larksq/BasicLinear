@@ -1,4 +1,4 @@
-import type { IssueFilterNode, IssueViewState, SavedView } from '@openlinear/contracts';
+import type { IssueFilterNode, IssueViewState, SavedView } from '@basiclinear/contracts';
 
 export type SavedViewMode = 'active' | 'archived';
 

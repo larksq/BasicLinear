@@ -156,7 +156,7 @@ function writeJson(
     'cache-control': 'no-store',
     'content-type': 'application/json; charset=utf-8',
     'x-content-type-options': 'nosniff',
-    'x-openlinear-request-id': correlationId,
+    'x-basiclinear-request-id': correlationId,
     ...extraHeaders,
   });
   response.end(JSON.stringify(body));
@@ -1174,8 +1174,8 @@ async function handleExport(
   });
   writeJson(response, 200, {data: exported}, correlationId, {
     'content-type': workspaceExportMediaType,
-    'content-disposition': `attachment; filename="openlinear-${workspaceId}-export-v1.json"`,
-    'x-openlinear-export-sha256': exported.sha256,
+    'content-disposition': `attachment; filename="basiclinear-${workspaceId}-export-v1.json"`,
+    'x-basiclinear-export-sha256': exported.sha256,
   });
 }
 
@@ -1236,7 +1236,7 @@ function operation(
   return {
     summary,
     security: [{personalAccessToken: []}],
-    'x-openlinear-required-scope': scope,
+    'x-basiclinear-required-scope': scope,
     parameters: options.parameters ?? [workspaceParameter],
     ...(options.requestBody === undefined ? {} : {requestBody: options.requestBody}),
     responses: {
@@ -1257,7 +1257,7 @@ function operation(
   };
 }
 
-export function openLinearOpenApiDocument(): Record<string, unknown> {
+export function basicLinearOpenApiDocument(): Record<string, unknown> {
   const stringId = {type: 'string', pattern: '^[A-Za-z0-9][A-Za-z0-9:._@+-]{2,127}$'};
   const workspaceReference = {type: 'string', pattern: '^[A-Za-z0-9][A-Za-z0-9._+-]{2,127}$'};
   const revision = {type: 'integer', minimum: 1};
@@ -1327,7 +1327,7 @@ export function openLinearOpenApiDocument(): Record<string, unknown> {
     openapi: '3.1.1',
     jsonSchemaDialect: 'https://json-schema.org/draft/2020-12/schema',
     info: {
-      title: 'OpenLinear Product Management API',
+      title: 'BasicLinear Product Management API',
       version: '1.0.0',
       description: 'Workspace-scoped product-management REST API. Browser token management and billing purchase are not exposed here.',
     },
@@ -1455,7 +1455,7 @@ export function openLinearOpenApiDocument(): Record<string, unknown> {
         personalAccessToken: {
           type: 'http',
           scheme: 'bearer',
-          bearerFormat: 'OpenLinear PAT',
+          bearerFormat: 'BasicLinear PAT',
           description: `Owner-created, workspace-scoped token with audience ${personalTokenAudience}.`,
         },
       },
@@ -1626,7 +1626,7 @@ export function openLinearOpenApiDocument(): Record<string, unknown> {
           createdByUserId: stringId,
         }),
         WorkspaceExportData: exact({
-          schemaVersion: {const: 'openlinear.workspace-export.v1'},
+          schemaVersion: {const: 'basiclinear.workspace-export.v1'},
           workspace: {$ref: '#/components/schemas/Workspace'},
           memberships: {type: 'array', items: exact({
             id: stringId, userId: stringId, role: {type: 'string', enum: ['owner', 'member']},
@@ -1672,7 +1672,7 @@ export function openLinearOpenApiDocument(): Record<string, unknown> {
           billing: {$ref: '#/components/schemas/Billing'},
         }, ['billing'])}, ['data']),
         ExportEnvelope: exact({data: exact({
-          mediaType: {const: 'application/vnd.openlinear.workspace-export+json;version=1'},
+          mediaType: {const: 'application/vnd.basiclinear.workspace-export+json;version=1'},
           workspaceId: workspaceReference, sha256: {type: 'string', pattern: '^[a-f0-9]{64}$'},
           data: {$ref: '#/components/schemas/WorkspaceExportData'},
         }, ['mediaType', 'workspaceId', 'sha256', 'data'])}, ['data']),
@@ -1691,8 +1691,8 @@ export function openLinearOpenApiDocument(): Record<string, unknown> {
         Unavailable: {description: 'Temporarily unavailable', content: {'application/json': {schema: {$ref: '#/components/schemas/ErrorEnvelope'}}}},
       },
     },
-    'x-openlinear-personal-token-scopes': personalTokenScopes,
-    'x-openlinear-exclusions': [
+    'x-basiclinear-personal-token-scopes': personalTokenScopes,
+    'x-basiclinear-exclusions': [
       'autonomous execution', 'source-code review', 'repository data', 'pull-request data',
     ],
   };
@@ -1700,7 +1700,7 @@ export function openLinearOpenApiDocument(): Record<string, unknown> {
 
 export function createRestApiHandler(options: RestApiHandlerOptions): RestApiHandler {
   const codec = new CursorCodec(options.cursorSecret);
-  const openApi = openLinearOpenApiDocument();
+  const openApi = basicLinearOpenApiDocument();
   return async (request, response, correlationId, url): Promise<boolean> => {
     if (url.pathname === '/api/v1/openapi.json') {
       try {

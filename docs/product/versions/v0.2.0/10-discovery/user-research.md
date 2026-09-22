@@ -2,7 +2,7 @@
 
 ## Evidence posture
 
-No interviews, production cohorts, or payment behavior exist for the hosted product. Discovery therefore separates sponsor-confirmed requirements from user-demand hypotheses. Existing v0.1 evidence supports the project/issue/milestone workflow, not the new hosted conversion or collaboration claims.
+No interviews, production cohorts, or payment behavior exist for the hosted product. Discovery therefore separates maintainer-confirmed requirements from user-demand hypotheses. Existing v0.1 evidence supports the project/issue/milestone workflow, not the new hosted conversion or collaboration claims.
 
 ## Strongest pain segment
 

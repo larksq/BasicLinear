@@ -2,7 +2,7 @@
 
 | Claim | Label | Evidence | Resolution |
 |---|---|---|---|
-| C-001 The sponsor requires a free open-source replacement with Linear-level core UX and local Control Tower tracking. | fact | E-001 | Resolved |
+| C-001 The maintainer requires a free open-source replacement with Linear-level core UX and local Control Tower tracking. | fact | E-001 | Resolved |
 | C-002 The reference projects view combines dense rows, inline metadata, progress, and a summary pane. | fact | E-002, E-006, E-007 | Resolved |
 | C-003 The reference issue view supports grouped compact rows and configurable visible properties. | fact | E-003, E-009, E-010 | Resolved |
 | C-004 Reference milestones organize project stages, accept issues, and expose progress. | fact | E-004, E-008 | Resolved |
@@ -12,9 +12,9 @@
 | C-008 Playwright supports pinned screenshot comparison with pixel thresholds. | fact | E-015 | Resolved |
 | C-009 The v0.1 decision unit is one technical owner in one workspace/team, while the evidence pool must span varied project types and methods. | inference | E-001, E-020 through E-023 | Resolved by CT-77 statistical synthesis |
 | C-010 The reference interaction-efficiency baseline is not yet measured. | unknown | E-002 through E-010 | CT-2 |
-| C-011 The sponsor selected AGPL-3.0-only, but the requested OpenLinear product brand and release boundary are not qualified or accepted. | fact / unresolved review | E-001, E-011 through E-014 | CT-3 |
-| C-012 A focused TypeScript/PostgreSQL system can meet the target latency, isolation, and visual stability. | rejected assumption | E-015, E-016, E-017 | Superseded by sponsor direction and CT-79; no longer the v0.1 fit criterion |
-| C-013 No runnable OpenLinear product existed at bootstrap, so new-product capability baselines are zero. | fact | E-019 | Resolved |
+| C-011 The maintainer selected AGPL-3.0-only, but the requested BasicLinear product brand and release boundary are not qualified or accepted. | fact / unresolved review | E-001, E-011 through E-014 | CT-3 |
+| C-012 A focused TypeScript/PostgreSQL system can meet the target latency, isolation, and visual stability. | rejected assumption | E-015, E-016, E-017 | Superseded by maintainer direction and CT-79; no longer the v0.1 fit criterion |
+| C-013 No runnable BasicLinear product existed at bootstrap, so new-product capability baselines are zero. | fact | E-019 | Resolved |
 | C-014 Issue and collaboration tools have broad developer use, while work tool sprawl, security/privacy, price, usability, and time cost are material adoption pressures. | fact | E-020 | Resolved |
 | C-015 Predictive, hybrid, and agile methods all have material cross-industry use. | fact | E-021 | Resolved |
 | C-016 DevSecOps practitioners report material toolchain-consolidation pressure and lifecycle automation. | fact | E-022 | Resolved with vendor conflict labeled |

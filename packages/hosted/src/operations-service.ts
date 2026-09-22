@@ -11,8 +11,8 @@ import {
   type HostedOperationsPolicy,
 } from './operations-control.js';
 
-export const hostedCostReportSchemaVersion = 'openlinear.hosted-cost-per-paid-seat.v1' as const;
-export const hostedRestoreDrillSchemaVersion = 'openlinear.hosted-restore-drill.v1' as const;
+export const hostedCostReportSchemaVersion = 'basiclinear.hosted-cost-per-paid-seat.v1' as const;
+export const hostedRestoreDrillSchemaVersion = 'basiclinear.hosted-restore-drill.v1' as const;
 
 export interface HostedOperationsTransaction {
   get(path: string): Promise<unknown | null>;

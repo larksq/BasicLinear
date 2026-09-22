@@ -25,7 +25,7 @@ The accepted UX spatial system fixes the top view header at exactly `44px` and r
 - Complete regression: 65 files / 436 tests passed.
 - Typecheck: all 8 workspaces passed.
 - Production build: 1,948 modules, 109 output files, and 1,909,362 output bytes, without warnings.
-- Isolated rebuilt process: `ready` at `http://127.0.0.1:4278/` from `/tmp/openlinear-ct98-20260822-1109`.
+- Isolated rebuilt process: `ready` at `http://127.0.0.1:4278/` from `/tmp/basiclinear-ct98-20260822-1109`.
 - Served HTML references `index-Dv9YgZKT.js` and `index-DxwJSw8s.css`; the served CSS contains the 44px token and contains neither raw `49px` nor `blur(12px)`.
 - Rendered Chrome captures: 0.
 

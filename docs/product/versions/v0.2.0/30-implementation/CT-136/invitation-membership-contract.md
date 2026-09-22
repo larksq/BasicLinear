@@ -2,7 +2,7 @@
 
 ## Boundary
 
-CT-136 implements only I-204: basic owner-managed invitations and the pending-to-active membership transition for OpenLinear Online. Firestore is the hosted authority; the local SQLite product remains a separate authority with no synchronization path. The shared CT-135 authorization service is mandatory for every owner operation and is reused by future browser, REST, and MCP principals.
+CT-136 implements only I-204: basic owner-managed invitations and the pending-to-active membership transition for BasicLinear Online. Firestore is the hosted authority; the local SQLite product remains a separate authority with no synchronization path. The shared CT-135 authorization service is mandatory for every owner operation and is reused by future browser, REST, and MCP principals.
 
 Notifications, custom roles, SSO, SCIM, billing checkout, assignment, comments, product AI agents, code review, repositories, and pull requests are outside this slice.
 

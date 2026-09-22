@@ -18,7 +18,7 @@
     "mcp": "stable 2026-07-28 stateless Streamable HTTP with exact discovery, content negotiation, cancellation, errors, and twenty-seven PM-only tools",
     "oauth": "dynamic registration, PKCE S256, explicit Google-backed consent, exact authorization-code chronology, short access tokens, rotating refresh families, downscoping, reuse revocation, and current membership enforcement",
     "service_parity": "REST and MCP share PM schemas, authorization, idempotency, optimistic revision, mutation audit, workspace, role, and entitlement behavior",
-    "skill": "validated reusable openlinear-product-management skill with read-first and destructive-confirmation guidance",
+    "skill": "validated reusable basiclinear-product-management skill with read-first and destructive-confirmation guidance",
     "excluded_scope": "no AI agent, code review, repository, pull request, personal-token administration, billing purchase, or local/cloud synchronization capability"
   },
   "verification": {

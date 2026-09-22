@@ -11,7 +11,7 @@ import {
   type IssueFilterCondition,
   type IssueFilterNode,
   type IssueRichTextDocument,
-} from '@openlinear/domain';
+} from '@basiclinear/domain';
 import type {
   DbActivityEntry,
   DbBulkIssueMutationResult,
@@ -23,7 +23,7 @@ import type {
   DbLabel,
   DbPurgeIssueReceipt,
 } from '../types.js';
-import { asSqliteError, type OpenLinearDatabase } from './client.js';
+import { asSqliteError, type BasicLinearDatabase } from './client.js';
 import {
   changed,
   compactChanges,
@@ -175,14 +175,14 @@ const commentSelection = `
   archived_at AS archivedAt, revision, created_at AS createdAt, updated_at AS updatedAt
 `;
 
-function metadata(db: OpenLinearDatabase): { workspaceId: string; teamId: string; teamKey: string } {
+function metadata(db: BasicLinearDatabase): { workspaceId: string; teamId: string; teamKey: string } {
   return db.sqlite.prepare(`
     SELECT workspace_id AS workspaceId, team_id AS teamId, team_key AS teamKey
     FROM scope_metadata WHERE singleton = 1
   `).get() as { workspaceId: string; teamId: string; teamKey: string };
 }
 
-function mapLabel(db: OpenLinearDatabase, row: LabelRow): DbLabel {
+function mapLabel(db: BasicLinearDatabase, row: LabelRow): DbLabel {
   return {
     id: row.id,
     workspaceId: metadata(db).workspaceId,
@@ -195,7 +195,7 @@ function mapLabel(db: OpenLinearDatabase, row: LabelRow): DbLabel {
   };
 }
 
-function labelsForIssue(db: OpenLinearDatabase, issueId: string): DbLabel[] {
+function labelsForIssue(db: BasicLinearDatabase, issueId: string): DbLabel[] {
   return (db.sqlite.prepare(`
     SELECT l.id, l.name, l.color, l.revision, l.archived_at AS archivedAt,
            l.created_at AS createdAt, l.updated_at AS updatedAt
@@ -204,7 +204,7 @@ function labelsForIssue(db: OpenLinearDatabase, issueId: string): DbLabel[] {
   `).all(issueId) as unknown as LabelRow[]).map((row) => mapLabel(db, row));
 }
 
-function labelsForAllIssues(db: OpenLinearDatabase): Map<string, DbLabel[]> {
+function labelsForAllIssues(db: BasicLinearDatabase): Map<string, DbLabel[]> {
   const rows = db.sqlite.prepare(`
     SELECT il.issue_id AS issueId, l.id, l.name, l.color, l.revision,
            l.archived_at AS archivedAt, l.created_at AS createdAt, l.updated_at AS updatedAt
@@ -221,7 +221,7 @@ function labelsForAllIssues(db: OpenLinearDatabase): Map<string, DbLabel[]> {
 }
 
 function resourcesForAllIssues(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
 ): Map<string, Array<{ id: string; label: string; url: string; position: number }>> {
   const rows = db.sqlite.prepare(`
     SELECT issue_id AS issueId, id, label, url, position
@@ -243,7 +243,7 @@ function resourcesForAllIssues(
 }
 
 function mapIssue(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   row: IssueRow,
   labels = labelsForIssue(db, row.id),
   resources = readResources(db, 'issue_resources', 'issue_id', row.id),
@@ -272,14 +272,14 @@ function mapIssue(
   };
 }
 
-function issueById(db: OpenLinearDatabase, issueId: string): DbIssue {
+function issueById(db: BasicLinearDatabase, issueId: string): DbIssue {
   const row = db.sqlite.prepare(`SELECT ${issueSelection} FROM issues WHERE id = ?`)
     .get(issueId) as IssueRow | undefined;
   if (row === undefined) throw new AppError('NOT_FOUND', 'Issue not found.', 404);
   return mapIssue(db, row);
 }
 
-function labelById(db: OpenLinearDatabase, labelId: string): DbLabel {
+function labelById(db: BasicLinearDatabase, labelId: string): DbLabel {
   const row = db.sqlite.prepare(`SELECT ${labelSelection} FROM labels WHERE id = ?`)
     .get(labelId) as LabelRow | undefined;
   if (row === undefined) throw new AppError('NOT_FOUND', 'Label not found.', 404);
@@ -287,7 +287,7 @@ function labelById(db: OpenLinearDatabase, labelId: string): DbLabel {
 }
 
 function statusCategory(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   statusId: string,
 ): 'backlog' | 'unstarted' | 'started' | 'completed' | 'canceled' {
   const row = db.sqlite.prepare('SELECT category FROM workflow_statuses WHERE id = ?')
@@ -302,7 +302,7 @@ function statusCategory(
   return row.category;
 }
 
-function defaultStatusId(db: OpenLinearDatabase): string {
+function defaultStatusId(db: BasicLinearDatabase): string {
   const row = db.sqlite.prepare(`
     SELECT id FROM workflow_statuses
     ORDER BY CASE WHEN category = 'unstarted' THEN 0 ELSE 1 END, position, id LIMIT 1
@@ -316,7 +316,7 @@ function defaultStatusId(db: OpenLinearDatabase): string {
 }
 
 function ensureAssignment(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   projectId: string | null,
   milestoneId: string | null,
 ): void {
@@ -346,7 +346,7 @@ function ensureAssignment(
   }
 }
 
-function normalizedLabelIds(db: OpenLinearDatabase, labelIds: readonly string[]): string[] {
+function normalizedLabelIds(db: BasicLinearDatabase, labelIds: readonly string[]): string[] {
   const ids = [...new Set(labelIds)];
   if (ids.length !== labelIds.length || ids.length > 50) {
     throw new AppError('VALIDATION_ERROR', 'Choose each label at most once.', 400, { field: 'labelIds' });
@@ -363,7 +363,7 @@ function normalizedLabelIds(db: OpenLinearDatabase, labelIds: readonly string[])
   return ids;
 }
 
-function replaceIssueLabels(db: OpenLinearDatabase, issueId: string, labelIds: readonly string[]): void {
+function replaceIssueLabels(db: BasicLinearDatabase, issueId: string, labelIds: readonly string[]): void {
   db.sqlite.prepare('DELETE FROM issue_labels WHERE issue_id = ?').run(issueId);
   const insert = db.sqlite.prepare(`
     INSERT INTO issue_labels (issue_id, label_id, position, created_at) VALUES (?, ?, ?, ?)
@@ -451,7 +451,7 @@ function nullableCompare(left: string | null, right: string | null): number {
 }
 
 export async function listIssues(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   input: IssueListInput = {},
@@ -505,7 +505,7 @@ export async function listIssues(
 }
 
 export async function getIssue(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   issueId: string,
@@ -515,7 +515,7 @@ export async function getIssue(
 }
 
 export async function createIssue(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   input: CreateIssueInput,
@@ -598,7 +598,7 @@ export async function createIssue(
 }
 
 export async function updateIssue(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   issueId: string,
@@ -711,7 +711,7 @@ export async function updateIssue(
 }
 
 function setIssueArchive(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   issueId: string,
@@ -746,7 +746,7 @@ function setIssueArchive(
 }
 
 export const archiveIssue = (
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   issueId: string,
@@ -754,7 +754,7 @@ export const archiveIssue = (
 ) => Promise.resolve(setIssueArchive(db, userId, workspaceId, issueId, expectedRevision, true));
 
 export const restoreIssue = (
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   issueId: string,
@@ -762,7 +762,7 @@ export const restoreIssue = (
 ) => Promise.resolve(setIssueArchive(db, userId, workspaceId, issueId, expectedRevision, false));
 
 export async function bulkMutateIssues(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   input: {
@@ -823,7 +823,7 @@ export async function bulkMutateIssues(
 }
 
 export async function purgeIssue(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   issueId: string,
@@ -856,7 +856,7 @@ export async function purgeIssue(
 }
 
 export async function listLabels(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   includeArchived = false,
@@ -869,7 +869,7 @@ export async function listLabels(
 }
 
 export async function createLabel(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   input: { name: string; color: string; idempotencyKey: string },
@@ -909,7 +909,7 @@ export async function createLabel(
 }
 
 export async function updateLabel(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   labelId: string,
@@ -948,7 +948,7 @@ export async function updateLabel(
 }
 
 function setLabelArchive(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   labelId: string,
@@ -983,7 +983,7 @@ function setLabelArchive(
 }
 
 export const archiveLabel = (
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   labelId: string,
@@ -991,7 +991,7 @@ export const archiveLabel = (
 ) => Promise.resolve(setLabelArchive(db, userId, workspaceId, labelId, expectedRevision, true));
 
 export const restoreLabel = (
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   labelId: string,
@@ -1005,7 +1005,7 @@ function relationDirection(row: RelationRow, issueId: string): DbIssueRelation['
   return row.sourceIssueId === issueId ? 'sub_issue' : 'parent';
 }
 
-function mapRelation(db: OpenLinearDatabase, row: RelationRow, issueId: string): DbIssueRelation {
+function mapRelation(db: BasicLinearDatabase, row: RelationRow, issueId: string): DbIssueRelation {
   const sourceIsCurrent = row.sourceIssueId === issueId;
   return {
     id: row.id,
@@ -1033,7 +1033,7 @@ function mapRelation(db: OpenLinearDatabase, row: RelationRow, issueId: string):
   };
 }
 
-function relationById(db: OpenLinearDatabase, relationId: string, issueId: string): DbIssueRelation {
+function relationById(db: BasicLinearDatabase, relationId: string, issueId: string): DbIssueRelation {
   const row = db.sqlite.prepare(`
     SELECT ${relationSelection}
     FROM issue_relations r JOIN issues source ON source.id = r.source_issue_id
@@ -1045,7 +1045,7 @@ function relationById(db: OpenLinearDatabase, relationId: string, issueId: strin
 }
 
 export async function listIssueRelations(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   issueId: string,
@@ -1061,7 +1061,7 @@ export async function listIssueRelations(
 }
 
 function relationWouldCycle(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   type: Exclude<DbIssueRelationType, 'related'>,
   sourceIssueId: string,
   targetIssueId: string,
@@ -1089,7 +1089,7 @@ function relationWouldCycle(
 }
 
 export async function createIssueRelation(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   issueId: string,
@@ -1154,7 +1154,7 @@ export async function createIssueRelation(
 }
 
 export async function deleteIssueRelation(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   issueId: string,
@@ -1178,7 +1178,7 @@ export async function deleteIssueRelation(
   });
 }
 
-function mapComment(db: OpenLinearDatabase, row: CommentRow): DbComment {
+function mapComment(db: BasicLinearDatabase, row: CommentRow): DbComment {
   const owner = db.sqlite.prepare('SELECT id, display_name AS displayName FROM owner_profile WHERE singleton = 1')
     .get() as { id: string; displayName: string } | undefined;
   return {
@@ -1196,7 +1196,7 @@ function mapComment(db: OpenLinearDatabase, row: CommentRow): DbComment {
   };
 }
 
-function commentById(db: OpenLinearDatabase, issueId: string, commentId: string): DbComment {
+function commentById(db: BasicLinearDatabase, issueId: string, commentId: string): DbComment {
   const row = db.sqlite.prepare(`
     SELECT ${commentSelection} FROM comments WHERE id = ? AND issue_id = ?
   `).get(commentId, issueId) as CommentRow | undefined;
@@ -1205,7 +1205,7 @@ function commentById(db: OpenLinearDatabase, issueId: string, commentId: string)
 }
 
 export async function listComments(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   issueId: string,
@@ -1220,7 +1220,7 @@ export async function listComments(
 }
 
 export async function createComment(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   issueId: string,
@@ -1265,7 +1265,7 @@ export async function createComment(
 }
 
 export async function updateComment(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   issueId: string,
@@ -1305,7 +1305,7 @@ export async function updateComment(
 }
 
 function setCommentArchive(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   issueId: string,
@@ -1349,7 +1349,7 @@ function setCommentArchive(
 }
 
 export const archiveComment = (
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   issueId: string,
@@ -1360,7 +1360,7 @@ export const archiveComment = (
 ));
 
 export const restoreComment = (
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   issueId: string,
@@ -1371,7 +1371,7 @@ export const restoreComment = (
 ));
 
 export async function listIssueActivity(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   issueId: string,

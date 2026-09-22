@@ -1,4 +1,4 @@
-# OpenLinear v0.2.0 completion audit — 2026-08-27
+# BasicLinear v0.2.0 completion audit — 2026-08-27
 
 Authority: project-local Control Tower v0.8 task store. Provider projection is disabled and not synced. No Linear or Control Tower UI state is used.
 
@@ -16,7 +16,7 @@ Authority: project-local Control Tower v0.8 task store. Provider projection is d
 ## Evidence-backed closures
 
 - All 113 completed implementation issues plus five canceled implementation records close S3.
-- CT-142 has independently accepted nonsecurity UAT: 19 selected files, 46 selected tests, 11 typechecks, production build, bounded manual observations, and an exact 513-file seal. The sponsor selected Option A; the full public paid-launch contract remains intact and the structured skip explicitly remains non-passing for R-204/R-219.
+- CT-142 has independently accepted nonsecurity UAT: 19 selected files, 46 selected tests, 11 typechecks, production build, bounded manual observations, and an exact 513-file seal. The maintainer selected Option A; the full public paid-launch contract remains intact and the structured skip explicitly remains non-passing for R-204/R-219.
 - CT-143 is deployed in isolated development and production Firebase, Firestore, Cloud Run, Vercel, identity, and Stripe-mode boundaries. Independent production-first UAT persisted parent `OL-6D82C5`, child `OL-DA0B1C`, one description, comment, resource, sub-issue, assignment, status, priority, and activity through reload; development remained isolated.
 - CT-143 Review 1 exposed one P3 stale Firebase-token recovery defect. The exact same-body/same-idempotency one-refresh retry was implemented and redeployed to both environments. Independent Review 2 closed the defect and returned PASS with P0/P1/P2/P3 all zero.
 - CT-143's repeatable positive runner passes 12 file selections and 19 selected tests. All 11 typechecks, the 1,953-module local build, the 1,821-module hosted build, environment validation, diff checks, and Chrome design QA pass.
@@ -24,7 +24,7 @@ Authority: project-local Control Tower v0.8 task store. Provider projection is d
 
 ## Exact unresolved authority and time gates
 
-1. **CT-142 external security evidence.** The sponsor selected Option A. The recorded skip prevents Codex security testing and is not a pass; a hash-bound external request and signed-result template are prepared. Closure requires an authorized external result satisfying R-204/R-219 followed by separate reconciliation of full P-T210.
+1. **CT-142 external security evidence.** The maintainer selected Option A. The recorded skip prevents Codex security testing and is not a pass; a hash-bound external request and signed-result template are prepared. Closure requires an authorized external result satisfying R-204/R-219 followed by separate reconciliation of full P-T210.
 2. **CT-3 qualified boundary decision.** A qualified human must accept, reject, or request bounded remediation for the combined candidate.
 3. **CT-13 accountable release decision.** An accountable human must decide on the exact combined candidate after its dependencies close.
 4. **CT-14 outcome windows.** The combined outcome review cannot complete before its defined cohorts and dates mature; unavailable or moved windows remain inconclusive rather than successful.

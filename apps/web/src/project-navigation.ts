@@ -1,4 +1,4 @@
-import type { Project } from '@openlinear/contracts';
+import type { Project } from '@basiclinear/contracts';
 import type { ProjectDensity } from './project-density.js';
 import {
   collapsedProjectGroupsFromParam,
@@ -56,7 +56,7 @@ const projectDirections = new Set<ProjectDirection>(['asc', 'desc']);
 const projectDensities = new Set<ProjectDensity>(['compact', 'default', 'comfortable']);
 const projectTabs = new Set<ProjectTab>(['overview', 'issues', 'activity']);
 const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/iu;
-const projectHistoryKey = '__openlinearProjectId';
+const projectHistoryKey = '__basiclinearProjectId';
 
 function selected<T extends string>(value: string | null, options: Set<T>, fallback: T): T {
   return value !== null && options.has(value as T) ? value as T : fallback;

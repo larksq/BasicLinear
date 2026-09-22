@@ -2,8 +2,8 @@ import type { LoginTicket, TokenPayload } from 'google-auth-library';
 import { describe, expect, it } from 'vitest';
 import { GoogleBudgetNoticeVerifier } from '../src/google-budget-notice.js';
 
-const audience = 'https://api.openlinear.example/api/v1/hosted/operations/budget-notice';
-const email = 'budget-push@openlinear-prod.iam.gserviceaccount.com';
+const audience = 'https://api.basiclinear.example/api/v1/hosted/operations/budget-notice';
+const email = 'budget-push@basiclinear-prod.iam.gserviceaccount.com';
 const token = `header.${'a'.repeat(64)}.${'b'.repeat(64)}`;
 
 function verifier(payload: TokenPayload, observed: Array<{idToken: string; audience: string}>) {
@@ -47,7 +47,7 @@ describe('GoogleBudgetNoticeVerifier', () => {
     for (const payload of [
       validPayload({iss: 'https://issuer.example'}),
       validPayload({aud: 'https://hostile.example/budget'}),
-      validPayload({email: 'other@openlinear-prod.iam.gserviceaccount.com'}),
+      validPayload({email: 'other@basiclinear-prod.iam.gserviceaccount.com'}),
       validPayload({email_verified: false}),
       validPayload({sub: 'not-numeric'}),
       validPayload({iat: Math.floor(Date.parse('2026-08-01T01:00:00.000Z') / 1_000)}),

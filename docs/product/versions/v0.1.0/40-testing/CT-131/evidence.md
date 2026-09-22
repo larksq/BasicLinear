@@ -1,6 +1,6 @@
 # CT-131 Current-Candidate P-T19/P-T20 Evidence
 
-The independent actor sealed `.control-tower/evidence/CT-131/independent-visual-a11y-307983e.json` with mode `0600`, 103,129 bytes, and SHA-256 `1d7b385805976218f956b9978f1abe3d12b8500578ff31f0662ead7e39823fa5`. The receipt schema is `openlinear-ct131-independent-visual-a11y-v1`, its verdict is scoped to the declared P-T19/P-T20 matrix, and `self_acceptance` is false.
+The independent actor sealed `.control-tower/evidence/CT-131/independent-visual-a11y-307983e.json` with mode `0600`, 103,129 bytes, and SHA-256 `1d7b385805976218f956b9978f1abe3d12b8500578ff31f0662ead7e39823fa5`. The receipt schema is `basiclinear-ct131-independent-visual-a11y-v1`, its verdict is scoped to the declared P-T19/P-T20 matrix, and `self_acceptance` is false.
 
 The run used exact revision `307983e18f0296963bc1b4037abedde1eaa27f37` / tree `e43d2a6751cd2952b16d92bb569c79c8f4943cc6`, source set `dcdf5366e6d63ccda95367045610e2880b9bb425f11f2ba6c97ec0481d1f5492` (1,265 files), and artifact `69902fa2dd4ba8ac4a213220e68d9dee740a18db0694e2bdf267f6a0a12c4371` (113 files, 2,054,982 bytes). Runtime was Node 24.18.0 with Google Chrome 151.0.7922.170 on macOS arm64 and synthetic loopback data.
 

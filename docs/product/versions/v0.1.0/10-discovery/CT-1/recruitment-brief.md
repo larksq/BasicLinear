@@ -18,6 +18,6 @@ Participation is voluntary. We use anonymized notes and do not record by default
 
 ## Operational Boundary
 
-Do not send outreach through Gmail, Calendar, social accounts, or mailing lists until the sponsor supplies or approves the recipients, incentive, sender identity, time zone, and available session windows. Existing account access is capability, not permission to contact people.
+Do not send outreach through Gmail, Calendar, social accounts, or mailing lists until the maintainer supplies or approves the recipients, incentive, sender identity, time zone, and available session windows. Existing account access is capability, not permission to contact people.
 
 Recruitment contact data stays outside the repository and is never entered into Control Tower descriptions. Control Tower records only counts, anonymized participant IDs, status, evidence paths, and decisions.

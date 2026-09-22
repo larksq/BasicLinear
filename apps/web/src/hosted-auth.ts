@@ -34,7 +34,7 @@ function popupResolver(auth: Auth): HostedPopupResolver {
 
 function required(value: string | undefined, name: string): string {
   if (value === undefined || value.trim() === '') {
-    throw new Error(`${name} is required for OpenLinear Online.`);
+    throw new Error(`${name} is required for BasicLinear Online.`);
   }
   return value.trim();
 }
@@ -51,9 +51,9 @@ export function hostedFirebaseOptions(env: ImportMetaEnv = import.meta.env): Fir
 async function authClient(): Promise<Auth> {
   if (hostedAuth !== null) return hostedAuth;
   hostedAuth = (async () => {
-    const app = getApps().some((candidate) => candidate.name === 'openlinear-hosted')
-      ? getApp('openlinear-hosted')
-      : initializeApp(hostedFirebaseOptions(), 'openlinear-hosted');
+    const app = getApps().some((candidate) => candidate.name === 'basiclinear-hosted')
+      ? getApp('basiclinear-hosted')
+      : initializeApp(hostedFirebaseOptions(), 'basiclinear-hosted');
     const auth = getAuth(app);
     const emulator = import.meta.env.VITE_FIREBASE_AUTH_EMULATOR_URL?.trim();
     if (emulator !== undefined && emulator !== '') {

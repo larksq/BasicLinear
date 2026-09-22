@@ -21,12 +21,12 @@
     "workflow": "ct-implement-sprint",
     "exception": "The project-local v0.8 task store is the accepted authority for this repository; no Linear service or Control Tower UI is used.",
     "product_scope": "project-management-only",
-    "security_testing": "skipped-by-sponsor-safety-boundary",
+    "security_testing": "skipped-by-maintainer-safety-boundary",
     "payment_execution": "prohibited"
   },
   "audit": {
     "reference": "Authenticated Linear observed read-only in the user's selected Chrome session",
-    "candidate": "https://openlinear-gray.vercel.app/",
+    "candidate": "https://basiclinear-gray.vercel.app/",
     "captured_at": "2026-08-31T02:02:13Z",
     "journeys": [
       "issue-detail",
@@ -117,11 +117,11 @@
         "result": "pass: 2 files, 9 tests"
       },
       {
-        "command": "npm run typecheck --workspace @openlinear/web && npm run typecheck",
+        "command": "npm run typecheck --workspace @basiclinear/web && npm run typecheck",
         "result": "pass: focused web typecheck and all 11 declared workspace typechecks"
       },
       {
-        "command": "npm run build:hosted --workspace @openlinear/web",
+        "command": "npm run build:hosted --workspace @basiclinear/web",
         "result": "pass: 1,821 isolated hosted modules; hosted HTML, CSS, and JavaScript emitted"
       },
       {
@@ -129,11 +129,11 @@
         "result": "pass: 2 files, 5 tests"
       },
       {
-        "command": "npm run typecheck --workspace @openlinear/web && npm run typecheck",
+        "command": "npm run typecheck --workspace @basiclinear/web && npm run typecheck",
         "result": "pass: focused web typecheck and all 11 declared workspace typechecks"
       },
       {
-        "command": "npm run build:hosted --workspace @openlinear/web plus development and production Vercel builds",
+        "command": "npm run build:hosted --workspace @basiclinear/web plus development and production Vercel builds",
         "result": "pass: 1,821 isolated hosted modules; environment validator; expected hosted HTML, CSS, and JavaScript"
       },
       {
@@ -149,24 +149,24 @@
         "result": "pass: 6 files, 19 positive nonsecurity tests"
       },
       {
-        "command": "npm run typecheck && npm run build:hosted --workspace @openlinear/web && npm ls @fontsource-variable/inter --workspace @openlinear/web && git diff --check",
+        "command": "npm run typecheck && npm run build:hosted --workspace @basiclinear/web && npm ls @fontsource-variable/inter --workspace @basiclinear/web && git diff --check",
         "result": "pass: all 11 declared workspace typechecks; 1,822 isolated hosted modules with self-hosted Inter variable assets; pinned font resolved; diff clean"
       }
     ],
     "deployments": [
       {
         "environment": "development",
-        "site": "https://openlinear-development.vercel.app",
+        "site": "https://basiclinear-development.vercel.app",
         "vercel_deployment": "dpl_FmBbQLPk96QH2LHqZBfzCT1mKxS7",
-        "cloud_run_revision": "openlinear-hosted-api-dev-00008-k49",
+        "cloud_run_revision": "basiclinear-hosted-api-dev-00008-k49",
         "firestore_membership_index": "READY",
         "state": "READY"
       },
       {
         "environment": "production",
-        "site": "https://openlinear-gray.vercel.app",
+        "site": "https://basiclinear-gray.vercel.app",
         "vercel_deployment": "dpl_9VK7NtaqjGxWV5LJCjSNX17DcZEZ",
-        "cloud_run_revision": "openlinear-hosted-api-00008-q6r",
+        "cloud_run_revision": "basiclinear-hosted-api-00008-q6r",
         "firestore_membership_index": "READY",
         "state": "READY"
       }
@@ -174,42 +174,42 @@
     "visual_iterations": [
       {
         "environment": "development",
-        "evidence": "/private/tmp/openlinear-ct144-development-final.png",
+        "evidence": "/private/tmp/basiclinear-ct144-development-final.png",
         "result": "Multiple-team, custom-status, cycle, issue-view, project-view, project-scope, issue-detail, invite-team, keyboard-dropdown, edit, reorder, and reload journeys passed with isolated durable data."
       },
       {
         "environment": "production",
-        "evidence": "/private/tmp/openlinear-ct144-r3/production-member-final.jpg",
-        "result": "Sponsor-authorized real two-account PM journey passed: production invitation to Product, Google acceptance, recognizable member name, explicit issue subscription, owner-to-member assignment, unread Inbox delivery and mark-read, invited-member comment, and full reload persistence. No payment/security action ran."
+        "evidence": "/private/tmp/basiclinear-ct144-r3/production-member-final.jpg",
+        "result": "Maintainer-authorized real two-account PM journey passed: production invitation to Product, Google acceptance, recognizable member name, explicit issue subscription, owner-to-member assignment, unread Inbox delivery and mark-read, invited-member comment, and full reload persistence. No payment/security action ran."
       },
       {
         "environment": "reference-comparison",
-        "evidence": "/private/tmp/openlinear-ct144-r3/linear-vs-production.jpg",
+        "evidence": "/private/tmp/basiclinear-ct144-r3/linear-vs-production.jpg",
         "result": "The authenticated Linear issue-detail reference and final production member state were captured at the same Chrome width and inspected together; the core document, properties, activity, subscribers, resources, sub-issues, comments, and navigation hierarchy remain aligned within the CT-144 audited boundary."
       },
       {
         "environment": "property-rail-reference-comparison",
-        "evidence": "/private/tmp/openlinear-ct144-properties/16-rail-comparison-clean.jpg",
+        "evidence": "/private/tmp/basiclinear-ct144-properties/16-rail-comparison-clean.jpg",
         "result": "Same-width authenticated Linear and deployed production captures were normalized to the same absolute 400 by 560 property region. The final issue title measures x=724/width=791 and the property rail x=1571/width=400, matching the Linear source within 0.5px; value rows, typography, grouping, icons, and neutral interaction treatment have no remaining P0/P1/P2 visual finding within the supported property set."
       },
       {
         "environment": "development-property-interactions",
-        "evidence": "/private/tmp/openlinear-ct144-properties/03-development-pass1.jpg",
+        "evidence": "/private/tmp/basiclinear-ct144-properties/03-development-pass1.jpg",
         "result": "Status, Priority, Project, Team, Cycle, and Milestone each opened a labelled listbox with real options, closed on Escape, restored focus to the trigger, and made no data mutation."
       },
       {
         "environment": "team-home-issue-key-comparison",
-        "evidence": "/private/tmp/openlinear-ct144-home-nowrap/05-production-before-after.png",
+        "evidence": "/private/tmp/basiclinear-ct144-home-nowrap/05-production-before-after.png",
         "result": "Fresh same-state 2461 by 1326 production captures show the pre-fix 70px identifier track wrapping four keys to 30px text height and the deployed 78px no-wrap track keeping all five identifiers at 15px inside 38px rows. The 1286 by 900 development check had no horizontal overflow; full-row issue navigation remained functional."
       },
       {
         "environment": "development-and-production-continuous-issue-identifiers",
-        "evidence": "/private/tmp/openlinear-ct144-sequential-dev-created.png and /private/tmp/openlinear-ct144-sequential-production.png",
+        "evidence": "/private/tmp/basiclinear-ct144-sequential-dev-created.png and /private/tmp/basiclinear-ct144-sequential-production.png",
         "result": "Development historical records rendered as OL-1 through OL-4; a bounded real-data creation atomically received OL-5 and retained it after full reload. Production remained read-only and rendered its unchanged five records as the continuous set OL-1 through OL-5, including the former hash-labelled CT-143 parent/child as OL-4/OL-5."
       },
       {
         "environment": "linear-typography-reference-and-deployed-environments",
-        "evidence": "/private/tmp/openlinear-ct144-typography-issue-focused-pass1.png, /private/tmp/openlinear-ct144-typography-development-issue-final.png, /private/tmp/openlinear-ct144-typography-development-home-final.png, /private/tmp/openlinear-ct144-typography-production-final.png, and /private/tmp/openlinear-ct144-typography-production-home-final.png",
+        "evidence": "/private/tmp/basiclinear-ct144-typography-issue-focused-pass1.png, /private/tmp/basiclinear-ct144-typography-development-issue-final.png, /private/tmp/basiclinear-ct144-typography-development-home-final.png, /private/tmp/basiclinear-ct144-typography-production-final.png, and /private/tmp/basiclinear-ct144-typography-production-home-final.png",
         "result": "Authenticated Linear measurements established the exact type roles. Development and production computed styles match at 24/32/600 display, 15/24/450 body, 15/23/600 sections, 13/20/500 navigation and rows, 12/16.8/500 tabs, and 12/16.8/450 metadata. Settings and create-issue modal were also visually checked; Chrome reported no warnings or font-loading errors; production data was not mutated."
       }
     ],

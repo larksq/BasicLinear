@@ -25,7 +25,7 @@ export function hostedClientErrorResponse(correlationId: string): Buffer {
     'Content-Type: application/json; charset=utf-8',
     `Content-Length: ${Buffer.byteLength(serialized, 'utf8')}`,
     'X-Content-Type-Options: nosniff',
-    `X-OpenLinear-Request-Id: ${correlationId}`,
+    `X-BasicLinear-Request-Id: ${correlationId}`,
     '',
     serialized,
   ].join('\r\n'), 'utf8');

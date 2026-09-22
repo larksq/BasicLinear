@@ -5,6 +5,8 @@
   "cleanUrls": false,
   "trailingSlash": false,
   "redirects": [
+    {"source": "/", "has": [{"type": "host", "value": "openlinear.qiaosun.me"}], "destination": "https://basiclinear.qiaosun.me/", "permanent": true},
+    {"source": "/:path*", "has": [{"type": "host", "value": "openlinear.qiaosun.me"}], "destination": "https://basiclinear.qiaosun.me/:path*", "permanent": true},
     {"source": "/homepage.html", "destination": "/", "permanent": true}
   ],
   "rewrites": [
@@ -19,7 +21,7 @@
     {"source": "/", "destination": "/homepage.html"}
   ],
   "headers": [
-    {"source": "/(.*)", "missing": [{"type": "host", "value": "openlinear.qiaosun.me"}], "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}]},
+    {"source": "/(.*)", "missing": [{"type": "host", "value": "basiclinear.qiaosun.me"}], "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}]},
     {"source": "/(.*)", "has": [{"type": "query", "key": "app"}], "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}]},
     {"source": "/(.*)", "has": [{"type": "query", "key": "billing"}], "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}]},
     {"source": "/(.*)", "has": [{"type": "query", "key": "oauth_request"}], "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}]},

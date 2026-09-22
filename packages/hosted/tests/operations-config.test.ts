@@ -16,7 +16,7 @@ describe('hosted operations deployment evidence', () => {
   it('binds runtime, application limits, query budgets, budget thresholds, and cost guardrails to code', async () => {
     const candidate = await json('ops/hosted/operations-policy.json');
     expect(candidate).toMatchObject({
-      schemaVersion: 'openlinear.hosted-operations-deployment.v1',
+      schemaVersion: 'basiclinear.hosted-operations-deployment.v1',
       evidenceBoundary: 'reviewed_candidate_not_applied_to_a_provider',
       applicationPolicyDigest: hostedOperationsPolicyDigest(),
       service: {
@@ -142,8 +142,8 @@ describe('hosted operations deployment evidence', () => {
       'operationsRestoreDrills',
     ]) expect(rules).toContain(`match /${collection}/{recordId}`);
     for (const name of [
-      'OPENLINEAR_OPERATIONS_SECRET', 'OPENLINEAR_HOSTED_ENVIRONMENT',
-      'OPENLINEAR_BUDGET_PUSH_AUDIENCE', 'OPENLINEAR_BUDGET_PUSH_SERVICE_ACCOUNT',
+      'BASICLINEAR_OPERATIONS_SECRET', 'BASICLINEAR_HOSTED_ENVIRONMENT',
+      'BASICLINEAR_BUDGET_PUSH_AUDIENCE', 'BASICLINEAR_BUDGET_PUSH_SERVICE_ACCOUNT',
     ]) expect(environment).toContain(name);
   });
 });

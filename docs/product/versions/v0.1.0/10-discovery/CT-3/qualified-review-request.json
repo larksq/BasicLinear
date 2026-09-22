@@ -6,15 +6,15 @@
     "source_revision": "1d7105c32cf8817670406f306a2069cee9faae83",
     "evidence_set_sha256": "a981e6bef7b2e18d28ccf31c8b424d014411660ed0c6682fdf3de2a6b1fa14fa"
   },
-  "sponsor_decision": {
+  "maintainer_decision": {
     "license": "AGPL-3.0-only",
-    "project_identity": "Scopefold",
-    "requested_final_product_brand": "OpenLinear"
+    "project_identity": "BasicLinear",
+    "requested_final_product_brand": "BasicLinear"
   },
   "accepted_identity_patterns": [
-    "OpenLinear",
-    "openlinear",
-    "@openlinear/"
+    "BasicLinear",
+    "basiclinear",
+    "@basiclinear/"
   ],
   "evidence": [
     {
@@ -43,7 +43,7 @@
       "sha256": "b335f333ef354107dd3936968e4d0fdb9099f2a91bf2e70b5dc3d043e095a0dc"
     },
     {
-      "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/sponsor-confirmation.md",
+      "path": "docs/product/versions/v0.1.0/10-discovery/CT-3/maintainer-confirmation.md",
       "exists": true,
       "sha256": "8101280dada6a3efb1443a223f871d81e0f055554818b6f29ef812c4ea7a01a9"
     },
@@ -134,8 +134,8 @@
     ],
     "accepted_dispositions": {
       "license_compatibility": "agpl_3_0_only_accepted",
-      "project_identity": "scopefold_cleared",
-      "product_identity": "openlinear_cleared",
+      "project_identity": "basiclinear_cleared",
+      "product_identity": "basiclinear_cleared",
       "trademark_and_trade_dress": "independent_expression_cleared",
       "clean_room_method": "restrictive_boundary_accepted",
       "existing_reference_evidence": "private_quarantine_accepted",

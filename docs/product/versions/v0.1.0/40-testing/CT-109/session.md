@@ -18,4 +18,4 @@ The first clean P-T22 rerun after CT-105 through CT-108 returned 7 PASS / 3 FAIL
 
 ## Boundary
 
-CT-109 repairs technical metadata only. It does not clear OpenLinear, approve Scopefold, accept AGPL compatibility, approve any asset/copy/notice right, authorize release, or claim an outcome.
+CT-109 repairs technical metadata only. It does not clear BasicLinear, approve BasicLinear, accept AGPL compatibility, approve any asset/copy/notice right, authorize release, or claim an outcome.

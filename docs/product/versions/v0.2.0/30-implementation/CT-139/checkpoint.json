@@ -258,7 +258,7 @@
     },
     "personal_tokens": {
       "browser_owner_management_only": true,
-      "audience": "openlinear-api-v1",
+      "audience": "basiclinear-api-v1",
       "scope_count": 15,
       "expiry_days": {"minimum": 1, "maximum": 365, "ui_options": [30, 90, 365]},
       "raw_display": "first successful create only",
@@ -290,8 +290,8 @@
       ]
     },
     "export": {
-      "schema": "openlinear.workspace-export.v1",
-      "media_type": "application/vnd.openlinear.workspace-export+json;version=1",
+      "schema": "basiclinear.workspace-export.v1",
+      "media_type": "application/vnd.basiclinear.workspace-export+json;version=1",
       "included": [
         "workspace",
         "active and removed memberships",

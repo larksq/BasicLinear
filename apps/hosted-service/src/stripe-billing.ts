@@ -8,7 +8,7 @@ import {
   type BillingProviderSubscriptionUpdateExpectation,
   type BillingProviderSubscriptionStatus,
   type VerifiedBillingNotice,
-} from '@openlinear/hosted';
+} from '@basiclinear/hosted';
 
 interface StripeBillingProviderOptions {
   secretKey: string;
@@ -21,10 +21,10 @@ interface StripeBillingProviderOptions {
 }
 
 const metadataKeys = [
-  'openlinear_checkout_reference',
-  'openlinear_owner_user_id',
-  'openlinear_plan',
-  'openlinear_workspace_id',
+  'basiclinear_checkout_reference',
+  'basiclinear_owner_user_id',
+  'basiclinear_plan',
+  'basiclinear_workspace_id',
 ] as const;
 
 function canonicalNow(clock: () => Date): string {
@@ -54,10 +54,10 @@ function metadata(value: Stripe.Metadata | null): {
   if (value === null || Object.keys(value).sort().join(':') !== [...metadataKeys].sort().join(':')) {
     throw new Error('STRIPE_METADATA_INVALID');
   }
-  const workspaceId = value.openlinear_workspace_id;
-  const ownerUserId = value.openlinear_owner_user_id;
-  const plan = value.openlinear_plan;
-  const checkoutReference = value.openlinear_checkout_reference;
+  const workspaceId = value.basiclinear_workspace_id;
+  const ownerUserId = value.basiclinear_owner_user_id;
+  const plan = value.basiclinear_plan;
+  const checkoutReference = value.basiclinear_checkout_reference;
   if (typeof workspaceId !== 'string' || typeof ownerUserId !== 'string'
     || typeof checkoutReference !== 'string' || !/^[a-f0-9]{64}$/u.test(checkoutReference)
     || (plan !== 'monthly' && plan !== 'annual')) throw new Error('STRIPE_METADATA_INVALID');
@@ -115,10 +115,10 @@ export class StripeBillingProvider implements BillingProvider {
     if (input.priceId !== this.#priceIds[input.plan]) throw new Error('STRIPE_PRICE_BINDING_INVALID');
     if (!/^[a-f0-9]{64}$/u.test(input.checkoutReference)) throw new Error('STRIPE_CHECKOUT_REFERENCE_INVALID');
     const metadataValue = {
-      openlinear_checkout_reference: input.checkoutReference,
-      openlinear_workspace_id: input.workspaceId,
-      openlinear_owner_user_id: input.ownerUserId,
-      openlinear_plan: input.plan,
+      basiclinear_checkout_reference: input.checkoutReference,
+      basiclinear_workspace_id: input.workspaceId,
+      basiclinear_owner_user_id: input.ownerUserId,
+      basiclinear_plan: input.plan,
     };
     const session = await this.#client.checkout.sessions.create({
       mode: 'subscription',
@@ -161,7 +161,7 @@ export class StripeBillingProvider implements BillingProvider {
         ...(startingAfter === undefined ? {} : {starting_after: startingAfter}),
       });
       for (const session of page.data) {
-        if (session.metadata?.openlinear_checkout_reference === input.checkoutReference) matches.push(session);
+        if (session.metadata?.basiclinear_checkout_reference === input.checkoutReference) matches.push(session);
       }
       if (!page.has_more) break;
       const last = page.data.at(-1);

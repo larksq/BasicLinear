@@ -17,7 +17,7 @@ import {
 } from 'firebase/firestore';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 
-const projectId = 'demo-openlinear';
+const projectId = 'demo-basiclinear';
 const workspaceAlpha = 'ws_rules_alpha';
 const workspaceBeta = 'ws_rules_beta';
 const workspaceMalformed = 'ws_rules_malformed';
@@ -384,12 +384,12 @@ async function seed(): Promise<void> {
         schemaVersion: 1, workspaceId: workspaceAlpha, requestDigest: 'f'.repeat(64),
       }],
       [`workspaces/${workspaceAlpha}/productEvents/event-private`, {
-        schemaVersion: 'openlinear.hosted-measurement.v1',
+        schemaVersion: 'basiclinear.hosted-measurement.v1',
         workspaceId: workspaceAlpha,
         name: 'invitation.sent',
       }],
       [`workspaces/${workspaceAlpha}/mutationAudits/audit-invitation-private`, {
-        schemaVersion: 'openlinear.hosted-measurement.v1',
+        schemaVersion: 'basiclinear.hosted-measurement.v1',
         workspaceId: workspaceAlpha,
         action: 'invitation.send',
       }],

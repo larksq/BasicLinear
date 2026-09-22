@@ -32,7 +32,7 @@ Collection GET endpoints accept only `limit` from 1 through 100 and an opaque cu
 
 Only an active workspace owner using a verified Google browser session may list, create, or revoke personal access tokens. A personal token cannot authorize token creation or revocation.
 
-The fixed audience is `openlinear-api-v1`. An owner selects one or more explicit allowlisted scopes:
+The fixed audience is `basiclinear-api-v1`. An owner selects one or more explicit allowlisted scopes:
 
 - `workspace:read`;
 - `projects:read`, `projects:write`;
@@ -60,7 +60,7 @@ Successful mutations write source-tagged audit records with actor kind/reference
 
 Only the active workspace owner may export. Browser export uses the verified Google principal; REST export additionally requires `workspace:export`.
 
-The response media type is `application/vnd.openlinear.workspace-export+json;version=1`. Its data schema is `openlinear.workspace-export.v1` and contains, in deterministic ID order:
+The response media type is `application/vnd.basiclinear.workspace-export+json;version=1`. Its data schema is `basiclinear.workspace-export.v1` and contains, in deterministic ID order:
 
 - the exact public workspace record;
 - active and removed memberships with lifecycle timestamps;

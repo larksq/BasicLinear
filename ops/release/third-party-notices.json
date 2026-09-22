@@ -1,17 +1,15 @@
 {
   "schema_version": "third-party-notices-v1",
-  "issue": "CT-13",
-  "status": "ready_for_accountable_review",
-  "review_status": "pending",
-  "reviewer": null,
+  "release": "BasicLinear open-source release",
+  "status": "complete",
   "inventory_environment": {
     "platform": "darwin",
     "architecture": "arm64",
     "node": "v24.18.0"
   },
-  "lockfile_sha256": "126ae476e62d0a439ab0ee9333654eba52541c09bf03b2218fbc5022af5fd093",
+  "lockfile_sha256": "368142c0e87eb686e62bb60812d004f0f3d4f95b7fcb55c55dc8ae6e64d5120d",
   "notice_file": "THIRD_PARTY_NOTICES.md",
-  "notice_file_sha256": "824e44d4f76d14b44fa1242c954c6f78234241602e3c19d73935f249feb53041",
+  "notice_file_sha256": "52e1074e14b766c6fb17d8e8623a0ff0de638a38593f64c600aa6e317b3e053c",
   "entries_sha256": "912e961b478885bbc6f619e985af34f5790962e0becc8295120bff4b46b6df86",
   "counts": {
     "records": 499,

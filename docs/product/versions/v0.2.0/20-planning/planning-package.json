@@ -238,7 +238,7 @@
       "kind": "outcome",
       "subject": "target_user",
       "target_segment_or_system": "eligible workspace owners whose 30-day Pro trial ends",
-      "expected_change": "choose and maintain a paid hosted subscription at the sponsor-confirmed price",
+      "expected_change": "choose and maintain a paid hosted subscription at the maintainer-confirmed price",
       "metric": {
         "name": "seven-day trial-to-paid conversion rate",
         "definition": "share of eligible workspaces activating a paid monthly or annual subscription within seven days after the 30-day trial ends",
@@ -289,7 +289,7 @@
       "assumptions": [
         "USD before applicable taxes is acceptable for launch",
         "one-user Free fallback avoids coercive data loss",
-        "the annual discount remains sponsor-approved"
+        "the annual discount remains maintainer-approved"
       ],
       "evidence_refs": [
         "E-201",
@@ -306,7 +306,7 @@
       "contract_sha256": "167bfa36eb6b8a58424b9cb417db9f1fa9aed3a7cce864f519ea5be5a8f1db1e",
       "kind": "outcome",
       "subject": "system",
-      "target_segment_or_system": "versioned OpenLinear REST and MCP product-management surfaces",
+      "target_segment_or_system": "versioned BasicLinear REST and MCP product-management surfaces",
       "expected_change": "complete canonical PM operations correctly and safely through either automation surface",
       "metric": {
         "name": "canonical automation task success rate",
@@ -511,7 +511,7 @@
       "kind": "outcome",
       "subject": "target_user",
       "target_segment_or_system": "eligible workspace owners whose 30-day Pro trial ends",
-      "expected_change": "choose and maintain a paid hosted subscription at the sponsor-confirmed price",
+      "expected_change": "choose and maintain a paid hosted subscription at the maintainer-confirmed price",
       "metric": {
         "name": "seven-day trial-to-paid conversion rate",
         "definition": "share of eligible workspaces activating a paid monthly or annual subscription within seven days after the 30-day trial ends",
@@ -562,7 +562,7 @@
       "assumptions": [
         "USD before applicable taxes is acceptable for launch",
         "one-user Free fallback avoids coercive data loss",
-        "the annual discount remains sponsor-approved"
+        "the annual discount remains maintainer-approved"
       ],
       "evidence_refs": [
         "E-201",
@@ -579,7 +579,7 @@
       "contract_sha256": "167bfa36eb6b8a58424b9cb417db9f1fa9aed3a7cce864f519ea5be5a8f1db1e",
       "kind": "outcome",
       "subject": "system",
-      "target_segment_or_system": "versioned OpenLinear REST and MCP product-management surfaces",
+      "target_segment_or_system": "versioned BasicLinear REST and MCP product-management surfaces",
       "expected_change": "complete canonical PM operations correctly and safely through either automation surface",
       "metric": {
         "name": "canonical automation task success rate",
@@ -1091,7 +1091,7 @@
           "Price, proration, webhook replay/order, expiry, downgrade, data preservation, budget, and copy tests pass."
         ],
         "outcome": [
-          "Eligible owners can make a measurable trial-to-paid choice at the sponsor-confirmed prices."
+          "Eligible owners can make a measurable trial-to-paid choice at the maintainer-confirmed prices."
         ]
       }
     },
@@ -1153,7 +1153,7 @@
       "implementation_ready": true,
       "done": {
         "output": [
-          "Streamable HTTP MCP tools and an openlinear-product-management skill expose the bounded PM operation map."
+          "Streamable HTTP MCP tools and an basiclinear-product-management skill expose the bounded PM operation map."
         ],
         "quality": [
           "Protocol, schema, API parity, cancellation, authorization, audit, and prohibited-capability scans pass."

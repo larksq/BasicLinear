@@ -18,7 +18,7 @@ Plane, OpenProject, Taiga, Vikunja, and GitHub Projects cover meaningful parts o
 
 ## Replacement boundary
 
-`v0.1.0` is a replacement for the defined core, not orchestration around Linear. It has no Linear runtime, API, MCP, or synchronization dependency. It does not copy code, assets, trademarks, proprietary fonts, hidden endpoints, or private content. The sponsor requested “OpenLinear” as the final product brand and “Scopefold” as the project identity, but that model remains blocked from public use until `CT-3` resolves current collision evidence and qualified clearance.
+`v0.1.0` is a replacement for the defined core, not orchestration around Linear. It has no Linear runtime, API, MCP, or synchronization dependency. It does not copy code, assets, trademarks, proprietary fonts, hidden endpoints, or private content. The maintainer requested “BasicLinear” as the final product brand and “BasicLinear” as the project identity, but that model remains blocked from public use until `CT-3` resolves current collision evidence and qualified clearance.
 
 ## Trust conditions
 

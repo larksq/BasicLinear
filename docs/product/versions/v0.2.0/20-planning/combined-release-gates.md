@@ -2,7 +2,7 @@
 
 ## Topology decision
 
-OpenLinear uses one project-level Control Tower lifecycle for the v0.1 local and v0.2 hosted increments. v0.2 creates no version-specific milestone. The six existing stage milestones remain canonical, and unfinished human gates from v0.1 now govern the exact combined candidate.
+BasicLinear uses one project-level Control Tower lifecycle for the v0.1 local and v0.2 hosted increments. v0.2 creates no version-specific milestone. The six existing stage milestones remain canonical, and unfinished human gates from v0.1 now govern the exact combined candidate.
 
 The superseded `v0.2.0 — Online Collaboration` milestone was emptied and deleted on 2026-08-25 through the supported project-local v0.8 task API. Deletion detached zero issues. The authoritative readback is [v0.2.0 shared-stage reconciliation](../../../../../.control-tower/evidence/v0.2.0-shared-stage-reconciliation-2026-08-25.json).
 
@@ -23,7 +23,7 @@ The superseded `v0.2.0 — Online Collaboration` milestone was emptied and delet
 
 CT-3 remains Todo and unblocked so qualified review can proceed independently of implementation. Its exact review packet covers:
 
-- the OpenLinear name and clean-room provenance;
+- the BasicLinear name and clean-room provenance;
 - the separate local and Firebase-hosted authorities;
 - Google identity, workspace isolation, owner/member access, invitations, assignment, and comments;
 - the one-time no-card 30-day Pro trial, USD $2 active-user monthly price, and USD $12 active-user yearly price;
@@ -52,7 +52,7 @@ The user will qualify and approve v0.1 and v0.2 together. Therefore:
 - v0.1 is not independently approved or released while the combined gates are pending;
 - v0.2 implementation and CT-142 testing may proceed before human approval, but cannot imply it;
 - provider account creation, terms acceptance, production credentials, live billing, deployment, and public release still require their applicable action-time authority;
-- accepted prices and trial length cannot be changed by research or implementation without sponsor direction; and
+- accepted prices and trial length cannot be changed by research or implementation without maintainer direction; and
 - outcomes remain pending until valid source-backed observation windows mature.
 
 ## Current readback

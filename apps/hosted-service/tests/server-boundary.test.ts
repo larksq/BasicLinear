@@ -59,7 +59,7 @@ describe('hosted top-level server boundary', () => {
         'connection': 'close',
         'content-type': 'application/json; charset=utf-8',
         'x-content-type-options': 'nosniff',
-        'x-openlinear-request-id': 'server-contained-request-0001',
+        'x-basiclinear-request-id': 'server-contained-request-0001',
       },
       ended: true,
       destroyed: false,

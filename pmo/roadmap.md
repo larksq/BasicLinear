@@ -11,7 +11,7 @@ research_basis: "live-web-and-confirmed-input"
 
 The Now horizon completes governed Discovery. It uses broad online statistics to rank workflow scope across varied project types, keeps historical authenticated reference material quarantined, compares open-source alternatives, proves a feasible technical direction, defines first-release scope, writes requirements and outcome contracts, and records all work in project-local Control Tower.
 
-Now also establishes the clean-room policy: independent code and assets, synthetic fixtures, private evidence isolation, distinct branding, and a qualified pre-release review. Discovery exits only when its package validates and any warning has an owner and handoff rationale.
+Now also establishes the clean-room policy: independent code and assets, synthetic fixtures, private evidence isolation, distinct branding, and repeatable public provenance checks. Discovery records a validated package and any warning with an owner and handoff rationale.
 
 ## Next
 
@@ -27,15 +27,15 @@ AI agent features, code review, customer management, billing, and marketplace in
 
 ## Dependencies
 
-Discovery depends on private Chrome research remaining read-only and Control Tower local authority remaining healthy. Planning depends on accepted outcomes and benchmark tasks. Implementation depends on selected architecture, synthetic fixture schema, public identity working boundary, and security model. Testing depends on a sealed candidate revision, reproducible environment, migration fixtures, and approved visual baselines. Public release depends on license and brand review, dependency attribution, security review, restore evidence, and a complete source distribution.
+Discovery depends on private Chrome research remaining read-only and Control Tower local authority remaining healthy. Planning depends on accepted outcomes and benchmark tasks. Implementation depends on selected architecture, synthetic fixture schema, public identity working boundary, and security model. Testing depends on a sealed candidate revision, reproducible environment, migration fixtures, and visual baselines. Public release depends on the technical audit, dependency attribution, restore evidence, and a complete source distribution.
 
 No Google account, Linear service, Docker runtime, database server, OIDC configuration, or paid service is a v0.1 runtime dependency.
 
 ## Exit criteria
 
-Now exits with five Discovery outputs, exact critical QA, validated normalized JSON, private source preservation, and fresh Control Tower issue/milestone readback. Next exits when the release can complete every core workflow on synthetic data, local-origin and filesystem security tests pass, the visual harness is stable, and SQLite backup/restore succeeds. Testing exits when every Must requirement has independent evidence and critical findings are closed. Release exits when outcome-readiness and public clean-room gates are accepted.
+Now records five Discovery outputs, exact critical QA, validated normalized JSON, private source preservation, and fresh Control Tower issue/milestone readback. Next records evidence that the release can complete every core workflow on synthetic data, local-origin and filesystem security tests pass, the visual harness is stable, and SQLite backup/restore succeeds. Testing records independent evidence for every Must requirement and critical finding. Release is ready when the current technical audit and secret scan pass.
 
-Dates are targets, not proof. A milestone remains incomplete until its exit evidence is present. Progress derives from issue state but stage authority derives from the gate contract.
+Dates are targets, not proof. A milestone remains incomplete until its evidence is present. Progress derives from issue state and current verification results.
 
 ## Re-planning triggers
 

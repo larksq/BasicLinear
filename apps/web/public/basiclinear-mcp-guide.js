@@ -3,6 +3,6 @@
 (() => {
   const endpoint = new URL('/mcp', window.location.href).href;
   for (const code of document.querySelectorAll('[data-mcp-endpoint], [data-mcp-commands]')) {
-    code.textContent = code.textContent.replaceAll('https://openlinear.qiaosun.me/mcp', endpoint);
+    code.textContent = code.textContent.replaceAll('https://basiclinear.qiaosun.me/mcp', endpoint);
   }
 })();

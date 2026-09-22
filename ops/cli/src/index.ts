@@ -13,7 +13,7 @@ import {
   restoreDatabaseFile,
   TransferError,
   verifyDatabaseFile,
-} from '@openlinear/db';
+} from '@basiclinear/db';
 
 interface CliResult {
   ok: boolean;
@@ -96,7 +96,7 @@ async function writeTransferFile(
   }
 
   const data = Buffer.from(`${canonicalStringify(value)}\n`, 'utf8');
-  const temporary = join(dirname(path), `.${process.pid}-${randomBytes(8).toString('hex')}.openlinear-tmp`);
+  const temporary = join(dirname(path), `.${process.pid}-${randomBytes(8).toString('hex')}.basiclinear-tmp`);
   let handle;
   try {
     handle = await open(temporary, 'wx', 0o600);
@@ -116,7 +116,7 @@ async function writeTransferFile(
 function buildIdentity(): { productVersion: string; buildId: string } {
   return {
     productVersion: '0.1.0',
-    buildId: process.env.OPENLINEAR_BUILD_ID?.trim() || 'development',
+    buildId: process.env.BASICLINEAR_BUILD_ID?.trim() || 'development',
   };
 }
 
@@ -191,7 +191,7 @@ async function backup(args: string[]): Promise<void> {
   const timestamp = new Date().toISOString().replaceAll(':', '-');
   const requestedOutput = option(args, '--output');
   if (requestedOutput === undefined) prepareLocalStorage(paths);
-  const output = requestedOutput ?? join(paths.backupDirectory, `openlinear-${timestamp}.sqlite3`);
+  const output = requestedOutput ?? join(paths.backupDirectory, `basiclinear-${timestamp}.sqlite3`);
   const db = createDatabase(database);
   try {
     emit({
@@ -246,7 +246,7 @@ try {
   else if (args[0] === 'export') await exportWorkspace(args);
   else if (args[0] === 'backup') await backup(args);
   else if (args[0] === 'restore') await restore(args);
-  else fail('unknown', 'USAGE_ERROR', 'Unknown command. Run openlinear help.', 2);
+  else fail('unknown', 'USAGE_ERROR', 'Unknown command. Run basiclinear help.', 2);
 } catch (error) {
   if (error instanceof TransferError) fail(args.join(' ') || 'unknown', error.code, error.message);
   const message = error instanceof Error ? error.message : 'The local operator command failed.';

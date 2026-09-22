@@ -358,7 +358,7 @@ export interface HostedPersonalToken {
   name: string;
   prefix: string;
   scopes: HostedPersonalTokenScope[];
-  audience: 'openlinear-api-v1';
+  audience: 'basiclinear-api-v1';
   createdAt: string;
   expiresAt: string;
   lastUsedAt: string | null;
@@ -373,11 +373,11 @@ export interface HostedPersonalTokenCreation {
 }
 
 export interface HostedWorkspaceExport {
-  mediaType: 'application/vnd.openlinear.workspace-export+json;version=1';
+  mediaType: 'application/vnd.basiclinear.workspace-export+json;version=1';
   workspaceId: string;
   sha256: string;
   data: {
-    schemaVersion: 'openlinear.workspace-export.v1';
+    schemaVersion: 'basiclinear.workspace-export.v1';
     workspace: Record<string, unknown>;
     memberships: Array<Record<string, unknown>>;
     invitations: Array<Record<string, unknown>>;

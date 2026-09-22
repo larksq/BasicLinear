@@ -4,7 +4,7 @@
 
 Which workflow families must survive a migration into the one-owner, one-workspace, one-team `v0.1.0` product, across software, personal, ITSM, DevOps, predictive, hybrid, agile, and other industry project types?
 
-The sources do not ask that exact product question. The ranking is therefore an inference from registered statistics plus the sponsor's replacement and ownership constraints, not a claimed survey result.
+The sources do not ask that exact product question. The ranking is therefore an inference from registered statistics plus the maintainer's replacement and ownership constraints, not a claimed survey result.
 
 ## Criteria
 
@@ -26,9 +26,9 @@ The weighted score is `0.35P + 0.25X + 0.25M + 0.15C`. Scores prioritize product
 | 1 | Issue capture and lifecycle | 5 | 5 | 5 | 4 | 4.85 | STAT-001, STAT-004, STAT-006, STAT-008 through STAT-010 | Must: fast create/edit; identifiers; status, priority, dates, labels; configurable status order and retirement; archive/restore. |
 | 2 | Find and focus | 5 | 5 | 4 | 5 | 4.75 | STAT-002, STAT-004, STAT-013, STAT-014 | Must: list and board, search, filters, grouping, ordering, visible properties, bulk action, saved views, preserved context. |
 | 3 | Project and milestone planning | 4 | 5 | 5 | 4 | 4.50 | STAT-008 through STAT-010, STAT-013, STAT-016 | Must: projects, ordered milestones, issue assignment, scope, dates, progress, archive/restore. |
-| 4 | Data ownership and recovery | 4 | 5 | 5 | 3 | 4.35 | STAT-003 through STAT-006 plus sponsor ownership constraint | Release-critical: versioned export/import, backup/restore, identifiers and relationship digests, network-denied local operation. |
+| 4 | Data ownership and recovery | 4 | 5 | 5 | 3 | 4.35 | STAT-003 through STAT-006 plus maintainer ownership constraint | Release-critical: versioned export/import, backup/restore, identifiers and relationship digests, network-denied local operation. |
 | 5 | Context and traceability | 4 | 4 | 4 | 5 | 4.15 | STAT-002, STAT-011, STAT-012, STAT-014 through STAT-016 | Must: descriptions, relations, resources, comments where useful to the owner, immutable activity, and progress context. |
-| 6 | Multi-user collaboration and team administration | 3 | 2 | 2 | 2 | 2.35 | STAT-015 and STAT-016, limited by sponsor scope | Exclude from supported v0.1 UX: invitations, member administration, presence, multi-team switching, and shared assignments. Retain internal authorization boundaries as regression protection. |
+| 6 | Multi-user collaboration and team administration | 3 | 2 | 2 | 2 | 2.35 | STAT-015 and STAT-016, limited by maintainer scope | Exclude from supported v0.1 UX: invitations, member administration, presence, multi-team switching, and shared assignments. Retain internal authorization boundaries as regression protection. |
 | 7 | AI, advanced analytics, and broad integrations | 1 | 2 | 1 | 2 | 1.40 | STAT-007; STAT-012 only supports future automation readiness | Exclude from v0.1. Preserve stable APIs and activity records so later work is not blocked. |
 
 ## Sensitivity

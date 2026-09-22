@@ -15,7 +15,7 @@
     "status": "accepted",
     "independent": true,
     "decision_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/decision.md",
-    "authorized_by": "sponsor current Codex task 2026-08-27",
+    "authorized_by": "maintainer current Codex task 2026-08-27",
     "evidence_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/review-2.md",
     "actor_id": "codex-testing-ct143-independent",
     "session_id": "CT143-INDEPENDENT-REMEDIATION-REVIEW-20260827"

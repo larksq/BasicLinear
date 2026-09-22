@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "openlinear.hosted-environment.v1",
+  "schemaVersion": "basiclinear.hosted-environment.v1",
   "deploymentEnvironment": "development",
   "hostedControlEnvironment": "uat",
   "firebaseProjectId": "openlinear-dev-larksq",
@@ -19,15 +19,15 @@
     "service": "openlinear-hosted-api-dev",
     "status": "deployed",
     "url": "https://openlinear-hosted-api-dev-957696487111.us-central1.run.app",
-    "revision": "openlinear-hosted-api-dev-00015-nb2"
+    "revision": "openlinear-hosted-api-dev-00016-gow"
   },
   "frontend": {
     "provider": "vercel",
-    "project": "openlinear-development",
+    "project": "basiclinear-development",
     "providerStatus": "ready",
-    "url": "https://openlinear-development.vercel.app",
-    "deploymentId": "dpl_GcDo1Cq39K2vBdbjepeaqZKe8Bgm",
-    "deployedAt": "2026-09-18T07:02:12.924000Z"
+    "url": "https://basiclinear-development.vercel.app",
+    "deploymentId": "dpl_AGsXd5ujyWVuKa6iCSFv7sBrbPdd",
+    "deployedAt": "2026-09-22T03:41:41.000000Z"
   },
   "deploymentState": "deployed_verification_payment_mode",
   "creemConnected": true,

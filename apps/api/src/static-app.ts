@@ -1,6 +1,6 @@
 import { lstat, readFile } from 'node:fs/promises';
 import { extname, resolve, sep } from 'node:path';
-import { AppError } from '@openlinear/domain';
+import { AppError } from '@basiclinear/domain';
 import type { FastifyReply, FastifyRequest } from 'fastify';
 
 const mediaTypes: Record<string, string> = {

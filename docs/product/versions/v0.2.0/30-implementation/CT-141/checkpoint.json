@@ -182,7 +182,7 @@
   ],
   "implementation": {
     "policy": {
-      "schema": "openlinear.hosted-operations-policy.v1",
+      "schema": "basiclinear.hosted-operations-policy.v1",
       "digest": "3caa75ff6462bfa9ea9dcf04af8df5d4274a2e81843a4ee1b3f0755087838cd5",
       "max_instances": 3,
       "concurrency_per_instance": 40,
@@ -199,7 +199,7 @@
       "outer_edge_required_before_public_traffic": true
     },
     "telemetry": {
-      "schema": "openlinear.hosted-operations-telemetry.v1",
+      "schema": "basiclinear.hosted-operations-telemetry.v1",
       "admitted_and_control_rejections_recorded": true,
       "cloud_trace_correlation": true,
       "raw_identifiers_recorded": false,

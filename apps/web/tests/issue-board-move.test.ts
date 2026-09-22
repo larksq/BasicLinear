@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import { describe, expect, it } from 'vitest';
-import type { Issue, Membership, Milestone, Project, WorkflowStatus } from '@openlinear/contracts';
+import type { Issue, Membership, Milestone, Project, WorkflowStatus } from '@basiclinear/contracts';
 import {
   issueBoardDragThresholdExceeded,
   issueBoardMoveRequest,

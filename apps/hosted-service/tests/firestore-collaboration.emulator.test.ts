@@ -6,7 +6,7 @@ import {
   MemoryWorkspaceAuthorizationEvidenceWriter, MemoryWorkspaceMembershipReader,
   ProjectManagementService, WorkspaceAuthorizationService, WorkspaceConfigurationService,
   type FirestoreCollaborationLike,
-} from '@openlinear/hosted';
+} from '@basiclinear/hosted';
 import {defaultHostedStatusId} from '../../../packages/hosted/src/workspace-configuration-service.js';
 import {proEntitlementPolicyForTests} from '../../../packages/hosted/tests/fixtures/entitlement.js';
 
@@ -15,7 +15,7 @@ beforeAll(() => {
   if (!/^(127\.0\.0\.1|localhost):\d+$/u.test(process.env.FIRESTORE_EMULATOR_HOST ?? '')) {
     throw new Error('These tests require an isolated loopback Firestore emulator.');
   }
-  firestore = new Firestore({projectId: 'demo-openlinear'});
+  firestore = new Firestore({projectId: 'demo-basiclinear'});
 });
 afterAll(async () => {await firestore?.terminate();});
 

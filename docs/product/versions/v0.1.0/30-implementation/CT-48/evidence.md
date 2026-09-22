@@ -50,7 +50,7 @@ The skipped integration result is not a pass. The unexecuted matrix includes cle
 
 ## Pending Database Matrix
 
-Run the existing integration suite against an isolated PostgreSQL migration URL and application password. It must prove clean migration 009, grants and forced RLS under `openlinear_app`, one-time state plus binding consumption, mismatched/replayed callback rejection, same-session link enforcement, exact issuer-plus-subject isolation, mapping conflicts, local login during provider failure, unlink revision conflicts, restart persistence, identity-bearing backup/restore, zero restored sessions and authorization requests, and a verified populated pre-009 backup before upgrade.
+Run the existing integration suite against an isolated PostgreSQL migration URL and application password. It must prove clean migration 009, grants and forced RLS under `basiclinear_app`, one-time state plus binding consumption, mismatched/replayed callback rejection, same-session link enforcement, exact issuer-plus-subject isolation, mapping conflicts, local login during provider failure, unlink revision conflicts, restart persistence, identity-bearing backup/restore, zero restored sessions and authorization requests, and a verified populated pre-009 backup before upgrade.
 
 ## Pending Browser Matrix
 

@@ -25,7 +25,7 @@ The accepted UX system caps document-like overview content at `920px`, keeps tab
 - Typecheck: all 8 workspaces passed.
 - Production build: 1,948 modules, 105 output files, and 1,890,845 output bytes, without warnings.
 - Release-audit regression: 6 / 6 tests passed.
-- Isolated rebuilt process: `ready` and `live` at `http://127.0.0.1:4279/` from `/tmp/openlinear-ct99-20260822-1127`.
+- Isolated rebuilt process: `ready` and `live` at `http://127.0.0.1:4279/` from `/tmp/basiclinear-ct99-20260822-1127`.
 - Served HTML references `index-CLxXYmWN.js` and `index-BWNB4Ft7.css`; served CSS contains the accepted tokens and overview cap, retains the fluid `1280px` work surface, and contains no `backdrop-filter`, `blur(2px)`, old 24px page-heading rule, or old 25px project-heading rule.
 - Rendered Chrome captures: 0.
 

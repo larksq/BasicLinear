@@ -1,7 +1,7 @@
 {
-  "schemaVersion": "openlinear.hosted-operations-deployment.v1",
+  "schemaVersion": "basiclinear.hosted-operations-deployment.v1",
   "evidenceBoundary": "reviewed_candidate_not_applied_to_a_provider",
-  "applicationPolicyDigest": "76f49fb64f9a29ce6d8d6e25c822e4fb3ec714b29b38b150b408449892888b30",
+  "applicationPolicyDigest": "ac6319e85092c88e386fdc3dc9ffcd54be03862f5bd7d466cce537750c00a06a",
   "service": {
     "name": "openlinear-hosted-api",
     "region": "us-central1",
@@ -63,7 +63,7 @@
     "emailOrDeviceFingerprinting": false
   },
   "budget": {
-    "displayName": "OpenLinear pilot budget",
+    "displayName": "BasicLinear pilot budget",
     "currency": "USD",
     "amountMicrousd": 25000000,
     "thresholdBasisPoints": [5000, 8000, 10000],

@@ -17,7 +17,7 @@ const periodEnd = '2026-08-01T00:00:00.000Z';
 function economics(): HostedEconomicsRecord[] {
   return [
     {
-      schemaVersion: 'openlinear.hosted-measurement.v1',
+      schemaVersion: 'basiclinear.hosted-measurement.v1',
       id: 'economics:firebase:workspace-1:2026-07',
       workspaceId: 'workspace-operations-1',
       provider: 'firebase',
@@ -31,7 +31,7 @@ function economics(): HostedEconomicsRecord[] {
       retrievedAt: '2026-08-01T01:00:00.000Z',
     },
     {
-      schemaVersion: 'openlinear.hosted-measurement.v1',
+      schemaVersion: 'basiclinear.hosted-measurement.v1',
       id: 'economics:stripe-fee:workspace-1:2026-07',
       workspaceId: 'workspace-operations-1',
       provider: 'stripe',
@@ -45,7 +45,7 @@ function economics(): HostedEconomicsRecord[] {
       retrievedAt: '2026-08-01T01:00:00.000Z',
     },
     {
-      schemaVersion: 'openlinear.hosted-measurement.v1',
+      schemaVersion: 'basiclinear.hosted-measurement.v1',
       id: 'economics:stripe-revenue:workspace-1:2026-07',
       workspaceId: 'workspace-operations-1',
       provider: 'stripe',
@@ -72,15 +72,15 @@ function activationInput(
     expiresAt: '2026-08-02T03:00:00.000Z',
     budgetIntervalStart: '2026-08-01T00:00:00.000Z',
     providerReferences: {
-      budgetDisplayName: 'OpenLinear pilot budget',
+      budgetDisplayName: 'BasicLinear pilot budget',
       billingAccountId: '000AAA-BBB111-CCC222',
       budgetId: 'budget-operations-1',
-      pubsubSubscription: 'projects/openlinear-uat/subscriptions/budget-alerts',
+      pubsubSubscription: 'projects/basiclinear-uat/subscriptions/budget-alerts',
       cloudRunService: 'openlinear-hosted-api',
-      cloudArmorPolicy: 'openlinear-hosted-edge',
-      billingExportDataset: 'openlinear_billing_export',
-      backupBucket: 'openlinear-firestore-backups',
-      restoreProject: 'restore-drill-openlinear-uat',
+      cloudArmorPolicy: 'basiclinear-hosted-edge',
+      billingExportDataset: 'basiclinear_billing_export',
+      backupBucket: 'basiclinear-firestore-backups',
+      restoreProject: 'restore-drill-basiclinear-uat',
     },
     paidWorkspaceIds: ['workspace-operations-1'],
     economics: source,
@@ -99,11 +99,11 @@ function notice(overrides: Partial<HostedBudgetNoticeInput> = {}): HostedBudgetN
   return {
     messageId: '1234567890',
     publishTime: '2026-08-01T04:00:00.000Z',
-    subscription: 'projects/openlinear-uat/subscriptions/budget-alerts',
+    subscription: 'projects/basiclinear-uat/subscriptions/budget-alerts',
     billingAccountId: '000AAA-BBB111-CCC222',
     budgetId: 'budget-operations-1',
     schemaVersion: '1.0',
-    budgetDisplayName: 'OpenLinear pilot budget',
+    budgetDisplayName: 'BasicLinear pilot budget',
     costAmount: 13,
     costIntervalStart: '2026-08-01T00:00:00.000Z',
     budgetAmount: 25,
@@ -197,7 +197,7 @@ describe('hosted operations cost and activation evidence', () => {
       id: 'current', environment: 'uat', costReportDecision: 'allow', revision: 1,
     });
     expect(JSON.stringify(snapshot)).not.toContain('000AAA-BBB111-CCC222');
-    expect(JSON.stringify(snapshot)).not.toContain('OpenLinear pilot budget');
+    expect(JSON.stringify(snapshot)).not.toContain('BasicLinear pilot budget');
     expect(JSON.stringify(snapshot)).not.toContain('billing-export:firebase-row-1');
 
     const fabricated = activationInput();
@@ -368,8 +368,8 @@ describe('hosted Firestore restore-drill evidence', () => {
     const drillInput = {
       drillId: 'drill-2026-08-01',
       evidenceClass: 'synthetic_fixture',
-      sourceProject: 'openlinear-production',
-      destinationProject: 'restore-drill-openlinear-20260801',
+      sourceProject: 'basiclinear-production',
+      destinationProject: 'restore-drill-basiclinear-20260801',
       pointInTime: '2026-08-01T00:00:00.000Z',
       exportRequestedAt: '2026-08-01T00:05:00.000Z',
       exportCompletedAt: '2026-08-01T00:20:00.000Z',

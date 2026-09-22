@@ -4,7 +4,7 @@ Observed or accessed on 2026-08-19, with statistical and local-runtime sources a
 
 | Evidence | Source | Type | Verification | Public |
 |---|---|---|---|---|
-| E-001 | Sponsor goal in the current Codex task | user note | verified | No raw task transcript |
+| E-001 | Maintainer goal in the current Codex task | user note | verified | No raw task transcript |
 | E-002 | `.control-tower/evidence/linear-projects-2026-08-19.png` | screenshot | verified | No |
 | E-003 | `.control-tower/evidence/linear-issues-2026-08-19.png` | screenshot | verified | No |
 | E-004 | `.control-tower/evidence/linear-project-milestones-2026-08-19.png` | screenshot | verified | No |

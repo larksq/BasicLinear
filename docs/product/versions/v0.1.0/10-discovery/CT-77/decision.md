@@ -26,13 +26,13 @@ AI, advanced analytics, cycles, initiatives, marketplace integrations, and broad
 
 - Stack Overflow provides broad software work and personal-project coverage, with 30,065 collaboration-tool responses and question-level samples up to 35,897. Issue/collaboration systems are common, security/privacy and price are leading rejection factors, poor usability and time cost matter, and AI ranks ninth of ten endorsement attributes.
 - PMI covers 2,246 project professionals across industries and regions. Predictive, hybrid, and agile approaches all have material use, so the core cannot assume a single delivery method.
-- GitLab and Omdia cover more than 5,000 DevSecOps professionals in 39 countries. The 64% consolidation signal supports keeping work context together, but vendor sponsorship caps its evidentiary weight.
+- GitLab and Omdia cover more than 5,000 DevSecOps professionals in 39 countries. The 64% consolidation signal supports keeping work context together, but vendor maintainership caps its evidentiary weight.
 - Atlassian covers 5,000 knowledge workers across work management, ITSM, and DevOps, plus large product telemetry. Goal fragmentation and information retrieval are material problems, but team findings do not expand the one-user release.
 
 The full extraction and limitations are in [source-register.json](./source-register.json) and [extracted-statistics.csv](./extracted-statistics.csv). The reproducible ranking is in [scoring-model.md](./scoring-model.md).
 
 ## Evidence boundary
 
-These sources do not directly measure current Linear users' migration intent, switching deadlines, import-file prevalence, self-hosting tolerance, or OpenLinear usability. They also do not validate pixel fidelity, task time, accessibility, security, or recovery. Those remain product acceptance and outcome measurements, not statistical claims.
+These sources do not directly measure current Linear users' migration intent, switching deadlines, import-file prevalence, self-hosting tolerance, or BasicLinear usability. They also do not validate pixel fidelity, task time, accessibility, security, or recovery. Those remain product acceptance and outcome measurements, not statistical claims.
 
 No participant recruitment, outreach, interview, account access, personal data, Linear API, Linear MCP, or Linear task write was used for this decision.

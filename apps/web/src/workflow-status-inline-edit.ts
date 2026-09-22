@@ -1,4 +1,4 @@
-import type { UpdateStatusRequest, WorkflowStatus } from '@openlinear/contracts';
+import type { UpdateStatusRequest, WorkflowStatus } from '@basiclinear/contracts';
 
 export const workflowStatusCategories = [
   'backlog',

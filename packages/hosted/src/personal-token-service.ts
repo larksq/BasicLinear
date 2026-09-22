@@ -20,7 +20,7 @@ import {
   type WorkspacePrincipal,
 } from './workspace-authorization.js';
 
-export const personalTokenAudience = 'openlinear-api-v1' as const;
+export const personalTokenAudience = 'basiclinear-api-v1' as const;
 export const personalTokenScopes = [
   'workspace:read',
   'projects:read',

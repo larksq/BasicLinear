@@ -2,7 +2,7 @@ import {readFileSync} from 'node:fs';
 import {runInNewContext} from 'node:vm';
 import assert from 'node:assert/strict';
 import test from 'node:test';
-const source = readFileSync(new URL('../../apps/web/public/openlinear-analytics.js', import.meta.url), 'utf8');
+const source = readFileSync(new URL('../../apps/web/public/basiclinear-analytics.js', import.meta.url), 'utf8');
 function run(href, consent = null) {
   const nodes = []; const handlers = {};
   class Element {
@@ -22,13 +22,13 @@ function run(href, consent = null) {
   return {window, nodes, handlers, Element, events: () => (window.dataLayer || []).map(x => [...x])};
 }
 test('no collection before consent; decline stays offline', () => {
-  const r = run('https://openlinear.qiaosun.me/');
+  const r = run('https://basiclinear.qiaosun.me/');
   assert.equal(r.nodes.some(x => x.tag === 'script'), false);
   r.nodes.find(x => x.textContent === 'Decline').onclick();
   assert.equal(r.events().length, 0);
 });
 test('opt-in sends exactly one page view and safe campaign/referrer values', () => {
-  const r = run('https://openlinear.qiaosun.me/?utm_source=x&utm_campaign=ol_202609_pilot');
+  const r = run('https://basiclinear.qiaosun.me/?utm_source=x&utm_campaign=ol_202609_pilot');
   r.nodes.find(x => x.textContent === 'Allow analytics').onclick();
   assert.equal(r.events().filter(x => x[1] === 'page_view').length, 1);
   const config = r.events().find(x => x[0] === 'config')[2];
@@ -38,14 +38,14 @@ test('opt-in sends exactly one page view and safe campaign/referrer values', () 
   assert.equal(JSON.stringify(r.events()).includes('SECRET'), false);
 });
 test('authorization, invitations, development and local pages never load analytics', () => {
-  for (const href of ['https://openlinear.qiaosun.me/?oauth_request=secret', 'https://openlinear.qiaosun.me/#invite=secret', 'https://openlinear.qiaosun.me/?code=secret', 'https://openlinear.qiaosun.me/?billing=success&session_id=secret', 'https://openlinear.qiaosun.me/?app&billing=cancelled', 'https://openlinear-development.vercel.app/', 'http://localhost:5173/']) {
+  for (const href of ['https://basiclinear.qiaosun.me/?oauth_request=secret', 'https://basiclinear.qiaosun.me/#invite=secret', 'https://basiclinear.qiaosun.me/?code=secret', 'https://basiclinear.qiaosun.me/?billing=success&session_id=secret', 'https://basiclinear.qiaosun.me/?app&billing=cancelled', 'https://basiclinear-development.vercel.app/', 'http://localhost:5173/']) {
     const r = run(href, 'granted');
     assert.equal(r.nodes.length, 0, href);
     assert.equal(r.events().length, 0, href);
   }
 });
 test('only allowlisted CTA events; user text is not transmitted', () => {
-  const r = run('https://openlinear.qiaosun.me/', 'granted');
+  const r = run('https://basiclinear.qiaosun.me/', 'granted');
   const target = new r.Element();
   target.closest = () => ({getAttribute: () => '?app', textContent: 'PRIVATE'});
   r.handlers.click({target});
@@ -57,13 +57,13 @@ test('only allowlisted CTA events; user text is not transmitted', () => {
   assert.equal(r.events().filter(x => x[1] === 'cta_click').length, 1);
 });
 test('withdrawal disables measurement immediately', () => {
-  const r = run('https://openlinear.qiaosun.me/', 'granted');
+  const r = run('https://basiclinear.qiaosun.me/', 'granted');
   r.nodes.find(x => x.textContent === 'Decline').onclick();
   assert.equal(r.window['ga-disable-G-WP59LSRZSE'], true);
   assert.equal(r.window.reloaded, true);
 });
 test('entry navigation waits for dispatch, falls back offline, and runs only once', () => {
-  const r = run('https://openlinear.qiaosun.me/', 'granted');
+  const r = run('https://basiclinear.qiaosun.me/', 'granted');
   const target = new r.Element();
   target.closest = () => ({getAttribute: () => '?app'});
   let prevented = false;

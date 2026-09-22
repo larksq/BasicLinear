@@ -10,7 +10,7 @@ The final reviewer must be a real person who is qualified for the scope they acc
 
 CT-13 acceptance does not override either upstream gate:
 
-- CT-3 must separately record the qualified license, identity, trade-dress, screenshot, reference-measurement, clean-room, contribution, asset, and notice disposition. The current OpenLinear final-product name remains uncleared.
+- CT-3 must separately record the qualified license, identity, trade-dress, screenshot, reference-measurement, clean-room, contribution, asset, and notice disposition. The current BasicLinear final-product name remains uncleared.
 - CT-12 must separately accept the required current Chrome UAT, accessibility, responsive, and visual matrices. The latest independent P-T21 result binds only historical revision `f7c3625`; residual P-T18, third-party P-T19, authorized live P-T20 System verification, distinct CT-117 review, and fresh qualification for exact product revision `d524c5c` remain open.
 
 ## Review Sequence

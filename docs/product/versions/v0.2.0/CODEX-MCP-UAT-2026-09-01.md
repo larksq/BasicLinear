@@ -2,7 +2,7 @@
 
 Status: passed against development; production verification was read-only.
 
-This UAT connected Codex CLI `0.144.1` to the deployed OpenLinear MCP endpoint,
+This UAT connected Codex CLI `0.144.1` to the deployed BasicLinear MCP endpoint,
 completed browser OAuth with explicit workspace and scope consent, and exercised
 real issue reads and revision-aware writes through the standard MCP lifecycle.
 No access token, authorization code, PKCE verifier, client secret, Google token,
@@ -10,7 +10,7 @@ or callback URL is recorded here.
 
 ## Authorized boundary
 
-- Endpoint: `https://openlinear-development.vercel.app/mcp`
+- Endpoint: `https://basiclinear-development.vercel.app/mcp`
 - Workspace: `ws_d1ef593484c64dfeb9197889fbb668df`
 - Approved scopes: `workspace:read`, `issues:read`, `issues:write`
 - Production: UI, discovery, readiness, and guide checks only; no issue mutation
@@ -39,7 +39,7 @@ Retained development evidence:
 - Final priority: `high`
 - Final status: `todo`
 - Final revision: `2`
-- Final description: `Created and updated by Codex through the OpenLinear development MCP server. OAuth authorization, issue.create, issue.get, and revision-aware issue.update passed on 2026-09-01. Retained as labeled UAT evidence.`
+- Final description: `Created and updated by Codex through the BasicLinear development MCP server. OAuth authorization, issue.create, issue.get, and revision-aware issue.update passed on 2026-09-01. Retained as labeled UAT evidence.`
 
 No other issue was created by this live run.
 
@@ -51,7 +51,7 @@ No other issue was created by this live run.
    backend-validated workspace chooser before the explicit consent screen.
 3. Authorization-server discovery reports
    `authorization_response_iss_parameter_supported: false` for Codex CLI
-   `0.144.x` compatibility, while OpenLinear still emits `iss` in direct
+   `0.144.x` compatibility, while BasicLinear still emits `iss` in direct
    authorization responses for clients that preserve it.
 4. A refresh request that omits `resource` remains bound to the resource from
    the original grant; an explicitly wrong resource is still rejected.
@@ -69,13 +69,13 @@ guide links to the official [Codex MCP documentation](https://learn.chatgpt.com/
 
 | Environment | Backend revision | Image digest | Frontend deployment |
 | --- | --- | --- | --- |
-| Development | `openlinear-hosted-api-dev-00014-4mb` | `sha256:1e2bf6ea19202767db1ad46ffa73567a74ea1cc3a1c53298bc914f97fd74ba47` | `dpl_9LEyatgZNCrRnYvcADjUbsVXRz5H` |
-| Production | `openlinear-hosted-api-00010-25m` | `sha256:1360a5543db27fd691a549fa72443dc186f144410c0fc86ba8935a8ac8a97e22` | `dpl_ByUZBAonF5SnMbZwd2ZqEq95Hw1G` |
+| Development | `basiclinear-hosted-api-dev-00014-4mb` | `sha256:1e2bf6ea19202767db1ad46ffa73567a74ea1cc3a1c53298bc914f97fd74ba47` | `dpl_9LEyatgZNCrRnYvcADjUbsVXRz5H` |
+| Production | `basiclinear-hosted-api-00010-25m` | `sha256:1360a5543db27fd691a549fa72443dc186f144410c0fc86ba8935a8ac8a97e22` | `dpl_ByUZBAonF5SnMbZwd2ZqEq95Hw1G` |
 
 Both Cloud Run revisions are ready and serve 100 percent of traffic. Both
 public aliases return the correct environment-specific OAuth discovery and MCP
 route. Production renders the bottom-left guide with
-`https://openlinear-gray.vercel.app/mcp`, closes cleanly, restores focus, has no
+`https://basiclinear-gray.vercel.app/mcp`, closes cleanly, restores focus, has no
 horizontal overflow, and reported no broken images in the final Chrome pass.
 
 The final automated suite passed 125 files and 755 tests. The full build passed

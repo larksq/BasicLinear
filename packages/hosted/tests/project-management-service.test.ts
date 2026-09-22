@@ -180,7 +180,7 @@ describe('ProjectManagementService', () => {
     expect(second).toEqual(first);
     expect(JSON.parse(JSON.stringify(first))).toEqual(first);
     expect(first.data).toMatchObject({
-      schemaVersion: 'openlinear.workspace-export.v1',
+      schemaVersion: 'basiclinear.workspace-export.v1',
       invitations: [{id: `invite_${'c'.repeat(32)}`, state: 'pending'}],
       projects: [{id: project.id}], milestones: [{id: milestone.id}], issues: [{id: issue.id}],
     });

@@ -1,19 +1,19 @@
-# OpenLinear
+# BasicLinear
 
-OpenLinear is an open-source project management tool for individuals and small
+BasicLinear is an open-source project management tool for individuals and small
 teams. Plan projects, track milestones, organize issues, and review progress
 in list or board views. Collaborate in the online app, or run the local edition
 with your data in SQLite on your own computer.
 
-**[Open the online app](https://openlinear.qiaosun.me/?app)** ·
-[Website](https://openlinear.qiaosun.me/) ·
+**[Open the online app](https://basiclinear.qiaosun.me/?app)** ·
+[Website](https://basiclinear.qiaosun.me/) ·
 [Run locally](#run-locally) · [Documentation](docs/README.md)
 
 ## Choose your workspace
 
 | | Online | Local |
 | --- | --- | --- |
-| Start | [Open in your browser](https://openlinear.qiaosun.me/?app) | Build and run with Node.js |
+| Start | [Open in your browser](https://basiclinear.qiaosun.me/?app) | Build and run with Node.js |
 | Sign-in | Google account | No account required |
 | Data | Hosted workspace backed by Firestore | SQLite database on your computer |
 | Collaboration | Shared workspaces, teams, invitations, and assignees | One owner in a private local workspace |
@@ -23,23 +23,24 @@ with your data in SQLite on your own computer.
 Local and online workspaces are separate. Starting the local app does not upload
 your database or synchronize it with an online workspace.
 
-## Use OpenLinear online
+## Use BasicLinear online
 
-Visit **[openlinear.qiaosun.me](https://openlinear.qiaosun.me/)** and select
-**Open app**, or go [directly to the app](https://openlinear.qiaosun.me/?app).
-Sign in with Google, open or create a workspace, and start with a project or
-issue. Use **People** to invite collaborators and **Teams** to organize work.
+The public address is **[basiclinear.qiaosun.me](https://basiclinear.qiaosun.me/)**.
+Select **Open app**, or go [directly to the app](https://basiclinear.qiaosun.me/?app).
+Sign in with Google, open or create a workspace, and start with a project or issue.
+Use **People** to invite collaborators and **Teams** to organize work.
 
 The online app includes assignments, comments, activity, subscriptions, an
 inbox, and due-time reminders. **API & MCP** provides personal API token
 management and connection instructions for compatible clients, including
 Codex and Claude. Check **Billing** in the app for current plan availability.
 
-[![OpenLinear's live public homepage with an interactive sample workspace](docs/screenshots/online-homepage.jpg)](https://openlinear.qiaosun.me/)
+[![BasicLinear's live public homepage with an interactive sample workspace](docs/screenshots/online-homepage.jpg)](https://basiclinear.qiaosun.me/)
 
 The online service is deployed. This source tree contains the `v0.1.0` local
-release candidate and `v0.2.0` hosted implementation; final open-source release
-approval is still pending. See [current status](docs/status.md) and the
+release candidate and `v0.2.0` hosted implementation. Each published revision
+uses the current technical release audit and secret scan. See
+[current status](docs/status.md) and the
 [release preparation guide](docs/operations/open-source-release.md).
 
 ## What you can do
@@ -96,7 +97,7 @@ screens.
 
 ## Run locally
 
-OpenLinear requires Node.js `24.18.0` and npm `11.16.0` (the supported Node
+BasicLinear requires Node.js `24.18.0` and npm `11.16.0` (the supported Node
 range is `>=24 <25`; `.nvmrc` is included). Install the locked workspace once:
 
 ```sh
@@ -110,17 +111,17 @@ Start the complete application with one command:
 npm start
 ```
 
-Open `http://127.0.0.1:4174`. The one Node process serves the built React application and `/api`, binds only to loopback, creates the sole owner and internal workspace/team/status metadata on first use, and stores all durable state in one SQLite file. It needs no setup account, database server, container runtime, external identity, credential, or outbound runtime request. If the default port is occupied, use `OPENLINEAR_PORT=4304 npm start`.
+Open `http://127.0.0.1:4174`. The one Node process serves the built React application and `/api`, binds only to loopback, creates the sole owner and internal workspace/team/status metadata on first use, and stores all durable state in one SQLite file. It needs no setup account, database server, container runtime, external identity, credential, or outbound runtime request. If the default port is occupied, use `BASICLINEAR_PORT=4304 npm start`.
 
 The default data locations are:
 
 | Platform | Data directory |
 | --- | --- |
-| macOS | `~/Library/Application Support/OpenLinear` |
-| Linux | `${XDG_DATA_HOME:-~/.local/share}/openlinear` |
-| Windows | `%LOCALAPPDATA%\OpenLinear` |
+| macOS | `~/Library/Application Support/BasicLinear` |
+| Linux | `${XDG_DATA_HOME:-~/.local/share}/basiclinear` |
+| Windows | `%LOCALAPPDATA%\BasicLinear` |
 
-Each directory contains `openlinear.sqlite3` and `backups/`. The single-writer database uses SQLite rollback journaling with `FULL` synchronous durability, so no WAL or shared-memory sidecar persists while the app is idle or after it stops. A temporary `-journal` file may exist only during an active transaction or crash recovery and must never be deleted manually.
+Each directory contains `basiclinear.sqlite3` and `backups/`. The single-writer database uses SQLite rollback journaling with `FULL` synchronous durability, so no WAL or shared-memory sidecar persists while the app is idle or after it stops. A temporary `-journal` file may exist only during an active transaction or crash recovery and must never be deleted manually.
 
 ## Environment setup
 
@@ -152,25 +153,25 @@ npm start
 PowerShell:
 
 ```powershell
-$env:OPENLINEAR_DATA_DIR = "$HOME\\OpenLinear-data"
-$env:OPENLINEAR_PORT = "4304"
+$env:BASICLINEAR_DATA_DIR = "$HOME\\BasicLinear-data"
+$env:BASICLINEAR_PORT = "4304"
 npm start
 ```
 
 | Variable | Default | Purpose |
 | --- | --- | --- |
-| `OPENLINEAR_DATA_DIR` | Platform data directory | Directory containing `openlinear.sqlite3` and `backups/`. |
-| `OPENLINEAR_PORT` | `4174` | Loopback HTTP port, from 1 through 65535. |
-| `OPENLINEAR_HOST` | `127.0.0.1` | Must be `127.0.0.1` or `::1`; remote binds fail closed. |
-| `OPENLINEAR_SESSION_TTL_SECONDS` | `43200` | Process-memory session lifetime, from 300 through 86400 seconds. |
-| `OPENLINEAR_BUILD_ID` | `development` | Optional label stored in canonical transfer metadata. |
-| `XDG_DATA_HOME` | `~/.local/share` on Linux | Parent used when `OPENLINEAR_DATA_DIR` is unset. |
-| `LOCALAPPDATA` | `~/AppData/Local` on Windows | Parent used when `OPENLINEAR_DATA_DIR` is unset. |
+| `BASICLINEAR_DATA_DIR` | Platform data directory | Directory containing `basiclinear.sqlite3` and `backups/`. |
+| `BASICLINEAR_PORT` | `4174` | Loopback HTTP port, from 1 through 65535. |
+| `BASICLINEAR_HOST` | `127.0.0.1` | Must be `127.0.0.1` or `::1`; remote binds fail closed. |
+| `BASICLINEAR_SESSION_TTL_SECONDS` | `43200` | Process-memory session lifetime, from 300 through 86400 seconds. |
+| `BASICLINEAR_BUILD_ID` | `development` | Optional label stored in canonical transfer metadata. |
+| `XDG_DATA_HOME` | `~/.local/share` on Linux | Parent used when `BASICLINEAR_DATA_DIR` is unset. |
+| `LOCALAPPDATA` | `~/AppData/Local` on Windows | Parent used when `BASICLINEAR_DATA_DIR` is unset. |
 
 For a disposable checkout, keep data outside the repository:
 
 ```sh
-OPENLINEAR_DATA_DIR=/tmp/openlinear-data OPENLINEAR_PORT=4304 npm start
+BASICLINEAR_DATA_DIR=/tmp/basiclinear-data BASICLINEAR_PORT=4304 npm start
 ```
 
 The browser session is process-memory only. Restarting the process preserves application data and automatically renews the local session. Host, Origin, JSON content type, SameSite, HttpOnly, and per-tab CSRF checks protect state-changing requests.
@@ -266,9 +267,9 @@ development context and are not supported v0.1 runtime instructions.
 
 ## License
 
-OpenLinear is licensed under `AGPL-3.0-only`; see [LICENSE](./LICENSE). Review
+BasicLinear is licensed under `AGPL-3.0-only`; see [LICENSE](./LICENSE). Review
 [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) before redistributing a
 build with additional assets or dependencies.
 
-OpenLinear is an independent project and is not affiliated with or endorsed by
+BasicLinear is an independent project and is not affiliated with or endorsed by
 Linear.

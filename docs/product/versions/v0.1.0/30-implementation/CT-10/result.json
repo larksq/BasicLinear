@@ -76,11 +76,11 @@
     { "name": "006_views_search.sql", "sha256": "8b7944c5bf5e768c824cd9a4c6e5a2b632ac6f1fcef0d48f299f357dd2221467" }
   ],
   "images": [
-    { "name": "openlinear-test:ct10-final", "id": "60f1427a77f12bc90d3c385393295d14a19d7a3f07484c316940b00c83f3b95d", "size_bytes": 442871777, "running": false },
-    { "name": "openlinear-operator:ct10-final", "id": "297b9b534e138eb7d17e1573e66ca655c5dd5341412d01b8fc5e73567d76ed0f", "size_bytes": 322087169, "running": false },
-    { "name": "openlinear-api:ct10-final", "id": "e740dd1f28fb812f9680264ca625a5ef5dd3446cfa220450c04d9132274eb67e", "size_bytes": 322264672, "running": false },
-    { "name": "openlinear-web:ct10-final", "id": "43e413340ad3c2862a9dba7b93d890d71a93996caaf1c11debbd4a1293748322", "size_bytes": 62053295, "running": true },
-    { "name": "openlinear-postgres:16.10", "id": "06928dd03c4562c7740748bd022145a82db0fa73565af609c63cd396a54c2620", "size_bytes": 449935983, "running": true }
+    { "name": "basiclinear-test:ct10-final", "id": "60f1427a77f12bc90d3c385393295d14a19d7a3f07484c316940b00c83f3b95d", "size_bytes": 442871777, "running": false },
+    { "name": "basiclinear-operator:ct10-final", "id": "297b9b534e138eb7d17e1573e66ca655c5dd5341412d01b8fc5e73567d76ed0f", "size_bytes": 322087169, "running": false },
+    { "name": "basiclinear-api:ct10-final", "id": "e740dd1f28fb812f9680264ca625a5ef5dd3446cfa220450c04d9132274eb67e", "size_bytes": 322264672, "running": false },
+    { "name": "basiclinear-web:ct10-final", "id": "43e413340ad3c2862a9dba7b93d890d71a93996caaf1c11debbd4a1293748322", "size_bytes": 62053295, "running": true },
+    { "name": "basiclinear-postgres:16.10", "id": "06928dd03c4562c7740748bd022145a82db0fa73565af609c63cd396a54c2620", "size_bytes": 449935983, "running": true }
   ],
   "live_runtime": {
     "api_image_id": "84fa5667606763925c77eeef957f22b36e5b20eb2aa532088434748e8a2c7f3b",

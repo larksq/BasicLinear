@@ -69,7 +69,7 @@
     "design_qa": "passed"
   },
   "claim_boundary": {
-    "security_or_adversarial_testing": "skipped by sponsor direction",
+    "security_or_adversarial_testing": "skipped by maintainer direction",
     "stripe_or_payment_execution": "not performed",
     "independent_acceptance": "pending",
     "outcomes": "pending",

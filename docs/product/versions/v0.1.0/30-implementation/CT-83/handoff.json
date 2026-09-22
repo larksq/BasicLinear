@@ -42,7 +42,7 @@
   "next_gates": [
     { "issue": "CT-82", "owner": "independent release testing", "scope": "clean local runtime, migration, upgrade, backup, and restore" },
     { "issue": "CT-12", "owner": "independent testing", "scope": "owner rendered workflow, accessibility, fidelity, and UAT" },
-    { "issue": "CT-3", "owner": "sponsor and qualified reviewer", "scope": "public identity, license, and clean-room boundary" },
+    { "issue": "CT-3", "owner": "maintainer and qualified reviewer", "scope": "public identity, license, and clean-room boundary" },
     { "issue": "CT-13", "owner": "accountable release review", "scope": "hash-bound public release audit" }
   ],
   "blockers": [

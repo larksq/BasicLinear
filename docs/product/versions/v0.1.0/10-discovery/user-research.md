@@ -21,7 +21,7 @@ The complete source and statistic register is in [`CT-77/source-register.json`](
 
 The first-release decision unit is one technically capable owner operating one workspace and one team. The owner manages multiple issue-based projects and values a compact, free, self-hostable system with reliable APIs, data ownership, and low interaction cost. The evidence intentionally spans professional and personal software work, work management, ITSM, DevOps, and cross-industry predictive, hybrid, and agile projects.
 
-This is an evidence-backed product inference, not a claim that the source populations are current Linear users or will migrate to OpenLinear. Multi-user collaboration, membership administration, invitations, presence, and multi-team UX do not drive `v0.1.0`.
+This is an evidence-backed product inference, not a claim that the source populations are current Linear users or will migrate to BasicLinear. Multi-user collaboration, membership administration, invitations, presence, and multi-team UX do not drive `v0.1.0`.
 
 ## Migration-critical ranking
 
@@ -37,7 +37,7 @@ The top-three set remains stable under default, equal, prevalence-heavy, and mig
 
 ## Urgency evidence
 
-The sponsor's replacement need is direct. Broader statistical pressure is directional: 64% of the GitLab/Omdia sample wanted toolchain consolidation; 54% of Stack Overflow work-tool respondents used at least six tools; security/privacy and pricing were the top two work-project rejection factors; and 55% of Atlassian's knowledge-worker sample found information hard to locate.
+The maintainer's replacement need is direct. Broader statistical pressure is directional: 64% of the GitLab/Omdia sample wanted toolchain consolidation; 54% of Stack Overflow work-tool respondents used at least six tools; security/privacy and pricing were the top two work-project rejection factors; and 55% of Atlassian's knowledge-worker sample found information hard to locate.
 
 These statistics justify a bounded product decision. They do not establish a switching deadline, willingness to pay, self-hosting tolerance, or conversion forecast, and no such claim is made.
 

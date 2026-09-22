@@ -24,7 +24,7 @@ Publish `/api/v1` under OpenAPI 3.1.1 with cursor pagination, idempotency keys, 
 
 Expose a Streamable HTTP MCP endpoint backed by the same application service and authorization checks. Tool definitions use JSON Schema inputs and outputs plus accurate read-only/destructive/idempotency annotations. The tool set covers workspaces, projects, milestones, issues, assignments, comments, invitations, and read-only subscription state. It contains no agent, repository, pull-request, code-review, arbitrary SQL, billing purchase, or token-administration tools.
 
-Ship a reusable `openlinear-product-management` skill that teaches compatible assistants how to choose the REST or MCP surface, require workspace scope, respect revisions, and request confirmation before destructive task actions. The skill is documentation and orchestration guidance; OpenLinear does not host or run AI agents.
+Ship a reusable `basiclinear-product-management` skill that teaches compatible assistants how to choose the REST or MCP surface, require workspace scope, respect revisions, and request confirmation before destructive task actions. The skill is documentation and orchestration guidance; BasicLinear does not host or run AI agents.
 
 ## Feasibility cautions
 

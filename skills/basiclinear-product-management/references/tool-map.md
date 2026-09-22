@@ -1,4 +1,4 @@
-# Hosted OpenLinear MCP tool map
+# Hosted BasicLinear MCP tool map
 
 All tools require an explicit `workspaceId`. Mutation tools require a stable `idempotencyKey`; update, assignment, and comment edit/delete tools also require the current `expectedRevision`.
 

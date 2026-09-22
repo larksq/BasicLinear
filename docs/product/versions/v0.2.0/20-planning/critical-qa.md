@@ -2,7 +2,7 @@
 
 | Canonical ID | Status | Result |
 |---|---|---|
-| `scope-truth` | Pass | Hosted PM scope and exclusions match sponsor intent. |
+| `scope-truth` | Pass | Hosted PM scope and exclusions match maintainer intent. |
 | `traceability` | Pass | Every requirement resolves to issues, tests, and outcomes. |
 | `outcome-focus` | Pass | Baselines remain pending; implementation is not outcome proof. |
 | `evidence-handoff` | Pass | Discovery digest and complete outcomes are bound unchanged. |

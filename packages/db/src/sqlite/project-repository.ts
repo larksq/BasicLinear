@@ -10,7 +10,7 @@ import {
   parseProjectIcon,
   parseProjectPriority,
   parseProjectStatus,
-} from '@openlinear/domain';
+} from '@basiclinear/domain';
 import type {
   DbActivityEntry,
   DbMilestone,
@@ -23,7 +23,7 @@ import type {
   DbPurgeProjectReceipt,
   DbRichTextDocument,
 } from '../types.js';
-import type { OpenLinearDatabase } from './client.js';
+import type { BasicLinearDatabase } from './client.js';
 import {
   changed,
   compactChanges,
@@ -152,7 +152,7 @@ const milestoneSelection = `
   updated_at AS updatedAt
 `;
 
-function scope(db: OpenLinearDatabase): { workspaceId: string; teamId: string } {
+function scope(db: BasicLinearDatabase): { workspaceId: string; teamId: string } {
   return db.sqlite.prepare(`
     SELECT workspace_id AS workspaceId, team_id AS teamId FROM scope_metadata WHERE singleton = 1
   `).get() as { workspaceId: string; teamId: string };
@@ -177,7 +177,7 @@ function emptyProgress(): DbProgressSnapshot {
   };
 }
 
-function progressMaps(db: OpenLinearDatabase): {
+function progressMaps(db: BasicLinearDatabase): {
   projects: Map<string, DbProgressSnapshot>;
   milestones: Map<string, DbProgressSnapshot>;
 } {
@@ -222,7 +222,7 @@ function progressMaps(db: OpenLinearDatabase): {
 }
 
 function resourcesForAllProjects(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
 ): Map<string, Array<{ id: string; label: string; url: string; position: number }>> {
   const rows = db.sqlite.prepare(`
     SELECT project_id AS projectId, id, label, url, position
@@ -238,7 +238,7 @@ function resourcesForAllProjects(
 }
 
 function mapProject(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   row: ProjectRow,
   resources = readResources(db, 'project_resources', 'project_id', row.id),
   progress = progressFor(db, 'project_id', row.id),
@@ -268,7 +268,7 @@ function mapProject(
   };
 }
 
-function projectById(db: OpenLinearDatabase, projectId: string): DbProject {
+function projectById(db: BasicLinearDatabase, projectId: string): DbProject {
   const row = db.sqlite.prepare(`SELECT ${projectSelection} FROM projects WHERE id = ?`)
     .get(projectId) as ProjectRow | undefined;
   if (row === undefined) throw new AppError('NOT_FOUND', 'Project not found.', 404);
@@ -276,7 +276,7 @@ function projectById(db: OpenLinearDatabase, projectId: string): DbProject {
 }
 
 function mapMilestone(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   row: MilestoneRow,
   progress = progressFor(db, 'milestone_id', row.id),
 ): DbMilestone {
@@ -297,7 +297,7 @@ function mapMilestone(
 }
 
 function milestoneById(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   projectId: string,
   milestoneId: string,
 ): DbMilestone {
@@ -316,7 +316,7 @@ function compareNullable(left: string | null, right: string | null): number {
 }
 
 export async function listProjects(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   input: ProjectListInput = {},
@@ -361,7 +361,7 @@ export async function listProjects(
 }
 
 export async function getProject(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   projectId: string,
@@ -371,7 +371,7 @@ export async function getProject(
 }
 
 export async function createProject(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   input: CreateProjectInput,
@@ -446,7 +446,7 @@ export async function createProject(
 }
 
 export async function updateProject(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   projectId: string,
@@ -537,7 +537,7 @@ export async function updateProject(
 }
 
 function setProjectArchive(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   projectId: string,
@@ -572,7 +572,7 @@ function setProjectArchive(
 }
 
 export const archiveProject = (
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   projectId: string,
@@ -580,7 +580,7 @@ export const archiveProject = (
 ) => Promise.resolve(setProjectArchive(db, userId, workspaceId, projectId, expectedRevision, true));
 
 export const restoreProject = (
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   projectId: string,
@@ -588,7 +588,7 @@ export const restoreProject = (
 ) => Promise.resolve(setProjectArchive(db, userId, workspaceId, projectId, expectedRevision, false));
 
 export async function purgeProject(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   projectId: string,
@@ -677,7 +677,7 @@ export async function purgeProject(
 }
 
 export async function reorderProjects(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   items: readonly { id: string; expectedRevision: number }[],
@@ -719,7 +719,7 @@ export async function reorderProjects(
 }
 
 export async function listMilestones(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   projectId: string,
@@ -736,7 +736,7 @@ export async function listMilestones(
 }
 
 export async function listWorkspaceMilestones(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   includeArchived = false,
@@ -751,7 +751,7 @@ export async function listWorkspaceMilestones(
 }
 
 export async function createMilestone(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   projectId: string,
@@ -800,7 +800,7 @@ export async function createMilestone(
 }
 
 export async function updateMilestone(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   projectId: string,
@@ -854,7 +854,7 @@ export async function updateMilestone(
 }
 
 function setMilestoneArchive(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   projectId: string,
@@ -898,7 +898,7 @@ function setMilestoneArchive(
 }
 
 export const archiveMilestone = (
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   projectId: string,
@@ -909,7 +909,7 @@ export const archiveMilestone = (
 ));
 
 export const restoreMilestone = (
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   projectId: string,
@@ -920,7 +920,7 @@ export const restoreMilestone = (
 ));
 
 export async function purgeMilestone(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   projectId: string,
@@ -992,7 +992,7 @@ export async function purgeMilestone(
 }
 
 export async function reorderMilestones(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   projectId: string,
@@ -1037,7 +1037,7 @@ export async function reorderMilestones(
 }
 
 export async function listProjectActivity(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   projectId: string,

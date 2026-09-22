@@ -9,7 +9,7 @@
 | `problem.alternative-insufficiency` | Pass | The hypothesis is low-cost hosted continuity and focused automation, not missing category features. |
 | `problem.replacement-or-orchestration` | Pass | v0.2.0 is a hosted replacement for the bounded PM loop, not an orchestrator over competitors. |
 | `problem.trust-conditions` | Pass | Workspace, role, seat, trial, downgrade, and caller identity are visible and server-enforced. |
-| `problem.observable-behavior-change` | Pass | Owner and invited member complete a shared assignment/comment loop in OpenLinear. |
+| `problem.observable-behavior-change` | Pass | Owner and invited member complete a shared assignment/comment loop in BasicLinear. |
 | `problem.checkable-outcome` | Pass | O-201 through O-204 define numeric metrics and windows. |
 | `problem.invalidation-signal` | Pass | Low activation/collaboration/conversion, uneconomic costs, or authorization defects invalidate the plan. |
 | `problem.downstream-no-guessing` | Pass | Trial, seat, role, downgrade, API/MCP, and exclusion semantics are explicit. |

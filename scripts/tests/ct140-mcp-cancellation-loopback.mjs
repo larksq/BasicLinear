@@ -3,7 +3,7 @@ import {createServer, request as createRequest} from 'node:http';
 import {createMcpHttpHandler, mcpProtocolVersion} from '../../packages/hosted/dist/index.js';
 
 const workspaceId = 'ws_ct140_loopback';
-const resource = 'https://online.openlinear.test/mcp';
+const resource = 'https://online.basiclinear.test/mcp';
 const rawToken = `olm_at_${'a'.repeat(43)}`;
 const state = {serviceCalls: 0, audits: [], idempotency: [], projects: []};
 async function withTimeout(promise, label) {

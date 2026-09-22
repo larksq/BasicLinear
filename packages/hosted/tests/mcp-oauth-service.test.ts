@@ -15,8 +15,8 @@ import {
 const workspaceId = 'ws_mcp_oauth';
 const ownerId = 'owner_mcp_oauth';
 const memberId = 'member_mcp_oauth';
-const origin = 'https://online.openlinear.test';
-const redirectUri = 'https://client.openlinear.test/oauth/callback';
+const origin = 'https://online.basiclinear.test';
+const redirectUri = 'https://client.basiclinear.test/oauth/callback';
 const verifier = 'mcp-oauth-verifier-with-forty-three-safe-characters-1234567890';
 const challenge = createHash('sha256').update(verifier).digest('base64url');
 
@@ -227,13 +227,13 @@ describe('MCP OAuth service', () => {
     });
     await expect(context.service.startAuthorization({
       responseType: 'code', clientId: registration.client_id,
-      redirectUri: 'https://hostile.openlinear.test/callback', workspaceId, scope: 'workspace:read',
+      redirectUri: 'https://hostile.basiclinear.test/callback', workspaceId, scope: 'workspace:read',
       state: 'state-value-at-least-sixteen', codeChallenge: challenge, codeChallengeMethod: 'S256',
       resource: `${origin}/mcp`,
     })).rejects.toBeInstanceOf(McpOAuthServiceError);
     await expect(context.service.startAuthorization({
       responseType: 'code', clientId: registration.client_id,
-      redirectUri: 'https://client.openlinear.test:443/oauth/callback', workspaceId,
+      redirectUri: 'https://client.basiclinear.test:443/oauth/callback', workspaceId,
       scope: 'workspace:read', state: 'state-value-at-least-sixteen', codeChallenge: challenge,
       codeChallengeMethod: 'S256', resource: `${origin}/mcp`,
     })).rejects.toMatchObject({code: 'INVALID_OAUTH_REQUEST'});

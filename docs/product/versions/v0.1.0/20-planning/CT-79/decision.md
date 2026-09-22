@@ -112,7 +112,7 @@ A multi-scope input without an explicit selection fails before creating or promo
 
 ## Consequences
 
-Setup and recovery become much simpler, and the storage format is directly inspectable and portable. The tradeoff is an explicit loss of remote collaboration, database-level tenant isolation, concurrent writers, durable distributed events, and indexed large-data search. That loss matches the sponsor's personal-use boundary rather than being hidden as an implementation shortcut.
+Setup and recovery become much simpler, and the storage format is directly inspectable and portable. The tradeoff is an explicit loss of remote collaboration, database-level tenant isolation, concurrent writers, durable distributed events, and indexed large-data search. That loss matches the maintainer's personal-use boundary rather than being hidden as an implementation shortcut.
 
 Node 24.18 documents `node:sqlite` as release-candidate stability, so the adapter and pinned runtime are mandatory risk controls. SQLite documents local application storage, single-writer workloads, and application-file use as appropriate fits. These sources establish capability, not product acceptance:
 

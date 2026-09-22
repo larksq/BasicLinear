@@ -22,7 +22,7 @@ Known switching costs include data export and import, workflow/status mapping, p
 
 ## Weak evidence
 
-Repository stars, vendor descriptions, and public feature lists do not establish adoption quality, migration success, performance, or user preference. No credible market-size or willingness-to-pay claim is made. “Free for everyone” is interpreted as free open-source availability. The sponsor selected `AGPL-3.0-only`; qualified release review remains owned by `CT-3` and `CT-13`.
+Repository stars, vendor descriptions, and public feature lists do not establish adoption quality, migration success, performance, or user preference. No credible market-size or willingness-to-pay claim is made. “Free for everyone” is interpreted as free open-source availability. The maintainer selected `AGPL-3.0-only`; qualified release review remains owned by `CT-3` and `CT-13`.
 
 ## Follow-up research
 

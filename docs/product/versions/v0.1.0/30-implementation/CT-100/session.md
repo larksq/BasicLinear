@@ -25,7 +25,7 @@ The accepted visual identity assigns cyan to selection/focus and rejects a blue/
 - Typecheck: all 8 workspaces passed.
 - Production build: 1,948 modules, 105 output files, and 1,890,845 output bytes, without warnings.
 - Release-audit regression: 6 / 6 tests passed.
-- Isolated rebuilt process: `ready` and `live` at `http://127.0.0.1:4280/` from `/tmp/openlinear-ct100-20260822-1144`.
+- Isolated rebuilt process: `ready` and `live` at `http://127.0.0.1:4280/` from `/tmp/basiclinear-ct100-20260822-1144`.
 - Served HTML references `index-sMPVANbk.js` and `index-uBq3LIZH.css`; served CSS contains one Light `#087e8c` focus token and two Dark/System-Dark `#6be7f5` tokens, contains neither retired focus value, and retains token-driven global, project-row, and issue-row focus rules.
 - Rendered Chrome captures: 0.
 

@@ -1,7 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
-import type { WorkflowStatus } from '@openlinear/contracts';
+import type { WorkflowStatus } from '@basiclinear/contracts';
 import {
   workflowStatusRetirementDraft,
   workflowStatusRetireRequest,

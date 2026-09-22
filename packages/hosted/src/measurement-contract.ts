@@ -1,4 +1,4 @@
-export const hostedMeasurementSchemaVersion = 'openlinear.hosted-measurement.v1' as const;
+export const hostedMeasurementSchemaVersion = 'basiclinear.hosted-measurement.v1' as const;
 
 export const hostedEventNames = [
   'owner.google_sign_in.completed',

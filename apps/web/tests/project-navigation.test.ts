@@ -79,7 +79,7 @@ describe('project navigation state', () => {
   });
 
   it('serializes canonical route state without discarding unrelated parameters', () => {
-    const url = projectNavigationUrl('https://openlinear.test/?fixture=project-route&context=linked', {
+    const url = projectNavigationUrl('https://basiclinear.test/?fixture=project-route&context=linked', {
       list: {
         query: 'launch',
         status: 'planned',
@@ -117,7 +117,7 @@ describe('project navigation state', () => {
 
   it('removes detail-only parameters when returning to the project list', () => {
     const url = projectNavigationUrl(
-      `https://openlinear.test/?view=projects&project=${projectId}&projectTab=issues&milestone=${milestoneId}`,
+      `https://basiclinear.test/?view=projects&project=${projectId}&projectTab=issues&milestone=${milestoneId}`,
       {
         list: defaultProjectListRouteState('default'),
         projectId: null,
@@ -133,7 +133,7 @@ describe('project navigation state', () => {
 
   it('marks only pushed detail routes while preserving other history state', () => {
     const detailState = projectRouteHistoryState({ retained: 1 }, projectId);
-    expect(detailState).toEqual({ retained: 1, __openlinearProjectId: projectId });
+    expect(detailState).toEqual({ retained: 1, __basiclinearProjectId: projectId });
     expect(isPushedProjectRoute(detailState, projectId)).toBe(true);
     expect(isPushedProjectRoute(detailState, milestoneId)).toBe(false);
     expect(projectRouteHistoryState(detailState, null)).toEqual({ retained: 1 });

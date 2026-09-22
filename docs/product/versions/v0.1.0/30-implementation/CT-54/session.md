@@ -11,7 +11,7 @@
 - Recovery boundary: the migration test now reconstructs the pre-010 saved-view constraint, rejects a milestone group before migration, blocks an unbacked populated upgrade, accepts a verified backup, applies migration 010, and then persists milestone grouping.
 - Automated result: two focused files and four tests pass, all 35 files and 213 complete tests pass, all eight workspaces typecheck, and the 1,930-module production build passes without a chunk warning.
 - Fixture boundary: owner and guest shells, sessions, and workspace milestone catalogues at `http://127.0.0.1:4181/` return HTTP 200 after the exact production build. The guest session remains read-only.
-- Cleanup boundary: no integration database remains. The unused temporary non-superuser role and the ephemeral in-container source harness were removed. Existing OpenLinear database, API, web, network, and fixture processes were not replaced or reset.
+- Cleanup boundary: no integration database remains. The unused temporary non-superuser role and the ephemeral in-container source harness were removed. Existing BasicLinear database, API, web, network, and fixture processes were not replaced or reset.
 - Browser boundary: no screenshot or rendered interaction assertion is claimed because the approved local browser surface remains unavailable under the active security policy.
 - Authority boundary: project-local Control Tower v0.8 is the sole issue and milestone authority. No Linear API, Linear MCP, or Linear UI was used for tracking.
 - Status boundary: CT-54 remains In Progress pending independent browser/UAT evidence. CT-12 remains In Progress, CT-13 remains Todo, and O-001 through O-005 remain pending.

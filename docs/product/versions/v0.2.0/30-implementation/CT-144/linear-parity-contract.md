@@ -4,13 +4,13 @@
 
 - Authority: project-local Control Tower v0.8 issue CT-144 on the existing `S3 — Implementation` milestone.
 - Reference: authenticated Linear workspace observed read-only in the user's selected Chrome session on 2026-08-27, plus the user-provided side-by-side issue-detail screenshot.
-- Candidate: deployed OpenLinear production at `https://openlinear-gray.vercel.app/`.
+- Candidate: deployed BasicLinear production at `https://basiclinear-gray.vercel.app/`.
 - Product boundary: project management only. No AI agents, code review, repository or pull-request management, synchronization, payment execution, or security/adversarial testing.
 - Historical boundary: CT-143 remains accepted historical deployment/UAT evidence and is not rewritten by this slice.
 
 ## Audited journey and required closure
 
-| Journey | Linear reference behavior | Observed OpenLinear gap | CT-144 acceptance |
+| Journey | Linear reference behavior | Observed BasicLinear gap | CT-144 acceptance |
 | --- | --- | --- | --- |
 | Workspace entry and switching | A signed-in user can reach every workspace they own or have joined and switch without signing out | A newly invited user bootstrapped into a separate empty owner workspace, with no route back to the joined workspace | The hosted entry lists every active owned/member workspace from the authoritative membership ledger, preserves the invitation workspace as the preferred destination, and exposes a working role-labelled workspace switcher |
 | Workspace/team navigation | Multiple collapsible teams; team switcher; team-scoped Home, Issues, Cycles, Projects, Views; create/join-team affordance | One hard-coded Product team | Owners can create durable teams, switch teams, and see team-scoped data after reload; navigation rows and arrows work with pointer and keyboard |
@@ -45,7 +45,7 @@
 - All declared workspace typechecks.
 - Isolated hosted production build and environment validator.
 - Development and production deployment readback with separated Firebase projects/databases and Checkout disabled.
-- A real two-Google-account invitation, team acceptance, recognizable-member assignment, member comment, explicit observation toggle, unread Inbox event, mark-read, workspace switch, and reload journey in Chrome. Production writes are limited to the sponsor-authorized PM UAT records; no Checkout/payment/security action.
+- A real two-Google-account invitation, team acceptance, recognizable-member assignment, member comment, explicit observation toggle, unread Inbox event, mark-read, workspace switch, and reload journey in Chrome. Production writes are limited to the maintainer-authorized PM UAT records; no Checkout/payment/security action.
 - Same viewport and same state reference/candidate Chrome captures, combined for visual judgment on each core journey.
 - A development-only real-data issue creation and full reload proving that the deployed service reserves the next number after the historical sequence; production verification remains read-only for this numbering slice.
 - Iterative fix-and-recapture loop until no clear structural mismatch remains.

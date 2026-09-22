@@ -2,7 +2,7 @@
 
 ## Verdict
 
-`IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING`. OpenLinear now treats same-origin loopback availability as an app-wide state, keeps cached work reachable during interruption, separates transport failure from owner authorization, and refreshes active reads after recovery.
+`IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING`. BasicLinear now treats same-origin loopback availability as an app-wide state, keeps cached work reachable during interruption, separates transport failure from owner authorization, and refreshes active reads after recovery.
 
 ## Behavior
 

@@ -6,13 +6,13 @@ import { createServer, loadEnv } from 'vite';
 
 const webRoot = resolve(import.meta.dirname, '../apps/web');
 const output = resolve(webRoot, process.argv[2] ?? 'dist');
-const mode = process.argv[3] ?? 'openlinear-hosted-vercel';
+const mode = process.argv[3] ?? 'basiclinear-hosted-vercel';
 const env = { ...loadEnv(mode, webRoot, 'VITE_'), ...process.env };
-const canonical = 'https://openlinear.qiaosun.me/';
+const canonical = 'https://basiclinear.qiaosun.me/';
 
 // Fail closed for local builds and development/preview provider environments.
 // The default public/robots.txt and hosted.html both exclude indexing.
-if (env.VITE_OPENLINEAR_DEPLOYMENT_ENVIRONMENT !== 'production') {
+if (env.VITE_BASICLINEAR_DEPLOYMENT_ENVIRONMENT !== 'production') {
   await Promise.all(['homepage.html', 'sitemap.xml'].map(file => rm(resolve(output, file), { force: true })));
   await writeFile(resolve(output, 'robots.txt'), await readFile(resolve(webRoot, 'public/robots.txt')));
   console.info('Public search artifacts skipped outside the production provider environment.');
@@ -30,7 +30,7 @@ if (env.VITE_OPENLINEAR_DEPLOYMENT_ENVIRONMENT !== 'production') {
   } finally {
     await vite.close();
   }
-  if (!markup.includes('<h1') || !markup.includes('OpenLinear')) {
+  if (!markup.includes('<h1') || !markup.includes('BasicLinear')) {
     throw new Error('The public homepage did not render indexable content.');
   }
   const shell = await readFile(resolve(output, 'hosted.html'), 'utf8');
@@ -38,8 +38,8 @@ if (env.VITE_OPENLINEAR_DEPLOYMENT_ENVIRONMENT !== 'production') {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'OpenLinear',
-    alternateName: 'OpenLinear Online',
+    name: 'BasicLinear',
+    alternateName: 'BasicLinear Online',
     url: canonical,
     description: 'Independent, open-source project management for projects, milestones, and issues. Run locally or use a shared workspace online.',
     inLanguage: 'en',
@@ -47,7 +47,7 @@ if (env.VITE_OPENLINEAR_DEPLOYMENT_ENVIRONMENT !== 'production') {
   const metadata = [
     `<link rel="canonical" href="${canonical}" />`,
     `<meta property="og:url" content="${canonical}" />`,
-    '<meta property="og:site_name" content="OpenLinear" />',
+    '<meta property="og:site_name" content="BasicLinear" />',
     `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script>`,
   ].join('\n    ');
   const homepage = shell

@@ -621,10 +621,10 @@
       "scripts/tests/ct141-operations-load.mjs": "9cc1d04d94efd588523633b39c58cf4bd4703e41e6242d56a2e9f2e9787e5a5b",
       "scripts/tests/verify-clean-runtime.test.mjs": "eeeb3fc1a782f595543316e9934ecf16af81fc3260bff3b35bcc6f4abea18b2a",
       "scripts/verify-clean-runtime.mjs": "d447f179db835fd09d5f420cc9d1c3f412470e099c3a711ca4f708bf37fa412c",
-      "skills/openlinear-product-management/SKILL.md": "187b8d32e934dcac12c9bba141f261ee76c84f3fdb1b6cf08d57012b9327faf4",
-      "skills/openlinear-product-management/agents/openai.yaml": "ce506e308a769f89170303b46ec177d6646299c73489b132778dad91abcef083",
-      "skills/openlinear-product-management/references/safety.md": "44bb7339dedf5571b6a5debc7d03b7ce48e0f65851da364b5f8a5643a9f5b766",
-      "skills/openlinear-product-management/references/tool-map.md": "4a924db4e18be2fb0c9c9155b0124ebb7431293e0f6fc3553d1b5518c3c46eb2",
+      "skills/basiclinear-product-management/SKILL.md": "187b8d32e934dcac12c9bba141f261ee76c84f3fdb1b6cf08d57012b9327faf4",
+      "skills/basiclinear-product-management/agents/openai.yaml": "ce506e308a769f89170303b46ec177d6646299c73489b132778dad91abcef083",
+      "skills/basiclinear-product-management/references/safety.md": "44bb7339dedf5571b6a5debc7d03b7ce48e0f65851da364b5f8a5643a9f5b766",
+      "skills/basiclinear-product-management/references/tool-map.md": "4a924db4e18be2fb0c9c9155b0124ebb7431293e0f6fc3553d1b5518c3c46eb2",
       "tsconfig.json": "adc032271697d49f7556295ef0f7ca42ff6bb5cfc0d0a6e55522bf1b51982c76",
       "vitest.config.ts": "487d9f14b343f3af43ef2298eee1b6e80b0746d5228dd2ea6c8c11042ef8bd32",
       "vitest.firestore.config.ts": "d3679907aa3d271f218c85395f82eb3125e13288fda501432214caadc3f46186"
@@ -690,7 +690,7 @@
       "expected": "17 files / 109 tests pass"
     },
     {
-      "command": "npm run build -w @openlinear/hosted && npm run build -w @openlinear/hosted-service && node scripts/tests/ct141-operations-load.mjs && node scripts/tests/ct141-completion-clock.mjs",
+      "command": "npm run build -w @basiclinear/hosted && npm run build -w @basiclinear/hosted-service && node scripts/tests/ct141-operations-load.mjs && node scripts/tests/ct141-completion-clock.mjs",
       "expected": "original three-instance load remains exact; built completion probe closes Review 1 and returns the four exact 429/503 writeHead/end transport cases with one redacted event and no raw identifiers"
     },
     {

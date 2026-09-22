@@ -7,7 +7,7 @@ import {
   MemoryCollaborationRepository,
   MemoryWorkspaceAuthorizationEvidenceWriter,
   MemoryWorkspaceMembershipReader,
-  openLinearOpenApiDocument,
+  basicLinearOpenApiDocument,
   PersonalTokenService,
   ProjectManagementService,
   WorkspaceAuthorizationService,
@@ -90,7 +90,7 @@ function fixture() {
     body = '',
   ): Promise<TestResponse> => {
     const request = Readable.from(body === '' ? [] : [body]) as unknown as IncomingMessage;
-    Object.assign(request, {method, url: path, headers: {host: 'openlinear.test', ...headers}});
+    Object.assign(request, {method, url: path, headers: {host: 'basiclinear.test', ...headers}});
     let status = 0;
     let responseHeaders: Record<string, string> = {};
     let payload = '';
@@ -109,7 +109,7 @@ function fixture() {
       request,
       response,
       `request_rest_${sequence++}`,
-      new URL(path, 'https://openlinear.test'),
+      new URL(path, 'https://basiclinear.test'),
     );
     expect(handled).toBe(true);
     return {status, headers: responseHeaders, body: payload === '' ? null : JSON.parse(payload)};
@@ -124,9 +124,9 @@ const bearerHeaders = (rawToken: string, idempotencyKey?: string, revision?: num
   ...(revision === undefined ? {} : {'if-match': `"rev-${revision}"`}),
 });
 
-describe('OpenLinear REST API v1', () => {
+describe('BasicLinear REST API v1', () => {
   it('publishes an exact OpenAPI 3.1.1 contract with no excluded product routes', () => {
-    const document = openLinearOpenApiDocument() as {
+    const document = basicLinearOpenApiDocument() as {
       openapi: string;
       paths: Record<string, Record<string, {responses?: Record<string, unknown>}>>;
       components: {
@@ -169,7 +169,7 @@ describe('OpenLinear REST API v1', () => {
     const exportResponse = document.paths['/workspaces/{workspaceId}/export']?.get
       ?.responses?.['200'] as {content?: Record<string, unknown>} | undefined;
     expect(Object.keys(exportResponse?.content ?? {}))
-      .toEqual(['application/vnd.openlinear.workspace-export+json;version=1']);
+      .toEqual(['application/vnd.basiclinear.workspace-export+json;version=1']);
   });
 
   it('enforces bearer scope, exact bodies, idempotency, and revision preconditions', async () => {
@@ -437,9 +437,9 @@ describe('OpenLinear REST API v1', () => {
     );
     expect(response.status).toBe(200);
     expect(response.headers['content-type'])
-      .toBe('application/vnd.openlinear.workspace-export+json;version=1');
+      .toBe('application/vnd.basiclinear.workspace-export+json;version=1');
     expect(response.headers['content-disposition']).toContain(`${workspaceId}-export-v1.json`);
-    expect(response.headers['x-openlinear-export-sha256']).toMatch(/^[a-f0-9]{64}$/u);
+    expect(response.headers['x-basiclinear-export-sha256']).toMatch(/^[a-f0-9]{64}$/u);
     const serialized = JSON.stringify(response.body);
     expect(serialized).not.toContain(token);
     expect(serialized).not.toContain('personalTokens');

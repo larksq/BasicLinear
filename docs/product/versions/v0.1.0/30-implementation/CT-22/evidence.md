@@ -54,7 +54,7 @@ The O-T04 result uses the same authenticated Chrome window, configured 1440x900 
 
 ## Privacy And Authority
 
-All retained screenshots show only the synthetic OpenLinear acceptance fixture. No authenticated Linear workspace name, entity title, identifier, URL, raw DOM, screenshot, credential, API result, or MCP result enters this evidence. Control Tower local v0.8 remains the only issue and milestone authority; provider projection remains disabled and `not_synced`.
+All retained screenshots show only the synthetic BasicLinear acceptance fixture. No authenticated Linear workspace name, entity title, identifier, URL, raw DOM, screenshot, credential, API result, or MCP result enters this evidence. Control Tower local v0.8 remains the only issue and milestone authority; provider projection remains disabled and `not_synced`.
 
 ## Verification Boundary
 

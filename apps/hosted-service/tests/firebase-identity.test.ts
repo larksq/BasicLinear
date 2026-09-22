@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { HostedAuthenticationError } from '@openlinear/hosted';
+import { HostedAuthenticationError } from '@basiclinear/hosted';
 import { verifiedGoogleIdentity } from '../src/firebase-identity.js';
 
 describe('Firebase Google identity boundary', () => {

@@ -6,7 +6,7 @@ Status: reviewer procedure; no qualified decision recorded
 
 This packet records a qualified review; it does not provide legal advice or infer clearance. Codex and the preparation script must not invent a reviewer, qualification, jurisdiction, opinion, or disposition.
 
-The sponsor has selected `AGPL-3.0-only`, Scopefold as project identity, and OpenLinear as the requested final product brand. The first two choices are implemented inputs, not qualified clearance. OpenLinear has an active exact-name project-management collision and incorporates Linear's company/application brand. A qualified reviewer must either clear the exact requested two-name model or require remediation. Capability to access an authenticated browser or account is not authorization and does not resolve this review.
+The maintainer has selected `AGPL-3.0-only`, BasicLinear as project identity, and BasicLinear as the requested final product brand. The first two choices are implemented inputs, not qualified clearance. BasicLinear has an active exact-name project-management collision and incorporates Linear's company/application brand. A qualified reviewer must either clear the exact requested two-name model or require remediation. Capability to access an authenticated browser or account is not authorization and does not resolve this review.
 
 ## Procedure
 
@@ -39,8 +39,8 @@ The following is a template, not acceptance. Every placeholder must be supplied 
   "request_sha256": "REQUIRED_64_CHARACTER_SHA256",
   "dispositions": {
     "license_compatibility": "agpl_3_0_only_accepted",
-    "project_identity": "scopefold_cleared",
-    "product_identity": "openlinear_cleared",
+    "project_identity": "basiclinear_cleared",
+    "product_identity": "basiclinear_cleared",
     "trademark_and_trade_dress": "independent_expression_cleared",
     "clean_room_method": "restrictive_boundary_accepted",
     "existing_reference_evidence": "private_quarantine_accepted",

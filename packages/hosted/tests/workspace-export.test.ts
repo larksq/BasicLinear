@@ -5,7 +5,7 @@ import {describe, expect, it} from 'vitest';
 import {
   CollaborationService, MemoryCollaborationRepository, MemoryWorkspaceAuthorizationEvidenceWriter,
   MemoryWorkspaceMembershipReader, ProjectManagementService, WorkspaceAuthorizationService,
-  WorkspaceConfigurationService, openLinearOpenApiDocument,
+  WorkspaceConfigurationService, basicLinearOpenApiDocument,
 } from '../src/index.js';
 import {proEntitlementPolicyForTests} from './fixtures/entitlement.js';
 
@@ -21,7 +21,7 @@ const canonical = (value: unknown): string => {
   const object = value as Record<string, unknown>;
   return `{${Object.keys(object).sort().map(key => `${JSON.stringify(key)}:${canonical(object[key])}`).join(',')}}`;
 };
-const document = openLinearOpenApiDocument();
+const document = basicLinearOpenApiDocument();
 const ajv = new Ajv2020({strict: false, allErrors: true});
 addFormats(ajv);
 const validate = ajv.compile({$ref: '#/components/schemas/WorkspaceExportData', components: document.components});

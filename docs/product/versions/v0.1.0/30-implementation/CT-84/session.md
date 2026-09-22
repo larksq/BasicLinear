@@ -9,11 +9,11 @@
 
 A non-independent CT-82 rehearsal exercised a fresh built process through automatic owner bootstrap, status discovery, project, milestone, issue, private saved view, search, issue query, restart, canonical export/import, online backup, verification, restore, rejected import, rejected restore, and schema-1 upgrade. The functional and recovery checks passed.
 
-The documented `npm start` Ctrl-C path nevertheless left `openlinear.sqlite3-shm` in two stopped data directories and an uncheckpointed 181,312-byte `openlinear.sqlite3-wal` in one. A second reproduction retained a 78,312-byte WAL and 32,768-byte SHM after the child process was confirmed absent.
+The documented `npm start` Ctrl-C path nevertheless left `basiclinear.sqlite3-shm` in two stopped data directories and an uncheckpointed 181,312-byte `basiclinear.sqlite3-wal` in one. A second reproduction retained a 78,312-byte WAL and 32,768-byte SHM after the child process was confirmed absent.
 
 ## Investigation
 
-1. Direct `OpenLinearDatabase.close()` and `await app.close()` removed sidecars.
+1. Direct `BasicLinearDatabase.close()` and `await app.close()` removed sidecars.
 2. A direct built Node process handled `SIGTERM`, exited zero, and left only the main database.
 3. Removing the nested workspace npm launcher reduced process depth but did not make terminal process-group interruption wait for asynchronous cleanup.
 4. A synchronous early database-close experiment was rejected because it could race in-flight Fastify work and still could not control an external npm parent.

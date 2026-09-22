@@ -51,8 +51,8 @@
     "audit_failures": 0
   },
   "fixture_restoration": {
-    "backup": "/private/tmp/openlinear-ct12-current-pre-destructive.sqlite3",
-    "live": "/private/tmp/openlinear-preview-4284/openlinear.sqlite3",
+    "backup": "/private/tmp/basiclinear-ct12-current-pre-destructive.sqlite3",
+    "live": "/private/tmp/basiclinear-preview-4284/basiclinear.sqlite3",
     "sha256": "b7484a4774a04f3cfa7e14d0fb1f02c047824fc3c855b7bedc5a90683a53ceb0",
     "byte_identical": true,
     "integrity": "ok",

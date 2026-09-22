@@ -11,7 +11,7 @@ import type {
   MigrationDescriptorV1,
   TransferSourceV1,
   WorkspaceExportV1,
-} from '@openlinear/contracts';
+} from '@basiclinear/contracts';
 
 export class TransferError extends Error {
   constructor(
@@ -411,7 +411,7 @@ export function buildWorkspaceDigests(
     algorithm: 'sha256',
     collections: collectionDigests,
     canonical: canonicalSha256({
-      format: 'openlinear.workspace-snapshot',
+      format: 'basiclinear.workspace-snapshot',
       version: 1,
       migrations,
       workspaceId,
@@ -465,7 +465,7 @@ export function parseWorkspaceExport(value: unknown): WorkspaceExportV1 {
   if (canonicalStringify(Object.keys(value).sort()) !== canonicalStringify(keys)) {
     throw new TransferError('INVALID_EXPORT', 'Workspace export contains an unsupported or missing field.');
   }
-  if (value.format !== 'openlinear.workspace-export' || value.version !== 1) {
+  if (value.format !== 'basiclinear.workspace-export' || value.version !== 1) {
     throw new TransferError('UNSUPPORTED_EXPORT_VERSION', 'Workspace export format or version is unsupported.');
   }
   assertIsoTimestamp(value.generatedAt, 'generatedAt');
@@ -533,7 +533,7 @@ export function buildDatabaseBackupDigests(
     oidcIdentities: oidcIdentitiesDigest,
     workspaces: workspacesDigest,
     canonical: canonicalSha256({
-      format: 'openlinear.database-backup',
+      format: 'basiclinear.database-backup',
       version: 1,
       migrations,
       users: usersDigest,
@@ -549,7 +549,7 @@ export function parseDatabaseBackup(value: unknown): DatabaseBackupV1 {
   if (canonicalStringify(Object.keys(value).sort()) !== canonicalStringify(keys)) {
     throw new TransferError('INVALID_BACKUP', 'Database backup contains an unsupported or missing field.');
   }
-  if (value.format !== 'openlinear.database-backup' || value.version !== 1) {
+  if (value.format !== 'basiclinear.database-backup' || value.version !== 1) {
     throw new TransferError('UNSUPPORTED_BACKUP_VERSION', 'Database backup format or version is unsupported.');
   }
   assertIsoTimestamp(value.generatedAt, 'generatedAt');

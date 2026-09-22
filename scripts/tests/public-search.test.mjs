@@ -7,17 +7,17 @@ import { test } from 'node:test';
 import { runInNewContext } from 'node:vm';
 
 const root = resolve(import.meta.dirname, '../..');
-const canonical = 'https://openlinear.qiaosun.me/';
+const canonical = 'https://basiclinear.qiaosun.me/';
 
 test('production serves real public content while app HTML remains excluded; rebuilding for development removes public artifacts', async () => {
-  const output = await mkdtemp(resolve(tmpdir(), 'openlinear-search-test-'));
+  const output = await mkdtemp(resolve(tmpdir(), 'basiclinear-search-test-'));
   try {
     const shell = await readFile(resolve(root, 'apps/web/hosted.html'), 'utf8');
     await writeFile(resolve(output, 'hosted.html'), shell);
     const render = environment => execFileSync(process.execPath,
       [resolve(root, 'scripts/prerender-homepage.mjs'), output], {
         cwd: root,
-        env: { ...process.env, VITE_OPENLINEAR_DEPLOYMENT_ENVIRONMENT: environment },
+        env: { ...process.env, VITE_BASICLINEAR_DEPLOYMENT_ENVIRONMENT: environment },
         stdio: 'pipe',
         timeout: 30_000,
       });
@@ -31,7 +31,7 @@ test('production serves real public content while app HTML remains excluded; reb
     assert.equal((homepage.match(/rel="canonical"/g) ?? []).length, 1);
     assert.ok(homepage.includes(`<link rel="canonical" href="${canonical}"`));
     const schema = JSON.parse(homepage.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1]);
-    assert.equal(schema.name, 'OpenLinear');
+    assert.equal(schema.name, 'BasicLinear');
     assert.equal(schema.url, canonical);
     assert.equal(await readFile(resolve(output, 'hosted.html'), 'utf8'), shell);
     assert.match(shell, /<meta name="robots" content="noindex, nofollow, noarchive"/);
@@ -52,7 +52,7 @@ test('production serves real public content while app HTML remains excluded; reb
 });
 
 test('fragment deep links, app queries, and other hosts receive noindex before the application runs', async () => {
-  const script = await readFile(resolve(root, 'apps/web/public/openlinear-search-policy.js'), 'utf8');
+  const script = await readFile(resolve(root, 'apps/web/public/basiclinear-search-policy.js'), 'utf8');
   const cases = [
     [canonical, false],
     [`${canonical}?utm_source=community#product`, false],
@@ -64,8 +64,8 @@ test('fragment deep links, app queries, and other hosts receive noindex before t
     [`${canonical}?billing=cancelled`, true],
     [`${canonical}#invite=example`, true],
     [`${canonical}#issue=example`, true],
-    ['https://openlinear-gray.vercel.app/', true],
-    ['https://openlinear-development.vercel.app/', true],
+    ['https://basiclinear-online.vercel.app/', true],
+    ['https://basiclinear-development.vercel.app/', true],
     ['http://localhost:5173/', true],
   ];
   for (const [url, excluded] of cases) {

@@ -46,13 +46,13 @@ invariant(development.backend.status === 'deployed' && production.backend.status
   'Both isolated Cloud Run services must be deployed.');
 invariant(development.frontend.providerStatus === 'ready', 'Development providers must be ready.');
 invariant(
-  development.frontend.url === 'https://openlinear-development.vercel.app',
-  'Development preview URL is not the reviewed Vercel alias.',
+  development.frontend.url === 'https://basiclinear-development.vercel.app',
+  'Development preview URL is not the BasicLinear Vercel alias.',
 );
 invariant(production.frontend.providerStatus === 'ready',
   'Production frontend must be ready.');
-invariant(production.frontend.url === 'https://openlinear-gray.vercel.app',
-  'Production must use the separate reviewed Vercel alias.');
+invariant(production.frontend.url === 'https://basiclinear.qiaosun.me',
+  'Production must use the BasicLinear canonical origin.');
 invariant(
   development.firebaseProjectId !== production.firebaseProjectId,
   'Development and production must use distinct Firebase projects.',
@@ -80,22 +80,22 @@ if (buildIndex !== -1) {
   invariant(selected === 'development' || selected === 'production', '--build requires development or production.');
   const manifest = selected === 'development' ? development : production;
   invariant(
-    process.env.VITE_OPENLINEAR_DEPLOYMENT_ENVIRONMENT === selected,
+    process.env.VITE_BASICLINEAR_DEPLOYMENT_ENVIRONMENT === selected,
     'The browser deployment environment does not match the selected build.',
   );
   invariant(
-    process.env.VITE_OPENLINEAR_DEVELOPMENT_FIREBASE_PROJECT_ID === development.firebaseProjectId,
+    process.env.VITE_BASICLINEAR_DEVELOPMENT_FIREBASE_PROJECT_ID === development.firebaseProjectId,
     'The development Firebase project does not match the environment manifest.',
   );
   invariant(
-    process.env.VITE_OPENLINEAR_PRODUCTION_FIREBASE_PROJECT_ID === production.firebaseProjectId,
+    process.env.VITE_BASICLINEAR_PRODUCTION_FIREBASE_PROJECT_ID === production.firebaseProjectId,
     'The production Firebase project does not match the environment manifest.',
   );
   invariant(
     process.env.VITE_FIREBASE_PROJECT_ID === manifest.firebaseProjectId,
     'The browser Firebase project does not match the selected environment manifest.',
   );
-  const providerStatus = process.env.VITE_OPENLINEAR_PROVIDER_STATUS;
+  const providerStatus = process.env.VITE_BASICLINEAR_PROVIDER_STATUS;
   invariant(providerStatus === 'configuring' || providerStatus === 'ready', 'The provider status is invalid.');
   invariant(selected !== 'production' || providerStatus === 'ready', 'Production cannot be built with incomplete providers.');
   if (providerStatus === 'ready') {

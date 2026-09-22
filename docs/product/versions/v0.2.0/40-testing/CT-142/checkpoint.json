@@ -26,7 +26,7 @@
     "authorized": true,
     "requirement_refs": ["R-204", "R-219"],
     "acceptance_refs": ["P-T210"],
-    "reason": "Sponsor-directed security-test skip under the active Codex safety-policy boundary.",
+    "reason": "Maintainer-directed security-test skip under the active Codex safety-policy boundary.",
     "effect": "CT-142 remains yellow, In Progress, and not Done-eligible."
   },
   "outcomes": {

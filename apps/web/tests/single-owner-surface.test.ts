@@ -15,7 +15,7 @@ describe('single owner product surface', () => {
     expect(app).toContain('if (started.current) return;');
     expect(app).toContain("const workspace = session.workspaces.length === 1 && session.workspaces[0]?.role === 'owner'");
     expect(api).toContain("localOwnerSession: () => request<Session>('/api/v1/local-owner-session', {");
-    expect(api).toContain("'x-openlinear-csrf': csrfToken");
+    expect(api).toContain("'x-basiclinear-csrf': csrfToken");
     expect(api).toContain("body: '{}'");
     for (const unsupported of [
       'setupState', 'LoginScreen', 'SetupScreen', 'startOidcLink', 'changePassword',

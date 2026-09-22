@@ -41,7 +41,7 @@ Primary-key and unique constraints still create their normal supporting indexes.
 - SQLite describes local application storage, application-file use, a server-side app with serialized requests, and single-writer workloads as appropriate uses: [Appropriate Uses For SQLite](https://www.sqlite.org/whentouse.html).
 - SQLite documents snapshot-safe online backup and its locking/error behavior: [SQLite Backup API](https://www.sqlite.org/backup.html).
 
-These sources support technical feasibility. They do not prove OpenLinear implementation quality, setup success, recovery, or outcomes.
+These sources support technical feasibility. They do not prove BasicLinear implementation quality, setup success, recovery, or outcomes.
 
 ## Control Tower readback
 

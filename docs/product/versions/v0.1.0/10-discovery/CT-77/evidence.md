@@ -11,7 +11,7 @@
 
 ## Integrity
 
-The declared survey-sample lower bound is `61,246`, with additional Atlassian telemetry from `1 million` users and `24 million` Jira tickets. This is not a pooled sample: frames differ, respondents may overlap, and vendor-sponsored sources are explicitly limited.
+The declared survey-sample lower bound is `61,246`, with additional Atlassian telemetry from `1 million` users and `24 million` Jira tickets. This is not a pooled sample: frames differ, respondents may overlap, and vendor-maintainered sources are explicitly limited.
 
 No human interview, participant outreach, personal data, authenticated product research, Linear API, Linear MCP, provider projection, or external task write contributed to the result.
 

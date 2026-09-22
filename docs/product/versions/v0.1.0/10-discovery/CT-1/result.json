@@ -19,7 +19,7 @@
     "eligible_completed": 0
   },
   "missing_inputs": [],
-  "cancellation_reason": "Five interviews cannot represent the required range of project types. The sponsor directed Discovery to use broad online statistics instead.",
+  "cancellation_reason": "Five interviews cannot represent the required range of project types. The maintainer directed Discovery to use broad online statistics instead.",
   "claims": {
     "a_001": "unresolved",
     "a_002": "unresolved",

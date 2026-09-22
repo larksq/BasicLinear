@@ -98,7 +98,7 @@
         "apps/web/src/hosted-app.tsx",
         "apps/web/src/hosted.css",
         "apps/web/tests/hosted-mcp-consent.test.ts",
-        "skills/openlinear-product-management/",
+        "skills/basiclinear-product-management/",
         "docs/product/versions/v0.2.0/20-planning/",
         "docs/product/versions/v0.2.0/30-implementation/research/T-SECURITY-MCP.md",
         "docs/product/versions/v0.2.0/30-implementation/CT-140/"
@@ -207,7 +207,7 @@
       "cimd_fetch": false
     },
     "skill": {
-      "path": "skills/openlinear-product-management",
+      "path": "skills/basiclinear-product-management",
       "validated": true,
       "read_first": true,
       "destructive_confirmation_tools": ["comment.delete", "member.remove", "invitation.revoke"]

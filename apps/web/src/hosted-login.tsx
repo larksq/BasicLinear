@@ -17,16 +17,16 @@ export function HostedLogin({phase, error, identityOnly = false, onContinue}: Ho
   const busy = phase === 'restoring' || phase === 'signing-in' || phase === 'bootstrapping';
   const label = phase === 'restoring' ? 'Checking your session…' : phase === 'signing-in' ? 'Opening Google…' : phase === 'bootstrapping' ? 'Preparing your workspace…' : phase === 'error' ? 'Try again with Google' : 'Continue with Google';
   return <section className="ol-login" aria-labelledby="login-title">
-    <aside className="ol-login-art" aria-label="OpenLinear, an independent open-source workspace">
+    <aside className="ol-login-art" aria-label="BasicLinear, an independent open-source workspace">
       <img src="/images/login-sculpture.jpg" alt="" width="1086" height="1448" fetchPriority="high"/>
-      <a className="ol-login-brand" href={homeHref}><BrandMark className="ol-login-mark"/><span>OpenLinear</span></a>
+      <a className="ol-login-brand" href={homeHref}><BrandMark className="ol-login-mark"/><span>BasicLinear</span></a>
       <div className="ol-login-art-copy"><p>A little clarity.<br/>A lot of possibility.</p><span>An independent, open-source workspace.</span></div>
     </aside>
     <div className="ol-login-panel">
       <a className="ol-login-back" href={homeHref}><ArrowLeft size={17}/>Back to home</a>
       <div className="ol-login-form">
         <div className="ol-login-symbol"><BrandMark className="ol-login-mark"/></div>
-        <h1 id="login-title">Welcome to OpenLinear</h1>
+        <h1 id="login-title">Welcome to BasicLinear</h1>
         <p className="ol-login-subtitle">Sign in or create your account to continue.</p>
         <button className="ol-login-google" type="button" disabled={busy} onClick={onContinue} aria-describedby="login-account-note" aria-busy={busy}>
           {busy ? <LoaderCircle size={20} className="ol-login-spinner" aria-hidden="true"/> : <GoogleMark/>}{label}
@@ -51,7 +51,7 @@ export function HostedLogin({phase, error, identityOnly = false, onContinue}: Ho
           </div>
         </section>
       </div>
-      <a className="ol-login-about" href={`${homeHref}#open-source`}>About OpenLinear<ArrowUpRight size={16}/></a>
+      <a className="ol-login-about" href={`${homeHref}#open-source`}>About BasicLinear<ArrowUpRight size={16}/></a>
     </div>
   </section>;
 }

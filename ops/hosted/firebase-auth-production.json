@@ -4,7 +4,7 @@
       "anonymous": false,
       "emailPassword": false,
       "googleSignIn": {
-        "oAuthBrandDisplayName": "OpenLinear",
+        "oAuthBrandDisplayName": "BasicLinear",
         "supportEmail": "larksq@gmail.com",
         "authorizedRedirectUris": []
       }

@@ -97,7 +97,7 @@ function createFixture(
     body = '',
   ): Promise<TestHttpResponse> => {
     const request = Readable.from(body === '' ? [] : [body]) as unknown as IncomingMessage;
-    Object.assign(request, { method, url: path, headers: { host: 'openlinear.test', ...headers } });
+    Object.assign(request, { method, url: path, headers: { host: 'basiclinear.test', ...headers } });
     let status = 0;
     let responseHeaders: Record<string, string> = {};
     let payload = '';
@@ -270,20 +270,20 @@ describe('hosted HTTP foundation', () => {
   it('requires an exact deployment-owned browser origin and ignores forwarded host claims', async () => {
     const invoke = createFixture(
       new MemoryOwnerBootstrapRepository(),
-      ['https://openlinear.test'],
+      ['https://basiclinear.test'],
     );
     const allowed = await invoke('POST', '/api/v1/hosted/bootstrap', {
       ...bootstrapHeaders('browser-exact-origin-0001'),
-      origin: 'https://openlinear.test',
+      origin: 'https://basiclinear.test',
     }, '{}');
     const downgraded = await invoke('POST', '/api/v1/hosted/bootstrap', {
       ...bootstrapHeaders('browser-downgraded-origin-0001'),
-      origin: 'http://openlinear.test',
+      origin: 'http://basiclinear.test',
     }, '{}');
     const spoofed = await invoke('POST', '/api/v1/hosted/bootstrap', {
       ...bootstrapHeaders('browser-forwarded-spoof-0001'),
       origin: 'https://hostile.example',
-      'x-forwarded-host': 'hostile.example, openlinear.test',
+      'x-forwarded-host': 'hostile.example, basiclinear.test',
     }, '{}');
     const directIngress = await invoke('POST', '/api/v1/hosted/bootstrap', {
       ...bootstrapHeaders('browser-direct-ingress-0001'),
@@ -293,13 +293,13 @@ describe('hosted HTTP foundation', () => {
     }, '{}');
     const duplicateOrigin = await invoke('POST', '/api/v1/hosted/bootstrap', {
       ...bootstrapHeaders('browser-duplicate-origin-0001'),
-      origin: ['https://openlinear.test', 'https://hostile.example'],
+      origin: ['https://basiclinear.test', 'https://hostile.example'],
     }, '{}');
     const malformedOrigins = await Promise.all([
-      'https://openlinear.test/forged',
-      'https://user:pass@openlinear.test',
-      'https://openlinear.test?x=1',
-      'https://openlinear.test#x',
+      'https://basiclinear.test/forged',
+      'https://user:pass@basiclinear.test',
+      'https://basiclinear.test?x=1',
+      'https://basiclinear.test#x',
     ].map((origin, index) => invoke('POST', '/api/v1/hosted/bootstrap', {
       ...bootstrapHeaders(`browser-noncanonical-origin-${index + 1}-0001`),
       origin,

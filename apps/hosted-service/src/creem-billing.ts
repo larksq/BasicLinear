@@ -4,7 +4,7 @@ import {
   billingPrices, type BillingPlan, type BillingProvider,
   type BillingProviderCheckoutSession, type BillingProviderSubscription,
   type BillingProviderSubscriptionUpdateExpectation, type VerifiedBillingNotice,
-} from '@openlinear/hosted';
+} from '@basiclinear/hosted';
 
 export interface CreemBillingProviderOptions {
   checkoutAttemptStore: CreemCheckoutAttemptStore;
@@ -40,24 +40,24 @@ function seats(value: unknown): number {
   if (!Number.isSafeInteger(value) || (value as number) < 1) throw new Error('CREEM_SEATS_INVALID');
   return value as number;
 }
-const metadataKeys = ['openlinear_checkout_reference', 'openlinear_owner_user_id', 'openlinear_plan',
-  'openlinear_workspace_id', 'openlinear_attempted_at'];
+const metadataKeys = ['basiclinear_checkout_reference', 'basiclinear_owner_user_id', 'basiclinear_plan',
+  'basiclinear_workspace_id', 'basiclinear_attempted_at'];
 function binding(value: unknown) {
   const m = object(value);
   if (Object.keys(m).sort().join(':') !== [...metadataKeys].sort().join(':')
-    || typeof m.openlinear_checkout_reference !== 'string'
-    || !/^[a-f0-9]{64}$/.test(m.openlinear_checkout_reference)
-    || typeof m.openlinear_workspace_id !== 'string'
-    || !/^[A-Za-z0-9][A-Za-z0-9._+-]{2,127}$/.test(m.openlinear_workspace_id)
-    || typeof m.openlinear_owner_user_id !== 'string'
-    || !/^[A-Za-z0-9][A-Za-z0-9:._@+-]{2,127}$/.test(m.openlinear_owner_user_id)
-    || (m.openlinear_plan !== 'monthly' && m.openlinear_plan !== 'annual')) throw new Error('CREEM_METADATA_INVALID');
+    || typeof m.basiclinear_checkout_reference !== 'string'
+    || !/^[a-f0-9]{64}$/.test(m.basiclinear_checkout_reference)
+    || typeof m.basiclinear_workspace_id !== 'string'
+    || !/^[A-Za-z0-9][A-Za-z0-9._+-]{2,127}$/.test(m.basiclinear_workspace_id)
+    || typeof m.basiclinear_owner_user_id !== 'string'
+    || !/^[A-Za-z0-9][A-Za-z0-9:._@+-]{2,127}$/.test(m.basiclinear_owner_user_id)
+    || (m.basiclinear_plan !== 'monthly' && m.basiclinear_plan !== 'annual')) throw new Error('CREEM_METADATA_INVALID');
   return {
-    checkoutReference: m.openlinear_checkout_reference,
-    workspaceId: m.openlinear_workspace_id,
-    ownerUserId: m.openlinear_owner_user_id,
-    plan: m.openlinear_plan as BillingPlan,
-    attemptedAt: timestamp(m.openlinear_attempted_at),
+    checkoutReference: m.basiclinear_checkout_reference,
+    workspaceId: m.basiclinear_workspace_id,
+    ownerUserId: m.basiclinear_owner_user_id,
+    plan: m.basiclinear_plan as BillingPlan,
+    attemptedAt: timestamp(m.basiclinear_attempted_at),
   };
 }
 
@@ -110,9 +110,9 @@ export class CreemBillingProvider implements BillingProvider {
     if (input.priceId !== this.#products[input.plan]) throw new Error('CREEM_PRODUCT_BINDING_INVALID');
     seats(input.quantity);
     const metadata = {
-      openlinear_checkout_reference: input.checkoutReference, openlinear_workspace_id: input.workspaceId,
-      openlinear_owner_user_id: input.ownerUserId, openlinear_plan: input.plan,
-      openlinear_attempted_at: input.attemptedAt ?? this.#clock().toISOString(),
+      basiclinear_checkout_reference: input.checkoutReference, basiclinear_workspace_id: input.workspaceId,
+      basiclinear_owner_user_id: input.ownerUserId, basiclinear_plan: input.plan,
+      basiclinear_attempted_at: input.attemptedAt ?? this.#clock().toISOString(),
     };
     binding(metadata);
     await this.#product(input.priceId, input.plan);

@@ -8,7 +8,7 @@
 
 - Event protocol unit coverage passes two cursor and serialization tests, including invalid cursor rejection and secret-bearing field exclusion.
 - The CT-11 PostgreSQL suite proves cross-workspace event denial, authorized monotonic resume, no duplicate accepted cursor range, and payload allowlisting.
-- The complete immutable image `openlinear-test:ct11-final-r2` (`sha256:b073182b066e765bdda111ffa6f32a0befba85039e6cccd2794b781913cc325d`) passes 8 workspace type checks, 5 unit files / 20 tests, and 6 integration files / 16 tests.
+- The complete immutable image `basiclinear-test:ct11-final-r2` (`sha256:b073182b066e765bdda111ffa6f32a0befba85039e6cccd2794b781913cc325d`) passes 8 workspace type checks, 5 unit files / 20 tests, and 6 integration files / 16 tests.
 - The matching live artifacts return readiness HTTP 200. A synthetic API mutation advanced `PRO-2`, the authenticated Chrome board refreshed through `EventSource` without a UI mutation or reload, and the restoring mutation returned the title to `Document restore and purge runbook` at revision 7.
 - The post-restore authenticated DOM shows the restored title and two active issues. Browser warning/error logs are empty.
 - Nginx disables proxy buffering and cache for `/api/` and retains a 65-second read timeout. Event payloads contain only cursor, workspace ID, entity type, entity ID, and revision.

@@ -17,7 +17,7 @@
       {
         "severity": "P2",
         "id": "config_workspace_typecheck_omission",
-        "evidence": "@openlinear/config owns an executable Vitest TypeScript test selected by the full suite but declared no tsconfig or typecheck; its package export also referenced a nonexistent typescript.json, contradicting the sealed typecheck-universe claim."
+        "evidence": "@basiclinear/config owns an executable Vitest TypeScript test selected by the full suite but declared no tsconfig or typecheck; its package export also referenced a nonexistent typescript.json, contradicting the sealed typecheck-universe claim."
       },
       {
         "severity": "P2",
@@ -372,11 +372,11 @@
     },
     {
       "command": "npm query .workspace --json and inspect each workspace package scripts/source surface",
-      "expected": "exactly 11 workspaces; 10 declared typecheck scripts; @openlinear/config exports only typescript.json and has no executable TypeScript source"
+      "expected": "exactly 11 workspaces; 10 declared typecheck scripts; @basiclinear/config exports only typescript.json and has no executable TypeScript source"
     },
     {
       "command": "npm run typecheck",
-      "expected": "10 of 10 declared workspace typecheck scripts pass across the exact enumerated 11-workspace universe; @openlinear/config remains configuration-only and declares no script"
+      "expected": "10 of 10 declared workspace typecheck scripts pass across the exact enumerated 11-workspace universe; @basiclinear/config remains configuration-only and declares no script"
     },
     {
       "command": "npm run build plus independent hosted-asset/graph inspection",
@@ -426,7 +426,7 @@
     ]
   },
   "adversarial_requirements": [
-    "Independently enumerate every workspace and its scripts/source surface; prove exactly 11 total, exactly 10 declared typecheck scripts, all 10 executed and passed by the root command, and @openlinear/config remains configuration-only JSON with no executable TypeScript surface.",
+    "Independently enumerate every workspace and its scripts/source surface; prove exactly 11 total, exactly 10 declared typecheck scripts, all 10 executed and passed by the root command, and @basiclinear/config remains configuration-only JSON with no executable TypeScript surface.",
     "Start from the exact primary-persistence outage: one far-future completed provider session, one authenticated prepared Checkout/lock, providerAttempt 1, no session binding, and no billing ledger.",
     "Force active-seat reconciliation after notice preflight, inject failure into final persistence, and prove the repository remains byte-for-byte at the prepared snapshot with zero binding, billing, webhook, or activation.",
     "Retry with both the same verified notice and a different valid notice; prove one completed Checkout, one paid billing revision, one activation, bounded webhook receipts, one provider session/subscription, and no second Checkout attempt.",
@@ -467,24 +467,23 @@
     "total_workspaces": 11,
     "required_script_count": 10,
     "required_workspaces": [
-      "@openlinear/api",
-      "@openlinear/hosted-service",
-      "@openlinear/web",
-      "@openlinear/contracts",
-      "@openlinear/db",
-      "@openlinear/domain",
-      "@openlinear/hosted",
-      "@openlinear/operator",
-      "@openlinear/test-fixtures",
-      "@openlinear/ui"
+      "@basiclinear/api",
+      "@basiclinear/hosted-service",
+      "@basiclinear/web",
+      "@basiclinear/contracts",
+      "@basiclinear/db",
+      "@basiclinear/domain",
+      "@basiclinear/hosted",
+      "@basiclinear/operator",
+      "@basiclinear/test-fixtures",
+      "@basiclinear/ui"
     ],
     "configuration_only_workspace": {
-      "name": "@openlinear/config",
+      "name": "@basiclinear/config",
       "export": "./typescript.json",
       "executable_typescript_surface": false,
       "typecheck_script": false
     },
-    "invariant": "Every workspace that declares executable TypeScript must declare and pass typecheck; any future executable source under @openlinear/config requires adding a typecheck script and updating this contract."
+    "invariant": "Every workspace that declares executable TypeScript must declare and pass typecheck; any future executable source under @basiclinear/config requires adding a typecheck script and updating this contract."
   }
 }
-

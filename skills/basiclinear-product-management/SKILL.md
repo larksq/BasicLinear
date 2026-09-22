@@ -1,18 +1,18 @@
 ---
-name: openlinear-product-management
-description: Operate a hosted OpenLinear workspace through its MCP product-management tools. Use when a user asks to inspect or manage OpenLinear workspaces, projects, milestones, issues, assignments, comments, members, invitations, billing summaries, or workspace exports. Do not use for agents, source repositories, pull requests, code review, token administration, or billing purchases.
+name: basiclinear-product-management
+description: Operate a hosted BasicLinear workspace through its MCP product-management tools. Use when a user asks to inspect or manage BasicLinear workspaces, projects, milestones, issues, assignments, comments, members, invitations, billing summaries, or workspace exports. Do not use for agents, source repositories, pull requests, code review, token administration, or billing purchases.
 ---
 
-# OpenLinear product management
+# BasicLinear product management
 
-Use the hosted OpenLinear MCP server as the workspace authority. Keep every action inside the explicit workspace chosen by the user.
+Use the hosted BasicLinear MCP server as the workspace authority. Keep every action inside the explicit workspace chosen by the user.
 
 ## Connect safely
 
 1. Connect to the configured `/mcp` endpoint with the stable `2026-07-28` protocol.
 2. Complete the server's OAuth authorization-code flow with PKCE and explicit workspace/scope consent. Never substitute a REST personal access token for MCP OAuth.
 3. Call `server/discover`, then `tools/list`. Use only tools returned for the current grant.
-4. If no workspace is explicit, ask the user for its OpenLinear workspace ID. Never infer one from another task or account.
+4. If no workspace is explicit, ask the user for its BasicLinear workspace ID. Never infer one from another task or account.
 
 See [references/safety.md](references/safety.md) for the authority, privacy, retry, and confirmation boundaries.
 

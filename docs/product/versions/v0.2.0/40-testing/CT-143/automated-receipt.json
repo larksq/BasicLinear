@@ -2,7 +2,7 @@
   "schema_version": "ct143-automated-receipt-v1",
   "captured_at": "2026-08-27T05:22:31Z",
   "environment": {
-    "project_root": "/Users/qiaosun/Documents/ChatGPT/OpenLinear",
+    "project_root": "/Users/qiaosun/Documents/ChatGPT/BasicLinear",
     "provider_projection": "disabled_not_synced",
     "security_or_adversarial_suites_run": false,
     "provider_or_external_mutation_performed": true,

@@ -6,11 +6,11 @@
 
 ## Root Cause And Correction
 
-The API search query and repository already include `workspaceId` in both the client query key and the default-deny database path. The leak came from one browser-wide `openlinear.recent-search` local-storage key.
+The API search query and repository already include `workspaceId` in both the client query key and the default-deny database path. The leak came from one browser-wide `basiclinear.recent-search` local-storage key.
 
 The frontend now:
 
-- writes recent results under `openlinear.recent-search:<workspaceId>`;
+- writes recent results under `basiclinear.recent-search:<workspaceId>`;
 - ignores the legacy global key;
 - validates stored result shape and caps history at six items;
 - associates in-memory recent results with their workspace and renders none when that key does not match the active context;

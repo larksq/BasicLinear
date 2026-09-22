@@ -57,10 +57,10 @@
     { "name": "005_issues_relations_comments.sql", "sha256": "0df907aa7da512925c410736dca969200568f3cd38d5ad6bc8c5b5f950019d2a" }
   ],
   "images": [
-    { "name": "openlinear-api:ct8", "id": "573d018a3ec9d62274a17db569cd1557954e44e5503616e75a012fb5ced9dd6b", "size_bytes": 321375346, "running": true },
-    { "name": "openlinear-web:ct8", "id": "599fa6bf40911d10b7e3795566336d6e3e2103173327737f15f3cee2298bce94", "size_bytes": 61985930, "running": true },
-    { "name": "openlinear-test:ct8-final", "id": "adf829708565517ea4246ece742027e518923df93c82803bd0414ad866d1ace5", "size_bytes": 441708129, "running": false },
-    { "name": "openlinear-postgres:16.10", "id": "06928dd03c4562c7740748bd022145a82db0fa73565af609c63cd396a54c2620", "size_bytes": 449935983, "running": true }
+    { "name": "basiclinear-api:ct8", "id": "573d018a3ec9d62274a17db569cd1557954e44e5503616e75a012fb5ced9dd6b", "size_bytes": 321375346, "running": true },
+    { "name": "basiclinear-web:ct8", "id": "599fa6bf40911d10b7e3795566336d6e3e2103173327737f15f3cee2298bce94", "size_bytes": 61985930, "running": true },
+    { "name": "basiclinear-test:ct8-final", "id": "adf829708565517ea4246ece742027e518923df93c82803bd0414ad866d1ace5", "size_bytes": 441708129, "running": false },
+    { "name": "basiclinear-postgres:16.10", "id": "06928dd03c4562c7740748bd022145a82db0fa73565af609c63cd396a54c2620", "size_bytes": 449935983, "running": true }
   ],
   "screenshots": [
     { "path": "docs/product/versions/v0.1.0/30-implementation/CT-8/evidence/issue-create-390x844.jpg", "sha256": "978fb175c6f4d4b62d181046ac89faeea216f24b234d1d8243807bbba0b22005" },

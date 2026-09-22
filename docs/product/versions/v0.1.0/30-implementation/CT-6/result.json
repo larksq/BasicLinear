@@ -56,11 +56,11 @@
     { "name": "003_scope_rls_to_workspace_context.sql", "sha256": "15e41c9eff8401f6092d43b2c604633c7ac9f6cc2ba515b523648d3bd4fe256b" }
   ],
   "images": [
-    { "name": "openlinear-api", "id": "dcdeb606fb5d", "size_mb": 309 },
-    { "name": "openlinear-web", "id": "c39d5c23808f", "size_mb": 61.5 },
-    { "name": "openlinear-migrate", "id": "0df07e94333d", "size_mb": 309 },
-    { "name": "openlinear-test", "id": "fafc29551264", "size_mb": 429 },
-    { "name": "openlinear-postgres:16.10", "id": "06928dd03c45", "size_mb": 450 }
+    { "name": "basiclinear-api", "id": "dcdeb606fb5d", "size_mb": 309 },
+    { "name": "basiclinear-web", "id": "c39d5c23808f", "size_mb": 61.5 },
+    { "name": "basiclinear-migrate", "id": "0df07e94333d", "size_mb": 309 },
+    { "name": "basiclinear-test", "id": "fafc29551264", "size_mb": 429 },
+    { "name": "basiclinear-postgres:16.10", "id": "06928dd03c45", "size_mb": 450 }
   ],
   "screenshots": [
     { "path": "docs/product/versions/v0.1.0/30-implementation/CT-6/evidence/desktop-overview.jpg", "sha256": "54415e404e827169c2ad12d41e3439e13fa70b51a2ea39812b52334348bb6b4d" },

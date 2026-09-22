@@ -9,7 +9,7 @@ research_basis: "live-web-and-confirmed-input"
 
 ## Lifecycle
 
-OpenLinear follows six Control Tower milestones: S1 Discovery, S2 Sprint Planning, S3 Implementation, S4 Testing, S5 Outcome Review, and S6 Retrospective. The stages are dependency ordered but evidence can evolve. Discovery defines what should change and why. Planning defines the accepted candidate. Implementation changes code. Testing independently establishes behavior. Outcome Review checks user and system outcomes after valid observation windows. Retrospective improves the process.
+BasicLinear follows six Control Tower milestones: S1 Discovery, S2 Sprint Planning, S3 Implementation, S4 Testing, S5 Outcome Review, and S6 Retrospective. The stages are dependency ordered but evidence can evolve. Discovery defines what should change and why. Planning defines the accepted candidate. Implementation changes code. Testing independently establishes behavior. Outcome Review checks user and system outcomes after valid observation windows. Retrospective improves the process.
 
 Each stage ends with a bounded handoff. A handoff includes accepted documents, unchanged outcome contracts, evidence references, unresolved assumptions, blockers, issue readbacks, and residual risk. A stage does not close because time elapsed or code exists.
 
@@ -25,11 +25,11 @@ The PMO corpus provides long-lived project intent. Discovery adds problem, user,
 
 The local Control Tower database remains the live issue and milestone ledger. No Markdown task mirror is created. Repository documents may reference stable `CT-n` identifiers after readback.
 
-## Quality gates
+## Quality checks
 
-Discovery requires all canonical critical-QA questions answered, material claims resolved, requirements linked to evidence and outcomes, and normalized package validation. Planning requires accepted deep-equal outcome contracts, architecture and UX decisions, risk controls, test methods, and an implementation-ready issue graph. Implementation requires focused tests and readback for each slice. Testing requires all Must requirements mapped and no unresolved critical finding. Release requires migration, restore, privacy, security, accessibility, visual, licensing, and clean-room evidence.
+Discovery records canonical critical-QA answers, material claims, requirements, evidence, outcomes, and normalized package validation. Planning records outcome contracts, architecture and UX decisions, risk controls, test methods, and an implementation-ready issue graph. Implementation records focused tests and readback for each slice. Testing maps Must requirements and critical findings. Release records migration, restore, privacy, security, accessibility, visual, licensing, and clean-room evidence through the technical audit.
 
-Warnings remain explicit residual risk. A partial answer names its owner and gap. Fail or unknown status blocks the affected handoff. Validation scripts run from the repository and produce machine-readable output.
+Warnings remain explicit residual risk. A partial answer names its owner and gap. Failed or unknown checks identify work that must be resolved before relying on that evidence; they do not create a sponsor or external-approval gate. Validation scripts run from the repository and produce machine-readable output.
 
 ## Research refresh
 

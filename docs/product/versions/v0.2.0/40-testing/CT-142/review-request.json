@@ -31,7 +31,7 @@
     "pass_meaning": "The nonsecurity UAT evidence is independently accepted.",
     "overall_status_after_pass": "yellow",
     "ct142_done_eligible": false,
-    "reason": "R-204's integrated tenant-security validation, R-219, and the security portion of P-T210 are sponsor-authorized required skips."
+    "reason": "R-204's integrated tenant-security validation, R-219, and the security portion of P-T210 are maintainer-authorized required skips."
   },
   "required_outputs": [
     "PASS or FAIL for the nonsecurity evidence only",
@@ -46,7 +46,7 @@
     "docs/product/versions/v0.2.0/40-testing/CT-142/automated-receipt.json",
     "docs/product/versions/v0.2.0/40-testing/CT-142/manual-observation.json",
     "docs/product/versions/v0.2.0/40-testing/CT-142/implementation-inputs.json",
-    "docs/product/versions/v0.2.0/40-testing/CT-142/sponsor-security-skip.json",
+    "docs/product/versions/v0.2.0/40-testing/CT-142/maintainer-security-skip.json",
     "packages/hosted/tests/ct142-nonsecurity-journey.test.ts",
     "scripts/tests/ct142-nonsecurity-gates.mjs"
   ],
@@ -395,7 +395,7 @@
       "docs/product/versions/v0.2.0/40-testing/CT-142/manual-observation.json": "0795c8427cd9ec290611212cf894d61900dc33396bda51977c18be7a7026f569",
       "docs/product/versions/v0.2.0/40-testing/CT-142/result.json": "1b8b0a88b47bc18c0d35d7a32a8a185e9cb629c83567abbc6adb6a18e25c1c5c",
       "docs/product/versions/v0.2.0/40-testing/CT-142/session.md": "c39c4a5d6f3a5ae08d39bade6cadcd2f07957454d0fd20b749c24aa052a3ba09",
-      "docs/product/versions/v0.2.0/40-testing/CT-142/sponsor-security-skip.json": "0c027cc06ceffeb9a41a937884982f919bc9ea5c480f8cd0ceee8083b61cf1ee",
+      "docs/product/versions/v0.2.0/40-testing/CT-142/maintainer-security-skip.json": "0c027cc06ceffeb9a41a937884982f919bc9ea5c480f8cd0ceee8083b61cf1ee",
       "docs/product/versions/v0.2.0/README.md": "97901a5c887e7cf79ada4cf0c7c61556ebb446dfc57933af0e4c0aefac8e6e73",
       "firebase.json": "c882cd07b0d69cd6099f48ee674d6f7650b3b5674551d909eaaf200f45d3d234",
       "firestore.rules": "0d250a49e336e2f8a9af556f4a62d49da761e4febe54400faff8d842ef1b9107",
@@ -571,10 +571,10 @@
       "scripts/tests/ct142-nonsecurity-gates.mjs": "584f5d84ac228a018dd6482f69a65c104c7dd52176ceab917f3f88c28fd60554",
       "scripts/tests/verify-clean-runtime.test.mjs": "eeeb3fc1a782f595543316e9934ecf16af81fc3260bff3b35bcc6f4abea18b2a",
       "scripts/verify-clean-runtime.mjs": "d447f179db835fd09d5f420cc9d1c3f412470e099c3a711ca4f708bf37fa412c",
-      "skills/openlinear-product-management/SKILL.md": "187b8d32e934dcac12c9bba141f261ee76c84f3fdb1b6cf08d57012b9327faf4",
-      "skills/openlinear-product-management/agents/openai.yaml": "ce506e308a769f89170303b46ec177d6646299c73489b132778dad91abcef083",
-      "skills/openlinear-product-management/references/safety.md": "44bb7339dedf5571b6a5debc7d03b7ce48e0f65851da364b5f8a5643a9f5b766",
-      "skills/openlinear-product-management/references/tool-map.md": "4a924db4e18be2fb0c9c9155b0124ebb7431293e0f6fc3553d1b5518c3c46eb2",
+      "skills/basiclinear-product-management/SKILL.md": "187b8d32e934dcac12c9bba141f261ee76c84f3fdb1b6cf08d57012b9327faf4",
+      "skills/basiclinear-product-management/agents/openai.yaml": "ce506e308a769f89170303b46ec177d6646299c73489b132778dad91abcef083",
+      "skills/basiclinear-product-management/references/safety.md": "44bb7339dedf5571b6a5debc7d03b7ce48e0f65851da364b5f8a5643a9f5b766",
+      "skills/basiclinear-product-management/references/tool-map.md": "4a924db4e18be2fb0c9c9155b0124ebb7431293e0f6fc3553d1b5518c3c46eb2",
       "tsconfig.json": "adc032271697d49f7556295ef0f7ca42ff6bb5cfc0d0a6e55522bf1b51982c76",
       "vitest.config.ts": "487d9f14b343f3af43ef2298eee1b6e80b0746d5228dd2ea6c8c11042ef8bd32",
       "vitest.firestore.config.ts": "d3679907aa3d271f218c85395f82eb3125e13288fda501432214caadc3f46186"

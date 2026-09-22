@@ -17,7 +17,7 @@
     "external_identity": false
   },
   "fixture": {
-    "format": "openlinear.database-backup",
+    "format": "basiclinear.database-backup",
     "version": 1,
     "workspaces": 2,
     "teams_per_workspace": 1,

@@ -107,7 +107,7 @@ describe('hosted invitation browser contract', () => {
     expect(source).toContain('Sign out and try another Google account');
     expect(source).toContain('invitationAcceptanceStorageKey(preview.invitationId, identity.uid)');
     expect(source).toContain('error.code === \'INVITATION_EMAIL_MISMATCH\'');
-    expect(source).not.toContain("const storageKey = 'openlinear.hosted.invitation.accept'");
+    expect(source).not.toContain("const storageKey = 'basiclinear.hosted.invitation.accept'");
     expect(source).toContain('expired:');
     expect(source).toContain('revoked:');
     expect(source).toContain('superseded:');

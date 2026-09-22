@@ -156,7 +156,7 @@ const request = {
     {command: 'npm run build', expected: 'all builds pass; Vite transforms 1,953 local and 30 hosted modules'},
     {command: 'inspect apps/web/dist/hosted.html references', expected: 'favicon, one hosted JS, and one hosted CSS resolve 3/3; no local/editor/modulepreload coupling'},
     {command: 'npm ls --omit=dev --omit=optional --all', expected: 'exit 0 with the supported direct Firestore runtime'},
-    {command: '/usr/bin/python3 skill-creator/scripts/quick_validate.py skills/openlinear-product-management', expected: 'Skill is valid!'},
+    {command: '/usr/bin/python3 skill-creator/scripts/quick_validate.py skills/basiclinear-product-management', expected: 'Skill is valid!'},
     {command: 'npm audit --offline --omit=dev --omit=optional and verify the two exact ancestry groups', expected: 'offline 0; CT-138 group 8/8 exact including .npmrc; CT-139/current-only group 7/7 exact; do not claim or retry a fresh online audit'},
     {command: 'git diff --check and parse every CT-140 JSON file', expected: 'pass'},
     {command: 'enumerate every workspace-owned input to required tests/typecheck/build/skill/emulator/evidence', expected: 'no unsealed input can alter a required result or hosted artifact'},

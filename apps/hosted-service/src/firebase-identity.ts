@@ -1,7 +1,7 @@
 import {
   HostedAuthenticationError,
   type VerifiedGoogleIdentity,
-} from '@openlinear/hosted';
+} from '@basiclinear/hosted';
 
 export interface DecodedFirebaseIdentity {
   uid?: unknown;

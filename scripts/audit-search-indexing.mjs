@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 
-const origin = 'https://openlinear.qiaosun.me';
+const origin = 'https://basiclinear.qiaosun.me';
 const results = [];
 async function inspect(path, options = {}) {
   const url = new URL(path, origin);
@@ -51,11 +51,12 @@ const checks = [
     assert.match(text, /<meta name="robots" content="noindex/, path);
     assert.doesNotMatch(text, /<h1[^>]*>A little less overhead\./, path);
   }),
-  ...['https://openlinear-gray.vercel.app/', 'https://openlinear-development.vercel.app/'].map(async url => {
-    const { response, headers } = await inspect(url);
-    assert.equal(response.status, 200, url);
-    assert.match(headers['x-robots-tag'] ?? '', /noindex/, url);
-  }),
+  (async () => {
+    const legacyOrigin = 'https://openlinear.qiaosun.me/';
+    const { response, headers } = await inspect(legacyOrigin);
+    assert.equal(response.status, 308, legacyOrigin);
+    assert.equal(headers.location, `${origin}/`, legacyOrigin);
+  })(),
   (async () => {
     const { response, headers } = await inspect('/homepage.html');
     assert.equal(response.status, 308);

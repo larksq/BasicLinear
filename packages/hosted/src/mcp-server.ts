@@ -30,7 +30,7 @@ import {
 } from './project-management-service.js';
 import {WorkspaceAuthorizationError} from './workspace-authorization.js';
 
-export const mcpServerName = 'openlinear-product-management' as const;
+export const mcpServerName = 'basiclinear-product-management' as const;
 export const mcpServerVersion = '0.2.0' as const;
 export const mcpStandardProtocolVersion = '2025-06-18' as const;
 export const mcpJsonSchemaDialect = 'https://json-schema.org/draft/2020-12/schema' as const;
@@ -149,7 +149,7 @@ const stringSchema = (
 
 const workspaceProperty = {
   ...stringSchema(3, 128, {pattern: workspacePattern}),
-  description: 'Explicit OpenLinear workspace identifier. It must match the OAuth grant.',
+  description: 'Explicit BasicLinear workspace identifier. It must match the OAuth grant.',
   'x-mcp-header': 'Workspace-Id',
 };
 const idempotencyProperty = stringSchema(16, 160, {
@@ -814,7 +814,7 @@ function writeJson(
     'cache-control': 'no-store',
     'content-type': 'application/json; charset=utf-8',
     'x-content-type-options': 'nosniff',
-    'x-openlinear-request-id': correlationId,
+    'x-basiclinear-request-id': correlationId,
     ...extraHeaders,
   });
   response.end(JSON.stringify(body));
@@ -829,7 +829,7 @@ function writeMetadata(
     'cache-control': 'public, max-age=3600',
     'content-type': 'application/json; charset=utf-8',
     'x-content-type-options': 'nosniff',
-    'x-openlinear-request-id': correlationId,
+    'x-basiclinear-request-id': correlationId,
   });
   response.end(JSON.stringify(body));
 }
@@ -1414,7 +1414,7 @@ async function handleOAuthRoute(
           : await options.oauthService.authorizationSelectionUri(authorizationInput);
         response.writeHead(302, {
           'cache-control': 'no-store', location,
-          'x-content-type-options': 'nosniff', 'x-openlinear-request-id': correlationId,
+          'x-content-type-options': 'nosniff', 'x-basiclinear-request-id': correlationId,
         });
         response.end();
       } catch (error) {
@@ -1503,7 +1503,7 @@ async function handleOAuthRoute(
         await options.oauthService.revokeToken({token: form.get('token') ?? '', clientId: form.get('client_id') ?? ''});
         response.writeHead(200, {
           'cache-control': 'no-store', 'content-length': '0', 'x-content-type-options': 'nosniff',
-          'x-openlinear-request-id': correlationId,
+          'x-basiclinear-request-id': correlationId,
         });
         response.end();
       } catch (error) {
@@ -1556,7 +1556,7 @@ export function createMcpHttpHandler(options: McpHttpHandlerOptions): McpHttpHan
         response.writeHead(202, {
           'cache-control': 'no-store', 'content-length': '0',
           'mcp-protocol-version': mcpStandardProtocolVersion,
-          'x-content-type-options': 'nosniff', 'x-openlinear-request-id': correlationId,
+          'x-content-type-options': 'nosniff', 'x-basiclinear-request-id': correlationId,
         });
         response.end();
         return true;
@@ -1587,7 +1587,7 @@ export function createMcpHttpHandler(options: McpHttpHandlerOptions): McpHttpHan
           jsonrpc: '2.0', id: initialize.id, result: {
             protocolVersion: mcpStandardProtocolVersion,
             capabilities: {tools: {listChanged: false}},
-            serverInfo: {name: mcpServerName, title: 'OpenLinear product management', version: mcpServerVersion},
+            serverInfo: {name: mcpServerName, title: 'BasicLinear product management', version: mcpServerVersion},
             instructions: `Operate only the OAuth-authorized workspace ${grant.workspaceId}. Read before writing, preserve revision and idempotency keys, and confirm destructive operations.`,
           },
         }, correlationId, {'mcp-protocol-version': mcpStandardProtocolVersion});
@@ -1684,7 +1684,7 @@ export function createMcpHttpHandler(options: McpHttpHandlerOptions): McpHttpHan
       response.writeHead(200, {
         'cache-control': 'no-store', 'content-type': 'text/event-stream; charset=utf-8',
         'x-accel-buffering': 'no', 'x-content-type-options': 'nosniff',
-        'x-openlinear-request-id': correlationId,
+        'x-basiclinear-request-id': correlationId,
       });
       response.flushHeaders();
       await nextTurn();

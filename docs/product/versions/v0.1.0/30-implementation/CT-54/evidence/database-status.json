@@ -5,9 +5,9 @@
     "docker_desktop": "4.15.0",
     "docker_engine": "20.10.21",
     "postgresql": "16.10",
-    "postgres_image": "openlinear-postgres:16.10",
+    "postgres_image": "basiclinear-postgres:16.10",
     "architecture": "aarch64",
-    "network": "openlinear-verify",
+    "network": "basiclinear-verify",
     "network_internal": true
   },
   "source_identity": {

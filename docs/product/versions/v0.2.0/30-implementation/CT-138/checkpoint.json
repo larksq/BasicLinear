@@ -526,7 +526,7 @@
     {"name": "focused_billing_boundary", "result": "pass", "evidence": "7 files; 51 tests"},
     {"name": "official_firestore_emulator", "result": "pass", "evidence": "1 file; 6 isolation groups; clean shutdown"},
     {"name": "full_regression", "result": "pass", "evidence": "93 files; 633 tests"},
-    {"name": "workspace_typechecks", "result": "pass", "evidence": "11 workspaces enumerated; all 11 declare and pass typecheck, including @openlinear/config executable tests"},
+    {"name": "workspace_typechecks", "result": "pass", "evidence": "11 workspaces enumerated; all 11 declare and pass typecheck, including @basiclinear/config executable tests"},
     {"name": "production_build", "result": "pass", "evidence": "local 1953 modules; hosted 30 modules; 3 of 3 hosted references"},
     {"name": "supported_runtime_dependency_tree", "result": "pass", "evidence": "npm ls omit dev/optional resolved"},
     {"name": "supported_runtime_registry_audit", "result": "pass", "evidence": "fresh registry-backed audit; 0 vulnerabilities"},

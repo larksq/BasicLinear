@@ -32,14 +32,14 @@ describe('hosted MCP OAuth consent client', () => {
       oauth_workspace: 'select', response_type: 'code', client_id: `olm_client_${'2'.repeat(32)}`,
       redirect_uri: 'http://127.0.0.1:49152/callback/session', scope: 'issues:read issues:write workspace:read',
       state: 'opaque-state-value-at-least-sixteen', code_challenge: 'a'.repeat(43),
-      code_challenge_method: 'S256', resource: 'https://openlinear.example/mcp',
+      code_challenge_method: 'S256', resource: 'https://basiclinear.example/mcp',
     });
     expect(oauthWorkspaceSelectionFromSearch(`?${search.toString()}`)).toEqual({
       responseType: 'code', clientId: `olm_client_${'2'.repeat(32)}`,
       redirectUri: 'http://127.0.0.1:49152/callback/session',
       scope: 'issues:read issues:write workspace:read', state: 'opaque-state-value-at-least-sixteen',
       codeChallenge: 'a'.repeat(43), codeChallengeMethod: 'S256',
-      resource: 'https://openlinear.example/mcp',
+      resource: 'https://basiclinear.example/mcp',
     });
     search.append('scope', 'workspace:read');
     expect(oauthWorkspaceSelectionFromSearch(`?${search.toString()}`)).toBeNull();

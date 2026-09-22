@@ -7,7 +7,7 @@
 
 ## Finding
 
-OpenLinear already kept archived records recoverable in Archive and returned a revisioned record from each archive request. Individual archive actions did not expose immediate visible Undo, despite the product definition requiring undoable routine destructive work. Issue row actions announced only to assistive technology, while project and milestone actions refreshed without a named result.
+BasicLinear already kept archived records recoverable in Archive and returned a revisioned record from each archive request. Individual archive actions did not expose immediate visible Undo, despite the product definition requiring undoable routine destructive work. Issue row actions announced only to assistive technology, while project and milestone actions refreshed without a named result.
 
 ## Implementation
 

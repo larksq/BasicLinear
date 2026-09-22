@@ -6,15 +6,15 @@ import {
   hostedOperationsPolicyV1,
   MemoryHostedOperationsTelemetrySink,
   type HostedOperationsPolicy,
-} from '@openlinear/hosted';
+} from '@basiclinear/hosted';
 import { runHostedServerHandler } from '../src/server-boundary.js';
 
 function healthRequest(): IncomingMessage {
   return {
     method: 'GET',
     url: '/health/ready',
-    headers: {host: 'openlinear.test'},
-    rawHeaders: ['Host', 'openlinear.test'],
+    headers: {host: 'basiclinear.test'},
+    rawHeaders: ['Host', 'basiclinear.test'],
     socket: {remoteAddress: '203.0.113.211'},
   } as unknown as IncomingMessage;
 }

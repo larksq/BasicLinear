@@ -145,7 +145,7 @@
   "checks": [
     {
       "check_id": "CT-133-C1",
-      "command": "npm run typecheck -w @openlinear/hosted",
+      "command": "npm run typecheck -w @basiclinear/hosted",
       "status": "passed",
       "result": "TypeScript completed with zero errors."
     },
@@ -165,7 +165,7 @@
       "check_id": "CT-133-C4",
       "command": "npm run typecheck",
       "status": "passed",
-      "result": "All workspace typechecks passed, including @openlinear/hosted."
+      "result": "All workspace typechecks passed, including @basiclinear/hosted."
     },
     {
       "check_id": "CT-133-C5",

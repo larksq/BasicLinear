@@ -1,40 +1,39 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "npm run build:vercel:development",
+  "buildCommand": "npm run build:vercel:production",
   "outputDirectory": "apps/web/dist",
   "cleanUrls": false,
   "trailingSlash": false,
+  "redirects": [
+    {"source": "/", "has": [{"type": "host", "value": "openlinear.qiaosun.me"}], "destination": "https://basiclinear.qiaosun.me/", "permanent": true},
+    {"source": "/:path*", "has": [{"type": "host", "value": "openlinear.qiaosun.me"}], "destination": "https://basiclinear.qiaosun.me/:path*", "permanent": true},
+    {"source": "/homepage.html", "destination": "/", "permanent": true}
+  ],
   "rewrites": [
-    {"source": "/.well-known/:path*", "destination": "https://openlinear-hosted-api-dev-957696487111.us-central1.run.app/.well-known/:path*"},
-    {"source": "/api/:path*", "destination": "https://openlinear-hosted-api-dev-957696487111.us-central1.run.app/api/:path*"},
-    {"source": "/mcp", "destination": "https://openlinear-hosted-api-dev-957696487111.us-central1.run.app/mcp"},
-    {"source": "/oauth/:path*", "destination": "https://openlinear-hosted-api-dev-957696487111.us-central1.run.app/oauth/:path*"},
-    {"source": "/", "destination": "/hosted.html"}
+    {"source": "/.well-known/:path*", "destination": "https://openlinear-hosted-api-1073376700903.us-central1.run.app/.well-known/:path*"},
+    {"source": "/api/:path*", "destination": "https://openlinear-hosted-api-1073376700903.us-central1.run.app/api/:path*"},
+    {"source": "/mcp", "destination": "https://openlinear-hosted-api-1073376700903.us-central1.run.app/mcp"},
+    {"source": "/oauth/:path*", "destination": "https://openlinear-hosted-api-1073376700903.us-central1.run.app/oauth/:path*"},
+    {"source": "/", "has": [{"type": "query", "key": "app"}], "destination": "/hosted.html"},
+    {"source": "/", "has": [{"type": "query", "key": "billing"}], "destination": "/hosted.html"},
+    {"source": "/", "has": [{"type": "query", "key": "oauth_request"}], "destination": "/hosted.html"},
+    {"source": "/", "has": [{"type": "query", "key": "oauth_workspace"}], "destination": "/hosted.html"},
+    {"source": "/", "destination": "/homepage.html"}
   ],
   "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}
-      ]
-    },
-    {
-      "source": "/hosted.html",
-      "headers": [
-        {"key": "Cache-Control", "value": "no-cache, no-store, must-revalidate"}
-      ]
-    },
-    {
-      "source": "/",
-      "headers": [
-        {"key": "Cache-Control", "value": "no-cache, no-store, must-revalidate"}
-      ]
-    },
-    {
-      "source": "/assets/(.*)",
-      "headers": [
-        {"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}
-      ]
-    }
+    {"source": "/(.*)", "missing": [{"type": "host", "value": "basiclinear.qiaosun.me"}], "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}]},
+    {"source": "/(.*)", "has": [{"type": "query", "key": "app"}], "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}]},
+    {"source": "/(.*)", "has": [{"type": "query", "key": "billing"}], "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}]},
+    {"source": "/(.*)", "has": [{"type": "query", "key": "oauth_request"}], "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}]},
+    {"source": "/(.*)", "has": [{"type": "query", "key": "oauth_workspace"}], "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}]},
+    {"source": "/hosted.html", "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}]},
+    {"source": "/api/:path*", "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}]},
+    {"source": "/oauth/:path*", "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}]},
+    {"source": "/.well-known/:path*", "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}]},
+    {"source": "/mcp", "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}]},
+    {"source": "/homepage.html", "headers": [{"key": "Cache-Control", "value": "no-cache, no-store, must-revalidate"}]},
+    {"source": "/hosted.html", "headers": [{"key": "Cache-Control", "value": "no-cache, no-store, must-revalidate"}]},
+    {"source": "/", "headers": [{"key": "Cache-Control", "value": "no-cache, no-store, must-revalidate"}]},
+    {"source": "/assets/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]}
   ]
 }

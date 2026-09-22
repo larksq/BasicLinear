@@ -10,7 +10,7 @@ function reportContainedFailure(correlationId: string): void {
   try {
     console.error(JSON.stringify({
       severity: 'ERROR',
-      message: 'OpenLinear hosted request handler rejected unexpectedly.',
+      message: 'BasicLinear hosted request handler rejected unexpectedly.',
       component: 'hosted-server-boundary',
       correlationId,
     }));
@@ -39,7 +39,7 @@ function closeOrWriteUnavailable(response: ServerResponse, correlationId: string
       'content-length': String(Buffer.byteLength(body, 'utf8')),
       'content-type': 'application/json; charset=utf-8',
       'x-content-type-options': 'nosniff',
-      'x-openlinear-request-id': correlationId,
+      'x-basiclinear-request-id': correlationId,
     });
     response.end(body);
   } catch {

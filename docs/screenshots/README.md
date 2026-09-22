@@ -12,7 +12,9 @@ README captures, including the duplicate overview/milestones image.
 | `saved-views.jpg` | Current local build | Saved list and board configurations |
 | `issue-detail-mobile.jpg` | Current local build | Expanded properties at a mobile viewport (375 × 812 capture) |
 
-The public homepage was captured at <https://openlinear.qiaosun.me/>.
+The public homepage capture shows the BasicLinear homepage from the production
+deployment at its verified canonical origin,
+<https://basiclinear.qiaosun.me/>.
 Application screenshots use only the synthetic `team-route` fixture in
 [`scripts/serve-visual-fixture.mjs`](../../scripts/serve-visual-fixture.mjs),
 served from the current `apps/web/dist` build. They depict the **local edition**,
@@ -40,5 +42,5 @@ compositing, or generated UI.
 [`capture-manifest.json`](capture-manifest.json) records image dimensions and
 hashes, the local built-output digest, fixture digest, and capture date. The
 local build came from the modified working tree; the base Git commit alone
-does not identify those changes. Accountable asset review remains part of the
-release process.
+does not identify those changes. The release audit verifies the asset provenance
+without a separate sponsor or reviewer gate.

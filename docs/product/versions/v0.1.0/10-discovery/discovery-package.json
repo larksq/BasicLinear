@@ -132,8 +132,8 @@
     {
       "id": "E-001",
       "type": "user_note",
-      "ref": "Sponsor goal in the current Codex task, received 2026-08-19",
-      "claim_supported": "The sponsor requires a free open-source, self-hostable core Linear replacement with high interaction fidelity and local Control Tower tracking.",
+      "ref": "Maintainer goal in the current Codex task, received 2026-08-19",
+      "claim_supported": "The maintainer requires a free open-source, self-hostable core Linear replacement with high interaction fidelity and local Control Tower tracking.",
       "verification_status": "verified",
       "strength": "high",
       "critical": true
@@ -613,11 +613,11 @@
       "contract_sha256": "5d0f045b83987b7da5e5f1c861becc225085b6f42a30ebe0aa6d0eec7f86fd37",
       "kind": "outcome",
       "subject": "target_user",
-      "target_segment_or_system": "the configured technical owner completing matched core tasks in OpenLinear and the approved reference condition",
+      "target_segment_or_system": "the configured technical owner completing matched core tasks in BasicLinear and the approved reference condition",
       "expected_change": "complete the matched workflow with near-reference time and interaction cost",
       "metric": {
         "name": "median reference-relative task-time overhead",
-        "definition": "median across approved tasks of one hundred times OpenLinear median completion time divided by Linear median completion time minus one hundred",
+        "definition": "median across approved tasks of one hundred times BasicLinear median completion time divided by Linear median completion time minus one hundred",
         "unit": "percent",
         "direction": "decrease",
         "aggregation": "median",
@@ -634,7 +634,7 @@
       "target": {"operator": "<=", "value": 10},
       "measurement": {
         "method": "matched-task timing study by the configured owner with fixed viewport, start and end rules, warm-up, repetitions, and interaction-count diagnostic",
-        "source": "CT-2 benchmark worksheet and corresponding OpenLinear test-run records",
+        "source": "CT-2 benchmark worksheet and corresponding BasicLinear test-run records",
         "owner": "UX and test owners",
         "observation_window": {
           "start": "2026-09-05",

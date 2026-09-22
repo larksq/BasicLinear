@@ -37,6 +37,6 @@ Scope: current deployed development workspace compared with the user-supplied Li
 - Invite people opens a focused multi-email modal; People settings retain lifecycle management.
 - View options and all five issue-property arrows open functional, accessible menus. The Product and workspace switcher arrows also operate across their full trigger rows.
 - Chrome QA found and closed invite-modal overflow and a double-counted comment audit in the Activity badge.
-- Development real data and production readback passed on the final Cloud Run and Vercel deployments. Security/adversarial testing remained skipped by sponsor direction.
+- Development real data and production readback passed on the final Cloud Run and Vercel deployments. Security/adversarial testing remained skipped by maintainer direction.
 
 Status: resolved in implementation; `design-qa.md` concludes `final result: passed`. A separately authorized CT-143 independent review remains the next Control Tower gate.

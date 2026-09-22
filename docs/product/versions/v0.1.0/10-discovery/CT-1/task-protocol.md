@@ -4,7 +4,7 @@ This protocol measures Discovery usability and scope relevance. It does not clai
 
 ## Environment
 
-- Use the same tested OpenLinear build for every session and record its source and build identity.
+- Use the same tested BasicLinear build for every session and record its source and build identity.
 - Use a current stable desktop browser at 1440x900 or the participant's normal desktop viewport, recording the actual dimensions.
 - Create a fresh, isolated synthetic workspace for each participant.
 - Do not disclose shared credentials in the record. The moderator establishes the session before observation.

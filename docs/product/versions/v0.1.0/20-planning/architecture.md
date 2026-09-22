@@ -4,7 +4,7 @@
 
 Adopt a TypeScript npm-workspace monorepo with a React web client, a Fastify service, shared domain packages, and one embedded SQLite application file. The supported v0.1 topology is one Node 24 process bound to loopback that serves both the built web application and `/api`. Use explicit REST mutation contracts, optimistic revisions, a direct activity log, bounded scan search, and in-process change hints. Defer containers, PostgreSQL, OIDC, remote access, multi-user accounts, queues, object storage, separate search, durable outbox delivery, native shells, and multi-instance design.
 
-`CT-79` supersedes the original Docker/PostgreSQL choice after the sponsor narrowed v0.1 to personal local use. The prior implementation remains a temporary canonical-export source until `CT-80` proves a non-destructive migration.
+`CT-79` supersedes the original Docker/PostgreSQL choice after the maintainer narrowed v0.1 to personal local use. The prior implementation remains a temporary canonical-export source until `CT-80` proves a non-destructive migration.
 
 ## Repository topology
 

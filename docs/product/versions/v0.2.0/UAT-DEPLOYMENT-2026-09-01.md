@@ -18,8 +18,8 @@ Historical CT-143 review records remain historical and were not rewritten.
 
 | Environment | Cloud Run revision | Image digest | Vercel deployment | Public site |
 | --- | --- | --- | --- | --- |
-| Development | `openlinear-hosted-api-dev-00014-4mb` | `sha256:1e2bf6ea19202767db1ad46ffa73567a74ea1cc3a1c53298bc914f97fd74ba47` | `dpl_9LEyatgZNCrRnYvcADjUbsVXRz5H` | <https://openlinear-development.vercel.app> |
-| Production | `openlinear-hosted-api-00010-25m` | `sha256:1360a5543db27fd691a549fa72443dc186f144410c0fc86ba8935a8ac8a97e22` | `dpl_ByUZBAonF5SnMbZwd2ZqEq95Hw1G` | <https://openlinear-gray.vercel.app> |
+| Development | `basiclinear-hosted-api-dev-00014-4mb` | `sha256:1e2bf6ea19202767db1ad46ffa73567a74ea1cc3a1c53298bc914f97fd74ba47` | `dpl_9LEyatgZNCrRnYvcADjUbsVXRz5H` | <https://basiclinear-development.vercel.app> |
+| Production | `basiclinear-hosted-api-00010-25m` | `sha256:1360a5543db27fd691a549fa72443dc186f144410c0fc86ba8935a8ac8a97e22` | `dpl_ByUZBAonF5SnMbZwd2ZqEq95Hw1G` | <https://basiclinear-gray.vercel.app> |
 
 Both Cloud Run revisions serve 100 percent of their environment's traffic.
 The final development and production images were built separately in their isolated

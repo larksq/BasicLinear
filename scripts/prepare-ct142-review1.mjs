@@ -23,7 +23,7 @@ const additions = [
   'docs/product/versions/v0.2.0/40-testing/CT-142/manual-observation.json',
   'docs/product/versions/v0.2.0/40-testing/CT-142/result.json',
   'docs/product/versions/v0.2.0/40-testing/CT-142/session.md',
-  'docs/product/versions/v0.2.0/40-testing/CT-142/sponsor-security-skip.json',
+  'docs/product/versions/v0.2.0/40-testing/CT-142/maintainer-security-skip.json',
   'packages/hosted/tests/ct142-nonsecurity-journey.test.ts',
   'scripts/prepare-ct142-review1.mjs',
   'scripts/tests/ct142-nonsecurity-gates.mjs',

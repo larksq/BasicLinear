@@ -17,7 +17,7 @@ Replace the supported application repository path with one compact Node 24 `node
 3. Kept progress derived from issue/status records and kept search/filter/sort in TypeScript. Added no FTS, GIN, RLS, outbox, projection, container, database server, or tenant hierarchy.
 4. Added canonical export/import with explicit workspace/team/owner selection, stable identity and record metadata, selected-scope activity retention, digest comparison inside the import transaction, and temporary-file promotion without source mutation.
 5. Added online backup, integrity and foreign-key verification, durable temporary-file sync, atomic restore, regular-file and same-path guards, schema compatibility checks, and owner-only file modes.
-6. Wired the API to `OPENLINEAR_DATABASE_PATH`, added an embedded API workflow test, and added built operator commands for local health, import, export, backup, verify, and restore.
+6. Wired the API to `BASICLINEAR_DATABASE_PATH`, added an embedded API workflow test, and added built operator commands for local health, import, export, backup, verify, and restore.
 
 ## Review Corrections
 

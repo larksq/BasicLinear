@@ -11,7 +11,7 @@ import {
 } from './measurement-contract.js';
 
 export const hostedOutcomeMeasurementContractV1 = Object.freeze({
-  schemaVersion: 'openlinear.hosted-outcomes.v1',
+  schemaVersion: 'basiclinear.hosted-outcomes.v1',
   outcomes: {
     'O-201': {
       metric: 'ten-minute hosted activation rate',

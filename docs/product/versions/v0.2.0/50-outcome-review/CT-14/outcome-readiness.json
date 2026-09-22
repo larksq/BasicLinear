@@ -95,11 +95,11 @@
       "contract_sha256": "5d0f045b83987b7da5e5f1c861becc225085b6f42a30ebe0aa6d0eec7f86fd37",
       "kind": "outcome",
       "subject": "target_user",
-      "target_segment_or_system": "the configured technical owner completing matched core tasks in OpenLinear and the approved reference condition",
+      "target_segment_or_system": "the configured technical owner completing matched core tasks in BasicLinear and the approved reference condition",
       "expected_change": "complete the matched workflow with near-reference time and interaction cost",
       "metric": {
         "name": "median reference-relative task-time overhead",
-        "definition": "median across approved tasks of one hundred times OpenLinear median completion time divided by Linear median completion time minus one hundred",
+        "definition": "median across approved tasks of one hundred times BasicLinear median completion time divided by Linear median completion time minus one hundred",
         "unit": "percent",
         "direction": "decrease",
         "aggregation": "median",
@@ -119,7 +119,7 @@
       },
       "measurement": {
         "method": "matched-task timing study by the configured owner with fixed viewport, start and end rules, warm-up, repetitions, and interaction-count diagnostic",
-        "source": "CT-2 benchmark worksheet and corresponding OpenLinear test-run records",
+        "source": "CT-2 benchmark worksheet and corresponding BasicLinear test-run records",
         "owner": "UX and test owners",
         "observation_window": {
           "start": "2026-09-05",
@@ -526,7 +526,7 @@
       "kind": "outcome",
       "subject": "target_user",
       "target_segment_or_system": "eligible workspace owners whose 30-day Pro trial ends",
-      "expected_change": "choose and maintain a paid hosted subscription at the sponsor-confirmed price",
+      "expected_change": "choose and maintain a paid hosted subscription at the maintainer-confirmed price",
       "metric": {
         "name": "seven-day trial-to-paid conversion rate",
         "definition": "share of eligible workspaces activating a paid monthly or annual subscription within seven days after the 30-day trial ends",
@@ -577,7 +577,7 @@
       "assumptions": [
         "USD before applicable taxes is acceptable for launch",
         "one-user Free fallback avoids coercive data loss",
-        "the annual discount remains sponsor-approved"
+        "the annual discount remains maintainer-approved"
       ],
       "evidence_refs": [
         "E-201",
@@ -594,7 +594,7 @@
       "contract_sha256": "167bfa36eb6b8a58424b9cb417db9f1fa9aed3a7cce864f519ea5be5a8f1db1e",
       "kind": "outcome",
       "subject": "system",
-      "target_segment_or_system": "versioned OpenLinear REST and MCP product-management surfaces",
+      "target_segment_or_system": "versioned BasicLinear REST and MCP product-management surfaces",
       "expected_change": "complete canonical PM operations correctly and safely through either automation surface",
       "metric": {
         "name": "canonical automation task success rate",
@@ -758,11 +758,11 @@
         "contract_sha256": "5d0f045b83987b7da5e5f1c861becc225085b6f42a30ebe0aa6d0eec7f86fd37",
         "kind": "outcome",
         "subject": "target_user",
-        "target_segment_or_system": "the configured technical owner completing matched core tasks in OpenLinear and the approved reference condition",
+        "target_segment_or_system": "the configured technical owner completing matched core tasks in BasicLinear and the approved reference condition",
         "expected_change": "complete the matched workflow with near-reference time and interaction cost",
         "metric": {
           "name": "median reference-relative task-time overhead",
-          "definition": "median across approved tasks of one hundred times OpenLinear median completion time divided by Linear median completion time minus one hundred",
+          "definition": "median across approved tasks of one hundred times BasicLinear median completion time divided by Linear median completion time minus one hundred",
           "unit": "percent",
           "direction": "decrease",
           "aggregation": "median",
@@ -782,7 +782,7 @@
         },
         "measurement": {
           "method": "matched-task timing study by the configured owner with fixed viewport, start and end rules, warm-up, repetitions, and interaction-count diagnostic",
-          "source": "CT-2 benchmark worksheet and corresponding OpenLinear test-run records",
+          "source": "CT-2 benchmark worksheet and corresponding BasicLinear test-run records",
           "owner": "UX and test owners",
           "observation_window": {
             "start": "2026-09-05",
@@ -1255,7 +1255,7 @@
         "kind": "outcome",
         "subject": "target_user",
         "target_segment_or_system": "eligible workspace owners whose 30-day Pro trial ends",
-        "expected_change": "choose and maintain a paid hosted subscription at the sponsor-confirmed price",
+        "expected_change": "choose and maintain a paid hosted subscription at the maintainer-confirmed price",
         "metric": {
           "name": "seven-day trial-to-paid conversion rate",
           "definition": "share of eligible workspaces activating a paid monthly or annual subscription within seven days after the 30-day trial ends",
@@ -1306,7 +1306,7 @@
         "assumptions": [
           "USD before applicable taxes is acceptable for launch",
           "one-user Free fallback avoids coercive data loss",
-          "the annual discount remains sponsor-approved"
+          "the annual discount remains maintainer-approved"
         ],
         "evidence_refs": [
           "E-201",
@@ -1334,7 +1334,7 @@
         "contract_sha256": "167bfa36eb6b8a58424b9cb417db9f1fa9aed3a7cce864f519ea5be5a8f1db1e",
         "kind": "outcome",
         "subject": "system",
-        "target_segment_or_system": "versioned OpenLinear REST and MCP product-management surfaces",
+        "target_segment_or_system": "versioned BasicLinear REST and MCP product-management surfaces",
         "expected_change": "complete canonical PM operations correctly and safely through either automation surface",
         "metric": {
           "name": "canonical automation task success rate",

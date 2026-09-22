@@ -1,4 +1,4 @@
-title = "OpenLinear source and history secret scan"
+title = "BasicLinear source and history secret scan"
 
 [extend]
 useDefault = true
@@ -52,13 +52,13 @@ regexTarget = "secret"
 regexes = ['''^sk_live_rawCredentialExample123$''']
 
 [[rules]]
-id = "openlinear-personal-token"
-description = "OpenLinear personal access token"
+id = "basiclinear-personal-token"
+description = "BasicLinear personal access token"
 regex = '''\bol_pat_v1\.[a-f0-9]{32}\.[A-Za-z0-9_-]{4,171}\.[A-Za-z0-9_-]{43}\b'''
 keywords = ["ol_pat_v1."]
 
 [[rules]]
-id = "openlinear-mcp-token"
-description = "OpenLinear MCP OAuth access or refresh token"
+id = "basiclinear-mcp-token"
+description = "BasicLinear MCP OAuth access or refresh token"
 regex = '''\bolm_(?:at|rt)_[A-Za-z0-9_-]{43}\b'''
 keywords = ["olm_at_", "olm_rt_"]

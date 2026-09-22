@@ -1,4 +1,4 @@
-import type { Membership, Project, Team } from '@openlinear/contracts';
+import type { Membership, Project, Team } from '@basiclinear/contracts';
 
 export const projectViewGroupings = ['none', 'status', 'priority', 'lead', 'team'] as const;
 export type ProjectViewGrouping = typeof projectViewGroupings[number];

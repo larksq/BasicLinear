@@ -4,7 +4,7 @@ This is an engineering decision aid, not legal advice. The exact license text co
 
 ## Decision Criteria
 
-The sponsor requires a free open-source project that can be self-hosted by anyone. The differentiating license question is whether downstream hosted modifications must be offered back as source, whether copyleft is limited to particular files, or whether proprietary forks are allowed.
+The maintainer requires a free open-source project that can be self-hosted by anyone. The differentiating license question is whether downstream hosted modifications must be offered back as source, whether copyleft is limited to particular files, or whether proprietary forks are allowed.
 
 | Criterion | AGPL-3.0-only | MPL-2.0 | Apache-2.0 |
 |---|---|---|---|
@@ -17,9 +17,9 @@ The sponsor requires a free open-source project that can be self-hosted by anyon
 | Trademark permission | No general brand grant should be assumed | No general brand grant should be assumed | Explicitly excludes trademark permission except customary origin description and NOTICE reproduction |
 | Fit to stated reciprocity goal | Strongest | Partial | Weakest |
 
-## Sponsor Selection
+## Maintainer Selection
 
-The sponsor selected `AGPL-3.0-only` on 2026-08-21 rather than `AGPL-3.0-or-later`, so a future license version cannot silently change the accepted release terms. The canonical license text and all package manifests now apply the selection. A future network-accessible deployment must add a persistent in-product **Source** link and make the corresponding release source available without charge. The supported v0.1 runtime remains loopback-only.
+The maintainer selected `AGPL-3.0-only` on 2026-08-21 rather than `AGPL-3.0-or-later`, so a future license version cannot silently change the accepted release terms. The canonical license text and all package manifests now apply the selection. A future network-accessible deployment must add a persistent in-product **Source** link and make the corresponding release source available without charge. The supported v0.1 runtime remains loopback-only.
 
 AGPL was recommended because network reciprocity is a stated product value, not because the other licenses are less open source. MPL and Apache are both OSI-approved. Qualified compatibility, copyright ownership, notice, source-offer, and contribution review remains required before public release.
 

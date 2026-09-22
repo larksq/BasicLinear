@@ -1,4 +1,4 @@
-import type { Milestone, WorkflowStatus } from '@openlinear/contracts';
+import type { Milestone, WorkflowStatus } from '@basiclinear/contracts';
 
 type IssueCreateMilestone = Pick<Milestone, 'id' | 'projectId' | 'archivedAt'>;
 type IssueCreateStatus = Pick<WorkflowStatus, 'id' | 'teamId' | 'category'>;

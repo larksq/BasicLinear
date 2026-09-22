@@ -1,4 +1,4 @@
-import type { Label, UpdateLabelRequest } from '@openlinear/contracts';
+import type { Label, UpdateLabelRequest } from '@basiclinear/contracts';
 
 type LabelEditSource = Pick<Label, 'revision' | 'name' | 'color' | 'archivedAt'>;
 

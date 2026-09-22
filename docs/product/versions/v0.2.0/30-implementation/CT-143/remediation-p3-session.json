@@ -37,12 +37,12 @@
   "deployments": {
     "development": {
       "id": "dpl_2qQ9nJEyiTQobwngbMozPN7CGJ6M",
-      "url": "https://openlinear-development.vercel.app",
+      "url": "https://basiclinear-development.vercel.app",
       "ready": true
     },
     "production": {
       "id": "dpl_DXVv1pV7eijjWwAwiDdj2pLJc1Um",
-      "url": "https://openlinear-gray.vercel.app",
+      "url": "https://basiclinear-gray.vercel.app",
       "ready": true
     }
   },

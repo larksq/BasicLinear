@@ -1,8 +1,8 @@
-# OpenLinear MCP safety boundary
+# BasicLinear MCP safety boundary
 
 ## Authority and authentication
 
-- The hosted OpenLinear service is authoritative for hosted workspace data.
+- The hosted BasicLinear service is authoritative for hosted workspace data.
 - MCP uses audience-bound OAuth access tokens obtained with authorization code plus PKCE S256. REST personal access tokens are rejected at `/mcp`.
 - Access is bound to one client, user, workspace, resource, and scope set. Current active membership is checked again for protected requests.
 - Access tokens are short-lived. Refresh tokens rotate; reuse revokes the token family.

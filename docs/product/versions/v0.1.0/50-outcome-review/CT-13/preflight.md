@@ -40,7 +40,7 @@ The generated request binds the source digest and exact CT-3, CT-12, policy, lic
 The current post-contract audit remains `NOT_READY` at 7 PASS, 0 FAIL, and 7 BLOCKED. `result.json` records the exact audited source revision, file count, source-set digest, and request hashes. P-T21 has a passing implementation-owned rehearsal for exact product revision `5a33d28`, but a distinct independent qualification has not accepted that revision. The remaining rows are:
 
 - qualified CT-3 public-identity and clean-room disposition;
-- removal or qualified acceptance of the working OpenLinear final-product identity;
+- removal or qualified acceptance of the working BasicLinear final-product identity;
 - accountable third-party-notice review;
 - accountable asset-provenance review;
 - accountable public-copy review;

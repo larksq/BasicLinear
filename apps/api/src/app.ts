@@ -27,7 +27,7 @@ import {
   UpdateProjectRequestSchema,
   UpdateSavedViewRequestSchema,
   UpdateStatusRequestSchema,
-} from '@openlinear/contracts';
+} from '@basiclinear/contracts';
 import {
   archiveSavedView,
   archiveComment,
@@ -87,9 +87,9 @@ import {
   updateProject,
   updateSavedView,
   updateStatus,
-  type OpenLinearDatabase,
-} from '@openlinear/db/sqlite';
-import { AppError } from '@openlinear/domain';
+  type BasicLinearDatabase,
+} from '@basiclinear/db/sqlite';
+import { AppError } from '@basiclinear/domain';
 import { Type } from '@sinclair/typebox';
 import { Ajv } from 'ajv';
 import * as addFormats from 'ajv-formats';
@@ -225,7 +225,7 @@ const EmptyJsonObjectSchema = Type.Object({}, { additionalProperties: false });
 
 export interface BuildAppOptions {
   config: ApiConfig;
-  database?: OpenLinearDatabase;
+  database?: BasicLinearDatabase;
   logger?: boolean;
   serveWeb?: boolean;
 }
@@ -424,7 +424,7 @@ export async function buildApp(options: BuildAppOptions): Promise<FastifyInstanc
     return reply.status(ready ? 200 : 503).send({ status: ready ? 'ready' : 'unavailable' });
   });
   app.get('/api/v1/meta', async () => ({
-    data: { name: 'OpenLinear', version: '0.1.0', apiVersion: 'v1' },
+    data: { name: 'BasicLinear', version: '0.1.0', apiVersion: 'v1' },
   }));
 
   app.post(
@@ -438,10 +438,10 @@ export async function buildApp(options: BuildAppOptions): Promise<FastifyInstanc
         throw new AppError('FORBIDDEN', 'The local owner session is available only on this device.', 403);
       }
       const defaults = {
-        email: 'owner@openlinear.local',
+        email: 'owner@basiclinear.local',
         displayName: 'Owner',
-        workspaceName: 'OpenLinear',
-        workspaceSlug: 'openlinear',
+        workspaceName: 'BasicLinear',
+        workspaceSlug: 'basiclinear',
         teamName: 'Personal',
         teamKey: 'OL',
       };

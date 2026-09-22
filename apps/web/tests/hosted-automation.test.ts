@@ -14,7 +14,7 @@ const tokenView = {
   name: 'Product workflow',
   prefix: 'ol_pat_v1.11111111',
   scopes: ['projects:read', 'issues:write'],
-  audience: 'openlinear-api-v1',
+  audience: 'basiclinear-api-v1',
   createdAt: '2027-01-01T00:00:00.000Z',
   expiresAt: '2027-04-01T00:00:00.000Z',
   lastUsedAt: null,
@@ -31,9 +31,9 @@ describe('hosted automation and export client', () => {
   it('uses only same-origin browser-user routes and never puts credentials in URLs', async () => {
     const rawToken = `ol_pat_v1.${'1'.repeat(32)}.d3NfYXV0b21hdGlvbl9jbGllbnQ.${'a'.repeat(43)}`;
     const exported = {
-      mediaType: 'application/vnd.openlinear.workspace-export+json;version=1' as const,
+      mediaType: 'application/vnd.basiclinear.workspace-export+json;version=1' as const,
       workspaceId: 'ws_automation_client', sha256: 'b'.repeat(64),
-      data: {schemaVersion: 'openlinear.workspace-export.v1'},
+      data: {schemaVersion: 'basiclinear.workspace-export.v1'},
     };
     const fetcher = vi.fn<typeof fetch>()
       .mockResolvedValueOnce(response({tokens: [tokenView]}))

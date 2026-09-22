@@ -4,7 +4,7 @@
 
 Use a TypeScript monorepo with a React web client, one Node 24 service process, and one embedded SQLite application file. The process serves the built web application and API on loopback. Keep Docker, PostgreSQL, reverse proxies, external identity, queues, object storage, Redis, search services, native shells, remote access, and multi-instance topology outside v0.1.
 
-This replaces the original PostgreSQL/Docker hypothesis under sponsor direction and CT-79. The current PostgreSQL build remains only long enough to produce a canonical, read-only transfer fixture for the SQLite migration.
+This replaces the original PostgreSQL/Docker hypothesis under maintainer direction and CT-79. The current PostgreSQL build remains only long enough to produce a canonical, read-only transfer fixture for the SQLite migration.
 
 ## Domain boundary
 
@@ -46,9 +46,9 @@ Playwright screenshot comparisons run with pinned browser, fonts, viewport, seed
 
 ## Breaking assumptions
 
-- `C-009`: one technically capable owner is the supported v0.1 decision unit. Sponsor direction and CT-77 establish the boundary and workflow rank.
+- `C-009`: one technically capable owner is the supported v0.1 decision unit. Maintainer direction and CT-77 establish the boundary and workflow rank.
 - `C-010`: reference interaction cost is unknown. CT-2's historical diagnostic is not an accepted baseline.
-- `C-011`: the sponsor selected and applied `AGPL-3.0-only`; the requested OpenLinear product brand, qualified license review, and clean-room publication boundary remain unresolved under CT-3.
+- `C-011`: the maintainer selected and applied `AGPL-3.0-only`; the requested BasicLinear product brand, qualified license review, and clean-room publication boundary remain unresolved under CT-3.
 - `C-012`: the original TypeScript/PostgreSQL/Docker topology is rejected for v0.1 as disproportionate.
 - `C-013`: one loopback Node 24 process and SQLite file can preserve the accepted behavior at the personal workload. CT-80/81 implement it and CT-82 independently tests it.
 - `C-014`: Node 24 `node:sqlite` is release-candidate stability. The runtime is pinned and all driver usage stays behind a replaceable adapter.

@@ -28,7 +28,7 @@
     "remediation_ref": "docs/product/versions/v0.2.0/30-implementation/CT-143/remediation-p3-session.json"
   },
   "claim_boundary": {
-    "security_or_adversarial_testing": "skipped_by_sponsor_direction",
+    "security_or_adversarial_testing": "skipped_by_maintainer_direction",
     "provider_payment_testing": "not_performed",
     "outcomes": "pending",
     "combined_release_approval": false

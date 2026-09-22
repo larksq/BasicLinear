@@ -1,6 +1,6 @@
 # T-VALIDATE-PRICING — pricing and unit-economics checkpoint
 
-Status: partial on 2026-08-25. The deterministic cost model is complete; five target-owner comprehension sessions and production usage evidence remain pending. This memo does not change the sponsor-confirmed 30-day trial, USD $2 monthly price, or USD $12 annual price.
+Status: partial on 2026-08-25. The deterministic cost model is complete; five target-owner comprehension sessions and production usage evidence remain pending. This memo does not change the maintainer-confirmed 30-day trial, USD $2 monthly price, or USD $12 annual price.
 
 ## Recommendation
 

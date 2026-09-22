@@ -4,10 +4,10 @@
       "anonymous": false,
       "emailPassword": false,
       "googleSignIn": {
-        "oAuthBrandDisplayName": "OpenLinear Development",
+        "oAuthBrandDisplayName": "BasicLinear Development",
         "supportEmail": "larksq@gmail.com",
         "authorizedRedirectUris": [
-          "https://openlinear-development.vercel.app"
+          "https://basiclinear-development.vercel.app"
         ]
       }
     }

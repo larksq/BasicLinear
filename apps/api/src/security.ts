@@ -4,14 +4,14 @@ import {
   createSession,
   resolveSession,
   sessionAcceptsCsrfToken,
-  type OpenLinearDatabase,
-} from '@openlinear/db/sqlite';
-import { AppError } from '@openlinear/domain';
+  type BasicLinearDatabase,
+} from '@basiclinear/db/sqlite';
+import { AppError } from '@basiclinear/domain';
 import type { FastifyReply, FastifyRequest } from 'fastify';
 import type { ApiConfig } from './config.js';
 
-export const csrfRequestHeader = 'x-openlinear-csrf';
-export const csrfResponseHeader = 'x-openlinear-csrf-token';
+export const csrfRequestHeader = 'x-basiclinear-csrf';
+export const csrfResponseHeader = 'x-basiclinear-csrf-token';
 
 export interface AuthenticatedUser {
   id: string;
@@ -36,7 +36,7 @@ function opaqueToken(): string {
 }
 
 export async function issueSession(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   config: ApiConfig,
   reply: FastifyReply,
   userId: string,
@@ -60,7 +60,7 @@ export async function issueSession(
 }
 
 export async function issueCsrfToken(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   _config: ApiConfig,
   reply: FastifyReply,
   sessionToken: string,
@@ -76,7 +76,7 @@ export async function issueCsrfToken(
 }
 
 export async function requireUser(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   config: ApiConfig,
   request: FastifyRequest,
 ): Promise<AuthenticatedUser> {
@@ -88,7 +88,7 @@ export async function requireUser(
 }
 
 export async function requireCsrf(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   config: ApiConfig,
   request: FastifyRequest,
 ): Promise<void> {

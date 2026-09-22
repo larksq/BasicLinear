@@ -2,7 +2,7 @@
 
 ## Verdict
 
-`IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING`. OpenLinear now provides deterministic System, Light, and Dark selection, with a prepaint-safe persisted preference and an accessible menu contract.
+`IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING`. BasicLinear now provides deterministic System, Light, and Dark selection, with a prepaint-safe persisted preference and an accessible menu contract.
 
 ## Behavior
 

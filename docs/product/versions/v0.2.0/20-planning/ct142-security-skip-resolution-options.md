@@ -1,10 +1,10 @@
-# CT-142 sponsor resolution options for the required security skip
+# CT-142 maintainer resolution options for the required security skip
 
-Status: decision options only; no sponsor choice is inferred or applied.
+Status: decision options only; no maintainer choice is inferred or applied.
 
 ## Current evidence
 
-CT-142 independently passed the bounded nonsecurity owner/member/billing-fixture/REST/MCP journey. The sponsor directed Codex to skip security testing because the prohibited work conflicted with the active safety boundary. The structured exception is valid as a skip, but the Testing contract correctly prevents it from becoming a pass for R-204, R-219, or full P-T210.
+CT-142 independently passed the bounded nonsecurity owner/member/billing-fixture/REST/MCP journey. The maintainer directed Codex to skip security testing because the prohibited work conflicted with the active safety boundary. The structured exception is valid as a skip, but the Testing contract correctly prevents it from becoming a pass for R-204, R-219, or full P-T210.
 
 The choice below is a product/release-scope decision, not a testing convenience. Neither option allows Codex to claim a security result that was not produced.
 
@@ -22,7 +22,7 @@ Consequence: preserves the planned public paid scope and its protection claims, 
 
 ## Option B — revise v0.2 to an allowlisted verification release
 
-Use only if the sponsor intentionally narrows the release boundary rather than claiming a full public launch.
+Use only if the maintainer intentionally narrows the release boundary rather than claiming a full public launch.
 
 - Accept CT-142's independently passed nonsecurity evidence as the complete Testing gate for an allowlisted, no-charge verification release.
 - Keep Checkout, subscriptions, provider payment creation, open self-service signup, and general public multi-tenant rollout disabled.
@@ -35,8 +35,8 @@ Consequence: permits lifecycle closure for the deployed verification product whi
 
 ## Invalid option
 
-“Treat the skipped test as passed” is not available. A sponsor exception authorizes omission; it does not produce evidence, validate a guardrail, or grant security approval.
+“Treat the skipped test as passed” is not available. A maintainer exception authorizes omission; it does not produce evidence, validate a guardrail, or grant security approval.
 
-## Required sponsor record
+## Required maintainer record
 
-The sponsor must record exactly one choice in `ct142-security-skip-sponsor-decision.json` with the exact decision artifact SHA-256, decision date, actor, selected option, rationale, and accepted consequences. Until then CT-142 remains yellow and In Progress.
+The maintainer must record exactly one choice in `ct142-security-skip-maintainer-decision.json` with the exact decision artifact SHA-256, decision date, actor, selected option, rationale, and accepted consequences. Until then CT-142 remains yellow and In Progress.

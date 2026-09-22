@@ -4,13 +4,13 @@ Status: completed recommendation on 2026-08-25; implementation and client intero
 
 ## Recommendation
 
-Conditional GO for remote MCP only if `/mcp` implements the stable `2026-07-28` Streamable HTTP protocol and OAuth 2.1 resource-server flow described below. OpenLinear selects the specification's stateless, request-scoped profile: a single POST endpoint, no server-sent session identifier, and no standalone GET event stream. NO-GO for a PAT-only remote MCP launch.
+Conditional GO for remote MCP only if `/mcp` implements the stable `2026-07-28` Streamable HTTP protocol and OAuth 2.1 resource-server flow described below. BasicLinear selects the specification's stateless, request-scoped profile: a single POST endpoint, no server-sent session identifier, and no standalone GET event stream. NO-GO for a PAT-only remote MCP launch.
 
-Owner-created, hashed, scoped personal access tokens remain appropriate for `/api/v1`. They may not be treated as a substitute for discoverable MCP authorization across general clients. The MCP surface should issue audience-bound OAuth access tokens after Firebase/Google user authentication and explicit OpenLinear consent, while reusing the same workspace scopes and application service as REST.
+Owner-created, hashed, scoped personal access tokens remain appropriate for `/api/v1`. They may not be treated as a substitute for discoverable MCP authorization across general clients. The MCP surface should issue audience-bound OAuth access tokens after Firebase/Google user authentication and explicit BasicLinear consent, while reusing the same workspace scopes and application service as REST.
 
 ## Official protocol basis
 
-- Streamable HTTP `2026-07-28` supports JSON-RPC requests over POST. Clients advertise both `application/json` and `text/event-stream`; a server may answer with JSON or a request-scoped SSE stream. OpenLinear deliberately omits protocol sessions and the optional GET event stream. [MCP transports](https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/streamable-http)
+- Streamable HTTP `2026-07-28` supports JSON-RPC requests over POST. Clients advertise both `application/json` and `text/event-stream`; a server may answer with JSON or a request-scoped SSE stream. BasicLinear deliberately omits protocol sessions and the optional GET event stream. [MCP transports](https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/streamable-http)
 - Servers must validate `Origin`; an invalid supplied Origin receives HTTP 403. Authentication is required for every protected operation. [MCP Streamable HTTP security warning](https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/streamable-http#security-warning)
 - HTTP authorization uses an OAuth 2.1 resource server, OAuth Protected Resource Metadata, authorization-server discovery, PKCE S256, the OAuth `resource` parameter, and exact token audience validation. [MCP authorization](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization)
 - Server discovery and tool discovery use the stable `server/discover`, `tools/list`, and `tools/call` contracts, including required protocol/capability metadata and mirrored `Mcp-Method`/`Mcp-Name` headers. Client identity is optional but validated when supplied; server identity is returned in each successful result's `_meta`. Header/body mismatch uses `-32020`; an aligned but unsupported protocol version uses `-32022` with exact `supported` and `requested` data. [MCP server discovery](https://modelcontextprotocol.io/specification/2026-07-28/server/discover), [MCP tools](https://modelcontextprotocol.io/specification/2026-07-28/server/tools)
@@ -26,12 +26,12 @@ Owner-created, hashed, scoped personal access tokens remain appropriate for `/ap
 | Audience/resource-bound token validation | Possible as a custom convention, not discoverable | Defined by MCP/OAuth flow | Required security control |
 | Token revocation, expiry, and incremental scopes | Custom and client-specific | Standardized authorization behavior | Required |
 
-## Required OpenLinear flow
+## Required BasicLinear flow
 
 1. An MCP client connects to `https://<host>/mcp`.
-2. Unauthenticated protected requests receive HTTP 401 with appropriate resource metadata discovery; `/.well-known/oauth-protected-resource` identifies the OpenLinear MCP resource and authorization server.
-3. The client discovers Protected Resource and Authorization Server metadata, supplies the exact MCP resource parameter, uses authorization code plus PKCE S256, and shows an explicit OpenLinear consent screen with the non-unique client name plus immutable client ID, redirect URI, workspace, and requested scopes. Public clients may use bounded dynamic client registration with validated `web` or `native` `application_type`; Client ID Metadata Documents are not fetched because this release has no safe metadata-fetch service.
-4. Firebase Authentication performs Google user authentication. The OpenLinear authorization layer validates active workspace membership and owner-approved scopes before issuing a short-lived, audience-bound access token. Refresh rotation and revocation are server-owned.
+2. Unauthenticated protected requests receive HTTP 401 with appropriate resource metadata discovery; `/.well-known/oauth-protected-resource` identifies the BasicLinear MCP resource and authorization server.
+3. The client discovers Protected Resource and Authorization Server metadata, supplies the exact MCP resource parameter, uses authorization code plus PKCE S256, and shows an explicit BasicLinear consent screen with the non-unique client name plus immutable client ID, redirect URI, workspace, and requested scopes. Public clients may use bounded dynamic client registration with validated `web` or `native` `application_type`; Client ID Metadata Documents are not fetched because this release has no safe metadata-fetch service.
+4. Firebase Authentication performs Google user authentication. The BasicLinear authorization layer validates active workspace membership and owner-approved scopes before issuing a short-lived, audience-bound access token. Refresh rotation and revocation are server-owned.
 5. `/mcp` validates audience/resource, expiry, token-family state, client/user/workspace scopes, membership state, Origin, protocol version, bounded request framing, and exact request metadata on every request. It never creates or echoes an MCP session identifier. Operational abuse and rate-limit controls remain the explicit CT-141 boundary.
 6. The MCP adapter calls the same application service as REST and writes `source=mcp` audit records. It never forwards the MCP token to Firebase, Stripe, or another downstream API.
 

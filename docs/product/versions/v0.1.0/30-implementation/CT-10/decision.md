@@ -4,7 +4,7 @@ Status: accepted for the private `v0.1.0` implementation candidate.
 
 ## Canonical workspace format
 
-- Format identifier: `openlinear.workspace-export`, version `1`.
+- Format identifier: `basiclinear.workspace-export`, version `1`.
 - One export contains exactly one workspace, every referenced public user, memberships, teams, workflow statuses, projects, project resources, milestones, issue sequences, labels, issues, label links, issue relations, comments, saved views, and activity entries.
 - Password hashes, sessions, idempotency records, outbox delivery state, and derived progress are excluded. Imported new users receive a random unrecoverable credential hash and require explicit local password recovery.
 - Every record uses an explicit field allowlist. Records and collections have deterministic order. Recursive object keys are lexically normalized without changing array order.
@@ -12,7 +12,7 @@ Status: accepted for the private `v0.1.0` implementation candidate.
 
 ## Database backup format
 
-- Format identifier: `openlinear.database-backup`, version `1`.
+- Format identifier: `basiclinear.database-backup`, version `1`.
 - A backup contains all local credential hashes plus the canonical snapshot for every workspace. It deliberately excludes sessions and transient delivery/retry state.
 - Backup files are private, atomically replaced only with `--overwrite`, and created with owner-only mode `0600`.
 - `backup verify --against-current` validates the complete file first, then recomputes the current database digest under repeatable read. A changed canonical record or credential makes the backup stale.

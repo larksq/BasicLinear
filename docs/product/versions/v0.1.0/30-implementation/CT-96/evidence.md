@@ -2,7 +2,7 @@
 
 ## Verdict
 
-`IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING`. OpenLinear now provides the accepted irreversible milestone-removal boundary after recoverable archive. The exact-name, revision-checked owner action permanently removes one archived milestone while every linked active or archived issue remains in its project with a revisioned, auditable milestone detachment.
+`IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING`. BasicLinear now provides the accepted irreversible milestone-removal boundary after recoverable archive. The exact-name, revision-checked owner action permanently removes one archived milestone while every linked active or archived issue remains in its project with a revisioned, auditable milestone detachment.
 
 ## Behavior
 

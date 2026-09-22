@@ -127,7 +127,7 @@ export class OwnerBootstrapService {
       email: identity.email,
       displayName: identity.displayName,
       workspaceId,
-      workspaceName: 'OpenLinear workspace',
+      workspaceName: 'BasicLinear workspace',
       membershipId,
       role: 'owner',
       trialId,

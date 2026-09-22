@@ -1,8 +1,8 @@
-# OpenLinear v0.2.0 — Online Collaboration
+# BasicLinear v0.2.0 — Online Collaboration
 
-Version `v0.2.0` is the governed hosted-product release increment for OpenLinear. It extends the accepted local-first project-management core with Google sign-in, Firebase-hosted workspace data, a one-time 30-day Pro trial, low-cost per-seat subscriptions, basic collaboration, and external automation through a versioned API, MCP tools, and a reusable product-management skill.
+Version `v0.2.0` is the governed hosted-product release increment for BasicLinear. It extends the accepted local-first project-management core with Google sign-in, Firebase-hosted workspace data, a one-time 30-day Pro trial, low-cost per-seat subscriptions, basic collaboration, and external automation through a versioned API, MCP tools, and a reusable product-management skill.
 
-The sponsor-confirmed prices are USD $2 per active user per month and USD $12 per active user per year. Planning treats these prices as product intent, not evidence that unit economics or tax treatment are already validated.
+The maintainer-confirmed prices are USD $2 per active user per month and USD $12 per active user per year. Planning treats these prices as product intent, not evidence that unit economics or tax treatment are already validated.
 
 The release is deliberately narrow. It includes hosted workspaces, `owner` and `member` roles, email invitations, discoverable multi-team membership, one assignee per task, comments, project-management operations, and bounded in-app activity and due-time reminders. It excludes AI agents, code review, source-control workflows, real-time presence, custom roles, SSO beyond Google, SCIM, attachments, mentions, external notification delivery, enterprise administration, and cycles/sprints.
 

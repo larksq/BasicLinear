@@ -2,7 +2,7 @@
 
 ## Verdict
 
-`IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING`. OpenLinear now expresses the accepted document-width and title-scale values through shared tokens, applies the document cap only to the project Overview state, and has no CSS backdrop blur.
+`IMPLEMENTATION_COMPLETE_BROWSER_ACCEPTANCE_PENDING`. BasicLinear now expresses the accepted document-width and title-scale values through shared tokens, applies the document cap only to the project Overview state, and has no CSS backdrop blur.
 
 ## Behavior
 

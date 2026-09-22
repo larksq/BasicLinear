@@ -5,7 +5,7 @@
     "os": "Darwin 25.5.0 arm64",
     "node": "24.18.0",
     "npm": "11.16.0",
-    "data_path": "$TMPDIR/openlinear-ct81-final-runtime"
+    "data_path": "$TMPDIR/basiclinear-ct81-final-runtime"
   },
   "process": {
     "command": "node apps/api/dist/index.js",

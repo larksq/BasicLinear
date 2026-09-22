@@ -2,9 +2,9 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import { resolve } from 'node:path';
 
-export const localBuildMode = 'openlinear-local';
-export const hostedBuildMode = 'openlinear-hosted';
-export const vercelHostedBuildMode = 'openlinear-hosted-vercel';
+export const localBuildMode = 'basiclinear-local';
+export const hostedBuildMode = 'basiclinear-hosted';
+export const vercelHostedBuildMode = 'basiclinear-hosted-vercel';
 
 export default defineConfig(({ command, mode }) => {
   const localProductionBuild = command === 'build' && mode === localBuildMode;

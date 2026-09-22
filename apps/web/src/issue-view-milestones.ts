@@ -1,4 +1,4 @@
-import type { Issue, Milestone, Project } from '@openlinear/contracts';
+import type { Issue, Milestone, Project } from '@basiclinear/contracts';
 
 export interface MilestoneViewOption {
   value: string;

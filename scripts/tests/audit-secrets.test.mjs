@@ -23,7 +23,7 @@ async function write(root, path, content) {
 }
 
 async function fixture(t) {
-  const root = await mkdtemp(join(tmpdir(), 'openlinear-secret-test-'));
+  const root = await mkdtemp(join(tmpdir(), 'basiclinear-secret-test-'));
   t.after(() => rm(root, { recursive: true, force: true }));
   git(root, 'init', '-q');
   git(root, 'config', 'user.name', 'Secret Audit Fixture');
@@ -98,7 +98,7 @@ scannerTest('detects staged-only secrets and new untracked files, including test
   const report = await auditSecrets(root, { binary, config });
   assert.equal(report.status, 'FAIL');
   assert.ok(report.findings.some((finding) => finding.scope === 'index' && finding.path === 'staged.txt'));
-  assert.ok(report.findings.some((finding) => finding.scope === 'worktree' && finding.rule === 'openlinear-mcp-token'));
+  assert.ok(report.findings.some((finding) => finding.scope === 'worktree' && finding.rule === 'basiclinear-mcp-token'));
   assert.ok(report.findings.some((finding) => finding.path.endsWith('review.json')));
   assert.ok(!JSON.stringify(report).includes(credential));
   assert.ok(!JSON.stringify(report).includes(oauth));

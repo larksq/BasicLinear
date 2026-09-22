@@ -1,7 +1,7 @@
 import type {
   HostedOperationsTelemetryEvent,
   HostedOperationsTelemetrySink,
-} from '@openlinear/hosted';
+} from '@basiclinear/hosted';
 
 export class ConsoleHostedOperationsTelemetrySink implements HostedOperationsTelemetrySink {
   constructor(private readonly projectId: string | null) {}
@@ -12,7 +12,7 @@ export class ConsoleHostedOperationsTelemetrySink implements HostedOperationsTel
       : undefined;
     const entry: Record<string, unknown> = {
       severity: event.statusCode >= 500 ? 'ERROR' : event.statusCode >= 400 ? 'WARNING' : 'INFO',
-      message: 'OpenLinear hosted request completed.',
+      message: 'BasicLinear hosted request completed.',
       component: 'hosted-operations',
       ...event,
     };

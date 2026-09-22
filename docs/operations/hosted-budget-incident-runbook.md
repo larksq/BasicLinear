@@ -2,7 +2,7 @@
 
 ## Boundary
 
-This runbook covers the first OpenLinear Online candidate. Google Cloud budget notifications are alerts, not a spending cap. A `warning` or `critical` signed budget state blocks new Stripe Checkout creation in the application, but already-running infrastructure and existing subscriptions require an accountable operator response.
+This runbook covers the first BasicLinear Online candidate. Google Cloud budget notifications are alerts, not a spending cap. A `warning` or `critical` signed budget state blocks new Stripe Checkout creation in the application, but already-running infrastructure and existing subscriptions require an accountable operator response.
 
 ## Signals
 

@@ -25,8 +25,8 @@ import {proEntitlementPolicyForTests} from './fixtures/entitlement.js';
 
 const workspaceId = 'ws_mcp_transport';
 const ownerId = 'owner_mcp_transport';
-const origin = 'https://online.openlinear.test';
-const redirectUri = 'https://mcp-client.openlinear.test/callback';
+const origin = 'https://online.basiclinear.test';
+const redirectUri = 'https://mcp-client.basiclinear.test/callback';
 const verifier = 'transport-verifier-with-at-least-forty-three-safe-characters-12345';
 const challenge = createHash('sha256').update(verifier).digest('base64url');
 
@@ -141,7 +141,7 @@ function fixture() {
     whileHandling?: (request: IncomingMessage, response: ServerResponse) => Promise<void> | void,
   ): Promise<InvocationResult> => {
     const normalizedHeaders: Record<string, string | string[]> = {
-      host: 'online.openlinear.test',
+      host: 'online.basiclinear.test',
       ...(body === '' ? {} : {'content-length': String(Buffer.byteLength(body))}),
       ...headers,
     };
@@ -206,7 +206,7 @@ function fixture() {
     body = '',
   ): Promise<{status: number; headers: Record<string, string>; body: unknown}> => {
     const request = Readable.from(body === '' ? [] : [body]) as unknown as IncomingMessage;
-    Object.assign(request, {method, url: path, headers: {host: 'online.openlinear.test', ...headers}});
+    Object.assign(request, {method, url: path, headers: {host: 'online.basiclinear.test', ...headers}});
     let status = 0;
     let responseHeaders: Record<string, string> = {};
     let payload = '';
@@ -351,7 +351,7 @@ describe('MCP 2026-07-28 Streamable HTTP adapter', () => {
       jsonrpc: '2.0', id: 1, result: {
         protocolVersion: mcpStandardProtocolVersion,
         capabilities: {tools: {listChanged: false}},
-        serverInfo: {name: 'openlinear-product-management', version: '0.2.0'},
+        serverInfo: {name: 'basiclinear-product-management', version: '0.2.0'},
       },
     });
     expect((initialized.body as {result: {instructions: string}}).result.instructions).toContain(workspaceId);
@@ -464,7 +464,7 @@ describe('MCP 2026-07-28 Streamable HTTP adapter', () => {
     }, JSON.stringify({
       application_type: 'web',
       client_name: 'HTTP web OAuth client',
-      redirect_uris: ['https://web-client.openlinear.test/oauth/callback'],
+      redirect_uris: ['https://web-client.basiclinear.test/oauth/callback'],
       token_endpoint_auth_method: 'none',
       grant_types: ['authorization_code', 'refresh_token'],
       response_types: ['code'],
@@ -483,7 +483,7 @@ describe('MCP 2026-07-28 Streamable HTTP adapter', () => {
         + '"grant_types":["authorization_code","refresh_token"],"response_types":["code"]}',
       JSON.stringify({
         application_type: 'native', client_name: 'Unsafe redirect',
-        redirect_uris: ['https://user@hostile.openlinear.test/callback'], token_endpoint_auth_method: 'none',
+        redirect_uris: ['https://user@hostile.basiclinear.test/callback'], token_endpoint_auth_method: 'none',
         grant_types: ['authorization_code', 'refresh_token'], response_types: ['code'],
       }),
       JSON.stringify({
@@ -581,7 +581,7 @@ describe('MCP 2026-07-28 Streamable HTTP adapter', () => {
       jsonrpc: '2.0', id: 1,
       result: {
         resultType: 'complete', supportedVersions: [mcpProtocolVersion], capabilities: {tools: {}},
-        _meta: {'io.modelcontextprotocol/serverInfo': {name: 'openlinear-product-management', version: '0.2.0'}},
+        _meta: {'io.modelcontextprotocol/serverInfo': {name: 'basiclinear-product-management', version: '0.2.0'}},
       },
     });
     const anonymousClient = JSON.stringify({
@@ -618,7 +618,7 @@ describe('MCP 2026-07-28 Streamable HTTP adapter', () => {
         .properties.workspaceId['x-mcp-header'] === 'Workspace-Id'
     ))).toBe(true);
     expect((list.body as {result: {_meta: Record<string, unknown>}}).result._meta).toEqual({
-      'io.modelcontextprotocol/serverInfo': {name: 'openlinear-product-management', version: '0.2.0'},
+      'io.modelcontextprotocol/serverInfo': {name: 'basiclinear-product-management', version: '0.2.0'},
     });
     expect(toolResult.every((tool) => (
       (tool.inputSchema as {$schema?: string}).$schema === 'https://json-schema.org/draft/2020-12/schema'
@@ -652,7 +652,7 @@ describe('MCP 2026-07-28 Streamable HTTP adapter', () => {
       result: {
         resultType: 'complete', isError: false,
         structuredContent: {data: {name: 'MCP-created project', revision: 1}},
-        _meta: {'io.modelcontextprotocol/serverInfo': {name: 'openlinear-product-management', version: '0.2.0'}},
+        _meta: {'io.modelcontextprotocol/serverInfo': {name: 'basiclinear-product-management', version: '0.2.0'}},
       },
     });
     const projectId = ((call.body as {result: {structuredContent: {data: {id: string}}}})
