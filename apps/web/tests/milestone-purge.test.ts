@@ -1,7 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { hasCapability } from '@openlinear/domain';
+import { hasCapability } from '@basiclinear/domain';
 
 const source = (path: string) => readFile(join(process.cwd(), path), 'utf8');
 

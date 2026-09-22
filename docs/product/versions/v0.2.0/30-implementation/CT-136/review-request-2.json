@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0",
+  "stage": "implementation.independent-review-request",
+  "status": "completed_fail",
+  "review_round": 2,
+  "prepared_at": "2026-08-25T07:11:12Z",
+  "authorized_at": "2026-08-25T04:22:18.000Z",
+  "dispatched_at": "2026-08-25T07:11:12Z",
+  "completed_at": "2026-08-25T07:33:41Z",
+  "authorization": {
+    "authorized_by": "user",
+    "scope": ["CT-134", "CT-135", "CT-136", "CT-137", "CT-138", "CT-139", "CT-140", "CT-141", "CT-142"],
+    "standing": true
+  },
+  "issue": {
+    "identifier": "CT-136",
+    "stable_id": "ffae9729-d827-4d3e-ac20-6df3d95b0687",
+    "revision": 6,
+    "status": "In Progress",
+    "milestone": "S3 — Implementation",
+    "plan_id": "I-204",
+    "requirements": ["R-205", "R-206", "R-215", "R-216"],
+    "acceptance": ["P-T204"],
+    "outcomes": ["O-202", "O-204"]
+  },
+  "authority": {
+    "profile": "project-local-v0.8",
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "projection": "disabled_not_synced",
+    "predecessor": {"identifier":"CT-135","status":"Done","revision":7},
+    "checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T07-10-27-846Z-b1bc46ee-ceec-4490-94df-7e0cdde352e3.json",
+    "checkpoint_backup_sha256": "86c01fc2ff8cef5991ae0827b2a10ef0321c42a8792fff6a39493aeeacf9d5c5"
+  },
+  "independence": {
+    "required": true,
+    "primary_actor_id": "codex-primary",
+    "reviewer_must_be_distinct": true,
+    "mode": "read_only",
+    "prohibited_actions": ["editing any file", "mutating Control Tower", "creating a commit", "changing external state"],
+    "dispatch_state": "dispatched",
+    "reviewer_actor_id": "codex-subagent:/root/ct136_independent_review"
+  },
+  "prior_review": {
+    "round": 1,
+    "decision": "FAIL",
+    "completed_at": "2026-08-25T07:00:15Z",
+    "findings": [
+      {"severity":"P1","summary":"Wrong-account recovery reused a global browser idempotency key and conflicted on the correct-account retry."},
+      {"severity":"P1","summary":"A valid late resend and acceptance caused O-202 reconciliation to throw UNRECONCILED_AUDIT."},
+      {"severity":"P2","summary":"Trusted invitation and idempotency records failed open for exact temporal, path-identity, workspace, and operation invariants."},
+      {"severity":"P2","summary":"The sealed manifest omitted the direct O-202 consumer packages/hosted/src/outcome-report.ts."}
+    ],
+    "remediation": [
+      "Scope the browser acceptance key by invitation and authenticated UID, clear mismatch state, and bind server acceptance idempotency to the link digest and identity.",
+      "Associate each acceptance with the latest applicable resend window while preserving the first-invitation O-202 cohort and verifying every invitation audit.",
+      "Fail closed on exact seven-day temporal ordering, lifecycle revision/send-count, invitation-token linkage, and idempotency path/operation/outcome invariants.",
+      "Expand the sealed boundary to include packages/hosted/src/outcome-report.ts and the historical Review 1 request."
+    ]
+  },
+  "candidate": {
+    "manifest_scope": "Every CT-136 implementation, test, configuration, direct trusted dependency, historical review artifact, and pre-Review-2 evidence artifact needed to verify the invitation, membership, and O-202 integration boundary. This routing request excludes itself to avoid a self-hash.",
+    "file_count": 47,
+    "sha256_by_path": {
+      ".env.example": "a32b5a5ac05bd78d1cfa76cfe0fb8c8770feea61f4b54a3df43d3210de5f9fb9",
+      "apps/hosted-service/package.json": "8c42fed20654c0c59687e12b34baaf940aea39cde114bd25641432fe8d233f37",
+      "apps/hosted-service/src/firebase-identity.ts": "343a52a38eb928c13e9c814e43c2cafad9b52eaee0a3aeab459e2a3424b99df8",
+      "apps/hosted-service/src/hosted-config.ts": "c16bec5515146721e09252c27525fe38b9019b407915e5ac902dd68593f5ae82",
+      "apps/hosted-service/src/index.ts": "79c5c9439e71bff456d161cc568442e6c3325c6a4e354df9c142cb4e3819d808",
+      "apps/hosted-service/tests/firebase-identity.test.ts": "535da7ba21e3df87e203b5487bfa24cba7491715c986ec5f33da6988a86ec947",
+      "apps/hosted-service/tests/hosted-config.test.ts": "21dbd322861f20dd1523b33b15bf97ccc059b61c65a559d6f375fae8e9e8b1df",
+      "apps/hosted-service/tsconfig.json": "da8e5fc294f2cc905f61b463c3e663497ed45bb51e637d406901b597a5cfbc23",
+      "apps/web/hosted.html": "310362c5e2fc5a142404693dd6f547a04e07d49a70eaf789340513017e6eb781",
+      "apps/web/package.json": "fbc4da4fa4dffa72fc0b99a4165e2b2b9155708d0912abf2496df84c0aba0b7a",
+      "apps/web/src/hosted-api.ts": "32a231c03af542027a347e0d2aff7a700c3e90d5b8a3f4244f7711074b9e6389",
+      "apps/web/src/hosted-app.tsx": "fde7b549d36a45ccedee781829d9727008cdf8293f35c9d152928f1b14e209eb",
+      "apps/web/src/hosted-auth.ts": "cc3ede863d73398332120d54beb95a5ee77b3f413af72c51349706643517ded3",
+      "apps/web/src/hosted-main.tsx": "35432f3101e555e3117f5f9530c1badf3da566912a5c9eb989232df414546458",
+      "apps/web/src/hosted.css": "9cce3e7f296f1ebb3394335f05cc33c3f12382c4f5c791050c672a54ce38b5aa",
+      "apps/web/tests/hosted-foundation.test.ts": "289bc3c521019ec2f0d12832baf5c4b770673b8fa61eb4673052ce6434c82fe3",
+      "apps/web/tests/hosted-invitation.test.ts": "86e384a192cbb858f440a6a4647c2398949ed18e7e97b3ffc9211e0e71d46d5a",
+      "apps/web/vite.config.ts": "d12796f723e9dca5ca633c9bd98ce83dd624083f9c3d9ecbd5a9aefac1dff983",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/checkpoint.json": "8151edb333fe322d1d5341a4b0bfa5c90f718ff55655bba9d3d6e296a0f3a8ec",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/invitation-membership-contract.md": "8a080666fa25de3648728d1401130ae18461a269fcccd3c4433426e848d79a93",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review.md": "1756ac75e4052df426e0433435441766891b914286244f30db94ba3fa9946102",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request.json": "6a4047e8373eadf14f8c5b9e3e43bad2cf0f3f82ec87adb7a52dab2f57235129",
+      "firebase.json": "745ee50dfa4a07ee72c618e8caf9ef105f6c53898960433dd249ec4d60cb5ce9",
+      "firestore.rules": "603ac2d6863b809cb8b38479bf18db5edc8b9b3e6d019d0b8bbf533dc873b6a9",
+      "package-lock.json": "1c679619a8c3f63835bfd8546742b5ba3f5c1f4994d91dd82d419293666e90cd",
+      "package.json": "31a18c4b3728178d9bfd46324206389e155abc9e7f198a407ef1a0974bc566d2",
+      "packages/hosted/package.json": "2e23835430a5316fc4e803ae1f1ebb8d2e37fae18a807a5a51e1c09a86564c76",
+      "packages/hosted/src/firebase-invitation-repository.ts": "d4cee925fe133ee5516d89addf662e91568473d1de51bd976af100f9bf07178e",
+      "packages/hosted/src/firebase-owner-bootstrap.ts": "7d712eaf93d6b28b0e93f37677ab54c0c036eeb43a0cc1c8a7c9a8a4c7499a92",
+      "packages/hosted/src/firebase-workspace-authorization.ts": "d572ad34873cdf8e6d11fbf163a22b7a35cadaf0db380b08c247d80a55558b3e",
+      "packages/hosted/src/hosted-http.ts": "32fba3be8c275c2879bb0f6e25d393f814a05b8e48c254f971db1b3ac384c46d",
+      "packages/hosted/src/index.ts": "695764be0670a80e0c58784bdae140a75d01d2c8829f615b4f51fc45dd7dcc14",
+      "packages/hosted/src/invitation-service.ts": "ac5473440954632d5ab0ad4e96be917d1f5193cd483de0db72888281c0aee0ff",
+      "packages/hosted/src/measurement-contract.ts": "02b9dcc7e8cb696d96b9abf1b9703be8130410797d6d5cfa0470d07b18933928",
+      "packages/hosted/src/outcome-report.ts": "3a821e489d0d8b45a3ed1692a4ec196d19ae205289a781ebc2c09b9a8882d854",
+      "packages/hosted/src/owner-bootstrap.ts": "37bd722ca408c2ca52833c0b9be19175dc7da76ef2b384e250c6b34c76135bc9",
+      "packages/hosted/src/workspace-authorization.ts": "933a52389198330bc1fe640f4c4adaec9eb876210409817fade3b644b3b6ec14",
+      "packages/hosted/tests/firebase-invitation-repository.test.ts": "3fdbb015079ee98aa03f1222b654d6f3c42a0c53d72ae341ee4f02c5e46e8650",
+      "packages/hosted/tests/firestore-rules.emulator.test.ts": "1c7ea761308c0a8b9a6c081dae949e5b07752904e621c4e8ba6c9913dea6188f",
+      "packages/hosted/tests/hosted-http.test.ts": "16641a4e0c8bc71fc4be2135c3c635aa0f5e9603dac82ddb9557ca0043df24c2",
+      "packages/hosted/tests/invitation-service.test.ts": "be9ab8f3a177349231c9c899a26768a77026bacedf76f26f58c7fa985428ce5d",
+      "packages/hosted/tests/measurement.test.ts": "b179a9bc9e22f42227f9b95ff73108a42e523fed86c29e593c7aed4671628aeb",
+      "packages/hosted/tests/owner-bootstrap.test.ts": "f33967b9fb545d6fd14fbe79eccb4f413adfe5643446e86c6688a281b2b9ce95",
+      "packages/hosted/tests/workspace-authorization.test.ts": "97ec7b869b0e15435a89b82ed3dac10f1308f18d4bad4b76602fced59e9e85cb",
+      "packages/hosted/tsconfig.json": "bb8199c5c0897eb869517fd5dd95d1dc377e9222804b969aa06c851a6e8ef14e",
+      "vitest.config.ts": "487d9f14b343f3af43ef2298eee1b6e80b0746d5228dd2ea6c8c11042ef8bd32",
+      "vitest.firestore.config.ts": "d3679907aa3d271f218c85395f82eb3125e13288fda501432214caadc3f46186"
+    }
+  },
+  "required_checks": [
+    {"command":"verify all 47 candidate SHA-256 entries before and after checks","expected":"47 of 47 hashes match exactly"},
+    {"command":"npx vitest run packages/hosted/tests/invitation-service.test.ts packages/hosted/tests/measurement.test.ts packages/hosted/tests/hosted-http.test.ts packages/hosted/tests/firebase-invitation-repository.test.ts apps/hosted-service/tests/hosted-config.test.ts apps/web/tests/hosted-invitation.test.ts apps/web/tests/hosted-foundation.test.ts --config vitest.config.ts","expected":"7 files and 54 tests pass"},
+    {"command":"npm run test:hosted-rules","expected":"official Firestore emulator runs 1 file and 6 scenario groups successfully"},
+    {"command":"npm test","expected":"83 files and 554 tests pass"},
+    {"command":"npm run typecheck","expected":"all 10 workspace typechecks pass"},
+    {"command":"npm run build","expected":"hosted service plus local/hosted Vite entries build and all 7 hosted references resolve"},
+    {"command":"npm run audit:hosted-runtime","expected":"0 vulnerabilities for the supported Firestore-capable runtime profile"},
+    {"command":"git diff --check and jq validation of CT-136 JSON","expected":"no whitespace or JSON errors"}
+  ],
+  "review_questions": [
+    "Do all four Review 1 counterexamples fail to reproduce, including wrong-account/new-link acceptance recovery, valid late resend reconciliation, coordinated expiry extension, and foreign id/workspace idempotency replay without raw-token leakage?",
+    "Are terminal, revoke, resend, already-active, removed-member reactivation, concurrency, and replay transitions exact, atomic, bounded, and retry-safe under both valid and tampered ledgers?",
+    "Do list/create/resend/revoke require an active exact-workspace owner across web, REST, MCP, and personal-token principals, with pending/member/removed/foreign callers denied through CT-135 authorization?",
+    "Can any raw invitation secret appear in Firestore, audit/event/idempotency data, logs, request URLs, HTML, or owner list responses outside the one-time response and browser fragment/POST body?",
+    "Does wrong-email Google acceptance remain enumeration-safe and non-consuming while every terminal or malformed secret returns the documented safe outcome?",
+    "Do pending invitations remain outside active seat quantity, and do O-202/G-202 preserve the first-invite cohort while associating acceptance with the latest applicable resend and reconciling every audit?",
+    "Do Firestore rules keep invitation, token, idempotency, product-event, and mutation-audit collections client-private while preserving valid CT-135 membership behavior?",
+    "Does the UI preserve required owner and invitee facts, keyboard-complete controls, exact-account recovery, terminal recovery, and fragment-only link handling?",
+    "Is the expanded 47-file manifest complete for every direct invitation, membership, measurement, configuration, test, and evidence consumer, with excluded scope still absent?"
+  ],
+  "review_result": {
+    "decision": "FAIL",
+    "done_eligible": false,
+    "sealed_hashes_before": "47/47",
+    "sealed_hashes_after": "47/47",
+    "required_checks": "passed",
+    "prior_findings_closed": "4/4",
+    "findings": [
+      {
+        "severity": "P1",
+        "summary": "Acceptance sampled trusted time before the transaction, allowing a regressed or retry-stale timestamp to activate a seat while persisting acceptedAt before lastSentAt."
+      },
+      {
+        "severity": "P2",
+        "summary": "A superseded token record lacked a server-authenticated immutable binding, so re-linking it to another invitation/workspace disclosed foreign preview facts."
+      }
+    ]
+  },
+  "decision_contract": {
+    "pass": "Every manifest hash and required check passes, all four prior counterexamples are closed, no actionable P0-P3 finding remains, and the reviewer returns explicit PASS with Done eligibility limited to implementation output.",
+    "fail": "Any actionable P0-P3 correctness, security, privacy, accessibility, evidence, manifest-completeness, or scope finding returns explicit FAIL; CT-136 remains In Progress and must be remediated and resealed.",
+    "no_claims": ["P-T204 qualified", "production deployed", "legal/privacy/security approved", "billing reconciled", "public release accepted", "O-202 or O-204 achieved"]
+  },
+  "reviewer_instructions": "Operate read-only. Do not edit files or Control Tower. Verify the expanded 47-file manifest before and after checks, independently rerun every required command using only scoped emulator or registry escalation if necessary, reproduce all four Review 1 counterexamples, inspect Planning and CT-133/134/135 evidence, probe terminal/revoke/concurrency/idempotency/privacy/O-202 integration and manifest completeness, rank every actionable finding P0-P3 with exact file/line and a reproducible counterexample, and return explicit PASS or FAIL plus Done eligibility."
+}

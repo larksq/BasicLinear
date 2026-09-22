@@ -1,0 +1,205 @@
+{
+  "schema_version": "ct133-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "passed",
+  "authority": {
+    "profile": "project-local-v0.8",
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled_not_synced",
+    "linear_used": false,
+    "issue_revision": 8,
+    "issue_status": "Done",
+    "checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T03-30-43-021Z-05469708-b6fc-4955-833d-19186a33545a.json",
+    "checkpoint_backup_sha256": "6d7ca63badca9b2da22170c2ba88b91921147ec2781bcf2adb59c9be15572707"
+  },
+  "issues": [
+    {
+      "issue_id": "CT-133",
+      "stable_id": "c72158f3-a691-4e2a-94cf-91b9b037fb3d",
+      "accepted": true,
+      "blocked": false,
+      "status": "output_done",
+      "requirement_refs": ["R-203", "R-215", "R-217"],
+      "acceptance_refs": ["P-T201"],
+      "outcome_refs": ["O-201", "O-202", "O-203", "O-204"],
+      "allowed_mutation_paths": [
+        "package.json",
+        "package-lock.json",
+        "packages/hosted",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT-133-S1",
+      "actor_id": "codex-primary",
+      "issue_id": "CT-133",
+      "mode": "code_mutating",
+      "allowed_paths": [
+        "package.json",
+        "package-lock.json",
+        "packages/hosted",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133"
+      ],
+      "output_refs": [
+        "package.json",
+        "package-lock.json",
+        "packages/hosted/package.json",
+        "packages/hosted/tsconfig.json",
+        "packages/hosted/src/index.ts"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/review.md"
+      ]
+    },
+    {
+      "session_id": "CT-133-S2",
+      "actor_id": "codex-primary",
+      "issue_id": "CT-133",
+      "mode": "code_mutating",
+      "allowed_paths": [
+        "packages/hosted/src",
+        "packages/hosted/tests",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133"
+      ],
+      "output_refs": [
+        "packages/hosted/src/measurement-contract.ts"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/review.md"
+      ]
+    },
+    {
+      "session_id": "CT-133-S3",
+      "actor_id": "codex-primary",
+      "issue_id": "CT-133",
+      "mode": "code_mutating",
+      "allowed_paths": [
+        "packages/hosted/src",
+        "packages/hosted/tests",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133"
+      ],
+      "output_refs": [
+        "packages/hosted/src/measurement-contract.ts"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/review.md"
+      ]
+    },
+    {
+      "session_id": "CT-133-S4",
+      "actor_id": "codex-primary",
+      "issue_id": "CT-133",
+      "mode": "code_mutating",
+      "allowed_paths": [
+        "packages/hosted/src/outcome-report.ts",
+        "packages/hosted/tests/measurement.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133"
+      ],
+      "output_refs": [
+        "packages/hosted/src/outcome-report.ts",
+        "packages/hosted/tests/measurement.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/measurement-contract.md"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/review.md"
+      ]
+    },
+    {
+      "session_id": "CT-133-S5",
+      "actor_id": "codex-primary",
+      "issue_id": "CT-133",
+      "mode": "docs_only",
+      "allowed_paths": ["docs/product/versions/v0.2.0/30-implementation/CT-133"],
+      "output_refs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/review.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/handoff.json"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-133/review.md"
+      ]
+    }
+  ],
+  "changed_files": [
+    {"path":"package.json","issue_id":"CT-133","mutation_type":"config","ai_session_id":"CT-133-S1","risk_level":"medium","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-133/review.md","test_refs":["CT-133-C3","CT-133-C4","CT-133-C5"]},
+    {"path":"package-lock.json","issue_id":"CT-133","mutation_type":"config","ai_session_id":"CT-133-S1","risk_level":"medium","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-133/review.md","test_refs":["CT-133-C3","CT-133-C4","CT-133-C5"]},
+    {"path":"packages/hosted/package.json","issue_id":"CT-133","mutation_type":"config","ai_session_id":"CT-133-S1","risk_level":"medium","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-133/review.md","test_refs":["CT-133-C3","CT-133-C4","CT-133-C5"]},
+    {"path":"packages/hosted/tsconfig.json","issue_id":"CT-133","mutation_type":"config","ai_session_id":"CT-133-S1","risk_level":"medium","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-133/review.md","test_refs":["CT-133-C1","CT-133-C4","CT-133-C5"]},
+    {"path":"packages/hosted/src/index.ts","issue_id":"CT-133","mutation_type":"code","ai_session_id":"CT-133-S1","risk_level":"medium","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-133/review.md","test_refs":["CT-133-C1","CT-133-C2","CT-133-C3"]},
+    {"path":"packages/hosted/src/measurement-contract.ts","issue_id":"CT-133","mutation_type":"code","ai_session_id":"CT-133-S3","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-133/review.md","test_refs":["CT-133-C1","CT-133-C2","CT-133-C3"]},
+    {"path":"packages/hosted/src/outcome-report.ts","issue_id":"CT-133","mutation_type":"code","ai_session_id":"CT-133-S4","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-133/review.md","test_refs":["CT-133-C1","CT-133-C2","CT-133-C3"]},
+    {"path":"packages/hosted/tests/measurement.test.ts","issue_id":"CT-133","mutation_type":"test","ai_session_id":"CT-133-S4","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-133/review.md","test_refs":["CT-133-C2","CT-133-C3"]},
+    {"path":"docs/product/versions/v0.2.0/30-implementation/CT-133/measurement-contract.md","issue_id":"CT-133","mutation_type":"docs","ai_session_id":"CT-133-S4","risk_level":"low","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-133/review.md","test_refs":["CT-133-C6"]},
+    {"path":"docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json","issue_id":"CT-133","mutation_type":"artifact","ai_session_id":"CT-133-S5","risk_level":"low","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-133/review.md","test_refs":["CT-133-C6"]},
+    {"path":"docs/product/versions/v0.2.0/30-implementation/CT-133/review.md","issue_id":"CT-133","mutation_type":"docs","ai_session_id":"CT-133-S5","risk_level":"low","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-133/review.md","test_refs":["CT-133-C6"]},
+    {"path":"docs/product/versions/v0.2.0/30-implementation/CT-133/handoff.json","issue_id":"CT-133","mutation_type":"artifact","ai_session_id":"CT-133-S5","risk_level":"low","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-133/review.md","test_refs":["CT-133-C6"]}
+  ],
+  "checks": [
+    {"check_id":"CT-133-C1","issue_id":"CT-133","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json"},
+    {"check_id":"CT-133-C2","issue_id":"CT-133","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json"},
+    {"check_id":"CT-133-C3","issue_id":"CT-133","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json"},
+    {"check_id":"CT-133-C4","issue_id":"CT-133","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json"},
+    {"check_id":"CT-133-C5","issue_id":"CT-133","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json"},
+    {"check_id":"CT-133-C6","issue_id":"CT-133","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json"},
+    {"check_id":"CT-133-C7","issue_id":"CT-133","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json"},
+    {"check_id":"CT-133-R4","issue_id":"CT-133","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-133/review.md"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-133",
+      "status": "passed",
+      "independent": true,
+      "review_ref": "docs/product/versions/v0.2.0/30-implementation/CT-133/review.md"
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["P-T201"],
+    "changed_file_refs": [
+      "package.json",
+      "package-lock.json",
+      "packages/hosted/package.json",
+      "packages/hosted/tsconfig.json",
+      "packages/hosted/src/index.ts",
+      "packages/hosted/src/measurement-contract.ts",
+      "packages/hosted/src/outcome-report.ts",
+      "packages/hosted/tests/measurement.test.ts",
+      "docs/product/versions/v0.2.0/30-implementation/CT-133/measurement-contract.md",
+      "docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-133/review.md",
+      "docs/product/versions/v0.2.0/30-implementation/CT-133/handoff.json"
+    ],
+    "regression_areas": [
+      "event schema privacy and stable retry identity",
+      "exact event-to-audit reconciliation",
+      "outcome cohort joins and maturity tails",
+      "complete invitation-ledger date boundaries",
+      "workspace-scoped economics and automation tuple identity",
+      "prohibited agent and code-review scope"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-133/review.md"
+    ],
+    "implementation_actor_ids": ["codex-primary"],
+    "implementation_session_ids": ["CT-133-S1", "CT-133-S2", "CT-133-S3", "CT-133-S4", "CT-133-S5"]
+  },
+  "outcomes": [
+    {"outcome_id":"O-201","status":"baseline_needed"},
+    {"outcome_id":"O-202","status":"baseline_needed"},
+    {"outcome_id":"O-203","status":"baseline_needed"},
+    {"outcome_id":"O-204","status":"baseline_needed"}
+  ],
+  "blockers": [],
+  "next": {
+    "skill": "ct-implement-sprint",
+    "issue": "CT-134",
+    "scope": "Firebase Hosting, Google identity, separate authority, and idempotent one-time trial bootstrap"
+  }
+}

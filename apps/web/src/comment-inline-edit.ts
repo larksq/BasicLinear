@@ -2,8 +2,8 @@ import type {
   Comment,
   IssueRichTextDocument,
   UpdateCommentRequest,
-} from '@openlinear/contracts';
-import { normalizeIssueDocument } from '@openlinear/domain';
+} from '@basiclinear/contracts';
+import { normalizeIssueDocument } from '@basiclinear/domain';
 
 type CommentEditSource = Pick<Comment,
   'revision' | 'bodyDocument' | 'archivedAt'>;

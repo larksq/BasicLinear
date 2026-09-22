@@ -1,0 +1,139 @@
+{
+  "schema_version": "ct77-source-register-v1",
+  "retrieved_at": "2026-08-21",
+  "decision_scope": "Rank migration-critical workflow families for a v0.1 product that supports one owner in one workspace and one team while covering varied project types.",
+  "method": {
+    "discovery": "General web search through AnySearch, followed by direct verification against official publisher pages and reports.",
+    "inclusion": [
+      "Official primary publication or official report page",
+      "At least 2,000 survey respondents or large product telemetry",
+      "Published sample and coverage information sufficient to identify the represented population",
+      "A statistic relevant to work tracking, project method, information retrieval, tool consolidation, usability, security, cost, or open-source preference"
+    ],
+    "exclusion": [
+      "SEO summaries and unsourced market-size estimates",
+      "Small qualitative studies and individual interviews",
+      "Feature-presence claims without population evidence",
+      "Statistics that cannot be verified on an official publisher surface"
+    ]
+  },
+  "sources": [
+    {
+      "id": "S-77-001",
+      "evidence_ref": "E-020",
+      "publisher": "Stack Overflow",
+      "title": "2025 Developer Survey",
+      "urls": [
+        "https://survey.stackoverflow.co/2025/",
+        "https://survey.stackoverflow.co/2025/technology",
+        "https://survey.stackoverflow.co/2025/work",
+        "https://stackoverflow.co/company/press/archive/stack-overflow-2025-developer-survey/"
+      ],
+      "published": "2025-07-29",
+      "sample": "More than 49,000 respondents in 177 countries overall; relevant questions contain 8,758 to 35,897 responses.",
+      "coverage": "Professional, learning, work, personal, and school software projects; tool use, tool count, purchase criteria, and rejection criteria.",
+      "statistics_used": [
+        "Among 30,065 respondents to the collaboration-tool question, GitHub was used by 81%, Jira by 46%, and GitLab by 36%.",
+        "Among 27,378 respondents, 54% used at least six software applications or platforms for work.",
+        "Among 25,391 respondents, 65% used five or fewer tools for side or personal projects.",
+        "Among 23,603 work-project responses, security or privacy was the first-ranked rejection reason, pricing second, poor usability fourth, and time cost fifth.",
+        "Among 8,758 personal-project responses, pricing was first and security or privacy second among rejection reasons.",
+        "AI integration ranked ninth of ten endorsement attributes for both work and personal projects."
+      ],
+      "limitations": [
+        "The survey is self-selected and centered on people who code.",
+        "Tool use does not identify which workflow inside a tool is valued.",
+        "Question-level response counts differ and percentages are not a migration-intent measure."
+      ],
+      "conflict_of_interest": "Stack Overflow publishes collaboration products, but the survey data and question counts are public; vendor influence is retained as a limitation."
+    },
+    {
+      "id": "S-77-002",
+      "evidence_ref": "E-021",
+      "publisher": "Project Management Institute",
+      "title": "Pulse of the Profession 2024: The Future of Project Work",
+      "urls": [
+        "https://www.pmi.org/-/media/pmi/documents/public/pdf/learning/thought-leadership/pmi-pulse-of-the-profession-2024-report.pdf",
+        "https://www.pmi.org/about/press-media/2024/work-location-does-not-impact-effectiveness-of-project-performance"
+      ],
+      "published": "2024-02-29",
+      "fieldwork": "2023-06 through 2023-08",
+      "sample": "2,246 project professionals and 342 senior leaders worldwide.",
+      "coverage": "Government, IT, financial services, telecommunications, energy, manufacturing, healthcare, construction, and other industries across seven world regions.",
+      "statistics_used": [
+        "Respondents reporting always or often use were 43.9% predictive, 31.5% hybrid, and 24.6% agile; respondents could select more than one approach.",
+        "Hybrid use rose from 20% in 2020 to 31.5% in 2023, a 57% increase.",
+        "Seventy-six percent expected agile use and 73% expected hybrid use to increase over the following five years.",
+        "Overall reported project performance was 73.8%, with comparable results across predictive, hybrid, and agile approaches."
+      ],
+      "limitations": [
+        "The sample represents project professionals and leaders rather than only software teams or current Linear users.",
+        "Method prevalence supports a method-neutral model but does not select individual application controls."
+      ],
+      "conflict_of_interest": "PMI publishes project-management standards and credentials; the report methodology and population are disclosed."
+    },
+    {
+      "id": "S-77-003",
+      "evidence_ref": "E-022",
+      "publisher": "GitLab and Omdia",
+      "title": "2024 Global DevSecOps Report",
+      "urls": [
+        "https://about.gitlab.com/resources/developer-survey/2024/"
+      ],
+      "published": "2024",
+      "fieldwork": "2024-04",
+      "sample": "More than 5,000 software development, security, and operations professionals in 39 countries.",
+      "coverage": "DevSecOps roles and multiple industries, including public sector, financial services, telecommunications, automotive, and manufacturing.",
+      "statistics_used": [
+        "Sixty-four percent wanted to consolidate their toolchain.",
+        "Sixty-seven percent reported that their software-development lifecycle was mostly or completely automated."
+      ],
+      "limitations": [
+        "The survey is vendor-maintainered and promotes an integrated platform category.",
+        "Toolchain consolidation is not direct evidence for any single issue-tracker feature."
+      ],
+      "conflict_of_interest": "GitLab directly benefits from platform-consolidation conclusions; this source is never used alone for a priority score."
+    },
+    {
+      "id": "S-77-004",
+      "evidence_ref": "E-023",
+      "publisher": "Atlassian",
+      "title": "State of Teams 2024",
+      "urls": [
+        "https://www.atlassian.com/blog/state-of-teams-2024"
+      ],
+      "published": "2024",
+      "sample": "5,000 knowledge workers, 100 Fortune 500 executives, product data from 1 million Atlassian users, and 24 million Jira tickets.",
+      "coverage": "United States, Australia, India, Germany, and France; equal survey split across work management, IT service management, and DevOps; 60% small and medium businesses and 40% enterprise organizations.",
+      "statistics_used": [
+        "Seventy percent of knowledge workers said fewer, more specific goals would make progress easier.",
+        "Fifty-five percent found information hard to locate even when they knew relevant people.",
+        "Fifty-six percent said inconsistent planning and tracking approaches made collaboration difficult.",
+        "Fifty percent had discovered that another team was working on the same project only after work had begun.",
+        "The reported high-performing-team cohort was 1.6 times more likely to plan and track work consistently."
+      ],
+      "limitations": [
+        "The survey is vendor-maintainered and team-oriented, while v0.1 exposes one owner.",
+        "The public page does not publish enough detail to independently reproduce every cohort calculation.",
+        "Team-collaboration findings support information architecture, not multi-user scope for v0.1."
+      ],
+      "conflict_of_interest": "Atlassian sells work-management products; its findings are triangulated with Stack Overflow, PMI, and GitLab and are not treated as independent product-performance evidence."
+    }
+  ],
+  "coverage_assessment": {
+    "total_declared_survey_respondents_lower_bound": 61246,
+    "additional_product_telemetry": "1 million platform users and 24 million Jira tickets",
+    "project_types": [
+      "professional software development",
+      "personal and side software projects",
+      "work management",
+      "IT service management",
+      "DevOps",
+      "predictive projects",
+      "hybrid projects",
+      "agile projects",
+      "cross-industry projects"
+    ],
+    "non_independence_note": "Totals are descriptive lower bounds, not a pooled statistical sample; sources have different frames and may overlap."
+  }
+}

@@ -7,11 +7,11 @@ const config: ApiConfig = {
   host: '127.0.0.1',
   port: 3000,
   environment: 'test',
-  publicOrigin: 'http://openlinear.test',
-  dataDirectory: '/tmp/openlinear-owner-surface',
+  publicOrigin: 'http://basiclinear.test',
+  dataDirectory: '/tmp/basiclinear-owner-surface',
   databasePath: ':memory:',
-  backupDirectory: '/tmp/openlinear-owner-surface/backups',
-  webRoot: '/tmp/openlinear-owner-surface/web',
+  backupDirectory: '/tmp/basiclinear-owner-surface/backups',
+  webRoot: '/tmp/basiclinear-owner-surface/web',
   sessionCookieName: 'ol_local_session',
   sessionTtlSeconds: 3_600,
 };
@@ -24,8 +24,8 @@ describe('CT-78 automatic local owner surface', () => {
       app.indexOf("app.get(\n    '/api/v1/workspaces/:workspaceId/search'"),
     );
 
-    expect(route).toContain("email: 'owner@openlinear.local'");
-    expect(route).toContain("workspaceName: 'OpenLinear'");
+    expect(route).toContain("email: 'owner@basiclinear.local'");
+    expect(route).toContain("workspaceName: 'BasicLinear'");
     expect(route).toContain("teamName: 'Personal'");
     expect(route).toContain('if (!isLoopbackAddress(request.ip))');
     expect(route).toContain('await getOwnerProfile(db)');
@@ -45,7 +45,7 @@ describe('CT-78 automatic local owner surface', () => {
       url: '/api/v1/local-owner-session',
       remoteAddress: '203.0.113.8',
       headers: {
-        host: 'openlinear.test',
+        host: 'basiclinear.test',
         origin: config.publicOrigin,
         'content-type': 'application/json',
       },

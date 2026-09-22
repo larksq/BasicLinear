@@ -1,5 +1,5 @@
-import type { WorkspaceEvent } from '@openlinear/contracts';
-import { AppError } from '@openlinear/domain';
+import type { WorkspaceEvent } from '@basiclinear/contracts';
+import { AppError } from '@basiclinear/domain';
 
 const maximumCursor = 9_223_372_036_854_775_807n;
 

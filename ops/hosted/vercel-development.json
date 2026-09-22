@@ -1,0 +1,20 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build:vercel:development",
+  "outputDirectory": "apps/web/dist",
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "rewrites": [
+    {"source": "/.well-known/:path*", "destination": "https://openlinear-hosted-api-dev-957696487111.us-central1.run.app/.well-known/:path*"},
+    {"source": "/api/:path*", "destination": "https://openlinear-hosted-api-dev-957696487111.us-central1.run.app/api/:path*"},
+    {"source": "/mcp", "destination": "https://openlinear-hosted-api-dev-957696487111.us-central1.run.app/mcp"},
+    {"source": "/oauth/:path*", "destination": "https://openlinear-hosted-api-dev-957696487111.us-central1.run.app/oauth/:path*"},
+    {"source": "/", "destination": "/hosted.html"}
+  ],
+  "headers": [
+    {"source": "/(.*)", "headers": [{"key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive"}]},
+    {"source": "/hosted.html", "headers": [{"key": "Cache-Control", "value": "no-cache, no-store, must-revalidate"}]},
+    {"source": "/", "headers": [{"key": "Cache-Control", "value": "no-cache, no-store, must-revalidate"}]},
+    {"source": "/assets/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]}
+  ]
+}

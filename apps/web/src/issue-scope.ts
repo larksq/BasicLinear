@@ -1,4 +1,4 @@
-import type { IssueFilterField, IssueFilterNode, IssueViewState, Milestone } from '@openlinear/contracts';
+import type { IssueFilterField, IssueFilterNode, IssueViewState, Milestone } from '@basiclinear/contracts';
 
 export interface IssueQueryScope {
   teamId?: string;

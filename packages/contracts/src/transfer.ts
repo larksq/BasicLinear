@@ -261,7 +261,7 @@ export interface CanonicalWorkspaceSnapshotV1 {
 }
 
 export interface WorkspaceExportV1 extends CanonicalWorkspaceSnapshotV1 {
-  format: 'openlinear.workspace-export';
+  format: 'basiclinear.workspace-export';
   version: 1;
   generatedAt: string;
   source: TransferSourceV1;
@@ -282,7 +282,7 @@ export interface BackupOidcIdentityV1 {
 }
 
 export interface DatabaseBackupV1 {
-  format: 'openlinear.database-backup';
+  format: 'basiclinear.database-backup';
   version: 1;
   generatedAt: string;
   source: TransferSourceV1 & {

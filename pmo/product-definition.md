@@ -9,7 +9,7 @@ research_basis: "live-web-and-confirmed-input"
 
 ## Value proposition
 
-OpenLinear gives one technical owner an issue-and-project workspace they can own without surrendering the speed, density, and keyboard fluency that make a modern tracker useful. The value is not “a free clone.” It is a trustworthy independent system: runnable as one local process, transparent in its data model, reversible through export and backup, and refined enough for high-frequency daily use.
+BasicLinear gives one technical owner an issue-and-project workspace they can own without surrendering the speed, density, and keyboard fluency that make a modern tracker useful. The value is not “a free clone.” It is a trustworthy independent system: runnable as one local process, transparent in its data model, reversible through export and backup, and refined enough for high-frequency daily use.
 
 The first release optimizes the path from intent to owned state. The owner can capture work quickly, organize it into projects and milestones, expose status and dependencies, inspect progress, and operate the deployment without moving among disconnected modules or depending on a commercial service.
 
@@ -23,7 +23,7 @@ These jobs are recurrent and interdependent. A milestone that cannot accept issu
 
 Linear is the direct experience reference and the current substitute for teams that accept a proprietary hosted service. Plane is the strongest open-source category substitute for work items, cycles, modules, views, pages, and analytics. OpenProject provides broader enterprise planning, budgeting, time, wiki, and meeting capabilities. Taiga and Vikunja offer additional self-hosted agile and task-management paths. GitHub Projects can be sufficient when work is already centered on repositories.
 
-OpenLinear does not need to beat every alternative on feature count. It must demonstrate that a narrower core can be faster to understand, easier to self-host, and more faithful to the interaction qualities sought by the sponsor. If target users prefer a competitor after using the prototype, the project should narrow, reposition, or stop rather than masking that evidence.
+BasicLinear does not need to beat every alternative on feature count. It must demonstrate that a narrower core can be faster to understand, easier to self-host, and more faithful to the interaction qualities sought by the maintainer. If target users prefer a competitor after using the prototype, the project should narrow, reposition, or stop rather than masking that evidence.
 
 ## Differentiation
 
@@ -46,7 +46,7 @@ The clean-room boundary is itself differentiating. Reference observation produce
 
 The first release assumes a technically capable owner can run a locked Node 24 release and a desktop-first local web interface. One loopback process and one embedded SQLite file are the complete supported runtime. Docker, PostgreSQL, remote access, account login, Google/OIDC, multi-user collaboration, multi-team navigation, and presence are outside v0.1.
 
-CT-77's large-sample statistics and sensitivity analysis support the approved workflow order. Controlled benchmark tasks, independent testing, and outcome windows test the product itself; interviews are not used to choose v0.1 scope. The sponsor has selected `AGPL-3.0-only` and the Scopefold/OpenLinear identity model; qualified compatibility, public-name, and clean-room review remain required before public release. Private development proceeds under the restrictive working policy while those gates remain open.
+CT-77's large-sample statistics and sensitivity analysis support the approved workflow order. Controlled benchmark tasks, independent testing, and outcome windows test the product itself; interviews are not used to choose v0.1 scope. The maintainer has selected `AGPL-3.0-only` and the BasicLinear identity. The technical release audit verifies public identity, notices, provenance, and clean-room controls before publication.
 
 ## Evidence and sources
 

@@ -1,4 +1,4 @@
-import type { Milestone, UpdateMilestoneRequest } from '@openlinear/contracts';
+import type { Milestone, UpdateMilestoneRequest } from '@basiclinear/contracts';
 
 interface MilestoneEditSource extends Pick<Milestone,
   'revision' | 'name' | 'description' | 'targetDate' | 'archivedAt'> {}

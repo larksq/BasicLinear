@@ -21,8 +21,8 @@ import type {
   UpdateProjectRequest,
   WorkflowStatus,
   Workspace,
-} from '@openlinear/contracts';
-import { hasCapability } from '@openlinear/domain';
+} from '@basiclinear/contracts';
+import { hasCapability } from '@basiclinear/domain';
 import {
   Archive,
   AlertCircle,

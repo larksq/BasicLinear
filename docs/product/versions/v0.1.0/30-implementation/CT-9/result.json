@@ -1,0 +1,110 @@
+{
+  "schema_version": "ct9-implementation-result-v1",
+  "captured_at": "2026-08-19T20:01:22Z",
+  "verdict": "OUTPUT_DONE_FOR_CT11_CT12",
+  "issue": {
+    "identifier": "CT-9",
+    "id": "5c6dbd22-82bf-46d4-8e0a-098146b45282",
+    "start_revision": 1,
+    "implementation_revision": 2,
+    "completion_revision": 3
+  },
+  "planning_package_sha256": "d161247c9c523e004a14d6e31ebcf9d12aab9764015b312383e13a0bb851f834",
+  "source": {
+    "git_head": null,
+    "git_state": "unborn_repository",
+    "changed_files_manifest": "docs/product/versions/v0.1.0/30-implementation/CT-9/changed-files.txt",
+    "changed_files_manifest_sha256": "32ce36e3767b054c55ec04e9d4f1ba009d1a898b41503e22d9344eb45489607d",
+    "production_files_count": 18,
+    "production_files_sha256": "3f2db4908b512b2adc7c8dab494d8a08ba0b2238820bc3e72e3e6a6f3d822c0d",
+    "package_lock_sha256": "b45d7131ab518b5d6c00bc0c42c86115e59d943462b650beab831b5cfa66eaea"
+  },
+  "environment": {
+    "os": "macOS 26.5.2 arm64",
+    "node": "v24.18.0",
+    "npm": "11.16.0",
+    "chrome": "150.0.0.0",
+    "docker_engine": "20.10.21"
+  },
+  "checks": {
+    "typecheck_workspaces": 8,
+    "unit_test_files": 3,
+    "unit_tests_passed": 14,
+    "integration_test_files": 4,
+    "integration_tests_passed": 4,
+    "npm_vulnerabilities": 0,
+    "migrations_applied": 6,
+    "live_readiness_status": 200,
+    "container_restarts": 0,
+    "runtime_error_level_entries": 0,
+    "runtime_5xx_responses": 0,
+    "browser_console_warnings": 0,
+    "browser_console_errors": 0,
+    "browser_viewports": ["390x844", "768x1024", "1440x1000"],
+    "horizontal_overflow": 0,
+    "visible_controls": 71,
+    "unlabeled_visible_controls": 0,
+    "duplicate_ids": 0,
+    "heading_skips": 0,
+    "keyboard_matrix": "pass",
+    "saved_view_lifecycle": "pass",
+    "bulk_mutation_and_rollback": "pass",
+    "command_search": "pass",
+    "detail_history_and_focus": "pass",
+    "largest_javascript_chunk_kb": 481.43
+  },
+  "performance": {
+    "fixture_issues": 2002,
+    "initial_mounted_rows": 28,
+    "maximum_mounted_rows": 37,
+    "samples": 20,
+    "p50_ms": 61.9,
+    "p75_ms": 79.5,
+    "p95_ms": 141.5,
+    "max_ms": 380,
+    "p75_gate_ms": 100,
+    "mounted_row_gate": 70,
+    "temporary_rows_after_cleanup": 0
+  },
+  "contrast": {
+    "primary_white": 4.71,
+    "primary_hover_white": 5.66,
+    "muted_background": 6.49,
+    "text_background": 15.18
+  },
+  "migrations": [
+    { "name": "001_foundation.sql", "sha256": "dd1fac4916d38f072f9fd49f31d0a89ff000b9b0d5cce0d588dea1754b0e7a3b" },
+    { "name": "002_status_team_workspace_integrity.sql", "sha256": "79c55276d5be91b4b36cd6fc66135bbb9a2879e529622159f7ba3c135f911f92" },
+    { "name": "003_scope_rls_to_workspace_context.sql", "sha256": "15e41c9eff8401f6092d43b2c604633c7ac9f6cc2ba515b523648d3bd4fe256b" },
+    { "name": "004_projects_milestones.sql", "sha256": "9539e28e2ae66a1c891e68bb805e24fee2179be92d2203b823c09bd1ad623612" },
+    { "name": "005_issues_relations_comments.sql", "sha256": "0df907aa7da512925c410736dca969200568f3cd38d5ad6bc8c5b5f950019d2a" },
+    { "name": "006_views_search.sql", "sha256": "8b7944c5bf5e768c824cd9a4c6e5a2b632ac6f1fcef0d48f299f357dd2221467" }
+  ],
+  "images": [
+    { "name": "basiclinear-api:ct9-final", "id": "6f75afa2c583dc29f4c5b9d1faad9129a8509aa8bc4d2155933eebf825c8ee7c", "size_bytes": 322037789, "running": true },
+    { "name": "basiclinear-web:ct9-final", "id": "43e413340ad3c2862a9dba7b93d890d71a93996caaf1c11debbd4a1293748322", "size_bytes": 62053295, "running": true },
+    { "name": "basiclinear-test:ct9-final", "id": "932925f2824b2f4e8c5f2be4aa68a002e7b3fbfd52375cab34c953328831aef2", "size_bytes": 442618171, "running": false },
+    { "name": "basiclinear-postgres:16.10", "id": "06928dd03c4562c7740748bd022145a82db0fa73565af609c63cd396a54c2620", "size_bytes": 449935983, "running": true }
+  ],
+  "screenshots": [
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-board-desktop-1440x1000.jpg", "sha256": "4dd600f4ffb2208e9704485707d07a614d3fc9578a4200079e397cfc681501b2" },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-split-desktop-1440x1000.jpg", "sha256": "ffde53eb19b49a03d8fa69e91b2153dc9cfd1355c961011f2da79b7db5d12ccd" },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-tablet-768x1024.jpg", "sha256": "1539fa2bc20f6c97906e095218b34f0ffd345b8f7b24d9658943aeb151ba08d9" },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/issues-mobile-390x844.jpg", "sha256": "ef6b75e539f8840f642233ec82d3b8f78a3753341a5b6b1ea6e04338a586d96e" },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-9/evidence/virtualization-2002-issues-1440x1000.jpg", "sha256": "aef875c8b472995e22022e61cdc0ba7cb3bf2699e8b605ca13d143fefc753f66" }
+  ],
+  "synthetic_live_fixture": {
+    "active_issues": 2,
+    "active_saved_views": 1,
+    "activity_entries": 41,
+    "outbox_events": 41,
+    "temporary_performance_rows": 0
+  },
+  "deferred_acceptance": [
+    "CT-10 canonical export/import, backup/restore, and clean-host deployment rehearsal",
+    "CT-11 independent security, isolation, filter, search, and concurrency verification",
+    "CT-12 integrated assistive-technology, fidelity, performance, and recovery verification",
+    "CT-2 reference baseline before O-002 evaluation"
+  ],
+  "outcomes_claimed": []
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": "ct142-maintainered-exception-v1",
+  "recorded_at": "2026-08-26T03:38:56Z",
+  "decision_ref": "user-thread://2026-08-26/security-test-skip",
+  "decision": "authorize_exception",
+  "authority": "maintainer",
+  "authorized_by": "maintainer",
+  "directive": "skip the security test since violating Codex's safety policy.",
+  "reason": "The maintainer explicitly directed the Testing stage not to perform security testing because that activity was stopped by the active Codex safety boundary.",
+  "scope": {
+    "stage": "testing",
+    "issue_id": "CT-142",
+    "kind": "check",
+    "affected_ref": "CT142-SECURITY-R219"
+  },
+  "effect": {
+    "requirement_refs": ["R-204", "R-219"],
+    "acceptance_refs": ["P-T210"],
+    "overall_status_ceiling": "yellow",
+    "done_eligible": false,
+    "prohibited_claims": [
+      "R-204 integrated security qualification",
+      "R-219 passed",
+      "P-T210 fully passed",
+      "security qualification",
+      "combined release acceptance"
+    ]
+  }
+}

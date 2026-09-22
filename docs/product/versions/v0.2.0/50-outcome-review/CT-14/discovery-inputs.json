@@ -1,0 +1,39 @@
+{
+  "schema_version": "combined-discovery-outcome-inputs-v1",
+  "prepared_at": "2026-08-27T05:47:46.147Z",
+  "sources": [
+    {
+      "path": "docs/product/versions/v0.1.0/10-discovery/discovery-package.json",
+      "sha256": "61dc2f6dc797ccf25fd9d102c6a8a9791ad3197f3bd25f600292be643394a723",
+      "outcome_ids": [
+        "O-001",
+        "O-002",
+        "O-003",
+        "O-004",
+        "O-005"
+      ]
+    },
+    {
+      "path": "docs/product/versions/v0.2.0/10-discovery/discovery-package.json",
+      "sha256": "d47f179f0d7982a60f006047766e9348aa95b4f257dfe9095edd26af27ac2f50",
+      "outcome_ids": [
+        "O-201",
+        "O-202",
+        "O-203",
+        "O-204"
+      ]
+    }
+  ],
+  "outcome_count": 9,
+  "outcome_ids": [
+    "O-001",
+    "O-002",
+    "O-003",
+    "O-004",
+    "O-005",
+    "O-201",
+    "O-202",
+    "O-203",
+    "O-204"
+  ]
+}

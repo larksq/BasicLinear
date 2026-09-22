@@ -10,9 +10,9 @@ const moduleApi = require('node:module');
 const net = require('node:net');
 const tls = require('node:tls');
 
-const auditPath = process.env.OPENLINEAR_NETWORK_AUDIT_PATH;
+const auditPath = process.env.BASICLINEAR_NETWORK_AUDIT_PATH;
 if (!auditPath) {
-  throw new Error('OPENLINEAR_NETWORK_AUDIT_PATH is required by the clean-runtime guard.');
+  throw new Error('BASICLINEAR_NETWORK_AUDIT_PATH is required by the clean-runtime guard.');
 }
 
 let attempts = 0;
@@ -41,7 +41,7 @@ function denied(operation, target) {
   attempts += 1;
   writeAudit({ event: 'outbound_denied', operation, target: String(target).slice(0, 300) });
   const error = new Error(`Outbound operation denied by the clean-runtime guard: ${operation}.`);
-  error.code = 'ERR_OPENLINEAR_OUTBOUND_DENIED';
+  error.code = 'ERR_BASICLINEAR_OUTBOUND_DENIED';
   throw error;
 }
 

@@ -1,0 +1,560 @@
+{
+  "schema_version": "1.0",
+  "stage": "implementation.checkpoint",
+  "status": "done",
+  "issue": {
+    "plan_id": "I-206",
+    "local_issue_id": "CT-138",
+    "stable_id": "8db3d1ce-7a74-4dd9-86d5-f8a84d76876f",
+    "milestone": "S3 — Implementation",
+    "accepted": true,
+    "blocked": false,
+    "requirement_refs": ["R-203", "R-209", "R-210", "R-217"],
+    "acceptance_refs": ["P-T206"],
+    "outcome_refs": ["O-201", "O-203"]
+  },
+  "task_readback": {
+    "revision": 19,
+    "status": "Done",
+    "milestone": "S3 — Implementation",
+    "dependency_readback": [
+      {"issue": "CT-133", "status": "Done", "revision": 8},
+      {"issue": "CT-135", "status": "Done", "revision": 7},
+      {"issue": "CT-137", "status": "Done", "revision": 9}
+    ],
+    "projection": "disabled_not_synced",
+    "start_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T11-41-05-882Z-4c5b4c23-29f9-441c-8eaa-502db53a03f8.json",
+    "start_backup_sha256": "ad463e443811fc5767e7fc5e805e50fb3384b3711511a3d71888ead0dac7345d",
+    "start_backup_raw_file_sha256": "bfa7ffdf1280691558435ced99f20c082a75836290f881d40970783879417766",
+    "candidate_checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T13-05-24-613Z-bb51e6d5-5fa9-4fe5-b613-a50636b37d51.json",
+    "candidate_checkpoint_backup_sha256": "f4e815a96b6fc1ed760bd3012d6bc9e939c8827e1beb097ba68ddc7f6fa4ec10",
+    "candidate_checkpoint_backup_raw_file_sha256": "905d55242156a330eebfd5db26ad108bfca7c9c84750a1c4e853afb8775a96f2",
+    "review1_failure_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T13-41-09-529Z-77fcbc02-d9dc-4cfc-8709-0266d2bb4041.json",
+    "review1_failure_backup_sha256": "be73b0b49a7d2ab516daa6858e5473e84ba0a4ef96550f52810b6fd1bc3ae7f5",
+    "review1_failure_backup_raw_file_sha256": "b38fb519121915885c5c2382e483018523aab1b3ea49b15412c6108822aa7044",
+    "review2_dispatch_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T13-55-19-122Z-6752c09a-1897-4454-b7fe-8917bd6857aa.json",
+    "review2_dispatch_backup_sha256": "f6e6aa05152b1b55147dfbdacfd8692ec4437ba8f3856866fdb036773b6b4bb4",
+    "review2_dispatch_backup_raw_file_sha256": "db4abfb55468de3bc2f1eee2b1bf65a16aeb599fead1a30ee91d0d2bae5a1a4a",
+    "review2_failure_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T14-19-07-799Z-de1edfb9-95a0-4579-89f2-94aa6805582a.json",
+    "review2_failure_backup_sha256": "c33b6cf4ed6d8aeebd3bd0be38409fd65d24e8128b89b6ebc39decefd16871e3",
+    "review2_failure_backup_raw_file_sha256": "0d3021aa26296d4601627357fc9562545874521a385068c0bc2e53a15d474c95",
+    "review3_dispatch_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T14-38-30-017Z-01a7143f-d356-4ac2-bf85-0ebf637fd7f6.json",
+    "review3_dispatch_backup_sha256": "8d54483be679e789659a11422793be2062326ccf67333e80774d35a14eead7f6",
+    "review3_dispatch_backup_raw_file_sha256": "f73f22b171891208f1b1f8f15f925e338882226340ccbb67d777d196c551a834",
+    "review3_failure_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T15-06-28-198Z-f40285df-eff4-4e58-ba6f-b27b4f3f17ba.json",
+    "review3_failure_backup_sha256": "eab2d1f44c87b47b731f0fda664ab7738f6bd1aff02670ea1ce0e25b76c93910",
+    "review3_failure_backup_raw_file_sha256": "50978e91cfb12f541061ada38645f68a313d2b3d62a50e10e7a2d7d1b2bcd7a8",
+    "review4_dispatch_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T15-16-00-815Z-c32179ed-9647-4730-92cd-b5d00ebbd899.json",
+    "review4_dispatch_backup_sha256": "ea06ac1e50141ec762233707510da561e9cd4e61e2bb810f8953c06ce01eec2e",
+    "review4_dispatch_backup_raw_file_sha256": "4f070e193d10d9624d45866ec54870a2b22ab961059757a439d4672f65be3e2c",
+    "review4_failure_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T15-45-17-025Z-f9ecc2f5-e2c1-47be-94cd-83f0caf54473.json",
+    "review4_failure_backup_sha256": "1fee1f2bd4c89355b2482ccf0b848a41d889b0f712d521abc8271a43d4bdba60",
+    "review4_failure_backup_raw_file_sha256": "d179c8525b66b1424a6f50192dba4bcffb70f6155a705bb1261a992207952130",
+    "review5_dispatch_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T15-56-23-835Z-65fabebd-3a4b-4c8e-b97f-e0852cea04db.json",
+    "review5_dispatch_backup_sha256": "4a30257d062453865f9ded4f200fef2f4ba73c4192e8bece1906affa6d6661c8",
+    "review5_dispatch_backup_raw_file_sha256": "2744f521aee9061837683a8199ca2554042533f428b1d2b78d77fefb9222a420",
+    "review5_failure_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T16-22-01-353Z-53e1fb07-6786-4bd2-bd24-86b04433509d.json",
+    "review5_failure_backup_sha256": "81dfb1ff9a824c32e85b428bf7c5974ad3c8cfc496a8da4e38f498c1bf445779",
+    "review5_failure_backup_raw_file_sha256": "e2510e8645446c9a9b44c29195dfc4382be41d1e2e887758b7bd525226624c1d",
+    "review6_dispatch_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T16-26-20-466Z-cf40bf51-6621-43a5-a337-ac746ed4228c.json",
+    "review6_dispatch_backup_sha256": "8f0e029990eb394ed139c34ed80cb3dabb0ff92d41c2faf45857ad79d8295659",
+    "review6_dispatch_backup_raw_file_sha256": "c6ba03d697165fbb65c069185c8e0f3d03bca88630638c63e42881e407045260",
+    "review6_failure_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T16-49-18-355Z-83cc0728-400d-4498-9d4c-7f1e24ec79fc.json",
+    "review6_failure_backup_sha256": "b6d5db89bcfec598424dfcd38ddf660caf686046d017ae371d9f7161bf019c6f",
+    "review6_failure_backup_raw_file_sha256": "5653090791cf99bd8cfb0881a00da2df72768884b551d7e590aa49e9476005a6",
+    "review7_dispatch_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T16-50-44-271Z-d9fb6855-090a-4e61-89a3-32207b9ecefc.json",
+    "review7_dispatch_backup_sha256": "3033bddda09121491eba686372996fb34517fe000502ad7e2e7c25d93cdcf65a",
+    "review7_dispatch_backup_raw_file_sha256": "d8d6eea3b231acb08dbc5eb7e072fb845f00608c207bb94eb81855d5ac992b39",
+    "review7_failure_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T17-04-32-440Z-962a3e92-1713-493a-8dfe-efb2e053dcda.json",
+    "review7_failure_backup_sha256": "69d730d5e4953c937fac78f19a4aa15045622a200e85cd67571c341304f9bcb1",
+    "review7_failure_backup_raw_file_sha256": "94e6941b90e279290431c18355db9221d3fd2454c525ddf54a6dd519f3712ab1",
+    "review8_dispatch_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T17-07-00-057Z-9c15da54-47a5-4923-919c-b731e3c24ff8.json",
+    "review8_dispatch_backup_sha256": "9a69c3de87b0f9fc0c872c398b878b14c6f733017fb8c9f507635adb0ba61041",
+    "review8_dispatch_backup_raw_file_sha256": "29926777ff6ba1358b11cb9b4b0695eaf118884ac4c0035de515c5c42b48038f",
+    "completion_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T17-24-37-423Z-e99c1933-05d4-42ab-9eb5-6eee41a6fb39.json",
+    "completion_backup_sha256": "28a609d442f32153c15b850191afad2dafa1470c07d2fb0761e4dea9e728f24a",
+    "completion_backup_raw_file_sha256": "3e64df642859cff4d693353427ba56a4086e629d861532a681deab2f09a6381b",
+    "backup_checksum_note": "The first SHA-256 is the export package's embedded semantic checksum; raw_file_sha256 hashes the serialized JSON bytes."
+  },
+  "entry": {
+    "operating_profile": "project-local-v0.8",
+    "authority": "current user goal and standing CT-134-through-CT-142 independent-review authorization",
+    "linear_projection": "disabled_not_synced",
+    "linear_used": false,
+    "control_tower_ui_used": false
+  },
+  "sessions": [
+    {
+      "session_id": "CT-138-S1",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating",
+      "allowed_paths": [
+        ".env.example",
+        "package.json",
+        "package-lock.json",
+        "firestore.rules",
+        "packages/hosted/",
+        "apps/hosted-service/",
+        "apps/web/src/hosted-api.ts",
+        "apps/web/src/hosted-app.tsx",
+        "apps/web/src/hosted.css",
+        "apps/web/tests/hosted-billing.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-138/"
+      ]
+    },
+    {
+      "session_id": "CT-138-S2",
+      "actor_id": "codex-primary",
+      "mode": "verification_readonly",
+      "outputs": ["focused/full/emulator/typecheck/build/audit/dependency evidence"]
+    },
+    {
+      "session_id": "CT-138-S3",
+      "actor_id": "codex-primary",
+      "mode": "evidence_mutating",
+      "allowed_paths": [
+        ".control-tower/request-update-issue-138-checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-138/"
+      ]
+    },
+    {
+      "session_id": "CT-138-IR1",
+      "actor_id": "ct138-independent-review",
+      "mode": "independent_review_readonly",
+      "result": "fail",
+      "seal": "118 of 118 before and after"
+    },
+    {
+      "session_id": "CT-138-S4",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating_review1_remediation",
+      "allowed_paths": [
+        "packages/hosted/src/billing-service.ts",
+        "packages/hosted/tests/billing-service.test.ts",
+        "apps/hosted-service/src/stripe-billing.ts",
+        "apps/hosted-service/tests/stripe-billing.test.ts",
+        "apps/web/src/hosted-api.ts",
+        "apps/web/src/hosted-app.tsx",
+        "apps/web/tests/hosted-billing.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-138/"
+      ]
+    },
+    {
+      "session_id": "CT-138-S5",
+      "actor_id": "codex-primary",
+      "mode": "verification_readonly_review2_candidate",
+      "outputs": ["focused/full/emulator/typecheck/build/audit/dependency and Review 1 counterexample evidence"]
+    },
+    {
+      "session_id": "CT-138-S6",
+      "actor_id": "codex-primary",
+      "mode": "evidence_mutating_review2_seal",
+      "allowed_paths": [
+        ".control-tower/request-update-issue-138-review2-dispatch.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-138/"
+      ]
+    },
+    {
+      "session_id": "CT-138-IR2",
+      "actor_id": "ct138-independent-review",
+      "mode": "independent_review_readonly",
+      "result": "fail",
+      "seal": "119 of 119 before and after"
+    },
+    {
+      "session_id": "CT-138-S7",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating_review2_remediation",
+      "allowed_paths": [
+        "packages/hosted/src/billing-service.ts",
+        "packages/hosted/tests/billing-service.test.ts",
+        "apps/hosted-service/src/stripe-billing.ts",
+        "apps/hosted-service/tests/stripe-billing.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-138/"
+      ]
+    },
+    {
+      "session_id": "CT-138-S8",
+      "actor_id": "codex-primary",
+      "mode": "verification_readonly_review3_candidate",
+      "outputs": ["focused/full/emulator/typecheck/build/audit/dependency and Review 1/2 counterexample evidence"]
+    },
+    {
+      "session_id": "CT-138-S9",
+      "actor_id": "codex-primary",
+      "mode": "evidence_mutating_review3_seal",
+      "allowed_paths": [
+        ".control-tower/request-update-issue-138-review2-fail.json",
+        ".control-tower/request-update-issue-138-review3-dispatch.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-138/"
+      ]
+    },
+    {
+      "session_id": "CT-138-IR3",
+      "actor_id": "ct138-independent-review",
+      "mode": "independent_review_readonly",
+      "result": "fail",
+      "seal": "120 of 120 before and after"
+    },
+    {
+      "session_id": "CT-138-S10",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating_review3_remediation",
+      "allowed_paths": [
+        "packages/hosted/src/billing-service.ts",
+        "packages/hosted/tests/billing-service.test.ts",
+        "apps/hosted-service/src/stripe-billing.ts",
+        "apps/hosted-service/tests/stripe-billing.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-138/"
+      ]
+    },
+    {
+      "session_id": "CT-138-S11",
+      "actor_id": "codex-primary",
+      "mode": "verification_readonly_review4_candidate",
+      "outputs": ["focused/full/emulator/typecheck/build/audit/dependency and Review 1/2/3 counterexample evidence"]
+    },
+    {
+      "session_id": "CT-138-S12",
+      "actor_id": "codex-primary",
+      "mode": "evidence_mutating_review4_seal",
+      "allowed_paths": [
+        ".control-tower/request-update-issue-138-review3-fail.json",
+        ".control-tower/request-update-issue-138-review4-dispatch.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-138/"
+      ]
+    },
+    {
+      "session_id": "CT-138-IR4",
+      "actor_id": "ct138-independent-review",
+      "mode": "independent_review_readonly",
+      "result": "fail",
+      "seal": "121 of 121 before and after"
+    },
+    {
+      "session_id": "CT-138-S13",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating_review4_remediation",
+      "allowed_paths": [
+        "packages/hosted/src/billing-service.ts",
+        "packages/hosted/tests/billing-service.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-138/"
+      ]
+    },
+    {
+      "session_id": "CT-138-S14",
+      "actor_id": "codex-primary",
+      "mode": "verification_readonly_review5_candidate",
+      "outputs": ["focused/full/emulator/typecheck/build/audit/dependency and Review 1/2/3/4 counterexample evidence"]
+    },
+    {
+      "session_id": "CT-138-S15",
+      "actor_id": "codex-primary",
+      "mode": "evidence_mutating_review5_seal",
+      "allowed_paths": [
+        ".control-tower/request-update-issue-138-review4-fail.json",
+        ".control-tower/request-update-issue-138-review5-dispatch.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-138/"
+      ]
+    },
+    {
+      "session_id": "CT-138-IR5",
+      "actor_id": "ct138-independent-review",
+      "mode": "independent_review_readonly",
+      "result": "fail",
+      "seal": "122 of 122 before and after"
+    },
+    {
+      "session_id": "CT-138-S16",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating_review5_remediation",
+      "allowed_paths": [
+        "packages/hosted/src/billing-service.ts",
+        "packages/hosted/tests/billing-service.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-138/"
+      ]
+    },
+    {
+      "session_id": "CT-138-S17",
+      "actor_id": "codex-primary",
+      "mode": "verification_readonly_review6_candidate",
+      "outputs": ["focused/full/emulator/typecheck/build/audit/dependency and Review 1/2/3/4/5 counterexample evidence"]
+    },
+    {
+      "session_id": "CT-138-S18",
+      "actor_id": "codex-primary",
+      "mode": "evidence_mutating_review6_seal",
+      "allowed_paths": [
+        ".control-tower/request-update-issue-138-review5-fail.json",
+        ".control-tower/request-update-issue-138-review6-dispatch.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-138/"
+      ]
+    },
+    {
+      "session_id": "CT-138-IR6",
+      "actor_id": "ct138-independent-review",
+      "mode": "independent_review_readonly",
+      "result": "fail",
+      "seal": "123 of 123 before and after",
+      "finding": "P2 typecheck evidence-contract mismatch; no substantive implementation finding"
+    },
+    {
+      "session_id": "CT-138-S19",
+      "actor_id": "codex-primary",
+      "mode": "evidence_contract_remediation_review7",
+      "allowed_paths": [
+        ".control-tower/request-update-issue-138-review6-fail.json",
+        ".control-tower/request-update-issue-138-review7-dispatch.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-138/"
+      ]
+    },
+    {
+      "session_id": "CT-138-S20",
+      "actor_id": "codex-primary",
+      "mode": "verification_readonly_review7_candidate",
+      "outputs": [
+        "npm workspace enumeration proves 11 total workspaces, 10 declared typecheck scripts, and root npm run typecheck passes 10 of 10"
+      ]
+    },
+    {
+      "session_id": "CT-138-S21",
+      "actor_id": "codex-primary",
+      "mode": "evidence_mutating_review7_seal",
+      "allowed_paths": [
+        ".control-tower/request-update-issue-138-review6-fail.json",
+        ".control-tower/request-update-issue-138-review7-dispatch.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-138/"
+      ]
+    },
+    {
+      "session_id": "CT-138-IR7",
+      "actor_id": "ct138-independent-review",
+      "mode": "independent_review_readonly",
+      "result": "fail",
+      "seal": "128 of 128 before and after",
+      "finding": "two P2 config workspace typecheck/export/manifest evidence defects; no substantive billing finding"
+    },
+    {
+      "session_id": "CT-138-S22",
+      "actor_id": "codex-primary",
+      "mode": "code_and_evidence_mutating_review7_remediation",
+      "allowed_paths": [
+        "packages/config/package.json",
+        "packages/config/tsconfig.json",
+        "packages/config/typescript.json",
+        "packages/config/tests/foundation-static.test.ts",
+        ".control-tower/request-update-issue-138-review7-fail.json",
+        ".control-tower/request-update-issue-138-review8-dispatch.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-138/"
+      ]
+    },
+    {
+      "session_id": "CT-138-S23",
+      "actor_id": "codex-primary",
+      "mode": "verification_readonly_review8_candidate",
+      "outputs": [
+        "config 1 file/4 tests; focused 7/51; emulator 1/6; full 93/633; typecheck 11/11; build 1953/30; dependency tree; registry audit 0"
+      ]
+    },
+    {
+      "session_id": "CT-138-S24",
+      "actor_id": "codex-primary",
+      "mode": "evidence_mutating_review8_seal",
+      "allowed_paths": [
+        ".control-tower/request-update-issue-138-review7-fail.json",
+        ".control-tower/request-update-issue-138-review8-dispatch.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-138/"
+      ]
+    },
+    {
+      "session_id": "CT-138-IR8",
+      "actor_id": "ct138-independent-review",
+      "mode": "independent_review_readonly",
+      "result": "pass",
+      "seal": "137 of 137 before and after",
+      "severity_findings": {"P0": 0, "P1": 0, "P2": 0, "P3": 0}
+    },
+    {
+      "session_id": "CT-138-S25",
+      "actor_id": "codex-primary",
+      "mode": "evidence_and_control_tower_completion",
+      "allowed_paths": [
+        ".control-tower/request-update-issue-138-done.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-138/"
+      ],
+      "result": "revision-checked Done transition and readback at revision 19"
+    }
+  ],
+  "implementation": {
+    "outputs": [
+      "trusted billing and entitlement domain with authenticated records and exact trial chronology",
+      "Stripe Checkout/current-subscription adapter with one-workspace lock, automatic-tax validation, and explicit active-only proration",
+      "same-origin billing, Checkout, webhook, summary, and owner member-removal HTTP surfaces",
+      "transaction-time collaboration and invitation entitlement enforcement",
+      "Firestore billing repository and default-deny rules",
+      "responsive accessible billing/recovery owner UI",
+      "privacy-safe measurement and authenticated mutation-audit integration"
+    ],
+    "changed_files": [
+      ".env.example",
+      "package.json",
+      "package-lock.json",
+      "firestore.rules",
+      "apps/hosted-service/package.json",
+      "apps/hosted-service/src/hosted-config.ts",
+      "apps/hosted-service/src/index.ts",
+      "apps/hosted-service/src/stripe-billing.ts",
+      "apps/hosted-service/tests/hosted-config.test.ts",
+      "apps/hosted-service/tests/stripe-billing.test.ts",
+      "apps/web/src/hosted-api.ts",
+      "apps/web/src/hosted-app.tsx",
+      "apps/web/src/hosted.css",
+      "apps/web/tests/hosted-billing.test.ts",
+      "packages/hosted/src/billing-service.ts",
+      "packages/hosted/src/collaboration-service.ts",
+      "packages/hosted/src/firebase-billing-repository.ts",
+      "packages/hosted/src/firebase-collaboration-repository.ts",
+      "packages/hosted/src/firebase-invitation-repository.ts",
+      "packages/hosted/src/hosted-http.ts",
+      "packages/hosted/src/index.ts",
+      "packages/hosted/src/invitation-service.ts",
+      "packages/hosted/tests/billing-entitlement-integration.test.ts",
+      "packages/hosted/tests/billing-http.test.ts",
+      "packages/hosted/tests/billing-service.test.ts",
+      "packages/hosted/tests/firebase-billing-repository.test.ts",
+      "packages/hosted/tests/firebase-collaboration-repository.test.ts",
+      "packages/hosted/tests/firebase-invitation-repository.test.ts",
+      "packages/hosted/tests/firestore-rules.emulator.test.ts",
+      "packages/hosted/tests/fixtures/entitlement.ts",
+      "packages/config/package.json",
+      "packages/config/tsconfig.json",
+      "packages/config/typescript.json",
+      "packages/config/tests/foundation-static.test.ts",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/billing-entitlement-contract.md",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/checkpoint.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review.md",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review-request.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review-request-2.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review-request-3.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review-request-4.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review-request-5.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review-request-6.json"
+      ,"docs/product/versions/v0.2.0/30-implementation/CT-138/review-request-7.json"
+      ,"docs/product/versions/v0.2.0/30-implementation/CT-138/review-request-8.json"
+      ,"docs/product/versions/v0.2.0/30-implementation/CT-138/handoff.json"
+    ]
+  },
+  "review_history": [
+    {
+      "round": 1,
+      "decision": "fail",
+      "seal": "118 of 118 before and after",
+      "findings": [
+        {"severity": "P1", "id": "subscription_singularity", "status": "remediated"},
+        {"severity": "P1", "id": "prepared_checkout_permanent_lock", "status": "remediated"},
+        {"severity": "P2", "id": "inactive_notice_proration", "status": "remediated"},
+        {"severity": "P2", "id": "seat_update_idempotency_collision", "status": "remediated"},
+        {"severity": "P2", "id": "automatic_tax_validation_and_disclosure", "status": "remediated"},
+        {"severity": "P3", "id": "export_availability_overclaim", "status": "remediated"}
+      ]
+    },
+    {
+      "round": 2,
+      "decision": "fail",
+      "seal": "119 of 119 before and after",
+      "findings": [
+        {"severity": "P1", "id": "completed_checkout_unbound_after_drift", "status": "remediated"},
+        {"severity": "P1", "id": "provider_idempotency_retention_orphan", "status": "remediated"},
+        {"severity": "P1", "id": "automatic_tax_validation_after_mutation", "status": "remediated"},
+        {"severity": "P2", "id": "duplicate_notice_plan_convergence", "status": "remediated"}
+      ]
+    },
+    {
+      "round": 3,
+      "decision": "fail",
+      "seal": "120 of 120 before and after",
+      "findings": [
+        {"severity": "P1", "id": "global_recovery_pagination_cap", "status": "remediated"},
+        {"severity": "P1", "id": "subscription_update_relative_binding_toctou", "status": "remediated"},
+        {"severity": "P1", "id": "future_provider_time_fallback_lock", "status": "remediated"}
+      ]
+    },
+    {
+      "round": 4,
+      "decision": "fail",
+      "seal": "121 of 121 before and after",
+      "findings": [
+        {"severity": "P1", "id": "future_completed_checkout_unbound_lock", "status": "remediated"}
+      ]
+    },
+    {
+      "round": 5,
+      "decision": "fail",
+      "seal": "122 of 122 before and after",
+      "findings": [
+        {"severity": "P2", "id": "notice_recovery_non_atomic_binding", "status": "remediated"}
+      ]
+    },
+    {
+      "round": 6,
+      "decision": "fail",
+      "seal": "123 of 123 before and after",
+      "findings": [
+        {"severity": "P2", "id": "typecheck_evidence_contract_mismatch", "status": "remediated"}
+      ],
+      "substantive_implementation_findings": 0
+    },
+    {
+      "round": 7,
+      "decision": "fail",
+      "seal": "128 of 128 before and after",
+      "findings": [
+        {"severity": "P2", "id": "config_workspace_typecheck_omission", "status": "remediated"},
+        {"severity": "P2", "id": "config_evidence_manifest_omission", "status": "remediated"}
+      ],
+      "substantive_billing_findings": 0
+    },
+    {
+      "round": 8,
+      "decision": "pass",
+      "seal": "137 of 137 before and after",
+      "backup_pairs": "16 of 16 before and after",
+      "severity_findings": {"P0": 0, "P1": 0, "P2": 0, "P3": 0}
+    }
+  ],
+  "checks": [
+    {"name": "focused_billing_boundary", "result": "pass", "evidence": "7 files; 51 tests"},
+    {"name": "official_firestore_emulator", "result": "pass", "evidence": "1 file; 6 isolation groups; clean shutdown"},
+    {"name": "full_regression", "result": "pass", "evidence": "93 files; 633 tests"},
+    {"name": "workspace_typechecks", "result": "pass", "evidence": "11 workspaces enumerated; all 11 declare and pass typecheck, including @basiclinear/config executable tests"},
+    {"name": "production_build", "result": "pass", "evidence": "local 1953 modules; hosted 30 modules; 3 of 3 hosted references"},
+    {"name": "supported_runtime_dependency_tree", "result": "pass", "evidence": "npm ls omit dev/optional resolved"},
+    {"name": "supported_runtime_registry_audit", "result": "pass", "evidence": "fresh registry-backed audit; 0 vulnerabilities"},
+    {"name": "review1_through_review5_counterexamples", "result": "pass", "evidence": "all six Review 1, four Review 2, three Review 3, the Review 4 completed-future boundary, and Review 5 preflight/final atomicity failure have exact green regressions, including unchanged prepared storage after final-transaction outage and later one-time notice convergence"},
+    {"name": "diff_json_scope_assets", "result": "pass", "evidence": "clean diff; valid JSON; 3 of 3 hosted assets; prohibited capability scan limited to repository-interface name false positives"},
+    {"name": "candidate_manifest", "result": "pass", "evidence": "137 exact SHA-256 entries including packages/config package/export/tsconfig/executable test, immutable Review 1 through Review 7 requests, and all sixteen CT backup pairs; Review 8 request excluded from its own seal"}
+  ],
+  "contracts": {
+    "pricing": "USD $2 per active user per month or USD $12 per active user per year, before automatically calculated applicable tax, with server-owned price references and quantities",
+    "trial": "one immutable 30×24-hour Pro trial per Firebase UID/workspace; no card and no automatic charge",
+    "seats": "active hosted memberships including the owner are billable; pending invitations are shown but are not seats",
+    "checkout": "one provider-confirmed session path per workspace; all recoverable prior subscriptions block replacement; complete time-bounded enumeration has no arbitrary global-record cap; opaque provider references and authenticated attempts recover prepared locks; one exact future-dated completion retains trusted logical chronology plus an explicitly untrusted digest and can converge only through an atomic verified-notice transaction without opening a second session",
+    "provider": "signature-verified notices cause current-provider retrieval; exact relative subscription binding and automatic tax are validated immediately before mutation and again after update; completed historical Checkout evidence permits same-subscription current-plan convergence",
+    "free_fallback": "data remains readable and export-eligible but export-unavailable until CT-139; only the verified owner may make basic interactive writes; extra-member and token/automation writes pause",
+    "authority_separation": "Firebase hosted authority remains separate from local SQLite with no upload or synchronization"
+  },
+  "claims": {
+    "implementation_output_done": true,
+    "independent_review_passed": true,
+    "pt206_qualified": false,
+    "live_billing_enabled": false,
+    "production_deployed": false,
+    "release_approved": false,
+    "legal_privacy_security_approved": false,
+    "o201_achieved": false,
+    "o203_achieved": false
+  },
+  "next": {
+    "action": "proceed with CT-139 REST, personal-token, and workspace-export implementation; preserve CT-138 as accepted input without claiming P-T206 or live billing"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "basiclinear.hosted-operations-deployment.v1",
+  "evidenceBoundary": "reviewed_candidate_not_applied_to_a_provider",
+  "applicationPolicyDigest": "ac6319e85092c88e386fdc3dc9ffcd54be03862f5bd7d466cce537750c00a06a",
+  "service": {
+    "name": "openlinear-hosted-api",
+    "region": "us-central1",
+    "ingress": "internal-and-cloud-load-balancing",
+    "authentication": "application-layer-google-oauth-or-provider-signature",
+    "maxInstances": 3,
+    "concurrency": 40,
+    "maximumConcurrentRequests": 120,
+    "requestTimeoutSeconds": 30,
+    "minimumInstances": 0
+  },
+  "applicationRateLimit": {
+    "algorithm": "fixed-window-per-instance",
+    "windowSeconds": 60,
+    "maximumInstances": 3,
+    "aggregateUpperBoundMultiplier": 3,
+    "maxTrackedBucketsPerInstance": 20000,
+    "clockRegressionToleranceSeconds": 5,
+    "keys": ["route-class", "network-hmac", "credential-hmac", "workspace-hmac"],
+    "rawIdentifiersStored": false,
+    "limitsPerInstancePerWindow": {
+      "health": {"global": 600, "network": 120, "credential": null, "workspace": null},
+      "public_read": {"global": 300, "network": 30, "credential": null, "workspace": null},
+      "public_write": {"global": 180, "network": 20, "credential": null, "workspace": null},
+      "authenticated_read": {"global": 600, "network": 120, "credential": 120, "workspace": 180},
+      "authenticated_write": {"global": 300, "network": 60, "credential": 30, "workspace": 60},
+      "provider_webhook": {"global": 300, "network": 120, "credential": 120, "workspace": null},
+      "oauth": {"global": 300, "network": 60, "credential": 60, "workspace": null},
+      "mcp": {"global": 300, "network": 60, "credential": 60, "workspace": null}
+    }
+  },
+  "edgeRateLimit": {
+    "requiredBeforePublicTraffic": true,
+    "provider": "google-cloud-armor",
+    "scope": "external-application-load-balancer-serverless-neg",
+    "bypassPrevention": "cloud-run-ingress-must-remain-internal-and-cloud-load-balancing",
+    "previewBeforeEnforce": true,
+    "rules": [
+      {"name": "provider-post", "pathPrefix": "/api/v1/hosted/", "method": "POST", "requestsPerMinutePerIp": 180},
+      {"name": "oauth-and-mcp", "pathPrefix": "/", "requestsPerMinutePerIp": 180},
+      {"name": "default", "pathPrefix": "/", "requestsPerMinutePerIp": 300}
+    ]
+  },
+  "queryBudget": {
+    "maximumPageSize": 100,
+    "maximumTransactionListRecords": 10000,
+    "maximumExportRecords": 25000,
+    "maximumExportIssueQueries": 5000,
+    "maximumRequestBytes": 65536,
+    "maximumStripeWebhookBytes": 262144,
+    "maximumBudgetNoticeBytes": 32768,
+    "overflowBehavior": "generic-service-unavailable-no-partial-output"
+  },
+  "trialAbuse": {
+    "identity": "firebase-google-uid-with-revocation-check",
+    "lifetimeTrialLedger": "_ownerTrialEligibility/{uid}",
+    "eligibleTrialsPerUid": 1,
+    "networkAndPublicWriteRateLimit": true,
+    "emailOrDeviceFingerprinting": false
+  },
+  "budget": {
+    "displayName": "BasicLinear pilot budget",
+    "currency": "USD",
+    "amountMicrousd": 25000000,
+    "thresholdBasisPoints": [5000, 8000, 10000],
+    "alertsAreHardCap": false,
+    "notification": "authenticated-pubsub-push",
+    "identity": "dedicated-service-account-oidc-exact-audience",
+    "signalFreshnessHours": 36,
+    "activationReviewTtlHours": 24,
+    "warningOrCriticalBlocksNewCheckout": true,
+    "duplicateAndOutOfOrderSignals": "hmac-bound-idempotent-ledger"
+  },
+  "costGuardrail": {
+    "sources": ["firebase-billing-export", "stripe-balance-and-revenue-records"],
+    "maximumVariableCostShareBasisPoints": 5000,
+    "reportFreshnessHours": 720,
+    "productionRequiresEvidenceClass": "production_baseline",
+    "claimBoundary": "guardrail-only; does not establish O-203"
+  },
+  "telemetry": {
+    "format": "single-line-structured-json",
+    "retentionDays": 30,
+    "cloudTraceCorrelation": true,
+    "fields": ["correlationId", "routeClass", "method", "statusCode", "outcome", "durationMilliseconds", "networkFingerprint", "credentialFingerprint", "workspaceFingerprint", "traceId", "limited"],
+    "prohibitedFields": ["authorization", "cookie", "id-token", "raw-ip", "email", "workspace-id", "request-body", "provider-secret"]
+  },
+  "backup": {
+    "mode": "firestore-pitr-entire-database",
+    "restoreTarget": "isolated-project-only",
+    "pointInTime": "whole-minute-within-seven-days",
+    "scheduledCadence": "weekly-plus-pre-release",
+    "retentionDays": 30,
+    "restoreEvidenceRetentionDays": 400,
+    "productionRequiresEvidenceClass": "provider_drill",
+    "productionInPlaceRestore": false
+  },
+  "billingActivation": {
+    "requiresSignedOperationsReview": true,
+    "requiresFreshBudgetState": true,
+    "requiresCostGuardrailAllow": true,
+    "checkedAfterOwnerAuthorization": true,
+    "recheckedImmediatelyBeforeProviderCheckoutCreation": true,
+    "budgetAlertIsManualKillSignalNotProviderHardCap": true
+  }
+}

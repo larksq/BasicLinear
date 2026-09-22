@@ -1,6 +1,6 @@
 # Architecture
 
-OpenLinear is a single-user, local-first application. The supported runtime is
+BasicLinear is a single-user, local-first application. The supported runtime is
 one Node process bound to loopback, a React client served by that process, and
 one SQLite database. There is no remote service or required network dependency.
 
@@ -13,7 +13,7 @@ Browser
   -> packages/contracts (request/response and transfer schemas)
   -> packages/domain (pure rules, validation, error semantics)
   -> packages/db (SQLite repositories, migrations, backup, transfer)
-  -> local openlinear.sqlite3
+  -> local basiclinear.sqlite3
 ```
 
 The API also serves the built web directory in production. In split development

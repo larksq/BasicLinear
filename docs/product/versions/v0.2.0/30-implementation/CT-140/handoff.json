@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "stage": "implementation.handoff",
+  "status": "accepted",
+  "prepared_at": "2026-08-26T00:23:01.387Z",
+  "issue": {
+    "identifier": "CT-140",
+    "stable_id": "0be25639-46be-4a49-aea6-5c3422b1ffb0",
+    "revision": 9,
+    "status": "Done",
+    "milestone": "S3 — Implementation",
+    "plan_id": "I-208",
+    "requirements": ["R-213", "R-214", "R-215", "R-219", "R-220"],
+    "acceptance": ["P-T208"],
+    "outcomes": ["O-204"]
+  },
+  "output": {
+    "mcp": "stable 2026-07-28 stateless Streamable HTTP with exact discovery, content negotiation, cancellation, errors, and twenty-seven PM-only tools",
+    "oauth": "dynamic registration, PKCE S256, explicit Google-backed consent, exact authorization-code chronology, short access tokens, rotating refresh families, downscoping, reuse revocation, and current membership enforcement",
+    "service_parity": "REST and MCP share PM schemas, authorization, idempotency, optimistic revision, mutation audit, workspace, role, and entitlement behavior",
+    "skill": "validated reusable basiclinear-product-management skill with read-first and destructive-confirmation guidance",
+    "excluded_scope": "no AI agent, code review, repository, pull request, personal-token administration, billing purchase, or local/cloud synchronization capability"
+  },
+  "verification": {
+    "independent_review": "PASS",
+    "review_round": 3,
+    "severity_findings": {"P0": 0, "P1": 0, "P2": 0, "P3": 0},
+    "seal": "445/445 before and after",
+    "backup_pairs": "7/7 request, embedded semantic, recomputed semantic, and raw before and after",
+    "focused": "5 files / 22 tests",
+    "firestore_emulator": "1 file / 6 groups",
+    "full_regression": "103 files / 677 tests",
+    "typecheck": "11/11 workspaces",
+    "build": "1,953-module local graph plus isolated 30-module hosted graph; 3/3 hosted references",
+    "runtime_audit": "offline supported-runtime audit 0 with exact narrow inherited registry-audit ancestry",
+    "cancellation": "real disconnect during delayed authentication plus nine direct lifecycle variants; zero pre-work application mutation and exact listener cleanup",
+    "adversarial": "DCR, consent chronology, Accept, OAuth family, twenty-seven tools, fifty-four schemas, Origin, Firestore, privacy, skill, input-universe, and prohibited-scope matrices"
+  },
+  "control_tower": {
+    "authority": "project-local-v0.8",
+    "projection": "disabled_not_synced",
+    "completion_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-26T00-23-01-367Z-57c8c8e5-7a20-42c4-a8c5-e7054a507f9c.json",
+    "completion_backup_sha256": "82100bab5827d25dd94514e15b179aff94c12eb0d893aa1a32f1e70c7a1d7387",
+    "completion_backup_raw_file_sha256": "d4d36f6272320ef852af712ae7ca9fa85238172436e022d300e74d84f23f17b2"
+  },
+  "claims": {
+    "implementation_output_done": true,
+    "independent_review_passed": true,
+    "pt208_qualified": false,
+    "o204_achieved": false,
+    "public_mcp_or_oauth_active": false,
+    "production_deployed": false,
+    "fresh_online_audit_passed": false,
+    "release_approved": false,
+    "legal_privacy_security_approved": false
+  },
+  "next": {
+    "issue": "CT-141",
+    "scope": "hosted budgets, rate and abuse controls, operational telemetry, incident and restore procedures, runtime packaging enforcement, and cost-per-paid-seat reporting"
+  }
+}

@@ -1,4 +1,4 @@
-import type { IssueRelation } from '@openlinear/contracts';
+import type { IssueRelation } from '@basiclinear/contracts';
 
 const hierarchyDirections = new Set<IssueRelation['direction']>(['parent', 'sub_issue']);
 

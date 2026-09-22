@@ -1,5 +1,5 @@
-import type { IssueFilterAst } from '@openlinear/contracts';
-import { normalizeIssueFilter } from '@openlinear/domain';
+import type { IssueFilterAst } from '@basiclinear/contracts';
+import { normalizeIssueFilter } from '@basiclinear/domain';
 
 export const invalidFilterDisplayLimit = 240;
 

@@ -1,5 +1,5 @@
 {
-  "name": "@openlinear/db",
+  "name": "@basiclinear/db",
   "version": "0.1.0",
   "license": "AGPL-3.0-only",
   "private": true,
@@ -22,7 +22,7 @@
   },
   "files": ["dist"],
   "dependencies": {
-    "@openlinear/contracts": "*",
-    "@openlinear/domain": "*"
+    "@basiclinear/contracts": "*",
+    "@basiclinear/domain": "*"
   }
 }

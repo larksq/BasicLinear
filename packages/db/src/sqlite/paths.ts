@@ -1,7 +1,7 @@
 import { constants, accessSync, chmodSync, lstatSync, mkdirSync } from 'node:fs';
 import { homedir, platform as currentPlatform } from 'node:os';
 import { join, resolve } from 'node:path';
-import { AppError } from '@openlinear/domain';
+import { AppError } from '@basiclinear/domain';
 
 export interface LocalStoragePaths {
   dataDirectory: string;
@@ -20,22 +20,22 @@ export function resolveLocalStoragePaths(
 ): LocalStoragePaths {
   const home = runtime.homeDirectory ?? homedir();
   const platform = runtime.platform ?? currentPlatform();
-  const override = env.OPENLINEAR_DATA_DIR?.trim();
+  const override = env.BASICLINEAR_DATA_DIR?.trim();
   let dataDirectory: string;
 
   if (override) {
     dataDirectory = resolve(override);
   } else if (platform === 'darwin') {
-    dataDirectory = join(home, 'Library', 'Application Support', 'OpenLinear');
+    dataDirectory = join(home, 'Library', 'Application Support', 'BasicLinear');
   } else if (platform === 'win32') {
-    dataDirectory = join(env.LOCALAPPDATA?.trim() || join(home, 'AppData', 'Local'), 'OpenLinear');
+    dataDirectory = join(env.LOCALAPPDATA?.trim() || join(home, 'AppData', 'Local'), 'BasicLinear');
   } else {
-    dataDirectory = join(env.XDG_DATA_HOME?.trim() || join(home, '.local', 'share'), 'openlinear');
+    dataDirectory = join(env.XDG_DATA_HOME?.trim() || join(home, '.local', 'share'), 'basiclinear');
   }
 
   return {
     dataDirectory,
-    databasePath: join(dataDirectory, 'openlinear.sqlite3'),
+    databasePath: join(dataDirectory, 'basiclinear.sqlite3'),
     backupDirectory: join(dataDirectory, 'backups'),
   };
 }
@@ -54,7 +54,7 @@ export function prepareLocalStorage(paths: LocalStoragePaths): void {
       if (stat.isSymbolicLink() || !stat.isDirectory()) {
         throw new AppError(
           'SERVICE_UNAVAILABLE',
-          'The OpenLinear data path must be a regular directory, not a link or file.',
+          'The BasicLinear data path must be a regular directory, not a link or file.',
           503,
           { field: 'dataDirectory' },
         );
@@ -65,7 +65,7 @@ export function prepareLocalStorage(paths: LocalStoragePaths): void {
       if (error instanceof AppError) throw error;
       throw new AppError(
         'SERVICE_UNAVAILABLE',
-        'The OpenLinear data directory is unavailable or not writable.',
+        'The BasicLinear data directory is unavailable or not writable.',
         503,
         { field: 'dataDirectory', cause: error },
       );

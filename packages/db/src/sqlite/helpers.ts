@@ -1,9 +1,9 @@
 import { randomUUID } from 'node:crypto';
 import { isDeepStrictEqual } from 'node:util';
 import type { SQLInputValue } from 'node:sqlite';
-import { AppError, assertExpectedRevision, normalizeHttpUrl, normalizeText } from '@openlinear/domain';
+import { AppError, assertExpectedRevision, normalizeHttpUrl, normalizeText } from '@basiclinear/domain';
 import type { DbActivityEntry, DbProgressSnapshot, DbProjectResource, DbIssueResource } from '../types.js';
-import type { OpenLinearDatabase } from './client.js';
+import type { BasicLinearDatabase } from './client.js';
 
 export const emptyDocument = { version: 1 as const, type: 'doc' as const, content: [] };
 export type FieldChange = { field: string; before: unknown; after: unknown };
@@ -29,7 +29,7 @@ export function compactChanges(values: Array<FieldChange | undefined>): FieldCha
 }
 
 export function requireOwnerScope(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId?: string,
 ): { userId: string; workspaceId: string; teamId: string; teamKey: string } {
@@ -44,13 +44,13 @@ export function requireOwnerScope(
   return row;
 }
 
-export function requireTeam(db: OpenLinearDatabase, teamId: string): void {
+export function requireTeam(db: BasicLinearDatabase, teamId: string): void {
   const row = db.sqlite.prepare('SELECT team_id AS teamId FROM scope_metadata WHERE singleton = 1')
     .get() as { teamId: string } | undefined;
   if (row?.teamId !== teamId) throw new AppError('NOT_FOUND', 'Team not found.', 404);
 }
 
-export function requireOwnerUser(db: OpenLinearDatabase, userId: string | null, field: string): void {
+export function requireOwnerUser(db: BasicLinearDatabase, userId: string | null, field: string): void {
   if (userId === null) return;
   const row = db.sqlite.prepare('SELECT id FROM owner_profile WHERE singleton = 1').get() as { id: string } | undefined;
   if (row?.id !== userId) {
@@ -86,7 +86,7 @@ export function normalizeResources<T extends { label: string; url: string }>(
 }
 
 export function replaceResources(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   table: 'project_resources' | 'issue_resources',
   ownerColumn: 'project_id' | 'issue_id',
   ownerId: string,
@@ -105,7 +105,7 @@ export function replaceResources(
 }
 
 export function readResources(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   table: 'project_resources' | 'issue_resources',
   ownerColumn: 'project_id' | 'issue_id',
   ownerId: string,
@@ -116,7 +116,7 @@ export function readResources(
 }
 
 export function recordActivity(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   input: {
     actorUserId: string | null;
     entityType: string;
@@ -144,7 +144,7 @@ export function recordActivity(
 }
 
 export function listActivity(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   entityTypes: readonly string[],
   entityIds: readonly string[],
   limit: number,
@@ -188,7 +188,7 @@ export function listActivity(
 }
 
 export function idempotentEntity(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   operation: string,
   key: string,
@@ -201,7 +201,7 @@ export function idempotentEntity(
 }
 
 export function rememberIdempotency(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   input: { userId: string; operation: string; key: string; entityId: string; revision: number },
 ): void {
   db.sqlite.prepare(`
@@ -218,7 +218,7 @@ export function rememberIdempotency(
 }
 
 export function progressFor(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   column: 'project_id' | 'milestone_id',
   id: string,
 ): DbProgressSnapshot {

@@ -1,11 +1,11 @@
-import type { SearchResult } from '@openlinear/contracts';
+import type { SearchResult } from '@basiclinear/contracts';
 
 interface RecentSearchStorage {
   getItem(key: string): string | null;
   setItem(key: string, value: string): void;
 }
 
-const recentSearchPrefix = 'openlinear.recent-search:';
+const recentSearchPrefix = 'basiclinear.recent-search:';
 const resultKinds = new Set<SearchResult['kind']>(['issue', 'project']);
 const matchKinds = new Set<SearchResult['matchedBy']>([
   'identifier',

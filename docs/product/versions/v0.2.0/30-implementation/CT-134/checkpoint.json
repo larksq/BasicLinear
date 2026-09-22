@@ -1,0 +1,309 @@
+{
+  "schema_version": "1.0",
+  "stage": "implementation.checkpoint",
+  "status": "output_done_review_passed",
+  "issue": {
+    "plan_id": "I-202",
+    "local_issue_id": "CT-134",
+    "stable_id": "4d4d0196-585b-4af0-ac13-0555c1f2cd75",
+    "milestone": "S3 — Implementation",
+    "accepted": true,
+    "blocked": false,
+    "requirement_refs": ["R-201", "R-202", "R-203", "R-216", "R-220"],
+    "acceptance_refs": ["P-T202"],
+    "outcome_refs": ["O-201", "O-203", "O-204"]
+  },
+  "task_readback": {
+    "revision": 6,
+    "status": "Done",
+    "milestone": "S3 — Implementation",
+    "dependency_readback": [{"issue":"CT-133","status":"Done","revision":8}],
+    "projection": "disabled_not_synced",
+    "checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T04-52-38-795Z-ea3267c1-44a2-48b7-a5eb-d7ba783ae409.json",
+    "checkpoint_backup_sha256": "a375b93dfc44538f415b4234b2370e1915a1985f3bd017041d87a6f5736a1d08"
+  },
+  "entry": {
+    "operating_profile": "project-local-v0.8",
+    "authority": "current user goal plus fresh project-local CT-134 and completed CT-133 readback",
+    "planning_validation": {
+      "valid": true,
+      "errors": 0,
+      "warnings": 23,
+      "warning_boundary": "accepted outcome-baseline exception authorizes implementation only"
+    },
+    "linear_projection": "disabled_not_synced",
+    "linear_only_guard_applicable": false,
+    "linear_only_guard_reason": "The installed implementation-entry guard requires linear-only-v0.6, while this governed project uses project-local-v0.8. It was not misrepresented as authority."
+  },
+  "sessions": [
+    {
+      "session_id": "CT-134-S1",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating",
+      "allowed_paths": [
+        ".env.example",
+        "package.json",
+        "package-lock.json",
+        "firebase.json",
+        "firestore.rules",
+        "scripts/clean-build-output.mjs",
+        "vitest.config.ts",
+        "packages/hosted/",
+        "apps/hosted-service/",
+        "apps/web/",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/"
+      ],
+      "outputs": [
+        ".env.example",
+        "package.json",
+        "package-lock.json",
+        "firebase.json",
+        "firestore.rules",
+        "scripts/clean-build-output.mjs",
+        "vitest.config.ts",
+        "packages/hosted/tsconfig.json",
+        "packages/hosted/src/index.ts",
+        "packages/hosted/src/owner-bootstrap.ts",
+        "packages/hosted/src/firebase-owner-bootstrap.ts",
+        "packages/hosted/src/hosted-http.ts",
+        "packages/hosted/tests/owner-bootstrap.test.ts",
+        "packages/hosted/tests/hosted-http.test.ts",
+        "apps/hosted-service/package.json",
+        "apps/hosted-service/tsconfig.json",
+        "apps/hosted-service/src/index.ts",
+        "apps/hosted-service/src/firebase-identity.ts",
+        "apps/hosted-service/tests/firebase-identity.test.ts",
+        "apps/web/package.json",
+        "apps/web/vite.config.ts",
+        "apps/web/hosted.html",
+        "apps/web/src/hosted-main.tsx",
+        "apps/web/src/hosted-app.tsx",
+        "apps/web/src/hosted-auth.ts",
+        "apps/web/src/hosted-api.ts",
+        "apps/web/src/hosted.css",
+        "apps/web/tests/hosted-foundation.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/hosting-bootstrap-contract.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/review.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json"
+      ]
+    },
+    {
+      "session_id": "CT-134-S2",
+      "actor_id": "codex-primary",
+      "mode": "docs_only",
+      "input_refs": [
+        "project-local CT-134 In Progress readback revision 4",
+        "completed primary self-audit and green automated checks"
+      ],
+      "allowed_paths": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/"
+      ],
+      "outputs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/review-request.json"
+      ]
+    },
+    {
+      "session_id": "CT-134-S3",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating",
+      "input_refs": [
+        "independent Review 1 FAIL from /root/ct134_independent_review",
+        "project-local CT-134 In Progress readback revision 5"
+      ],
+      "allowed_paths": [
+        ".env.example",
+        "packages/hosted/src/hosted-http.ts",
+        "packages/hosted/tests/hosted-http.test.ts",
+        "apps/hosted-service/src/",
+        "apps/hosted-service/tests/",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/"
+      ],
+      "outputs": [
+        ".env.example",
+        "packages/hosted/src/hosted-http.ts",
+        "packages/hosted/tests/hosted-http.test.ts",
+        "apps/hosted-service/src/index.ts",
+        "apps/hosted-service/src/hosted-config.ts",
+        "apps/hosted-service/tests/hosted-config.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/hosting-bootstrap-contract.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/review.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json"
+      ]
+    },
+    {
+      "session_id": "CT-134-S4",
+      "actor_id": "codex-primary",
+      "mode": "docs_only",
+      "input_refs": [
+        "completed origin remediation and green full checks",
+        "standing user authorization for CT-134 through CT-142 independent review"
+      ],
+      "allowed_paths": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/"
+      ],
+      "outputs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/review-request.json"
+      ]
+    },
+    {
+      "session_id": "CT-134-S5",
+      "actor_id": "codex-primary",
+      "mode": "docs_only",
+      "input_refs": [
+        "Independent Review 2 PASS from /root/ct134_independent_review",
+        "project-local CT-134 In Progress readback revision 5"
+      ],
+      "allowed_paths": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/"
+      ],
+      "outputs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/review.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/review-request.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/handoff.json"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "CT-134-C1",
+      "command": "npx vitest run packages/hosted/tests/owner-bootstrap.test.ts packages/hosted/tests/hosted-http.test.ts apps/hosted-service/tests/firebase-identity.test.ts apps/web/tests/hosted-foundation.test.ts --config vitest.config.ts",
+      "status": "passed",
+      "result": "4 files passed; 18 tests passed."
+    },
+    {
+      "check_id": "CT-134-C2",
+      "command": "npm test",
+      "status": "passed",
+      "result": "78 files passed; 517 tests passed."
+    },
+    {
+      "check_id": "CT-134-C3",
+      "command": "npm run typecheck",
+      "status": "passed",
+      "result": "All workspace typechecks passed, including hosted service, hosted domain, and web."
+    },
+    {
+      "check_id": "CT-134-C4",
+      "command": "npm run build",
+      "status": "passed",
+      "result": "All workspaces and the local/hosted Vite multi-page production bundle built successfully."
+    },
+    {
+      "check_id": "CT-134-C5",
+      "command": "hosted.html generated-asset resolution probe",
+      "status": "passed",
+      "result": "All 7 absolute hosted bundle asset references resolve under apps/web/dist."
+    },
+    {
+      "check_id": "CT-134-C6",
+      "command": "npm run audit:hosted-runtime",
+      "status": "passed",
+      "result": "The Firestore-capable runtime profile with unused optional packages omitted reports 0 vulnerabilities."
+    },
+    {
+      "check_id": "CT-134-C7",
+      "command": "git diff --check",
+      "status": "passed",
+      "result": "No whitespace errors."
+    },
+    {
+      "check_id": "CT-134-C8",
+      "command": "npx vitest run packages/hosted/tests/owner-bootstrap.test.ts packages/hosted/tests/hosted-http.test.ts apps/hosted-service/tests/firebase-identity.test.ts apps/hosted-service/tests/hosted-config.test.ts apps/web/tests/hosted-foundation.test.ts --config vitest.config.ts",
+      "status": "passed",
+      "result": "Remediated targeted suite: 5 files passed; 22 tests passed."
+    },
+    {
+      "check_id": "CT-134-C9",
+      "command": "npm test",
+      "status": "passed",
+      "result": "Remediated full suite: 79 files passed; 521 tests passed."
+    },
+    {
+      "check_id": "CT-134-C10",
+      "command": "npm run typecheck",
+      "status": "passed",
+      "result": "All workspace typechecks passed after remediation."
+    },
+    {
+      "check_id": "CT-134-C11",
+      "command": "npm run build",
+      "status": "passed",
+      "result": "All workspaces and the local/hosted Vite production bundle built after remediation."
+    },
+    {
+      "check_id": "CT-134-C12",
+      "command": "hosted.html generated-asset resolution probe",
+      "status": "passed",
+      "result": "All 7 absolute hosted bundle asset references resolve after remediation."
+    },
+    {
+      "check_id": "CT-134-C13",
+      "command": "npm run audit:hosted-runtime",
+      "status": "passed",
+      "result": "Registry-backed audit reports 0 vulnerabilities for the supported runtime profile after remediation."
+    },
+    {
+      "check_id": "CT-134-C14",
+      "command": "git diff --check and JSON parse validation",
+      "status": "passed",
+      "result": "No whitespace errors; remediation checkpoint JSON is valid."
+    },
+    {
+      "check_id": "CT-134-C15",
+      "command": "Independent Review 2 by codex-subagent:/root/ct134_independent_review",
+      "status": "passed",
+      "result": "All 33 sealed hashes and required checks passed; Review 1 counterexamples are closed; no P0-P3 finding remains."
+    }
+  ],
+  "output": {
+    "status": "done",
+    "summary": "A separate Firebase-hosted Vite entry, Google-only identity flow, exact deployment-owned origin boundary, trusted Cloud Run HTTP foundation, and transactional one-time 30-day owner bootstrap are implemented."
+  },
+  "quality": {
+    "automated_checks": "passed",
+    "independent_review": "passed_after_review1_remediation",
+    "issue_status": "Done"
+  },
+  "reviews": [
+    {
+      "review_id": "CT-134-IR1",
+      "reviewer_actor_id": "codex-subagent:/root/ct134_independent_review",
+      "mode": "read_only",
+      "decision": "failed",
+      "finding_count": 1,
+      "highest_severity": "P2",
+      "finding": "Browser origin validation ignored scheme and trusted caller-supplied X-Forwarded-Host.",
+      "remediation_status": "completed_and_verified"
+    },
+    {
+      "review_id": "CT-134-IR2",
+      "reviewer_actor_id": "codex-subagent:/root/ct134_independent_review",
+      "mode": "read_only",
+      "decision": "passed",
+      "finding_count": 0,
+      "highest_severity": null,
+      "finding": null,
+      "remediation_status": "verified"
+    }
+  ],
+  "review_request": {
+    "status": "review2_completed_pass",
+    "ref": "docs/product/versions/v0.2.0/30-implementation/CT-134/review-request.json",
+    "authorization_boundary": "The user granted standing authorization for independent-review subagents for CT-134 through CT-142 on 2026-08-25."
+  },
+  "security_profile": {
+    "production_runtime_audit": "passed_zero_vulnerabilities",
+    "required_install_omissions": ["dev", "optional"],
+    "required_direct_runtime": "@google-cloud/firestore@8.7.1",
+    "development_tree_note": "Unused optional @google-cloud/storage currently contributes six moderate uuid@9 advisories; CT-141 must preserve the audited runtime packaging boundary."
+  },
+  "outcomes": [
+    {"outcome_id":"O-201","status":"baseline_needed"},
+    {"outcome_id":"O-203","status":"baseline_needed"},
+    {"outcome_id":"O-204","status":"baseline_needed"}
+  ],
+  "blockers": []
+}

@@ -1,0 +1,96 @@
+{
+  "schema_version": "ct143-independent-review-request-v2",
+  "prepared_at": "2026-08-27T05:22:31Z",
+  "issue": {
+    "identifier": "CT-143",
+    "stable_id": "1f065874-a1d3-433b-ae4e-63b9d69c8d4d",
+    "candidate_revision": 6,
+    "expected_revision": 7,
+    "expected_status": "In Progress",
+    "expected_milestone": "S4 — Testing"
+  },
+  "authority": {
+    "task_store": "project-local Control Tower v0.8 API",
+    "projection": "disabled_not_synced",
+    "reviewer_authorization": "granted_by_maintainer_2026-08-27",
+    "authorization_ref": "current Codex task: CT-143 authorized; review should at least try the production deployed environment with real data flows"
+  },
+  "review_mode": {
+    "independent": true,
+    "read_only": false,
+    "nonsecurity_only": true,
+    "production_first": true,
+    "production_url": "https://basiclinear-gray.vercel.app",
+    "production_data_flow": {
+      "required_attempt": true,
+      "browser": "the user's selected Chrome browser and existing Google session only",
+      "mutation_scope": "one clearly prefixed CT-143 independent-review project-management journey inside the maintainer's own production workspace",
+      "allowed_mutations": [
+        "create one clearly prefixed project or use the dedicated verification project",
+        "create one clearly prefixed parent issue with a description",
+        "add one comment, one resource link, and one sub-issue",
+        "exercise status, priority, and assignee changes using existing members",
+        "reload and read back the resulting records to prove Firebase-backed persistence"
+      ],
+      "recording": "report exact created record identifiers and final state; do not conceal or delete review evidence",
+      "fallback": "if the production Chrome session or provider path is unavailable, record the exact attempted step and limitation; do not substitute a local claim for deployed production evidence"
+    },
+    "remediation_review": {
+      "prior_review_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/review-1.md",
+      "prior_result_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/result-review-1.json",
+      "prior_production_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/production-uat-review-1.json",
+      "finding": "P3 stale Firebase ID token on an already-open authenticated production tab",
+      "remediation_ref": "docs/product/versions/v0.2.0/30-implementation/CT-143/remediation-p3-session.json",
+      "required_closure": [
+        "a trusted 401 AUTHENTICATION_REQUIRED refreshes the current verified Google user's token exactly once",
+        "the retry preserves the exact request body and idempotency key",
+        "the refreshed token is published to the mounted owner workspace so later requests use it",
+        "no refreshable user returns the original bounded error without a retry",
+        "the new development and production Vercel deployments are READY and production still reads the exact review records"
+      ]
+    },
+    "allowed": [
+      "verify every candidate hash before and after",
+      "read CT-143 and dependency state through the project-local v0.8 API",
+      "run node scripts/tests/ct143-nonsecurity-gates.mjs",
+      "run npm run typecheck",
+      "run npm run build",
+      "run node scripts/validate-hosted-environments.mjs",
+      "inspect the supplied reference comparison and captured Chrome evidence",
+      "perform the bounded production positive-path journey above in the user-selected Chrome browser",
+      "perform bounded read-only checks of the deployed development environment to confirm environment separation"
+    ],
+    "prohibited": [
+      "security or adversarial testing",
+      "hostile-input, cross-workspace attack, replay, enumeration, vulnerability, or Firestore security-rules probes",
+      "full-suite execution",
+      "provider payment or Stripe API calls",
+      "creating invitations, personal tokens, Checkout sessions, subscriptions, or charges",
+      "mutating files, Control Tower, Vercel, Cloud Run, provider configuration, deployment configuration, or production records outside the single bounded journey",
+      "claiming outcomes, public release approval, or legal/privacy/security approval"
+    ]
+  },
+  "acceptance_refs": ["CT143-AC1", "CT143-AC2", "CT143-AC3", "CT143-AC4", "CT143-AC5", "CT143-AC6", "CT143-AC7"],
+  "candidate_manifest_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/candidate.sha256",
+  "candidate": {
+    "sealed_file_count": 573,
+    "aggregate_sha256": "1e4b7c6d633a2feee7f0a2644a3f998002aab0bf42da9bb739a4eab66b8b47a9",
+    "inherited_boundary": "The exact CT-142 513-file universe was rehashed, then CT-143 source, build, tests, operations, deployment evidence, Review 1, the bounded P3 remediation, and Testing artifacts were added. CT-143 remains revision 7 while the remediation review runs.",
+    "intentionally_unsealed": [
+      ".git/**",
+      ".control-tower/tasks-v0.8.sqlite3",
+      "node_modules/**",
+      "**/dist/**",
+      "docs/product/versions/v0.2.0/40-testing/CT-143/candidate.sha256",
+      "docs/product/versions/v0.2.0/40-testing/CT-143/review-request.json (self-referential dispatch envelope)",
+      "future independent review outputs"
+    ]
+  },
+  "required_result": {
+    "decision": "PASS or FAIL",
+    "findings": "severity-ranked P0 through P3 with exact evidence",
+    "integrity": "initial and final candidate hash result",
+    "control_tower": "fresh readback without mutation",
+    "claim_boundary": "nonsecurity local/deployed evidence only"
+  }
+}

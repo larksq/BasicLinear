@@ -1,0 +1,42 @@
+{
+  "schema_version": "ct2-baseline-result-v1",
+  "captured_at": "2026-08-20T00:10:00Z",
+  "verdict": "REFERENCE_BASELINE_MEASURED",
+  "issue": {
+    "identifier": "CT-2",
+    "id": "8f5a41e2-71a5-4e8b-9947-e30ddc6c2a51",
+    "measurement_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "protocol": "docs/product/versions/v0.1.0/10-discovery/CT-2/benchmark-protocol.md",
+  "reference_baseline": "docs/product/versions/v0.1.0/10-discovery/CT-2/reference-baseline.json",
+  "matched_comparison": "docs/product/versions/v0.1.0/10-discovery/CT-2/matched-comparison.json",
+  "artifact_sha256": {
+    "benchmark_protocol": "c370424b8f9bfb3f334d9b8fb021b48da9c6d2a3eeec86557185c26e4e342277",
+    "source_register": "2d65e96abd3713f2eb07fca3a7f7fb951c34691e995db319374fcee56e2f177e",
+    "reference_baseline": "dc82f20240dfbc43c711623578e99f7f9f83b70dd5b166922d17476dc01b9e6f",
+    "matched_comparison": "12124fd41c840ce789b3ad14582adb8a664e36655105f2bb00772d9ba9475ea2",
+    "evidence": "9c5da65022cc2b35b24928e964691343861ecb19f7417f5a66fdb371c6119773"
+  },
+  "checks": {
+    "reference_tasks_defined": 8,
+    "reference_measured_attempts": 24,
+    "reference_errors": 0,
+    "basiclinear_tasks_defined": 8,
+    "basiclinear_measured_attempts": 24,
+    "basiclinear_errors": 0,
+    "privacy_review_passed": true,
+    "linear_mutations": 0,
+    "linear_api_or_mcp_calls": 0,
+    "control_tower_provider_writes": 0
+  },
+  "outcome": {
+    "id": "O-002",
+    "status": "not_validated",
+    "observation_window_start": "2026-09-05",
+    "observation_window_end": "2026-10-20",
+    "earliest_review_at": "2026-10-21",
+    "reason": "The current result is an automated pre-window diagnostic, not an eligible-user matched-task study."
+  },
+  "remaining_discovery_gaps": ["CT-1 target-user research", "CT-3 license, identity, and clean-room decision"]
+}

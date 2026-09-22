@@ -1,0 +1,51 @@
+{
+  "schema_version": "ct54-database-status-v1",
+  "captured_at": "2026-08-20T13:51:05Z",
+  "environment": {
+    "docker_desktop": "4.15.0",
+    "docker_engine": "20.10.21",
+    "postgresql": "16.10",
+    "postgres_image": "basiclinear-postgres:16.10",
+    "architecture": "aarch64",
+    "network": "basiclinear-verify",
+    "network_internal": true
+  },
+  "source_identity": {
+    "harness": "ephemeral-current-source-copy",
+    "package_lock_sha256": "0f14fe60034468b86872ef2902667d29539c7578e79f42ab0ea0d7928c5648e7",
+    "api_app_sha256": "c4d47e4f2adf8766cfe344224634ba39f9e04ae30af834895b23559936f223aa",
+    "projects_integration_sha256": "1e3c01c1533d09d227fa3c6c285338d03182de4f55711f389157efa932a458cc",
+    "transfer_integration_sha256": "897b4cb11d592b751647fc108466a7f3236e39498b7231b2ad2012be956b91b5"
+  },
+  "credential_handling": {
+    "existing_isolated_migrator_used": true,
+    "migration_credential_persisted": false,
+    "migration_credential_printed": false,
+    "application_credential_persisted": false,
+    "application_credential_printed": false
+  },
+  "execution": {
+    "integration_files": 7,
+    "integration_tests": 17,
+    "passed": 17,
+    "failed": 0,
+    "skipped": 0,
+    "migrations_exercised": [
+      "007_issue_resources.sql",
+      "008_project_rich_overviews.sql",
+      "009_optional_oidc.sql",
+      "010_saved_view_milestone_grouping.sql"
+    ],
+    "backup_gates_passed": ["007", "008", "009", "010"],
+    "canonical_export_import_passed": true,
+    "backup_restore_passed": true,
+    "tamper_rejection_passed": true
+  },
+  "cleanup": {
+    "leftover_test_databases": 0,
+    "temporary_role_removed": true,
+    "ephemeral_harness_removed": true,
+    "existing_verification_stack_preserved": true
+  },
+  "browser_verification": "not_run_permission_denied"
+}

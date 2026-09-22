@@ -1,0 +1,35 @@
+{
+  "schema_version": "ct11-test-result-v1",
+  "captured_at": "2026-08-19T22:24:32Z",
+  "verdict": "PASSED",
+  "issue": {
+    "identifier": "CT-11",
+    "id": "e041caff-6446-4324-8d43-06fe99421058",
+    "testing_revision": 5,
+    "expected_completion_revision": 6
+  },
+  "planned_tests": ["P-T16", "P-T17"],
+  "checks": {
+    "ct11_top_level_tests": 8,
+    "typecheck_workspaces": 8,
+    "unit_test_files": 5,
+    "unit_tests_passed": 20,
+    "integration_test_files": 6,
+    "integration_tests_passed": 16,
+    "concurrency_entity_types": 7,
+    "required_skips": 0,
+    "unresolved_failures": 0,
+    "browser_warning_or_error_entries": 0,
+    "live_readiness_status": 200
+  },
+  "immutable_image": {
+    "name": "basiclinear-test:ct11-final-r2",
+    "id": "b073182b066e765bdda111ffa6f32a0befba85039e6cccd2794b781913cc325d",
+    "size_bytes": 442958382
+  },
+  "resolved_bug_loops": ["CT-16@3", "CT-17@3", "CT-18@3"],
+  "outcomes": {
+    "O-001": "pending",
+    "O-004": "pending"
+  }
+}

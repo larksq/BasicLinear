@@ -1,0 +1,35 @@
+{
+  "schema_version": "ct143-independent-review-result-v1",
+  "reviewed_at": "2026-08-27T05:14:59Z",
+  "reviewer": "codex-testing-ct143-independent",
+  "session": "CT143-INDEPENDENT-PRODUCTION-REVIEW-20260827",
+  "decision": "PASS",
+  "scope": "bounded_independent_nonsecurity_production_uat",
+  "findings": {"P0": 0, "P1": 0, "P2": 0, "P3": 1},
+  "production_evidence_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/production-uat-review-1.json",
+  "seal": {
+    "file_count": 567,
+    "initial": "passed",
+    "final": "passed",
+    "aggregate_sha256": "5a85c98c722bbb1aa78f29162d668f4b1ef8f9b213cd7155e22fa48a7709640e",
+    "manifest_raw_sha256": "973d202aa15857a57ead20ae7ec73f3db18a8079aa0bd8b975a778236ebe2064"
+  },
+  "gates": {
+    "selected_file_executions": 11,
+    "selected_tests_passed": 17,
+    "typecheck_workspaces_passed": 11,
+    "build": "passed",
+    "environment_validator": "passed",
+    "production_reload_readback": "passed",
+    "development_separation": "passed_read_only"
+  },
+  "control_tower": {
+    "identifier": "CT-143",
+    "stable_id": "1f065874-a1d3-433b-ae4e-63b9d69c8d4d",
+    "revision": 7,
+    "status": "In Progress",
+    "milestone": "S4 — Testing",
+    "mutated_by_reviewer": false
+  },
+  "claim_boundary": "nonsecurity production positive-path evidence only"
+}

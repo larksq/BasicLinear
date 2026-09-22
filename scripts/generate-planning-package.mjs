@@ -26,7 +26,7 @@ const issues = [
     done: {
       output: ['A versioned matched-task reference baseline and environment record exist.'],
       quality: ['Timing, interaction, error, start/end, repetition, and limitation fields are complete.'],
-      outcome: ['O-002 remains pending until OpenLinear measurements and the complete observation window exist.'],
+      outcome: ['O-002 remains pending until BasicLinear measurements and the complete observation window exist.'],
     },
   },
   {
@@ -39,7 +39,7 @@ const issues = [
     implementation_ready: false,
     done: {
       output: ['An accepted public name, license, clean-room policy, provenance template, and review owner exist.'],
-      quality: ['The decision cites qualified review boundaries and a complete dependency and asset policy.'],
+      quality: ['The decision cites a complete technical dependency, asset, and provenance policy.'],
       outcome: ['O-005 remains pending until the release-candidate audit window is complete.'],
     },
   },
@@ -165,7 +165,7 @@ const issues = [
     implementation_ready: false,
     done: {
       output: ['The source, build, identity, license, attribution, provenance, privacy, contribution, security, and reproducibility audit is complete.'],
-      quality: ['Every mandatory row has an accountable reviewer and no private or unexplained artifact remains.'],
+      quality: ['Every mandatory row has technical evidence and no private or unexplained artifact remains.'],
       outcome: ['O-005 remains pending until its complete observation window and release decision.'],
     },
   },

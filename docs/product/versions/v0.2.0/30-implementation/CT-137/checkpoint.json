@@ -1,0 +1,239 @@
+{
+  "schema_version": "1.0",
+  "stage": "implementation.checkpoint",
+  "status": "independent_review_passed_done",
+  "issue": {
+    "plan_id": "I-205",
+    "local_issue_id": "CT-137",
+    "stable_id": "ae2cdebe-f10f-4cd8-bcac-9be2ff1d9157",
+    "milestone": "S3 — Implementation",
+    "accepted": true,
+    "blocked": false,
+    "requirement_refs": ["R-207", "R-208", "R-215", "R-216"],
+    "acceptance_refs": ["P-T205"],
+    "outcome_refs": ["O-202", "O-204"]
+  },
+  "task_readback": {
+    "revision": 9,
+    "status": "Done",
+    "milestone": "S3 — Implementation",
+    "dependency_readback": [
+      {"issue":"CT-135","status":"Done","revision":7},
+      {"issue":"CT-136","status":"Done","revision":15}
+    ],
+    "projection": "disabled_not_synced",
+    "start_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T09-10-36-327Z-ced5d506-b486-445c-98f0-66a10505969e.json",
+    "start_backup_sha256": "48a4b2a23d764c91f5313e80cadfb053ee538bd5cd281eb0c1a9b9c01a095d30",
+    "output_checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T09-35-41-115Z-a6178191-4f28-4d3a-a2a3-c86093be2279.json",
+    "output_checkpoint_backup_sha256": "5816ed1ddc82720bf8944af6d3d78df6b3c5e2c22fdec320c8a7739a8f4fb772",
+    "review1_failure_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T09-54-05-990Z-80040fd6-2da3-4582-bc71-f19c47c409d5.json",
+    "review1_failure_backup_sha256": "2d6eeba5a30a47431cec21a6950b6b19b9bb4a6cdce93776d5cc831bcc71266c",
+    "review2_failure_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T10-24-46-845Z-d2f56c83-e3ed-4e1b-9187-5e923bbe8722.json",
+    "review2_failure_backup_sha256": "621d0dc06f73f14c6e978240f32a35d40126d6a380645aa7b9e05078c303c2f6",
+    "review3_failure_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T10-53-07-221Z-74bbe7a3-08bb-4347-886f-536190d8504f.json",
+    "review3_failure_backup_sha256": "c38ad49dbbc3fb8faaed94affc3eccd3b66a2254be7116497eb59515af9da47f",
+    "review4_dispatch_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T11-04-45-516Z-0a9bc502-e879-42f2-b3c1-49c1afdef3b3.json",
+    "review4_dispatch_backup_sha256": "dcb249a7399785bb29e612bba96bde1803f02a60a6c637ecbdd123b1248ce4b2",
+    "completion_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T11-39-08-848Z-a61a9e9c-ca73-4148-91ba-4f8b7c09fa79.json",
+    "completion_backup_sha256": "15c0fc0eb14daec1c340da16e021a92218eabf8bf6986fe07fde63453d8f1170"
+  },
+  "entry": {
+    "operating_profile": "project-local-v0.8",
+    "authority": "current user goal, standing independent-review authorization, and fresh project-local CT-137/CT-135/CT-136 readback",
+    "linear_projection": "disabled_not_synced",
+    "linear_used": false
+  },
+  "sessions": [
+    {
+      "session_id": "CT-137-S1",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating",
+      "allowed_paths": [
+        ".env.example",
+        "firestore.rules",
+        "packages/hosted/",
+        "apps/hosted-service/",
+        "apps/web/src/hosted-api.ts",
+        "apps/web/src/hosted-app.tsx",
+        "apps/web/src/hosted.css",
+        "apps/web/tests/",
+        "docs/product/versions/v0.2.0/30-implementation/CT-137/"
+      ],
+      "outputs": [
+        ".env.example",
+        "apps/hosted-service/src/hosted-config.ts",
+        "apps/hosted-service/src/index.ts",
+        "apps/hosted-service/tests/hosted-config.test.ts",
+        "apps/web/src/hosted-api.ts",
+        "apps/web/src/hosted-app.tsx",
+        "apps/web/src/hosted.css",
+        "apps/web/tests/hosted-collaboration.test.ts",
+        "firestore.rules",
+        "packages/hosted/src/collaboration-service.ts",
+        "packages/hosted/src/firebase-collaboration-repository.ts",
+        "packages/hosted/src/hosted-http.ts",
+        "packages/hosted/src/index.ts",
+        "packages/hosted/tests/collaboration-http.test.ts",
+        "packages/hosted/tests/collaboration-service.test.ts",
+        "packages/hosted/tests/firebase-collaboration-repository.test.ts",
+        "packages/hosted/tests/firestore-rules.emulator.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-137/collaboration-contract.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-137/review.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-137/checkpoint.json"
+      ]
+    },
+    {
+      "session_id": "CT-137-S2",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating_remediation",
+      "authority": "Independent Review 1 FAIL and standing user authorization",
+      "allowed_paths": [
+        "apps/web/src/hosted-app.tsx",
+        "apps/web/tests/hosted-collaboration.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-137/"
+      ],
+      "findings_addressed": [
+        "P1 manifest_incomplete",
+        "P2 removed_assignee_owner_recovery",
+        "P2 comment_edit_focus",
+        "P3 unchanged_task_feedback"
+      ],
+      "outputs": [
+        "apps/web/src/hosted-app.tsx",
+        "apps/web/tests/hosted-collaboration.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-137/collaboration-contract.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-137/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-137/review.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-137/review-request.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-137/review-request-2.json"
+      ]
+    },
+    {
+      "session_id": "CT-137-S3",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating_remediation",
+      "authority": "Independent Review 2 FAIL and standing user authorization",
+      "allowed_paths": [
+        "apps/web/src/hosted-app.tsx",
+        "apps/web/tests/hosted-collaboration.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-137/"
+      ],
+      "findings_addressed": [
+        "P1 hosted_build_manifest_incomplete",
+        "P2 comment_save_focus_race"
+      ],
+      "outputs": [
+        "apps/web/src/hosted-app.tsx",
+        "apps/web/tests/hosted-collaboration.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-137/collaboration-contract.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-137/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-137/review.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-137/review-request-2.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-137/review-request-3.json"
+      ]
+    },
+    {
+      "session_id": "CT-137-S4",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating_remediation",
+      "authority": "Independent Review 3 FAIL and standing user authorization",
+      "allowed_paths": [
+        "apps/web/package.json",
+        "apps/web/vite.config.ts",
+        "apps/web/tests/hosted-foundation.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-137/"
+      ],
+      "findings_addressed": [
+        "P1 cross_entry_build_manifest_omission"
+      ],
+      "outputs": [
+        "apps/web/package.json",
+        "apps/web/vite.config.ts",
+        "apps/web/tests/hosted-foundation.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-137/collaboration-contract.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-137/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-137/review.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-137/review-request-3.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-137/review-request-4.json"
+      ]
+    }
+  ],
+  "checks": [
+    {"name":"focused_collaboration_after_review2","command":"npx vitest run packages/hosted/tests/collaboration-service.test.ts packages/hosted/tests/collaboration-http.test.ts packages/hosted/tests/firebase-collaboration-repository.test.ts apps/web/tests/hosted-collaboration.test.ts --config vitest.config.ts","result":"4 files / 17 tests passed; post-pending Save-focus behavior directly covered"},
+    {"name":"firestore_emulator_after_review2","command":"npm run test:hosted-rules","result":"1 file / 6 isolation groups passed with clean shutdown"},
+    {"name":"full_regression_after_review2","command":"npm test","result":"87 files / 583 tests passed"},
+    {"name":"typecheck_after_review2","command":"npm run typecheck","result":"10/10 workspace typechecks passed"},
+    {"name":"build_after_review2","command":"npm run build","result":"all workspaces plus local and hosted web entries built; 1,970 modules; 7/7 hosted references resolve"},
+    {"name":"runtime_audit_after_review2","command":"npm run audit:hosted-runtime","result":"online supported-runtime audit passed with 0 vulnerabilities"},
+    {"name":"diff_json_check_after_review2","command":"git diff --check and CT-137 JSON parse","result":"passed"},
+    {"name":"focused_collaboration_after_review3","command":"npx vitest run packages/hosted/tests/collaboration-service.test.ts packages/hosted/tests/collaboration-http.test.ts packages/hosted/tests/firebase-collaboration-repository.test.ts apps/web/tests/hosted-collaboration.test.ts apps/web/tests/hosted-foundation.test.ts --config vitest.config.ts","result":"5 files / 23 tests passed; includes exact no-write local-entry mutation and byte-identical hosted output proof"},
+    {"name":"firestore_emulator_after_review3","command":"npm run test:hosted-rules","result":"1 file / 6 isolation groups passed with clean shutdown"},
+    {"name":"full_regression_after_review3","command":"npm test","result":"87 files / 584 tests passed"},
+    {"name":"typecheck_after_review3","command":"npm run typecheck","result":"10/10 workspace typechecks passed"},
+    {"name":"build_after_review3","command":"npm run build plus generated hosted-reference probe","result":"all workspaces built; local graph transformed 1,953 modules, isolated hosted graph transformed 30 modules, and all 3/3 hosted references resolve without local/editor preload"},
+    {"name":"runtime_audit_after_review3","command":"npm run audit:hosted-runtime","result":"online supported-runtime audit passed with 0 vulnerabilities after one transient TLS retry"},
+    {"name":"diff_json_check_after_review3","command":"git diff --check and CT-137 JSON parse","result":"passed"}
+  ],
+  "review_history": [
+    {
+      "round": 1,
+      "reviewer": "codex-subagent:/root/ct137_independent_review",
+      "result": "FAIL",
+      "seal": "62/62 before and after",
+      "findings": ["P1 manifest incomplete", "P2 removed assignee invisible to owner", "P2 comment editor name/focus loss", "P3 unchanged save misclassified"],
+      "backend_adversarial": "passed"
+    },
+    {
+      "round": 2,
+      "reviewer": "codex-subagent:/root/ct137_independent_review",
+      "result": "FAIL",
+      "seal": "70/70 before and after",
+      "findings": ["P1 direct hosted build inputs omitted", "P2 Save focus restoration raced disabled button"],
+      "review1_counterexamples": "all other cases closed",
+      "backend_adversarial": "passed"
+    },
+    {
+      "round": 3,
+      "reviewer": "codex-subagent:/root/ct137_independent_review",
+      "result": "FAIL",
+      "seal": "77/77 before and after",
+      "findings": ["P1 coupled local/hosted Vite graph left hosted output dependent on unsealed local entry inputs"],
+      "review1_review2_counterexamples": "all functional and accessibility cases closed",
+      "backend_adversarial": "passed"
+    },
+    {
+      "round": 4,
+      "reviewer": "codex-subagent:/root/ct137_independent_review",
+      "result": "PASS",
+      "seal": "78/78 before and after",
+      "findings": [],
+      "historical_counterexamples": "all closed",
+      "backend_adversarial": "60/60 signed-record fields, 6/6 key reuse, 6/6 replay after removal, and rejected-mutation atomicity passed",
+      "build_provenance": "potent local index/main mutations changed local output but left the hosted 30-module graph and all 3 hosted artifacts byte-identical",
+      "done_eligibility": "CT-137 implementation output only"
+    }
+  ],
+  "contracts": {
+    "authorization": "shared CT-135 authorization before every operation plus exact active membership reread inside each mutation transaction",
+    "assignment": "zero or one active exact-workspace member; owner assignment; assigned-member task editing",
+    "comments": "plain text; immutable author/createdAt; author-or-owner edits; body-free soft-delete tombstones",
+    "concurrency": "bounded HMAC-bound idempotency plus optimistic expected revisions and read-before-write transactions",
+    "privacy": "no comment bodies in events, activity, errors, or audits; direct Firestore collaboration access denied",
+    "measurement": "exact O-202 issue/user linkage; O-202 and O-204 remain baseline_needed",
+    "authority_separation": "Firebase hosted authority remains separate from local SQLite with no upload or synchronization",
+    "build_provenance": "Production local and hosted entries compile as separate Vite input graphs. The local pass clears dist; the hosted pass preserves the local output but cannot load local index.html/main.tsx. A no-write adversarial build proves that an in-memory local-entry mutation is never applied and leaves every hosted artifact byte-identical."
+  },
+  "claims": {
+    "implementation_output_done": true,
+    "independent_review_passed": true,
+    "pt205_qualified": false,
+    "production_deployed": false,
+    "release_approved": false,
+    "legal_privacy_security_approved": false,
+    "o202_achieved": false,
+    "o204_achieved": false
+  },
+  "next": {
+    "action": "begin CT-138 server-owned trial, Stripe subscription, seat-quantity, entitlement, and Free fallback implementation; preserve all CT-137 contracts and outcome boundaries"
+  }
+}

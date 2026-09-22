@@ -16,3 +16,27 @@ coverage/
 # Operator exports and backups can contain private workspace data or credentials.
 /backups/
 /.local-data/
+.vercel
+
+# Deployment caches, review exports, and machine-local credentials are never source.
+.firebase/
+/outputs/
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+id_rsa
+id_ed25519
+credentials.json
+application_default_credentials.json
+*service-account*.json
+*service_account*.json
+*-firebase-adminsdk-*.json
+*.sqlite
+*.sqlite3
+*.db
+*.sqlite-*
+*.sqlite3-*
+*.db-*
+*.har

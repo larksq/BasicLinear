@@ -1,4 +1,4 @@
-import type { IssueRelationType } from '@openlinear/contracts';
+import type { IssueRelationType } from '@basiclinear/contracts';
 
 export const issueHierarchyCreateDirections = ['parent', 'sub_issue'] as const;
 export const issuePeerCreateDirections = [

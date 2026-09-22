@@ -50,15 +50,15 @@ import {
   updateIssue,
   verifyDatabaseFile,
   writeTransaction,
-  type OpenLinearDatabase,
-} from '@openlinear/db/sqlite';
+  type BasicLinearDatabase,
+} from '@basiclinear/db/sqlite';
 import {
   buildWorkspaceDigests,
   canonicalSha256,
   canonicalStringify,
   sortWorkspaceCollections,
 } from '../src/canonical.js';
-import { defaultIssueViewState } from '@openlinear/domain';
+import { defaultIssueViewState } from '@basiclinear/domain';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import {
   createLegacyTransferFixture,
@@ -67,16 +67,16 @@ import {
 } from './legacy-transfer-fixture.js';
 
 const bootstrap = {
-  email: 'owner@openlinear.local',
+  email: 'owner@basiclinear.local',
   displayName: 'Owner',
-  workspaceName: 'OpenLinear',
-  workspaceSlug: 'openlinear',
+  workspaceName: 'BasicLinear',
+  workspaceSlug: 'basiclinear',
   teamName: 'Personal',
   teamKey: 'OL',
 };
 
 describe('embedded SQLite repository', () => {
-  let db: OpenLinearDatabase;
+  let db: BasicLinearDatabase;
   let ids: Awaited<ReturnType<typeof bootstrapInstance>>;
 
   beforeEach(async () => {
@@ -584,7 +584,7 @@ describe('SQLite canonical migration and recovery', () => {
   });
 
   it('preflights the locked legacy fixture before creating an ambiguous target', async () => {
-    const directory = mkdtempSync(join(tmpdir(), 'openlinear-legacy-transfer-test-'));
+    const directory = mkdtempSync(join(tmpdir(), 'basiclinear-legacy-transfer-test-'));
     directories.push(directory);
     const fixture = createLegacyTransferFixture();
     const sourceBefore = `${canonicalStringify(fixture)}\n`;
@@ -595,14 +595,14 @@ describe('SQLite canonical migration and recovery', () => {
     const sourceDocument = JSON.parse(sourceFileBefore.toString('utf8')) as unknown;
 
     const ambiguousDirectory = join(directory, 'ambiguous');
-    const ambiguousTarget = join(ambiguousDirectory, 'openlinear.sqlite3');
+    const ambiguousTarget = join(ambiguousDirectory, 'basiclinear.sqlite3');
     await expect(importWorkspaceExportFile(sourceDocument, ambiguousTarget, {}))
       .rejects.toMatchObject({ code: 'AMBIGUOUS_SCOPE' });
     expect(existsSync(ambiguousDirectory)).toBe(false);
     expect(readFileSync(sourcePath).equals(sourceFileBefore)).toBe(true);
     expect(`${canonicalStringify(fixture)}\n`).toBe(sourceBefore);
 
-    const selectedTarget = join(directory, 'selected', 'openlinear.sqlite3');
+    const selectedTarget = join(directory, 'selected', 'basiclinear.sqlite3');
     const imported = await importWorkspaceExportFile(sourceDocument, selectedTarget, {
       workspaceId: legacyTransferFixtureIds.workspace,
     });
@@ -762,9 +762,9 @@ describe('SQLite canonical migration and recovery', () => {
   });
 
   it('persists across restart and verifies online backup and atomic restore', async () => {
-    const directory = mkdtempSync(join(tmpdir(), 'openlinear-sqlite-test-'));
+    const directory = mkdtempSync(join(tmpdir(), 'basiclinear-sqlite-test-'));
     directories.push(directory);
-    const databasePath = join(directory, 'openlinear.sqlite3');
+    const databasePath = join(directory, 'basiclinear.sqlite3');
     const backupPath = join(directory, 'backup.sqlite3');
     const restoredPath = join(directory, 'restored.sqlite3');
     const corruptPath = join(directory, 'corrupt.sqlite3');
@@ -810,7 +810,7 @@ describe('SQLite canonical migration and recovery', () => {
   });
 
   it('refuses a newer schema version without mutating the database', () => {
-    const directory = mkdtempSync(join(tmpdir(), 'openlinear-sqlite-version-test-'));
+    const directory = mkdtempSync(join(tmpdir(), 'basiclinear-sqlite-version-test-'));
     directories.push(directory);
     const databasePath = join(directory, 'future.sqlite3');
     const future = new DatabaseSync(databasePath);

@@ -3,7 +3,7 @@ import type {
   IssueViewGrouping,
   IssueViewProperty,
   IssueViewState,
-} from '@openlinear/contracts';
+} from '@basiclinear/contracts';
 
 export const issueViewProperties = [
   'priority',

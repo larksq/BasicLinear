@@ -1,7 +1,7 @@
 import { constants, accessSync, chmodSync, lstatSync, mkdirSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { DatabaseSync } from 'node:sqlite';
-import { AppError } from '@openlinear/domain';
+import { AppError } from '@basiclinear/domain';
 
 const schemaVersion = 2;
 
@@ -232,7 +232,7 @@ export interface LocalSession {
   csrfTokenHashes: string[];
 }
 
-export class OpenLinearDatabase {
+export class BasicLinearDatabase {
   readonly sqlite: DatabaseSync;
   readonly path: string;
   readonly sessions = new Map<string, LocalSession>();
@@ -299,7 +299,7 @@ function prepareDatabasePath(path: string): void {
     if (!isErrno(error, 'ENOENT')) {
       throw new AppError(
         'SERVICE_UNAVAILABLE',
-        'The OpenLinear database directory is unavailable or not writable.',
+        'The BasicLinear database directory is unavailable or not writable.',
         503,
         { field: 'databasePath', cause: error },
       );
@@ -335,7 +335,7 @@ function asDatabaseOpenError(error: unknown): AppError {
   if (message.includes('not a database') || message.includes('malformed') || code === 'ERR_SQLITE_CORRUPT') {
     return new AppError(
       'SERVICE_UNAVAILABLE',
-      'The OpenLinear database is corrupt. Restore a verified backup before starting.',
+      'The BasicLinear database is corrupt. Restore a verified backup before starting.',
       503,
       { field: 'databasePath', cause: error },
     );
@@ -343,14 +343,14 @@ function asDatabaseOpenError(error: unknown): AppError {
   if (message.includes('readonly') || message.includes('unable to open') || code === 'ERR_SQLITE_CANTOPEN') {
     return new AppError(
       'SERVICE_UNAVAILABLE',
-      'The OpenLinear database cannot be opened for writing. Check the data-directory permissions.',
+      'The BasicLinear database cannot be opened for writing. Check the data-directory permissions.',
       503,
       { field: 'databasePath', cause: error },
     );
   }
   return new AppError(
     'SERVICE_UNAVAILABLE',
-    'The OpenLinear database could not be opened or migrated.',
+    'The BasicLinear database could not be opened or migrated.',
     503,
     { field: 'databasePath', cause: error },
   );
@@ -382,11 +382,11 @@ export function asSqliteError(error: unknown): AppError {
   return new AppError('INTERNAL_ERROR', 'The operation could not be completed.', 500, { cause: error });
 }
 
-export function createDatabase(path = ':memory:'): OpenLinearDatabase {
-  return new OpenLinearDatabase(path);
+export function createDatabase(path = ':memory:'): BasicLinearDatabase {
+  return new BasicLinearDatabase(path);
 }
 
-export async function databaseReady(db: OpenLinearDatabase): Promise<boolean> {
+export async function databaseReady(db: BasicLinearDatabase): Promise<boolean> {
   try {
     const integrity = db.sqlite.prepare('PRAGMA quick_check').get() as { quick_check?: string } | undefined;
     const version = db.sqlite.prepare('PRAGMA user_version').get() as { user_version?: number } | undefined;
@@ -396,7 +396,7 @@ export async function databaseReady(db: OpenLinearDatabase): Promise<boolean> {
   }
 }
 
-export function writeTransaction<T>(db: OpenLinearDatabase, callback: () => T): T {
+export function writeTransaction<T>(db: BasicLinearDatabase, callback: () => T): T {
   return db.write(callback);
 }
 

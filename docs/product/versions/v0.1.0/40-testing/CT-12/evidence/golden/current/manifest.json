@@ -1,0 +1,1181 @@
+{
+  "schema_version": "ct12-current-golden-manifest-v3",
+  "captured_at": "2026-08-23T01:45:05.050Z",
+  "candidate": {
+    "product_revision": "e1299af1bd06f7438f5010c6f6c030760c5a1dfb",
+    "product_tree": "ce6e21f1b0436e6afa1d11b1fc3f6ff471903bb3",
+    "parent_revision": "7becafff8248b03711d48c8354fbdedcf263a2bf",
+    "browser": "Chrome 150.0.7871.184",
+    "platform": "macOS",
+    "loaded_asset": "assets/index-CpxWfAtI.js",
+    "runtime": "isolated loopback Node 24 process with one schema-2 SQLite file",
+    "synthetic_data_only": true
+  },
+  "capture_contract": {
+    "viewports": {
+      "desktop": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "mobile": {
+        "width": 390,
+        "height": 844,
+        "devicePixelRatio": 1
+      }
+    },
+    "appearances": [
+      "light",
+      "dark"
+    ],
+    "required_screens": [
+      "projects-list",
+      "my-work",
+      "issues-list",
+      "saved-views-library",
+      "workflow-statuses",
+      "project-overview",
+      "project-milestones",
+      "project-activity",
+      "issues-board",
+      "issue-detail-contextual",
+      "issue-detail-direct-mobile",
+      "issue-detail-direct-mobile-properties-open",
+      "issue-create-compact",
+      "issue-create-expanded",
+      "command-palette-empty",
+      "command-palette-results",
+      "query-error-projects",
+      "query-error-issues",
+      "query-error-detail-subsections",
+      "local-service-unavailable",
+      "local-service-reconnected",
+      "issue-detail-content-draft",
+      "issue-detail-comment-draft",
+      "milestone-purge-confirmation",
+      "milestone-purge-result",
+      "project-purge-confirmation",
+      "project-purge-result",
+      "issue-archive-undo",
+      "project-archive-undo",
+      "milestone-archive-undo"
+    ],
+    "settled_after_loading": true,
+    "format": "jpeg",
+    "scale": "css viewport"
+  },
+  "structured_audit_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/current-visual-audit.json",
+  "performance_evidence_ref": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/performance-current.json",
+  "private_validation": {
+    "ledgerRef": ".control-tower/evidence/CT-12/golden-e1299af/capture-progress-e1299af.json",
+    "ledgerSha256": "676b1d4c58d50a245f9256af3f85f8458e2ac0f2a50935487ce6d5ffc55757fa",
+    "ledgerBytes": 82081,
+    "validationRef": ".control-tower/evidence/CT-12/golden-e1299af/validation-e1299af.json",
+    "validationSha256": "92a0d421e047d37c050d1e59bd6a5d5c6af2bd60feed868ce43adf7eade04a5f",
+    "validationBytes": 1206,
+    "contactSheetReviewRef": ".control-tower/evidence/CT-12/golden-e1299af/contact-sheet-review-e1299af.json",
+    "contactSheetReviewSha256": "e796e085600ca2f98ef816b0922275d512a7430eec3407b5d20db35dab5eca4d",
+    "contactSheetReviewBytes": 1960,
+    "privateMode": "0600"
+  },
+  "summary": {
+    "required_named_captures": 60,
+    "current_named_captures": 60,
+    "current_light": 30,
+    "current_dark": 30,
+    "current_desktop": 56,
+    "current_mobile": 4,
+    "total_bytes": 3580671,
+    "combined_image_digest": "0208b8474bdae382ff053fda6eb33d1259c56be213ed71eee85fffcade6959d2",
+    "structured_failures": 0,
+    "visually_inspected": 60,
+    "visual_findings": 0,
+    "P_T20": "exact_candidate_golden_pass; performance_pass_bound_by_performance_evidence_ref; live_system_bidirectional_open"
+  },
+  "captures": [
+    {
+      "sequence": 1,
+      "theme": "light",
+      "screen": "projects-list",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/projects-list-1440x900.jpg",
+      "bytes": 48951,
+      "sha256": "ebddfc7f9147f0aae799d7dc9c7f78750078db3d4efef86061f3baebc632849e",
+      "url": "http://127.0.0.1:4288/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress",
+      "h1": [
+        "Projects"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 2,
+      "theme": "light",
+      "screen": "my-work",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/my-work-1440x900.jpg",
+      "bytes": 106302,
+      "sha256": "1f45432658e7cc75e87096994ce24f5c0158dc3fe0960c3853cbeebe1bde86ae",
+      "url": "http://127.0.0.1:4288/?view=my-work&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "h1": [
+        "My work"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 3,
+      "theme": "light",
+      "screen": "issues-list",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issues-list-1440x900.jpg",
+      "bytes": 106475,
+      "sha256": "13f88a57c033cf44f7b6880d06c73e544668467dab8f099c3fea4154ae0db541",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "h1": [
+        "Issues"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 4,
+      "theme": "light",
+      "screen": "saved-views-library",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/saved-views-library-1440x900.jpg",
+      "bytes": 39615,
+      "sha256": "3881337c80c6ade3622ad3f7330813a0f2a1a994ff2c66ecbfe170dc8dc8b657",
+      "url": "http://127.0.0.1:4288/?view=views",
+      "h1": [
+        "Views"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 5,
+      "theme": "light",
+      "screen": "workflow-statuses",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/workflow-statuses-1440x900.jpg",
+      "bytes": 35602,
+      "sha256": "606f25ca8839e81d38662839de2dc5a26cab737120d4a4c4c7cbb3ee35673c85",
+      "url": "http://127.0.0.1:4288/?view=workflow",
+      "h1": [
+        "Workflow"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 6,
+      "theme": "light",
+      "screen": "project-overview",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/project-overview-1440x900.jpg",
+      "bytes": 61958,
+      "sha256": "17bd9d9993b352f32d8aa3b770416d06f0ab02701d2e03e4ed704fce642fc522",
+      "url": "http://127.0.0.1:4288/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress&project=a8eb020b-34f2-42d7-85f0-a84ba4939165&projectTab=overview",
+      "h1": [
+        "BasicLinear v0.1 release"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 7,
+      "theme": "light",
+      "screen": "project-milestones",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/project-milestones-1440x900.jpg",
+      "bytes": 61958,
+      "sha256": "17bd9d9993b352f32d8aa3b770416d06f0ab02701d2e03e4ed704fce642fc522",
+      "url": "http://127.0.0.1:4288/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress&project=a8eb020b-34f2-42d7-85f0-a84ba4939165&projectTab=overview",
+      "h1": [
+        "BasicLinear v0.1 release"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 8,
+      "theme": "light",
+      "screen": "project-activity",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/project-activity-1440x900.jpg",
+      "bytes": 75423,
+      "sha256": "738647f32969fe11489003d16a4345aa662989cd0cbb79e6afdbcf6f9fa1a81a",
+      "url": "http://127.0.0.1:4288/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress&project=a8eb020b-34f2-42d7-85f0-a84ba4939165&projectTab=activity",
+      "h1": [
+        "BasicLinear v0.1 release"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 9,
+      "theme": "light",
+      "screen": "issues-board",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issues-board-1440x900.jpg",
+      "bytes": 82148,
+      "sha256": "0775d954d7eb99f2394f101b1edea736c8710efe13e612ca0d232aa8277d19ab",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "h1": [
+        "Issues"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 10,
+      "theme": "light",
+      "screen": "issue-detail-contextual",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-detail-contextual-1440x900.jpg",
+      "bytes": 59111,
+      "sha256": "d345544e8573daeb288c3c8cf2b83c30e63cdb4415601d5097f09177989cac1f",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+      "h1": [
+        "Stop issue board density cards from clipping titles"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 11,
+      "theme": "light",
+      "screen": "issue-detail-direct-mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-detail-direct-mobile-390x844.jpg",
+      "bytes": 24865,
+      "sha256": "4ed37d9115cd3bc517f8f2087646dbe5b53a930f590e88be65df58cbe67be752",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+      "h1": [
+        "Stop issue board density cards from clipping titles"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 12,
+      "theme": "light",
+      "screen": "issue-detail-direct-mobile-properties-open",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-detail-direct-mobile-properties-open-390x844.jpg",
+      "bytes": 23723,
+      "sha256": "497a581bff2f0f59c7c763ef538ac7f48743eb12ffb90b249f086c1f4af36de2",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+      "h1": [
+        "Stop issue board density cards from clipping titles"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 13,
+      "theme": "light",
+      "screen": "issue-create-compact",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-create-compact-1440x900.jpg",
+      "bytes": 80204,
+      "sha256": "e26b96fc222a285d30bafe14d9b6a3d86448dab43cb55fcbb814a3e5e136548e",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "h1": [
+        "Issues"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 14,
+      "theme": "light",
+      "screen": "issue-create-expanded",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-create-expanded-1440x900.jpg",
+      "bytes": 73671,
+      "sha256": "231c62b4b3959eba120abbee8180fb918092a47ca84451fea13524dd4928fc7b",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "h1": [
+        "Issues"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 15,
+      "theme": "light",
+      "screen": "command-palette-empty",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/command-palette-empty-1440x900.jpg",
+      "bytes": 79071,
+      "sha256": "092456f7311c2207406f9fd4914805f18954e9df76e6f99cf2770aaa5779a11b",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "h1": [
+        "Issues"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 16,
+      "theme": "light",
+      "screen": "command-palette-results",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/command-palette-results-1440x900.jpg",
+      "bytes": 78399,
+      "sha256": "7479ea1c307aa2d2d6d3d84fd9c7764ca1700d62df92a749d7c4c5849f993994",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "h1": [
+        "Issues"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 17,
+      "theme": "light",
+      "screen": "query-error-projects",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/query-error-projects-1440x900.jpg",
+      "bytes": 32482,
+      "sha256": "30b9a1ad35d7cd20b7df687235e5fadf619756b4870730828ba2eea0b2b8c68b",
+      "url": "http://127.0.0.1:4289/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress&q=ct12-project-fault-e129-light",
+      "h1": [
+        "Projects"
+      ],
+      "alerts": 1
+    },
+    {
+      "sequence": 18,
+      "theme": "light",
+      "screen": "query-error-issues",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/query-error-issues-1440x900.jpg",
+      "bytes": 33606,
+      "sha256": "913ad0f526d4d55eae3728023f6e6cd37c3b3aa25816d2fd817eaa5e13b01b75",
+      "url": "http://127.0.0.1:4289/?view=issues&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&q=ct12-issue-fault-e129-light",
+      "h1": [
+        "Issues"
+      ],
+      "alerts": 1
+    },
+    {
+      "sequence": 19,
+      "theme": "light",
+      "screen": "query-error-detail-subsections",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/query-error-detail-subsections-1440x900.jpg",
+      "bytes": 62316,
+      "sha256": "ef270e5805661197c53643ce7e0c31fc00b2202ec64268128a85e8fb2b1ec854",
+      "url": "http://127.0.0.1:4289/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+      "h1": [
+        "Stop issue board density cards from clipping titles"
+      ],
+      "alerts": 4
+    },
+    {
+      "sequence": 20,
+      "theme": "light",
+      "screen": "local-service-unavailable",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/local-service-unavailable-1440x900.jpg",
+      "bytes": 57076,
+      "sha256": "86622e6381ae82318303d5515fc0c0cd463e87565c55399c2112716bdfa0e8b2",
+      "url": "http://127.0.0.1:4289/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress",
+      "h1": [
+        "Projects"
+      ],
+      "alerts": 1
+    },
+    {
+      "sequence": 21,
+      "theme": "light",
+      "screen": "local-service-reconnected",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/local-service-reconnected-1440x900.jpg",
+      "bytes": 54403,
+      "sha256": "d5f4f01dca2e96e8fa223140dd8f5067ca8890bdfe84f706d7c37d8ebe007b70",
+      "url": "http://127.0.0.1:4289/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress",
+      "h1": [
+        "Projects"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 22,
+      "theme": "light",
+      "screen": "issue-detail-content-draft",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-detail-content-draft-1440x900.jpg",
+      "bytes": 65233,
+      "sha256": "b3b2390376f39099c5bcb7c665185274153ef21f6ff51f68b24be6bb6ced2af7",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+      "h1": [
+        "Stop issue board density cards from clipping titles"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 23,
+      "theme": "light",
+      "screen": "issue-detail-comment-draft",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-detail-comment-draft-1440x900.jpg",
+      "bytes": 61901,
+      "sha256": "49556b5ff0d348a17e227025e72aa8c1ebda4eb78c2eea6abef8b8b4a9a9034d",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+      "h1": [
+        "Stop issue board density cards from clipping titles"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 24,
+      "theme": "light",
+      "screen": "milestone-purge-confirmation",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/milestone-purge-confirmation-1440x900.jpg",
+      "bytes": 67713,
+      "sha256": "6b4c5398705e69ce2c358c0324398c6e9e7a8887181633ad5a3d86b3786b62db",
+      "url": "http://127.0.0.1:4288/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress&project=a8eb020b-34f2-42d7-85f0-a84ba4939165&projectTab=overview",
+      "h1": [
+        "BasicLinear v0.1 release"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 25,
+      "theme": "light",
+      "screen": "milestone-purge-result",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/milestone-purge-result-1440x900.jpg",
+      "bytes": 67773,
+      "sha256": "8c8af7770a05388c59150ab70ed1da2a5152ed81079ab2ba9ccf4f8f42c4247f",
+      "url": "http://127.0.0.1:4288/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress&project=a8eb020b-34f2-42d7-85f0-a84ba4939165&projectTab=overview",
+      "h1": [
+        "BasicLinear v0.1 release"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 26,
+      "theme": "light",
+      "screen": "project-purge-confirmation",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/project-purge-confirmation-1440x900.jpg",
+      "bytes": 55483,
+      "sha256": "06f774c26fc11b6bd2f1ba0d94dfcc66151fe7a3645629c2b0cb3fa2a2541b17",
+      "url": "http://127.0.0.1:4288/?view=projects&archive=archived&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress&project=<disposable-light-fixture>&projectTab=overview",
+      "h1": [
+        "CT12 e129 Light project purge target"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 27,
+      "theme": "light",
+      "screen": "project-purge-result",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/project-purge-result-1440x900.jpg",
+      "bytes": 38301,
+      "sha256": "292624de306247e2ffe4f8a76dd8173d90034b6243e604379857f601022a3ce4",
+      "url": "http://127.0.0.1:4288/?view=projects&archive=archived&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress",
+      "h1": [
+        "Projects"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 28,
+      "theme": "light",
+      "screen": "issue-archive-undo",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/issue-archive-undo-1440x900.jpg",
+      "bytes": 53994,
+      "sha256": "46b8c5b45d9a4b11f9227f152128bf019b13d3c1db0cf6dc257e06bb884591ea",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+      "h1": [
+        "Stop issue board density cards from clipping titles"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 29,
+      "theme": "light",
+      "screen": "project-archive-undo",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/project-archive-undo-1440x900.jpg",
+      "bytes": 46385,
+      "sha256": "29864cec320c9975feac310974ef6f189c121c41b35b1d5f744da39f9e475945",
+      "url": "http://127.0.0.1:4288/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress",
+      "h1": [
+        "Projects"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 30,
+      "theme": "light",
+      "screen": "milestone-archive-undo",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/light/milestone-archive-undo-1440x900.jpg",
+      "bytes": 62394,
+      "sha256": "c3437caf698066eb64a6f24d4ae9c75337df9d20ab286598c84a275a09b5ac9b",
+      "url": "http://127.0.0.1:4288/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress&project=a8eb020b-34f2-42d7-85f0-a84ba4939165&projectTab=overview",
+      "h1": [
+        "BasicLinear v0.1 release"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 31,
+      "theme": "dark",
+      "screen": "projects-list",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/projects-list-1440x900.jpg",
+      "bytes": 48676,
+      "sha256": "70b1fa453ef46caf8678d82d0d2cd0fd219ab0482dd8e78eb28cddf29258902b",
+      "url": "http://127.0.0.1:4288/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress",
+      "h1": [
+        "Projects"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 32,
+      "theme": "dark",
+      "screen": "my-work",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/my-work-1440x900.jpg",
+      "bytes": 107293,
+      "sha256": "8c3b2cc9d67e37565ca402d0b65bc460851609463010eb4189a1ab3d6e6a09b1",
+      "url": "http://127.0.0.1:4288/?view=my-work&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "h1": [
+        "My work"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 33,
+      "theme": "dark",
+      "screen": "issues-list",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issues-list-1440x900.jpg",
+      "bytes": 107654,
+      "sha256": "4350dc95808a71401d7a31854432a65109e9f89ec98c5f9d383979918f141328",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "h1": [
+        "Issues"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 34,
+      "theme": "dark",
+      "screen": "saved-views-library",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/saved-views-library-1440x900.jpg",
+      "bytes": 39625,
+      "sha256": "aaa3e664803062c7866afcc6b55478a771d9c7bb1570e74556526d9e1cde3c55",
+      "url": "http://127.0.0.1:4288/?view=views",
+      "h1": [
+        "Views"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 35,
+      "theme": "dark",
+      "screen": "workflow-statuses",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/workflow-statuses-1440x900.jpg",
+      "bytes": 35672,
+      "sha256": "e260c013739e0bcecd6e3e85d72f8f761649b301bb20b8a9344c78afba0b4aaf",
+      "url": "http://127.0.0.1:4288/?view=workflow",
+      "h1": [
+        "Workflow"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 36,
+      "theme": "dark",
+      "screen": "project-overview",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/project-overview-1440x900.jpg",
+      "bytes": 61822,
+      "sha256": "a7198b0fc267cff823c220df5096f1840b87ebce9867419096f4fccdb262b3f3",
+      "url": "http://127.0.0.1:4288/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress&project=a8eb020b-34f2-42d7-85f0-a84ba4939165&projectTab=overview",
+      "h1": [
+        "BasicLinear v0.1 release"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 37,
+      "theme": "dark",
+      "screen": "project-milestones",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/project-milestones-1440x900.jpg",
+      "bytes": 61822,
+      "sha256": "a7198b0fc267cff823c220df5096f1840b87ebce9867419096f4fccdb262b3f3",
+      "url": "http://127.0.0.1:4288/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress&project=a8eb020b-34f2-42d7-85f0-a84ba4939165&projectTab=overview",
+      "h1": [
+        "BasicLinear v0.1 release"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 38,
+      "theme": "dark",
+      "screen": "project-activity",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/project-activity-1440x900.jpg",
+      "bytes": 72277,
+      "sha256": "68f795b1f32ff7eef10177b296f9538e477923474c1ee069dd20c99b1e3fbb3e",
+      "url": "http://127.0.0.1:4288/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress&project=a8eb020b-34f2-42d7-85f0-a84ba4939165&projectTab=activity",
+      "h1": [
+        "BasicLinear v0.1 release"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 39,
+      "theme": "dark",
+      "screen": "issues-board",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issues-board-1440x900.jpg",
+      "bytes": 80260,
+      "sha256": "f9b904c52bae3d61798fad73d134cd31afd7f49cafddad0fa5b184ddf9d2e15c",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "h1": [
+        "Issues"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 40,
+      "theme": "dark",
+      "screen": "issue-detail-contextual",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-detail-contextual-1440x900.jpg",
+      "bytes": 59118,
+      "sha256": "0c779255d58e913592e344c722f3675e21676ab6e3fae2edfd548e29c9177cf1",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+      "h1": [
+        "Stop issue board density cards from clipping titles"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 41,
+      "theme": "dark",
+      "screen": "issue-detail-direct-mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-detail-direct-mobile-390x844.jpg",
+      "bytes": 24745,
+      "sha256": "98836a82d354cec105e6f4e392cf65caeb7eb461d1a38e6ed9574d38e984d48a",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+      "h1": [
+        "Stop issue board density cards from clipping titles"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 42,
+      "theme": "dark",
+      "screen": "issue-detail-direct-mobile-properties-open",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-detail-direct-mobile-properties-open-390x844.jpg",
+      "bytes": 23926,
+      "sha256": "16e1167cef70371dab16f021e75b03ffcd42d21eb5d88bea8342bcd319d26577",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+      "h1": [
+        "Stop issue board density cards from clipping titles"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 43,
+      "theme": "dark",
+      "screen": "issue-create-compact",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-create-compact-1440x900.jpg",
+      "bytes": 79398,
+      "sha256": "806e6f73b6d5b62991731f765c221f95e13f6ee74090bfeee2f658992a1a8c53",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "h1": [
+        "Issues"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 44,
+      "theme": "dark",
+      "screen": "issue-create-expanded",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-create-expanded-1440x900.jpg",
+      "bytes": 70797,
+      "sha256": "3ee2c09a02ed25a6dcc765af6ace9fa62bcee8fc83729531f2938b4e9db2e526",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "h1": [
+        "Issues"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 45,
+      "theme": "dark",
+      "screen": "command-palette-empty",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/command-palette-empty-1440x900.jpg",
+      "bytes": 77861,
+      "sha256": "81ebd89e4a60bb54719488bd4dd387132ba2aeb29c89fc836ba11846d43d95b6",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "h1": [
+        "Issues"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 46,
+      "theme": "dark",
+      "screen": "command-palette-results",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/command-palette-results-1440x900.jpg",
+      "bytes": 77497,
+      "sha256": "ee9c3649073fd36c08d0008f977e9e61c46c85ba6f89edcc93e0dbd230bf94ca",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate",
+      "h1": [
+        "Issues"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 47,
+      "theme": "dark",
+      "screen": "query-error-projects",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/query-error-projects-1440x900.jpg",
+      "bytes": 32411,
+      "sha256": "cc322b712dbd82384d2c3f391970105bbb657356aaf853a55304a3191131f6c5",
+      "url": "http://127.0.0.1:4289/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress&q=ct12-project-fault-e129-dark",
+      "h1": [
+        "Projects"
+      ],
+      "alerts": 1
+    },
+    {
+      "sequence": 48,
+      "theme": "dark",
+      "screen": "query-error-issues",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/query-error-issues-1440x900.jpg",
+      "bytes": 33849,
+      "sha256": "c6f96fcc98ea6c312e15659f880676ad6bfd21d002d81a62ae22d392b1dc0b8b",
+      "url": "http://127.0.0.1:4289/?view=issues&layout=list&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&q=ct12-issue-fault-e129-dark",
+      "h1": [
+        "Issues"
+      ],
+      "alerts": 1
+    },
+    {
+      "sequence": 49,
+      "theme": "dark",
+      "screen": "query-error-detail-subsections",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/query-error-detail-subsections-1440x900.jpg",
+      "bytes": 62226,
+      "sha256": "35254b5ed6af9ea787689f43aca8a045d758add8b2cdbb5768a1ce2003676c74",
+      "url": "http://127.0.0.1:4289/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+      "h1": [
+        "Stop issue board density cards from clipping titles"
+      ],
+      "alerts": 4
+    },
+    {
+      "sequence": 50,
+      "theme": "dark",
+      "screen": "local-service-unavailable",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/local-service-unavailable-1440x900.jpg",
+      "bytes": 56598,
+      "sha256": "d38a197ce0e947181be670da58262dd0fbc187864ab884c302c81491f4fcac1c",
+      "url": "http://127.0.0.1:4289/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress",
+      "h1": [
+        "Projects"
+      ],
+      "alerts": 1
+    },
+    {
+      "sequence": 51,
+      "theme": "dark",
+      "screen": "local-service-reconnected",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/local-service-reconnected-1440x900.jpg",
+      "bytes": 53992,
+      "sha256": "798e47a768fc35c603902a3b82fe563bf2a82b11670f0e7e04cfcfafbf15a96d",
+      "url": "http://127.0.0.1:4289/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress",
+      "h1": [
+        "Projects"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 52,
+      "theme": "dark",
+      "screen": "issue-detail-content-draft",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-detail-content-draft-1440x900.jpg",
+      "bytes": 65752,
+      "sha256": "bdff19a7ba964b7af0e416ede7682ef50d625db780c921bf3c29a0c3319465f3",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+      "h1": [
+        "Stop issue board density cards from clipping titles"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 53,
+      "theme": "dark",
+      "screen": "issue-detail-comment-draft",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-detail-comment-draft-1440x900.jpg",
+      "bytes": 62354,
+      "sha256": "66b4d6f05f4b44591a6438bb2277a74c5a0605b557162376c597a17c0d22bb26",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+      "h1": [
+        "Stop issue board density cards from clipping titles"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 54,
+      "theme": "dark",
+      "screen": "milestone-purge-confirmation",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/milestone-purge-confirmation-1440x900.jpg",
+      "bytes": 65661,
+      "sha256": "84af5aabbca5f5d39900c33d44d63e8da0f1017fa9318b14aa8848c7092df8d9",
+      "url": "http://127.0.0.1:4288/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress&project=a8eb020b-34f2-42d7-85f0-a84ba4939165&projectTab=overview",
+      "h1": [
+        "BasicLinear v0.1 release"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 55,
+      "theme": "dark",
+      "screen": "milestone-purge-result",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/milestone-purge-result-1440x900.jpg",
+      "bytes": 67922,
+      "sha256": "d7a381d7790d2f427c0e8c8accb6eddb8ac683264e41c08f920ef7d6ec1f6c7f",
+      "url": "http://127.0.0.1:4288/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress&project=a8eb020b-34f2-42d7-85f0-a84ba4939165&projectTab=overview",
+      "h1": [
+        "BasicLinear v0.1 release"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 56,
+      "theme": "dark",
+      "screen": "project-purge-confirmation",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/project-purge-confirmation-1440x900.jpg",
+      "bytes": 54568,
+      "sha256": "26959d0b911607f9e416abe04869c07119db159a933c09b6409e800f40fb50f0",
+      "url": "http://127.0.0.1:4288/?view=projects&archive=archived&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress&project=<disposable-dark-fixture>&projectTab=overview",
+      "h1": [
+        "CT12 e129 Dark project purge target"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 57,
+      "theme": "dark",
+      "screen": "project-purge-result",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/project-purge-result-1440x900.jpg",
+      "bytes": 38226,
+      "sha256": "bb06a333daa93abf270e0b2b052f63040b5b5ef636abdb69799da8d21cd90a9a",
+      "url": "http://127.0.0.1:4288/?view=projects&archive=archived&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress",
+      "h1": [
+        "Projects"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 58,
+      "theme": "dark",
+      "screen": "issue-archive-undo",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/issue-archive-undo-1440x900.jpg",
+      "bytes": 53924,
+      "sha256": "b1b908e481f83d6bee8855371eb3a893bfa02b6d01bffceabf9dfe16bf665c5f",
+      "url": "http://127.0.0.1:4288/?view=issues&layout=board&group=status&order=updatedAt&direction=desc&density=default&archive=active&properties=priority%2Cassignee%2Cproject%2Clabels%2CdueDate&issue=a1e1171b-bb98-4c74-84f9-278fdf50e0fb",
+      "h1": [
+        "Stop issue board density cards from clipping titles"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 59,
+      "theme": "dark",
+      "screen": "project-archive-undo",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/project-archive-undo-1440x900.jpg",
+      "bytes": 45899,
+      "sha256": "f05d057a10819fa57bf517dc07599e4dc97a6d5b72c39f090807728cdd68c02e",
+      "url": "http://127.0.0.1:4288/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress",
+      "h1": [
+        "Projects"
+      ],
+      "alerts": 0
+    },
+    {
+      "sequence": 60,
+      "theme": "dark",
+      "screen": "milestone-archive-undo",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1
+      },
+      "path": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/golden/current/dark/milestone-archive-undo-1440x900.jpg",
+      "bytes": 62310,
+      "sha256": "1762cc7cf4577f8aa772152e10d2d8a7d8e022a5c2a87f091dc28a9c0fb426f1",
+      "url": "http://127.0.0.1:4288/?view=projects&archive=active&order=position&direction=asc&density=default&group=none&properties=status%2Clead%2CtargetDate%2Cprogress&project=a8eb020b-34f2-42d7-85f0-a84ba4939165&projectTab=overview",
+      "h1": [
+        "BasicLinear v0.1 release"
+      ],
+      "alerts": 0
+    }
+  ],
+  "boundaries": [
+    "This manifest binds only the exact pinned Light/Dark visual set at e1299af.",
+    "Live bidirectional System appearance, independent acceptance, legal/identity review, release approval, publication, and outcomes remain separate gates."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "ct143-control-tower-reconciliation-v1",
+  "reconciled_at": "2026-08-27T05:43:05.826Z",
+  "authority": "project-local-v0.8",
+  "action": "issue-update",
+  "issue": {
+    "identifier": "CT-143",
+    "stable_id": "1f065874-a1d3-433b-ae4e-63b9d69c8d4d",
+    "revision_before": 7,
+    "revision_after": 8,
+    "status": "Done",
+    "milestone": "S4 — Testing"
+  },
+  "independent_decision_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/decision.md",
+  "evidence_map_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/evidence-map-final.json",
+  "backup": {
+    "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-27T05-43-05-808Z-3819cf7d-db1a-40de-b5c0-b93a6c11a4a8.json",
+    "bytes": 574641,
+    "sha256": "cf563f3a9e04553b97b6fe6f5e005c77131dcba3236e21cccad99284aff4e26e"
+  },
+  "readback": {
+    "active": 5,
+    "completed": 138,
+    "trash": 0,
+    "s4_closed": 13,
+    "s4_total": 14,
+    "s4_remaining": 1,
+    "remaining_s4_issue": "CT-142"
+  },
+  "projection": {
+    "enabled": false,
+    "auto_sync": false,
+    "state": "not_synced"
+  },
+  "claim_boundary": "CT-142, qualified/accountable approvals, outcome windows, and combined release remain open."
+}

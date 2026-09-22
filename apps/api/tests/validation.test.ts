@@ -3,8 +3,8 @@ import {
   PurgeMilestoneRequestSchema,
   PurgeProjectRequestSchema,
   QueryIssuesRequestSchema,
-} from '@openlinear/contracts';
-import type { OpenLinearDatabase } from '@openlinear/db';
+} from '@basiclinear/contracts';
+import type { BasicLinearDatabase } from '@basiclinear/db';
 import { describe, expect, it } from 'vitest';
 import { buildApp } from '../src/app.js';
 import type { ApiConfig } from '../src/config.js';
@@ -13,11 +13,11 @@ const config: ApiConfig = {
   host: '127.0.0.1',
   port: 3000,
   environment: 'test',
-  publicOrigin: 'http://openlinear.test',
-  dataDirectory: '/tmp/openlinear-validation',
+  publicOrigin: 'http://basiclinear.test',
+  dataDirectory: '/tmp/basiclinear-validation',
   databasePath: ':memory:',
-  backupDirectory: '/tmp/openlinear-validation/backups',
-  webRoot: '/tmp/openlinear-validation/web',
+  backupDirectory: '/tmp/basiclinear-validation/backups',
+  webRoot: '/tmp/basiclinear-validation/web',
   sessionCookieName: 'ol_local_session',
   sessionTtlSeconds: 3600,
 };
@@ -80,7 +80,7 @@ describe('API recursive route validation', () => {
   it('preserves matching union branches while rejecting unknown properties', async () => {
     const app = await buildApp({
       config,
-      database: {} as OpenLinearDatabase,
+      database: {} as BasicLinearDatabase,
       logger: false,
     });
     app.post(
@@ -108,7 +108,7 @@ describe('API recursive route validation', () => {
       const project = await app.inject({
         method: 'POST',
         url: '/__tests/project-validation',
-        headers: { host: 'openlinear.test', origin: config.publicOrigin },
+        headers: { host: 'basiclinear.test', origin: config.publicOrigin },
         payload: projectPayload,
       });
       expect(project.statusCode).toBe(200);
@@ -117,7 +117,7 @@ describe('API recursive route validation', () => {
       const query = await app.inject({
         method: 'POST',
         url: '/__tests/issue-query-validation',
-        headers: { host: 'openlinear.test', origin: config.publicOrigin },
+        headers: { host: 'basiclinear.test', origin: config.publicOrigin },
         payload: issueQueryPayload,
       });
       expect(query.statusCode).toBe(200);
@@ -126,7 +126,7 @@ describe('API recursive route validation', () => {
       const purge = await app.inject({
         method: 'POST',
         url: '/__tests/project-purge-validation',
-        headers: { host: 'openlinear.test', origin: config.publicOrigin },
+        headers: { host: 'basiclinear.test', origin: config.publicOrigin },
         payload: { expectedRevision: 4, confirmation: 'Recursive validation' },
       });
       expect(purge.statusCode).toBe(200);
@@ -137,7 +137,7 @@ describe('API recursive route validation', () => {
       const milestonePurge = await app.inject({
         method: 'POST',
         url: '/__tests/milestone-purge-validation',
-        headers: { host: 'openlinear.test', origin: config.publicOrigin },
+        headers: { host: 'basiclinear.test', origin: config.publicOrigin },
         payload: { expectedRevision: 3, confirmation: 'Candidate' },
       });
       expect(milestonePurge.statusCode).toBe(200);
@@ -148,7 +148,7 @@ describe('API recursive route validation', () => {
       const unknownProperty = await app.inject({
         method: 'POST',
         url: '/__tests/project-validation',
-        headers: { host: 'openlinear.test', origin: config.publicOrigin },
+        headers: { host: 'basiclinear.test', origin: config.publicOrigin },
         payload: { ...projectPayload, unexpected: true },
       });
       expect(unknownProperty.statusCode).toBe(400);
@@ -159,7 +159,7 @@ describe('API recursive route validation', () => {
       const purgeUnknownProperty = await app.inject({
         method: 'POST',
         url: '/__tests/project-purge-validation',
-        headers: { host: 'openlinear.test', origin: config.publicOrigin },
+        headers: { host: 'basiclinear.test', origin: config.publicOrigin },
         payload: { expectedRevision: 4, confirmation: 'Recursive validation', cascade: true },
       });
       expect(purgeUnknownProperty.statusCode).toBe(400);
@@ -170,7 +170,7 @@ describe('API recursive route validation', () => {
       const milestonePurgeUnknownProperty = await app.inject({
         method: 'POST',
         url: '/__tests/milestone-purge-validation',
-        headers: { host: 'openlinear.test', origin: config.publicOrigin },
+        headers: { host: 'basiclinear.test', origin: config.publicOrigin },
         payload: { expectedRevision: 3, confirmation: 'Candidate', cascade: true },
       });
       expect(milestonePurgeUnknownProperty.statusCode).toBe(400);

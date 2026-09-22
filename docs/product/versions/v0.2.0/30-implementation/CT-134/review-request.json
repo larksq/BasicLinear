@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "stage": "implementation.independent-review-request",
+  "status": "completed_pass",
+  "review_round": 2,
+  "prepared_at": "2026-08-25T04:39:30.000Z",
+  "authorized_at": "2026-08-25T04:22:18.000Z",
+  "dispatched_at": "2026-08-25T04:40:30.000Z",
+  "completed_at": "2026-08-25T04:47:00.000Z",
+  "authorization": {
+    "authorized_by": "user",
+    "scope": [
+      "CT-134",
+      "CT-135",
+      "CT-136",
+      "CT-137",
+      "CT-138",
+      "CT-139",
+      "CT-140",
+      "CT-141",
+      "CT-142"
+    ],
+    "standing": true
+  },
+  "issue": {
+    "identifier": "CT-134",
+    "stable_id": "4d4d0196-585b-4af0-ac13-0555c1f2cd75",
+    "revision": 5,
+    "status": "In Progress",
+    "milestone": "S3 — Implementation",
+    "plan_id": "I-202",
+    "requirements": [
+      "R-201",
+      "R-202",
+      "R-203",
+      "R-216",
+      "R-220"
+    ],
+    "acceptance": [
+      "P-T202"
+    ],
+    "outcomes": [
+      "O-201",
+      "O-203",
+      "O-204"
+    ]
+  },
+  "authority": {
+    "profile": "project-local-v0.8",
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "projection": "disabled_not_synced",
+    "predecessor": {
+      "identifier": "CT-133",
+      "status": "Done",
+      "revision": 8
+    },
+    "checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T04-38-04-657Z-234d26dc-1fd1-4bb3-bc6c-0fd1d2b1f61c.json",
+    "checkpoint_backup_sha256": "6cbe5db789eb288d780dcc9eb4b4edaac96d03042201c5bb501a431a172df303"
+  },
+  "independence": {
+    "required": true,
+    "primary_actor_id": "codex-primary",
+    "reviewer_must_be_distinct": true,
+    "mode": "read_only",
+    "prohibited_actions": [
+      "editing any file",
+      "mutating Control Tower",
+      "creating a commit",
+      "changing external state"
+    ],
+    "dispatch_state": "dispatched",
+    "reviewer_actor_id": "codex-subagent:/root/ct134_independent_review"
+  },
+  "prior_reviews": [
+    {
+      "review_id": "CT-134-IR1",
+      "decision": "failed",
+      "finding_count": 1,
+      "highest_severity": "P2",
+      "finding": "Origin validation ignored scheme and trusted caller-supplied X-Forwarded-Host.",
+      "remediation": "Host/forwarded-host trust removed; exact canonical deployment allowlist plus adversarial regressions added."
+    }
+  ],
+  "candidate": {
+    "manifest_scope": "Every CT-134 implementation, remediation, test, configuration, and evidence artifact. This routing request excludes itself to avoid a self-hash.",
+    "file_count": 33,
+    "sha256_by_path": {
+      ".env.example": "927536f03df8c8f7dd591c8321980e7045404cc278eb9ebc0f86269b0666d140",
+      "apps/hosted-service/package.json": "8c42fed20654c0c59687e12b34baaf940aea39cde114bd25641432fe8d233f37",
+      "apps/hosted-service/src/firebase-identity.ts": "343a52a38eb928c13e9c814e43c2cafad9b52eaee0a3aeab459e2a3424b99df8",
+      "apps/hosted-service/src/hosted-config.ts": "9102fa1a68f5402886287606270ad4b78c7c8f76230474031491ac8fe1180534",
+      "apps/hosted-service/src/index.ts": "d06d418fbfc79e1146e3936e9633a155be85cd801583825946355b8571a55433",
+      "apps/hosted-service/tests/firebase-identity.test.ts": "535da7ba21e3df87e203b5487bfa24cba7491715c986ec5f33da6988a86ec947",
+      "apps/hosted-service/tests/hosted-config.test.ts": "fd7621904e1992af335072ed5c7a2e44aa7f07edb774e2bb1fbc6d4cabbf897e",
+      "apps/hosted-service/tsconfig.json": "da8e5fc294f2cc905f61b463c3e663497ed45bb51e637d406901b597a5cfbc23",
+      "apps/web/hosted.html": "310362c5e2fc5a142404693dd6f547a04e07d49a70eaf789340513017e6eb781",
+      "apps/web/package.json": "fbc4da4fa4dffa72fc0b99a4165e2b2b9155708d0912abf2496df84c0aba0b7a",
+      "apps/web/src/hosted-api.ts": "af92ac892ae6b17b5737950df44284ee42bc43177999f5f4fd65910c265d4146",
+      "apps/web/src/hosted-app.tsx": "48ff444e03770af40222296030a5f2d0a93cc842f92f5c44a84812f0b55e0be4",
+      "apps/web/src/hosted-auth.ts": "cc3ede863d73398332120d54beb95a5ee77b3f413af72c51349706643517ded3",
+      "apps/web/src/hosted-main.tsx": "35432f3101e555e3117f5f9530c1badf3da566912a5c9eb989232df414546458",
+      "apps/web/src/hosted.css": "0b127bfad7f6e98616be6b44e38c305da020217d58b7dcac12900d8a7311871c",
+      "apps/web/tests/hosted-foundation.test.ts": "289bc3c521019ec2f0d12832baf5c4b770673b8fa61eb4673052ce6434c82fe3",
+      "apps/web/vite.config.ts": "d12796f723e9dca5ca633c9bd98ce83dd624083f9c3d9ecbd5a9aefac1dff983",
+      "docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json": "f6457d15dbc4c41021503501746a2e5c06e00aae8459f324cd52ade704540c54",
+      "docs/product/versions/v0.2.0/30-implementation/CT-134/hosting-bootstrap-contract.md": "f12cf144e528ba69ad112757e917553d4636fc0c7d3603618d28ed5b42b054d0",
+      "docs/product/versions/v0.2.0/30-implementation/CT-134/review.md": "cbcced5ad4932efbcb27dea969cfbf1159356304b5fe68e8b086deadefe00d1d",
+      "firebase.json": "745ee50dfa4a07ee72c618e8caf9ef105f6c53898960433dd249ec4d60cb5ce9",
+      "firestore.rules": "cd5089e4e5116dbb994013dc5fd5e7e411ec348935b8d06d13acd00173cca15b",
+      "package-lock.json": "12f86d1c24aec957197e84175cdec38b9c9c73a1b1f964d6c3cac0d452dc8dff",
+      "package.json": "1ea9b5890b58f83379ba1dea19b5a7614df5991fd4b3d3623ce4eae909d58892",
+      "packages/hosted/src/firebase-owner-bootstrap.ts": "232e4ffb4a7152e765d25158c8acd8ee8d2576d3d990181955ba25dc97d4a57e",
+      "packages/hosted/src/hosted-http.ts": "79bf7edfa727a3e7c259d0a3541d266a86d979a3c9b566b9a77ac2cdc4d0a8a3",
+      "packages/hosted/src/index.ts": "653d5eab3879c81b74ac76b77f3433498eb8aed0b6cc7a9ee684ac5c3ae7634f",
+      "packages/hosted/src/owner-bootstrap.ts": "37bd722ca408c2ca52833c0b9be19175dc7da76ef2b384e250c6b34c76135bc9",
+      "packages/hosted/tests/hosted-http.test.ts": "919f3cc7677f7f3e59b76f490524fa761fbc08f228973c942520fd05254e8515",
+      "packages/hosted/tests/owner-bootstrap.test.ts": "6da9084999b5be2a7cfad18f10decaa719ee6e94ede39db05501798198f38e2b",
+      "packages/hosted/tsconfig.json": "bb8199c5c0897eb869517fd5dd95d1dc377e9222804b969aa06c851a6e8ef14e",
+      "scripts/clean-build-output.mjs": "62c7875e070afa767ac00f2d62850e90bec7e84dd21719a1c1e4a0093691ee4f",
+      "vitest.config.ts": "0ef2f8da89e0f3b517d148a94753b6ccdbbf279496d85bb7ef7e18ff97681906"
+    }
+  },
+  "required_checks": [
+    {
+      "command": "npx vitest run packages/hosted/tests/owner-bootstrap.test.ts packages/hosted/tests/hosted-http.test.ts apps/hosted-service/tests/firebase-identity.test.ts apps/hosted-service/tests/hosted-config.test.ts apps/web/tests/hosted-foundation.test.ts --config vitest.config.ts",
+      "expected": "5 files and 22 tests pass"
+    },
+    {
+      "command": "npm test",
+      "expected": "79 files and 521 tests pass"
+    },
+    {
+      "command": "npm run typecheck",
+      "expected": "all workspace typechecks pass"
+    },
+    {
+      "command": "npm run build",
+      "expected": "hosted service plus local/hosted Vite entries build"
+    },
+    {
+      "command": "npm run audit:hosted-runtime",
+      "expected": "0 vulnerabilities for the supported Firestore-capable runtime profile"
+    },
+    {
+      "command": "git diff --check",
+      "expected": "no whitespace errors"
+    }
+  ],
+  "review_questions": [
+    "Is Review 1's origin bypass fully closed: exact scheme, host, and port allowlisting; no Host or X-Forwarded-Host trust; safe duplicate/multi-value behavior; and no automatic direct Cloud Run origin trust?",
+    "Do concurrent and later retries converge on exactly one UID eligibility record, workspace, owner membership, and 30-day trial under real Firestore transaction semantics?",
+    "Does the trusted service prove Google-only, verified, revocation-checked Firebase identity without accepting password or linked-provider ambiguity?",
+    "Can any request body, origin, method, route, token, retry key, or internal failure bypass limits or leak secrets and account data?",
+    "Does Firebase Hosting exclude the local index and route only API, MCP, and OAuth service paths to the one trusted Cloud Run service?",
+    "Does the browser keep the ID token same-origin and keep local SQLite data separate with no upload or sync path?",
+    "Are trial start/end semantics exactly 30 consecutive 24-hour days from trusted server UTC time and one-time per new owner UID?",
+    "Is the direct Firestore plus omitted unused optional Storage packaging claim technically sound, reproducible, and adequately routed to CT-141?",
+    "Do the changed-file manifest, tests, docs, requirements, acceptance criteria, and prohibited-scope scan cover the exact CT-134 slice without making an outcome-success claim?"
+  ],
+  "decision_contract": {
+    "pass": "No actionable finding remains; CT-134 is eligible for Done after the review is recorded and a fresh project-local mutation/readback succeeds.",
+    "fail": "Return severity-ranked actionable findings with file/line evidence, a reproducible counterexample, affected requirement or acceptance reference, and required remediation.",
+    "no_partial_acceptance": true
+  },
+  "decision": {
+    "review_id": "CT-134-IR2",
+    "reviewer_actor_id": "codex-subagent:/root/ct134_independent_review",
+    "result": "pass",
+    "actionable_findings": 0,
+    "done_eligible_after_record_and_fresh_ct_readback": true,
+    "outcome_claimed": false
+  },
+  "known_context": [
+    "Independent Review 1 failed only on the origin bypass; all other reviewed CT-134 areas passed.",
+    "The remediated handler accepts browser Origin only by exact canonical deployment allowlist membership, while non-browser bearer requests without Origin remain supported.",
+    "The full development install contains unused optional Cloud Storage dependencies with six moderate uuid@9 advisories.",
+    "The supported runtime keeps @google-cloud/firestore direct, omits unused optional packages, and its audit reports zero vulnerabilities.",
+    "No production Firebase project, credential, deployment, or outcome result is claimed."
+  ],
+  "unrelated_preexisting_changes_excluded": [
+    "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-request.json",
+    "ops/release/review-request.json",
+    "outputs/"
+  ]
+}

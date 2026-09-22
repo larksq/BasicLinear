@@ -1,18 +1,18 @@
-import type { Session } from '@openlinear/contracts';
+import type { Session } from '@basiclinear/contracts';
 import { describe, expect, it, vi } from 'vitest';
 import { createLocalServiceRecovery } from '../src/local-service-recovery.js';
 
 const session: Session = {
   user: {
     id: 'owner-1',
-    email: 'owner@openlinear.local',
+    email: 'owner@basiclinear.local',
     displayName: 'Owner',
     revision: 1,
   },
   workspaces: [{
     id: 'workspace-1',
-    name: 'OpenLinear',
-    slug: 'openlinear',
+    name: 'BasicLinear',
+    slug: 'basiclinear',
     role: 'owner',
     revision: 1,
     createdAt: '2026-08-22T00:00:00.000Z',

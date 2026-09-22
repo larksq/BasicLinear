@@ -1,5 +1,5 @@
 {
-  "name": "@openlinear/test-fixtures",
+  "name": "@basiclinear/test-fixtures",
   "version": "0.1.0",
   "license": "AGPL-3.0-only",
   "private": true,
@@ -16,6 +16,6 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@openlinear/domain": "*"
+    "@basiclinear/domain": "*"
   }
 }

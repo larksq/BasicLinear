@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "basiclinear.hosted-environment.v1",
+  "deploymentEnvironment": "production",
+  "hostedControlEnvironment": "production",
+  "firebaseProjectId": "openlinear-prod-larksq",
+  "firebaseWebAppId": "1:1073376700903:web:ef4a5cd62c3cbabee2f542",
+  "firebaseAuthDomain": "openlinear-prod-larksq.firebaseapp.com",
+  "firestoreDatabaseId": "(default)",
+  "firestoreDeleteProtection": "enabled",
+  "googleSignInEnabled": true,
+  "googleCloudBillingEnabled": true,
+  "stripeMode": "live",
+  "paymentMode": "creem",
+  "stripeConnected": false,
+  "verificationAccountCount": 1,
+  "backend": {
+    "provider": "google-cloud-run",
+    "region": "us-central1",
+    "service": "openlinear-hosted-api",
+    "status": "deployed",
+    "url": "https://openlinear-hosted-api-1073376700903.us-central1.run.app",
+    "revision": "openlinear-hosted-api-00020-luy"
+  },
+  "frontend": {
+    "provider": "vercel",
+    "project": "basiclinear-online",
+    "providerStatus": "ready",
+    "url": "https://basiclinear.qiaosun.me",
+    "deploymentId": "dpl_BbGoyhTh2W5PhcqMNmVmzomx6w6Z",
+    "deployedAt": "2026-09-22T03:51:27.000000Z",
+    "customDomain": "https://basiclinear.qiaosun.me",
+    "customDomainStatus": "active"
+  },
+  "deploymentState": "deployed_verification_payment_mode",
+  "creemConnected": true,
+  "creemMode": "live",
+  "paidCheckoutActivation": "blocked-missing-first-customer-review"
+}

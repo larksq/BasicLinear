@@ -2,7 +2,7 @@ import type {
   BulkIssueMutationRequest,
   BulkIssueMutationResult,
   IssuePriority,
-} from '@openlinear/contracts';
+} from '@basiclinear/contracts';
 
 export const issueBulkClearValue = 'none';
 export const issueBulkUnassignedValue = 'unassigned';

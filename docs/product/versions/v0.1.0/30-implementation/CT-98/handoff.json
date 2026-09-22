@@ -1,0 +1,31 @@
+{
+  "schema_version": "ct98-implementation-handoff-v1",
+  "stage": "implementation.testing-handoff",
+  "status": "implementation_complete_browser_acceptance_pending",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issue": {
+    "identifier": "CT-98",
+    "stable_id": "c9816cda-d98d-447b-8a36-d6ea37997c94",
+    "created_revision": 1,
+    "implementation_scope_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "changed_files_ref": "docs/product/versions/v0.1.0/30-implementation/CT-98/changed-files.txt",
+  "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-98/evidence/verification-summary.json",
+  "next": {
+    "skill": "ct-test-sprint",
+    "issue": "CT-12",
+    "scope": "measure the computed topbar at exactly 44px across accepted viewports and 767/768 plus 1199/1200 boundaries; verify recovery-banner and detail-panel containment, opaque Light/Dark paint, focus visibility, zero overlap, and zero unintended document overflow"
+  },
+  "blockers": [
+    "Chrome extension transport is unavailable in the selected Chrome profile and direct execution-time authorization is required to open it.",
+    "The repository has no source revision.",
+    "CT-82 independent clean-user runtime acceptance remains open.",
+    "CT-3 public identity, final-brand, license, and clean-room review remains open because BasicLinear has an exact active market collision."
+  ],
+  "outcomes_claimed": []
+}

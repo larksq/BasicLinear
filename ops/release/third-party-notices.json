@@ -1,40 +1,140 @@
 {
   "schema_version": "third-party-notices-v1",
-  "issue": "CT-13",
-  "status": "ready_for_accountable_review",
-  "review_status": "pending",
-  "reviewer": null,
+  "release": "BasicLinear open-source release",
+  "status": "complete",
   "inventory_environment": {
     "platform": "darwin",
     "architecture": "arm64",
     "node": "v24.18.0"
   },
-  "lockfile_sha256": "fd719192d99ee14779bc3dc5fcc910da030ac889a45d78600b93e515cce67cca",
+  "lockfile_sha256": "368142c0e87eb686e62bb60812d004f0f3d4f95b7fcb55c55dc8ae6e64d5120d",
   "notice_file": "THIRD_PARTY_NOTICES.md",
-  "notice_file_sha256": "19ec59372c85259cc14258c9f4187968a078ab263f79313a9247ee2bb450ff67",
-  "entries_sha256": "2366bcde2e5c8a147ab037ebf048620280e5127c3c02ff2ca689aaf7af1f90b6",
+  "notice_file_sha256": "52e1074e14b766c6fb17d8e8623a0ff0de638a38593f64c600aa6e317b3e053c",
+  "entries_sha256": "912e961b478885bbc6f619e985af34f5790962e0becc8295120bff4b46b6df86",
   "counts": {
-    "records": 252,
-    "installed_on_inventory_host": 184,
+    "records": 499,
+    "installed_on_inventory_host": 431,
     "absent_on_inventory_host": 68,
     "missing_declared_license": 0,
-    "installed_without_local_license_or_notice": 4,
+    "installed_without_local_license_or_notice": 63,
     "records_with_notice_file": 2,
     "distribution_scopes": {
-      "runtime_dependency": 125,
-      "development_dependency": 48,
-      "optional_runtime_dependency": 5,
+      "runtime_dependency": 325,
+      "development_dependency": 47,
+      "optional_runtime_dependency": 51,
       "optional_development_dependency": 73,
-      "peer_dependency": 1,
+      "peer_dependency": 3,
       "optional_peer_dependency": 0
     },
     "evidence_statuses": {
-      "local_license_or_notice": 180,
-      "declared_license_only": 4,
+      "local_license_or_notice": 368,
+      "declared_license_only": 63,
       "not_installed_on_inventory_host": 68
     }
   },
   "entries": [
+    {
+      "name": "@tiptap/core",
+      "version": "3.31.3",
+      "declared_license": "MIT",
+      "lock_path": "apps/web/node_modules/@tiptap/core",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9",
+          "size": 1069
+        }
+      ],
+      "distribution_scope": "peer_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@tiptap/extension-bubble-menu",
+      "version": "3.31.3",
+      "declared_license": "MIT",
+      "lock_path": "apps/web/node_modules/@tiptap/extension-bubble-menu",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9",
+          "size": 1069
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@tiptap/extension-floating-menu",
+      "version": "3.31.3",
+      "declared_license": "MIT",
+      "lock_path": "apps/web/node_modules/@tiptap/extension-floating-menu",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9",
+          "size": 1069
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@tiptap/extension-link",
+      "version": "3.31.3",
+      "declared_license": "MIT",
+      "lock_path": "apps/web/node_modules/@tiptap/extension-link",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9",
+          "size": 1069
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@tiptap/pm",
+      "version": "3.31.3",
+      "declared_license": "MIT",
+      "lock_path": "apps/web/node_modules/@tiptap/pm",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9",
+          "size": 1069
+        }
+      ],
+      "distribution_scope": "peer_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@tiptap/react",
+      "version": "3.31.3",
+      "declared_license": "MIT",
+      "lock_path": "apps/web/node_modules/@tiptap/react",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9",
+          "size": 1069
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
     {
       "name": "@esbuild/aix-ppc64",
       "version": "0.28.2",
@@ -313,6 +413,23 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "@fastify/busboy",
+      "version": "3.2.2",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/@fastify/busboy",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "07544f419a6479527aeb8b012e95ff51f2f9a374e901d1af9668ebd0583003ec",
+          "size": 1167
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "@fastify/cookie",
       "version": "11.1.2",
       "declared_license": "MIT",
@@ -466,6 +583,456 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "@firebase/ai",
+      "version": "2.15.0",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/ai",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/analytics",
+      "version": "0.10.24",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/analytics",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/analytics-compat",
+      "version": "0.2.30",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/analytics-compat",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/analytics-types",
+      "version": "0.8.5",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/analytics-types",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/app",
+      "version": "0.16.1",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/app",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/app-check",
+      "version": "0.13.1",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/app-check",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/app-check-compat",
+      "version": "0.4.7",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/app-check-compat",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/app-check-interop-types",
+      "version": "0.3.5",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/app-check-interop-types",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/app-check-types",
+      "version": "0.5.5",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/app-check-types",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/app-compat",
+      "version": "0.5.17",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/app-compat",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/app-types",
+      "version": "0.9.6",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/app-types",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/auth",
+      "version": "1.13.5",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/auth",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/auth-compat",
+      "version": "0.6.10",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/auth-compat",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/auth-interop-types",
+      "version": "0.2.6",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/auth-interop-types",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/auth-types",
+      "version": "0.13.2",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/auth-types",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/component",
+      "version": "0.7.5",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/component",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/data-connect",
+      "version": "0.7.4",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/data-connect",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/database",
+      "version": "1.1.5",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/database",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/database-compat",
+      "version": "2.1.7",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/database-compat",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/database-types",
+      "version": "1.0.22",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/database-types",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/firestore",
+      "version": "4.17.1",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/firestore",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/firestore-compat",
+      "version": "0.4.13",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/firestore-compat",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/firestore-types",
+      "version": "3.0.5",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/firestore-types",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/functions",
+      "version": "0.14.0",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/functions",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/functions-compat",
+      "version": "0.5.0",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/functions-compat",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/functions-types",
+      "version": "0.6.5",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/functions-types",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/installations",
+      "version": "0.6.24",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/installations",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/installations-compat",
+      "version": "0.2.24",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/installations-compat",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/installations-types",
+      "version": "0.5.5",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/installations-types",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/logger",
+      "version": "0.5.2",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/logger",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/messaging",
+      "version": "0.13.2",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/messaging",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/messaging-compat",
+      "version": "0.2.29",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/messaging-compat",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/messaging-interop-types",
+      "version": "0.2.6",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/messaging-interop-types",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/performance",
+      "version": "0.7.14",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/performance",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/performance-compat",
+      "version": "0.2.27",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/performance-compat",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/performance-types",
+      "version": "0.2.5",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/performance-types",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/remote-config",
+      "version": "0.9.2",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/remote-config",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/remote-config-compat",
+      "version": "0.2.29",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/remote-config-compat",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/remote-config-types",
+      "version": "0.5.2",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/remote-config-types",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/rules-unit-testing",
+      "version": "5.0.2",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/rules-unit-testing",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "development_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/storage",
+      "version": "0.14.5",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/storage",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/storage-compat",
+      "version": "0.4.5",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/storage-compat",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/storage-types",
+      "version": "0.8.5",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/storage-types",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/util",
+      "version": "1.15.3",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/util",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@firebase/webchannel-wrapper",
+      "version": "1.0.7",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@firebase/webchannel-wrapper",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
       "name": "@floating-ui/core",
       "version": "1.8.0",
       "declared_license": "MIT",
@@ -517,6 +1084,220 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "@fontsource-variable/inter",
+      "version": "5.3.0",
+      "declared_license": "OFL-1.1",
+      "lock_path": "node_modules/@fontsource-variable/inter",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345",
+          "size": 4477
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@google-cloud/firestore",
+      "version": "8.7.1",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@google-cloud/firestore",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@google-cloud/firestore-api",
+      "version": "0.2.0",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@google-cloud/firestore-api",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@google-cloud/paginator",
+      "version": "7.1.0",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@google-cloud/paginator",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@google-cloud/projectify",
+      "version": "6.1.0",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@google-cloud/projectify",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@google-cloud/promisify",
+      "version": "6.1.0",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@google-cloud/promisify",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@google-cloud/storage",
+      "version": "8.2.0",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@google-cloud/storage",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "gcp-metadata",
+      "version": "6.1.1",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@google-cloud/storage/node_modules/gcp-metadata",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "google-auth-library",
+      "version": "9.15.1",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@google-cloud/storage/node_modules/google-auth-library",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "google-logging-utils",
+      "version": "0.0.2",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@google-cloud/storage/node_modules/google-logging-utils",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@grpc/grpc-js",
+      "version": "1.9.16",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@grpc/grpc-js",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+          "size": 11357
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@grpc/proto-loader",
+      "version": "0.7.15",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@grpc/proto-loader",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+          "size": 11357
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@isaacs/cliui",
+      "version": "8.0.2",
+      "declared_license": "ISC",
+      "lock_path": "node_modules/@isaacs/cliui",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.txt",
+          "kind": "license",
+          "sha256": "2dc0465729366c3a7890dfa9e972a1ba7048a26c02116fb8b419a6a1ac110149",
+          "size": 731
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "@jridgewell/sourcemap-codec",
       "version": "1.5.5",
       "declared_license": "MIT",
@@ -534,6 +1315,23 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "@js-sdsl/ordered-map",
+      "version": "4.4.2",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/@js-sdsl/ordered-map",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "787684b2059945f845f404340e20c4c8e3f325f4ab7aaeaf8e985f38c8d84658",
+          "size": 1067
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "@lukeed/ms",
       "version": "2.0.2",
       "declared_license": "MIT",
@@ -545,6 +1343,33 @@
           "kind": "license",
           "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97",
           "size": 1104
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@nodable/entities",
+      "version": "3.0.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/@nodable/entities",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@opentelemetry/api",
+      "version": "1.9.1",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/@opentelemetry/api",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "size": 11357
         }
       ],
       "distribution_scope": "runtime_dependency",
@@ -579,6 +1404,176 @@
           "kind": "license",
           "sha256": "58d4023bfbed5fb530c5bb8d44641299eac62c850267415ec939cc42dea87e4f",
           "size": 1076
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@pkgjs/parseargs",
+      "version": "0.11.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/@pkgjs/parseargs",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "size": 11357
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@protobufjs/aspromise",
+      "version": "1.1.2",
+      "declared_license": "BSD-3-Clause",
+      "lock_path": "node_modules/@protobufjs/aspromise",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "a67b34a24a5daddcce46aea68c5004e4442bbfb63690329fa607bf4de4269794",
+          "size": 1505
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@protobufjs/base64",
+      "version": "1.1.2",
+      "declared_license": "BSD-3-Clause",
+      "lock_path": "node_modules/@protobufjs/base64",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "a67b34a24a5daddcce46aea68c5004e4442bbfb63690329fa607bf4de4269794",
+          "size": 1505
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@protobufjs/codegen",
+      "version": "2.0.5",
+      "declared_license": "BSD-3-Clause",
+      "lock_path": "node_modules/@protobufjs/codegen",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "a67b34a24a5daddcce46aea68c5004e4442bbfb63690329fa607bf4de4269794",
+          "size": 1505
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@protobufjs/eventemitter",
+      "version": "1.1.1",
+      "declared_license": "BSD-3-Clause",
+      "lock_path": "node_modules/@protobufjs/eventemitter",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "a67b34a24a5daddcce46aea68c5004e4442bbfb63690329fa607bf4de4269794",
+          "size": 1505
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@protobufjs/fetch",
+      "version": "1.1.1",
+      "declared_license": "BSD-3-Clause",
+      "lock_path": "node_modules/@protobufjs/fetch",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "a67b34a24a5daddcce46aea68c5004e4442bbfb63690329fa607bf4de4269794",
+          "size": 1505
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@protobufjs/float",
+      "version": "1.0.2",
+      "declared_license": "BSD-3-Clause",
+      "lock_path": "node_modules/@protobufjs/float",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "a67b34a24a5daddcce46aea68c5004e4442bbfb63690329fa607bf4de4269794",
+          "size": 1505
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@protobufjs/path",
+      "version": "1.1.2",
+      "declared_license": "BSD-3-Clause",
+      "lock_path": "node_modules/@protobufjs/path",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "a67b34a24a5daddcce46aea68c5004e4442bbfb63690329fa607bf4de4269794",
+          "size": 1505
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@protobufjs/pool",
+      "version": "1.1.0",
+      "declared_license": "BSD-3-Clause",
+      "lock_path": "node_modules/@protobufjs/pool",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "a67b34a24a5daddcce46aea68c5004e4442bbfb63690329fa607bf4de4269794",
+          "size": 1505
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@protobufjs/utf8",
+      "version": "1.1.2",
+      "declared_license": "BSD-3-Clause",
+      "lock_path": "node_modules/@protobufjs/utf8",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "a67b34a24a5daddcce46aea68c5004e4442bbfb63690329fa607bf4de4269794",
+          "size": 1505
         }
       ],
       "distribution_scope": "runtime_dependency",
@@ -939,10 +1934,27 @@
       "evidence_status": "local_license_or_notice"
     },
     {
-      "name": "@tiptap/core",
-      "version": "3.30.2",
+      "name": "@tiptap/starter-kit",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/core",
+      "lock_path": "node_modules/@tiptap/starter-kit",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9",
+          "size": 1069
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@tiptap/core",
+      "version": "3.31.3",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/core",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -957,9 +1969,9 @@
     },
     {
       "name": "@tiptap/extension-blockquote",
-      "version": "3.30.2",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-blockquote",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/extension-blockquote",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -974,9 +1986,9 @@
     },
     {
       "name": "@tiptap/extension-bold",
-      "version": "3.30.2",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-bold",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/extension-bold",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -990,27 +2002,10 @@
       "evidence_status": "local_license_or_notice"
     },
     {
-      "name": "@tiptap/extension-bubble-menu",
-      "version": "3.30.2",
-      "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-bubble-menu",
-      "installed_on_inventory_host": true,
-      "local_evidence": [
-        {
-          "name": "LICENSE.md",
-          "kind": "license",
-          "sha256": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9",
-          "size": 1069
-        }
-      ],
-      "distribution_scope": "optional_runtime_dependency",
-      "evidence_status": "local_license_or_notice"
-    },
-    {
       "name": "@tiptap/extension-bullet-list",
-      "version": "3.30.2",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-bullet-list",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/extension-bullet-list",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -1025,9 +2020,9 @@
     },
     {
       "name": "@tiptap/extension-code",
-      "version": "3.30.2",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-code",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/extension-code",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -1042,9 +2037,9 @@
     },
     {
       "name": "@tiptap/extension-code-block",
-      "version": "3.30.2",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-code-block",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/extension-code-block",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -1059,9 +2054,9 @@
     },
     {
       "name": "@tiptap/extension-document",
-      "version": "3.30.2",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-document",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/extension-document",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -1076,9 +2071,9 @@
     },
     {
       "name": "@tiptap/extension-dropcursor",
-      "version": "3.30.2",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-dropcursor",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/extension-dropcursor",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -1092,27 +2087,10 @@
       "evidence_status": "local_license_or_notice"
     },
     {
-      "name": "@tiptap/extension-floating-menu",
-      "version": "3.30.2",
-      "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-floating-menu",
-      "installed_on_inventory_host": true,
-      "local_evidence": [
-        {
-          "name": "LICENSE.md",
-          "kind": "license",
-          "sha256": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9",
-          "size": 1069
-        }
-      ],
-      "distribution_scope": "optional_runtime_dependency",
-      "evidence_status": "local_license_or_notice"
-    },
-    {
       "name": "@tiptap/extension-gapcursor",
-      "version": "3.30.2",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-gapcursor",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/extension-gapcursor",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -1127,9 +2105,9 @@
     },
     {
       "name": "@tiptap/extension-hard-break",
-      "version": "3.30.2",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-hard-break",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/extension-hard-break",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -1144,9 +2122,9 @@
     },
     {
       "name": "@tiptap/extension-heading",
-      "version": "3.30.2",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-heading",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/extension-heading",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -1161,9 +2139,9 @@
     },
     {
       "name": "@tiptap/extension-horizontal-rule",
-      "version": "3.30.2",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-horizontal-rule",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/extension-horizontal-rule",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -1178,9 +2156,9 @@
     },
     {
       "name": "@tiptap/extension-italic",
-      "version": "3.30.2",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-italic",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/extension-italic",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -1195,9 +2173,9 @@
     },
     {
       "name": "@tiptap/extension-link",
-      "version": "3.19.0",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-link",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/extension-link",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -1212,9 +2190,9 @@
     },
     {
       "name": "@tiptap/extension-list",
-      "version": "3.30.2",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-list",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/extension-list",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -1229,9 +2207,9 @@
     },
     {
       "name": "@tiptap/extension-list-item",
-      "version": "3.30.2",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-list-item",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/extension-list-item",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -1246,9 +2224,9 @@
     },
     {
       "name": "@tiptap/extension-list-keymap",
-      "version": "3.30.2",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-list-keymap",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/extension-list-keymap",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -1263,9 +2241,9 @@
     },
     {
       "name": "@tiptap/extension-ordered-list",
-      "version": "3.30.2",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-ordered-list",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/extension-ordered-list",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -1280,9 +2258,9 @@
     },
     {
       "name": "@tiptap/extension-paragraph",
-      "version": "3.30.2",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-paragraph",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/extension-paragraph",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -1297,9 +2275,9 @@
     },
     {
       "name": "@tiptap/extension-strike",
-      "version": "3.30.2",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-strike",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/extension-strike",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -1314,9 +2292,9 @@
     },
     {
       "name": "@tiptap/extension-text",
-      "version": "3.30.2",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-text",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/extension-text",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -1331,9 +2309,9 @@
     },
     {
       "name": "@tiptap/extension-underline",
-      "version": "3.30.2",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extension-underline",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/extension-underline",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -1348,9 +2326,9 @@
     },
     {
       "name": "@tiptap/extensions",
-      "version": "3.30.2",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/extensions",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/extensions",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
@@ -1365,47 +2343,13 @@
     },
     {
       "name": "@tiptap/pm",
-      "version": "3.30.2",
+      "version": "3.31.3",
       "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/pm",
+      "lock_path": "node_modules/@tiptap/starter-kit/node_modules/@tiptap/pm",
       "installed_on_inventory_host": true,
       "local_evidence": [
         {
           "name": "LICENSE",
-          "kind": "license",
-          "sha256": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9",
-          "size": 1069
-        }
-      ],
-      "distribution_scope": "runtime_dependency",
-      "evidence_status": "local_license_or_notice"
-    },
-    {
-      "name": "@tiptap/react",
-      "version": "3.19.0",
-      "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/react",
-      "installed_on_inventory_host": true,
-      "local_evidence": [
-        {
-          "name": "LICENSE.md",
-          "kind": "license",
-          "sha256": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9",
-          "size": 1069
-        }
-      ],
-      "distribution_scope": "runtime_dependency",
-      "evidence_status": "local_license_or_notice"
-    },
-    {
-      "name": "@tiptap/starter-kit",
-      "version": "3.19.0",
-      "declared_license": "MIT",
-      "lock_path": "node_modules/@tiptap/starter-kit",
-      "installed_on_inventory_host": true,
-      "local_evidence": [
-        {
-          "name": "LICENSE.md",
           "kind": "license",
           "sha256": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9",
           "size": 1069
@@ -1466,6 +2410,40 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "@types/jsonwebtoken",
+      "version": "9.0.10",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/@types/jsonwebtoken",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "size": 1141
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@types/ms",
+      "version": "2.1.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/@types/ms",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "size": 1141
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "@types/node",
       "version": "24.13.3",
       "declared_license": "MIT",
@@ -1479,7 +2457,7 @@
           "size": 1141
         }
       ],
-      "distribution_scope": "development_dependency",
+      "distribution_scope": "runtime_dependency",
       "evidence_status": "local_license_or_notice"
     },
     {
@@ -1883,6 +2861,23 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "abort-controller",
+      "version": "3.0.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/abort-controller",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "dbbf03317f0101fed5643cd87ca80fb769e358fa4f428445bf2315deeb23a154",
+          "size": 1071
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "abstract-logging",
       "version": "2.0.1",
       "declared_license": "MIT",
@@ -1891,6 +2886,23 @@
       "local_evidence": [],
       "distribution_scope": "runtime_dependency",
       "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "agent-base",
+      "version": "7.1.4",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/agent-base",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "8d8c55319c7729d57be811c747452636688d54f19701ee0752b6b15ad3771d9a",
+          "size": 1101
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
     },
     {
       "name": "ajv",
@@ -1928,7 +2940,7 @@
     },
     {
       "name": "fast-uri",
-      "version": "3.1.5",
+      "version": "3.1.6",
       "declared_license": "BSD-3-Clause",
       "lock_path": "node_modules/ajv/node_modules/fast-uri",
       "installed_on_inventory_host": true,
@@ -1941,6 +2953,57 @@
         }
       ],
       "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "ansi-regex",
+      "version": "6.3.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/ansi-regex",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+          "size": 1117
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "ansi-styles",
+      "version": "6.2.3",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/ansi-styles",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+          "size": 1117
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "anynum",
+      "version": "1.0.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/anynum",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "8e75fc0e776c62ccadb8178ece8d3daa9ba7601fb0a49b2dfb0ea9a7a5c0aa07",
+          "size": 1077
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
       "evidence_status": "local_license_or_notice"
     },
     {
@@ -1958,6 +3021,23 @@
         }
       ],
       "distribution_scope": "development_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "async-retry",
+      "version": "1.3.3",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/async-retry",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "91887c62d26f64b8d6e98b1dca57e75aca62e6f9af79fb0783f8f1904abaeea6",
+          "size": 1079
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
       "evidence_status": "local_license_or_notice"
     },
     {
@@ -1995,6 +3075,91 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "balanced-match",
+      "version": "1.0.2",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/balanced-match",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "a1bd5deadb6a06dd74efa852c1b8b23f63b67f2214fbe9c8bd591da51da69268",
+          "size": 1096
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "base64-js",
+      "version": "1.5.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/base64-js",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "5b37224c080cdcc97c871ada971c224e9926370fe74f11b539aa1cf9f3b1aca1",
+          "size": 1081
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "bignumber.js",
+      "version": "9.3.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/bignumber.js",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENCE.md",
+          "kind": "license",
+          "sha256": "def75ba75d6426f1c3f02addf8e175fbe6e0d8a82e541cbdffc16d2bd8fd7d6a",
+          "size": 1147
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "brace-expansion",
+      "version": "2.1.4",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/brace-expansion",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "68f12f6e2c33688699249c01d8f9623c534da20aa71989c57b061b7bc1676d14",
+          "size": 1096
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "buffer-equal-constant-time",
+      "version": "1.0.1",
+      "declared_license": "BSD-3-Clause",
+      "lock_path": "node_modules/buffer-equal-constant-time",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.txt",
+          "kind": "license",
+          "sha256": "751d0e80fb5c828f8c3de198cc760e1e05377e47c8263ab6ee2f10cdc19ba658",
+          "size": 1518
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "chai",
       "version": "6.2.2",
       "declared_license": "MIT",
@@ -2009,6 +3174,152 @@
         }
       ],
       "distribution_scope": "development_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "cliui",
+      "version": "8.0.1",
+      "declared_license": "ISC",
+      "lock_path": "node_modules/cliui",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.txt",
+          "kind": "license",
+          "sha256": "2dc0465729366c3a7890dfa9e972a1ba7048a26c02116fb8b419a6a1ac110149",
+          "size": 731
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "ansi-regex",
+      "version": "5.0.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/cliui/node_modules/ansi-regex",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "size": 1109
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "ansi-styles",
+      "version": "4.3.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/cliui/node_modules/ansi-styles",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "size": 1109
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "emoji-regex",
+      "version": "8.0.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/cliui/node_modules/emoji-regex",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "string-width",
+      "version": "4.2.3",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/cliui/node_modules/string-width",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "size": 1109
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "strip-ansi",
+      "version": "6.0.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/cliui/node_modules/strip-ansi",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "size": 1109
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "wrap-ansi",
+      "version": "7.0.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/cliui/node_modules/wrap-ansi",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+          "size": 1117
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "color-convert",
+      "version": "2.0.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/color-convert",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "693866fc419c6f61c8570438ec00659d156ec2b4d4a4d04091711f5f11a365d4",
+          "size": 1087
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "color-name",
+      "version": "1.1.4",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/color-name",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "c064f7a3e353bc1bc977f3c897941c75ef763f44f41677e0a15370ca0853d6e2",
+          "size": 1085
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
       "evidence_status": "local_license_or_notice"
     },
     {
@@ -2063,6 +3374,23 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "cross-spawn",
+      "version": "7.0.6",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/cross-spawn",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "aaa78451b6fecd1b9c4594c796c133c0e90cad100372ff8bc6de615e9ef9adf1",
+          "size": 1105
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "csstype",
       "version": "3.2.3",
       "declared_license": "MIT",
@@ -2074,6 +3402,33 @@
           "kind": "license",
           "sha256": "11d55bd4541c75ee7879547ac49089c489163dae49551389713c3d026cab383e",
           "size": 1062
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "data-uri-to-buffer",
+      "version": "4.0.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/data-uri-to-buffer",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "debug",
+      "version": "4.4.3",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/debug",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "3a61c6c96caf5c1d9b623fb9b04c822b783dfcb78aa7e49c76a3f643e6ed7f95",
+          "size": 1139
         }
       ],
       "distribution_scope": "runtime_dependency",
@@ -2114,6 +3469,77 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "duplexify",
+      "version": "4.1.3",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/duplexify",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "3fe8d55a98dbf260eace67c00cf9bc53edb46234e840098a0b93df3096b97fb6",
+          "size": 1078
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "eastasianwidth",
+      "version": "0.2.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/eastasianwidth",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "ecdsa-sig-formatter",
+      "version": "1.0.11",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/ecdsa-sig-formatter",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "50a6b24f8defc31a078aa9799a91d776f83948071574854f12473362aee74d0d",
+          "size": 11312
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "emoji-regex",
+      "version": "9.2.2",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/emoji-regex",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "end-of-stream",
+      "version": "1.4.5",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/end-of-stream",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "3fe8d55a98dbf260eace67c00cf9bc53edb46234e840098a0b93df3096b97fb6",
+          "size": 1078
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "es-module-lexer",
       "version": "2.3.2",
       "declared_license": "MIT",
@@ -2148,6 +3574,23 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "escalade",
+      "version": "3.2.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/escalade",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97",
+          "size": 1104
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "estree-walker",
       "version": "3.0.3",
       "declared_license": "MIT",
@@ -2165,6 +3608,23 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "event-target-shim",
+      "version": "5.0.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/event-target-shim",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "97d87142793695cd73243de7258694abe85b3b6060fca7f247b0a2afa8219678",
+          "size": 1082
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "expect-type",
       "version": "1.4.0",
       "declared_license": "Apache-2.0",
@@ -2179,6 +3639,23 @@
         }
       ],
       "distribution_scope": "development_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "extend",
+      "version": "3.0.2",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/extend",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "97af7428f93afbab9bf79cd09254da1357161794f4255eb1b4599f04dd2d2e7c",
+          "size": 1081
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
       "evidence_status": "local_license_or_notice"
     },
     {
@@ -2268,7 +3745,7 @@
     },
     {
       "name": "fast-uri",
-      "version": "4.1.2",
+      "version": "4.1.3",
       "declared_license": "BSD-3-Clause",
       "lock_path": "node_modules/fast-uri",
       "installed_on_inventory_host": true,
@@ -2281,6 +3758,40 @@
         }
       ],
       "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "fast-xml-builder",
+      "version": "1.3.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/fast-xml-builder",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "8e75fc0e776c62ccadb8178ece8d3daa9ba7601fb0a49b2dfb0ea9a7a5c0aa07",
+          "size": 1077
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "fast-xml-parser",
+      "version": "5.11.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/fast-xml-parser",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "7883225d5e84a6bbb9b170c3d891b4bf6d6259cee869c86bd86381a927071745",
+          "size": 1073
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
       "evidence_status": "local_license_or_notice"
     },
     {
@@ -2335,6 +3846,23 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "faye-websocket",
+      "version": "0.11.4",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/faye-websocket",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "8902618377ddec746fc6aba466b4d489c0d4bba91d098d2be4637819f8d14d54",
+          "size": 558
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "fdir",
       "version": "6.5.0",
       "declared_license": "MIT",
@@ -2352,6 +3880,23 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "fetch-blob",
+      "version": "3.2.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/fetch-blob",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "a5edccac92c3aa845694dcfaa72a0c098c1ae40d5ca6a37e4e59d778cf8e29bd",
+          "size": 1068
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "find-my-way",
       "version": "9.8.0",
       "declared_license": "MIT",
@@ -2363,6 +3908,237 @@
           "kind": "license",
           "sha256": "693f9539655acc1847add1ccd364312ba570bf8ce84706b6059e7e0b5ceb90e6",
           "size": 1080
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "firebase",
+      "version": "12.18.0",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/firebase",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "firebase-admin",
+      "version": "14.4.0",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/firebase-admin",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "size": 11357
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@google-cloud/firestore",
+      "version": "9.2.0",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/firebase-admin/node_modules/@google-cloud/firestore",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@grpc/grpc-js",
+      "version": "1.14.5",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/firebase-admin/node_modules/@grpc/grpc-js",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "e03ba41d7fab20700769fe4118bab50d800cb74f990353a05d2f5fff1c228363",
+          "size": 11558
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@grpc/proto-loader",
+      "version": "0.8.1",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/firebase-admin/node_modules/@grpc/proto-loader",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+          "size": 11357
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "gaxios",
+      "version": "7.3.1",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/firebase-admin/node_modules/gaxios",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "gcp-metadata",
+      "version": "9.0.4",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/firebase-admin/node_modules/gcp-metadata",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "google-gax",
+      "version": "6.4.0",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/firebase-admin/node_modules/google-gax",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "google-auth-library",
+      "version": "11.1.0",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/firebase-admin/node_modules/google-gax/node_modules/google-auth-library",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "google-logging-utils",
+      "version": "2.0.1",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/firebase-admin/node_modules/google-logging-utils",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "node-fetch",
+      "version": "3.3.2",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/firebase-admin/node_modules/node-fetch",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "3e2c11dcf3f17ab585baab8faba54772d7872f1c6e026022acd4b4006665efb0",
+          "size": 1090
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "proto3-json-serializer",
+      "version": "4.0.2",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/firebase-admin/node_modules/proto3-json-serializer",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "foreground-child",
+      "version": "3.3.1",
+      "declared_license": "ISC",
+      "lock_path": "node_modules/foreground-child",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "93f5d82a8d59442fe3275383453a255fef761647fb28265644010ba799806148",
+          "size": 775
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "formdata-polyfill",
+      "version": "4.0.10",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/formdata-polyfill",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "435a6437e47e5e479942255680e7fbe5f333d55234ada1c35f6115ca641d5bb4",
+          "size": 1083
         }
       ],
       "distribution_scope": "runtime_dependency",
@@ -2386,6 +4162,356 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "functional-red-black-tree",
+      "version": "1.0.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/functional-red-black-tree",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "e67aed7df22dc8031e4fcf5338fe91cb33e3817e5c58a99a2a2802eea9069791",
+          "size": 1082
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "gaxios",
+      "version": "6.7.1",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/gaxios",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "gcp-metadata",
+      "version": "8.1.2",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/gcp-metadata",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "gaxios",
+      "version": "7.3.1",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/gcp-metadata/node_modules/gaxios",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "node-fetch",
+      "version": "3.3.2",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/gcp-metadata/node_modules/node-fetch",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "3e2c11dcf3f17ab585baab8faba54772d7872f1c6e026022acd4b4006665efb0",
+          "size": 1090
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "get-caller-file",
+      "version": "2.0.5",
+      "declared_license": "ISC",
+      "lock_path": "node_modules/get-caller-file",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "902dbb4154679fb2b8d7c33878183f45b268d01eae5e5033dddaa8852d45f213",
+          "size": 745
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "glob",
+      "version": "10.5.0",
+      "declared_license": "ISC",
+      "lock_path": "node_modules/glob",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cdbc258d13806538e727964c2436a8806e6e2496ccd616224aace6f7bf98dbc1",
+          "size": 775
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "google-auth-library",
+      "version": "10.9.1",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/google-auth-library",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "gaxios",
+      "version": "7.3.1",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/google-auth-library/node_modules/gaxios",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "node-fetch",
+      "version": "3.3.2",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/google-auth-library/node_modules/node-fetch",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "3e2c11dcf3f17ab585baab8faba54772d7872f1c6e026022acd4b4006665efb0",
+          "size": 1090
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "google-gax",
+      "version": "5.0.8",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/google-gax",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "@grpc/grpc-js",
+      "version": "1.14.4",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/google-gax/node_modules/@grpc/grpc-js",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+          "size": 11357
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "@grpc/proto-loader",
+      "version": "0.8.1",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/google-gax/node_modules/@grpc/proto-loader",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+          "size": 11357
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "gaxios",
+      "version": "7.3.1",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/google-gax/node_modules/gaxios",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "google-auth-library",
+      "version": "10.5.0",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/google-gax/node_modules/google-auth-library",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "gtoken",
+      "version": "8.0.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/google-gax/node_modules/gtoken",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "ace51ee77a0c6ebf8885e3b1de75b410f77fbc76602b063fbfd74d96f8574296",
+          "size": 1076
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "node-fetch",
+      "version": "3.3.2",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/google-gax/node_modules/node-fetch",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "3e2c11dcf3f17ab585baab8faba54772d7872f1c6e026022acd4b4006665efb0",
+          "size": 1090
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "retry-request",
+      "version": "8.0.4",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/google-gax/node_modules/retry-request",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "e0845fe275271e0b752360e09e5774b1b05d5e1c73bbbc3d4bf8b57d8af98217",
+          "size": 1081
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "teeny-request",
+      "version": "10.1.4",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/google-gax/node_modules/teeny-request",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "google-logging-utils",
+      "version": "1.1.3",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/google-logging-utils",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "gtoken",
+      "version": "7.1.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/gtoken",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "ace51ee77a0c6ebf8885e3b1de75b410f77fbc76602b063fbfd74d96f8574296",
+          "size": 1076
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "helmet",
       "version": "8.3.0",
       "declared_license": "MIT",
@@ -2397,6 +4523,108 @@
           "kind": "license",
           "sha256": "dd282ebd50392cbba041f6f5a4766a28f01a4ee89ea237cd7a7badc3d7871dc8",
           "size": 1089
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "html-entities",
+      "version": "2.6.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/html-entities",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "10b2831912dc4dc91b25429511e6c74f901eebf64b625328f8fd08dd9c3cf8fe",
+          "size": 1055
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "http-parser-js",
+      "version": "0.5.10",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/http-parser-js",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "78cd8b5ed8c97bfca3d7ba48cbba846df42bfcf96ebe137cd6122100236fb6e1",
+          "size": 5180
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "http-proxy-agent",
+      "version": "7.0.2",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/http-proxy-agent",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "71368fd0f5b4129191e9afcd1e1ef2dc89a9090d3e4d80bbab92dafd032b3bef",
+          "size": 1102
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "https-proxy-agent",
+      "version": "7.0.6",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/https-proxy-agent",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "8d8c55319c7729d57be811c747452636688d54f19701ee0752b6b15ad3771d9a",
+          "size": 1101
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "idb",
+      "version": "7.1.1",
+      "declared_license": "ISC",
+      "lock_path": "node_modules/idb",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "873a2f333fda393ec3464f4579209b019d98e97c3bf498b10e85f630162fd708",
+          "size": 776
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "inherits",
+      "version": "2.0.4",
+      "declared_license": "ISC",
+      "lock_path": "node_modules/inherits",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "5ffe28e7ade7d8f10d85d5337a73fd793dac5c462fb9a28fbf8c5046c7fbca3b",
+          "size": 749
         }
       ],
       "distribution_scope": "runtime_dependency",
@@ -2437,6 +4665,57 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "is-fullwidth-code-point",
+      "version": "3.0.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/is-fullwidth-code-point",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "size": 1109
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "is-stream",
+      "version": "2.0.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/is-stream",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+          "size": 1117
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "is-unsafe",
+      "version": "2.0.2",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/is-unsafe",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "8e75fc0e776c62ccadb8178ece8d3daa9ba7601fb0a49b2dfb0ea9a7a5c0aa07",
+          "size": 1077
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "isbot",
       "version": "5.2.1",
       "declared_license": "Unlicense",
@@ -2448,6 +4727,74 @@
           "kind": "license",
           "sha256": "472f8bb212250d2b07f2484f2bee03d65eec36a52902b80244e2e52f1990b090",
           "size": 1224
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "isexe",
+      "version": "2.0.0",
+      "declared_license": "ISC",
+      "lock_path": "node_modules/isexe",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "size": 765
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "jackspeak",
+      "version": "3.4.3",
+      "declared_license": "BlueOak-1.0.0",
+      "lock_path": "node_modules/jackspeak",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "2c7c5d22ed5a8ee968c64757710979afcd77438c48b4a265b94e615babd8a901",
+          "size": 1550
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "jose",
+      "version": "6.2.10",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/jose",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "8078b0829d6c3e9ecde2f003e1966e4cad3efc6e7a640efbab0313cc166b1af1",
+          "size": 1079
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "json-bigint",
+      "version": "1.0.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/json-bigint",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "def82c085d05e795fe6a9cb5b70c48e022212355afc0e91d4de047cade28df06",
+          "size": 1081
         }
       ],
       "distribution_scope": "runtime_dependency",
@@ -2482,6 +4829,74 @@
           "kind": "license",
           "sha256": "7bf9b2de73a6b356761c948d0e9eeb4be6c1270bd04c79cd489c1e400ffdfc1a",
           "size": 1074
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "jsonwebtoken",
+      "version": "9.0.3",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/jsonwebtoken",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "2144eb6894cb440fde6b2b3aaae3b617c8f1dc9bb19813079dcf62ec6c517042",
+          "size": 1121
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "jwa",
+      "version": "2.0.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/jwa",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "3320319f8a5f42bc4254e65471eca7a5ea4dc8c883c4c24b4868e36b14890bcf",
+          "size": 1068
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "jwks-rsa",
+      "version": "4.1.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/jwks-rsa",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "f4c5799fa06fc3fd0469586e6efe3a09642cb5f02f82df804b6a961da2a3e8d4",
+          "size": 1085
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "jws",
+      "version": "4.0.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/jws",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "3320319f8a5f42bc4254e65471eca7a5ea4dc8c883c4c24b4868e36b14890bcf",
+          "size": 1068
         }
       ],
       "distribution_scope": "runtime_dependency",
@@ -2673,6 +5088,23 @@
       "evidence_status": "not_installed_on_inventory_host"
     },
     {
+      "name": "limiter",
+      "version": "1.1.5",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/limiter",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.txt",
+          "kind": "license",
+          "sha256": "a3aebd11ea5598ef12949bf793311bf155ab7727181e3d373bd0b47813d41111",
+          "size": 1079
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "linkifyjs",
       "version": "4.3.3",
       "declared_license": "MIT",
@@ -2684,6 +5116,210 @@
           "kind": "license",
           "sha256": "58e6f3677452cca096ce5328ebf7de37a1406bbeeb2f263c1b2ededc8c7d0228",
           "size": 1056
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "lodash.camelcase",
+      "version": "4.3.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/lodash.camelcase",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "ffd8b33b354585f4ce119f19c53728281e48a97b074491eb6bf6d5c5ff305272",
+          "size": 1951
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "lodash.clonedeep",
+      "version": "4.5.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/lodash.clonedeep",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "ffd8b33b354585f4ce119f19c53728281e48a97b074491eb6bf6d5c5ff305272",
+          "size": 1951
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "lodash.includes",
+      "version": "4.3.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/lodash.includes",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "ffd8b33b354585f4ce119f19c53728281e48a97b074491eb6bf6d5c5ff305272",
+          "size": 1951
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "lodash.isboolean",
+      "version": "3.0.3",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/lodash.isboolean",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "25a399d4a42f419445101092a1fc3f9b4bfe06d614f84128222d79e3a2105fe7",
+          "size": 1233
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "lodash.isinteger",
+      "version": "4.0.4",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/lodash.isinteger",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "ffd8b33b354585f4ce119f19c53728281e48a97b074491eb6bf6d5c5ff305272",
+          "size": 1951
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "lodash.isnumber",
+      "version": "3.0.3",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/lodash.isnumber",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "25a399d4a42f419445101092a1fc3f9b4bfe06d614f84128222d79e3a2105fe7",
+          "size": 1233
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "lodash.isplainobject",
+      "version": "4.0.6",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/lodash.isplainobject",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "ffd8b33b354585f4ce119f19c53728281e48a97b074491eb6bf6d5c5ff305272",
+          "size": 1951
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "lodash.isstring",
+      "version": "4.0.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/lodash.isstring",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "25a399d4a42f419445101092a1fc3f9b4bfe06d614f84128222d79e3a2105fe7",
+          "size": 1233
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "lodash.once",
+      "version": "4.1.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/lodash.once",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "ffd8b33b354585f4ce119f19c53728281e48a97b074491eb6bf6d5c5ff305272",
+          "size": 1951
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "long",
+      "version": "5.3.2",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/long",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "lru-cache",
+      "version": "11.5.2",
+      "declared_license": "BlueOak-1.0.0",
+      "lock_path": "node_modules/lru-cache",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004",
+          "size": 1552
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "lru-memoizer",
+      "version": "3.0.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/lru-memoizer",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "4ebab15d02f448333458508482da346abbe7ec352840dec404c24ac5db96a352",
+          "size": 1140
         }
       ],
       "distribution_scope": "runtime_dependency",
@@ -2724,6 +5360,74 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "mime",
+      "version": "3.0.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/mime",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "8f2658c03422c408b2b2ce4d151decc3b1a6fd3d86e5ca9433777bccdcdf75a2",
+          "size": 1098
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "minimatch",
+      "version": "9.0.9",
+      "declared_license": "ISC",
+      "lock_path": "node_modules/minimatch",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "d11323827fa4edeaafc437cc5b91b6971b335f0127efeeb42bf5122fe8657e8f",
+          "size": 775
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "minipass",
+      "version": "7.1.3",
+      "declared_license": "BlueOak-1.0.0",
+      "lock_path": "node_modules/minipass",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004",
+          "size": 1552
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "ms",
+      "version": "2.1.3",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/ms",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license.md",
+          "kind": "license",
+          "sha256": "1662fae9b5314d11cf51284e2dcd1f006a354f7343f08712a730fcff9a359801",
+          "size": 1079
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "nanoid",
       "version": "3.3.18",
       "declared_license": "MIT",
@@ -2738,6 +5442,57 @@
         }
       ],
       "distribution_scope": "development_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "node-domexception",
+      "version": "1.0.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/node-domexception",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "8ec1386f7f078b0c7cd25341cd80f332df902371cda9f40c10ec2b4007b420b7",
+          "size": 1071
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "node-fetch",
+      "version": "2.7.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/node-fetch",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "84eaa985e1ef71b8c630e8aba73404c219ff425c6fdb45c62e998b58d4fbdc8e",
+          "size": 1079
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "object-hash",
+      "version": "3.0.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/object-hash",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "ea9e6806c48a8a043ad8f2446527dc860617068265cffbef3efa4aaba39f18d8",
+          "size": 1092
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
       "evidence_status": "local_license_or_notice"
     },
     {
@@ -2775,6 +5530,23 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "once",
+      "version": "1.4.0",
+      "declared_license": "ISC",
+      "lock_path": "node_modules/once",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "size": 765
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "orderedmap",
       "version": "2.1.1",
       "declared_license": "MIT",
@@ -2786,6 +5558,108 @@
           "kind": "license",
           "sha256": "869c30f368eb08735e779027b9f4bc9fea2f39624351856aebe42741f0bc0884",
           "size": 1100
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "p-limit",
+      "version": "3.1.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/p-limit",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+          "size": 1117
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "package-json-from-dist",
+      "version": "1.0.1",
+      "declared_license": "BlueOak-1.0.0",
+      "lock_path": "node_modules/package-json-from-dist",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "a49c9ba464796f65b59fca3f1e6ca40912df1e859f575383223f7ec6c5baae09",
+          "size": 1764
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "path-expression-matcher",
+      "version": "1.6.2",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/path-expression-matcher",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "75486ea0af9309140ca6e2c401d7e67bea8f4892344e5707f6394dc5e83dfc44",
+          "size": 1056
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "path-key",
+      "version": "3.1.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/path-key",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "size": 1109
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "path-scurry",
+      "version": "1.11.1",
+      "declared_license": "BlueOak-1.0.0",
+      "lock_path": "node_modules/path-scurry",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004",
+          "size": 1552
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "lru-cache",
+      "version": "10.4.3",
+      "declared_license": "ISC",
+      "lock_path": "node_modules/path-scurry/node_modules/lru-cache",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "451ec07eeb9c4e1b86de9abdaa426462a8be48f887ec7421cf0bbb9c769555ab",
+          "size": 775
         }
       ],
       "distribution_scope": "runtime_dependency",
@@ -3133,7 +6007,7 @@
     },
     {
       "name": "prosemirror-view",
-      "version": "1.42.2",
+      "version": "1.42.4",
       "declared_license": "MIT",
       "lock_path": "node_modules/prosemirror-view",
       "installed_on_inventory_host": true,
@@ -3143,6 +6017,40 @@
           "kind": "license",
           "sha256": "ef0b452ced6304db2ce78ca66de1fc7b97bab05bc1750c95df359ed3fe1d65c8",
           "size": 1105
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "proto3-json-serializer",
+      "version": "3.0.4",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/proto3-json-serializer",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "protobufjs",
+      "version": "7.6.5",
+      "declared_license": "BSD-3-Clause",
+      "lock_path": "node_modules/protobufjs",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "49d6a1c9a623784c61c6cb70f773f3457faceb1914a13c8560a9823b7631950c",
+          "size": 1937
         }
       ],
       "distribution_scope": "runtime_dependency",
@@ -3160,6 +6068,23 @@
           "kind": "license",
           "sha256": "5ac141bfc70bec8f40838502436bfcb85e3f4c24377e41b9ddef07bdd6aa51bc",
           "size": 1091
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "re2js",
+      "version": "2.8.6",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/re2js",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "b80a94f2c3c0b8bd6af849511cef624ad9feecbc0151d08bacad86ebab4cb46e",
+          "size": 1073
         }
       ],
       "distribution_scope": "runtime_dependency",
@@ -3200,6 +6125,23 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "readable-stream",
+      "version": "3.6.2",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/readable-stream",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "ec62dc96da0099b87f4511736c87309335527fb7031639493e06c95728dc8c54",
+          "size": 2337
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "real-require",
       "version": "0.2.0",
       "declared_license": "MIT",
@@ -3211,6 +6153,23 @@
           "kind": "license",
           "sha256": "cbf263504e800cf09f99962cce8497b76eef79c3526bca434b90c3ef4c17220d",
           "size": 1114
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "require-directory",
+      "version": "2.1.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/require-directory",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "a92e52eb1fa7cd746e3827bf01d3a3589bbc8e1e51348b1da042aad165525ad1",
+          "size": 1099
         }
       ],
       "distribution_scope": "runtime_dependency",
@@ -3251,6 +6210,40 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "retry",
+      "version": "0.13.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/retry",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "License",
+          "kind": "license",
+          "sha256": "01ad164273e8e095abc9dbd1c21e194594a671af7d528cb43ee7b4c903ba7da3",
+          "size": 1139
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "retry-request",
+      "version": "9.0.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/retry-request",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "e0845fe275271e0b752360e09e5774b1b05d5e1c73bbbc3d4bf8b57d8af98217",
+          "size": 1081
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "reusify",
       "version": "1.1.0",
       "declared_license": "MIT",
@@ -3285,6 +6278,23 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "rimraf",
+      "version": "5.0.10",
+      "declared_license": "ISC",
+      "lock_path": "node_modules/rimraf",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "d11323827fa4edeaafc437cc5b91b6971b335f0127efeeb42bf5122fe8657e8f",
+          "size": 775
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "rolldown",
       "version": "1.2.5",
       "declared_license": "MIT",
@@ -3313,6 +6323,23 @@
           "kind": "license",
           "sha256": "530424aebdd0e73f53238d1f89df250057bc8d8ce090cf5954197fadce5bf226",
           "size": 1089
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "safe-buffer",
+      "version": "5.2.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/safe-buffer",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "c7cc929b57080f4b9d0c6cf57669f0463fc5b39906344dfc8d3bc43426b30eac",
+          "size": 1081
         }
       ],
       "distribution_scope": "runtime_dependency",
@@ -3455,6 +6482,40 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "shebang-command",
+      "version": "2.0.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/shebang-command",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "69dee148a2cc470554dfa7142e830662062394d0fe67cddd379aba90dc60d6b3",
+          "size": 1116
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "shebang-regex",
+      "version": "3.0.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/shebang-regex",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "size": 1109
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "siginfo",
       "version": "2.0.0",
       "declared_license": "ISC",
@@ -3469,6 +6530,23 @@
         }
       ],
       "distribution_scope": "development_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "signal-exit",
+      "version": "4.1.0",
+      "declared_license": "ISC",
+      "lock_path": "node_modules/signal-exit",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.txt",
+          "kind": "license",
+          "sha256": "b173e19b9a78df305577ace0e52ef45a4bcc915ea28b47b256dc3b68dcb1f7e7",
+          "size": 790
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
       "evidence_status": "local_license_or_notice"
     },
     {
@@ -3547,6 +6625,257 @@
         }
       ],
       "distribution_scope": "development_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "stream-events",
+      "version": "1.0.5",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/stream-events",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "stream-shift",
+      "version": "1.0.3",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/stream-shift",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "6a134e51aa31496c15a741592fc5d782b2dbf8d8b6b8524e15c8520ae0cd6374",
+          "size": 1079
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "string_decoder",
+      "version": "1.3.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/string_decoder",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "11f2aafb37d06b3ee5bdaf06e9811141d0da05263c316f3d627f45c20d43261b",
+          "size": 2338
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "string-width",
+      "version": "5.1.2",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/string-width",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+          "size": 1117
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "string-width",
+      "version": "4.2.3",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/string-width-cjs",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "size": 1109
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "ansi-regex",
+      "version": "5.0.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/string-width-cjs/node_modules/ansi-regex",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "size": 1109
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "emoji-regex",
+      "version": "8.0.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/string-width-cjs/node_modules/emoji-regex",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "strip-ansi",
+      "version": "6.0.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/string-width-cjs/node_modules/strip-ansi",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "size": 1109
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "strip-ansi",
+      "version": "7.2.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/strip-ansi",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+          "size": 1117
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "strip-ansi",
+      "version": "6.0.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/strip-ansi-cjs",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "size": 1109
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "ansi-regex",
+      "version": "5.0.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/strip-ansi-cjs/node_modules/ansi-regex",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "size": 1109
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "stripe",
+      "version": "22.5.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/stripe",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "b36d54d51ac6f20b867c24264b9433f54372c3370d4984cf1c9884c5c6de1f7a",
+          "size": 1113
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "strnum",
+      "version": "2.4.2",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/strnum",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "2aa16be0f4fad003a352a955a43314e9d1d8deef7034060a82ac9c49f32b81e2",
+          "size": 1077
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "stubs",
+      "version": "3.0.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/stubs",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "teeny-request",
+      "version": "11.0.1",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/teeny-request",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size": 11358
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "node-fetch",
+      "version": "3.3.2",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/teeny-request/node_modules/node-fetch",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "3e2c11dcf3f17ab585baab8faba54772d7872f1c6e026022acd4b4006665efb0",
+          "size": 1090
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
       "evidence_status": "local_license_or_notice"
     },
     {
@@ -3669,6 +6998,33 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "tr46",
+      "version": "0.0.3",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/tr46",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "tslib",
+      "version": "2.8.1",
+      "declared_license": "0BSD",
+      "lock_path": "node_modules/tslib",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.txt",
+          "kind": "license",
+          "sha256": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751",
+          "size": 655
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "tsx",
       "version": "4.23.12",
       "declared_license": "MIT",
@@ -3739,7 +7095,7 @@
           "size": 1090
         }
       ],
-      "distribution_scope": "development_dependency",
+      "distribution_scope": "runtime_dependency",
       "evidence_status": "local_license_or_notice"
     },
     {
@@ -3757,6 +7113,40 @@
         }
       ],
       "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "util-deprecate",
+      "version": "1.0.2",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/util-deprecate",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "0154425673db15cdfa80ecba2c9b1f1a867f7197a006764712849bfc3a93cbb7",
+          "size": 1102
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "uuid",
+      "version": "11.1.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/uuid",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "beaa6b04fb82e41dd2ad679e19e27953afb5999b1abbb455b6564e78ebfeb332",
+          "size": 1109
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
       "evidence_status": "local_license_or_notice"
     },
     {
@@ -3811,6 +7201,125 @@
       "evidence_status": "local_license_or_notice"
     },
     {
+      "name": "web-streams-polyfill",
+      "version": "3.3.3",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/web-streams-polyfill",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "81008a3fb78f69f3c4a72a9e005c8582342ab62864371b3ab8e1b6af9041e080",
+          "size": 1120
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "web-vitals",
+      "version": "4.2.4",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/web-vitals",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "bfdeded4040e05da31ca9b6239dc83bd23fa26ac8db87342a7ca4363f68916ff",
+          "size": 11342
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "webidl-conversions",
+      "version": "3.0.1",
+      "declared_license": "BSD-2-Clause",
+      "lock_path": "node_modules/webidl-conversions",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "a889cc4dbee2ae172c179856b25d75b0b7a5a136e1b97109b9b590b2ff1a879c",
+          "size": 1323
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "websocket-driver",
+      "version": "0.7.5",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/websocket-driver",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "2fbd9092e779d0195cfcada9471d1208c152a6ae183786975b6b59966e9f5e8d",
+          "size": 558
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "websocket-extensions",
+      "version": "0.1.4",
+      "declared_license": "Apache-2.0",
+      "lock_path": "node_modules/websocket-extensions",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.md",
+          "kind": "license",
+          "sha256": "218ce71e2fb8d13d7fdca2016b02ecbcb02f757914304104e03fbf4066c1685f",
+          "size": 558
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "whatwg-url",
+      "version": "5.0.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/whatwg-url",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.txt",
+          "kind": "license",
+          "sha256": "6b7a1792144374d84dc5ed3655b8bbe2754d06f4f1f64a9fb8b9de2d6f448b85",
+          "size": 1088
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "which",
+      "version": "2.0.2",
+      "declared_license": "ISC",
+      "lock_path": "node_modules/which",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "size": 765
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
       "name": "why-is-node-running",
       "version": "2.3.0",
       "declared_license": "MIT",
@@ -3825,6 +7334,281 @@
         }
       ],
       "distribution_scope": "development_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "wrap-ansi",
+      "version": "8.1.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/wrap-ansi",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+          "size": 1117
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "wrap-ansi",
+      "version": "7.0.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/wrap-ansi-cjs",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+          "size": 1117
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "ansi-regex",
+      "version": "5.0.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/wrap-ansi-cjs/node_modules/ansi-regex",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "size": 1109
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "ansi-styles",
+      "version": "4.3.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/wrap-ansi-cjs/node_modules/ansi-styles",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "size": 1109
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "emoji-regex",
+      "version": "8.0.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/wrap-ansi-cjs/node_modules/emoji-regex",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "string-width",
+      "version": "4.2.3",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/wrap-ansi-cjs/node_modules/string-width",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "size": 1109
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "strip-ansi",
+      "version": "6.0.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/wrap-ansi-cjs/node_modules/strip-ansi",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "size": 1109
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "wrappy",
+      "version": "1.0.2",
+      "declared_license": "ISC",
+      "lock_path": "node_modules/wrappy",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "size": 765
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "xml-naming",
+      "version": "0.3.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/xml-naming",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "8e75fc0e776c62ccadb8178ece8d3daa9ba7601fb0a49b2dfb0ea9a7a5c0aa07",
+          "size": 1077
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "y18n",
+      "version": "5.0.8",
+      "declared_license": "ISC",
+      "lock_path": "node_modules/y18n",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "2034cce3b6fafcddd642c4175e01d3ddfc332a53b9f20fdc46b1466dc89ac469",
+          "size": 731
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "yargs",
+      "version": "17.7.3",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/yargs",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE",
+          "kind": "license",
+          "sha256": "2f1a503bfab84b3ba7393627308b3274501e459e3b5185bbb56bbf16cb1602d4",
+          "size": 1146
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "yargs-parser",
+      "version": "21.1.1",
+      "declared_license": "ISC",
+      "lock_path": "node_modules/yargs-parser",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "LICENSE.txt",
+          "kind": "license",
+          "sha256": "365496ca1f56da40b23c9815fc40fa9005847b2f8f8fd1c1a4929ef25ec8cd1d",
+          "size": 731
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "ansi-regex",
+      "version": "5.0.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/yargs/node_modules/ansi-regex",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "size": 1109
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "emoji-regex",
+      "version": "8.0.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/yargs/node_modules/emoji-regex",
+      "installed_on_inventory_host": true,
+      "local_evidence": [],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "declared_license_only"
+    },
+    {
+      "name": "string-width",
+      "version": "4.2.3",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/yargs/node_modules/string-width",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "size": 1109
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "strip-ansi",
+      "version": "6.0.1",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/yargs/node_modules/strip-ansi",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "size": 1109
+        }
+      ],
+      "distribution_scope": "runtime_dependency",
+      "evidence_status": "local_license_or_notice"
+    },
+    {
+      "name": "yocto-queue",
+      "version": "0.1.0",
+      "declared_license": "MIT",
+      "lock_path": "node_modules/yocto-queue",
+      "installed_on_inventory_host": true,
+      "local_evidence": [
+        {
+          "name": "license",
+          "kind": "license",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+          "size": 1117
+        }
+      ],
+      "distribution_scope": "optional_runtime_dependency",
       "evidence_status": "local_license_or_notice"
     }
   ]

@@ -50,16 +50,16 @@ test('locks every built runtime surface and package input into one digest', () =
 });
 
 test('preload denies and audits a real outbound fetch attempt', () => {
-  const directory = mkdtempSync(join(tmpdir(), 'openlinear-network-guard-test-'));
+  const directory = mkdtempSync(join(tmpdir(), 'basiclinear-network-guard-test-'));
   try {
     const audit = join(directory, 'audit.jsonl');
     const result = spawnSync(process.execPath, [
       '--require', guard,
       '--eval',
-      "fetch('https://example.com').then(() => { process.exitCode = 2; }).catch((error) => { if (error.code !== 'ERR_OPENLINEAR_OUTBOUND_DENIED') process.exitCode = 3; });",
+      "fetch('https://example.com').then(() => { process.exitCode = 2; }).catch((error) => { if (error.code !== 'ERR_BASICLINEAR_OUTBOUND_DENIED') process.exitCode = 3; });",
     ], {
       cwd: root,
-      env: { ...process.env, OPENLINEAR_NETWORK_AUDIT_PATH: audit },
+      env: { ...process.env, BASICLINEAR_NETWORK_AUDIT_PATH: audit },
       encoding: 'utf8',
     });
     assert.equal(result.status, 0, result.stderr);

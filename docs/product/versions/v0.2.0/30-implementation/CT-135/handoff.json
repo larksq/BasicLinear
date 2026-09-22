@@ -1,0 +1,218 @@
+{
+  "schema_version": "ct135-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "passed",
+  "authority": {
+    "profile": "project-local-v0.8",
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled_not_synced",
+    "linear_used": false,
+    "issue_revision": 7,
+    "issue_status": "Done",
+    "checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T05-47-30-673Z-8536697c-901f-4ffb-bdc5-2806c3ca6041.json",
+    "checkpoint_backup_sha256": "6a0a874f2bcceb85b3be4bf538d7491019bb3a29815047437bcd5812efcdb424"
+  },
+  "issues": [
+    {
+      "issue_id": "CT-135",
+      "stable_id": "91e864f0-9713-4d97-b539-0578f713754a",
+      "accepted": true,
+      "blocked": false,
+      "status": "output_done",
+      "requirement_refs": ["R-204", "R-206", "R-219"],
+      "acceptance_refs": ["P-T203"],
+      "outcome_refs": ["O-202", "O-204"],
+      "allowed_mutation_paths": [
+        "package.json",
+        "package-lock.json",
+        "firestore.rules",
+        "vitest.config.ts",
+        "vitest.firestore.config.ts",
+        "packages/hosted",
+        "apps/hosted-service/src/index.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-135"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT-135-S1",
+      "actor_id": "codex-primary",
+      "issue_id": "CT-135",
+      "mode": "code_mutating",
+      "allowed_paths": [
+        "package.json",
+        "package-lock.json",
+        "firestore.rules",
+        "vitest.config.ts",
+        "vitest.firestore.config.ts",
+        "packages/hosted",
+        "apps/hosted-service/src/index.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-135"
+      ],
+      "output_refs": [
+        "package.json",
+        "package-lock.json",
+        "firestore.rules",
+        "vitest.config.ts",
+        "vitest.firestore.config.ts",
+        "packages/hosted/src/index.ts",
+        "packages/hosted/src/workspace-authorization.ts",
+        "packages/hosted/src/firebase-workspace-authorization.ts",
+        "packages/hosted/src/firebase-owner-bootstrap.ts",
+        "packages/hosted/src/hosted-http.ts",
+        "packages/hosted/tests/workspace-authorization.test.ts",
+        "packages/hosted/tests/firestore-rules.emulator.test.ts",
+        "packages/hosted/tests/owner-bootstrap.test.ts",
+        "packages/hosted/tests/hosted-http.test.ts",
+        "apps/hosted-service/src/index.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-135/workspace-authorization-contract.md"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-135/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-135/review.md"
+      ]
+    },
+    {
+      "session_id": "CT-135-S2",
+      "actor_id": "codex-primary",
+      "issue_id": "CT-135",
+      "mode": "code_mutating",
+      "allowed_paths": [
+        "firestore.rules",
+        "packages/hosted/src/workspace-authorization.ts",
+        "packages/hosted/src/hosted-http.ts",
+        "packages/hosted/tests/workspace-authorization.test.ts",
+        "packages/hosted/tests/hosted-http.test.ts",
+        "packages/hosted/tests/firestore-rules.emulator.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-135"
+      ],
+      "output_refs": [
+        "firestore.rules",
+        "packages/hosted/src/workspace-authorization.ts",
+        "packages/hosted/src/hosted-http.ts",
+        "packages/hosted/tests/workspace-authorization.test.ts",
+        "packages/hosted/tests/hosted-http.test.ts",
+        "packages/hosted/tests/firestore-rules.emulator.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-135/workspace-authorization-contract.md"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-135/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-135/review.md"
+      ]
+    },
+    {
+      "session_id": "CT-135-S3",
+      "actor_id": "codex-primary",
+      "issue_id": "CT-135",
+      "mode": "docs_only",
+      "allowed_paths": ["docs/product/versions/v0.2.0/30-implementation/CT-135"],
+      "output_refs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-135/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-135/review.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-135/review-request.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-135/review-request-2.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-135/handoff.json"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-135/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-135/review.md"
+      ]
+    }
+  ],
+  "changed_files": [
+    {"path":"apps/hosted-service/src/index.ts","issue_id":"CT-135","mutation_type":"code","ai_session_id":"CT-135-S1","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md","test_refs":["CT-135-C9","CT-135-C11","CT-135-C12","CT-135-C13","CT-135-C15","CT-135-C17"]},
+    {"path":"docs/product/versions/v0.2.0/30-implementation/CT-135/checkpoint.json","issue_id":"CT-135","mutation_type":"artifact","ai_session_id":"CT-135-S3","risk_level":"low","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md","test_refs":["CT-135-C16","CT-135-C17"]},
+    {"path":"docs/product/versions/v0.2.0/30-implementation/CT-135/handoff.json","issue_id":"CT-135","mutation_type":"artifact","ai_session_id":"CT-135-S3","risk_level":"low","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md","test_refs":["CT-135-C16","CT-135-C17"]},
+    {"path":"docs/product/versions/v0.2.0/30-implementation/CT-135/review-request.json","issue_id":"CT-135","mutation_type":"artifact","ai_session_id":"CT-135-S3","risk_level":"low","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md","test_refs":["CT-135-C16","CT-135-C17"]},
+    {"path":"docs/product/versions/v0.2.0/30-implementation/CT-135/review-request-2.json","issue_id":"CT-135","mutation_type":"artifact","ai_session_id":"CT-135-S3","risk_level":"low","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md","test_refs":["CT-135-C16","CT-135-C17"]},
+    {"path":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md","issue_id":"CT-135","mutation_type":"docs","ai_session_id":"CT-135-S3","risk_level":"low","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md","test_refs":["CT-135-C17"]},
+    {"path":"docs/product/versions/v0.2.0/30-implementation/CT-135/workspace-authorization-contract.md","issue_id":"CT-135","mutation_type":"docs","ai_session_id":"CT-135-S2","risk_level":"low","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md","test_refs":["CT-135-C16","CT-135-C17"]},
+    {"path":"firestore.rules","issue_id":"CT-135","mutation_type":"config","ai_session_id":"CT-135-S2","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md","test_refs":["CT-135-C10","CT-135-C11","CT-135-C12","CT-135-C13","CT-135-C17"]},
+    {"path":"package-lock.json","issue_id":"CT-135","mutation_type":"config","ai_session_id":"CT-135-S1","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md","test_refs":["CT-135-C9","CT-135-C10","CT-135-C11","CT-135-C12","CT-135-C13","CT-135-C15","CT-135-C17"]},
+    {"path":"package.json","issue_id":"CT-135","mutation_type":"config","ai_session_id":"CT-135-S1","risk_level":"medium","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md","test_refs":["CT-135-C9","CT-135-C10","CT-135-C11","CT-135-C12","CT-135-C13","CT-135-C15","CT-135-C17"]},
+    {"path":"packages/hosted/src/firebase-owner-bootstrap.ts","issue_id":"CT-135","mutation_type":"code","ai_session_id":"CT-135-S1","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md","test_refs":["CT-135-C9","CT-135-C11","CT-135-C12","CT-135-C13","CT-135-C17"]},
+    {"path":"packages/hosted/src/firebase-workspace-authorization.ts","issue_id":"CT-135","mutation_type":"code","ai_session_id":"CT-135-S1","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md","test_refs":["CT-135-C9","CT-135-C11","CT-135-C12","CT-135-C13","CT-135-C17"]},
+    {"path":"packages/hosted/src/hosted-http.ts","issue_id":"CT-135","mutation_type":"code","ai_session_id":"CT-135-S2","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md","test_refs":["CT-135-C9","CT-135-C11","CT-135-C12","CT-135-C13","CT-135-C17"]},
+    {"path":"packages/hosted/src/index.ts","issue_id":"CT-135","mutation_type":"code","ai_session_id":"CT-135-S1","risk_level":"medium","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md","test_refs":["CT-135-C9","CT-135-C11","CT-135-C12","CT-135-C17"]},
+    {"path":"packages/hosted/src/workspace-authorization.ts","issue_id":"CT-135","mutation_type":"code","ai_session_id":"CT-135-S2","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md","test_refs":["CT-135-C9","CT-135-C11","CT-135-C12","CT-135-C13","CT-135-C17"]},
+    {"path":"packages/hosted/tests/firestore-rules.emulator.test.ts","issue_id":"CT-135","mutation_type":"test","ai_session_id":"CT-135-S2","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md","test_refs":["CT-135-C10","CT-135-C11","CT-135-C12","CT-135-C17"]},
+    {"path":"packages/hosted/tests/hosted-http.test.ts","issue_id":"CT-135","mutation_type":"test","ai_session_id":"CT-135-S2","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md","test_refs":["CT-135-C9","CT-135-C11","CT-135-C12","CT-135-C17"]},
+    {"path":"packages/hosted/tests/owner-bootstrap.test.ts","issue_id":"CT-135","mutation_type":"test","ai_session_id":"CT-135-S1","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md","test_refs":["CT-135-C9","CT-135-C11","CT-135-C12","CT-135-C17"]},
+    {"path":"packages/hosted/tests/workspace-authorization.test.ts","issue_id":"CT-135","mutation_type":"test","ai_session_id":"CT-135-S2","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md","test_refs":["CT-135-C9","CT-135-C11","CT-135-C12","CT-135-C17"]},
+    {"path":"vitest.config.ts","issue_id":"CT-135","mutation_type":"config","ai_session_id":"CT-135-S1","risk_level":"medium","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md","test_refs":["CT-135-C9","CT-135-C10","CT-135-C11","CT-135-C17"]},
+    {"path":"vitest.firestore.config.ts","issue_id":"CT-135","mutation_type":"config","ai_session_id":"CT-135-S1","risk_level":"medium","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md","test_refs":["CT-135-C10","CT-135-C17"]}
+  ],
+  "checks": [
+    {"check_id":"CT-135-C9","issue_id":"CT-135","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/checkpoint.json"},
+    {"check_id":"CT-135-C10","issue_id":"CT-135","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/checkpoint.json"},
+    {"check_id":"CT-135-C11","issue_id":"CT-135","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/checkpoint.json"},
+    {"check_id":"CT-135-C12","issue_id":"CT-135","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/checkpoint.json"},
+    {"check_id":"CT-135-C13","issue_id":"CT-135","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/checkpoint.json"},
+    {"check_id":"CT-135-C14","issue_id":"CT-135","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/checkpoint.json"},
+    {"check_id":"CT-135-C15","issue_id":"CT-135","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/checkpoint.json"},
+    {"check_id":"CT-135-C16","issue_id":"CT-135","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/checkpoint.json"},
+    {"check_id":"CT-135-C17","issue_id":"CT-135","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-135/review.md"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-135",
+      "status": "passed",
+      "independent": true,
+      "review_ref": "docs/product/versions/v0.2.0/30-implementation/CT-135/review.md"
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["P-T203"],
+    "changed_file_refs": [
+      "apps/hosted-service/src/index.ts",
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/checkpoint.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/handoff.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/review-request.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/review-request-2.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/review.md",
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/workspace-authorization-contract.md",
+      "firestore.rules",
+      "package-lock.json",
+      "package.json",
+      "packages/hosted/src/firebase-owner-bootstrap.ts",
+      "packages/hosted/src/firebase-workspace-authorization.ts",
+      "packages/hosted/src/hosted-http.ts",
+      "packages/hosted/src/index.ts",
+      "packages/hosted/src/workspace-authorization.ts",
+      "packages/hosted/tests/firestore-rules.emulator.test.ts",
+      "packages/hosted/tests/hosted-http.test.ts",
+      "packages/hosted/tests/owner-bootstrap.test.ts",
+      "packages/hosted/tests/workspace-authorization.test.ts",
+      "vitest.config.ts",
+      "vitest.firestore.config.ts"
+    ],
+    "regression_areas": [
+      "exact-workspace active owner/member authorization and owner-only controls",
+      "runtime action vocabulary and unsupported-action fail-closed behavior",
+      "privacy-safe user and opaque personal-token evidence",
+      "membership removal and stale-credential denial across web, REST, and MCP principals",
+      "membership-store availability classification and redacted 503 response",
+      "exact canonical browser Origin allowlisting",
+      "Firestore membership schema, path, role, status, revision, and query isolation",
+      "direct-client write denial and nested parent/workspace consistency",
+      "prohibited agent, code-review, repository, and pull-request scope"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/checkpoint.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/review.md"
+    ],
+    "implementation_actor_ids": ["codex-primary"],
+    "implementation_session_ids": ["CT-135-S1", "CT-135-S2", "CT-135-S3"]
+  },
+  "outcomes": [
+    {"outcome_id":"O-202","status":"baseline_needed"},
+    {"outcome_id":"O-204","status":"baseline_needed"}
+  ],
+  "blockers": [],
+  "next": {
+    "skill": "ct-implement-sprint",
+    "issue": "CT-136",
+    "scope": "owner invitation send, inspect, resend, revoke, expire, email-bound one-time acceptance, and membership lifecycle"
+  }
+}

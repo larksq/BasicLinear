@@ -1,0 +1,77 @@
+{
+  "schema_version": "ct6-implementation-result-v1",
+  "captured_at": "2026-08-19T16:26:52Z",
+  "verdict": "OUTPUT_DONE_FOR_CT7_CT8",
+  "issue": {
+    "identifier": "CT-6",
+    "id": "7d88459a-3877-4bc0-b628-0d6ed6031558",
+    "start_revision": 2,
+    "completion_revision": 3
+  },
+  "planning_package_sha256": "d161247c9c523e004a14d6e31ebcf9d12aab9764015b312383e13a0bb851f834",
+  "source": {
+    "git_head": null,
+    "git_state": "unborn_repository",
+    "changed_files_manifest": "docs/product/versions/v0.1.0/30-implementation/CT-6/changed-files.txt",
+    "production_files_sha256": "e31d737f60764fa528225c667a9e454341a086bb8c32db28e87911a5a5a04f41",
+    "package_lock_sha256": "12013ae5bc30fba8a5fc2e54e629ca2ed3586c94e24168aed832e5be585217bb"
+  },
+  "environment": {
+    "os": "macOS 26.5.2 arm64",
+    "node": "v24.18.0",
+    "npm": "11.16.0",
+    "chrome": "150.0.0.0",
+    "docker_engine": "20.10.21",
+    "docker_compose": "2.13.0"
+  },
+  "checks": {
+    "typecheck_workspaces": 8,
+    "unit_test_files": 3,
+    "unit_tests_passed": 9,
+    "integration_test_files": 1,
+    "integration_tests_passed": 1,
+    "npm_vulnerabilities": 0,
+    "compose_config": "pass",
+    "compose_build": "pass",
+    "migrations_applied": 3,
+    "operator_doctor": "pass",
+    "network_internal_status": 200,
+    "network_outbound": "blocked",
+    "restart_readback": {
+      "workspace": "Northstar",
+      "teams": 2,
+      "members": 2,
+      "statuses": 11
+    },
+    "browser_console_warnings_or_errors": 0,
+    "duplicate_ids": 0,
+    "unnamed_buttons": 0,
+    "horizontal_overflow": 0,
+    "dialog_focus_wrap": "pass",
+    "dialog_escape_focus_return": "pass"
+  },
+  "migrations": [
+    { "name": "001_foundation.sql", "sha256": "dd1fac4916d38f072f9fd49f31d0a89ff000b9b0d5cce0d588dea1754b0e7a3b" },
+    { "name": "002_status_team_workspace_integrity.sql", "sha256": "79c55276d5be91b4b36cd6fc66135bbb9a2879e529622159f7ba3c135f911f92" },
+    { "name": "003_scope_rls_to_workspace_context.sql", "sha256": "15e41c9eff8401f6092d43b2c604633c7ac9f6cc2ba515b523648d3bd4fe256b" }
+  ],
+  "images": [
+    { "name": "basiclinear-api", "id": "dcdeb606fb5d", "size_mb": 309 },
+    { "name": "basiclinear-web", "id": "c39d5c23808f", "size_mb": 61.5 },
+    { "name": "basiclinear-migrate", "id": "0df07e94333d", "size_mb": 309 },
+    { "name": "basiclinear-test", "id": "fafc29551264", "size_mb": 429 },
+    { "name": "basiclinear-postgres:16.10", "id": "06928dd03c45", "size_mb": 450 }
+  ],
+  "screenshots": [
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-6/evidence/desktop-overview.jpg", "sha256": "54415e404e827169c2ad12d41e3439e13fa70b51a2ea39812b52334348bb6b4d" },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-6/evidence/desktop-workflow.jpg", "sha256": "3886c57431e0f99897f4dcfb3ac6c51c85f7fcaa07bb5cfa1b48cd0c4529df79" },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-6/evidence/tablet-workflow.jpg", "sha256": "6fdbd6d432fd63eec12403a96ced975c6f7a065ec33fe9aae69a6fdad839f4f0" },
+    { "path": "docs/product/versions/v0.1.0/30-implementation/CT-6/evidence/mobile-workflow.jpg", "sha256": "175bd80134d88ba3dc438e3b9e748c97c938b47170553750369f1ebeb2676723" }
+  ],
+  "deferred_acceptance": [
+    "CT-10/P-T15 clean-host named-volume deployment rehearsal",
+    "CT-11 independent security and conflict verification",
+    "CT-12 integrated accessibility, visual, performance, and recovery verification"
+  ],
+  "outcomes_claimed": []
+}

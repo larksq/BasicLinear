@@ -79,8 +79,8 @@ describe('fixed owner workspace contract', () => {
     const styles = await source('apps/web/src/styles.css');
 
     expect(styles).toContain('.sidebar-scroll { min-height: 0; flex: 1 1 auto; overflow-y: auto;');
-    expect(styles).toContain('.owner-brand { height: 38px; display: grid;');
-    expect(styles).toContain('.rail-collapsed .owner-brand strong { display: none; }');
+    expect(styles).toContain('.owner-brand { min-height: 34px; display: grid;');
+    expect(styles).toContain('.rail-collapsed .owner-brand > span { display: none; }');
     expect(styles).not.toContain('.team-view-switcher { height: 28px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));');
   });
 

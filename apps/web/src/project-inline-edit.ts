@@ -3,7 +3,7 @@ import type {
   Project,
   ProjectResourceInput,
   UpdateProjectRequest,
-} from '@openlinear/contracts';
+} from '@basiclinear/contracts';
 
 interface ProjectEditSource extends Pick<Project,
   'workspaceId' | 'revision' | 'status' | 'priority' | 'leadUserId' | 'startDate' |

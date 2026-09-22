@@ -26,7 +26,7 @@ import type {
   MigrationDescriptorV1,
   TransferSourceV1,
   WorkspaceExportV1,
-} from '@openlinear/contracts';
+} from '@basiclinear/contracts';
 import {
   buildWorkspaceDigests,
   parseDatabaseBackup,
@@ -35,7 +35,7 @@ import {
   TransferError,
   verifyWorkspaceSnapshot,
 } from '../canonical.js';
-import { createDatabase, databaseSchemaVersion, type OpenLinearDatabase } from './client.js';
+import { createDatabase, databaseSchemaVersion, type BasicLinearDatabase } from './client.js';
 
 export interface TransferBuildIdentity {
   productVersion?: string;
@@ -70,11 +70,11 @@ const localMigrationName = '001_embedded_sqlite.sql';
 const localMigrations: MigrationDescriptorV1[] = [
   {
     name: localMigrationName,
-    digest: createHash('sha256').update('openlinear:embedded-sqlite:schema-v1').digest('hex'),
+    digest: createHash('sha256').update('basiclinear:embedded-sqlite:schema-v1').digest('hex'),
   },
   {
     name: '002_local_owner_no_credentials.sql',
-    digest: createHash('sha256').update('openlinear:embedded-sqlite:schema-v2').digest('hex'),
+    digest: createHash('sha256').update('basiclinear:embedded-sqlite:schema-v2').digest('hex'),
   },
 ];
 
@@ -96,7 +96,7 @@ function parseJson<T>(value: string): T {
   }
 }
 
-function transferMetadata(db: OpenLinearDatabase): TransferMetadataRow | undefined {
+function transferMetadata(db: BasicLinearDatabase): TransferMetadataRow | undefined {
   return db.sqlite.prepare(`
     SELECT source_migrations AS sourceMigrations,
            source_product_version AS sourceProductVersion,
@@ -110,7 +110,7 @@ function transferMetadata(db: OpenLinearDatabase): TransferMetadataRow | undefin
 }
 
 function sourceManifest(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   identity: TransferBuildIdentity,
 ): TransferSourceV1 {
   const imported = transferMetadata(db);
@@ -123,7 +123,7 @@ function sourceManifest(
   };
 }
 
-function databaseScope(db: OpenLinearDatabase): {
+function databaseScope(db: BasicLinearDatabase): {
   workspaceId: string;
   workspaceName: string;
   workspaceSlug: string;
@@ -157,7 +157,7 @@ function databaseScope(db: OpenLinearDatabase): {
   return row;
 }
 
-function canonicalIdentity(db: OpenLinearDatabase): {
+function canonicalIdentity(db: BasicLinearDatabase): {
   users: ExportUserV1[];
   workspaces: ExportWorkspaceV1[];
   memberships: ExportMembershipV1[];
@@ -215,7 +215,7 @@ function canonicalIdentity(db: OpenLinearDatabase): {
   };
 }
 
-function workspaceCollections(db: OpenLinearDatabase): CanonicalWorkspaceCollectionsV1 {
+function workspaceCollections(db: BasicLinearDatabase): CanonicalWorkspaceCollectionsV1 {
   const scope = databaseScope(db);
   const identity = canonicalIdentity(db);
   const workflowStatuses = (db.sqlite.prepare(`
@@ -352,7 +352,7 @@ function workspaceCollections(db: OpenLinearDatabase): CanonicalWorkspaceCollect
 }
 
 function snapshotWorkspace(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   source: TransferSourceV1,
 ): CanonicalWorkspaceSnapshotV1 {
   const scope = databaseScope(db);
@@ -365,7 +365,7 @@ function snapshotWorkspace(
 }
 
 export async function createWorkspaceExport(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   workspaceId: string,
   actorUserId: string,
   identity: TransferBuildIdentity = {},
@@ -377,7 +377,7 @@ export async function createWorkspaceExport(
   }
   const source = sourceManifest(db, identity);
   return {
-    format: 'openlinear.workspace-export',
+    format: 'basiclinear.workspace-export',
     version: 1,
     generatedAt: new Date().toISOString(),
     source,
@@ -389,14 +389,14 @@ function sourceDocument(value: unknown, options: WorkspaceImportOptions): Worksp
   if (typeof value !== 'object' || value === null || !('format' in value)) {
     throw new TransferError('INVALID_EXPORT', 'A canonical workspace export or database backup is required.');
   }
-  if (value.format === 'openlinear.workspace-export') {
+  if (value.format === 'basiclinear.workspace-export') {
     const document = parseWorkspaceExport(value);
     if (options.workspaceId !== undefined && options.workspaceId !== document.workspaceId) {
       throw new TransferError('SCOPE_NOT_FOUND', 'The selected workspace is not present in the export.');
     }
     return document;
   }
-  if (value.format !== 'openlinear.database-backup') {
+  if (value.format !== 'basiclinear.database-backup') {
     throw new TransferError('UNSUPPORTED_EXPORT_VERSION', 'The canonical export format is unsupported.');
   }
   const backupDocument = parseDatabaseBackup(value);
@@ -411,7 +411,7 @@ function sourceDocument(value: unknown, options: WorkspaceImportOptions): Worksp
   }
   verifyWorkspaceSnapshot(snapshot, backupDocument.source.migrations);
   return {
-    format: 'openlinear.workspace-export',
+    format: 'basiclinear.workspace-export',
     version: 1,
     generatedAt: backupDocument.generatedAt,
     source: backupDocument.source,
@@ -509,7 +509,7 @@ function importOwner(
   return { user, membership };
 }
 
-function clearDatabase(db: OpenLinearDatabase): void {
+function clearDatabase(db: BasicLinearDatabase): void {
   const tables = [
     'idempotency_records',
     'activity_entries',
@@ -538,7 +538,7 @@ function recordCount(collections: CanonicalWorkspaceCollectionsV1): number {
 }
 
 async function importSelectedWorkspaceExport(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   document: WorkspaceExportV1,
   options: WorkspaceImportOptions,
 ): Promise<WorkspaceImportResult> {
@@ -743,7 +743,7 @@ async function importSelectedWorkspaceExport(
 }
 
 export async function importWorkspaceExport(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   value: unknown,
   options: WorkspaceImportOptions,
 ): Promise<WorkspaceImportResult> {
@@ -838,7 +838,7 @@ export async function importWorkspaceExportFile(
   mkdirSync(dirname(target), { recursive: true, mode: 0o700 });
   ensureRegularOrAbsent(target, options.replace === true);
   const temporary = temporaryPath(target);
-  let db: OpenLinearDatabase | undefined;
+  let db: BasicLinearDatabase | undefined;
   try {
     db = createDatabase(temporary);
     const result = await importSelectedWorkspaceExport(db, document, { ...options, replace: false });
@@ -904,7 +904,7 @@ export function verifyDatabaseFile(path: string): DatabaseFileHealth {
 }
 
 export async function createOnlineBackup(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   targetPath: string,
   overwrite = false,
 ): Promise<DatabaseFileHealth & { pages: number; sha256: string }> {

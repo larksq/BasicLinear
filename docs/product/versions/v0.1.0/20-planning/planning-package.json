@@ -1,0 +1,2077 @@
+{
+  "artifacts": {
+    "prd": {
+      "status": "passed"
+    },
+    "architecture": {
+      "status": "passed"
+    },
+    "ux": {
+      "status": "passed"
+    },
+    "risk_analysis": {
+      "status": "passed"
+    },
+    "acceptance_criteria": {
+      "status": "passed"
+    },
+    "backlog": {
+      "status": "passed"
+    },
+    "sprint_plan": {
+      "status": "passed"
+    },
+    "quality_review": {
+      "status": "passed"
+    },
+    "critical_qa": {
+      "status": "passed"
+    }
+  },
+  "discovery_validation": {
+    "valid": true,
+    "artifact_ref": "docs/product/versions/v0.1.0/10-discovery/discovery-package.json",
+    "artifact_sha256": "61dc2f6dc797ccf25fd9d102c6a8a9791ad3197f3bd25f600292be643394a723"
+  },
+  "discovery_outcomes": [
+    {
+      "id": "O-001",
+      "contract_version": "1.0",
+      "contract_sha256": "87362bff159a581ea2a738afbf969457798e5a9a43e085ea9a9234f932ff604d",
+      "kind": "outcome",
+      "subject": "target_user",
+      "target_segment_or_system": "the configured technical owner using the supported single workspace and single team",
+      "expected_change": "complete the bounded project, milestone, and issue workflow on a self-hosted release without facilitation or a critical error",
+      "metric": {
+        "name": "core workflow completion rate",
+        "definition": "share of ten independently reset canonical runs completing local-runtime entry, project and milestone planning, issue execution, saved view, context-preserving detail edit, and persisted readback",
+        "unit": "percent",
+        "direction": "increase",
+        "aggregation": "rate",
+        "population": "the configured technical owner",
+        "workload": "ten independently reset canonical seeded core workflow runs"
+      },
+      "baseline": {
+        "status": "measured",
+        "value": 0,
+        "period": {
+          "start": "2026-08-18",
+          "end": "2026-08-19"
+        },
+        "evidence_ref": "E-019"
+      },
+      "baseline_measurement_task_id": null,
+      "target": {
+        "operator": ">=",
+        "value": 90
+      },
+      "measurement": {
+        "method": "instrumented owner workflow runs with fixed task definitions, independent seed resets, and synthetic data",
+        "source": "versioned owner-run observation records and application audit evidence",
+        "owner": "Product and test owners",
+        "observation_window": {
+          "start": "2026-10-26",
+          "end": "2026-11-09",
+          "earliest_review_at": "2026-11-10"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-001",
+          "name": "unauthorized local data access count",
+          "metric_definition": "count of confirmed events where a remote listener, hostile browser origin, or unsafe local path exposes or mutates product data",
+          "source": "local-origin, listener, filesystem, import security tests and confirmed incident records",
+          "operator": "=",
+          "value": 0,
+          "unit": "count"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "core workflow completion rate after two bounded remediation rounds",
+        "operator": "<=",
+        "value": 70,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "CT-77's statistical ranking keeps the canonical workflow migration-critical across supported project types",
+        "the supported one-process local runtime and accepted personal workload remain stable"
+      ],
+      "evidence_refs": [
+        "E-001",
+        "E-002",
+        "E-003",
+        "E-004",
+        "E-005",
+        "E-019",
+        "E-020",
+        "E-021",
+        "E-022",
+        "E-023",
+        "E-024",
+        "E-025"
+      ],
+      "confidence": "medium",
+      "status": "ready_for_planning"
+    },
+    {
+      "id": "O-002",
+      "contract_version": "1.0",
+      "contract_sha256": "5d0f045b83987b7da5e5f1c861becc225085b6f42a30ebe0aa6d0eec7f86fd37",
+      "kind": "outcome",
+      "subject": "target_user",
+      "target_segment_or_system": "the configured technical owner completing matched core tasks in BasicLinear and the approved reference condition",
+      "expected_change": "complete the matched workflow with near-reference time and interaction cost",
+      "metric": {
+        "name": "median reference-relative task-time overhead",
+        "definition": "median across approved tasks of one hundred times BasicLinear median completion time divided by Linear median completion time minus one hundred",
+        "unit": "percent",
+        "direction": "decrease",
+        "aggregation": "median",
+        "population": "the configured owner across repeated task attempts in both matched conditions",
+        "workload": "eight approved project, milestone, issue, view, and detail tasks"
+      },
+      "baseline": {
+        "status": "measurement_required",
+        "value": null,
+        "period": null,
+        "evidence_ref": null
+      },
+      "baseline_measurement_task_id": "T-BASELINE-EFFICIENCY",
+      "target": {
+        "operator": "<=",
+        "value": 10
+      },
+      "measurement": {
+        "method": "matched-task timing study by the configured owner with fixed viewport, start and end rules, warm-up, repetitions, and interaction-count diagnostic",
+        "source": "CT-2 benchmark worksheet and corresponding BasicLinear test-run records",
+        "owner": "UX and test owners",
+        "observation_window": {
+          "start": "2026-09-05",
+          "end": "2026-10-20",
+          "earliest_review_at": "2026-10-21"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-002",
+          "name": "matched-task error rate",
+          "metric_definition": "share of measured task attempts ending in an unrecovered user or product error",
+          "source": "matched-task observation records",
+          "operator": "<=",
+          "value": 5,
+          "unit": "percent"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "median reference-relative task-time overhead after two bounded interaction revisions",
+        "operator": ">=",
+        "value": 30,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "matched task definitions remain behaviorally equivalent",
+        "approved reference evidence remains admissible after qualified clean-room review"
+      ],
+      "evidence_refs": [
+        "E-002",
+        "E-003",
+        "E-004",
+        "E-005",
+        "E-006",
+        "E-007",
+        "E-008",
+        "E-009",
+        "E-010"
+      ],
+      "confidence": "low",
+      "status": "baseline_needed"
+    },
+    {
+      "id": "O-003",
+      "contract_version": "1.0",
+      "contract_sha256": "4c41f523cf34e292c85ddeb8b0e954e4f47578d5a0fdeae54ab4aaff5b8c669d",
+      "kind": "outcome",
+      "subject": "protected_quality",
+      "target_segment_or_system": "approved clean-room project, milestone, issue-list, and issue-detail fixtures at pinned viewports",
+      "expected_change": "preserve the reference workflow's structural density and spatial hierarchy with independently designed identity",
+      "metric": {
+        "name": "worst-fixture structural screenshot difference",
+        "definition": "maximum approved-fixture share of comparable unmasked pixels differing beyond the per-pixel tolerance in the pinned environment",
+        "unit": "percent",
+        "direction": "decrease",
+        "aggregation": "custom",
+        "population": "approved synthetic clean-room fixtures",
+        "workload": "one deterministic capture per approved screen and viewport"
+      },
+      "baseline": {
+        "status": "measured",
+        "value": 100,
+        "period": {
+          "start": "2026-08-18",
+          "end": "2026-08-19"
+        },
+        "evidence_ref": "E-019"
+      },
+      "baseline_measurement_task_id": null,
+      "target": {
+        "operator": "<=",
+        "value": 3
+      },
+      "measurement": {
+        "method": "Playwright screenshot comparison with pinned browser, fonts, viewport, fixture, locale, time, and motion",
+        "source": "versioned clean-room visual baselines and CI comparison artifacts",
+        "owner": "Frontend and test owners",
+        "observation_window": {
+          "start": "2026-10-10",
+          "end": "2026-10-23",
+          "earliest_review_at": "2026-10-24"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-003",
+          "name": "serious automated accessibility violations",
+          "metric_definition": "count of serious or critical automated accessibility violations on core screens",
+          "source": "pinned axe browser test results",
+          "operator": "=",
+          "value": 0,
+          "unit": "count"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "worst-fixture structural screenshot difference after two bounded visual revisions",
+        "operator": ">=",
+        "value": 10,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "the pinned rendering environment is reproducible",
+        "clean-room masks exclude only branding and documented volatile regions"
+      ],
+      "evidence_refs": [
+        "E-002",
+        "E-003",
+        "E-004",
+        "E-005",
+        "E-015",
+        "E-018",
+        "E-019"
+      ],
+      "confidence": "medium",
+      "status": "ready_for_planning"
+    },
+    {
+      "id": "O-004",
+      "contract_version": "1.0",
+      "contract_sha256": "78aee6a2f909bc3f4387ba41edd640747a3c1304387e0298f9744cfcadfdebce",
+      "kind": "outcome",
+      "subject": "system",
+      "target_segment_or_system": "supported one-process local releases using the canonical seeded dataset and SQLite upgrade path",
+      "expected_change": "preserve all authoritative local records through export, SQLite backup, restore, upgrade, rollback, and compatible import",
+      "metric": {
+        "name": "authoritative data round-trip success rate",
+        "definition": "share of export-import and backup-restore trials whose canonical record and relation digest matches the source",
+        "unit": "percent",
+        "direction": "increase",
+        "aggregation": "rate",
+        "population": "supported operating-system, pinned-Node, and schema-version combinations in the release matrix",
+        "workload": "one canonical export-import and one backup-restore trial per supported combination"
+      },
+      "baseline": {
+        "status": "measured",
+        "value": 0,
+        "period": {
+          "start": "2026-08-18",
+          "end": "2026-08-19"
+        },
+        "evidence_ref": "E-019"
+      },
+      "baseline_measurement_task_id": null,
+      "target": {
+        "operator": ">=",
+        "value": 100
+      },
+      "measurement": {
+        "method": "canonical export digest comparison across export-import, backup-restore, restart, and accepted upgrade trials",
+        "source": "versioned recovery test artifacts and canonical digests",
+        "owner": "Operations and test owners",
+        "observation_window": {
+          "start": "2026-10-15",
+          "end": "2026-10-23",
+          "earliest_review_at": "2026-10-24"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-004",
+          "name": "critical data-loss defect count",
+          "metric_definition": "count of confirmed critical defects that irreversibly lose an authoritative record in a supported operation",
+          "source": "recovery tests and confirmed defect records",
+          "operator": "=",
+          "value": 0,
+          "unit": "count"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "authoritative data round-trip success rate on the release candidate",
+        "operator": "<",
+        "value": 100,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "canonical serialization covers every authoritative record and relation",
+        "supported runtime and schema combinations are frozen before review"
+      ],
+      "evidence_refs": [
+        "E-001",
+        "E-019",
+        "E-024",
+        "E-025",
+        "E-026"
+      ],
+      "confidence": "medium",
+      "status": "ready_for_planning"
+    },
+    {
+      "id": "O-005",
+      "contract_version": "1.0",
+      "contract_sha256": "6e6b5f819f23d1484769e081c326e813aa2033e43b8a7eef2f8837e1d22f75f6",
+      "kind": "outcome",
+      "subject": "protected_quality",
+      "target_segment_or_system": "complete public source, build output, local runtime artifact, documentation, assets, and release manifest",
+      "expected_change": "be publishable under an accepted open-source license with distinct identity, complete provenance, and no private reference material",
+      "metric": {
+        "name": "mandatory clean-room release audit pass rate",
+        "definition": "share of mandatory identity, license, attribution, asset provenance, private-evidence exclusion, and reproducible-build checks passing",
+        "unit": "percent",
+        "direction": "increase",
+        "aggregation": "rate",
+        "population": "mandatory checks in the accepted public-release audit matrix",
+        "workload": "one complete audit of the release candidate and its source distribution"
+      },
+      "baseline": {
+        "status": "measured",
+        "value": 0,
+        "period": {
+          "start": "2026-08-18",
+          "end": "2026-08-19"
+        },
+        "evidence_ref": "E-019"
+      },
+      "baseline_measurement_task_id": null,
+      "target": {
+        "operator": ">=",
+        "value": 100
+      },
+      "measurement": {
+        "method": "manifest, provenance, license, private-evidence, identity, and reproducible-build audit by assigned reviewers",
+        "source": "signed release audit matrix and build manifest",
+        "owner": "Product owner and qualified release reviewers",
+        "observation_window": {
+          "start": "2026-10-24",
+          "end": "2026-11-12",
+          "earliest_review_at": "2026-11-13"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-005",
+          "name": "private authenticated reference artifacts in distribution",
+          "metric_definition": "count of private authenticated screenshots, raw workspace records, tokens, or equivalent reference artifacts found in the public distribution",
+          "source": "release privacy scan and provenance audit",
+          "operator": "=",
+          "value": 0,
+          "unit": "count"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "mandatory clean-room release audit pass rate at the release decision",
+        "operator": "<",
+        "value": 100,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "CT-3 assigns qualified decision owners",
+        "the final public name and license are accepted before publication"
+      ],
+      "evidence_refs": [
+        "E-001",
+        "E-002",
+        "E-003",
+        "E-004",
+        "E-005",
+        "E-011",
+        "E-012",
+        "E-013",
+        "E-014",
+        "E-019",
+        "E-024"
+      ],
+      "confidence": "low",
+      "status": "ready_for_planning"
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "O-001",
+      "contract_version": "1.0",
+      "contract_sha256": "87362bff159a581ea2a738afbf969457798e5a9a43e085ea9a9234f932ff604d",
+      "kind": "outcome",
+      "subject": "target_user",
+      "target_segment_or_system": "the configured technical owner using the supported single workspace and single team",
+      "expected_change": "complete the bounded project, milestone, and issue workflow on a self-hosted release without facilitation or a critical error",
+      "metric": {
+        "name": "core workflow completion rate",
+        "definition": "share of ten independently reset canonical runs completing local-runtime entry, project and milestone planning, issue execution, saved view, context-preserving detail edit, and persisted readback",
+        "unit": "percent",
+        "direction": "increase",
+        "aggregation": "rate",
+        "population": "the configured technical owner",
+        "workload": "ten independently reset canonical seeded core workflow runs"
+      },
+      "baseline": {
+        "status": "measured",
+        "value": 0,
+        "period": {
+          "start": "2026-08-18",
+          "end": "2026-08-19"
+        },
+        "evidence_ref": "E-019"
+      },
+      "baseline_measurement_task_id": null,
+      "target": {
+        "operator": ">=",
+        "value": 90
+      },
+      "measurement": {
+        "method": "instrumented owner workflow runs with fixed task definitions, independent seed resets, and synthetic data",
+        "source": "versioned owner-run observation records and application audit evidence",
+        "owner": "Product and test owners",
+        "observation_window": {
+          "start": "2026-10-26",
+          "end": "2026-11-09",
+          "earliest_review_at": "2026-11-10"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-001",
+          "name": "unauthorized local data access count",
+          "metric_definition": "count of confirmed events where a remote listener, hostile browser origin, or unsafe local path exposes or mutates product data",
+          "source": "local-origin, listener, filesystem, import security tests and confirmed incident records",
+          "operator": "=",
+          "value": 0,
+          "unit": "count"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "core workflow completion rate after two bounded remediation rounds",
+        "operator": "<=",
+        "value": 70,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "CT-77's statistical ranking keeps the canonical workflow migration-critical across supported project types",
+        "the supported one-process local runtime and accepted personal workload remain stable"
+      ],
+      "evidence_refs": [
+        "E-001",
+        "E-002",
+        "E-003",
+        "E-004",
+        "E-005",
+        "E-019",
+        "E-020",
+        "E-021",
+        "E-022",
+        "E-023",
+        "E-024",
+        "E-025"
+      ],
+      "confidence": "medium",
+      "status": "ready_for_planning"
+    },
+    {
+      "id": "O-002",
+      "contract_version": "1.0",
+      "contract_sha256": "5d0f045b83987b7da5e5f1c861becc225085b6f42a30ebe0aa6d0eec7f86fd37",
+      "kind": "outcome",
+      "subject": "target_user",
+      "target_segment_or_system": "the configured technical owner completing matched core tasks in BasicLinear and the approved reference condition",
+      "expected_change": "complete the matched workflow with near-reference time and interaction cost",
+      "metric": {
+        "name": "median reference-relative task-time overhead",
+        "definition": "median across approved tasks of one hundred times BasicLinear median completion time divided by Linear median completion time minus one hundred",
+        "unit": "percent",
+        "direction": "decrease",
+        "aggregation": "median",
+        "population": "the configured owner across repeated task attempts in both matched conditions",
+        "workload": "eight approved project, milestone, issue, view, and detail tasks"
+      },
+      "baseline": {
+        "status": "measurement_required",
+        "value": null,
+        "period": null,
+        "evidence_ref": null
+      },
+      "baseline_measurement_task_id": "T-BASELINE-EFFICIENCY",
+      "target": {
+        "operator": "<=",
+        "value": 10
+      },
+      "measurement": {
+        "method": "matched-task timing study by the configured owner with fixed viewport, start and end rules, warm-up, repetitions, and interaction-count diagnostic",
+        "source": "CT-2 benchmark worksheet and corresponding BasicLinear test-run records",
+        "owner": "UX and test owners",
+        "observation_window": {
+          "start": "2026-09-05",
+          "end": "2026-10-20",
+          "earliest_review_at": "2026-10-21"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-002",
+          "name": "matched-task error rate",
+          "metric_definition": "share of measured task attempts ending in an unrecovered user or product error",
+          "source": "matched-task observation records",
+          "operator": "<=",
+          "value": 5,
+          "unit": "percent"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "median reference-relative task-time overhead after two bounded interaction revisions",
+        "operator": ">=",
+        "value": 30,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "matched task definitions remain behaviorally equivalent",
+        "approved reference evidence remains admissible after qualified clean-room review"
+      ],
+      "evidence_refs": [
+        "E-002",
+        "E-003",
+        "E-004",
+        "E-005",
+        "E-006",
+        "E-007",
+        "E-008",
+        "E-009",
+        "E-010"
+      ],
+      "confidence": "low",
+      "status": "baseline_needed"
+    },
+    {
+      "id": "O-003",
+      "contract_version": "1.0",
+      "contract_sha256": "4c41f523cf34e292c85ddeb8b0e954e4f47578d5a0fdeae54ab4aaff5b8c669d",
+      "kind": "outcome",
+      "subject": "protected_quality",
+      "target_segment_or_system": "approved clean-room project, milestone, issue-list, and issue-detail fixtures at pinned viewports",
+      "expected_change": "preserve the reference workflow's structural density and spatial hierarchy with independently designed identity",
+      "metric": {
+        "name": "worst-fixture structural screenshot difference",
+        "definition": "maximum approved-fixture share of comparable unmasked pixels differing beyond the per-pixel tolerance in the pinned environment",
+        "unit": "percent",
+        "direction": "decrease",
+        "aggregation": "custom",
+        "population": "approved synthetic clean-room fixtures",
+        "workload": "one deterministic capture per approved screen and viewport"
+      },
+      "baseline": {
+        "status": "measured",
+        "value": 100,
+        "period": {
+          "start": "2026-08-18",
+          "end": "2026-08-19"
+        },
+        "evidence_ref": "E-019"
+      },
+      "baseline_measurement_task_id": null,
+      "target": {
+        "operator": "<=",
+        "value": 3
+      },
+      "measurement": {
+        "method": "Playwright screenshot comparison with pinned browser, fonts, viewport, fixture, locale, time, and motion",
+        "source": "versioned clean-room visual baselines and CI comparison artifacts",
+        "owner": "Frontend and test owners",
+        "observation_window": {
+          "start": "2026-10-10",
+          "end": "2026-10-23",
+          "earliest_review_at": "2026-10-24"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-003",
+          "name": "serious automated accessibility violations",
+          "metric_definition": "count of serious or critical automated accessibility violations on core screens",
+          "source": "pinned axe browser test results",
+          "operator": "=",
+          "value": 0,
+          "unit": "count"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "worst-fixture structural screenshot difference after two bounded visual revisions",
+        "operator": ">=",
+        "value": 10,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "the pinned rendering environment is reproducible",
+        "clean-room masks exclude only branding and documented volatile regions"
+      ],
+      "evidence_refs": [
+        "E-002",
+        "E-003",
+        "E-004",
+        "E-005",
+        "E-015",
+        "E-018",
+        "E-019"
+      ],
+      "confidence": "medium",
+      "status": "ready_for_planning"
+    },
+    {
+      "id": "O-004",
+      "contract_version": "1.0",
+      "contract_sha256": "78aee6a2f909bc3f4387ba41edd640747a3c1304387e0298f9744cfcadfdebce",
+      "kind": "outcome",
+      "subject": "system",
+      "target_segment_or_system": "supported one-process local releases using the canonical seeded dataset and SQLite upgrade path",
+      "expected_change": "preserve all authoritative local records through export, SQLite backup, restore, upgrade, rollback, and compatible import",
+      "metric": {
+        "name": "authoritative data round-trip success rate",
+        "definition": "share of export-import and backup-restore trials whose canonical record and relation digest matches the source",
+        "unit": "percent",
+        "direction": "increase",
+        "aggregation": "rate",
+        "population": "supported operating-system, pinned-Node, and schema-version combinations in the release matrix",
+        "workload": "one canonical export-import and one backup-restore trial per supported combination"
+      },
+      "baseline": {
+        "status": "measured",
+        "value": 0,
+        "period": {
+          "start": "2026-08-18",
+          "end": "2026-08-19"
+        },
+        "evidence_ref": "E-019"
+      },
+      "baseline_measurement_task_id": null,
+      "target": {
+        "operator": ">=",
+        "value": 100
+      },
+      "measurement": {
+        "method": "canonical export digest comparison across export-import, backup-restore, restart, and accepted upgrade trials",
+        "source": "versioned recovery test artifacts and canonical digests",
+        "owner": "Operations and test owners",
+        "observation_window": {
+          "start": "2026-10-15",
+          "end": "2026-10-23",
+          "earliest_review_at": "2026-10-24"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-004",
+          "name": "critical data-loss defect count",
+          "metric_definition": "count of confirmed critical defects that irreversibly lose an authoritative record in a supported operation",
+          "source": "recovery tests and confirmed defect records",
+          "operator": "=",
+          "value": 0,
+          "unit": "count"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "authoritative data round-trip success rate on the release candidate",
+        "operator": "<",
+        "value": 100,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "canonical serialization covers every authoritative record and relation",
+        "supported runtime and schema combinations are frozen before review"
+      ],
+      "evidence_refs": [
+        "E-001",
+        "E-019",
+        "E-024",
+        "E-025",
+        "E-026"
+      ],
+      "confidence": "medium",
+      "status": "ready_for_planning"
+    },
+    {
+      "id": "O-005",
+      "contract_version": "1.0",
+      "contract_sha256": "6e6b5f819f23d1484769e081c326e813aa2033e43b8a7eef2f8837e1d22f75f6",
+      "kind": "outcome",
+      "subject": "protected_quality",
+      "target_segment_or_system": "complete public source, build output, local runtime artifact, documentation, assets, and release manifest",
+      "expected_change": "be publishable under an accepted open-source license with distinct identity, complete provenance, and no private reference material",
+      "metric": {
+        "name": "mandatory clean-room release audit pass rate",
+        "definition": "share of mandatory identity, license, attribution, asset provenance, private-evidence exclusion, and reproducible-build checks passing",
+        "unit": "percent",
+        "direction": "increase",
+        "aggregation": "rate",
+        "population": "mandatory checks in the accepted public-release audit matrix",
+        "workload": "one complete audit of the release candidate and its source distribution"
+      },
+      "baseline": {
+        "status": "measured",
+        "value": 0,
+        "period": {
+          "start": "2026-08-18",
+          "end": "2026-08-19"
+        },
+        "evidence_ref": "E-019"
+      },
+      "baseline_measurement_task_id": null,
+      "target": {
+        "operator": ">=",
+        "value": 100
+      },
+      "measurement": {
+        "method": "manifest, provenance, license, private-evidence, identity, and reproducible-build audit by assigned reviewers",
+        "source": "signed release audit matrix and build manifest",
+        "owner": "Product owner and qualified release reviewers",
+        "observation_window": {
+          "start": "2026-10-24",
+          "end": "2026-11-12",
+          "earliest_review_at": "2026-11-13"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-005",
+          "name": "private authenticated reference artifacts in distribution",
+          "metric_definition": "count of private authenticated screenshots, raw workspace records, tokens, or equivalent reference artifacts found in the public distribution",
+          "source": "release privacy scan and provenance audit",
+          "operator": "=",
+          "value": 0,
+          "unit": "count"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "mandatory clean-room release audit pass rate at the release decision",
+        "operator": "<",
+        "value": 100,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "CT-3 assigns qualified decision owners",
+        "the final public name and license are accepted before publication"
+      ],
+      "evidence_refs": [
+        "E-001",
+        "E-002",
+        "E-003",
+        "E-004",
+        "E-005",
+        "E-011",
+        "E-012",
+        "E-013",
+        "E-014",
+        "E-019",
+        "E-024"
+      ],
+      "confidence": "low",
+      "status": "ready_for_planning"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "R-001",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-001",
+        "E-024",
+        "E-025"
+      ],
+      "outcome_refs": [
+        "O-001"
+      ],
+      "validation_method": "clean local start, origin-security, and restart end-to-end tests"
+    },
+    {
+      "id": "R-002",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-001",
+        "E-009",
+        "E-024",
+        "E-025"
+      ],
+      "outcome_refs": [
+        "O-001",
+        "O-004"
+      ],
+      "validation_method": "domain, API, restart, canonical-transfer, and supported-surface end-to-end tests"
+    },
+    {
+      "id": "R-003",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-002",
+        "E-006",
+        "E-021",
+        "E-023"
+      ],
+      "outcome_refs": [
+        "O-001",
+        "O-002"
+      ],
+      "validation_method": "integrated project workflow test"
+    },
+    {
+      "id": "R-004",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-004",
+        "E-008",
+        "E-021",
+        "E-023"
+      ],
+      "outcome_refs": [
+        "O-001",
+        "O-002"
+      ],
+      "validation_method": "milestone invariant and end-to-end tests"
+    },
+    {
+      "id": "R-005",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-003",
+        "E-005",
+        "E-009",
+        "E-020",
+        "E-021"
+      ],
+      "outcome_refs": [
+        "O-001",
+        "O-002"
+      ],
+      "validation_method": "issue API, keyboard, supported-property, and end-to-end tests"
+    },
+    {
+      "id": "R-006",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-005",
+        "E-023"
+      ],
+      "outcome_refs": [
+        "O-001",
+        "O-004"
+      ],
+      "validation_method": "domain relation invariant tests"
+    },
+    {
+      "id": "R-007",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-004",
+        "E-005",
+        "E-022",
+        "E-023"
+      ],
+      "outcome_refs": [
+        "O-001",
+        "O-004"
+      ],
+      "validation_method": "transaction and activity tests"
+    },
+    {
+      "id": "R-008",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-003",
+        "E-010",
+        "E-020",
+        "E-023"
+      ],
+      "outcome_refs": [
+        "O-001",
+        "O-002"
+      ],
+      "validation_method": "saved-view contract and browser end-to-end tests"
+    },
+    {
+      "id": "R-009",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-010",
+        "E-020",
+        "E-023",
+        "E-025"
+      ],
+      "outcome_refs": [
+        "O-001",
+        "O-002"
+      ],
+      "validation_method": "bounded-scan relevance, deterministic sorting, and accepted-workload tests"
+    },
+    {
+      "id": "R-010",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-009",
+        "E-010"
+      ],
+      "outcome_refs": [
+        "O-002",
+        "O-003"
+      ],
+      "validation_method": "keyboard matrix and matched-task timing study"
+    },
+    {
+      "id": "R-011",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-003",
+        "E-005"
+      ],
+      "outcome_refs": [
+        "O-002",
+        "O-003"
+      ],
+      "validation_method": "browser state-preservation end-to-end test"
+    },
+    {
+      "id": "R-012",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-001"
+      ],
+      "outcome_refs": [
+        "O-004"
+      ],
+      "validation_method": "permission and recovery tests"
+    },
+    {
+      "id": "R-013",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-001",
+        "E-020",
+        "E-022"
+      ],
+      "outcome_refs": [
+        "O-004"
+      ],
+      "validation_method": "export and restore digest tests"
+    },
+    {
+      "id": "R-014",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-001",
+        "E-024",
+        "E-025",
+        "E-026"
+      ],
+      "outcome_refs": [
+        "O-001",
+        "O-004"
+      ],
+      "validation_method": "CT-82 clean local install, migration, restart, and rollback rehearsal"
+    },
+    {
+      "id": "R-015",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-001",
+        "E-002",
+        "E-003",
+        "E-004",
+        "E-005"
+      ],
+      "outcome_refs": [
+        "O-005"
+      ],
+      "validation_method": "asset provenance and clean-room release audit"
+    },
+    {
+      "id": "R-101",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-001",
+        "E-024",
+        "E-025"
+      ],
+      "outcome_refs": [
+        "O-001",
+        "O-004"
+      ],
+      "validation_method": "loopback listener, Host/Origin/CSRF, path, permission, and import adversarial suite"
+    },
+    {
+      "id": "R-102",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-024",
+        "E-025"
+      ],
+      "outcome_refs": [
+        "O-001",
+        "O-004"
+      ],
+      "validation_method": "single-process concurrency, revision, busy-timeout, and request-replay tests"
+    },
+    {
+      "id": "R-103",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-002",
+        "E-003"
+      ],
+      "outcome_refs": [
+        "O-002"
+      ],
+      "validation_method": "controlled browser performance trace"
+    },
+    {
+      "id": "R-104",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-018"
+      ],
+      "outcome_refs": [
+        "O-001",
+        "O-003"
+      ],
+      "validation_method": "axe, accessibility snapshots, keyboard, and manual assistive-technology review"
+    },
+    {
+      "id": "R-105",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-015"
+      ],
+      "outcome_refs": [
+        "O-003",
+        "O-005"
+      ],
+      "validation_method": "pinned Playwright screenshot comparisons"
+    },
+    {
+      "id": "R-106",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-001"
+      ],
+      "outcome_refs": [
+        "O-004"
+      ],
+      "validation_method": "log redaction and failure-injection tests"
+    },
+    {
+      "id": "R-107",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-001",
+        "E-026"
+      ],
+      "outcome_refs": [
+        "O-004"
+      ],
+      "validation_method": "online backup, integrity, canonical digest, restore, interruption, and rollback comparison"
+    },
+    {
+      "id": "R-108",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-011",
+        "E-012",
+        "E-013",
+        "E-014"
+      ],
+      "outcome_refs": [
+        "O-005"
+      ],
+      "validation_method": "public release manifest audit"
+    },
+    {
+      "id": "R-109",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-001",
+        "E-024",
+        "E-025"
+      ],
+      "outcome_refs": [
+        "O-004",
+        "O-005"
+      ],
+      "validation_method": "network-denied clean local-runtime end-to-end test"
+    },
+    {
+      "id": "R-110",
+      "priority": "must_have",
+      "evidence_refs": [
+        "E-002",
+        "E-003",
+        "E-004",
+        "E-005"
+      ],
+      "outcome_refs": [
+        "O-001",
+        "O-003"
+      ],
+      "validation_method": "viewport screenshot and interaction matrix"
+    }
+  ],
+  "issues": [
+    {
+      "id": "CT-2",
+      "requirement_refs": [
+        "R-003",
+        "R-004",
+        "R-005",
+        "R-008",
+        "R-009",
+        "R-010",
+        "R-011",
+        "R-103"
+      ],
+      "outcome_refs": [
+        "O-002"
+      ],
+      "test_refs": [
+        "P-T00"
+      ],
+      "depends_on": [],
+      "blocked_by": [],
+      "implementation_ready": false,
+      "done": {
+        "output": [
+          "A versioned matched-task reference baseline and environment record exist."
+        ],
+        "quality": [
+          "Timing, interaction, error, start/end, repetition, and limitation fields are complete."
+        ],
+        "outcome": [
+          "O-002 remains pending until BasicLinear measurements and the complete observation window exist."
+        ]
+      }
+    },
+    {
+      "id": "CT-3",
+      "requirement_refs": [
+        "R-015",
+        "R-108"
+      ],
+      "outcome_refs": [
+        "O-005"
+      ],
+      "test_refs": [
+        "P-T01"
+      ],
+      "depends_on": [],
+      "blocked_by": [],
+      "implementation_ready": false,
+      "done": {
+        "output": [
+          "An accepted public name, license, clean-room policy, provenance template, and review owner exist."
+        ],
+        "quality": [
+          "The decision cites qualified review boundaries and a complete dependency and asset policy."
+        ],
+        "outcome": [
+          "O-005 remains pending until the release-candidate audit window is complete."
+        ]
+      }
+    },
+    {
+      "id": "CT-4",
+      "requirement_refs": [
+        "R-101",
+        "R-102",
+        "R-103",
+        "R-105",
+        "R-110"
+      ],
+      "outcome_refs": [
+        "O-001",
+        "O-003",
+        "O-004"
+      ],
+      "test_refs": [
+        "P-T02"
+      ],
+      "depends_on": [],
+      "blocked_by": [],
+      "implementation_ready": true,
+      "done": {
+        "output": [
+          "Disposable isolation, revision, dense-list, visual, responsive, and restart prototypes are recorded."
+        ],
+        "quality": [
+          "Commands, source revision, environment, thresholds, failures, and accepted or rejected assumptions are reproducible."
+        ],
+        "outcome": [
+          "Prototype evidence authorizes architecture decisions without claiming O-001, O-003, or O-004 targets."
+        ]
+      }
+    },
+    {
+      "id": "CT-6",
+      "requirement_refs": [
+        "R-001",
+        "R-002",
+        "R-014",
+        "R-101",
+        "R-102",
+        "R-106",
+        "R-109"
+      ],
+      "outcome_refs": [
+        "O-001",
+        "O-004"
+      ],
+      "test_refs": [
+        "P-T03",
+        "P-T04",
+        "P-T05"
+      ],
+      "depends_on": [
+        "CT-4"
+      ],
+      "blocked_by": [],
+      "implementation_ready": true,
+      "done": {
+        "output": [
+          "Historical foundation behavior is preserved while CT-79 replaces its PostgreSQL, login, generalized-tenancy, and Compose end state."
+        ],
+        "quality": [
+          "Reusable revision, transaction, health, log, and restart contracts remain covered; current runtime quality is owned by CT-80 through CT-82."
+        ],
+        "outcome": [
+          "Historical foundation evidence cannot assert a current runtime or outcome target."
+        ]
+      }
+    },
+    {
+      "id": "CT-7",
+      "requirement_refs": [
+        "R-003",
+        "R-004",
+        "R-007"
+      ],
+      "outcome_refs": [
+        "O-001",
+        "O-002"
+      ],
+      "test_refs": [
+        "P-T06",
+        "P-T07"
+      ],
+      "depends_on": [
+        "CT-6"
+      ],
+      "blocked_by": [],
+      "implementation_ready": true,
+      "done": {
+        "output": [
+          "Project CRUD, overview, ordered milestones, derived progress, and project activity persist."
+        ],
+        "quality": [
+          "Schema, ordering, progress, revision, archive, activity, and restart tests pass."
+        ],
+        "outcome": [
+          "Matched planning tasks become measurable while O-001 and O-002 remain pending."
+        ]
+      }
+    },
+    {
+      "id": "CT-8",
+      "requirement_refs": [
+        "R-005",
+        "R-006",
+        "R-007",
+        "R-012"
+      ],
+      "outcome_refs": [
+        "O-001",
+        "O-002",
+        "O-004"
+      ],
+      "test_refs": [
+        "P-T08",
+        "P-T09"
+      ],
+      "depends_on": [
+        "CT-6"
+      ],
+      "blocked_by": [],
+      "implementation_ready": true,
+      "done": {
+        "output": [
+          "Issues, core properties, rich text, relations, comments, activity, archive, and restore persist."
+        ],
+        "quality": [
+          "Relation, sanitization, transaction, conflict, authorization, and recovery invariants pass."
+        ],
+        "outcome": [
+          "The issue workload and authoritative records exist without converting feature completion into outcome evidence."
+        ]
+      }
+    },
+    {
+      "id": "CT-9",
+      "requirement_refs": [
+        "R-008",
+        "R-009",
+        "R-010",
+        "R-011",
+        "R-103",
+        "R-104",
+        "R-105",
+        "R-110"
+      ],
+      "outcome_refs": [
+        "O-001",
+        "O-002",
+        "O-003"
+      ],
+      "test_refs": [
+        "P-T10",
+        "P-T11",
+        "P-T12",
+        "P-T13"
+      ],
+      "depends_on": [
+        "CT-7",
+        "CT-8"
+      ],
+      "blocked_by": [],
+      "implementation_ready": true,
+      "done": {
+        "output": [
+          "Dense list and board views, filters, saved views, search, detail context, command palette, keyboard paths, and responsive screens run."
+        ],
+        "quality": [
+          "Filter/search contracts, context regression, keyboard/AT, controlled performance, responsive, and pinned visual checks pass."
+        ],
+        "outcome": [
+          "The complete interaction workload is available while O-002 baseline and all mature outcome observations remain pending."
+        ]
+      }
+    },
+    {
+      "id": "CT-10",
+      "requirement_refs": [
+        "R-013",
+        "R-014",
+        "R-106",
+        "R-107",
+        "R-109"
+      ],
+      "outcome_refs": [
+        "O-001",
+        "O-004"
+      ],
+      "test_refs": [
+        "P-T14",
+        "P-T15"
+      ],
+      "depends_on": [
+        "CT-6",
+        "CT-8"
+      ],
+      "blocked_by": [],
+      "implementation_ready": true,
+      "done": {
+        "output": [
+          "Reusable versioned canonical transfer, recovery contracts, operator commands, health behavior, and documentation exist for the SQLite port."
+        ],
+        "quality": [
+          "CT-80 and CT-82 must re-prove canonical digest, interruption, compatibility, online backup, actionable errors, and network-denied operation."
+        ],
+        "outcome": [
+          "O-004 measurement capability exists while final round-trip observations remain pending."
+        ]
+      }
+    },
+    {
+      "id": "CT-11",
+      "requirement_refs": [
+        "R-001",
+        "R-002",
+        "R-005",
+        "R-008",
+        "R-009",
+        "R-101",
+        "R-102",
+        "R-106"
+      ],
+      "outcome_refs": [
+        "O-001",
+        "O-004"
+      ],
+      "test_refs": [
+        "P-T16",
+        "P-T17"
+      ],
+      "depends_on": [
+        "CT-6",
+        "CT-8",
+        "CT-9"
+      ],
+      "blocked_by": [],
+      "implementation_ready": true,
+      "done": {
+        "output": [
+          "Independent listener, Host/Origin/CSRF, path, import, conflict, XSS, log, and failure evidence exists; historical tenancy/RLS evidence stays labeled."
+        ],
+        "quality": [
+          "Tests use fixed fixtures, source/environment identity, the accepted local threat boundary, and zero critical finding."
+        ],
+        "outcome": [
+          "Security and data-integrity guardrails receive evidence without proving the user outcomes."
+        ]
+      }
+    },
+    {
+      "id": "CT-12",
+      "requirement_refs": [
+        "R-003",
+        "R-004",
+        "R-005",
+        "R-006",
+        "R-007",
+        "R-008",
+        "R-009",
+        "R-010",
+        "R-011",
+        "R-012",
+        "R-013",
+        "R-014",
+        "R-103",
+        "R-104",
+        "R-105",
+        "R-107",
+        "R-109",
+        "R-110"
+      ],
+      "outcome_refs": [
+        "O-001",
+        "O-002",
+        "O-003",
+        "O-004"
+      ],
+      "test_refs": [
+        "P-T18",
+        "P-T19",
+        "P-T20",
+        "P-T21"
+      ],
+      "depends_on": [
+        "CT-7",
+        "CT-8",
+        "CT-9",
+        "CT-10",
+        "CT-11"
+      ],
+      "blocked_by": [],
+      "implementation_ready": true,
+      "done": {
+        "output": [
+          "Independent integrated workflow, accessibility, performance, visual, responsive, restart, local-runtime, and recovery evidence exists after CT-82."
+        ],
+        "quality": [
+          "Every linked requirement has environment-identified results, reviewed diffs, and no unresolved critical finding."
+        ],
+        "outcome": [
+          "The release candidate is measurable while O-001 through O-004 wait for their canonical windows."
+        ]
+      }
+    },
+    {
+      "id": "CT-13",
+      "requirement_refs": [
+        "R-015",
+        "R-108",
+        "R-109"
+      ],
+      "outcome_refs": [
+        "O-005"
+      ],
+      "test_refs": [
+        "P-T22"
+      ],
+      "depends_on": [
+        "CT-10",
+        "CT-11",
+        "CT-12"
+      ],
+      "blocked_by": [
+        "CT-3"
+      ],
+      "implementation_ready": false,
+      "done": {
+        "output": [
+          "The source, build, identity, license, attribution, provenance, privacy, contribution, security, and reproducibility audit is complete."
+        ],
+        "quality": [
+          "Every mandatory row has an accountable reviewer and no private or unexplained artifact remains."
+        ],
+        "outcome": [
+          "O-005 remains pending until its complete observation window and release decision."
+        ]
+      }
+    },
+    {
+      "id": "CT-14",
+      "requirement_refs": [
+        "R-003",
+        "R-004",
+        "R-005",
+        "R-008",
+        "R-009",
+        "R-010",
+        "R-011",
+        "R-013",
+        "R-015",
+        "R-101",
+        "R-103",
+        "R-104",
+        "R-105",
+        "R-107",
+        "R-108",
+        "R-109",
+        "R-110"
+      ],
+      "outcome_refs": [
+        "O-001",
+        "O-002",
+        "O-003",
+        "O-004",
+        "O-005"
+      ],
+      "test_refs": [
+        "P-T23"
+      ],
+      "depends_on": [
+        "CT-12",
+        "CT-13"
+      ],
+      "blocked_by": [
+        "CT-2"
+      ],
+      "implementation_ready": false,
+      "done": {
+        "output": [
+          "Mature-window observations, guardrails, invalidation checks, confidence updates, and decisions exist for O-001 through O-005."
+        ],
+        "quality": [
+          "Sources, revisions, environments, populations, workloads, and windows match each immutable outcome contract."
+        ],
+        "outcome": [
+          "Each outcome is truthfully decided without redefining its metric or using implementation completion as proof."
+        ]
+      }
+    },
+    {
+      "id": "CT-15",
+      "requirement_refs": [
+        "R-108"
+      ],
+      "outcome_refs": [
+        "O-005"
+      ],
+      "test_refs": [
+        "P-T24"
+      ],
+      "depends_on": [
+        "CT-14"
+      ],
+      "blocked_by": [],
+      "implementation_ready": false,
+      "done": {
+        "output": [
+          "Milestone, issue, changed-file, check, outcome, escaped-defect, and AI-session evidence is reconciled."
+        ],
+        "quality": [
+          "Every lesson cites evidence and has an owner, bounded follow-up, or explicit no-action rationale."
+        ],
+        "outcome": [
+          "The retrospective preserves historical O-005 results and makes no new outcome claim."
+        ]
+      }
+    }
+  ],
+  "tests": [
+    {
+      "id": "P-T00",
+      "level": "manual",
+      "requirement_refs": [
+        "R-003",
+        "R-004",
+        "R-005",
+        "R-008",
+        "R-009",
+        "R-010",
+        "R-011",
+        "R-103"
+      ],
+      "issue_refs": [
+        "CT-2"
+      ]
+    },
+    {
+      "id": "P-T01",
+      "level": "manual",
+      "requirement_refs": [
+        "R-015",
+        "R-108"
+      ],
+      "issue_refs": [
+        "CT-3"
+      ]
+    },
+    {
+      "id": "P-T02",
+      "level": "boundary",
+      "requirement_refs": [
+        "R-101",
+        "R-102",
+        "R-103",
+        "R-105",
+        "R-110"
+      ],
+      "issue_refs": [
+        "CT-4"
+      ]
+    },
+    {
+      "id": "P-T03",
+      "level": "static",
+      "requirement_refs": [
+        "R-014",
+        "R-106",
+        "R-109"
+      ],
+      "issue_refs": [
+        "CT-6"
+      ]
+    },
+    {
+      "id": "P-T04",
+      "level": "security",
+      "requirement_refs": [
+        "R-001",
+        "R-002",
+        "R-101"
+      ],
+      "issue_refs": [
+        "CT-6"
+      ]
+    },
+    {
+      "id": "P-T05",
+      "level": "restart",
+      "requirement_refs": [
+        "R-102",
+        "R-106",
+        "R-109"
+      ],
+      "issue_refs": [
+        "CT-6"
+      ]
+    },
+    {
+      "id": "P-T06",
+      "level": "schema",
+      "requirement_refs": [
+        "R-003",
+        "R-004",
+        "R-007"
+      ],
+      "issue_refs": [
+        "CT-7"
+      ]
+    },
+    {
+      "id": "P-T07",
+      "level": "unit",
+      "requirement_refs": [
+        "R-003",
+        "R-004",
+        "R-007"
+      ],
+      "issue_refs": [
+        "CT-7"
+      ]
+    },
+    {
+      "id": "P-T08",
+      "level": "schema",
+      "requirement_refs": [
+        "R-005",
+        "R-006",
+        "R-007",
+        "R-012"
+      ],
+      "issue_refs": [
+        "CT-8"
+      ]
+    },
+    {
+      "id": "P-T09",
+      "level": "unit",
+      "requirement_refs": [
+        "R-005",
+        "R-006",
+        "R-007",
+        "R-012"
+      ],
+      "issue_refs": [
+        "CT-8"
+      ]
+    },
+    {
+      "id": "P-T10",
+      "level": "adapter_contract",
+      "requirement_refs": [
+        "R-008",
+        "R-009"
+      ],
+      "issue_refs": [
+        "CT-9"
+      ]
+    },
+    {
+      "id": "P-T11",
+      "level": "regression",
+      "requirement_refs": [
+        "R-010",
+        "R-011"
+      ],
+      "issue_refs": [
+        "CT-9"
+      ]
+    },
+    {
+      "id": "P-T12",
+      "level": "golden",
+      "requirement_refs": [
+        "R-105",
+        "R-110"
+      ],
+      "issue_refs": [
+        "CT-9"
+      ]
+    },
+    {
+      "id": "P-T13",
+      "level": "manual",
+      "requirement_refs": [
+        "R-103",
+        "R-104",
+        "R-110"
+      ],
+      "issue_refs": [
+        "CT-9"
+      ]
+    },
+    {
+      "id": "P-T14",
+      "level": "cli_integration",
+      "requirement_refs": [
+        "R-013",
+        "R-107"
+      ],
+      "issue_refs": [
+        "CT-10"
+      ]
+    },
+    {
+      "id": "P-T15",
+      "level": "ci_release",
+      "requirement_refs": [
+        "R-014",
+        "R-106",
+        "R-109"
+      ],
+      "issue_refs": [
+        "CT-10"
+      ]
+    },
+    {
+      "id": "P-T16",
+      "level": "security",
+      "requirement_refs": [
+        "R-001",
+        "R-002",
+        "R-005",
+        "R-008",
+        "R-009",
+        "R-101"
+      ],
+      "issue_refs": [
+        "CT-11"
+      ]
+    },
+    {
+      "id": "P-T17",
+      "level": "boundary",
+      "requirement_refs": [
+        "R-102",
+        "R-106"
+      ],
+      "issue_refs": [
+        "CT-11"
+      ]
+    },
+    {
+      "id": "P-T18",
+      "level": "uat",
+      "requirement_refs": [
+        "R-003",
+        "R-004",
+        "R-005",
+        "R-006",
+        "R-007",
+        "R-008",
+        "R-009",
+        "R-010",
+        "R-011",
+        "R-012"
+      ],
+      "issue_refs": [
+        "CT-12"
+      ]
+    },
+    {
+      "id": "P-T19",
+      "level": "manual",
+      "requirement_refs": [
+        "R-010",
+        "R-104",
+        "R-110"
+      ],
+      "issue_refs": [
+        "CT-12"
+      ]
+    },
+    {
+      "id": "P-T20",
+      "level": "golden",
+      "requirement_refs": [
+        "R-103",
+        "R-105",
+        "R-110"
+      ],
+      "issue_refs": [
+        "CT-12"
+      ]
+    },
+    {
+      "id": "P-T21",
+      "level": "restart",
+      "requirement_refs": [
+        "R-013",
+        "R-014",
+        "R-107",
+        "R-109"
+      ],
+      "issue_refs": [
+        "CT-12"
+      ]
+    },
+    {
+      "id": "P-T22",
+      "level": "ci_release",
+      "requirement_refs": [
+        "R-015",
+        "R-108",
+        "R-109"
+      ],
+      "issue_refs": [
+        "CT-13"
+      ]
+    },
+    {
+      "id": "P-T23",
+      "level": "uat",
+      "requirement_refs": [
+        "R-003",
+        "R-004",
+        "R-005",
+        "R-008",
+        "R-009",
+        "R-010",
+        "R-011",
+        "R-013",
+        "R-015",
+        "R-101",
+        "R-103",
+        "R-104",
+        "R-105",
+        "R-107",
+        "R-108",
+        "R-109",
+        "R-110"
+      ],
+      "issue_refs": [
+        "CT-14"
+      ]
+    },
+    {
+      "id": "P-T24",
+      "level": "manual",
+      "requirement_refs": [
+        "R-108"
+      ],
+      "issue_refs": [
+        "CT-15"
+      ]
+    }
+  ],
+  "architecture_amendment": {
+    "id": "CT-79",
+    "status": "accepted",
+    "decision_ref": "docs/product/versions/v0.1.0/20-planning/CT-79/decision.md",
+    "supported_runtime": "one pinned Node 24 loopback process and one embedded SQLite application file",
+    "accepted_workload": {
+      "issues": 10000,
+      "projects": 1000,
+      "milestones": 2000,
+      "comments_relations_activity": 50000,
+      "note": "Acceptance fixture ceilings, not enforced product quotas."
+    },
+    "excludes": [
+      "Docker",
+      "Compose",
+      "PostgreSQL",
+      "OIDC",
+      "remote access",
+      "multi-user roles",
+      "RLS",
+      "durable outbox",
+      "FTS",
+      "speculative scale indexes"
+    ],
+    "transition": [
+      {
+        "id": "CT-80",
+        "depends_on": [
+          "CT-75",
+          "CT-76",
+          "CT-79"
+        ],
+        "responsibility": "embedded SQLite persistence and canonical one-scope migration"
+      },
+      {
+        "id": "CT-81",
+        "depends_on": [
+          "CT-78",
+          "CT-80"
+        ],
+        "responsibility": "one-process loopback runtime and heavy-stack retirement"
+      },
+      {
+        "id": "CT-82",
+        "depends_on": [
+          "CT-81"
+        ],
+        "responsibility": "independent clean local start, upgrade, backup, restore, rollback, import, accepted-scale, and offline acceptance"
+      }
+    ],
+    "supersedes": [
+      {
+        "id": "CT-21",
+        "reason": "Docker-host qualification is no longer a release requirement."
+      }
+    ]
+  },
+  "critical_qa": [
+    {
+      "id": "scope-truth",
+      "status": "Pass"
+    },
+    {
+      "id": "traceability",
+      "status": "Pass"
+    },
+    {
+      "id": "outcome-focus",
+      "status": "Pass"
+    },
+    {
+      "id": "evidence-handoff",
+      "status": "Pass"
+    },
+    {
+      "id": "architecture",
+      "status": "Pass"
+    },
+    {
+      "id": "ux",
+      "status": "Pass"
+    },
+    {
+      "id": "provider-sync",
+      "status": "Pass"
+    },
+    {
+      "id": "ai-boundaries",
+      "status": "Pass"
+    },
+    {
+      "id": "testing",
+      "status": "Pass"
+    },
+    {
+      "id": "release-path",
+      "status": "Pass"
+    }
+  ],
+  "readiness": {
+    "decision": "yellow",
+    "rationale": "The original feature graph remains historical and traceable. Current new implementation follows the CT-79 architecture amendment through CT-80, CT-81, and CT-82. O-002 remains pending under the accepted-contract implementation-only exception, while CT-3 blocks the separate public-release path.",
+    "allowed_scope": [
+      "CT-4",
+      "CT-6",
+      "CT-7",
+      "CT-8",
+      "CT-9",
+      "CT-10"
+    ],
+    "blockers": [
+      "CT-3"
+    ],
+    "automatic_resolutions": [
+      {
+        "resolution_id": "AUTO-O002-IMPLEMENTATION",
+        "attention_class": "no_human_attention",
+        "decision_mode": "auto",
+        "automation_basis": "accepted_contract",
+        "automation_basis_ref": "docs/product/versions/v0.1.0/10-discovery/discovery-package.json#outcomes/O-002",
+        "effect": "outcome_baseline_nonblocking",
+        "applies_to_issue_ids": [
+          "CT-7",
+          "CT-8",
+          "CT-9",
+          "CT-12"
+        ],
+        "outcome_ids": [
+          "O-002"
+        ],
+        "rationale": "Discovery explicitly records an actionable CT-2 baseline task and allows reversible implementation to continue while preserving all O-002 measurement and claim gates."
+      }
+    ]
+  }
+}

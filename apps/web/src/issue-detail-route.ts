@@ -17,7 +17,7 @@ export function readIssueRoute(search: string, historyState: unknown): IssueRout
   if (!issueId) return { issueId: null, detailMode: null };
   return {
     issueId,
-    detailMode: historyRecord(historyState).openlinearIssue === true ? 'contextual' : 'direct',
+    detailMode: historyRecord(historyState).basiclinearIssue === true ? 'contextual' : 'direct',
   };
 }
 
@@ -28,7 +28,7 @@ export function issueRouteHistoryState(
 ): Record<string, unknown> {
   return {
     ...historyRecord(historyState),
-    openlinearIssue: issueId !== null && detailMode === 'contextual',
+    basiclinearIssue: issueId !== null && detailMode === 'contextual',
   };
 }
 

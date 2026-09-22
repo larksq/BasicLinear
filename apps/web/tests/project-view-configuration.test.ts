@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import type { Membership, Project, Team } from '@openlinear/contracts';
+import type { Membership, Project, Team } from '@basiclinear/contracts';
 import {
   collapsedProjectGroupsFromParam,
   collapsedProjectGroupsParam,

@@ -6,7 +6,7 @@ import type {
   DatabaseBackupV1,
   ExportUserV1,
   MigrationDescriptorV1,
-} from '@openlinear/contracts';
+} from '@basiclinear/contracts';
 import {
   buildDatabaseBackupDigests,
   buildWorkspaceDigests,
@@ -311,14 +311,14 @@ export function createLegacyTransferFixture(): DatabaseBackupV1 {
   }));
   const workspaces = [workspaceSnapshot(1), workspaceSnapshot(2)];
   return {
-    format: 'openlinear.database-backup',
+    format: 'basiclinear.database-backup',
     version: 1,
     generatedAt: timestamp,
     source: {
       productVersion: '0.0.9',
       buildId: 'legacy-postgresql-final-fixture',
       migrations,
-      databaseName: 'openlinear_legacy_fixture',
+      databaseName: 'basiclinear_legacy_fixture',
       serverVersion: 'PostgreSQL 16.10',
     },
     users,
@@ -328,4 +328,4 @@ export function createLegacyTransferFixture(): DatabaseBackupV1 {
   };
 }
 
-export const legacyTransferFixtureSha256 = '000473521838884d216ef7ad87185a94b8400fcf488add218722d0a88d120772';
+export const legacyTransferFixtureSha256 = '3a5a996130beeb71754b509ec2c00cd9ad4c1d681bbae958e876c60c4bab8c3b';

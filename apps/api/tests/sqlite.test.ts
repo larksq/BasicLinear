@@ -1,4 +1,4 @@
-import { createDatabase } from '@openlinear/db/sqlite';
+import { createDatabase } from '@basiclinear/db/sqlite';
 import { describe, expect, it } from 'vitest';
 import { buildApp } from '../src/app.js';
 import type { ApiConfig } from '../src/config.js';
@@ -7,11 +7,11 @@ const config: ApiConfig = {
   host: '127.0.0.1',
   port: 3000,
   environment: 'test',
-  publicOrigin: 'http://openlinear.test',
-  dataDirectory: '/tmp/openlinear-api-sqlite',
+  publicOrigin: 'http://basiclinear.test',
+  dataDirectory: '/tmp/basiclinear-api-sqlite',
   databasePath: ':memory:',
-  backupDirectory: '/tmp/openlinear-api-sqlite/backups',
-  webRoot: '/tmp/openlinear-api-sqlite/web',
+  backupDirectory: '/tmp/basiclinear-api-sqlite/backups',
+  webRoot: '/tmp/basiclinear-api-sqlite/web',
   sessionCookieName: 'ol_local_session',
   sessionTtlSeconds: 3_600,
 };
@@ -20,7 +20,7 @@ describe('SQLite-backed API workflow', () => {
   it('bootstraps the local owner and serves project, milestone, and issue mutations', async () => {
     const database = createDatabase(':memory:');
     const app = await buildApp({ config, database, logger: false });
-    const baseHeaders = { host: 'openlinear.test' };
+    const baseHeaders = { host: 'basiclinear.test' };
     const unsafeHeaders = {
       ...baseHeaders,
       origin: config.publicOrigin,
@@ -41,8 +41,8 @@ describe('SQLite-backed API workflow', () => {
       };
       const workspaceId = owner.workspaces[0]!.id;
       const cookie = ownerResponse.headers['set-cookie']!.split(';', 1)[0]!;
-      const csrf = String(ownerResponse.headers['x-openlinear-csrf-token']);
-      const headers = { ...unsafeHeaders, cookie, 'x-openlinear-csrf': csrf };
+      const csrf = String(ownerResponse.headers['x-basiclinear-csrf-token']);
+      const headers = { ...unsafeHeaders, cookie, 'x-basiclinear-csrf': csrf };
 
       const teamsResponse = await app.inject({
         method: 'GET',

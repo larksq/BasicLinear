@@ -32,7 +32,7 @@ import type {
   UpdateIssueRequest,
   UpdateLabelRequest,
   WorkflowStatus,
-} from '@openlinear/contracts';
+} from '@basiclinear/contracts';
 
 interface ApiEnvelope<T> {
   data: T;
@@ -70,7 +70,7 @@ export class TransportError extends Error {
   readonly code = 'LOCAL_SERVICE_UNAVAILABLE';
 
   constructor() {
-    super('The local OpenLinear service could not be reached.');
+    super('The local BasicLinear service could not be reached.');
     this.name = 'TransportError';
   }
 }
@@ -90,11 +90,11 @@ async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
     ...init,
     headers: {
       ...(stateChanging ? { 'content-type': 'application/json' } : {}),
-      ...(stateChanging && csrfToken !== undefined ? { 'x-openlinear-csrf': csrfToken } : {}),
+      ...(stateChanging && csrfToken !== undefined ? { 'x-basiclinear-csrf': csrfToken } : {}),
       ...init.headers,
     },
   });
-  const nextCsrfToken = response.headers.get('x-openlinear-csrf-token');
+  const nextCsrfToken = response.headers.get('x-basiclinear-csrf-token');
   if (nextCsrfToken !== null) csrfToken = nextCsrfToken;
   if (!response.ok) {
     const body = await response.json().catch(() => ({})) as ErrorEnvelope;
@@ -118,7 +118,7 @@ export const api = {
       throw new ApiError(response.status, {
         error: {
           code: 'LOCAL_SERVICE_NOT_READY',
-          message: 'The local OpenLinear service is not ready.',
+          message: 'The local BasicLinear service is not ready.',
         },
       });
     }

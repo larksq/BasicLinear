@@ -1,0 +1,32 @@
+{
+  "schema_version": "ct97-implementation-handoff-v1",
+  "stage": "implementation.testing-handoff",
+  "status": "implementation_complete_browser_acceptance_pending",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled",
+    "linear_used": false
+  },
+  "issue": {
+    "identifier": "CT-97",
+    "stable_id": "ed817f4a-5730-4ddf-8c12-4d4a7672f8a0",
+    "created_revision": 1,
+    "implementation_scope_revision": 2,
+    "initial_completion_revision": 3,
+    "expected_evidence_correction_revision": 4
+  },
+  "changed_files_ref": "docs/product/versions/v0.1.0/30-implementation/CT-97/changed-files.txt",
+  "evidence_ref": "docs/product/versions/v0.1.0/30-implementation/CT-97/evidence/verification-summary.json",
+  "next": {
+    "skill": "ct-test-sprint",
+    "issue": "CT-12",
+    "scope": "verify visible named issue, project, and milestone archive Undo; exact returned-revision restore; latest-action replacement; dismissal; pending and failure semantics; activity and link readback; focus transfer and recovery; long names; responsive geometry; and pinned Light/Dark Chrome captures"
+  },
+  "blockers": [
+    "Chrome extension transport is unavailable in the selected Chrome profile and direct execution-time authorization is required to open it.",
+    "The repository has no source revision.",
+    "CT-82 independent clean-user runtime acceptance remains open.",
+    "CT-3 public identity, final-brand, license, and clean-room review remains open because BasicLinear has an exact active market collision."
+  ],
+  "outcomes_claimed": []
+}

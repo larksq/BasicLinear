@@ -1,0 +1,30 @@
+{
+  "schema_version": "ct18-implementation-result-v1",
+  "captured_at": "2026-08-19T22:24:32Z",
+  "verdict": "OUTPUT_DONE_FOR_CT11",
+  "issue": {
+    "identifier": "CT-18",
+    "id": "d2d590bd-15b6-43bc-b96c-91ba55983942",
+    "implementation_revision": 2,
+    "expected_completion_revision": 3
+  },
+  "checks": {
+    "foundation_fixture_present": true,
+    "typecheck_workspaces": 8,
+    "unit_test_files": 5,
+    "unit_tests_passed": 20,
+    "integration_test_files": 6,
+    "integration_tests_passed": 16,
+    "secret_environment_files_copied": 0
+  },
+  "immutable_image": {
+    "name": "basiclinear-test:ct11-final-r2",
+    "id": "b073182b066e765bdda111ffa6f32a0befba85039e6cccd2794b781913cc325d",
+    "size_bytes": 442958382
+  },
+  "source_hashes": {
+    "ops/compose/Dockerfile": "41584beb04ff73aae9e2e7cdf7dd51bb33abe7bbdc9fdd709f0ef1ac5c314322",
+    ".env.example": "1d6936c4b51eb8292af3b38aeef7c2581d2ce21cfc19a489cb6f72597e17a31f"
+  },
+  "outcomes_claimed": []
+}

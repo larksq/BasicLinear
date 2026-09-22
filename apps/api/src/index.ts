@@ -1,4 +1,4 @@
-import { prepareLocalStorage } from '@openlinear/db/sqlite';
+import { prepareLocalStorage } from '@basiclinear/db/sqlite';
 import { buildApp } from './app.js';
 import { loadApiConfig } from './config.js';
 import { assertWebBuild } from './static-app.js';
@@ -22,9 +22,9 @@ try {
     origin: config.publicOrigin,
     database: config.databasePath,
     backups: config.backupDirectory,
-  }, 'OpenLinear local runtime ready');
+  }, 'BasicLinear local runtime ready');
 } catch (error) {
   const message = error instanceof Error ? error.message : 'Unknown startup error.';
-  process.stderr.write(`OpenLinear could not start: ${message}\n`);
+  process.stderr.write(`BasicLinear could not start: ${message}\n`);
   process.exitCode = 1;
 }

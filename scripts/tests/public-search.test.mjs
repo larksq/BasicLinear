@@ -1,0 +1,96 @@
+import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
+import { mkdtemp, readFile, writeFile, rm, access } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { resolve } from 'node:path';
+import { test } from 'node:test';
+import { runInNewContext } from 'node:vm';
+
+const root = resolve(import.meta.dirname, '../..');
+const canonical = 'https://basiclinear.qiaosun.me/';
+
+test('production serves real public content while app HTML remains excluded; rebuilding for development removes public artifacts', async () => {
+  const output = await mkdtemp(resolve(tmpdir(), 'basiclinear-search-test-'));
+  try {
+    const shell = await readFile(resolve(root, 'apps/web/hosted.html'), 'utf8');
+    await writeFile(resolve(output, 'hosted.html'), shell);
+    const render = environment => execFileSync(process.execPath,
+      [resolve(root, 'scripts/prerender-homepage.mjs'), output], {
+        cwd: root,
+        env: { ...process.env, VITE_BASICLINEAR_DEPLOYMENT_ENVIRONMENT: environment },
+        stdio: 'pipe',
+        timeout: 30_000,
+      });
+    render('production');
+    const homepage = await readFile(resolve(output, 'homepage.html'), 'utf8');
+    assert.match(homepage, /<h1[^>]*>A little less overhead\./);
+    assert.match(homepage, /id="product"/);
+    assert.match(homepage, /href="\?app"/);
+    assert.doesNotMatch(homepage, /<div id="root"><\/div>/);
+    assert.doesNotMatch(homepage, /<meta name="robots"/);
+    assert.equal((homepage.match(/rel="canonical"/g) ?? []).length, 1);
+    assert.ok(homepage.includes(`<link rel="canonical" href="${canonical}"`));
+    const schema = JSON.parse(homepage.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1]);
+    assert.equal(schema.name, 'BasicLinear');
+    assert.equal(schema.url, canonical);
+    assert.equal(await readFile(resolve(output, 'hosted.html'), 'utf8'), shell);
+    assert.match(shell, /<meta name="robots" content="noindex, nofollow, noarchive"/);
+    const robots = await readFile(resolve(output, 'robots.txt'), 'utf8');
+    assert.match(robots, /^Allow: \/$/m);
+    assert.doesNotMatch(robots, /^Disallow: \/$/m);
+    assert.ok(robots.includes(`Sitemap: ${canonical}sitemap.xml`));
+    const sitemap = await readFile(resolve(output, 'sitemap.xml'), 'utf8');
+    assert.deepEqual([...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1]), [canonical]);
+
+    render('development');
+    await assert.rejects(access(resolve(output, 'homepage.html')));
+    await assert.rejects(access(resolve(output, 'sitemap.xml')));
+    assert.match(await readFile(resolve(output, 'robots.txt'), 'utf8'), /^Disallow: \/$/m);
+  } finally {
+    await rm(output, { recursive: true, force: true });
+  }
+});
+
+test('fragment deep links, app queries, and other hosts receive noindex before the application runs', async () => {
+  const script = await readFile(resolve(root, 'apps/web/public/basiclinear-search-policy.js'), 'utf8');
+  const cases = [
+    [canonical, false],
+    [`${canonical}?utm_source=community#product`, false],
+    [`${canonical}?app`, true],
+    [`${canonical}?utm_source=mail&app`, true],
+    [`${canonical}?oauth_request=example`, true],
+    [`${canonical}?oauth_workspace=select`, true],
+    [`${canonical}?billing=success&session_id=private-session`, true],
+    [`${canonical}?billing=cancelled`, true],
+    [`${canonical}#invite=example`, true],
+    [`${canonical}#issue=example`, true],
+    ['https://basiclinear-online.vercel.app/', true],
+    ['https://basiclinear-development.vercel.app/', true],
+    ['http://localhost:5173/', true],
+  ];
+  for (const [url, excluded] of cases) {
+    let robots;
+    runInNewContext(script, {
+      window: { location: new URL(url) },
+      URLSearchParams,
+      document: {
+        querySelector: () => robots,
+        createElement: () => ({}),
+        head: { appendChild: element => { robots = element; } },
+      },
+    });
+    assert.equal(robots?.content.includes('noindex') ?? false, excluded, url);
+  }
+});
+
+test('billing callbacks use private hosted HTML and noindex at the production edge', async () => {
+  const config = JSON.parse(await readFile(resolve(root, 'ops/hosted/vercel-production.json'), 'utf8'));
+  for (const search of ['?billing=success&session_id=private-session', '?billing=cancelled', '?app&billing=success']) {
+    const query = new URLSearchParams(search);
+    const matches = rule => rule.has === undefined || rule.has.every(condition => condition.type === 'query' && query.has(condition.key));
+    const rewrite = config.rewrites.find(rule => rule.source === '/' && matches(rule));
+    assert.equal(rewrite?.destination, '/hosted.html', search);
+    assert.ok(config.headers.some(rule => rule.source === '/(.*)' && rule.has && matches(rule)
+      && rule.headers.some(header => header.key === 'X-Robots-Tag' && header.value.includes('noindex'))), search);
+  }
+});

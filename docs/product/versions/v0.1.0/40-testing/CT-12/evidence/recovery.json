@@ -1,0 +1,61 @@
+{
+  "schema_version": "ct12-recovery-evidence-v1",
+  "captured_at": "2026-08-19T23:30:25Z",
+  "source_backup": {
+    "format": "basiclinear.database-backup",
+    "version": 1,
+    "canonical_digest": "a1c1ab400bd7508158b4c386cf8acbcf0795253ccdf4892fa8e106eca39ac5a6",
+    "workspace_count": 2,
+    "user_count": 2,
+    "sessions_excluded": true,
+    "bytes": 57920,
+    "sha256": "f367931371fc875f991aca8e0647d8b34fa88914771ef3270ad74c7413f3f542",
+    "matches_current_source": true,
+    "host_safety_copy_mode": "0600",
+    "tracked_in_repository": false
+  },
+  "restore": {
+    "target": "distinct empty migrated PostgreSQL database",
+    "migration_count": 6,
+    "canonical_digest": "a1c1ab400bd7508158b4c386cf8acbcf0795253ccdf4892fa8e106eca39ac5a6",
+    "workspace_count": 2,
+    "user_count": 2,
+    "session_count": 0,
+    "sessions_restored": false,
+    "result": "passed"
+  },
+  "restored_database_backup": {
+    "canonical_digest": "a1c1ab400bd7508158b4c386cf8acbcf0795253ccdf4892fa8e106eca39ac5a6",
+    "workspace_count": 2,
+    "user_count": 2,
+    "bytes": 57947,
+    "sha256": "550eb2192b406ab8414a57bd25aa9a52c48a67acc6f6434b530d1cf5245dd546",
+    "matches_current_target": true
+  },
+  "controlled_interruption": {
+    "database_restart": "passed",
+    "database_readiness": "accepting connections",
+    "api_restart": "healthy",
+    "api_readiness_status": 200,
+    "web_restart": "healthy",
+    "host_readiness_status": 200,
+    "docker_desktop_restart": "preserved and auto-restarted all three verification containers"
+  },
+  "post_restart_browser_readback": {
+    "authenticated_user": "owner@example.test",
+    "workspace": "CT12 Acceptance",
+    "active_issue_count": 2,
+    "issues": ["QA-1", "QA-2"],
+    "screenshot": "docs/product/versions/v0.1.0/40-testing/CT-12/evidence/post-restart-readback-2154x1340.jpg",
+    "result": "passed"
+  },
+  "clean_host_compose": {
+    "status": "blocked",
+    "blocker_ref": "CT-21",
+    "local_engine": "Docker Desktop 4.15.0 / Engine 20.10.21",
+    "local_failure": "every newly created container remains in Created and never starts, including a no-op probe after a full Docker Desktop restart",
+    "alternate_host": "210CPU",
+    "alternate_host_failure": "Docker and Compose are not installed",
+    "required_followup": "run locked Compose, named-volume, migration, health, restart, outbound-denied, and recovery checks on a supported host"
+  }
+}

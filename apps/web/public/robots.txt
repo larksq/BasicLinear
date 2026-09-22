@@ -1,0 +1,3 @@
+# Hosted workspace: keep the application out of search indexes.
+User-agent: *
+Disallow: /

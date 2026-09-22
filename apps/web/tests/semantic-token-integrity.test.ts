@@ -127,13 +127,15 @@ describe('semantic token integrity', () => {
     expect(undefinedConsumers).toEqual([]);
   });
 
-  it('keeps recovery metadata and workflow reordering on the subtle token', async () => {
+  it('keeps recovery metadata, workflow reordering, and shell hierarchy on the subtle token', async () => {
     const styles = await source('apps/web/src/styles.css');
 
     expect(rule(styles, '.connection-banner-copy code')).toContain('color: var(--ol-text-subtle);');
     expect(rule(styles, '.query-error-copy code')).toContain('color: var(--ol-text-subtle);');
     expect(rule(styles, '.workflow-status-drag-handle')).toContain('color: var(--ol-text-subtle);');
-    expect(styles.match(/var\(--ol-text-subtle\)/gu)).toHaveLength(3);
+    expect(rule(styles, '.owner-brand small')).toContain('color: var(--ol-text-subtle);');
+    expect(styles).toContain('.sidebar-section > span { display: block; padding: 0 8px 6px; color: var(--ol-text-subtle);');
+    expect(styles).toContain('.topbar-context > span { overflow: hidden; color: var(--ol-text-subtle);');
     expect(styles).not.toContain('#6d6e74');
     expect(styles).not.toContain('#8b8b94');
   });

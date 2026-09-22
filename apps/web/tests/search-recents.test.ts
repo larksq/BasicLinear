@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import type { SearchResult } from '@openlinear/contracts';
+import type { SearchResult } from '@basiclinear/contracts';
 import {
   addRecentSearchResult,
   readWorkspaceRecentSearch,
@@ -36,7 +36,7 @@ describe('workspace recent search', () => {
     const storage = new MemoryStorage();
     const northstar = issue('1', 'Northstar result');
     const acceptance = issue('2', 'Acceptance result');
-    storage.setItem('openlinear.recent-search', JSON.stringify([northstar]));
+    storage.setItem('basiclinear.recent-search', JSON.stringify([northstar]));
 
     writeWorkspaceRecentSearch(storage, 'workspace-a', [northstar]);
     writeWorkspaceRecentSearch(storage, 'workspace-b', [acceptance]);

@@ -1,0 +1,82 @@
+{
+  "schema_version": "ct143-implementation-handoff-v1",
+  "prepared_at": "2026-08-27T04:27:29Z",
+  "stage": "implementation",
+  "status": "ready_for_independent_testing",
+  "issue": {
+    "identifier": "CT-143",
+    "stable_id": "1f065874-a1d3-433b-ae4e-63b9d69c8d4d",
+    "revision": 6,
+    "ct_status": "In Progress",
+    "milestone": "S4 — Testing"
+  },
+  "implementation_actor_ids": ["codex-primary"],
+  "implementation_session_ids": ["CT143-IMPLEMENTATION-20260827"],
+  "requirements": [
+    {"ref": "CT143-R1", "text": "Development and production use separate Firebase, Firestore, Cloud Run, Vercel, identity, and Stripe-mode boundaries, and both public workspaces are deployed."},
+    {"ref": "CT143-R2", "text": "Google sign-in initializes before the first enabled click and restores the matching environment workspace and 30-day trial without cross-environment data reuse."},
+    {"ref": "CT143-R3", "text": "The authenticated product is a launch-ready Linear-style workspace with Workspace Projects, Views, and More plus Product Home, Issues, Cycles, Projects, and Views."},
+    {"ref": "CT143-R4", "text": "Issue records persist description, parent and sub-issue relationships, ordered resources, durable activity, comments, project and milestone placement, assignment, status, and priority."},
+    {"ref": "CT143-R5", "text": "Invite people opens a focused multi-email member invitation flow while People settings retains invitation and membership lifecycle management."},
+    {"ref": "CT143-R6", "text": "Visible navigation, view controls, workspace and team arrows, modals, forms, and all five issue-property menus are operable and visually checked in Chrome."},
+    {"ref": "CT143-R7", "text": "Verification accounts remain no-charge with Checkout disabled, the ordinary exact 30-day trial remains separate, and agents, code review, repositories, PRs, and synchronization remain excluded."}
+  ],
+  "acceptance_criteria": [
+    {"ref": "CT143-AC1", "text": "Both environment manifests validate, both Cloud Run health endpoints are ready, and both Vercel sites resolve through only their matching backend."},
+    {"ref": "CT143-AC2", "text": "A Google session opens the operating workspace in each environment and reads isolated real Firestore data after reload."},
+    {"ref": "CT143-AC3", "text": "Home, Issues, Views, Cycles, Projects, and project detail render connected real workspace data instead of a temporary information dashboard."},
+    {"ref": "CT143-AC4", "text": "A real development issue persists rich content, a resource, a sub-issue, a comment, and a non-duplicated durable activity timeline through reload."},
+    {"ref": "CT143-AC5", "text": "The invitation modal accepts up to 25 separated Google emails, preserves private per-email links, and routes lifecycle administration to People settings."},
+    {"ref": "CT143-AC6", "text": "View options, saved filters, workspace and Product triggers, and Status, Priority, Assignee, Project, and Milestone menus respond across their full controls."},
+    {"ref": "CT143-AC7", "text": "No card, Checkout session, Stripe subscription, charge, invitation acceptance, personal token, or excluded product capability is claimed by this verification."}
+  ],
+  "changed_file_groups": {
+    "hosted_domain": [
+      "packages/hosted/src/collaboration-service.ts",
+      "packages/hosted/src/hosted-http.ts",
+      "packages/hosted/src/rest-api.ts",
+      "packages/hosted/src/mcp-server.ts"
+    ],
+    "hosted_web": [
+      "apps/web/src/hosted-api.ts",
+      "apps/web/src/hosted-app.tsx",
+      "apps/web/src/hosted-workspace.tsx",
+      "apps/web/src/hosted-workspace.css",
+      "apps/web/src/hosted.css"
+    ],
+    "tests": [
+      "packages/hosted/tests/collaboration-service.test.ts",
+      "packages/hosted/tests/collaboration-http.test.ts",
+      "apps/web/tests/hosted-collaboration.test.ts",
+      "scripts/tests/ct143-nonsecurity-gates.mjs"
+    ],
+    "operations_and_evidence": [
+      "ops/hosted/environments/development.json",
+      "ops/hosted/environments/production.json",
+      "ops/hosted/README.md",
+      "design-qa.md",
+      "docs/product/versions/v0.2.0/30-implementation/CT-143/checkpoint.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-143/environment-separation.md",
+      "docs/product/versions/v0.2.0/30-implementation/CT-143/product-audit-2026-08-27.md"
+    ]
+  },
+  "verification": {
+    "focused_positive_nonsecurity": "11 file selections, 17 tests passed, 41 unselected tests skipped",
+    "typecheck": "11 of 11 declared workspace scripts passed",
+    "production_build": "passed; 1,953 local modules and 1,821 isolated hosted modules",
+    "environment_validator": "passed",
+    "chrome_visual_qa": "passed for the bounded development and production journeys",
+    "design_qa": "passed"
+  },
+  "claim_boundary": {
+    "security_or_adversarial_testing": "skipped by maintainer direction",
+    "stripe_or_payment_execution": "not performed",
+    "independent_acceptance": "pending",
+    "outcomes": "pending",
+    "release_approval": "not granted"
+  },
+  "next": {
+    "skill": "ct-test-sprint",
+    "action": "Run a separately authorized independent nonsecurity review against the sealed CT-143 candidate and record accepted or rejected UAT without mutating provider data."
+  }
+}

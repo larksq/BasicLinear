@@ -1,4 +1,4 @@
-import type { IssueViewState, SavedView } from '@openlinear/contracts';
+import type { IssueViewState, SavedView } from '@basiclinear/contracts';
 import { describe, expect, it } from 'vitest';
 import {
   canManageSavedView,

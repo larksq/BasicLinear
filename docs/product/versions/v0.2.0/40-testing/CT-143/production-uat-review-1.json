@@ -1,0 +1,60 @@
+{
+  "schema_version": "ct143-production-uat-v1",
+  "reviewed_at": "2026-08-27T05:14:59Z",
+  "reviewer": "codex-testing-ct143-independent",
+  "session": "CT143-INDEPENDENT-PRODUCTION-REVIEW-20260827",
+  "environment": {
+    "name": "production",
+    "url": "https://basiclinear-gray.vercel.app",
+    "browser": "user-selected Chrome",
+    "google_session": "existing maintainer account",
+    "project": "BasicLinear production launch"
+  },
+  "initial_auth_recovery": {
+    "first_submit": "rejected_before_record_creation",
+    "message": "A verified Google session is required.",
+    "draft_preserved": true,
+    "record_created": false,
+    "recovery": "one reload of the same production tab restored the existing Google/Firebase session",
+    "retry": "succeeded"
+  },
+  "persisted_records": {
+    "parent": {
+      "identifier": "OL-6D82C5",
+      "id": "issue_aa1845f47f4241799ddb9fdfd56d82c5",
+      "revision": 5,
+      "status": "in_progress",
+      "priority": "high",
+      "assignee": "Qiao Sun · owner"
+    },
+    "child": {
+      "identifier": "OL-DA0B1C",
+      "id": "issue_3548c12af0044de7aa9cede895da0b1c"
+    },
+    "description_count": 1,
+    "comment_count": 1,
+    "resource_count": 1,
+    "sub_issue_count": 1,
+    "resource": {
+      "label": "[CT-143 independent review 20260827] Production workspace",
+      "url": "https://basiclinear-gray.vercel.app/"
+    },
+    "visible_activity_count": 6
+  },
+  "reload_readback": "passed",
+  "development_separation": {
+    "status": "passed_read_only",
+    "authority": "Development Preview",
+    "matching_production_prefixed_records": 0
+  },
+  "records_left_visible": true,
+  "excluded_actions": [
+    "invitation",
+    "personal_access_token",
+    "Checkout",
+    "subscription",
+    "charge",
+    "payment",
+    "security_or_adversarial_testing"
+  ]
+}

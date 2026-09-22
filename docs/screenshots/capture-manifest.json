@@ -1,0 +1,74 @@
+{
+  "schema_version": "basiclinear.readme-captures.v1",
+  "captured_on": "2026-09-21",
+  "browser": "Chrome",
+  "base_commit": "928767ea12c59aca28b94e9bcb91bca03eb1febe",
+  "working_tree": "modified",
+  "local_build": {
+    "command": "npm run build",
+    "directory": "apps/web/dist",
+    "file_count": 33,
+    "sha256": "9e95993d08e97a2439124826e617969a6570adc8bc60b597fae1d92cc2fdc064"
+  },
+  "fixture": {
+    "path": "scripts/serve-visual-fixture.mjs",
+    "name": "team-route",
+    "sha256": "277b4fcc7b3706b39ddf8978cecec7a727df31d95e8e3bcd2790cb2117efa360"
+  },
+  "captures": [
+    {
+      "file": "online-homepage.jpg",
+      "captured_at": "2026-09-21T02:08:50.687Z",
+      "source": "https://basiclinear.qiaosun.me/",
+      "edition": "public_homepage",
+      "width": 2072,
+      "height": 1340,
+      "sha256": "44e54c24c4321fb163ab4201cbf27a26926f762860131ef2c47ee6521bb7640e"
+    },
+    {
+      "file": "project-overview.jpg",
+      "captured_at": "2026-09-21T02:08:14.492Z",
+      "source": "http://127.0.0.1:4176/?fixture=team-route",
+      "edition": "local",
+      "width": 2087,
+      "height": 1350,
+      "sha256": "ca5058ac3d732b4038302f9580cb3d4b9023de6451aff102af3365d9e8b9b56d"
+    },
+    {
+      "file": "issue-detail.jpg",
+      "captured_at": "2026-09-21T02:09:02.986Z",
+      "source": "http://127.0.0.1:4176/?fixture=team-route",
+      "edition": "local",
+      "width": 2072,
+      "height": 1340,
+      "sha256": "0dddc2dda1387a393f20f1f259dc148c8763d52dee84ae8ff85ce1780f99a464"
+    },
+    {
+      "file": "issue-board.jpg",
+      "captured_at": "2026-09-21T02:10:21.459Z",
+      "source": "http://127.0.0.1:4176/?fixture=team-route",
+      "edition": "local",
+      "width": 2072,
+      "height": 720,
+      "sha256": "475cfa6c938857d7fdd5d568612232c7b5b9e438836efafa6fabc5bfd48cafa6"
+    },
+    {
+      "file": "saved-views.jpg",
+      "captured_at": "2026-09-21T02:10:45.997Z",
+      "source": "http://127.0.0.1:4176/?fixture=team-route",
+      "edition": "local",
+      "width": 2072,
+      "height": 465,
+      "sha256": "962d518887a13259356738f1df50f633c724063e34893c2e973f6286e97bbddb"
+    },
+    {
+      "file": "issue-detail-mobile.jpg",
+      "captured_at": "2026-09-21T02:09:28.828Z",
+      "source": "http://127.0.0.1:4176/?fixture=team-route",
+      "edition": "local",
+      "width": 375,
+      "height": 812,
+      "sha256": "a0cccd3bad788a6c927925e06be4185be1b59d95adadbc3b4215b66333712016"
+    }
+  ]
+}

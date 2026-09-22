@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { AppError } from '@openlinear/domain';
+import { AppError } from '@basiclinear/domain';
 import { resolveEventCursor, serializeWorkspaceEvents } from '../src/events.js';
 
 describe('workspace event protocol', () => {

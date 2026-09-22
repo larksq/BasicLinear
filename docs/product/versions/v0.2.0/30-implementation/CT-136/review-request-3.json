@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "stage": "implementation.independent-review-request",
+  "status": "completed_fail",
+  "review_round": 3,
+  "prepared_at": "2026-08-25T07:46:38Z",
+  "authorized_at": "2026-08-25T04:22:18.000Z",
+  "dispatched_at": "2026-08-25T07:46:38Z",
+  "completed_at": "2026-08-25T08:03:07Z",
+  "authorization": {
+    "authorized_by": "user",
+    "scope": ["CT-134", "CT-135", "CT-136", "CT-137", "CT-138", "CT-139", "CT-140", "CT-141", "CT-142"],
+    "standing": true
+  },
+  "issue": {
+    "identifier": "CT-136",
+    "stable_id": "ffae9729-d827-4d3e-ac20-6df3d95b0687",
+    "revision": 8,
+    "status": "In Progress",
+    "milestone": "S3 — Implementation",
+    "plan_id": "I-204",
+    "requirements": ["R-205", "R-206", "R-215", "R-216"],
+    "acceptance": ["P-T204"],
+    "outcomes": ["O-202", "O-204"]
+  },
+  "authority": {
+    "profile": "project-local-v0.8",
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "projection": "disabled_not_synced",
+    "predecessor": {"identifier":"CT-135","status":"Done","revision":7},
+    "checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T07-46-03-260Z-5638fc6e-73df-48ec-86be-ca812d54fd73.json",
+    "checkpoint_backup_sha256": "bc3ada4820978ca0d2c0ce01477027f5d6d88572cb9587dc16c46147f24cf75c"
+  },
+  "independence": {
+    "required": true,
+    "primary_actor_id": "codex-primary",
+    "reviewer_must_be_distinct": true,
+    "mode": "read_only",
+    "prohibited_actions": ["editing any file", "mutating Control Tower", "creating a commit", "changing external state"],
+    "dispatch_state": "completed",
+    "reviewer_actor_id": "codex-subagent:/root/ct136_independent_review"
+  },
+  "prior_reviews": [
+    {
+      "round": 1,
+      "decision": "FAIL",
+      "finding_count": 4,
+      "highest_severity": "P1",
+      "remediation_status": "independently_closed_in_review_2"
+    },
+    {
+      "round": 2,
+      "decision": "FAIL",
+      "finding_count": 2,
+      "highest_severity": "P1",
+      "sealed_hashes": "47/47 before and after",
+      "remediation": [
+        "Sample trusted mutation time after transaction reads on every callback attempt and reject regression against stored invitation or membership lifecycle before writes.",
+        "HMAC-bind each token record's digest, workspace, invitation, version, creation, and expiry, then verify it in constant time before every lifecycle branch.",
+        "Regress regressed accept/resend/revoke, a two-attempt transaction retry, and cross-workspace superseded-token rebinding without seat/evidence mutation or preview leakage."
+      ]
+    }
+  ],
+  "candidate": {
+    "manifest_scope": "Every CT-136 implementation, test, configuration, direct trusted dependency, historical review artifact, and pre-Review-3 evidence artifact needed to verify invitation, membership, transaction-time, token-binding, and O-202 integration. This routing request excludes itself to avoid a self-hash.",
+    "file_count": 48,
+    "sha256_by_path": {
+      ".env.example": "a32b5a5ac05bd78d1cfa76cfe0fb8c8770feea61f4b54a3df43d3210de5f9fb9",
+      "apps/hosted-service/package.json": "8c42fed20654c0c59687e12b34baaf940aea39cde114bd25641432fe8d233f37",
+      "apps/hosted-service/src/firebase-identity.ts": "343a52a38eb928c13e9c814e43c2cafad9b52eaee0a3aeab459e2a3424b99df8",
+      "apps/hosted-service/src/hosted-config.ts": "c16bec5515146721e09252c27525fe38b9019b407915e5ac902dd68593f5ae82",
+      "apps/hosted-service/src/index.ts": "79c5c9439e71bff456d161cc568442e6c3325c6a4e354df9c142cb4e3819d808",
+      "apps/hosted-service/tests/firebase-identity.test.ts": "535da7ba21e3df87e203b5487bfa24cba7491715c986ec5f33da6988a86ec947",
+      "apps/hosted-service/tests/hosted-config.test.ts": "21dbd322861f20dd1523b33b15bf97ccc059b61c65a559d6f375fae8e9e8b1df",
+      "apps/hosted-service/tsconfig.json": "da8e5fc294f2cc905f61b463c3e663497ed45bb51e637d406901b597a5cfbc23",
+      "apps/web/hosted.html": "310362c5e2fc5a142404693dd6f547a04e07d49a70eaf789340513017e6eb781",
+      "apps/web/package.json": "fbc4da4fa4dffa72fc0b99a4165e2b2b9155708d0912abf2496df84c0aba0b7a",
+      "apps/web/src/hosted-api.ts": "32a231c03af542027a347e0d2aff7a700c3e90d5b8a3f4244f7711074b9e6389",
+      "apps/web/src/hosted-app.tsx": "fde7b549d36a45ccedee781829d9727008cdf8293f35c9d152928f1b14e209eb",
+      "apps/web/src/hosted-auth.ts": "cc3ede863d73398332120d54beb95a5ee77b3f413af72c51349706643517ded3",
+      "apps/web/src/hosted-main.tsx": "35432f3101e555e3117f5f9530c1badf3da566912a5c9eb989232df414546458",
+      "apps/web/src/hosted.css": "9cce3e7f296f1ebb3394335f05cc33c3f12382c4f5c791050c672a54ce38b5aa",
+      "apps/web/tests/hosted-foundation.test.ts": "289bc3c521019ec2f0d12832baf5c4b770673b8fa61eb4673052ce6434c82fe3",
+      "apps/web/tests/hosted-invitation.test.ts": "86e384a192cbb858f440a6a4647c2398949ed18e7e97b3ffc9211e0e71d46d5a",
+      "apps/web/vite.config.ts": "d12796f723e9dca5ca633c9bd98ce83dd624083f9c3d9ecbd5a9aefac1dff983",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/checkpoint.json": "073d46e4770bf0b397a0f632e67198c8120857a1ebf660bf477034454c9a392f",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/invitation-membership-contract.md": "488fcfacb73c1d7ed48b15f35026960823bcede980d6e0982298b183112145ee",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request-2.json": "aeef8f6e49c6cef32705af185aa450e0d9aabfc3354e9d73312417b378974dc6",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request.json": "6a4047e8373eadf14f8c5b9e3e43bad2cf0f3f82ec87adb7a52dab2f57235129",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review.md": "0b78094537a499cedcc3e7d411beeac92f5d86c0ebd9942eb45ce36d8154f88f",
+      "firebase.json": "745ee50dfa4a07ee72c618e8caf9ef105f6c53898960433dd249ec4d60cb5ce9",
+      "firestore.rules": "603ac2d6863b809cb8b38479bf18db5edc8b9b3e6d019d0b8bbf533dc873b6a9",
+      "package-lock.json": "1c679619a8c3f63835bfd8546742b5ba3f5c1f4994d91dd82d419293666e90cd",
+      "package.json": "31a18c4b3728178d9bfd46324206389e155abc9e7f198a407ef1a0974bc566d2",
+      "packages/hosted/package.json": "2e23835430a5316fc4e803ae1f1ebb8d2e37fae18a807a5a51e1c09a86564c76",
+      "packages/hosted/src/firebase-invitation-repository.ts": "d4cee925fe133ee5516d89addf662e91568473d1de51bd976af100f9bf07178e",
+      "packages/hosted/src/firebase-owner-bootstrap.ts": "7d712eaf93d6b28b0e93f37677ab54c0c036eeb43a0cc1c8a7c9a8a4c7499a92",
+      "packages/hosted/src/firebase-workspace-authorization.ts": "d572ad34873cdf8e6d11fbf163a22b7a35cadaf0db380b08c247d80a55558b3e",
+      "packages/hosted/src/hosted-http.ts": "32fba3be8c275c2879bb0f6e25d393f814a05b8e48c254f971db1b3ac384c46d",
+      "packages/hosted/src/index.ts": "695764be0670a80e0c58784bdae140a75d01d2c8829f615b4f51fc45dd7dcc14",
+      "packages/hosted/src/invitation-service.ts": "042a6de5aae4e15d7f8870e3a73ec35b9fe4b391f98019531255eab4eceec128",
+      "packages/hosted/src/measurement-contract.ts": "02b9dcc7e8cb696d96b9abf1b9703be8130410797d6d5cfa0470d07b18933928",
+      "packages/hosted/src/outcome-report.ts": "3a821e489d0d8b45a3ed1692a4ec196d19ae205289a781ebc2c09b9a8882d854",
+      "packages/hosted/src/owner-bootstrap.ts": "37bd722ca408c2ca52833c0b9be19175dc7da76ef2b384e250c6b34c76135bc9",
+      "packages/hosted/src/workspace-authorization.ts": "933a52389198330bc1fe640f4c4adaec9eb876210409817fade3b644b3b6ec14",
+      "packages/hosted/tests/firebase-invitation-repository.test.ts": "3fdbb015079ee98aa03f1222b654d6f3c42a0c53d72ae341ee4f02c5e46e8650",
+      "packages/hosted/tests/firestore-rules.emulator.test.ts": "1c7ea761308c0a8b9a6c081dae949e5b07752904e621c4e8ba6c9913dea6188f",
+      "packages/hosted/tests/hosted-http.test.ts": "16641a4e0c8bc71fc4be2135c3c635aa0f5e9603dac82ddb9557ca0043df24c2",
+      "packages/hosted/tests/invitation-service.test.ts": "118c3d270c7318cc12cd57bef8cd019e02963f3addee45b3e54d5d2ec7cc52b9",
+      "packages/hosted/tests/measurement.test.ts": "b179a9bc9e22f42227f9b95ff73108a42e523fed86c29e593c7aed4671628aeb",
+      "packages/hosted/tests/owner-bootstrap.test.ts": "f33967b9fb545d6fd14fbe79eccb4f413adfe5643446e86c6688a281b2b9ce95",
+      "packages/hosted/tests/workspace-authorization.test.ts": "97ec7b869b0e15435a89b82ed3dac10f1308f18d4bad4b76602fced59e9e85cb",
+      "packages/hosted/tsconfig.json": "bb8199c5c0897eb869517fd5dd95d1dc377e9222804b969aa06c851a6e8ef14e",
+      "vitest.config.ts": "487d9f14b343f3af43ef2298eee1b6e80b0746d5228dd2ea6c8c11042ef8bd32",
+      "vitest.firestore.config.ts": "d3679907aa3d271f218c85395f82eb3125e13288fda501432214caadc3f46186"
+    }
+  },
+  "review_result": {
+    "decision": "FAIL",
+    "done_eligible": false,
+    "sealed_hashes_before": "48/48",
+    "sealed_hashes_after": "48/48",
+    "required_checks": "passed",
+    "prior_findings_closed": "6/6",
+    "findings": [
+      {
+        "severity": "P2",
+        "summary": "Create did not compare its transaction-sampled time with the authoritative workspace, hosted-user, owner-membership, and trial lifecycle, so a pre-bootstrap clock could persist an invitation and evidence before workspace creation and misclassify trial eligibility."
+      }
+    ],
+    "additional_probes": "All 11 token state/field mutation cases failed closed; retry-time sampling and every prior counterexample remained closed."
+  },
+  "required_checks": [
+    {"command":"verify all 48 candidate SHA-256 entries before and after checks","expected":"48 of 48 hashes match exactly"},
+    {"command":"npx vitest run packages/hosted/tests/invitation-service.test.ts packages/hosted/tests/measurement.test.ts packages/hosted/tests/hosted-http.test.ts packages/hosted/tests/firebase-invitation-repository.test.ts apps/hosted-service/tests/hosted-config.test.ts apps/web/tests/hosted-invitation.test.ts apps/web/tests/hosted-foundation.test.ts --config vitest.config.ts","expected":"7 files and 57 tests pass"},
+    {"command":"npm run test:hosted-rules","expected":"official Firestore emulator runs 1 file and 6 scenario groups successfully"},
+    {"command":"npm test","expected":"83 files and 557 tests pass"},
+    {"command":"npm run typecheck","expected":"all 10 workspace typechecks pass"},
+    {"command":"npm run build","expected":"hosted service plus local/hosted Vite entries build and all 7 hosted HTML references resolve"},
+    {"command":"npm run audit:hosted-runtime","expected":"0 vulnerabilities for the supported Firestore-capable runtime profile"},
+    {"command":"git diff --check and jq validation of CT-136 JSON","expected":"no whitespace or JSON errors"}
+  ],
+  "review_questions": [
+    "Do all six prior counterexamples fail to reproduce, with exact no-mutation/no-leak assertions and both historical review artifacts retained?",
+    "Is trusted time sampled after transaction reads on every callback attempt for create, resend, revoke, and accept; can clock regression, retry, or later stored lifecycle timestamps commit an invalid record, evidence event, membership, or seat?",
+    "Does the token-record HMAC unambiguously authenticate digest, workspace, invitation, version, creation, and expiry in constant time, and do field/state/binding changes across current, superseded, revoked, and used tokens fail closed without preview leakage?",
+    "Are terminal, wrong-account, new-link, expiry, revoke, already-active, removed-member reactivation, concurrency, and replay transitions exact, atomic, bounded, and retry-safe?",
+    "Do owner authorization, self-invite protection, fragment/POST-only raw-secret handling, Firestore privacy, O-202/G-202 reconciliation, UI recovery/accessibility, and excluded scope remain intact?",
+    "Is the 48-file manifest complete for every direct invitation, membership, measurement, configuration, test, and evidence consumer?"
+  ],
+  "decision_contract": {
+    "pass": "Every manifest hash and required check passes, all six prior counterexamples are closed, no actionable P0-P3 finding remains, and the reviewer returns explicit PASS with Done eligibility limited to implementation output.",
+    "fail": "Any actionable P0-P3 correctness, security, privacy, accessibility, evidence, manifest-completeness, or scope finding returns explicit FAIL; CT-136 remains In Progress and must be remediated and resealed.",
+    "no_claims": ["P-T204 qualified", "production deployed", "legal/privacy/security approved", "billing reconciled", "public release accepted", "O-202 or O-204 achieved"]
+  },
+  "reviewer_instructions": "Operate read-only. Do not edit files or Control Tower. Verify all 48 hashes before and after, rerun every required command, independently reproduce all six findings with special attention to per-attempt transaction time and immutable token binding, inspect Planning and CT-133/134/135 evidence, probe terminal/concurrency/idempotency/privacy/O-202 integration/manifest completeness, rank each actionable P0-P3 finding with exact file/line and a reproducible counterexample, and return explicit PASS or FAIL plus Done eligibility."
+}

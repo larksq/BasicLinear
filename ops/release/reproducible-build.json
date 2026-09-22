@@ -1,8 +1,8 @@
 {
-  "schema_version": "reproducible-build-v1",
-  "issue": "CT-13",
-  "status": "inputs_pinned_revision_pending",
-  "source_revision": null,
+  "schema_version": "reproducible-build-v2",
+  "release": "BasicLinear open-source release",
+  "status": "complete",
+  "source_revision": "cc329dddd4e0dc59fb2090d8bb7b60970632e5c6",
   "runtime_topology": "single_node_loopback_sqlite",
   "start_command": "node apps/api/dist/index.js",
   "toolchain": {
@@ -12,56 +12,132 @@
   },
   "inputs": [
     {
-      "path": "package-lock.json",
-      "sha256": "fd719192d99ee14779bc3dc5fcc910da030ac889a45d78600b93e515cce67cca"
+      "path": ".github/workflows/ci.yml",
+      "sha256": "a352a677d1417b792756b3b8addcab4a586358a05df9feae1843818027ab2e14"
     },
     {
-      "path": "package.json",
-      "sha256": "f107ff1154c9dededacd0d63ae6de07d3949c122539856bdde9c7cfd84ba6165"
+      "path": ".gitleaks.toml",
+      "sha256": "c7c9a388d84b0d85d67d72fd8d98f04a5795c46f7e78bb5c240a621d78b1473a"
     },
     {
-      "path": "apps/api/package.json",
-      "sha256": "60d3812d72fdab296ea442a57144e3cc32ff02b4bbbc76e0bca5d197bfc9b50d"
+      "path": ".npmrc",
+      "sha256": "857e18055c0f5d75719d253033954c10511c4b16ae5bd68bc45bb75d93a411bc"
     },
     {
-      "path": "apps/web/package.json",
-      "sha256": "7e9b956a0383a63351b91f81d42d72b2b3324117a3afdebc26a51b436f234096"
-    },
-    {
-      "path": "ops/cli/package.json",
-      "sha256": "69e814219f87c6adc6ac7398c4b6bf1153ff48f91755c68441bbe0eed1526b1f"
-    },
-    {
-      "path": "packages/config/package.json",
-      "sha256": "f28ac6c095d42439093eec2f7093fff2533d14bcc6259d34fb31e690a5dd87af"
-    },
-    {
-      "path": "packages/contracts/package.json",
-      "sha256": "d914916fea1ff80034abe959c7fd9eb753c7342c6860596655aa36ddcc2d303f"
-    },
-    {
-      "path": "packages/db/package.json",
-      "sha256": "b6d1b86400f0febefac71a6bfe1d357097f1a32fa5b9c11f78d2d72cc7447fdc"
-    },
-    {
-      "path": "packages/domain/package.json",
-      "sha256": "bdad17cd8270118024be72a4d4cd21a8dc2a368a14b30947251210d00ca80f85"
-    },
-    {
-      "path": "packages/test-fixtures/package.json",
-      "sha256": "5bbd30a5128e58183c803eccb552c0a2abe52d78a8637bf288c3c06d3b3956d8"
-    },
-    {
-      "path": "packages/ui/package.json",
-      "sha256": "4594421e1498f9b1dc7c835a3cba318c22e95b2cda8186536bafba1fd84c42cf"
+      "path": ".nvmrc",
+      "sha256": "55075b5ec4e8b31936cbbc282b8829116d1fd48f2f2f1856dee592a6650700ce"
     },
     {
       "path": "LICENSE",
       "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
     },
     {
+      "path": "apps/api/package.json",
+      "sha256": "559e4c372885706c81aa08bd8892535475a5766ccc33dcdfe5694787ad3ea12a"
+    },
+    {
+      "path": "apps/api/tsconfig.json",
+      "sha256": "8ad8b8a1fe13988d6e86d76a7dd1b841f69a867359f6679c1911b8abbc992e52"
+    },
+    {
+      "path": "apps/hosted-service/package.json",
+      "sha256": "7f18163075bc1becc81eac5c7bc5226f592baae21217de867f3f1c06b5b96427"
+    },
+    {
+      "path": "apps/hosted-service/tsconfig.json",
+      "sha256": "da8e5fc294f2cc905f61b463c3e663497ed45bb51e637d406901b597a5cfbc23"
+    },
+    {
+      "path": "apps/web/package.json",
+      "sha256": "6539cda40299042eb8d7f8d4ef220f27f7a77c1be2d1f4fe7b1feef7f46de9ab"
+    },
+    {
+      "path": "apps/web/tsconfig.json",
+      "sha256": "e52c0e1dc66fb530eeac544f441d486db80a97b5bb7e9780e99bb3bcb5342043"
+    },
+    {
+      "path": "apps/web/vite.config.ts",
+      "sha256": "a5631341106059c1d5a8a94c2e56c83e0d433af546c996c857624a9d831097f8"
+    },
+    {
+      "path": "ops/cli/package.json",
+      "sha256": "773d4dad4e043bd7407e081d52975008dd2178c7d7b65c9aa23f2473ce3944f5"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "368142c0e87eb686e62bb60812d004f0f3d4f95b7fcb55c55dc8ae6e64d5120d"
+    },
+    {
+      "path": "package.json",
+      "sha256": "f8433b8e55100233777104b7eec61b9e6d720d684e887dce529f69aafbe00082"
+    },
+    {
+      "path": "packages/config/package.json",
+      "sha256": "ac573673dfe06a477a2e52a1ecef29f49e40aaef02e08ddc2f2bb91df9cda024"
+    },
+    {
+      "path": "packages/config/tsconfig.json",
+      "sha256": "1b6ecef48f5521687b1e5e9b2c05525ed9ca325172b68151c13a6ebbc1d69caa"
+    },
+    {
+      "path": "packages/contracts/package.json",
+      "sha256": "7ae1e0a1ab6c8fe53e740725bba5aa28249404bfe15916fa9797324e5fcfe276"
+    },
+    {
+      "path": "packages/contracts/tsconfig.json",
+      "sha256": "8ad8b8a1fe13988d6e86d76a7dd1b841f69a867359f6679c1911b8abbc992e52"
+    },
+    {
+      "path": "packages/db/package.json",
+      "sha256": "b0b82dad306f98960ece8daecbed0025ed9d72968c14553934fc61754b159c9a"
+    },
+    {
+      "path": "packages/db/tsconfig.json",
+      "sha256": "f5deffb86c1bc8df82e47cad7d2040610eb5b2a978a25711cc25e7abc27046dd"
+    },
+    {
+      "path": "packages/domain/package.json",
+      "sha256": "ee5b4a6aee60db3426ad5338a1a51d00dceeb62746bed3688d6ed478063a30ad"
+    },
+    {
+      "path": "packages/domain/tsconfig.json",
+      "sha256": "8ad8b8a1fe13988d6e86d76a7dd1b841f69a867359f6679c1911b8abbc992e52"
+    },
+    {
+      "path": "packages/hosted/package.json",
+      "sha256": "00c43f296433568f363f9021f9691c37b3a638275c31250ba04706603f9cd59c"
+    },
+    {
+      "path": "packages/hosted/tsconfig.json",
+      "sha256": "bb8199c5c0897eb869517fd5dd95d1dc377e9222804b969aa06c851a6e8ef14e"
+    },
+    {
+      "path": "packages/test-fixtures/package.json",
+      "sha256": "66d3ee8907ce397eb12528b0e73b1d79ea4d1a995f6de2c88a772a7b24d11bc8"
+    },
+    {
+      "path": "packages/test-fixtures/tsconfig.json",
+      "sha256": "8ad8b8a1fe13988d6e86d76a7dd1b841f69a867359f6679c1911b8abbc992e52"
+    },
+    {
+      "path": "packages/ui/package.json",
+      "sha256": "76e00bd7029e4b92204f84a1d4d5c39ea0f3d1ed528279801fd8e6b5a5872317"
+    },
+    {
+      "path": "packages/ui/tsconfig.json",
+      "sha256": "8ad8b8a1fe13988d6e86d76a7dd1b841f69a867359f6679c1911b8abbc992e52"
+    },
+    {
       "path": "scripts/clean-build-output.mjs",
-      "sha256": "e174f2d98a122a7d0a26d8d9211f0f3fff4e6e7bd1c87e4a3f1733bf2b713fa8"
+      "sha256": "62c7875e070afa767ac00f2d62850e90bec7e84dd21719a1c1e4a0093691ee4f"
+    },
+    {
+      "path": "scripts/prepare-release-metadata.mjs",
+      "sha256": "c5687b5316069ec88b4c1730e89f20d49379f2c8c3ece1a65d6a606910e41b53"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "adc032271697d49f7556295ef0f7ca42ff6bb5cfc0d0a6e55522bf1b51982c76"
     }
   ],
   "commands": [
@@ -73,9 +149,8 @@
   ],
   "runtime_policy": "One Node 24 process serves built assets and API on loopback with one embedded SQLite file.",
   "release_requirements": [
-    "Set source_revision to the accepted release commit.",
-    "Run the build from a clean checkout using the declared toolchain.",
-    "Record artifact hashes and the clean-user network-denied result.",
-    "Obtain the accountable CT-13 reviewer acceptance."
+    "Run the declared build and test commands from a clean checkout.",
+    "Record current artifact hashes and the clean-host network-denied result.",
+    "Run the release and secret audits on the frozen source revision."
   ]
 }

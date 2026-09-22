@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0",
+  "stage": "implementation.checkpoint",
+  "status": "accepted",
+  "prepared_at": "2026-08-26T03:22:13.837Z",
+  "issue": {
+    "plan_id": "I-209",
+    "local_issue_id": "CT-141",
+    "stable_id": "49f28c04-3aa9-491b-b9ed-4cd087479ce4",
+    "revision": 10,
+    "status": "Done",
+    "milestone": "S3 — Implementation",
+    "accepted": true,
+    "blocked": false,
+    "requirement_refs": ["R-201", "R-217", "R-219"],
+    "acceptance_refs": ["P-T209"],
+    "outcome_refs": ["O-203", "O-204"]
+  },
+  "task_readback": {
+    "authority": "project-local-v0.8",
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "projection": "disabled_not_synced",
+    "dependency_readback": [
+      {"issue": "CT-133", "status": "Done", "revision": 8},
+      {"issue": "CT-134", "status": "Done", "revision": 6},
+      {"issue": "CT-135", "status": "Done", "revision": 7},
+      {"issue": "CT-138", "status": "Done", "revision": 19},
+      {"issue": "CT-139", "status": "Done", "revision": 11},
+      {"issue": "CT-140", "status": "Done", "revision": 9}
+    ],
+    "backups": [
+      {
+        "kind": "ct140_completion_dependency",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-26T00-23-01-367Z-57c8c8e5-7a20-42c4-a8c5-e7054a507f9c.json",
+        "sha256": "82100bab5827d25dd94514e15b179aff94c12eb0d893aa1a32f1e70c7a1d7387",
+        "raw_file_sha256": "d4d36f6272320ef852af712ae7ca9fa85238172436e022d300e74d84f23f17b2"
+      },
+      {
+        "kind": "start",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-26T00-26-07-359Z-bf6eed63-adeb-4479-845f-9d779f405e3c.json",
+        "sha256": "151551397093393138dd489ff6f4e0d47da69553817e7567aead1adb31a4c359",
+        "raw_file_sha256": "78646192b348b50e2c5064272af195505f6b40c75bc0505e0b586f4ff567fcb9"
+      },
+      {
+        "kind": "review1_dispatch",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-26T01-50-51-147Z-55880261-c61e-4f42-b943-33468c242673.json",
+        "sha256": "dc4d0684ec497fda8e0ee7ad34b943e8e63c0449eaba4ec29c47cf6e8c2ecfde",
+        "raw_file_sha256": "1904cef6b45579fa7bb2fa11d4359ce1ef8a30aeb8cc03cf120ca34c156ac25c"
+      },
+      {
+        "kind": "review1_failure",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-26T02-20-00-493Z-d37c793a-7cba-454f-9786-0550407d4f82.json",
+        "sha256": "98749d1fb69ac324538862987bf9dbd7a618912d6cc8818463b5ace139cadc4d",
+        "raw_file_sha256": "4f8151e27ab498e6d806c40b944582de7e5788a82a36017355eb66ebea65b1e0"
+      },
+      {
+        "kind": "review2_dispatch",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-26T02-30-00-957Z-9a27b1b2-4f23-4d80-a95a-5d068c185b7c.json",
+        "sha256": "ec19bfe3126eaabbb854d716ead7ec02ca26570bb4eb60116c6acfeb12a6c6f0",
+        "raw_file_sha256": "49c5bab4f8eb514bc1a2db731ff5c7f591573a58f327b1d6bd82b53e1e690dbc"
+      },
+      {
+        "kind": "review2_failure",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-26T02-47-35-466Z-d69ec8e9-8cb3-4e51-8969-b0ea36c89893.json",
+        "sha256": "ae10769f0b6b69cc55be5df219e95c7211a7698a5fb6361b76c3c4d366b57f20",
+        "raw_file_sha256": "3e3d63402e52f41efa92d7a458896cc3ad41f9c9575484919668cd2e559d82db"
+      },
+      {
+        "kind": "review3_dispatch",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-26T02-56-11-236Z-7888d271-ad15-43fd-b294-c27c4961928c.json",
+        "sha256": "40c52984b7f742a9a4edd3312bb86a4d6ebefd19d5d7e5e72e93fb397b41120d",
+        "raw_file_sha256": "2279e757893df1f5188586e08b57c092497a9514083cebe5ee14baddbc3b4750"
+      },
+      {
+        "kind": "completion",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-26T03-22-13-813Z-c57621b8-94da-4ba5-b4db-3c8ec3b2a5a7.json",
+        "sha256": "1974dfdab8b2a01d313a9a25d94bc9475ddbb2cf5459c140d32794995e61925b",
+        "raw_file_sha256": "4a0e56c19d6d00cbc36816d5644cba7f45b041160fc85b83844aad1f145fe3dd"
+      }
+    ],
+    "backup_checksum_note": "sha256 is the backup's embedded semantic checksum; raw_file_sha256 hashes the serialized JSON bytes."
+  },
+  "entry": {
+    "operating_profile": "project-local-v0.8",
+    "authority": "current user goal and standing CT-134-through-CT-142 independent-review authorization",
+    "linear_used": false,
+    "control_tower_ui_used": false,
+    "milestone_reused": "S3 — Implementation",
+    "new_version_milestone_created": false
+  },
+  "sessions": [
+    {
+      "session_id": "CT-141-S1",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating",
+      "allowed_paths": [
+        ".env.example",
+        "firebase.json",
+        "firestore.rules",
+        "packages/hosted/",
+        "apps/hosted-service/",
+        "ops/hosted/",
+        "docs/operations/",
+        "docs/product/versions/v0.2.0/30-implementation/CT-141/",
+        "scripts/tests/ct141-operations-load.mjs"
+      ]
+    },
+    {
+      "session_id": "CT-141-S2",
+      "actor_id": "codex-primary",
+      "mode": "verification_readonly",
+      "outputs": [
+        "route/rate/admission/redaction and bounded-bucket evidence",
+        "budget OIDC/envelope/duplicate/out-of-order/activation evidence",
+        "cost-report completeness and guardrail evidence",
+        "query/export overflow and no-partial-output evidence",
+        "restore chronology/inventory/isolation evidence",
+        "Firestore emulator, regression, typecheck, build, dependency, and offline audit evidence"
+      ]
+    },
+    {
+      "session_id": "CT-141-S3",
+      "actor_id": "codex-primary",
+      "mode": "evidence_mutating",
+      "allowed_paths": [
+        ".control-tower/request-update-issue-141-review1-dispatch.json",
+        "scripts/prepare-ct141-review1.mjs",
+        "docs/product/versions/v0.2.0/30-implementation/CT-141/"
+      ]
+    },
+    {
+      "session_id": "CT-141-IR1",
+      "actor_id": "ct141-independent-review",
+      "mode": "strictly_read_only",
+      "result": "failed_p3_completion_clock_containment"
+    },
+    {
+      "session_id": "CT-141-S4",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating_remediation",
+      "allowed_paths": [
+        "packages/hosted/src/operations-control.ts",
+        "packages/hosted/tests/operations-control.test.ts",
+        "packages/hosted/tests/operations-http.test.ts",
+        "apps/hosted-service/src/index.ts",
+        "apps/hosted-service/src/server-boundary.ts",
+        "apps/hosted-service/tests/server-boundary.test.ts",
+        "scripts/tests/ct141-completion-clock.mjs",
+        "scripts/prepare-ct141-review1.mjs",
+        ".control-tower/request-update-issue-141-review1-failure.json",
+        ".control-tower/request-update-issue-141-review2-dispatch.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-141/"
+      ]
+    },
+    {
+      "session_id": "CT-141-IR2",
+      "actor_id": "ct141-independent-review",
+      "mode": "strictly_read_only",
+      "result": "failed_p3_rejection_transport_telemetry_ordering"
+    },
+    {
+      "session_id": "CT-141-S5",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating_remediation",
+      "allowed_paths": [
+        "packages/hosted/src/hosted-http.ts",
+        "apps/hosted-service/tests/operations-admission-boundary.test.ts",
+        "scripts/tests/ct141-completion-clock.mjs",
+        "scripts/prepare-ct141-review1.mjs",
+        "scripts/prepare-ct141-review3.mjs",
+        ".control-tower/request-update-issue-141-review2-failure.json",
+        ".control-tower/request-update-issue-141-review3-dispatch.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-141/"
+      ]
+    },
+    {
+      "session_id": "CT-141-IR3",
+      "actor_id": "ct141-independent-review",
+      "mode": "strictly_read_only",
+      "result": "passed_no_p0_p1_p2_p3"
+    }
+  ],
+  "implementation": {
+    "policy": {
+      "schema": "basiclinear.hosted-operations-policy.v1",
+      "digest": "3caa75ff6462bfa9ea9dcf04af8df5d4274a2e81843a4ee1b3f0755087838cd5",
+      "max_instances": 3,
+      "concurrency_per_instance": 40,
+      "request_timeout_seconds": 30,
+      "window_seconds": 60,
+      "tracked_buckets_per_instance": 20000
+    },
+    "admission": {
+      "before_stateful_identity_and_pm_work": true,
+      "dimensions": ["global", "network_hmac", "credential_hmac", "workspace_hmac"],
+      "rejected_candidate_increments": 0,
+      "rate_limit_status": 429,
+      "operations_failure_status": 503,
+      "outer_edge_required_before_public_traffic": true
+    },
+    "telemetry": {
+      "schema": "basiclinear.hosted-operations-telemetry.v1",
+      "admitted_and_control_rejections_recorded": true,
+      "cloud_trace_correlation": true,
+      "raw_identifiers_recorded": false,
+      "retention_days": 30
+    },
+    "queries": {
+      "page_size": 100,
+      "transaction_list_records": 10000,
+      "export_records": 25000,
+      "export_issue_queries": 5000,
+      "overflow": "generic_unavailable_no_partial_output"
+    },
+    "budget": {
+      "currency": "USD",
+      "amount_microusd": 25000000,
+      "threshold_basis_points": [5000, 8000, 10000],
+      "alerts_are_hard_cap": false,
+      "authenticated_pubsub_push": true,
+      "activation_review_ttl_hours": 24,
+      "signal_freshness_hours": 36,
+      "warning_or_critical_blocks_new_checkout": true,
+      "same_interval_review_preserves_current_state": true,
+      "later_interval_required_for_zero_reset": true
+    },
+    "cost_guardrail": {
+      "maximum_variable_cost_share_basis_points": 5000,
+      "report_freshness_hours": 720,
+      "production_evidence_class": "production_baseline",
+      "claim_boundary": "guardrail_only_no_outcome_claim"
+    },
+    "restore": {
+      "mode": "firestore_pitr_entire_database",
+      "destination": "isolated_project_only",
+      "whole_minute_within_days": 7,
+      "production_evidence_class": "provider_drill",
+      "local_evidence_class": "synthetic_fixture",
+      "production_in_place_restore": false
+    },
+    "packaging": {
+      "direct_firestore_runtime": "@google-cloud/firestore@8.7.1",
+      "direct_google_oidc_runtime": "google-auth-library@10.9.1",
+      "direct_cloud_storage_added": false,
+      "firebase_admin_transitive_storage_boundary_preserved": true
+    },
+    "excluded": [
+      "AI agents",
+      "code review",
+      "source repositories",
+      "pull requests",
+      "operations administration API",
+      "local/cloud synchronization"
+    ]
+  },
+  "verification": {
+    "focused": {"status": "passed", "files": 17, "tests": 109},
+    "completion_clock": {
+      "status": "passed",
+      "completion_status": 200,
+      "completion_duration_milliseconds": 0,
+      "admission_regression_status": 503,
+      "events": 2,
+      "server_rejection_status": 503,
+      "server_rejection_contained": true,
+      "rejection_transport_matrix": [
+        {"kind": "rate_limit", "failure": "writeHead", "status": 429},
+        {"kind": "rate_limit", "failure": "end", "status": 429},
+        {"kind": "clock_regression", "failure": "writeHead", "status": 503},
+        {"kind": "clock_regression", "failure": "end", "status": 503}
+      ],
+      "raw_identifiers_in_telemetry": false
+    },
+    "rate_limit_load": {
+      "status": "passed",
+      "instances": 3,
+      "aggregate_credential_upper_bound": 90,
+      "workspace_limit_per_instance": 60,
+      "recorded_rate_limit_signals": 4,
+      "raw_identifiers_in_telemetry": false
+    },
+    "firestore_emulator": {
+      "status": "passed",
+      "files": 1,
+      "tests": 6,
+      "restricted_attempt": "loopback bind EPERM",
+      "authorized_rerun": "passed with clean shutdown"
+    },
+    "full_regression": {"status": "passed", "files": 112, "tests": 711},
+    "typecheck": {"status": "passed", "workspaces": 11},
+    "build": {"status": "passed", "local_modules": 1953, "hosted_modules": 30, "hosted_references": "3/3"},
+    "dependency_tree": {"status": "passed", "command": "npm ls --omit=dev --omit=optional --all"},
+    "runtime_audit": {
+      "status": "passed_offline_fresh_online_policy_blocked",
+      "offline_vulnerabilities": 0,
+      "fresh_online_attempt": "policy_blocked_dependency_metadata_disclosure",
+      "fresh_online_claim": false
+    },
+    "candidate_seal": {"status": "passed_before_and_after", "files": 498, "backup_pairs": 7}
+  },
+  "claims": {
+    "implementation_output_done": true,
+    "independent_review_pass": true,
+    "p_t209_qualified": false,
+    "o_203_success": false,
+    "o_204_success": false,
+    "deployed": false,
+    "live_budget_or_pubsub_active": false,
+    "live_cloud_armor_active": false,
+    "provider_restore_drill_completed": false,
+    "release_accepted": false,
+    "legal_privacy_security_approved": false
+  },
+  "next_safe_action": "Run CT-142 P-T210 integrated owner/member/billing/REST/MCP acceptance on the existing shared S4 — Testing milestone through the project-local v0.8 API, preserving all outcome and combined-release boundaries."
+}

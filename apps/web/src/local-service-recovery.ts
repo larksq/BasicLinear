@@ -1,4 +1,4 @@
-import type { Session } from '@openlinear/contracts';
+import type { Session } from '@basiclinear/contracts';
 
 interface LocalServiceRecoveryDependencies {
   renewSession: () => Promise<Session>;

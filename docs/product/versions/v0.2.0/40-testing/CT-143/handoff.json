@@ -1,0 +1,31 @@
+{
+  "schema_version": "ct143-testing-handoff-v1",
+  "prepared_at": "2026-08-27T05:22:31Z",
+  "stage": "testing",
+  "status": "awaiting_independent_remediation_review",
+  "issue": {
+    "identifier": "CT-143",
+    "stable_id": "1f065874-a1d3-433b-ae4e-63b9d69c8d4d",
+    "revision": 7,
+    "ct_status": "In Progress",
+    "milestone": "S4 — Testing"
+  },
+  "evidence": {
+    "implementation_handoff_ref": "docs/product/versions/v0.2.0/30-implementation/CT-143/handoff.json",
+    "evidence_map_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/evidence-map.json",
+    "automated_receipt_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/automated-receipt.json",
+    "manual_observation_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/manual-observation.json",
+    "candidate_manifest_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/candidate.sha256"
+  },
+  "review_1": {
+    "decision": "PASS",
+    "findings": {"P0": 0, "P1": 0, "P2": 0, "P3": 1},
+    "review_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/review-1.md",
+    "production_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/production-uat-review-1.json",
+    "remediation_ref": "docs/product/versions/v0.2.0/30-implementation/CT-143/remediation-p3-session.json"
+  },
+  "next": {
+    "skill": "ct-test-sprint",
+    "action": "Independently verify the sealed P3 token-refresh remediation, both READY Vercel deployments, and production record readback; then record the final decision and update CT-143 only after revision-checked readback."
+  }
+}

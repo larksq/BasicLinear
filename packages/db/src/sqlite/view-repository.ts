@@ -4,10 +4,10 @@ import {
   normalizeIssueViewState,
   normalizeName,
   normalizeText,
-} from '@openlinear/domain';
-import type { IssueViewState } from '@openlinear/domain';
+} from '@basiclinear/domain';
+import type { IssueViewState } from '@basiclinear/domain';
 import type { DbSavedView, DbSearchResult } from '../types.js';
-import type { OpenLinearDatabase } from './client.js';
+import type { BasicLinearDatabase } from './client.js';
 import {
   changed,
   compactChanges,
@@ -37,12 +37,12 @@ const selection = `
   archived_at AS archivedAt, revision, created_at AS createdAt, updated_at AS updatedAt
 `;
 
-function workspaceId(db: OpenLinearDatabase): string {
+function workspaceId(db: BasicLinearDatabase): string {
   return (db.sqlite.prepare('SELECT workspace_id AS workspaceId FROM scope_metadata WHERE singleton = 1')
     .get() as { workspaceId: string }).workspaceId;
 }
 
-function mapSavedView(db: OpenLinearDatabase, row: SavedViewRow): DbSavedView {
+function mapSavedView(db: BasicLinearDatabase, row: SavedViewRow): DbSavedView {
   return {
     id: row.id,
     workspaceId: workspaceId(db),
@@ -57,7 +57,7 @@ function mapSavedView(db: OpenLinearDatabase, row: SavedViewRow): DbSavedView {
   };
 }
 
-function savedViewById(db: OpenLinearDatabase, viewId: string): DbSavedView {
+function savedViewById(db: BasicLinearDatabase, viewId: string): DbSavedView {
   const row = db.sqlite.prepare(`SELECT ${selection} FROM saved_views WHERE id = ?`)
     .get(viewId) as SavedViewRow | undefined;
   if (row === undefined) throw new AppError('NOT_FOUND', 'Saved view not found.', 404);
@@ -65,7 +65,7 @@ function savedViewById(db: OpenLinearDatabase, viewId: string): DbSavedView {
 }
 
 export async function listSavedViews(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   scopeId: string,
   includeArchived = false,
@@ -78,7 +78,7 @@ export async function listSavedViews(
 }
 
 export async function createSavedView(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   scopeId: string,
   input: {
@@ -121,7 +121,7 @@ export async function createSavedView(
 }
 
 export async function updateSavedView(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   scopeId: string,
   viewId: string,
@@ -178,7 +178,7 @@ export async function updateSavedView(
 }
 
 function setSavedViewArchive(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   scopeId: string,
   viewId: string,
@@ -222,7 +222,7 @@ function setSavedViewArchive(
 }
 
 export const archiveSavedView = (
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceIdValue: string,
   viewId: string,
@@ -232,7 +232,7 @@ export const archiveSavedView = (
 ));
 
 export const restoreSavedView = (
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceIdValue: string,
   viewId: string,
@@ -249,7 +249,7 @@ function documentText(value: unknown): string {
 }
 
 export async function searchWorkspace(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   scopeId: string,
   rawQuery: string,

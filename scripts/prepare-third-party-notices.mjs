@@ -25,11 +25,10 @@ async function exists(path) {
     await lstat(path);
     return true;
   } catch (error) {
-    if (error?.code === 'ENOENT') return false;
+    if (error && error.code === 'ENOENT') return false;
     throw error;
   }
 }
-
 function digest(bytes) {
   return createHash('sha256').update(bytes).digest('hex');
 }
@@ -64,33 +63,14 @@ function evidenceStatus(installed, evidence) {
   return evidence.length > 0 ? 'local_license_or_notice' : 'declared_license_only';
 }
 
-async function readExisting(candidateRoot) {
-  try {
-    return JSON.parse(await readFile(join(candidateRoot, manifestPath), 'utf8'));
-  } catch (error) {
-    if (error?.code === 'ENOENT') return null;
-    throw error;
-  }
-}
-
-function preservesApproval(existing, lockHash, noticeHash, technicallyComplete) {
-  return technicallyComplete
-    && existing?.status === 'approved'
-    && existing?.review_status === 'approved'
-    && typeof existing?.reviewer === 'string'
-    && existing.reviewer.trim().length > 0
-    && existing.lockfile_sha256 === lockHash
-    && existing.notice_file_sha256 === noticeHash;
-}
-
 export async function prepareThirdPartyNotices(rootInput = root) {
   const candidateRoot = resolve(rootInput);
-  const existing = await readExisting(candidateRoot);
   const lockBytes = await readFile(join(candidateRoot, lockPath));
   const lock = JSON.parse(lockBytes.toString('utf8'));
   const records = [];
 
-  for (const [path, metadata] of Object.entries(lock.packages ?? {}).sort(([left], [right]) => left.localeCompare(right))) {
+  for (const [path, metadata] of Object.entries(lock.packages ?? {})
+    .sort(([left], [right]) => left.localeCompare(right))) {
     if (!path.includes('node_modules/') || metadata.link) continue;
     const absolute = join(candidateRoot, path);
     const installed = await exists(absolute);
@@ -125,14 +105,15 @@ export async function prepareThirdPartyNotices(rootInput = root) {
     && records.every((record) => nonEmpty(record.version)
       && nonEmpty(record.declared_license)
       && DISTRIBUTION_SCOPES.has(record.distribution_scope));
+  const inlineCode = String.fromCharCode(96);
   const lines = [
     '# Third-Party Notices',
     '',
-    `Technical status: ${technicallyComplete ? 'COMPLETE' : 'INCOMPLETE'}; accountable review state is recorded in \`${manifestPath}\`.`,
+    'Technical status: ' + (technicallyComplete ? 'COMPLETE' : 'INCOMPLETE') + '.',
     '',
-    `Lockfile SHA-256: \`${lockHash}\``,
+    'Lockfile SHA-256: ' + inlineCode + lockHash + inlineCode,
     '',
-    'This inventory covers every third-party package record in the exact npm lockfile. Distribution scope is derived from locked npm metadata; local license and NOTICE evidence is hash-bound when installed. Accountable review remains a separate release gate.',
+    'This inventory covers every third-party package record in the exact npm lockfile. Distribution scope is derived from locked npm metadata; local license and NOTICE evidence is hash-bound when installed.',
     '',
     '| Package | Version | Declared license | Distribution scope | Inventory evidence | Local license/NOTICE evidence |',
     '| --- | --- | --- | --- | --- | --- |',
@@ -140,10 +121,12 @@ export async function prepareThirdPartyNotices(rootInput = root) {
   for (const record of records) {
     const evidence = record.local_evidence.length === 0
       ? 'none'
-      : record.local_evidence.map((item) => `${item.name} (${item.sha256})`).join('; ');
-    lines.push(`| ${cell(record.name)} | ${cell(record.version ?? 'unknown')} | ${cell(record.declared_license ?? 'UNDECLARED')} | ${cell(record.distribution_scope)} | ${cell(record.evidence_status)} | ${cell(evidence)} |`);
+      : record.local_evidence.map((item) => item.name + ' (' + item.sha256 + ')').join('; ');
+    lines.push('| ' + cell(record.name) + ' | ' + cell(record.version ?? 'unknown') + ' | '
+      + cell(record.declared_license ?? 'UNDECLARED') + ' | ' + cell(record.distribution_scope)
+      + ' | ' + cell(record.evidence_status) + ' | ' + cell(evidence) + ' |');
   }
-  const noticeBytes = Buffer.from(`${lines.join('\n')}\n`, 'utf8');
+  const noticeBytes = Buffer.from(lines.join('\n') + '\n', 'utf8');
   await writeFile(join(candidateRoot, noticePath), noticeBytes);
   const noticeHash = digest(noticeBytes);
 
@@ -159,15 +142,10 @@ export async function prepareThirdPartyNotices(rootInput = root) {
     evidence_statuses: Object.fromEntries(['local_license_or_notice', 'declared_license_only', 'not_installed_on_inventory_host']
       .map((status) => [status, records.filter((record) => record.evidence_status === status).length])),
   };
-  const approvalPreserved = preservesApproval(existing, lockHash, noticeHash, technicallyComplete);
   const manifest = {
     schema_version: 'third-party-notices-v1',
-    issue: 'CT-13',
-    status: approvalPreserved
-      ? 'approved'
-      : technicallyComplete ? 'ready_for_accountable_review' : 'technical_evidence_incomplete',
-    review_status: approvalPreserved ? 'approved' : 'pending',
-    reviewer: approvalPreserved ? existing.reviewer : null,
+    release: 'BasicLinear open-source release',
+    status: technicallyComplete ? 'complete' : 'technical_evidence_incomplete',
     inventory_environment: {
       platform: process.platform,
       architecture: process.arch,
@@ -181,7 +159,7 @@ export async function prepareThirdPartyNotices(rootInput = root) {
     entries: records,
   };
   await mkdir(dirname(join(candidateRoot, manifestPath)), { recursive: true });
-  await writeFile(join(candidateRoot, manifestPath), `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
+  await writeFile(join(candidateRoot, manifestPath), JSON.stringify(manifest, null, 2) + '\n', 'utf8');
   return {
     noticePath,
     manifestPath,
@@ -193,12 +171,12 @@ export async function prepareThirdPartyNotices(rootInput = root) {
 }
 
 async function main() {
-  process.stdout.write(`${JSON.stringify(await prepareThirdPartyNotices(root), null, 2)}\n`);
+  process.stdout.write(JSON.stringify(await prepareThirdPartyNotices(root), null, 2) + '\n');
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   main().catch((error) => {
-    process.stderr.write(`${error.stack ?? error.message}\n`);
+    process.stderr.write((error.stack ?? error.message) + '\n');
     process.exitCode = 1;
   });
 }

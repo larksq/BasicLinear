@@ -1,4 +1,4 @@
-import type { IssuePriority, UpdateIssueRequest } from '@openlinear/contracts';
+import type { IssuePriority, UpdateIssueRequest } from '@basiclinear/contracts';
 
 export interface IssueActionMenuAnchor {
   x: number;

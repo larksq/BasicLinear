@@ -1,0 +1,23 @@
+{
+  "schema_version": "ct142-security-skip-maintainer-decision-v1",
+  "status": "pending",
+  "issue": "CT-142",
+  "decision_artifact": "docs/product/versions/v0.2.0/20-planning/ct142-security-skip-resolution-options.md",
+  "decision_artifact_sha256": "RECOMPUTE_AT_DECISION_TIME",
+  "decided_at": null,
+  "actor": null,
+  "selected_option": null,
+  "allowed_options": [
+    "A_preserve_full_public_paid_launch_and_require_external_security_review",
+    "B_narrow_to_allowlisted_no_charge_verification_release"
+  ],
+  "rationale": null,
+  "accepted_consequences": [],
+  "acknowledgements": {
+    "skipped_security_is_not_passed": false,
+    "no_security_claim": false,
+    "no_outcome_claim": false,
+    "no_payment_activation_without_applicable_gate": false,
+    "ct13_remains_separate_accountable_decision": false
+  }
+}

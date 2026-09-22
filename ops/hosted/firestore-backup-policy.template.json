@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "basiclinear.firestore-backup-policy.v1",
+  "evidenceBoundary": "template_not_applied",
+  "mode": "PITR_ENTIRE_DATABASE",
+  "sourceDatabase": "projects/${GOOGLE_CLOUD_PROJECT}/databases/(default)",
+  "destinationBucket": "gs://${BASICLINEAR_BACKUP_BUCKET}",
+  "collectionIds": null,
+  "snapshotTime": "${WHOLE_MINUTE_WITHIN_SEVEN_DAYS}",
+  "cadence": "weekly-plus-pre-release",
+  "retentionDays": 30,
+  "restoreTarget": "projects/restore-drill-${DRILL_ID}/databases/(default)",
+  "productionInPlaceRestore": false,
+  "destinationDeletionWithinDays": 7
+}

@@ -1,0 +1,379 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function membershipPath(workspaceId) {
+      return /databases/$(database)/documents/workspaces/$(workspaceId)/memberships/$(request.auth.uid);
+    }
+
+    function supportedRole(role) {
+      return role == 'owner' || role == 'member';
+    }
+
+    function safeReference(value) {
+      return value is string
+        && value.size() >= 3
+        && value.size() <= 128
+        && value.matches('[A-Za-z0-9][A-Za-z0-9:._@+-]*');
+    }
+
+    function canonicalDate(value) {
+      return value is string
+        && value.size() == 10
+        && (
+          value.matches('[0-9]{4}-(01|03|05|07|08|10|12)-(0[1-9]|[12][0-9]|3[01])')
+          || value.matches('[0-9]{4}-(04|06|09|11)-(0[1-9]|[12][0-9]|30)')
+          || value.matches('[0-9]{4}-02-(0[1-9]|1[0-9]|2[0-8])')
+          || value.matches('([0-9]{2}(0[48]|[2468][048]|[13579][26])|([02468][048]|[13579][26])00)-02-29')
+        );
+    }
+
+    function canonicalTimestamp(value) {
+      return value is string
+        && value.size() == 24
+        && canonicalDate(value[0:10])
+        && value[10:24].matches('T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9][.][0-9]{3}Z');
+    }
+
+    function normalizedText(value, minimum, maximum) {
+      return value is string
+        && value == value.trim()
+        && value.size() >= minimum
+        && value.size() <= maximum
+        && value.matches('[^\\x00-\\x08\\x0B\\x0C\\x0E-\\x1F\\x7F]*');
+    }
+
+    function exactMembershipKeys(membership) {
+      return (
+        membership.keys().hasAll([
+          'schemaVersion', 'id', 'workspaceId', 'userId', 'role', 'status', 'createdAt', 'revision'
+        ])
+        && membership.keys().hasOnly([
+          'schemaVersion', 'id', 'workspaceId', 'userId', 'role', 'status', 'createdAt', 'revision'
+        ])
+      ) || (
+        membership.keys().hasAll([
+          'schemaVersion', 'id', 'workspaceId', 'userId', 'role', 'status', 'createdAt', 'updatedAt',
+          'removedAt', 'revision'
+        ])
+        && membership.keys().hasOnly([
+          'schemaVersion', 'id', 'workspaceId', 'userId', 'role', 'status', 'createdAt', 'updatedAt',
+          'removedAt', 'revision'
+        ])
+      );
+    }
+
+    function exactMembershipRecord(membership, workspaceId, userId) {
+      return exactMembershipKeys(membership)
+        && membership.schemaVersion == 1
+        && membership.id is string
+        && safeReference(membership.id)
+        && membership.workspaceId == workspaceId
+        && membership.userId == userId
+        && supportedRole(membership.role)
+        && canonicalTimestamp(membership.createdAt)
+        && membership.revision is int
+        && membership.revision >= 1
+        && (
+          (
+            membership.keys().hasOnly([
+              'schemaVersion', 'id', 'workspaceId', 'userId', 'role', 'status', 'createdAt', 'revision'
+            ])
+            && membership.status == 'active'
+          )
+          || (
+            membership.keys().hasAll(['updatedAt', 'removedAt'])
+            && (
+              (
+                membership.status == 'active'
+                && (
+                  membership.updatedAt == null
+                  || (
+                    canonicalTimestamp(membership.updatedAt)
+                    && membership.createdAt <= membership.updatedAt
+                  )
+                )
+                && membership.removedAt == null
+              )
+              || (
+                membership.status == 'removed'
+                && canonicalTimestamp(membership.updatedAt)
+                && canonicalTimestamp(membership.removedAt)
+                && membership.createdAt <= membership.updatedAt
+                && membership.updatedAt == membership.removedAt
+                && membership.revision >= 2
+              )
+            )
+          )
+        );
+    }
+
+    function activeMembership(workspaceId) {
+      return request.auth != null
+        && exists(membershipPath(workspaceId))
+        && exactMembershipRecord(
+          get(membershipPath(workspaceId)).data,
+          workspaceId,
+          request.auth.uid
+        )
+        && get(membershipPath(workspaceId)).data.status == 'active';
+    }
+
+    function ownerMembership(workspaceId) {
+      return activeMembership(workspaceId)
+        && get(membershipPath(workspaceId)).data.role == 'owner';
+    }
+
+    function exactWorkspaceRecord(workspaceId) {
+      return resource.data.keys().hasOnly([
+          'schemaVersion',
+          'id',
+          'workspaceId',
+          'name',
+          'ownerUid',
+          'authority',
+          'createdAt',
+          'revision'
+        ])
+        && resource.data.schemaVersion == 1
+        && resource.data.id == workspaceId
+        && resource.data.workspaceId == workspaceId
+        && normalizedText(resource.data.name, 1, 160)
+        && safeReference(resource.data.ownerUid)
+        && resource.data.authority == 'firebase-hosted'
+        && canonicalTimestamp(resource.data.createdAt)
+        && resource.data.revision is int
+        && resource.data.revision >= 1;
+    }
+
+    function exactProjectRecord(workspaceId, projectId) {
+      return resource.data.workspaceId == workspaceId
+        && resource.data.schemaVersion == 1
+        && resource.data.keys().hasOnly([
+          'schemaVersion',
+          'id',
+          'workspaceId',
+          'name',
+          'summary',
+          'status',
+          'createdByUserId',
+          'archivedAt',
+          'createdAt',
+          'updatedAt',
+          'revision'
+        ])
+        && resource.data.id == projectId
+        && resource.data.id.matches('project_[a-f0-9]{32}')
+        && normalizedText(resource.data.name, 1, 80)
+        && normalizedText(resource.data.summary, 0, 280)
+        && resource.data.status in ['planned', 'in_progress', 'paused', 'completed', 'canceled']
+        && safeReference(resource.data.createdByUserId)
+        && resource.data.archivedAt == null
+        && canonicalTimestamp(resource.data.createdAt)
+        && canonicalTimestamp(resource.data.updatedAt)
+        && resource.data.createdAt <= resource.data.updatedAt
+        && resource.data.revision is int
+        && resource.data.revision >= 1;
+    }
+
+    function exactMilestoneRecord(workspaceId, milestoneId) {
+      return resource.data.workspaceId == workspaceId
+        && resource.data.schemaVersion == 1
+        && resource.data.keys().hasOnly([
+          'schemaVersion',
+          'id',
+          'workspaceId',
+          'projectId',
+          'name',
+          'description',
+          'targetDate',
+          'createdByUserId',
+          'archivedAt',
+          'createdAt',
+          'updatedAt',
+          'revision'
+        ])
+        && resource.data.id == milestoneId
+        && resource.data.id.matches('milestone_[a-f0-9]{32}')
+        && resource.data.projectId.matches('project_[a-f0-9]{32}')
+        && normalizedText(resource.data.name, 1, 80)
+        && normalizedText(resource.data.description, 0, 4000)
+        && (resource.data.targetDate == null || canonicalDate(resource.data.targetDate))
+        && safeReference(resource.data.createdByUserId)
+        && resource.data.archivedAt == null
+        && canonicalTimestamp(resource.data.createdAt)
+        && canonicalTimestamp(resource.data.updatedAt)
+        && resource.data.createdAt <= resource.data.updatedAt
+        && resource.data.revision is int
+        && resource.data.revision >= 1;
+    }
+
+    match /workspaces/{workspaceId} {
+      allow get: if activeMembership(workspaceId)
+        && exactWorkspaceRecord(workspaceId);
+      allow list, create, update, delete: if false;
+
+      match /memberships/{membershipId} {
+        allow get: if activeMembership(workspaceId)
+          && exactMembershipRecord(resource.data, workspaceId, membershipId)
+          && (
+            resource.data.status == 'active'
+            || (ownerMembership(workspaceId) && resource.data.status == 'removed')
+          );
+        allow list: if false;
+        allow create, update, delete: if false;
+      }
+
+      match /invitations/{invitationId} {
+        allow read, write: if false;
+      }
+
+      match /invitationIdempotency/{recordId} {
+        allow read, write: if false;
+      }
+
+      match /collaborationIdempotency/{recordId} {
+        allow read, write: if false;
+      }
+
+      match /issueSequences/{recordId} {
+        allow read, write: if false;
+      }
+
+      match /pmIdempotency/{recordId} {
+        allow read, write: if false;
+      }
+
+      match /personalTokens/{recordId} {
+        allow read, write: if false;
+      }
+
+      match /tokenIdempotency/{recordId} {
+        allow read, write: if false;
+      }
+
+      match /entitlements/{recordId} {
+        allow read, write: if false;
+      }
+
+      match /billing/{recordId} {
+        allow read, write: if false;
+      }
+
+      match /billingCheckouts/{recordId} {
+        allow read, write: if false;
+      }
+
+      match /billingCheckoutSessions/{recordId} {
+        allow read, write: if false;
+      }
+
+      match /billingCheckoutLocks/{recordId} {
+        allow read, write: if false;
+      }
+
+      match /billingWebhooks/{recordId} {
+        allow read, write: if false;
+      }
+
+      match /billingIdempotency/{recordId} {
+        allow read, write: if false;
+      }
+
+      match /productEvents/{eventId} {
+        allow read, write: if false;
+      }
+
+      match /mutationAudits/{auditId} {
+        allow read, write: if false;
+      }
+
+      match /projects/{projectId} {
+        allow get: if activeMembership(workspaceId)
+          && exactProjectRecord(workspaceId, projectId);
+        allow list: if false;
+        allow create, update, delete: if false;
+      }
+
+      match /milestones/{milestoneId} {
+        allow get: if activeMembership(workspaceId)
+          && exactMilestoneRecord(workspaceId, milestoneId);
+        allow list: if false;
+        allow create, update, delete: if false;
+      }
+
+      match /{safeCollection}/{recordId} {
+        allow read, write: if false;
+      }
+
+      match /issues/{issueId}/{safeIssueCollection}/{recordId} {
+        allow read, write: if false;
+      }
+
+      match /projects/{projectId}/{safeProjectCollection}/{recordId} {
+        allow read, write: if false;
+      }
+    }
+
+    match /_invitationTokens/{tokenDigest} {
+      allow read, write: if false;
+    }
+
+    match /_ownerTrialEligibility/{userId} {
+      allow read, write: if false;
+    }
+
+    // OAuth clients, grants, codes, and opaque-token ledgers are trusted-service-only.
+    // Firebase browser credentials never receive direct access to these collections.
+    match /oauthClients/{recordId} {
+      allow read, write: if false;
+    }
+
+    match /oauthAuthorizationRequests/{recordId} {
+      allow read, write: if false;
+    }
+
+    match /oauthAuthorizationCodes/{recordId} {
+      allow read, write: if false;
+    }
+
+    match /oauthGrants/{recordId} {
+      allow read, write: if false;
+    }
+
+    match /oauthTokenFamilies/{recordId} {
+      allow read, write: if false;
+    }
+
+    match /oauthAccessTokens/{recordId} {
+      allow read, write: if false;
+    }
+
+    match /oauthRefreshTokens/{recordId} {
+      allow read, write: if false;
+    }
+
+    // Operational activation, budget-signal, and restore-drill evidence is written only by
+    // trusted server/admin credentials. Browser Firebase credentials never see provider
+    // references, budget state, HMAC bindings, or recovery inventory.
+    match /operationsActivation/{recordId} {
+      allow read, write: if false;
+    }
+
+    match /operationsBudgetSignals/{recordId} {
+      allow read, write: if false;
+    }
+
+    match /operationsBudgetState/{recordId} {
+      allow read, write: if false;
+    }
+
+    match /operationsRestoreDrills/{recordId} {
+      allow read, write: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

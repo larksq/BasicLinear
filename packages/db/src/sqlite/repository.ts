@@ -9,7 +9,7 @@ import {
   normalizeWorkspaceSlug,
   parseStatusCategory,
   type MembershipRole,
-} from '@openlinear/domain';
+} from '@basiclinear/domain';
 import type {
   DbMembership,
   DbRetireStatusResult,
@@ -18,7 +18,7 @@ import type {
   DbWorkflowStatus,
   DbWorkspace,
 } from '../types.js';
-import { asSqliteError, type OpenLinearDatabase } from './client.js';
+import { asSqliteError, type BasicLinearDatabase } from './client.js';
 import {
   changed,
   compactChanges,
@@ -79,7 +79,7 @@ const defaultStatuses = [
   ['Canceled', 'canceled', '#9A9CA3', 500],
 ] as const;
 
-function scopeRow(db: OpenLinearDatabase): ScopeRow | undefined {
+function scopeRow(db: BasicLinearDatabase): ScopeRow | undefined {
   return db.sqlite.prepare(`
     SELECT workspace_id AS workspaceId, workspace_name AS workspaceName,
            workspace_slug AS workspaceSlug, membership_id AS membershipId,
@@ -89,7 +89,7 @@ function scopeRow(db: OpenLinearDatabase): ScopeRow | undefined {
   `).get() as ScopeRow | undefined;
 }
 
-function statusById(db: OpenLinearDatabase, workspaceId: string, statusId: string): DbWorkflowStatus {
+function statusById(db: BasicLinearDatabase, workspaceId: string, statusId: string): DbWorkflowStatus {
   const scope = scopeRow(db);
   if (scope?.workspaceId !== workspaceId) throw new AppError('NOT_FOUND', 'Status not found.', 404);
   const row = db.sqlite.prepare(`
@@ -117,14 +117,14 @@ function mapStatus(scope: ScopeRow, row: StatusRow): DbWorkflowStatus {
   };
 }
 
-export async function setupRequired(db: OpenLinearDatabase): Promise<boolean> {
+export async function setupRequired(db: BasicLinearDatabase): Promise<boolean> {
   const row = db.sqlite.prepare('SELECT EXISTS(SELECT 1 FROM owner_profile) AS present')
     .get() as { present: number };
   return row.present !== 1;
 }
 
 export async function bootstrapInstance(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   input: BootstrapInput,
 ): Promise<BootstrapResult> {
   try {
@@ -177,7 +177,7 @@ export async function bootstrapInstance(
   }
 }
 
-export async function getOwnerProfile(db: OpenLinearDatabase): Promise<DbUser | undefined> {
+export async function getOwnerProfile(db: BasicLinearDatabase): Promise<DbUser | undefined> {
   return db.sqlite.prepare(`
     SELECT id, email, display_name AS displayName, revision
     FROM owner_profile WHERE singleton = 1
@@ -185,7 +185,7 @@ export async function getOwnerProfile(db: OpenLinearDatabase): Promise<DbUser | 
 }
 
 export async function createSession(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   input: { id: string; userId: string; tokenHash: string; csrfTokenHash: string; expiresAt: Date },
 ): Promise<void> {
   const owner = db.sqlite.prepare('SELECT id FROM owner_profile WHERE singleton = 1').get() as { id: string } | undefined;
@@ -201,7 +201,7 @@ export async function createSession(
 }
 
 export async function addSessionCsrfToken(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   tokenHash: string,
   csrfTokenHash: string,
 ): Promise<boolean> {
@@ -216,7 +216,7 @@ export async function addSessionCsrfToken(
 }
 
 export async function sessionAcceptsCsrfToken(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   tokenHash: string,
   csrfTokenHash: string,
 ): Promise<boolean> {
@@ -229,7 +229,7 @@ export async function sessionAcceptsCsrfToken(
 }
 
 export async function resolveSession(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   tokenHash: string,
 ): Promise<DbUser | undefined> {
   const session = db.sessions.get(tokenHash);
@@ -244,12 +244,12 @@ export async function resolveSession(
   `).get(session.userId) as DbUser | undefined;
 }
 
-export async function revokeSession(db: OpenLinearDatabase, tokenHash: string): Promise<void> {
+export async function revokeSession(db: BasicLinearDatabase, tokenHash: string): Promise<void> {
   db.sessions.delete(tokenHash);
 }
 
 export async function listWorkspaces(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
 ): Promise<DbWorkspace[]> {
   const scope = requireOwnerScope(db, userId);
@@ -266,7 +266,7 @@ export async function listWorkspaces(
 }
 
 export async function listTeams(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
 ): Promise<DbTeam[]> {
@@ -284,7 +284,7 @@ export async function listTeams(
 }
 
 export async function listMemberships(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
 ): Promise<DbMembership[]> {
@@ -319,7 +319,7 @@ function unsupportedCollaboration(): never {
 }
 
 export async function createWorkspace(
-  _db: OpenLinearDatabase,
+  _db: BasicLinearDatabase,
   _userId: string,
   _input: { name: string; slug: string; idempotencyKey: string },
 ): Promise<DbWorkspace> {
@@ -327,7 +327,7 @@ export async function createWorkspace(
 }
 
 export async function createTeam(
-  _db: OpenLinearDatabase,
+  _db: BasicLinearDatabase,
   _userId: string,
   _workspaceId: string,
   _input: { name: string; key: string; idempotencyKey: string },
@@ -336,7 +336,7 @@ export async function createTeam(
 }
 
 export async function createLocalMembership(
-  _db: OpenLinearDatabase,
+  _db: BasicLinearDatabase,
   _actorUserId: string,
   _workspaceId: string,
   _input: {
@@ -350,7 +350,7 @@ export async function createLocalMembership(
 }
 
 export async function listStatuses(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   teamId?: string,
@@ -366,7 +366,7 @@ export async function listStatuses(
 }
 
 export async function createStatus(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   input: {
@@ -420,7 +420,7 @@ export async function createStatus(
 }
 
 export async function updateStatus(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   statusId: string,
@@ -480,7 +480,7 @@ export async function updateStatus(
 }
 
 export async function reorderStatuses(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   teamId: string,
@@ -526,7 +526,7 @@ export async function reorderStatuses(
 }
 
 export async function retireStatus(
-  db: OpenLinearDatabase,
+  db: BasicLinearDatabase,
   userId: string,
   workspaceId: string,
   statusId: string,

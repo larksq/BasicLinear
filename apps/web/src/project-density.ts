@@ -1,6 +1,6 @@
 export type ProjectDensity = 'compact' | 'default' | 'comfortable';
 
-export const projectDensityStorageKey = 'openlinear.project-density.v1';
+export const projectDensityStorageKey = 'basiclinear.project-density.v1';
 
 const rowHeights: Record<ProjectDensity, number> = {
   compact: 32,

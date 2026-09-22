@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "issue": "CT-3",
+  "generated_at": "2026-08-21T09:31:18Z",
+  "status": "metadata_screen_complete_release_audit_pending",
+  "source": {
+    "path": "package-lock.json",
+    "sha256": "fd719192d99ee14779bc3dc5fcc910da030ac889a45d78600b93e515cce67cca",
+    "method": "Count non-link package-lock package records, excluding the root project from package_record_count and separating project-owned workspace packages from third-party records."
+  },
+  "counts": {
+    "all_lockfile_entries": 271,
+    "workspace_link_entries": 9,
+    "non_link_entries_including_root": 262,
+    "package_records_excluding_root": 261,
+    "project_workspace_packages": 9,
+    "third_party_package_records": 252
+  },
+  "package_record_license_counts": {
+    "MIT": 205,
+    "Apache-2.0": 23,
+    "MPL-2.0": 12,
+    "ISC": 6,
+    "BSD-3-Clause": 5,
+    "Unlicense": 1,
+    "AGPL-3.0-only_PROJECT_WORKSPACE": 9
+  },
+  "project_metadata": {
+    "root_license_declared": true,
+    "workspace_license_declared_count": 9,
+    "workspace_license_undeclared_count": 0,
+    "declared_license": "AGPL-3.0-only",
+    "reason": "The maintainer selected AGPL-3.0-only on 2026-08-21; the root and all workspace manifests apply it."
+  },
+  "notable_groups": [
+    {
+      "license": "MPL-2.0",
+      "count": 12,
+      "packages": [
+        "lightningcss@1.33.0",
+        "lightningcss-android-arm64@1.33.0",
+        "lightningcss-darwin-arm64@1.33.0",
+        "lightningcss-darwin-x64@1.33.0",
+        "lightningcss-freebsd-x64@1.33.0",
+        "lightningcss-linux-arm-gnueabihf@1.33.0",
+        "lightningcss-linux-arm64-gnu@1.33.0",
+        "lightningcss-linux-arm64-musl@1.33.0",
+        "lightningcss-linux-x64-gnu@1.33.0",
+        "lightningcss-linux-x64-musl@1.33.0",
+        "lightningcss-win32-arm64-msvc@1.33.0",
+        "lightningcss-win32-x64-msvc@1.33.0"
+      ],
+      "release_action": "Determine which packages or covered code are present in each shipped artifact; preserve required notices and source access where applicable."
+    },
+    {
+      "license": "Apache-2.0",
+      "count": 23,
+      "summary": "TypeScript and its platform packages plus detect-libc and expect-type.",
+      "release_action": "Inspect upstream NOTICE files and carry applicable attribution into the release-candidate notices."
+    },
+    {
+      "license": "Unlicense",
+      "count": 1,
+      "packages": ["isbot@5.2.1"],
+      "release_action": "Retain the upstream license text or notice in the generated third-party manifest."
+    },
+    {
+      "license": "ISC",
+      "count": 6,
+      "packages_of_interest": ["lucide-react@1.33.0"],
+      "release_action": "Record icon-library provenance and include its license in third-party notices."
+    }
+  ],
+  "findings": [
+    "No third-party package record has missing license metadata in the current lockfile.",
+    "No third-party package record declares GPL or AGPL in the current lockfile metadata.",
+    "Metadata values are not a legal compatibility conclusion and do not replace inspection of actual license and NOTICE files.",
+    "The final audit must operate on the release candidate and its actual web, API, and local operator contents.",
+    "The project-owned root and nine workspace packages now declare AGPL-3.0-only; qualified compatibility and notice review remains pending."
+  ],
+  "owner": "CT-13 release audit with qualified review",
+  "decision_dependency": "DEC-003"
+}

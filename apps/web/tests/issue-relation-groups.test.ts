@@ -1,7 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
-import type { IssueRelation } from '@openlinear/contracts';
+import type { IssueRelation } from '@basiclinear/contracts';
 import {
   groupIssueRelations,
 } from '../src/issue-relation-groups.js';

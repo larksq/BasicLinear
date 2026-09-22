@@ -1,0 +1,240 @@
+{
+  "schema_version": "ct134-implementation-handoff-v1",
+  "stage": "implementation.checkpoint-handoff",
+  "status": "passed",
+  "authority": {
+    "profile": "project-local-v0.8",
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled_not_synced",
+    "linear_used": false,
+    "issue_revision": 6,
+    "issue_status": "Done",
+    "checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T04-52-38-795Z-ea3267c1-44a2-48b7-a5eb-d7ba783ae409.json",
+    "checkpoint_backup_sha256": "a375b93dfc44538f415b4234b2370e1915a1985f3bd017041d87a6f5736a1d08"
+  },
+  "issues": [
+    {
+      "issue_id": "CT-134",
+      "stable_id": "4d4d0196-585b-4af0-ac13-0555c1f2cd75",
+      "accepted": true,
+      "blocked": false,
+      "status": "output_done",
+      "requirement_refs": ["R-201", "R-202", "R-203", "R-216", "R-220"],
+      "acceptance_refs": ["P-T202"],
+      "outcome_refs": ["O-201", "O-203", "O-204"],
+      "allowed_mutation_paths": [
+        ".env.example",
+        "package.json",
+        "package-lock.json",
+        "firebase.json",
+        "firestore.rules",
+        "scripts/clean-build-output.mjs",
+        "vitest.config.ts",
+        "packages/hosted",
+        "apps/hosted-service",
+        "apps/web",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "CT-134-S1",
+      "actor_id": "codex-primary",
+      "issue_id": "CT-134",
+      "mode": "code_mutating",
+      "allowed_paths": [
+        ".env.example", "package.json", "package-lock.json", "firebase.json", "firestore.rules",
+        "scripts/clean-build-output.mjs", "vitest.config.ts", "packages/hosted", "apps/hosted-service",
+        "apps/web", "docs/product/versions/v0.2.0/30-implementation/CT-134"
+      ],
+      "output_refs": [
+        "package.json", "package-lock.json", "firebase.json", "firestore.rules",
+        "scripts/clean-build-output.mjs", "vitest.config.ts",
+        "packages/hosted/tsconfig.json", "packages/hosted/src/index.ts",
+        "packages/hosted/src/owner-bootstrap.ts", "packages/hosted/src/firebase-owner-bootstrap.ts",
+        "packages/hosted/tests/owner-bootstrap.test.ts",
+        "apps/hosted-service/package.json", "apps/hosted-service/tsconfig.json",
+        "apps/hosted-service/src/firebase-identity.ts", "apps/hosted-service/tests/firebase-identity.test.ts",
+        "apps/web/package.json", "apps/web/vite.config.ts", "apps/web/hosted.html",
+        "apps/web/src/hosted-main.tsx", "apps/web/src/hosted-app.tsx", "apps/web/src/hosted-auth.ts",
+        "apps/web/src/hosted-api.ts", "apps/web/src/hosted.css", "apps/web/tests/hosted-foundation.test.ts"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/review.md"
+      ]
+    },
+    {
+      "session_id": "CT-134-S2",
+      "actor_id": "codex-primary",
+      "issue_id": "CT-134",
+      "mode": "docs_only",
+      "allowed_paths": ["docs/product/versions/v0.2.0/30-implementation/CT-134"],
+      "output_refs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/review-request.json"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/review.md"
+      ]
+    },
+    {
+      "session_id": "CT-134-S3",
+      "actor_id": "codex-primary",
+      "issue_id": "CT-134",
+      "mode": "code_mutating",
+      "allowed_paths": [
+        ".env.example", "packages/hosted/src/hosted-http.ts", "packages/hosted/tests/hosted-http.test.ts",
+        "apps/hosted-service/src", "apps/hosted-service/tests",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134"
+      ],
+      "output_refs": [
+        ".env.example", "packages/hosted/src/hosted-http.ts", "packages/hosted/tests/hosted-http.test.ts",
+        "apps/hosted-service/src/index.ts", "apps/hosted-service/src/hosted-config.ts",
+        "apps/hosted-service/tests/hosted-config.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/hosting-bootstrap-contract.md"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/review.md"
+      ]
+    },
+    {
+      "session_id": "CT-134-S4",
+      "actor_id": "codex-primary",
+      "issue_id": "CT-134",
+      "mode": "docs_only",
+      "allowed_paths": ["docs/product/versions/v0.2.0/30-implementation/CT-134"],
+      "output_refs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/review-request.json"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/review.md"
+      ]
+    },
+    {
+      "session_id": "CT-134-S5",
+      "actor_id": "codex-primary",
+      "issue_id": "CT-134",
+      "mode": "docs_only",
+      "allowed_paths": ["docs/product/versions/v0.2.0/30-implementation/CT-134"],
+      "output_refs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/review.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/review-request.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/handoff.json"
+      ],
+      "validation_refs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-134/review.md"
+      ]
+    }
+  ],
+  "changed_files": [
+    {"path":".env.example","issue_id":"CT-134","mutation_type":"config","ai_session_id":"CT-134-S3","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C8","CT-134-C10","CT-134-C15"]},
+    {"path":"apps/hosted-service/package.json","issue_id":"CT-134","mutation_type":"config","ai_session_id":"CT-134-S1","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C9","CT-134-C11","CT-134-C13","CT-134-C15"]},
+    {"path":"apps/hosted-service/src/firebase-identity.ts","issue_id":"CT-134","mutation_type":"code","ai_session_id":"CT-134-S1","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C8","CT-134-C10","CT-134-C15"]},
+    {"path":"apps/hosted-service/src/hosted-config.ts","issue_id":"CT-134","mutation_type":"code","ai_session_id":"CT-134-S3","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C8","CT-134-C10","CT-134-C15"]},
+    {"path":"apps/hosted-service/src/index.ts","issue_id":"CT-134","mutation_type":"code","ai_session_id":"CT-134-S3","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C8","CT-134-C10","CT-134-C15"]},
+    {"path":"apps/hosted-service/tests/firebase-identity.test.ts","issue_id":"CT-134","mutation_type":"test","ai_session_id":"CT-134-S1","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C8","CT-134-C9","CT-134-C15"]},
+    {"path":"apps/hosted-service/tests/hosted-config.test.ts","issue_id":"CT-134","mutation_type":"test","ai_session_id":"CT-134-S3","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C8","CT-134-C9","CT-134-C15"]},
+    {"path":"apps/hosted-service/tsconfig.json","issue_id":"CT-134","mutation_type":"config","ai_session_id":"CT-134-S1","risk_level":"medium","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C10","CT-134-C11"]},
+    {"path":"apps/web/hosted.html","issue_id":"CT-134","mutation_type":"code","ai_session_id":"CT-134-S1","risk_level":"medium","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C11","CT-134-C12","CT-134-C15"]},
+    {"path":"apps/web/package.json","issue_id":"CT-134","mutation_type":"config","ai_session_id":"CT-134-S1","risk_level":"medium","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C9","CT-134-C11"]},
+    {"path":"apps/web/src/hosted-api.ts","issue_id":"CT-134","mutation_type":"code","ai_session_id":"CT-134-S1","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C8","CT-134-C9","CT-134-C15"]},
+    {"path":"apps/web/src/hosted-app.tsx","issue_id":"CT-134","mutation_type":"code","ai_session_id":"CT-134-S1","risk_level":"medium","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C8","CT-134-C9"]},
+    {"path":"apps/web/src/hosted-auth.ts","issue_id":"CT-134","mutation_type":"code","ai_session_id":"CT-134-S1","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C8","CT-134-C10","CT-134-C15"]},
+    {"path":"apps/web/src/hosted-main.tsx","issue_id":"CT-134","mutation_type":"code","ai_session_id":"CT-134-S1","risk_level":"medium","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C8","CT-134-C11"]},
+    {"path":"apps/web/src/hosted.css","issue_id":"CT-134","mutation_type":"code","ai_session_id":"CT-134-S1","risk_level":"low","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C8","CT-134-C11"]},
+    {"path":"apps/web/tests/hosted-foundation.test.ts","issue_id":"CT-134","mutation_type":"test","ai_session_id":"CT-134-S1","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C8","CT-134-C9","CT-134-C15"]},
+    {"path":"apps/web/vite.config.ts","issue_id":"CT-134","mutation_type":"config","ai_session_id":"CT-134-S1","risk_level":"medium","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C11","CT-134-C12"]},
+    {"path":"docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json","issue_id":"CT-134","mutation_type":"artifact","ai_session_id":"CT-134-S5","risk_level":"low","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C14"]},
+    {"path":"docs/product/versions/v0.2.0/30-implementation/CT-134/hosting-bootstrap-contract.md","issue_id":"CT-134","mutation_type":"docs","ai_session_id":"CT-134-S3","risk_level":"low","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C14","CT-134-C15"]},
+    {"path":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","issue_id":"CT-134","mutation_type":"docs","ai_session_id":"CT-134-S5","risk_level":"low","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C15"]},
+    {"path":"docs/product/versions/v0.2.0/30-implementation/CT-134/review-request.json","issue_id":"CT-134","mutation_type":"artifact","ai_session_id":"CT-134-S5","risk_level":"low","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C14","CT-134-C15"]},
+    {"path":"firebase.json","issue_id":"CT-134","mutation_type":"config","ai_session_id":"CT-134-S1","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C8","CT-134-C11","CT-134-C15"]},
+    {"path":"firestore.rules","issue_id":"CT-134","mutation_type":"config","ai_session_id":"CT-134-S1","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C8","CT-134-C15"]},
+    {"path":"package-lock.json","issue_id":"CT-134","mutation_type":"config","ai_session_id":"CT-134-S1","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C9","CT-134-C11","CT-134-C13","CT-134-C15"]},
+    {"path":"package.json","issue_id":"CT-134","mutation_type":"config","ai_session_id":"CT-134-S1","risk_level":"medium","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C9","CT-134-C11","CT-134-C13"]},
+    {"path":"packages/hosted/src/firebase-owner-bootstrap.ts","issue_id":"CT-134","mutation_type":"code","ai_session_id":"CT-134-S1","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C8","CT-134-C9","CT-134-C15"]},
+    {"path":"packages/hosted/src/hosted-http.ts","issue_id":"CT-134","mutation_type":"code","ai_session_id":"CT-134-S3","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C8","CT-134-C9","CT-134-C15"]},
+    {"path":"packages/hosted/src/index.ts","issue_id":"CT-134","mutation_type":"code","ai_session_id":"CT-134-S1","risk_level":"medium","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C8","CT-134-C10"]},
+    {"path":"packages/hosted/src/owner-bootstrap.ts","issue_id":"CT-134","mutation_type":"code","ai_session_id":"CT-134-S1","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C8","CT-134-C9","CT-134-C15"]},
+    {"path":"packages/hosted/tests/hosted-http.test.ts","issue_id":"CT-134","mutation_type":"test","ai_session_id":"CT-134-S3","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C8","CT-134-C9","CT-134-C15"]},
+    {"path":"packages/hosted/tests/owner-bootstrap.test.ts","issue_id":"CT-134","mutation_type":"test","ai_session_id":"CT-134-S1","risk_level":"high","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C8","CT-134-C9","CT-134-C15"]},
+    {"path":"packages/hosted/tsconfig.json","issue_id":"CT-134","mutation_type":"config","ai_session_id":"CT-134-S1","risk_level":"medium","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C10","CT-134-C11"]},
+    {"path":"scripts/clean-build-output.mjs","issue_id":"CT-134","mutation_type":"code","ai_session_id":"CT-134-S1","risk_level":"medium","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C11"]},
+    {"path":"vitest.config.ts","issue_id":"CT-134","mutation_type":"config","ai_session_id":"CT-134-S1","risk_level":"medium","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C8","CT-134-C9"]},
+    {"path":"docs/product/versions/v0.2.0/30-implementation/CT-134/handoff.json","issue_id":"CT-134","mutation_type":"artifact","ai_session_id":"CT-134-S5","risk_level":"low","review_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md","test_refs":["CT-134-C14","CT-134-C15"]}
+  ],
+  "checks": [
+    {"check_id":"CT-134-C8","issue_id":"CT-134","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json"},
+    {"check_id":"CT-134-C9","issue_id":"CT-134","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json"},
+    {"check_id":"CT-134-C10","issue_id":"CT-134","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json"},
+    {"check_id":"CT-134-C11","issue_id":"CT-134","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json"},
+    {"check_id":"CT-134-C12","issue_id":"CT-134","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json"},
+    {"check_id":"CT-134-C13","issue_id":"CT-134","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json"},
+    {"check_id":"CT-134-C14","issue_id":"CT-134","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json"},
+    {"check_id":"CT-134-C15","issue_id":"CT-134","status":"passed","evidence_ref":"docs/product/versions/v0.2.0/30-implementation/CT-134/review.md"}
+  ],
+  "reviews": [
+    {
+      "issue_id": "CT-134",
+      "status": "passed",
+      "independent": true,
+      "review_ref": "docs/product/versions/v0.2.0/30-implementation/CT-134/review.md"
+    }
+  ],
+  "testing_handoff": {
+    "acceptance_refs": ["P-T202"],
+    "changed_file_refs": [
+      ".env.example", "apps/hosted-service/package.json", "apps/hosted-service/src/firebase-identity.ts",
+      "apps/hosted-service/src/hosted-config.ts", "apps/hosted-service/src/index.ts",
+      "apps/hosted-service/tests/firebase-identity.test.ts", "apps/hosted-service/tests/hosted-config.test.ts",
+      "apps/hosted-service/tsconfig.json", "apps/web/hosted.html", "apps/web/package.json",
+      "apps/web/src/hosted-api.ts", "apps/web/src/hosted-app.tsx", "apps/web/src/hosted-auth.ts",
+      "apps/web/src/hosted-main.tsx", "apps/web/src/hosted.css", "apps/web/tests/hosted-foundation.test.ts",
+      "apps/web/vite.config.ts", "docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-134/hosting-bootstrap-contract.md",
+      "docs/product/versions/v0.2.0/30-implementation/CT-134/review.md",
+      "docs/product/versions/v0.2.0/30-implementation/CT-134/review-request.json",
+      "firebase.json", "firestore.rules", "package-lock.json", "package.json",
+      "packages/hosted/src/firebase-owner-bootstrap.ts", "packages/hosted/src/hosted-http.ts",
+      "packages/hosted/src/index.ts", "packages/hosted/src/owner-bootstrap.ts",
+      "packages/hosted/tests/hosted-http.test.ts", "packages/hosted/tests/owner-bootstrap.test.ts",
+      "packages/hosted/tsconfig.json", "scripts/clean-build-output.mjs", "vitest.config.ts",
+      "docs/product/versions/v0.2.0/30-implementation/CT-134/handoff.json"
+    ],
+    "regression_areas": [
+      "exact browser Origin allowlisting without Host or forwarding trust",
+      "Google-only verified and revocation-checked Firebase identity",
+      "UID-keyed one-time Firestore transaction convergence",
+      "exact 30-consecutive-day server-time trial",
+      "request bounds, secret redaction, and safe error classification",
+      "Firebase Hosting rewrite and local/hosted authority separation",
+      "supported Firestore runtime packaging and dependency audit",
+      "prohibited agent, code-review, repository, and pull-request scope"
+    ],
+    "evidence_refs": [
+      "docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json",
+      "docs/product/versions/v0.2.0/30-implementation/CT-134/review.md"
+    ],
+    "implementation_actor_ids": ["codex-primary"],
+    "implementation_session_ids": ["CT-134-S1", "CT-134-S2", "CT-134-S3", "CT-134-S4", "CT-134-S5"]
+  },
+  "outcomes": [
+    {"outcome_id":"O-201","status":"baseline_needed"},
+    {"outcome_id":"O-203","status":"baseline_needed"},
+    {"outcome_id":"O-204","status":"baseline_needed"}
+  ],
+  "blockers": [],
+  "next": {
+    "skill": "ct-implement-sprint",
+    "issue": "CT-135",
+    "scope": "workspace isolation, active owner/member authorization, stale-credential denial, and privacy-safe audit"
+  }
+}

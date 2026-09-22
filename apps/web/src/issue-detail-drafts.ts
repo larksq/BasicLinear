@@ -2,7 +2,7 @@ import type {
   Issue,
   IssueResourceInput,
   IssueRichTextDocument,
-} from '@openlinear/contracts';
+} from '@basiclinear/contracts';
 
 type IssueContentSource = Pick<Issue,
   'id' | 'revision' | 'title' | 'descriptionDocument' | 'resources'>;

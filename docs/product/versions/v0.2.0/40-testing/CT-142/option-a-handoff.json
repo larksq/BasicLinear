@@ -1,0 +1,65 @@
+{
+  "schema_version": "ct142-option-a-handoff-v1",
+  "prepared_at": "2026-08-27T05:02:31Z",
+  "stage": "testing",
+  "status": "yellow_external_security_required",
+  "issue": {
+    "identifier": "CT-142",
+    "stable_id": "9a320485-76d5-43c4-ab7f-d6a601f4583f",
+    "expected_revision_before_update": 5,
+    "expected_revision_after_update": 6,
+    "ct_status": "In Progress",
+    "milestone": "S4 — Testing",
+    "plan_id": "I-210",
+    "acceptance": ["P-T210"]
+  },
+  "maintainer_decision": {
+    "selected_option": "A_preserve_full_public_paid_launch_and_require_external_security_review",
+    "decision_ref": "docs/product/versions/v0.2.0/20-planning/ct142-security-skip-maintainer-decision.json",
+    "options_ref": "docs/product/versions/v0.2.0/20-planning/ct142-security-skip-resolution-options.md",
+    "options_sha256": "f40926e2ecc3944422366fd9eb48c215cd8348a5d055babb9549f65376d36e2d"
+  },
+  "accepted_nonsecurity_evidence": {
+    "status": "passed",
+    "review_ref": "docs/product/versions/v0.2.0/40-testing/CT-142/review.md",
+    "decision_ref": "docs/product/versions/v0.2.0/40-testing/CT-142/decision.md",
+    "result_ref": "docs/product/versions/v0.2.0/40-testing/CT-142/result.json",
+    "sealed_files": 513,
+    "selected_tests": 46
+  },
+  "remaining_gate": {
+    "owner": "authorized external security reviewer",
+    "required_evidence": "signed result and exact evidence digest",
+    "coverage": [
+      "tenant isolation",
+      "role authorization",
+      "invitation lifecycle",
+      "personal-token lifecycle",
+      "webhook authentication and replay",
+      "Origin handling",
+      "replay and enumeration resistance",
+      "paid-to-Free downgrade behavior",
+      "Firestore authorization boundary"
+    ],
+    "after_external_pass": "Dispatch a separate independent reconciliation of the complete P-T210 acceptance map before CT-142 can become Done."
+  },
+  "claims": {
+    "full_public_paid_scope_preserved": true,
+    "security_skip_treated_as_pass": false,
+    "p_t210_fully_qualified": false,
+    "ct142_done_eligible": false,
+    "outcomes_validated": false,
+    "payment_activation_authorized": false,
+    "combined_release_accepted": false,
+    "legal_privacy_security_approved": false
+  },
+  "control_tower": {
+    "authority": "project-local-v0.8",
+    "projection": "disabled_not_synced",
+    "revision_after_update": 6,
+    "status_after_update": "In Progress",
+    "milestone_after_update": "S4 — Testing",
+    "backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-27T05-03-43-752Z-8fb033bc-1a31-404c-a0ed-6f55fca6f136.json",
+    "backup_sha256": "9c186e89948e20048bdb24732c8d5695eafcdc530cd14c216c22705d434a7123"
+  }
+}

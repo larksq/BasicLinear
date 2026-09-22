@@ -1,0 +1,119 @@
+{
+  "schema_version": "ct142-test-evidence-v1",
+  "stage": "testing.evidence-map",
+  "status": "yellow",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled_not_synced",
+    "linear_used": false
+  },
+  "implementation_handoff_ref": "docs/product/versions/v0.2.0/40-testing/CT-142/implementation-inputs.json",
+  "implementation_actor_ids": ["codex-primary"],
+  "implementation_session_ids": [
+    "CT-134-S1",
+    "CT-135-S1",
+    "CT-136-IMPLEMENTATION",
+    "CT-137-IMPLEMENTATION",
+    "CT-138-IMPLEMENTATION",
+    "CT-139-IMPLEMENTATION",
+    "CT-140-IMPLEMENTATION",
+    "CT-141-IMPLEMENTATION",
+    "CT-142-NONSECURITY-EVIDENCE"
+  ],
+  "independent_acceptance": {
+    "status": "accepted",
+    "independent": true,
+    "decision_ref": "docs/product/versions/v0.2.0/40-testing/CT-142/decision.md",
+    "authorized_by": "maintainer-authorized-independent-subagent",
+    "evidence_ref": "docs/product/versions/v0.2.0/40-testing/CT-142/review.md",
+    "actor_id": "codex-testing-ct142-independent",
+    "session_id": "CT142-NONSECURITY-REVIEW-20260826"
+  },
+  "required_surfaces": ["automated", "manual", "uat", "regression"],
+  "issues": [
+    {
+      "issue_id": "CT-142",
+      "requirement_refs": [
+        "R-201", "R-202", "R-203", "R-204", "R-205", "R-206", "R-207", "R-208", "R-209", "R-210",
+        "R-211", "R-212", "R-213", "R-214", "R-215", "R-216", "R-217", "R-218", "R-219", "R-220"
+      ],
+      "acceptance_refs": ["P-T210"]
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "CT142-NONSECURITY-AUTOMATED",
+      "surface": "automated",
+      "status": "passed",
+      "issue_refs": ["CT-142"],
+      "requirement_refs": [
+        "R-201", "R-202", "R-203", "R-205", "R-206", "R-207", "R-208", "R-209", "R-210",
+        "R-211", "R-212", "R-213", "R-214", "R-215", "R-216", "R-217", "R-218", "R-220"
+      ],
+      "acceptance_refs": ["P-T210"],
+      "evidence_ref": "docs/product/versions/v0.2.0/40-testing/CT-142/automated-receipt.json"
+    },
+    {
+      "check_id": "CT142-NONSECURITY-MANUAL",
+      "surface": "manual",
+      "status": "passed",
+      "issue_refs": ["CT-142"],
+      "requirement_refs": ["R-201", "R-202", "R-203", "R-209", "R-220"],
+      "acceptance_refs": ["P-T210"],
+      "evidence_ref": "docs/product/versions/v0.2.0/40-testing/CT-142/manual-observation.json"
+    },
+    {
+      "check_id": "CT142-NONSECURITY-UAT",
+      "surface": "uat",
+      "status": "passed",
+      "issue_refs": ["CT-142"],
+      "requirement_refs": [
+        "R-201", "R-202", "R-203", "R-205", "R-206", "R-207", "R-208", "R-209", "R-210",
+        "R-211", "R-212", "R-213", "R-214", "R-215", "R-216", "R-217", "R-218", "R-220"
+      ],
+      "acceptance_refs": ["P-T210"],
+      "evidence_ref": "docs/product/versions/v0.2.0/40-testing/CT-142/review.md"
+    },
+    {
+      "check_id": "CT142-NONSECURITY-REGRESSION-SLICE",
+      "surface": "regression",
+      "status": "passed",
+      "issue_refs": ["CT-142"],
+      "requirement_refs": [
+        "R-201", "R-202", "R-203", "R-205", "R-206", "R-207", "R-208", "R-209", "R-210",
+        "R-211", "R-212", "R-213", "R-214", "R-215", "R-216", "R-217", "R-218", "R-220"
+      ],
+      "acceptance_refs": ["P-T210"],
+      "evidence_ref": "docs/product/versions/v0.2.0/40-testing/CT-142/automated-receipt.json"
+    },
+    {
+      "check_id": "CT142-SECURITY-R219",
+      "surface": "regression",
+      "status": "skipped",
+      "issue_refs": ["CT-142"],
+      "requirement_refs": ["R-204", "R-219"],
+      "acceptance_refs": ["P-T210"],
+      "reason": "The maintainer explicitly directed Codex to skip security testing under the active safety-policy boundary.",
+      "owner": "maintainer",
+      "risk": "R-204's tenant-security validation, R-219, and the security portion of P-T210 remain untested; CT-142 cannot be fully passed or Done-qualified.",
+      "followup_ref": "CT-142#R-204-R-219",
+      "exception": {
+        "decision_ref": "docs/product/versions/v0.2.0/40-testing/CT-142/maintainer-security-skip.json",
+        "decision": "authorize_exception",
+        "authority": "maintainer",
+        "authorized_by": "maintainer",
+        "reason": "The maintainer directed the Testing stage to omit security testing because it was stopped by Codex safety policy.",
+        "scope": {
+          "stage": "testing",
+          "issue_id": "CT-142",
+          "kind": "check",
+          "affected_ref": "CT142-SECURITY-R219"
+        }
+      }
+    }
+  ],
+  "bug_loops": [],
+  "outcome_status": "baseline_needed",
+  "blockers": []
+}

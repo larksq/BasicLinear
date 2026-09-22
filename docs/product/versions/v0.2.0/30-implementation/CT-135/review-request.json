@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "stage": "implementation.independent-review-request",
+  "status": "completed_fail",
+  "review_round": 1,
+  "prepared_at": "2026-08-25T05:10:30.000Z",
+  "authorized_at": "2026-08-25T04:22:18.000Z",
+  "dispatched_at": "2026-08-25T05:10:30.000Z",
+  "completed_at": "2026-08-25T05:23:00.000Z",
+  "authorization": {
+    "authorized_by": "user",
+    "scope": [
+      "CT-134",
+      "CT-135",
+      "CT-136",
+      "CT-137",
+      "CT-138",
+      "CT-139",
+      "CT-140",
+      "CT-141",
+      "CT-142"
+    ],
+    "standing": true
+  },
+  "issue": {
+    "identifier": "CT-135",
+    "stable_id": "91e864f0-9713-4d97-b539-0578f713754a",
+    "revision": 4,
+    "status": "In Progress",
+    "milestone": "S3 — Implementation",
+    "plan_id": "I-203",
+    "requirements": ["R-204", "R-206", "R-219"],
+    "acceptance": ["P-T203"],
+    "outcomes": ["O-202", "O-204"]
+  },
+  "authority": {
+    "profile": "project-local-v0.8",
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "projection": "disabled_not_synced",
+    "predecessor": {
+      "identifier": "CT-134",
+      "status": "Done",
+      "revision": 6
+    },
+    "checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T05-09-49-816Z-aae1df8e-ef89-4cba-ab8d-678da36354ea.json",
+    "checkpoint_backup_sha256": "836de7f7b9878b9764f636b87aa5ce2e510e12f0b6b8a2adf807112e0d8f2238"
+  },
+  "independence": {
+    "required": true,
+    "primary_actor_id": "codex-primary",
+    "reviewer_must_be_distinct": true,
+    "mode": "read_only",
+    "prohibited_actions": [
+      "editing any file",
+      "mutating Control Tower",
+      "creating a commit",
+      "changing external state"
+    ],
+    "dispatch_state": "dispatched",
+    "reviewer_actor_id": "codex-subagent:/root/ct135_independent_review"
+  },
+  "prior_reviews": [],
+  "candidate": {
+    "manifest_scope": "Every CT-135 implementation, test, configuration, and pre-review evidence artifact. This routing request excludes itself to avoid a self-hash.",
+    "file_count": 18,
+    "sha256_by_path": {
+      "apps/hosted-service/src/index.ts": "712f512fbc149c7b3875f82ec90929dcbf005142f703c62bfb3477e5d9842df3",
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/checkpoint.json": "5c7e3bbd689926432587e3174834cd1958310ece7aee8757a177c0672228aee5",
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/review.md": "38e2a7d642bb04ceddce9f9e1bfe95cb2fc77f55f5b89425811dc164eb40cbd1",
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/workspace-authorization-contract.md": "9c37739eb59bfdd4455dbc2d7f27a2edd17011bb88ddc87e182cb4003ec61e9b",
+      "firestore.rules": "78b0b763760f9bef4fa268272b0fb9a7fd951fc13366a206e4ee81959246664a",
+      "package-lock.json": "1c679619a8c3f63835bfd8546742b5ba3f5c1f4994d91dd82d419293666e90cd",
+      "package.json": "31a18c4b3728178d9bfd46324206389e155abc9e7f198a407ef1a0974bc566d2",
+      "packages/hosted/src/firebase-owner-bootstrap.ts": "7d712eaf93d6b28b0e93f37677ab54c0c036eeb43a0cc1c8a7c9a8a4c7499a92",
+      "packages/hosted/src/firebase-workspace-authorization.ts": "d572ad34873cdf8e6d11fbf163a22b7a35cadaf0db380b08c247d80a55558b3e",
+      "packages/hosted/src/hosted-http.ts": "0267b6f3bbc75f2cc2fdd940d255317df9bb8a370212f8352bb8d296cc722ddb",
+      "packages/hosted/src/index.ts": "efde5776477e100270c67b0ae5eab698cc5faf143b7456eb63aea86a2d2c9e06",
+      "packages/hosted/src/workspace-authorization.ts": "6f391491ef477a9dec0378ea26b0215ad1b329fc37d1982c8c5ae1bd99c6a5ac",
+      "packages/hosted/tests/firestore-rules.emulator.test.ts": "023f109a5b875dbcc3bdc56ed1981134f2b32a94371ded35b1ff598a3e38081f",
+      "packages/hosted/tests/hosted-http.test.ts": "288b4f6ab66f192a05fcfcd41636c7998b00655f2af249f07d18be12cae7701f",
+      "packages/hosted/tests/owner-bootstrap.test.ts": "f33967b9fb545d6fd14fbe79eccb4f413adfe5643446e86c6688a281b2b9ce95",
+      "packages/hosted/tests/workspace-authorization.test.ts": "105aa4352715b339d538b96cebbdba15f466ee9233d6eac33f77c645444de260",
+      "vitest.config.ts": "487d9f14b343f3af43ef2298eee1b6e80b0746d5228dd2ea6c8c11042ef8bd32",
+      "vitest.firestore.config.ts": "d3679907aa3d271f218c85395f82eb3125e13288fda501432214caadc3f46186"
+    }
+  },
+  "required_checks": [
+    {
+      "command": "verify all 18 candidate SHA-256 entries before and after checks",
+      "expected": "18 of 18 hashes match exactly"
+    },
+    {
+      "command": "npx vitest run packages/hosted/tests/workspace-authorization.test.ts packages/hosted/tests/hosted-http.test.ts packages/hosted/tests/owner-bootstrap.test.ts --config vitest.config.ts",
+      "expected": "3 files and 18 tests pass"
+    },
+    {
+      "command": "npm run test:hosted-rules",
+      "expected": "official Firestore emulator runs 1 file and 6 tests successfully"
+    },
+    {
+      "command": "npm test",
+      "expected": "80 files and 529 tests pass"
+    },
+    {
+      "command": "npm run typecheck",
+      "expected": "all workspace typechecks pass"
+    },
+    {
+      "command": "npm run build",
+      "expected": "hosted service plus local/hosted Vite entries build"
+    },
+    {
+      "command": "npm run audit:hosted-runtime",
+      "expected": "0 vulnerabilities for the supported Firestore-capable runtime profile"
+    },
+    {
+      "command": "git diff --check",
+      "expected": "no whitespace errors"
+    }
+  ],
+  "review_questions": [
+    "Can any owner, member, removed member, unrelated user, custom-role record, unauthenticated caller, or personal token read or mutate outside the exact allowed workspace and action at either the Firestore-rules or trusted-handler boundary?",
+    "Do all future web, REST, and MCP principal forms converge on one closed owner/member action matrix, with owner-only settings, invitations, membership administration, tokens, billing, and export?",
+    "Does every authenticated authorization request re-read the exact membership so the same browser/API/MCP credential fails immediately after removal or role corruption?",
+    "Can malformed workspace IDs, document-field mismatches, nested-parent mismatches, collection queries, custom roles, or the Admin SDK's rule bypass produce an unauthorized protected disclosure or state change?",
+    "Are all direct client mutations denied and all privileged future handlers technically forced through the shared service rather than treating Firebase Admin access as authorization?",
+    "Are authorization decisions and denials durably and atomically evidenced before grant, fail closed when evidence cannot be written, and remain free of raw credentials, email, comment bodies, internal errors, and caller-visible denial distinctions?",
+    "Does the hosted HTTP route retain CT-134's exact Origin and revocation-checked identity boundary while returning only role-bounded, privacy-safe access data?",
+    "Do the emulator harness, changed-file manifest, docs, requirements, risk controls, and prohibited-scope scan cover the exact CT-135 slice without claiming production or outcome success?"
+  ],
+  "decision_contract": {
+    "pass": "No actionable finding remains; CT-135 is eligible for Done after the review is recorded and a fresh project-local mutation/readback succeeds.",
+    "fail": "Return severity-ranked actionable findings with file/line evidence, a reproducible counterexample, affected requirement or acceptance reference, and required remediation.",
+    "no_partial_acceptance": true
+  },
+  "decision": {
+    "review_id": "CT-135-IR1",
+    "reviewer_actor_id": "codex-subagent:/root/ct135_independent_review",
+    "result": "fail",
+    "actionable_findings": 5,
+    "highest_severity": "P2",
+    "done_eligible": false,
+    "outcome_claimed": false
+  },
+  "known_context": [
+    "This slice exposes only one protected browser access proof route; invitation, assignment, comment, billing, REST-token/export, and MCP operations are owned by CT-136 through CT-140 and must call the shared service.",
+    "All direct Firestore client writes are intentionally denied; trusted service handlers own privileged mutations and domain invariants.",
+    "Authorization evidence is server-only and the authorization check itself records no protected disclosure or state change.",
+    "The full development install contains known unused optional-package advisories; the supported runtime profile omits development and unused optional packages and reports zero vulnerabilities.",
+    "No production Firebase project, credential, deployment, qualified security approval, or outcome result is claimed."
+  ],
+  "unrelated_preexisting_changes_excluded": [
+    "docs/product/versions/v0.1.0/10-discovery/CT-3/qualified-review-request.json",
+    "ops/release/review-request.json",
+    "outputs/"
+  ]
+}

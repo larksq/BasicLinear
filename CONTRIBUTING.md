@@ -1,10 +1,13 @@
 # Contributing
 
-This repository is in a governed pre-release stage. The sponsor selected `AGPL-3.0-only`, and the root and workspace metadata now declare that license. The public product identity and contribution intake route are still under qualified review, so outside contributions must not be solicited or merged yet.
+BasicLinear welcomes contributions under the repository's `AGPL-3.0-only`
+license. Keep each change focused and include the validation needed to show its
+behavior.
 
 ## Development workflow
 
-Use Node 24 and the npm version declared in `package.json`. Start from an issue in the repository's local Control Tower database, keep the change within that issue's accepted scope, and run:
+Use Node 24 and the npm version declared in `package.json`. Describe the
+problem, scope, and validation in the proposed change. Run:
 
 ```sh
 npm ci
@@ -13,14 +16,23 @@ npm test
 npm run build
 ```
 
+Hosted storage changes also require the Firebase CLI and a compatible Java runtime:
+
+```sh
+npm run test:hosted-rules
+npm run test:hosted-transactions
+```
+
+These suites run against the isolated `demo-basiclinear` Firestore emulator.
+
 Changes to release controls must also run:
 
 ```sh
 npm run test:release-audit
+npm run test:secret-audit
+npm run audit:secrets
 npm run audit:release
 ```
-
-The release audit intentionally fails while a protected decision or required artifact is unresolved.
 
 ## Change requirements
 
@@ -31,4 +43,4 @@ The release audit intentionally fails while a protected decision or required art
 - Do not weaken accessibility, responsive behavior, keyboard operation, security boundaries, or deterministic build inputs to make a check pass.
 - Treat implementation completion, release readiness, and validated product outcomes as separate claims.
 
-Security vulnerabilities must follow `SECURITY.md`, not a public issue. Public contribution acceptance remains disabled until CT-3 clears the product identity and CT-13 accepts the release candidate and reporting route.
+Security vulnerabilities must follow [SECURITY.md](SECURITY.md), not a public issue.

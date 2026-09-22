@@ -1,9 +1,12 @@
 {
-  "name": "@openlinear/config",
+  "name": "@basiclinear/config",
   "version": "0.1.0",
   "license": "AGPL-3.0-only",
   "private": true,
   "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
   "exports": {
     "./typescript": "./typescript.json"
   }

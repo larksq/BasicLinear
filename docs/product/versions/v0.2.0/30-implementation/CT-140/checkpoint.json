@@ -1,0 +1,267 @@
+{
+  "schema_version": "1.0",
+  "stage": "implementation.checkpoint",
+  "status": "accepted",
+  "prepared_at": "2026-08-26T00:23:01.387Z",
+  "issue": {
+    "plan_id": "I-208",
+    "local_issue_id": "CT-140",
+    "stable_id": "0be25639-46be-4a49-aea6-5c3422b1ffb0",
+    "revision": 9,
+    "status": "Done",
+    "milestone": "S3 — Implementation",
+    "accepted": true,
+    "blocked": false,
+    "requirement_refs": ["R-213", "R-214", "R-215", "R-219", "R-220"],
+    "acceptance_refs": ["P-T208"],
+    "outcome_refs": ["O-204"]
+  },
+  "task_readback": {
+    "authority": "project-local-v0.8",
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "projection": "disabled_not_synced",
+    "dependency_readback": [
+      {"issue": "CT-139", "status": "Done", "revision": 11}
+    ],
+    "backups": [
+      {
+        "kind": "ct139_completion_dependency",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T21-10-02-655Z-dfbed8f8-28d6-4100-a473-98343e50fa05.json",
+        "sha256": "785f1c074d6a82ecf043ac2d7196c50a7fbc8bd5f1a009947d6411bb6f1a8b00",
+        "raw_file_sha256": "b314da973b22d0b1e310eed1da32520359231f1b340930075ac3687400143188"
+      },
+      {
+        "kind": "start",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T21-12-19-373Z-5aa871d7-af11-4c03-9c5f-b236c5526fb4.json",
+        "sha256": "a52bce8cb977b2521f32ad94fcb23d9eddf81eab5d25aa460c3d4ed4ba233423",
+        "raw_file_sha256": "1fd72024d1c47754bce400e19225693d9702e049c88801337ed5a35c3ca371d4"
+      },
+      {
+        "kind": "review1_dispatch",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T22-41-42-337Z-25c273f2-4539-443b-bd1e-8707e3996f31.json",
+        "sha256": "0d49c26f5e3194c6e90f09ead207a58b2c91c6e9c2cf00272e9c85c099c5df13",
+        "raw_file_sha256": "c3a9e8bf79b97887546df855a97c5168c2925cbda85001c1ad228c052061a2a3"
+      },
+      {
+        "kind": "review1_failure",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T23-12-44-845Z-16b45c9c-bd2b-4dab-8742-97dbd736b75f.json",
+        "sha256": "312f32cd556f2000bb2edffafac232370608e20e8027034b9173ade0cd66aa99",
+        "raw_file_sha256": "b81ff5459c7cf5b34c99a7d6f66fe843e5b7b1dae50717e81c37812b57aedf0e"
+      },
+      {
+        "kind": "review2_dispatch",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T23-23-02-617Z-d3fbaf92-ddfb-49e6-9e31-c9513b9cb910.json",
+        "sha256": "e2f76c5ce8d1b7d7ad616a73c4e335072acf0d8a1ff2434fa3af65860acd51ce",
+        "raw_file_sha256": "e2de8f08694d50b1c8c6df37e6163acc4645ac191d186c5bf96ec5acfe4d679e"
+      },
+      {
+        "kind": "review2_failure",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T23-52-26-332Z-323bdf22-50da-4d84-89e8-dafa4c334a5f.json",
+        "sha256": "683b58653a9d751fe91968dff7ba0ee1ba3972743593cb4b437c9a16a13e5c99",
+        "raw_file_sha256": "8081a5a988201b7b3a8357d3e6d636494a9a166c342eaced020c21882378f44f"
+      },
+      {
+        "kind": "review3_dispatch",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T23-59-17-181Z-c97592cb-1b16-44ea-9d4b-6f5b22aaae9b.json",
+        "sha256": "296e4cf71269f686fcbad57220e99f3ac508c73ae1051dfcca902a14e3b9448b",
+        "raw_file_sha256": "1ed621961b7e15cd4c60d4ac4e6b54196bec55ecea92a2b52230fe5225a9c731"
+      },
+      {
+        "kind": "completion",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-26T00-23-01-367Z-57c8c8e5-7a20-42c4-a8c5-e7054a507f9c.json",
+        "sha256": "82100bab5827d25dd94514e15b179aff94c12eb0d893aa1a32f1e70c7a1d7387",
+        "raw_file_sha256": "d4d36f6272320ef852af712ae7ca9fa85238172436e022d300e74d84f23f17b2"
+      }
+    ],
+    "backup_checksum_note": "sha256 is the backup's embedded semantic checksum; raw_file_sha256 hashes the serialized JSON bytes."
+  },
+  "entry": {
+    "operating_profile": "project-local-v0.8",
+    "authority": "current user goal and standing CT-134-through-CT-142 independent-review authorization",
+    "linear_used": false,
+    "control_tower_ui_used": false,
+    "milestone_reused": "S3 — Implementation",
+    "new_version_milestone_created": false
+  },
+  "sessions": [
+    {
+      "session_id": "CT-140-S1",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating",
+      "allowed_paths": [
+        ".env.example",
+        "firebase.json",
+        "firestore.rules",
+        "packages/hosted/",
+        "apps/hosted-service/",
+        "apps/web/src/hosted-api.ts",
+        "apps/web/src/hosted-app.tsx",
+        "apps/web/src/hosted.css",
+        "apps/web/tests/hosted-mcp-consent.test.ts",
+        "skills/basiclinear-product-management/",
+        "docs/product/versions/v0.2.0/20-planning/",
+        "docs/product/versions/v0.2.0/30-implementation/research/T-SECURITY-MCP.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-140/"
+      ]
+    },
+    {
+      "session_id": "CT-140-S2",
+      "actor_id": "codex-primary",
+      "mode": "verification_readonly",
+      "outputs": [
+        "MCP protocol/discovery/header/body/content-negotiation/cancellation evidence",
+        "OAuth redirect/state/PKCE/resource/consent/code/token/refresh/reuse/revoke and chronology evidence",
+        "REST/MCP state, conflict, authorization, audit, and prohibited-capability evidence",
+        "Firestore emulator, privacy, skill-validation, regression, typecheck, build, dependency, and audit evidence"
+      ]
+    },
+    {
+      "session_id": "CT-140-S3",
+      "actor_id": "codex-primary",
+      "mode": "evidence_mutating",
+      "allowed_paths": [
+        ".control-tower/request-update-issue-140-review1-dispatch.json",
+        "scripts/prepare-ct140-review1.mjs",
+        "docs/product/versions/v0.2.0/30-implementation/CT-140/"
+      ]
+    },
+    {
+      "session_id": "CT-140-IR1",
+      "actor_id": "ct140-independent-review",
+      "mode": "independent_review_readonly",
+      "status": "failed",
+      "severity": {"P0": 0, "P1": 1, "P2": 3, "P3": 1}
+    },
+    {
+      "session_id": "CT-140-S4",
+      "actor_id": "codex-primary",
+      "mode": "review1_remediation",
+      "allowed_paths": [
+        "packages/hosted/src/mcp-server.ts",
+        "packages/hosted/src/mcp-oauth-service.ts",
+        "packages/hosted/tests/mcp-server.test.ts",
+        "packages/hosted/tests/mcp-oauth-service.test.ts",
+        "apps/web/src/hosted-app.tsx",
+        "apps/web/tests/hosted-mcp-consent.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/research/T-SECURITY-MCP.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-140/",
+        "scripts/prepare-ct140-review2.mjs",
+        ".control-tower/request-update-issue-140-review1-failure.json",
+        ".control-tower/request-update-issue-140-review2-dispatch.json"
+      ]
+    },
+    {
+      "session_id": "CT-140-IR2",
+      "actor_id": "ct140-independent-review",
+      "mode": "independent_review_readonly",
+      "status": "failed",
+      "severity": {"P0": 0, "P1": 0, "P2": 1, "P3": 0}
+    },
+    {
+      "session_id": "CT-140-S5",
+      "actor_id": "codex-primary",
+      "mode": "review2_remediation",
+      "allowed_paths": [
+        "packages/hosted/src/mcp-server.ts",
+        "packages/hosted/tests/mcp-server.test.ts",
+        "scripts/tests/ct140-mcp-cancellation-loopback.mjs",
+        "docs/product/versions/v0.2.0/30-implementation/CT-140/",
+        "scripts/prepare-ct140-review3.mjs",
+        ".control-tower/request-update-issue-140-review2-failure.json",
+        ".control-tower/request-update-issue-140-review3-dispatch.json"
+      ]
+    },
+    {
+      "session_id": "CT-140-IR3",
+      "actor_id": "ct140-independent-review",
+      "mode": "independent_review_readonly",
+      "status": "passed",
+      "severity": {"P0": 0, "P1": 0, "P2": 0, "P3": 0}
+    }
+  ],
+  "implementation": {
+    "protocol": {
+      "version": "2026-07-28",
+      "profile": "stateless_streamable_http",
+      "resource": "/mcp",
+      "methods": ["server/discover", "tools/list", "tools/call"],
+      "tool_count": 27,
+      "accept_parameters_preserved": true,
+      "cancellation_before_authentication": true,
+      "cancellation_live_state_rechecked_before_work": true,
+      "cancellation_listeners_cleaned_up": true,
+      "get_event_stream": false,
+      "protocol_sessions": false
+    },
+    "oauth": {
+      "pkce": "S256",
+      "dcr_application_types": ["native", "web"],
+      "consent_displays_immutable_client_id": true,
+      "consent_replay_requires_live_unused_code": true,
+      "access_token_seconds": 600,
+      "refresh_family_seconds": 2592000,
+      "rotating_refresh": true,
+      "reuse_revokes_family": true,
+      "raw_credentials_stored": false,
+      "rest_personal_tokens_accepted_at_mcp": false,
+      "cimd_fetch": false
+    },
+    "skill": {
+      "path": "skills/basiclinear-product-management",
+      "validated": true,
+      "read_first": true,
+      "destructive_confirmation_tools": ["comment.delete", "member.remove", "invitation.revoke"]
+    },
+    "excluded": [
+      "AI agents",
+      "code review",
+      "source repositories",
+      "pull requests",
+      "personal-token administration through MCP",
+      "billing purchase through MCP",
+      "local/cloud synchronization"
+    ]
+  },
+  "verification": {
+    "focused": {"status": "passed", "files": 5, "tests": 22},
+    "firestore_emulator": {
+      "status": "passed",
+      "files": 1,
+      "tests": 6,
+      "restricted_attempt": "loopback bind EPERM",
+      "authorized_rerun": "passed with clean shutdown"
+    },
+    "full_regression": {"status": "passed", "files": 103, "tests": 677},
+    "typecheck": {"status": "passed", "workspaces": 11},
+    "build": {"status": "passed", "local_modules": 1953, "hosted_modules": 30, "hosted_references": "3/3"},
+    "dependency_tree": {"status": "passed", "command": "npm ls --omit=dev --omit=optional --all"},
+    "runtime_audit": {
+      "status": "passed_offline_with_narrow_inherited_online_boundary",
+      "offline_vulnerabilities": 0,
+      "ct138_review8_exact_registry_audit_inputs": "8/8: .npmrc, apps/hosted-service/package.json, apps/web/package.json, package-lock.json, package.json, packages/config/package.json, packages/hosted/package.json, packages/ui/package.json",
+      "additional_current_package_manifests": "7/7 byte-identical to CT-139 Review 4/current only; no inherited CT-138 registry-audit claim",
+      "fresh_online_attempt": "policy_blocked_dependency_metadata_disclosure",
+      "fresh_online_claim": false
+    },
+    "skill_validation": {"status": "passed", "result": "Skill is valid!"},
+    "real_loopback_cancellation": {
+      "status": "passed",
+      "restricted_attempt": "loopback bind EPERM",
+      "authorized_rerun": "closed before authentication resolved; zero service/audit/idempotency/project mutation"
+    },
+    "candidate_seal": {"status": "verified_independently_before_and_after", "review1_files": 431, "review2_files": 438, "review3_files": 445},
+    "completion_readback": {"status": "passed", "revision": 9, "state": "Done", "projection": "disabled_not_synced"}
+  },
+  "claims": {
+    "implementation_output_done": true,
+    "independent_review_pass": true,
+    "p_t208_qualified": false,
+    "o_204_success": false,
+    "deployed": false,
+    "public_mcp_active": false,
+    "live_oauth_client_created": false,
+    "release_accepted": false,
+    "legal_privacy_security_approved": false
+  },
+  "next_safe_action": "Start CT-141 I-209 on the existing shared S3 milestone through the project-local v0.8 API; retain all P-T208, O-204, deployment, and release claims for later qualification."
+}

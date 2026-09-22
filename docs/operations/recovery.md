@@ -12,7 +12,7 @@ npm run operator -- paths
 npm run operator -- health
 ```
 
-`OPENLINEAR_DATA_DIR` is the only storage-location override. `--database FILE` can target a stopped copy for a bounded recovery operation.
+`BASICLINEAR_DATA_DIR` is the only storage-location override. `--database FILE` can target a stopped copy for a bounded recovery operation.
 
 ## Workspace export and import
 
@@ -24,7 +24,7 @@ npm run operator -- export --output ./workspace.json
 
 The export is written atomically with owner-only permissions. Existing output is preserved unless `--overwrite` is explicit.
 
-Import validates the format, migration manifest, allowlisted fields, canonical ordering, references, collection digests, and complete digest before promotion. Stop OpenLinear before importing into its active file. The target must be empty unless `--replace` is explicit:
+Import validates the format, migration manifest, allowlisted fields, canonical ordering, references, collection digests, and complete digest before promotion. Stop BasicLinear before importing into its active file. The target must be empty unless `--replace` is explicit:
 
 ```sh
 npm run operator -- import --input ./workspace.json --yes
@@ -47,11 +47,11 @@ Create a consistent SQLite backup while the application is running:
 npm run operator -- backup
 ```
 
-Without `--output`, the operator writes a timestamped `openlinear-*.sqlite3` file under the standard `backups/` directory. To choose a path:
+Without `--output`, the operator writes a timestamped `basiclinear-*.sqlite3` file under the standard `backups/` directory. To choose a path:
 
 ```sh
-npm run operator -- backup --output ./openlinear-backup.sqlite3
-npm run operator -- backup verify --input ./openlinear-backup.sqlite3
+npm run operator -- backup --output ./basiclinear-backup.sqlite3
+npm run operator -- backup verify --input ./basiclinear-backup.sqlite3
 ```
 
 Backups are regular owner-only files. Verification checks the supported schema version, `integrity_check`, and foreign-key violations without altering the input.
@@ -61,14 +61,14 @@ Backups are regular owner-only files. Verification checks the supported schema v
 Stop the application before restoring its active database. Prefer restoring into a fresh directory first:
 
 ```sh
-OPENLINEAR_DATA_DIR=/path/to/fresh-directory \
-  npm run operator -- restore --input ./openlinear-backup.sqlite3 --yes
+BASICLINEAR_DATA_DIR=/path/to/fresh-directory \
+  npm run operator -- restore --input ./basiclinear-backup.sqlite3 --yes
 ```
 
 After `health` and canonical workflow readback pass against the fresh directory, retain the previous application file until acceptance completes. Replacing an existing target requires both confirmation flags:
 
 ```sh
-npm run operator -- restore --input ./openlinear-backup.sqlite3 --yes --replace
+npm run operator -- restore --input ./basiclinear-backup.sqlite3 --yes --replace
 ```
 
 Restore verifies the source before creating a temporary target, syncs the promoted file and directory, and leaves the existing target unchanged if verification or promotion fails. Sessions are process-memory only and are renewed automatically after restart.

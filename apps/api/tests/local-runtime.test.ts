@@ -3,7 +3,7 @@ import { mkdtemp, mkdir, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { DatabaseSync } from 'node:sqlite';
-import { createDatabase, prepareLocalStorage } from '@openlinear/db/sqlite';
+import { createDatabase, prepareLocalStorage } from '@basiclinear/db/sqlite';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { buildApp } from '../src/app.js';
 import { loadApiConfig, type ApiConfig } from '../src/config.js';
@@ -23,7 +23,7 @@ function testConfig(root: string, webRoot = join(root, 'web')): ApiConfig {
     environment: 'test',
     publicOrigin: 'http://127.0.0.1:4174',
     dataDirectory: root,
-    databasePath: join(root, 'openlinear.sqlite3'),
+    databasePath: join(root, 'basiclinear.sqlite3'),
     backupDirectory: join(root, 'backups'),
     webRoot,
     sessionCookieName: 'ol_local_session',
@@ -56,36 +56,36 @@ describe('CT-81 local runtime configuration', () => {
       host: '127.0.0.1',
       port: 4174,
       publicOrigin: 'http://127.0.0.1:4174',
-      dataDirectory: '/Users/local/Library/Application Support/OpenLinear',
-      databasePath: '/Users/local/Library/Application Support/OpenLinear/openlinear.sqlite3',
-      backupDirectory: '/Users/local/Library/Application Support/OpenLinear/backups',
+      dataDirectory: '/Users/local/Library/Application Support/BasicLinear',
+      databasePath: '/Users/local/Library/Application Support/BasicLinear/basiclinear.sqlite3',
+      backupDirectory: '/Users/local/Library/Application Support/BasicLinear/backups',
     });
     expect(loadApiConfig({}, { platform: 'linux', homeDirectory: '/home/local' }).dataDirectory)
-      .toBe('/home/local/.local/share/openlinear');
+      .toBe('/home/local/.local/share/basiclinear');
     expect(loadApiConfig(
       { LOCALAPPDATA: 'C:\\Users\\local\\AppData\\Local' },
       { platform: 'win32', homeDirectory: 'C:\\Users\\local' },
-    ).dataDirectory).toContain('OpenLinear');
+    ).dataDirectory).toContain('BasicLinear');
   });
 
   it('fails closed on remote binds and invalid local runtime values', () => {
-    expect(() => loadApiConfig({ OPENLINEAR_HOST: '0.0.0.0' }))
+    expect(() => loadApiConfig({ BASICLINEAR_HOST: '0.0.0.0' }))
       .toThrow('supports loopback access only');
     expect(() => loadApiConfig({ HOST: '192.0.2.10' }))
       .toThrow('supports loopback access only');
-    expect(() => loadApiConfig({ OPENLINEAR_PORT: '70000' }))
+    expect(() => loadApiConfig({ BASICLINEAR_PORT: '70000' }))
       .toThrow('must be an integer from 1 to 65535');
-    expect(() => loadApiConfig({ OPENLINEAR_SESSION_TTL_SECONDS: '0' }))
+    expect(() => loadApiConfig({ BASICLINEAR_SESSION_TTL_SECONDS: '0' }))
       .toThrow('must be an integer from 300 to 86400');
   });
 
   it('rejects a file where the dedicated data directory must exist', async () => {
-    const root = await temporaryDirectory('openlinear-path');
+    const root = await temporaryDirectory('basiclinear-path');
     const dataDirectory = join(root, 'not-a-directory');
     await writeFile(dataDirectory, 'blocked');
     expect(() => prepareLocalStorage({
       dataDirectory,
-      databasePath: join(dataDirectory, 'openlinear.sqlite3'),
+      databasePath: join(dataDirectory, 'basiclinear.sqlite3'),
       backupDirectory: join(dataDirectory, 'backups'),
     })).toThrow('must be a regular directory');
   });
@@ -94,7 +94,7 @@ describe('CT-81 local runtime configuration', () => {
 describe('CT-81 loopback HTTP boundary', () => {
   it('completes first use and a project workflow with outbound fetch denied', async () => {
     const outbound = vi.spyOn(globalThis, 'fetch').mockRejectedValue(new Error('network denied'));
-    const root = await temporaryDirectory('openlinear-offline');
+    const root = await temporaryDirectory('basiclinear-offline');
     const config = testConfig(root);
     const database = createDatabase(':memory:');
     const app = await buildApp({ config, database, logger: false });
@@ -108,7 +108,7 @@ describe('CT-81 loopback HTTP boundary', () => {
       const data = owner.json().data as { workspaces: Array<{ id: string }> };
       const workspaceId = data.workspaces[0]!.id;
       const cookie = String(owner.headers['set-cookie']).split(';', 1)[0]!;
-      const csrf = String(owner.headers['x-openlinear-csrf-token']);
+      const csrf = String(owner.headers['x-basiclinear-csrf-token']);
       const teams = await app.inject({
         url: `/api/v1/workspaces/${workspaceId}/teams`,
         headers: { host: host(config), cookie },
@@ -117,7 +117,7 @@ describe('CT-81 loopback HTTP boundary', () => {
       const project = await app.inject({
         method: 'POST',
         url: `/api/v1/workspaces/${workspaceId}/projects`,
-        headers: unsafe(config, { cookie, 'x-openlinear-csrf': csrf }),
+        headers: unsafe(config, { cookie, 'x-basiclinear-csrf': csrf }),
         payload: { teamId, name: 'Offline workflow', idempotencyKey: 'offline-workflow' },
       });
       expect(project.statusCode).toBe(201);
@@ -130,7 +130,7 @@ describe('CT-81 loopback HTTP boundary', () => {
   });
 
   it('enforces Host, Origin, JSON, strict cookies, and independent per-tab CSRF proof', async () => {
-    const root = await temporaryDirectory('openlinear-security');
+    const root = await temporaryDirectory('basiclinear-security');
     const config = testConfig(root);
     const database = createDatabase(':memory:');
     const app = await buildApp({ config, database, logger: false });
@@ -173,7 +173,7 @@ describe('CT-81 loopback HTTP boundary', () => {
       expect(setCookie).toContain('SameSite=Strict');
       expect(setCookie).not.toContain('Max-Age');
       const cookie = setCookie.split(';', 1)[0]!;
-      const csrfOne = String(ownerResponse.headers['x-openlinear-csrf-token']);
+      const csrfOne = String(ownerResponse.headers['x-basiclinear-csrf-token']);
       const session = ownerResponse.json().data as {
         user: { id: string };
         workspaces: Array<{ id: string }>;
@@ -196,7 +196,7 @@ describe('CT-81 loopback HTTP boundary', () => {
       })).statusCode).toBe(403);
       expect((await app.inject({
         ...mutation,
-        headers: unsafe(config, { cookie, 'x-openlinear-csrf': 'invalid' }),
+        headers: unsafe(config, { cookie, 'x-basiclinear-csrf': 'invalid' }),
       })).statusCode).toBe(403);
 
       const tabTwoSession = await app.inject({
@@ -204,22 +204,22 @@ describe('CT-81 loopback HTTP boundary', () => {
         headers: { host: host(config), cookie },
       });
       expect(tabTwoSession.statusCode).toBe(200);
-      const csrfTwo = String(tabTwoSession.headers['x-openlinear-csrf-token']);
+      const csrfTwo = String(tabTwoSession.headers['x-basiclinear-csrf-token']);
       expect(csrfTwo).not.toBe(csrfOne);
       expect((await app.inject({
         ...mutation,
-        headers: unsafe(config, { cookie, 'x-openlinear-csrf': csrfOne }),
+        headers: unsafe(config, { cookie, 'x-basiclinear-csrf': csrfOne }),
       })).statusCode).toBe(201);
       expect((await app.inject({
         ...mutation,
         payload: { ...mutation.payload, name: 'Second tab', idempotencyKey: 'second-tab' },
-        headers: unsafe(config, { cookie, 'x-openlinear-csrf': csrfTwo }),
+        headers: unsafe(config, { cookie, 'x-basiclinear-csrf': csrfTwo }),
       })).statusCode).toBe(201);
 
       expect((await app.inject({
         method: 'POST',
         url: '/api/v1/workspaces',
-        headers: unsafe(config, { cookie, 'x-openlinear-csrf': csrfTwo }),
+        headers: unsafe(config, { cookie, 'x-basiclinear-csrf': csrfTwo }),
         payload: {},
       })).statusCode).toBe(404);
       expect((await app.inject({
@@ -233,11 +233,11 @@ describe('CT-81 loopback HTTP boundary', () => {
   });
 
   it('serves immutable assets and SPA routes from the same Fastify process', async () => {
-    const root = await temporaryDirectory('openlinear-static');
+    const root = await temporaryDirectory('basiclinear-static');
     const webRoot = join(root, 'web');
     await mkdir(join(webRoot, 'assets'), { recursive: true });
     await writeFile(join(webRoot, 'index.html'), '<!doctype html><title>Local app</title>');
-    await writeFile(join(webRoot, 'assets', 'app.js'), 'globalThis.openlinear = true;');
+    await writeFile(join(webRoot, 'assets', 'app.js'), 'globalThis.basiclinear = true;');
     const config = testConfig(root, webRoot);
     const database = createDatabase(':memory:');
     const app = await buildApp({ config, database, logger: false, serveWeb: true });
@@ -271,7 +271,7 @@ describe('CT-81 loopback HTTP boundary', () => {
 
 describe('CT-81 restart and migration behavior', () => {
   it('persists local workflow data while renewing the in-memory session after restart', async () => {
-    const root = await temporaryDirectory('openlinear-restart');
+    const root = await temporaryDirectory('basiclinear-restart');
     const config = testConfig(root);
     prepareLocalStorage(config);
     let app = await buildApp({ config, logger: false });
@@ -284,7 +284,7 @@ describe('CT-81 restart and migration behavior', () => {
     const first = ownerResponse.json().data as { user: { id: string }; workspaces: Array<{ id: string }> };
     const workspaceId = first.workspaces[0]!.id;
     const staleCookie = String(ownerResponse.headers['set-cookie']).split(';', 1)[0]!;
-    const csrf = String(ownerResponse.headers['x-openlinear-csrf-token']);
+    const csrf = String(ownerResponse.headers['x-basiclinear-csrf-token']);
     const teams = await app.inject({
       url: `/api/v1/workspaces/${workspaceId}/teams`,
       headers: { host: host(config), cookie: staleCookie },
@@ -293,7 +293,7 @@ describe('CT-81 restart and migration behavior', () => {
     expect((await app.inject({
       method: 'POST',
       url: `/api/v1/workspaces/${workspaceId}/projects`,
-      headers: unsafe(config, { cookie: staleCookie, 'x-openlinear-csrf': csrf }),
+      headers: unsafe(config, { cookie: staleCookie, 'x-basiclinear-csrf': csrf }),
       payload: { teamId, name: 'Restart proof', idempotencyKey: 'restart-proof' },
     })).statusCode).toBe(201);
     await app.close();
@@ -329,7 +329,7 @@ describe('CT-81 restart and migration behavior', () => {
   });
 
   it('reports corrupt files and rolls back a rejected schema migration', async () => {
-    const root = await temporaryDirectory('openlinear-migration');
+    const root = await temporaryDirectory('basiclinear-migration');
     const corrupt = join(root, 'corrupt.sqlite3');
     await writeFile(corrupt, 'not a SQLite database');
     expect(() => createDatabase(corrupt)).toThrow('database is corrupt');

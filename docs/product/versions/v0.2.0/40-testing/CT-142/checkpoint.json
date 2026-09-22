@@ -1,0 +1,46 @@
+{
+  "schema_version": "ct142-testing-checkpoint-v1",
+  "captured_at": "2026-08-26T04:03:09Z",
+  "stage": "testing",
+  "status": "yellow",
+  "issue": {
+    "identifier": "CT-142",
+    "stable_id": "9a320485-76d5-43c4-ab7f-d6a601f4583f",
+    "revision": 4,
+    "ct_status": "In Progress",
+    "milestone": "S4 — Testing"
+  },
+  "nonsecurity_acceptance": {
+    "status": "accepted",
+    "reviewer": "codex-testing-ct142-independent",
+    "session": "CT142-NONSECURITY-REVIEW-20260826",
+    "findings": {"P0": 0, "P1": 0, "P2": 0, "P3": 0},
+    "sealed_files": 513,
+    "selected_test_files": 19,
+    "selected_tests": 46,
+    "typecheck_workspaces": 11,
+    "build": "passed",
+    "evidence_validator": "passed"
+  },
+  "required_skip": {
+    "authorized": true,
+    "requirement_refs": ["R-204", "R-219"],
+    "acceptance_refs": ["P-T210"],
+    "reason": "Maintainer-directed security-test skip under the active Codex safety-policy boundary.",
+    "effect": "CT-142 remains yellow, In Progress, and not Done-eligible."
+  },
+  "outcomes": {
+    "O-201": "baseline_needed",
+    "O-202": "baseline_needed",
+    "O-203": "baseline_needed",
+    "O-204": "baseline_needed"
+  },
+  "control_tower": {
+    "authority": "project-local-v0.8",
+    "projection": "disabled_not_synced",
+    "update_request": ".control-tower/request-update-issue-142-yellow.json",
+    "backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-26T04-03-09-954Z-d4282848-1c1c-40f1-b39d-03b44f4ef95f.json",
+    "backup_semantic_sha256": "5259888cc85637307e2540185e82f05c67e1ed80842f93230844a8824d186440",
+    "backup_raw_sha256": "d61509f87f6d22d992b2af53d702254d95351ca0459e2e8b308be76743420dd9"
+  }
+}

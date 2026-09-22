@@ -1,0 +1,15 @@
+{
+  "auth": {
+    "providers": {
+      "anonymous": false,
+      "emailPassword": false,
+      "googleSignIn": {
+        "oAuthBrandDisplayName": "BasicLinear Development",
+        "supportEmail": "larksq@gmail.com",
+        "authorizedRedirectUris": [
+          "https://basiclinear-development.vercel.app"
+        ]
+      }
+    }
+  }
+}

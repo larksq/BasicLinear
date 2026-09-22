@@ -1,0 +1,1413 @@
+{
+  "stage": "outcome-review.monitoring",
+  "status": "awaiting_human",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled_not_synced",
+    "linear_used": false
+  },
+  "testing_handoff_ref": "docs/product/versions/v0.2.0/50-outcome-review/CT-14/testing-inputs.json",
+  "discovery_contract_ref": "docs/product/versions/v0.2.0/50-outcome-review/CT-14/discovery-inputs.json",
+  "discovery_outcomes": [
+    {
+      "id": "O-001",
+      "contract_version": "1.0",
+      "contract_sha256": "87362bff159a581ea2a738afbf969457798e5a9a43e085ea9a9234f932ff604d",
+      "kind": "outcome",
+      "subject": "target_user",
+      "target_segment_or_system": "the configured technical owner using the supported single workspace and single team",
+      "expected_change": "complete the bounded project, milestone, and issue workflow on a self-hosted release without facilitation or a critical error",
+      "metric": {
+        "name": "core workflow completion rate",
+        "definition": "share of ten independently reset canonical runs completing local-runtime entry, project and milestone planning, issue execution, saved view, context-preserving detail edit, and persisted readback",
+        "unit": "percent",
+        "direction": "increase",
+        "aggregation": "rate",
+        "population": "the configured technical owner",
+        "workload": "ten independently reset canonical seeded core workflow runs"
+      },
+      "baseline": {
+        "status": "measured",
+        "value": 0,
+        "period": {
+          "start": "2026-08-18",
+          "end": "2026-08-19"
+        },
+        "evidence_ref": "E-019"
+      },
+      "baseline_measurement_task_id": null,
+      "target": {
+        "operator": ">=",
+        "value": 90
+      },
+      "measurement": {
+        "method": "instrumented owner workflow runs with fixed task definitions, independent seed resets, and synthetic data",
+        "source": "versioned owner-run observation records and application audit evidence",
+        "owner": "Product and test owners",
+        "observation_window": {
+          "start": "2026-10-26",
+          "end": "2026-11-09",
+          "earliest_review_at": "2026-11-10"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-001",
+          "name": "unauthorized local data access count",
+          "metric_definition": "count of confirmed events where a remote listener, hostile browser origin, or unsafe local path exposes or mutates product data",
+          "source": "local-origin, listener, filesystem, import security tests and confirmed incident records",
+          "operator": "=",
+          "value": 0,
+          "unit": "count"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "core workflow completion rate after two bounded remediation rounds",
+        "operator": "<=",
+        "value": 70,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "CT-77's statistical ranking keeps the canonical workflow migration-critical across supported project types",
+        "the supported one-process local runtime and accepted personal workload remain stable"
+      ],
+      "evidence_refs": [
+        "E-001",
+        "E-002",
+        "E-003",
+        "E-004",
+        "E-005",
+        "E-019",
+        "E-020",
+        "E-021",
+        "E-022",
+        "E-023",
+        "E-024",
+        "E-025"
+      ],
+      "confidence": "medium",
+      "status": "ready_for_planning"
+    },
+    {
+      "id": "O-002",
+      "contract_version": "1.0",
+      "contract_sha256": "5d0f045b83987b7da5e5f1c861becc225085b6f42a30ebe0aa6d0eec7f86fd37",
+      "kind": "outcome",
+      "subject": "target_user",
+      "target_segment_or_system": "the configured technical owner completing matched core tasks in BasicLinear and the approved reference condition",
+      "expected_change": "complete the matched workflow with near-reference time and interaction cost",
+      "metric": {
+        "name": "median reference-relative task-time overhead",
+        "definition": "median across approved tasks of one hundred times BasicLinear median completion time divided by Linear median completion time minus one hundred",
+        "unit": "percent",
+        "direction": "decrease",
+        "aggregation": "median",
+        "population": "the configured owner across repeated task attempts in both matched conditions",
+        "workload": "eight approved project, milestone, issue, view, and detail tasks"
+      },
+      "baseline": {
+        "status": "measurement_required",
+        "value": null,
+        "period": null,
+        "evidence_ref": null
+      },
+      "baseline_measurement_task_id": "T-BASELINE-EFFICIENCY",
+      "target": {
+        "operator": "<=",
+        "value": 10
+      },
+      "measurement": {
+        "method": "matched-task timing study by the configured owner with fixed viewport, start and end rules, warm-up, repetitions, and interaction-count diagnostic",
+        "source": "CT-2 benchmark worksheet and corresponding BasicLinear test-run records",
+        "owner": "UX and test owners",
+        "observation_window": {
+          "start": "2026-09-05",
+          "end": "2026-10-20",
+          "earliest_review_at": "2026-10-21"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-002",
+          "name": "matched-task error rate",
+          "metric_definition": "share of measured task attempts ending in an unrecovered user or product error",
+          "source": "matched-task observation records",
+          "operator": "<=",
+          "value": 5,
+          "unit": "percent"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "median reference-relative task-time overhead after two bounded interaction revisions",
+        "operator": ">=",
+        "value": 30,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "matched task definitions remain behaviorally equivalent",
+        "approved reference evidence remains admissible after qualified clean-room review"
+      ],
+      "evidence_refs": [
+        "E-002",
+        "E-003",
+        "E-004",
+        "E-005",
+        "E-006",
+        "E-007",
+        "E-008",
+        "E-009",
+        "E-010"
+      ],
+      "confidence": "low",
+      "status": "baseline_needed"
+    },
+    {
+      "id": "O-003",
+      "contract_version": "1.0",
+      "contract_sha256": "4c41f523cf34e292c85ddeb8b0e954e4f47578d5a0fdeae54ab4aaff5b8c669d",
+      "kind": "outcome",
+      "subject": "protected_quality",
+      "target_segment_or_system": "approved clean-room project, milestone, issue-list, and issue-detail fixtures at pinned viewports",
+      "expected_change": "preserve the reference workflow's structural density and spatial hierarchy with independently designed identity",
+      "metric": {
+        "name": "worst-fixture structural screenshot difference",
+        "definition": "maximum approved-fixture share of comparable unmasked pixels differing beyond the per-pixel tolerance in the pinned environment",
+        "unit": "percent",
+        "direction": "decrease",
+        "aggregation": "custom",
+        "population": "approved synthetic clean-room fixtures",
+        "workload": "one deterministic capture per approved screen and viewport"
+      },
+      "baseline": {
+        "status": "measured",
+        "value": 100,
+        "period": {
+          "start": "2026-08-18",
+          "end": "2026-08-19"
+        },
+        "evidence_ref": "E-019"
+      },
+      "baseline_measurement_task_id": null,
+      "target": {
+        "operator": "<=",
+        "value": 3
+      },
+      "measurement": {
+        "method": "Playwright screenshot comparison with pinned browser, fonts, viewport, fixture, locale, time, and motion",
+        "source": "versioned clean-room visual baselines and CI comparison artifacts",
+        "owner": "Frontend and test owners",
+        "observation_window": {
+          "start": "2026-10-10",
+          "end": "2026-10-23",
+          "earliest_review_at": "2026-10-24"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-003",
+          "name": "serious automated accessibility violations",
+          "metric_definition": "count of serious or critical automated accessibility violations on core screens",
+          "source": "pinned axe browser test results",
+          "operator": "=",
+          "value": 0,
+          "unit": "count"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "worst-fixture structural screenshot difference after two bounded visual revisions",
+        "operator": ">=",
+        "value": 10,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "the pinned rendering environment is reproducible",
+        "clean-room masks exclude only branding and documented volatile regions"
+      ],
+      "evidence_refs": [
+        "E-002",
+        "E-003",
+        "E-004",
+        "E-005",
+        "E-015",
+        "E-018",
+        "E-019"
+      ],
+      "confidence": "medium",
+      "status": "ready_for_planning"
+    },
+    {
+      "id": "O-004",
+      "contract_version": "1.0",
+      "contract_sha256": "78aee6a2f909bc3f4387ba41edd640747a3c1304387e0298f9744cfcadfdebce",
+      "kind": "outcome",
+      "subject": "system",
+      "target_segment_or_system": "supported one-process local releases using the canonical seeded dataset and SQLite upgrade path",
+      "expected_change": "preserve all authoritative local records through export, SQLite backup, restore, upgrade, rollback, and compatible import",
+      "metric": {
+        "name": "authoritative data round-trip success rate",
+        "definition": "share of export-import and backup-restore trials whose canonical record and relation digest matches the source",
+        "unit": "percent",
+        "direction": "increase",
+        "aggregation": "rate",
+        "population": "supported operating-system, pinned-Node, and schema-version combinations in the release matrix",
+        "workload": "one canonical export-import and one backup-restore trial per supported combination"
+      },
+      "baseline": {
+        "status": "measured",
+        "value": 0,
+        "period": {
+          "start": "2026-08-18",
+          "end": "2026-08-19"
+        },
+        "evidence_ref": "E-019"
+      },
+      "baseline_measurement_task_id": null,
+      "target": {
+        "operator": ">=",
+        "value": 100
+      },
+      "measurement": {
+        "method": "canonical export digest comparison across export-import, backup-restore, restart, and accepted upgrade trials",
+        "source": "versioned recovery test artifacts and canonical digests",
+        "owner": "Operations and test owners",
+        "observation_window": {
+          "start": "2026-10-15",
+          "end": "2026-10-23",
+          "earliest_review_at": "2026-10-24"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-004",
+          "name": "critical data-loss defect count",
+          "metric_definition": "count of confirmed critical defects that irreversibly lose an authoritative record in a supported operation",
+          "source": "recovery tests and confirmed defect records",
+          "operator": "=",
+          "value": 0,
+          "unit": "count"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "authoritative data round-trip success rate on the release candidate",
+        "operator": "<",
+        "value": 100,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "canonical serialization covers every authoritative record and relation",
+        "supported runtime and schema combinations are frozen before review"
+      ],
+      "evidence_refs": [
+        "E-001",
+        "E-019",
+        "E-024",
+        "E-025",
+        "E-026"
+      ],
+      "confidence": "medium",
+      "status": "ready_for_planning"
+    },
+    {
+      "id": "O-005",
+      "contract_version": "1.0",
+      "contract_sha256": "6e6b5f819f23d1484769e081c326e813aa2033e43b8a7eef2f8837e1d22f75f6",
+      "kind": "outcome",
+      "subject": "protected_quality",
+      "target_segment_or_system": "complete public source, build output, local runtime artifact, documentation, assets, and release manifest",
+      "expected_change": "be publishable under an accepted open-source license with distinct identity, complete provenance, and no private reference material",
+      "metric": {
+        "name": "mandatory clean-room release audit pass rate",
+        "definition": "share of mandatory identity, license, attribution, asset provenance, private-evidence exclusion, and reproducible-build checks passing",
+        "unit": "percent",
+        "direction": "increase",
+        "aggregation": "rate",
+        "population": "mandatory checks in the accepted public-release audit matrix",
+        "workload": "one complete audit of the release candidate and its source distribution"
+      },
+      "baseline": {
+        "status": "measured",
+        "value": 0,
+        "period": {
+          "start": "2026-08-18",
+          "end": "2026-08-19"
+        },
+        "evidence_ref": "E-019"
+      },
+      "baseline_measurement_task_id": null,
+      "target": {
+        "operator": ">=",
+        "value": 100
+      },
+      "measurement": {
+        "method": "manifest, provenance, license, private-evidence, identity, and reproducible-build audit by assigned reviewers",
+        "source": "signed release audit matrix and build manifest",
+        "owner": "Product owner and qualified release reviewers",
+        "observation_window": {
+          "start": "2026-10-24",
+          "end": "2026-11-12",
+          "earliest_review_at": "2026-11-13"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-005",
+          "name": "private authenticated reference artifacts in distribution",
+          "metric_definition": "count of private authenticated screenshots, raw workspace records, tokens, or equivalent reference artifacts found in the public distribution",
+          "source": "release privacy scan and provenance audit",
+          "operator": "=",
+          "value": 0,
+          "unit": "count"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "mandatory clean-room release audit pass rate at the release decision",
+        "operator": "<",
+        "value": 100,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "CT-3 assigns qualified decision owners",
+        "the final public name and license are accepted before publication"
+      ],
+      "evidence_refs": [
+        "E-001",
+        "E-002",
+        "E-003",
+        "E-004",
+        "E-005",
+        "E-011",
+        "E-012",
+        "E-013",
+        "E-014",
+        "E-019",
+        "E-024"
+      ],
+      "confidence": "low",
+      "status": "ready_for_planning"
+    },
+    {
+      "id": "O-201",
+      "contract_version": "1.0",
+      "contract_sha256": "448f81b8cd3e89de28e4d6547cd946750e834c9040d1473d99dfe21f17505ee5",
+      "kind": "outcome",
+      "subject": "target_user",
+      "target_segment_or_system": "eligible first-time hosted workspace owners",
+      "expected_change": "complete the first useful planning action shortly after Google sign-in",
+      "metric": {
+        "name": "ten-minute hosted activation rate",
+        "definition": "share of eligible first-time owners who complete Google sign-in, workspace bootstrap, project creation, and first issue creation within ten minutes",
+        "unit": "percent",
+        "direction": "increase",
+        "aggregation": "rate",
+        "population": "first-time owner accounts with successful Google sign-in and no prior trial eligibility record",
+        "workload": "one initial hosted workspace bootstrap per eligible owner"
+      },
+      "baseline": {
+        "status": "measurement_required",
+        "value": null,
+        "period": null,
+        "evidence_ref": null
+      },
+      "baseline_measurement_task_id": "T-BASELINE-201",
+      "target": {
+        "operator": ">=",
+        "value": 70
+      },
+      "measurement": {
+        "method": "cohort query",
+        "source": "versioned product event ledger",
+        "owner": "Product Analytics",
+        "observation_window": {
+          "start": "2026-11-01",
+          "end": "2026-11-30",
+          "earliest_review_at": "2026-12-01"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-201",
+          "name": "owner bootstrap error rate",
+          "metric_definition": "share of eligible owner bootstrap attempts ending in an unhandled or unrecoverable error",
+          "source": "product event ledger and error telemetry",
+          "operator": "<=",
+          "value": 1,
+          "unit": "percent"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "ten-minute hosted activation rate",
+        "operator": "<",
+        "value": 35,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "Google sign-in availability is not the dominant failure mode",
+        "the provisional observation window follows a usable release"
+      ],
+      "evidence_refs": [
+        "E-201",
+        "E-204"
+      ],
+      "confidence": "low",
+      "status": "baseline_needed"
+    },
+    {
+      "id": "O-202",
+      "contract_version": "1.0",
+      "contract_sha256": "bcfe93fc4da8f188c0fbd47dbe9b06f8940711a1342ec954193ba1fe5ea61c4e",
+      "kind": "outcome",
+      "subject": "target_user",
+      "target_segment_or_system": "eligible trial workspaces with at least one sent invitation",
+      "expected_change": "complete a durable owner-to-member collaboration loop",
+      "metric": {
+        "name": "seven-day collaboration-loop completion rate",
+        "definition": "share of eligible workspaces with one accepted invite, one non-owner action on an assigned issue, and one non-owner comment within seven days of the first invite",
+        "unit": "percent",
+        "direction": "increase",
+        "aggregation": "rate",
+        "population": "trial workspaces sending their first valid member invitation",
+        "workload": "one first invitation and resulting assigned-work loop per workspace"
+      },
+      "baseline": {
+        "status": "measurement_required",
+        "value": null,
+        "period": null,
+        "evidence_ref": null
+      },
+      "baseline_measurement_task_id": "T-BASELINE-202",
+      "target": {
+        "operator": ">=",
+        "value": 60
+      },
+      "measurement": {
+        "method": "cohort query",
+        "source": "authoritative workspace and product event ledger",
+        "owner": "Product Analytics",
+        "observation_window": {
+          "start": "2026-11-01",
+          "end": "2026-12-15",
+          "earliest_review_at": "2026-12-23"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-202",
+          "name": "unwanted or duplicate accepted membership rate",
+          "metric_definition": "share of accepted memberships created without one valid intended invitation and matching signed-in email",
+          "source": "membership and invitation audit ledger",
+          "operator": "=",
+          "value": 0,
+          "unit": "percent"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "seven-day collaboration-loop completion rate",
+        "operator": "<",
+        "value": 25,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "one assignee and two roles cover the first collaboration loop",
+        "the provisional observation window follows a usable release"
+      ],
+      "evidence_refs": [
+        "E-201",
+        "E-205",
+        "E-206"
+      ],
+      "confidence": "low",
+      "status": "baseline_needed"
+    },
+    {
+      "id": "O-203",
+      "contract_version": "1.0",
+      "contract_sha256": "596a14ecd667db599039a6c28616f2adf141afebb7e5a584f84b0acbaddf2b88",
+      "kind": "outcome",
+      "subject": "target_user",
+      "target_segment_or_system": "eligible workspace owners whose 30-day Pro trial ends",
+      "expected_change": "choose and maintain a paid hosted subscription at the maintainer-confirmed price",
+      "metric": {
+        "name": "seven-day trial-to-paid conversion rate",
+        "definition": "share of eligible workspaces activating a paid monthly or annual subscription within seven days after the 30-day trial ends",
+        "unit": "percent",
+        "direction": "increase",
+        "aggregation": "rate",
+        "population": "non-abusive workspaces completing a first 30-day Pro trial during the window",
+        "workload": "one trial-expiry and subscription decision per eligible workspace"
+      },
+      "baseline": {
+        "status": "measurement_required",
+        "value": null,
+        "period": null,
+        "evidence_ref": null
+      },
+      "baseline_measurement_task_id": "T-BASELINE-203",
+      "target": {
+        "operator": ">=",
+        "value": 12
+      },
+      "measurement": {
+        "method": "billing cohort reconciliation",
+        "source": "server-owned entitlement ledger and verified Stripe readback",
+        "owner": "Product Analytics",
+        "observation_window": {
+          "start": "2026-12-01",
+          "end": "2027-01-31",
+          "earliest_review_at": "2027-02-08"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-203",
+          "name": "variable service cost share",
+          "metric_definition": "Firebase, payment processing, and directly attributable hosted variable costs divided by recognized subscription revenue for the cohort",
+          "source": "Firebase billing export and Stripe balance/revenue records",
+          "operator": "<=",
+          "value": 50,
+          "unit": "percent"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "seven-day trial-to-paid conversion rate",
+        "operator": "<",
+        "value": 5,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "USD before applicable taxes is acceptable for launch",
+        "one-user Free fallback avoids coercive data loss",
+        "the annual discount remains maintainer-approved"
+      ],
+      "evidence_refs": [
+        "E-201",
+        "E-207",
+        "E-208",
+        "E-209"
+      ],
+      "confidence": "low",
+      "status": "baseline_needed"
+    },
+    {
+      "id": "O-204",
+      "contract_version": "1.0",
+      "contract_sha256": "167bfa36eb6b8a58424b9cb417db9f1fa9aed3a7cce864f519ea5be5a8f1db1e",
+      "kind": "outcome",
+      "subject": "system",
+      "target_segment_or_system": "versioned BasicLinear REST and MCP product-management surfaces",
+      "expected_change": "complete canonical PM operations correctly and safely through either automation surface",
+      "metric": {
+        "name": "canonical automation task success rate",
+        "definition": "share of canonical project, milestone, issue, assignment, comment, membership, and read-only billing tasks returning the expected durable state through both REST and MCP without manual repair",
+        "unit": "percent",
+        "direction": "increase",
+        "aggregation": "rate",
+        "population": "approved canonical automation task/environment matrix",
+        "workload": "one deterministic run per task through REST and MCP for owner and member roles"
+      },
+      "baseline": {
+        "status": "measurement_required",
+        "value": null,
+        "period": null,
+        "evidence_ref": null
+      },
+      "baseline_measurement_task_id": "T-BASELINE-204",
+      "target": {
+        "operator": ">=",
+        "value": 95
+      },
+      "measurement": {
+        "method": "deterministic UAT matrix",
+        "source": "API/MCP structured results, audit ledger, and authoritative Firestore readback",
+        "owner": "Quality Lead",
+        "observation_window": {
+          "start": "2026-10-01",
+          "end": "2026-10-31",
+          "earliest_review_at": "2026-11-01"
+        }
+      },
+      "guardrails": [
+        {
+          "id": "G-204",
+          "name": "successful cross-workspace unauthorized operations",
+          "metric_definition": "count of unauthorized cross-workspace reads or mutations that return protected data or change protected state",
+          "source": "cross-workspace security suite and audit ledger",
+          "operator": "=",
+          "value": 0,
+          "unit": "count"
+        }
+      ],
+      "invalidation_threshold": {
+        "metric_definition": "canonical automation task success rate",
+        "operator": "<",
+        "value": 80,
+        "unit": "percent"
+      },
+      "assumptions": [
+        "scoped personal tokens pass T-SECURITY-MCP",
+        "the provisional observation window follows an implementation candidate"
+      ],
+      "evidence_refs": [
+        "E-201",
+        "E-210",
+        "E-211",
+        "E-212",
+        "E-213"
+      ],
+      "confidence": "low",
+      "status": "baseline_needed"
+    }
+  ],
+  "reviews": [
+    {
+      "outcome_id": "O-001",
+      "contract_sha256": "87362bff159a581ea2a738afbf969457798e5a9a43e085ea9a9234f932ff604d",
+      "original_contract": {
+        "id": "O-001",
+        "contract_version": "1.0",
+        "contract_sha256": "87362bff159a581ea2a738afbf969457798e5a9a43e085ea9a9234f932ff604d",
+        "kind": "outcome",
+        "subject": "target_user",
+        "target_segment_or_system": "the configured technical owner using the supported single workspace and single team",
+        "expected_change": "complete the bounded project, milestone, and issue workflow on a self-hosted release without facilitation or a critical error",
+        "metric": {
+          "name": "core workflow completion rate",
+          "definition": "share of ten independently reset canonical runs completing local-runtime entry, project and milestone planning, issue execution, saved view, context-preserving detail edit, and persisted readback",
+          "unit": "percent",
+          "direction": "increase",
+          "aggregation": "rate",
+          "population": "the configured technical owner",
+          "workload": "ten independently reset canonical seeded core workflow runs"
+        },
+        "baseline": {
+          "status": "measured",
+          "value": 0,
+          "period": {
+            "start": "2026-08-18",
+            "end": "2026-08-19"
+          },
+          "evidence_ref": "E-019"
+        },
+        "baseline_measurement_task_id": null,
+        "target": {
+          "operator": ">=",
+          "value": 90
+        },
+        "measurement": {
+          "method": "instrumented owner workflow runs with fixed task definitions, independent seed resets, and synthetic data",
+          "source": "versioned owner-run observation records and application audit evidence",
+          "owner": "Product and test owners",
+          "observation_window": {
+            "start": "2026-10-26",
+            "end": "2026-11-09",
+            "earliest_review_at": "2026-11-10"
+          }
+        },
+        "guardrails": [
+          {
+            "id": "G-001",
+            "name": "unauthorized local data access count",
+            "metric_definition": "count of confirmed events where a remote listener, hostile browser origin, or unsafe local path exposes or mutates product data",
+            "source": "local-origin, listener, filesystem, import security tests and confirmed incident records",
+            "operator": "=",
+            "value": 0,
+            "unit": "count"
+          }
+        ],
+        "invalidation_threshold": {
+          "metric_definition": "core workflow completion rate after two bounded remediation rounds",
+          "operator": "<=",
+          "value": 70,
+          "unit": "percent"
+        },
+        "assumptions": [
+          "CT-77's statistical ranking keeps the canonical workflow migration-critical across supported project types",
+          "the supported one-process local runtime and accepted personal workload remain stable"
+        ],
+        "evidence_refs": [
+          "E-001",
+          "E-002",
+          "E-003",
+          "E-004",
+          "E-005",
+          "E-019",
+          "E-020",
+          "E-021",
+          "E-022",
+          "E-023",
+          "E-024",
+          "E-025"
+        ],
+        "confidence": "medium",
+        "status": "ready_for_planning"
+      },
+      "window_complete": false,
+      "baseline_direction_met": false,
+      "target_met": false,
+      "guardrail_results": [],
+      "invalidation_triggered": false,
+      "status": "pending",
+      "evidence_refs": []
+    },
+    {
+      "outcome_id": "O-002",
+      "contract_sha256": "5d0f045b83987b7da5e5f1c861becc225085b6f42a30ebe0aa6d0eec7f86fd37",
+      "original_contract": {
+        "id": "O-002",
+        "contract_version": "1.0",
+        "contract_sha256": "5d0f045b83987b7da5e5f1c861becc225085b6f42a30ebe0aa6d0eec7f86fd37",
+        "kind": "outcome",
+        "subject": "target_user",
+        "target_segment_or_system": "the configured technical owner completing matched core tasks in BasicLinear and the approved reference condition",
+        "expected_change": "complete the matched workflow with near-reference time and interaction cost",
+        "metric": {
+          "name": "median reference-relative task-time overhead",
+          "definition": "median across approved tasks of one hundred times BasicLinear median completion time divided by Linear median completion time minus one hundred",
+          "unit": "percent",
+          "direction": "decrease",
+          "aggregation": "median",
+          "population": "the configured owner across repeated task attempts in both matched conditions",
+          "workload": "eight approved project, milestone, issue, view, and detail tasks"
+        },
+        "baseline": {
+          "status": "measurement_required",
+          "value": null,
+          "period": null,
+          "evidence_ref": null
+        },
+        "baseline_measurement_task_id": "T-BASELINE-EFFICIENCY",
+        "target": {
+          "operator": "<=",
+          "value": 10
+        },
+        "measurement": {
+          "method": "matched-task timing study by the configured owner with fixed viewport, start and end rules, warm-up, repetitions, and interaction-count diagnostic",
+          "source": "CT-2 benchmark worksheet and corresponding BasicLinear test-run records",
+          "owner": "UX and test owners",
+          "observation_window": {
+            "start": "2026-09-05",
+            "end": "2026-10-20",
+            "earliest_review_at": "2026-10-21"
+          }
+        },
+        "guardrails": [
+          {
+            "id": "G-002",
+            "name": "matched-task error rate",
+            "metric_definition": "share of measured task attempts ending in an unrecovered user or product error",
+            "source": "matched-task observation records",
+            "operator": "<=",
+            "value": 5,
+            "unit": "percent"
+          }
+        ],
+        "invalidation_threshold": {
+          "metric_definition": "median reference-relative task-time overhead after two bounded interaction revisions",
+          "operator": ">=",
+          "value": 30,
+          "unit": "percent"
+        },
+        "assumptions": [
+          "matched task definitions remain behaviorally equivalent",
+          "approved reference evidence remains admissible after qualified clean-room review"
+        ],
+        "evidence_refs": [
+          "E-002",
+          "E-003",
+          "E-004",
+          "E-005",
+          "E-006",
+          "E-007",
+          "E-008",
+          "E-009",
+          "E-010"
+        ],
+        "confidence": "low",
+        "status": "baseline_needed"
+      },
+      "window_complete": false,
+      "baseline_direction_met": false,
+      "target_met": false,
+      "guardrail_results": [],
+      "invalidation_triggered": false,
+      "status": "pending",
+      "evidence_refs": []
+    },
+    {
+      "outcome_id": "O-003",
+      "contract_sha256": "4c41f523cf34e292c85ddeb8b0e954e4f47578d5a0fdeae54ab4aaff5b8c669d",
+      "original_contract": {
+        "id": "O-003",
+        "contract_version": "1.0",
+        "contract_sha256": "4c41f523cf34e292c85ddeb8b0e954e4f47578d5a0fdeae54ab4aaff5b8c669d",
+        "kind": "outcome",
+        "subject": "protected_quality",
+        "target_segment_or_system": "approved clean-room project, milestone, issue-list, and issue-detail fixtures at pinned viewports",
+        "expected_change": "preserve the reference workflow's structural density and spatial hierarchy with independently designed identity",
+        "metric": {
+          "name": "worst-fixture structural screenshot difference",
+          "definition": "maximum approved-fixture share of comparable unmasked pixels differing beyond the per-pixel tolerance in the pinned environment",
+          "unit": "percent",
+          "direction": "decrease",
+          "aggregation": "custom",
+          "population": "approved synthetic clean-room fixtures",
+          "workload": "one deterministic capture per approved screen and viewport"
+        },
+        "baseline": {
+          "status": "measured",
+          "value": 100,
+          "period": {
+            "start": "2026-08-18",
+            "end": "2026-08-19"
+          },
+          "evidence_ref": "E-019"
+        },
+        "baseline_measurement_task_id": null,
+        "target": {
+          "operator": "<=",
+          "value": 3
+        },
+        "measurement": {
+          "method": "Playwright screenshot comparison with pinned browser, fonts, viewport, fixture, locale, time, and motion",
+          "source": "versioned clean-room visual baselines and CI comparison artifacts",
+          "owner": "Frontend and test owners",
+          "observation_window": {
+            "start": "2026-10-10",
+            "end": "2026-10-23",
+            "earliest_review_at": "2026-10-24"
+          }
+        },
+        "guardrails": [
+          {
+            "id": "G-003",
+            "name": "serious automated accessibility violations",
+            "metric_definition": "count of serious or critical automated accessibility violations on core screens",
+            "source": "pinned axe browser test results",
+            "operator": "=",
+            "value": 0,
+            "unit": "count"
+          }
+        ],
+        "invalidation_threshold": {
+          "metric_definition": "worst-fixture structural screenshot difference after two bounded visual revisions",
+          "operator": ">=",
+          "value": 10,
+          "unit": "percent"
+        },
+        "assumptions": [
+          "the pinned rendering environment is reproducible",
+          "clean-room masks exclude only branding and documented volatile regions"
+        ],
+        "evidence_refs": [
+          "E-002",
+          "E-003",
+          "E-004",
+          "E-005",
+          "E-015",
+          "E-018",
+          "E-019"
+        ],
+        "confidence": "medium",
+        "status": "ready_for_planning"
+      },
+      "window_complete": false,
+      "baseline_direction_met": false,
+      "target_met": false,
+      "guardrail_results": [],
+      "invalidation_triggered": false,
+      "status": "pending",
+      "evidence_refs": []
+    },
+    {
+      "outcome_id": "O-004",
+      "contract_sha256": "78aee6a2f909bc3f4387ba41edd640747a3c1304387e0298f9744cfcadfdebce",
+      "original_contract": {
+        "id": "O-004",
+        "contract_version": "1.0",
+        "contract_sha256": "78aee6a2f909bc3f4387ba41edd640747a3c1304387e0298f9744cfcadfdebce",
+        "kind": "outcome",
+        "subject": "system",
+        "target_segment_or_system": "supported one-process local releases using the canonical seeded dataset and SQLite upgrade path",
+        "expected_change": "preserve all authoritative local records through export, SQLite backup, restore, upgrade, rollback, and compatible import",
+        "metric": {
+          "name": "authoritative data round-trip success rate",
+          "definition": "share of export-import and backup-restore trials whose canonical record and relation digest matches the source",
+          "unit": "percent",
+          "direction": "increase",
+          "aggregation": "rate",
+          "population": "supported operating-system, pinned-Node, and schema-version combinations in the release matrix",
+          "workload": "one canonical export-import and one backup-restore trial per supported combination"
+        },
+        "baseline": {
+          "status": "measured",
+          "value": 0,
+          "period": {
+            "start": "2026-08-18",
+            "end": "2026-08-19"
+          },
+          "evidence_ref": "E-019"
+        },
+        "baseline_measurement_task_id": null,
+        "target": {
+          "operator": ">=",
+          "value": 100
+        },
+        "measurement": {
+          "method": "canonical export digest comparison across export-import, backup-restore, restart, and accepted upgrade trials",
+          "source": "versioned recovery test artifacts and canonical digests",
+          "owner": "Operations and test owners",
+          "observation_window": {
+            "start": "2026-10-15",
+            "end": "2026-10-23",
+            "earliest_review_at": "2026-10-24"
+          }
+        },
+        "guardrails": [
+          {
+            "id": "G-004",
+            "name": "critical data-loss defect count",
+            "metric_definition": "count of confirmed critical defects that irreversibly lose an authoritative record in a supported operation",
+            "source": "recovery tests and confirmed defect records",
+            "operator": "=",
+            "value": 0,
+            "unit": "count"
+          }
+        ],
+        "invalidation_threshold": {
+          "metric_definition": "authoritative data round-trip success rate on the release candidate",
+          "operator": "<",
+          "value": 100,
+          "unit": "percent"
+        },
+        "assumptions": [
+          "canonical serialization covers every authoritative record and relation",
+          "supported runtime and schema combinations are frozen before review"
+        ],
+        "evidence_refs": [
+          "E-001",
+          "E-019",
+          "E-024",
+          "E-025",
+          "E-026"
+        ],
+        "confidence": "medium",
+        "status": "ready_for_planning"
+      },
+      "window_complete": false,
+      "baseline_direction_met": false,
+      "target_met": false,
+      "guardrail_results": [],
+      "invalidation_triggered": false,
+      "status": "pending",
+      "evidence_refs": []
+    },
+    {
+      "outcome_id": "O-005",
+      "contract_sha256": "6e6b5f819f23d1484769e081c326e813aa2033e43b8a7eef2f8837e1d22f75f6",
+      "original_contract": {
+        "id": "O-005",
+        "contract_version": "1.0",
+        "contract_sha256": "6e6b5f819f23d1484769e081c326e813aa2033e43b8a7eef2f8837e1d22f75f6",
+        "kind": "outcome",
+        "subject": "protected_quality",
+        "target_segment_or_system": "complete public source, build output, local runtime artifact, documentation, assets, and release manifest",
+        "expected_change": "be publishable under an accepted open-source license with distinct identity, complete provenance, and no private reference material",
+        "metric": {
+          "name": "mandatory clean-room release audit pass rate",
+          "definition": "share of mandatory identity, license, attribution, asset provenance, private-evidence exclusion, and reproducible-build checks passing",
+          "unit": "percent",
+          "direction": "increase",
+          "aggregation": "rate",
+          "population": "mandatory checks in the accepted public-release audit matrix",
+          "workload": "one complete audit of the release candidate and its source distribution"
+        },
+        "baseline": {
+          "status": "measured",
+          "value": 0,
+          "period": {
+            "start": "2026-08-18",
+            "end": "2026-08-19"
+          },
+          "evidence_ref": "E-019"
+        },
+        "baseline_measurement_task_id": null,
+        "target": {
+          "operator": ">=",
+          "value": 100
+        },
+        "measurement": {
+          "method": "manifest, provenance, license, private-evidence, identity, and reproducible-build audit by assigned reviewers",
+          "source": "signed release audit matrix and build manifest",
+          "owner": "Product owner and qualified release reviewers",
+          "observation_window": {
+            "start": "2026-10-24",
+            "end": "2026-11-12",
+            "earliest_review_at": "2026-11-13"
+          }
+        },
+        "guardrails": [
+          {
+            "id": "G-005",
+            "name": "private authenticated reference artifacts in distribution",
+            "metric_definition": "count of private authenticated screenshots, raw workspace records, tokens, or equivalent reference artifacts found in the public distribution",
+            "source": "release privacy scan and provenance audit",
+            "operator": "=",
+            "value": 0,
+            "unit": "count"
+          }
+        ],
+        "invalidation_threshold": {
+          "metric_definition": "mandatory clean-room release audit pass rate at the release decision",
+          "operator": "<",
+          "value": 100,
+          "unit": "percent"
+        },
+        "assumptions": [
+          "CT-3 assigns qualified decision owners",
+          "the final public name and license are accepted before publication"
+        ],
+        "evidence_refs": [
+          "E-001",
+          "E-002",
+          "E-003",
+          "E-004",
+          "E-005",
+          "E-011",
+          "E-012",
+          "E-013",
+          "E-014",
+          "E-019",
+          "E-024"
+        ],
+        "confidence": "low",
+        "status": "ready_for_planning"
+      },
+      "window_complete": false,
+      "baseline_direction_met": false,
+      "target_met": false,
+      "guardrail_results": [],
+      "invalidation_triggered": false,
+      "status": "pending",
+      "evidence_refs": []
+    },
+    {
+      "outcome_id": "O-201",
+      "contract_sha256": "448f81b8cd3e89de28e4d6547cd946750e834c9040d1473d99dfe21f17505ee5",
+      "original_contract": {
+        "id": "O-201",
+        "contract_version": "1.0",
+        "contract_sha256": "448f81b8cd3e89de28e4d6547cd946750e834c9040d1473d99dfe21f17505ee5",
+        "kind": "outcome",
+        "subject": "target_user",
+        "target_segment_or_system": "eligible first-time hosted workspace owners",
+        "expected_change": "complete the first useful planning action shortly after Google sign-in",
+        "metric": {
+          "name": "ten-minute hosted activation rate",
+          "definition": "share of eligible first-time owners who complete Google sign-in, workspace bootstrap, project creation, and first issue creation within ten minutes",
+          "unit": "percent",
+          "direction": "increase",
+          "aggregation": "rate",
+          "population": "first-time owner accounts with successful Google sign-in and no prior trial eligibility record",
+          "workload": "one initial hosted workspace bootstrap per eligible owner"
+        },
+        "baseline": {
+          "status": "measurement_required",
+          "value": null,
+          "period": null,
+          "evidence_ref": null
+        },
+        "baseline_measurement_task_id": "T-BASELINE-201",
+        "target": {
+          "operator": ">=",
+          "value": 70
+        },
+        "measurement": {
+          "method": "cohort query",
+          "source": "versioned product event ledger",
+          "owner": "Product Analytics",
+          "observation_window": {
+            "start": "2026-11-01",
+            "end": "2026-11-30",
+            "earliest_review_at": "2026-12-01"
+          }
+        },
+        "guardrails": [
+          {
+            "id": "G-201",
+            "name": "owner bootstrap error rate",
+            "metric_definition": "share of eligible owner bootstrap attempts ending in an unhandled or unrecoverable error",
+            "source": "product event ledger and error telemetry",
+            "operator": "<=",
+            "value": 1,
+            "unit": "percent"
+          }
+        ],
+        "invalidation_threshold": {
+          "metric_definition": "ten-minute hosted activation rate",
+          "operator": "<",
+          "value": 35,
+          "unit": "percent"
+        },
+        "assumptions": [
+          "Google sign-in availability is not the dominant failure mode",
+          "the provisional observation window follows a usable release"
+        ],
+        "evidence_refs": [
+          "E-201",
+          "E-204"
+        ],
+        "confidence": "low",
+        "status": "baseline_needed"
+      },
+      "window_complete": false,
+      "baseline_direction_met": false,
+      "target_met": false,
+      "guardrail_results": [],
+      "invalidation_triggered": false,
+      "status": "pending",
+      "evidence_refs": []
+    },
+    {
+      "outcome_id": "O-202",
+      "contract_sha256": "bcfe93fc4da8f188c0fbd47dbe9b06f8940711a1342ec954193ba1fe5ea61c4e",
+      "original_contract": {
+        "id": "O-202",
+        "contract_version": "1.0",
+        "contract_sha256": "bcfe93fc4da8f188c0fbd47dbe9b06f8940711a1342ec954193ba1fe5ea61c4e",
+        "kind": "outcome",
+        "subject": "target_user",
+        "target_segment_or_system": "eligible trial workspaces with at least one sent invitation",
+        "expected_change": "complete a durable owner-to-member collaboration loop",
+        "metric": {
+          "name": "seven-day collaboration-loop completion rate",
+          "definition": "share of eligible workspaces with one accepted invite, one non-owner action on an assigned issue, and one non-owner comment within seven days of the first invite",
+          "unit": "percent",
+          "direction": "increase",
+          "aggregation": "rate",
+          "population": "trial workspaces sending their first valid member invitation",
+          "workload": "one first invitation and resulting assigned-work loop per workspace"
+        },
+        "baseline": {
+          "status": "measurement_required",
+          "value": null,
+          "period": null,
+          "evidence_ref": null
+        },
+        "baseline_measurement_task_id": "T-BASELINE-202",
+        "target": {
+          "operator": ">=",
+          "value": 60
+        },
+        "measurement": {
+          "method": "cohort query",
+          "source": "authoritative workspace and product event ledger",
+          "owner": "Product Analytics",
+          "observation_window": {
+            "start": "2026-11-01",
+            "end": "2026-12-15",
+            "earliest_review_at": "2026-12-23"
+          }
+        },
+        "guardrails": [
+          {
+            "id": "G-202",
+            "name": "unwanted or duplicate accepted membership rate",
+            "metric_definition": "share of accepted memberships created without one valid intended invitation and matching signed-in email",
+            "source": "membership and invitation audit ledger",
+            "operator": "=",
+            "value": 0,
+            "unit": "percent"
+          }
+        ],
+        "invalidation_threshold": {
+          "metric_definition": "seven-day collaboration-loop completion rate",
+          "operator": "<",
+          "value": 25,
+          "unit": "percent"
+        },
+        "assumptions": [
+          "one assignee and two roles cover the first collaboration loop",
+          "the provisional observation window follows a usable release"
+        ],
+        "evidence_refs": [
+          "E-201",
+          "E-205",
+          "E-206"
+        ],
+        "confidence": "low",
+        "status": "baseline_needed"
+      },
+      "window_complete": false,
+      "baseline_direction_met": false,
+      "target_met": false,
+      "guardrail_results": [],
+      "invalidation_triggered": false,
+      "status": "pending",
+      "evidence_refs": []
+    },
+    {
+      "outcome_id": "O-203",
+      "contract_sha256": "596a14ecd667db599039a6c28616f2adf141afebb7e5a584f84b0acbaddf2b88",
+      "original_contract": {
+        "id": "O-203",
+        "contract_version": "1.0",
+        "contract_sha256": "596a14ecd667db599039a6c28616f2adf141afebb7e5a584f84b0acbaddf2b88",
+        "kind": "outcome",
+        "subject": "target_user",
+        "target_segment_or_system": "eligible workspace owners whose 30-day Pro trial ends",
+        "expected_change": "choose and maintain a paid hosted subscription at the maintainer-confirmed price",
+        "metric": {
+          "name": "seven-day trial-to-paid conversion rate",
+          "definition": "share of eligible workspaces activating a paid monthly or annual subscription within seven days after the 30-day trial ends",
+          "unit": "percent",
+          "direction": "increase",
+          "aggregation": "rate",
+          "population": "non-abusive workspaces completing a first 30-day Pro trial during the window",
+          "workload": "one trial-expiry and subscription decision per eligible workspace"
+        },
+        "baseline": {
+          "status": "measurement_required",
+          "value": null,
+          "period": null,
+          "evidence_ref": null
+        },
+        "baseline_measurement_task_id": "T-BASELINE-203",
+        "target": {
+          "operator": ">=",
+          "value": 12
+        },
+        "measurement": {
+          "method": "billing cohort reconciliation",
+          "source": "server-owned entitlement ledger and verified Stripe readback",
+          "owner": "Product Analytics",
+          "observation_window": {
+            "start": "2026-12-01",
+            "end": "2027-01-31",
+            "earliest_review_at": "2027-02-08"
+          }
+        },
+        "guardrails": [
+          {
+            "id": "G-203",
+            "name": "variable service cost share",
+            "metric_definition": "Firebase, payment processing, and directly attributable hosted variable costs divided by recognized subscription revenue for the cohort",
+            "source": "Firebase billing export and Stripe balance/revenue records",
+            "operator": "<=",
+            "value": 50,
+            "unit": "percent"
+          }
+        ],
+        "invalidation_threshold": {
+          "metric_definition": "seven-day trial-to-paid conversion rate",
+          "operator": "<",
+          "value": 5,
+          "unit": "percent"
+        },
+        "assumptions": [
+          "USD before applicable taxes is acceptable for launch",
+          "one-user Free fallback avoids coercive data loss",
+          "the annual discount remains maintainer-approved"
+        ],
+        "evidence_refs": [
+          "E-201",
+          "E-207",
+          "E-208",
+          "E-209"
+        ],
+        "confidence": "low",
+        "status": "baseline_needed"
+      },
+      "window_complete": false,
+      "baseline_direction_met": false,
+      "target_met": false,
+      "guardrail_results": [],
+      "invalidation_triggered": false,
+      "status": "pending",
+      "evidence_refs": []
+    },
+    {
+      "outcome_id": "O-204",
+      "contract_sha256": "167bfa36eb6b8a58424b9cb417db9f1fa9aed3a7cce864f519ea5be5a8f1db1e",
+      "original_contract": {
+        "id": "O-204",
+        "contract_version": "1.0",
+        "contract_sha256": "167bfa36eb6b8a58424b9cb417db9f1fa9aed3a7cce864f519ea5be5a8f1db1e",
+        "kind": "outcome",
+        "subject": "system",
+        "target_segment_or_system": "versioned BasicLinear REST and MCP product-management surfaces",
+        "expected_change": "complete canonical PM operations correctly and safely through either automation surface",
+        "metric": {
+          "name": "canonical automation task success rate",
+          "definition": "share of canonical project, milestone, issue, assignment, comment, membership, and read-only billing tasks returning the expected durable state through both REST and MCP without manual repair",
+          "unit": "percent",
+          "direction": "increase",
+          "aggregation": "rate",
+          "population": "approved canonical automation task/environment matrix",
+          "workload": "one deterministic run per task through REST and MCP for owner and member roles"
+        },
+        "baseline": {
+          "status": "measurement_required",
+          "value": null,
+          "period": null,
+          "evidence_ref": null
+        },
+        "baseline_measurement_task_id": "T-BASELINE-204",
+        "target": {
+          "operator": ">=",
+          "value": 95
+        },
+        "measurement": {
+          "method": "deterministic UAT matrix",
+          "source": "API/MCP structured results, audit ledger, and authoritative Firestore readback",
+          "owner": "Quality Lead",
+          "observation_window": {
+            "start": "2026-10-01",
+            "end": "2026-10-31",
+            "earliest_review_at": "2026-11-01"
+          }
+        },
+        "guardrails": [
+          {
+            "id": "G-204",
+            "name": "successful cross-workspace unauthorized operations",
+            "metric_definition": "count of unauthorized cross-workspace reads or mutations that return protected data or change protected state",
+            "source": "cross-workspace security suite and audit ledger",
+            "operator": "=",
+            "value": 0,
+            "unit": "count"
+          }
+        ],
+        "invalidation_threshold": {
+          "metric_definition": "canonical automation task success rate",
+          "operator": "<",
+          "value": 80,
+          "unit": "percent"
+        },
+        "assumptions": [
+          "scoped personal tokens pass T-SECURITY-MCP",
+          "the provisional observation window follows an implementation candidate"
+        ],
+        "evidence_refs": [
+          "E-201",
+          "E-210",
+          "E-211",
+          "E-212",
+          "E-213"
+        ],
+        "confidence": "low",
+        "status": "baseline_needed"
+      },
+      "window_complete": false,
+      "baseline_direction_met": false,
+      "target_met": false,
+      "guardrail_results": [],
+      "invalidation_triggered": false,
+      "status": "pending",
+      "evidence_refs": []
+    }
+  ],
+  "human_decision": {
+    "required": true,
+    "status": "pending"
+  }
+}

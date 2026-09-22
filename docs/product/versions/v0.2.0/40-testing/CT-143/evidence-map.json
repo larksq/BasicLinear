@@ -1,0 +1,67 @@
+{
+  "schema_version": "ct143-test-evidence-v1",
+  "stage": "testing.evidence-map",
+  "status": "awaiting_human",
+  "operating_profile": "project-local-v0.8",
+  "authority": {
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "provider_projection": "disabled_not_synced",
+    "linear_used": false
+  },
+  "implementation_handoff_ref": "docs/product/versions/v0.2.0/30-implementation/CT-143/handoff.json",
+  "implementation_actor_ids": ["codex-primary"],
+  "implementation_session_ids": ["CT143-IMPLEMENTATION-20260827"],
+  "independent_acceptance": {
+    "status": "pending",
+    "independent": true
+  },
+  "required_surfaces": ["automated", "manual", "uat", "regression"],
+  "issues": [
+    {
+      "issue_id": "CT-143",
+      "requirement_refs": ["CT143-R1", "CT143-R2", "CT143-R3", "CT143-R4", "CT143-R5", "CT143-R6", "CT143-R7"],
+      "acceptance_refs": ["CT143-AC1", "CT143-AC2", "CT143-AC3", "CT143-AC4", "CT143-AC5", "CT143-AC6", "CT143-AC7"]
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "CT143-POSITIVE-AUTOMATED",
+      "surface": "automated",
+      "status": "passed",
+      "issue_refs": ["CT-143"],
+      "requirement_refs": ["CT143-R1", "CT143-R2", "CT143-R3", "CT143-R4", "CT143-R5", "CT143-R7"],
+      "acceptance_refs": ["CT143-AC1", "CT143-AC2", "CT143-AC3", "CT143-AC4", "CT143-AC5", "CT143-AC7"],
+      "evidence_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/automated-receipt.json"
+    },
+    {
+      "check_id": "CT143-CHROME-MANUAL",
+      "surface": "manual",
+      "status": "passed",
+      "issue_refs": ["CT-143"],
+      "requirement_refs": ["CT143-R1", "CT143-R2", "CT143-R3", "CT143-R4", "CT143-R5", "CT143-R6", "CT143-R7"],
+      "acceptance_refs": ["CT143-AC1", "CT143-AC2", "CT143-AC3", "CT143-AC4", "CT143-AC5", "CT143-AC6", "CT143-AC7"],
+      "evidence_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/manual-observation.json"
+    },
+    {
+      "check_id": "CT143-POSITIVE-REGRESSION",
+      "surface": "regression",
+      "status": "passed",
+      "issue_refs": ["CT-143"],
+      "requirement_refs": ["CT143-R1", "CT143-R2", "CT143-R3", "CT143-R4", "CT143-R5", "CT143-R7"],
+      "acceptance_refs": ["CT143-AC1", "CT143-AC2", "CT143-AC3", "CT143-AC4", "CT143-AC5", "CT143-AC7"],
+      "evidence_ref": "docs/product/versions/v0.2.0/40-testing/CT-143/automated-receipt.json"
+    },
+    {
+      "check_id": "CT143-INDEPENDENT-UAT",
+      "surface": "uat",
+      "status": "blocked",
+      "issue_refs": ["CT-143"],
+      "requirement_refs": ["CT143-R1", "CT143-R2", "CT143-R3", "CT143-R4", "CT143-R5", "CT143-R6", "CT143-R7"],
+      "acceptance_refs": ["CT143-AC1", "CT143-AC2", "CT143-AC3", "CT143-AC4", "CT143-AC5", "CT143-AC6", "CT143-AC7"],
+      "blocker_ref": "CT-143#separately-authorized-independent-review"
+    }
+  ],
+  "bug_loops": [],
+  "outcome_status": "pending",
+  "blockers": []
+}

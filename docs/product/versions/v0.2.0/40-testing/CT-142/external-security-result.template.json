@@ -1,0 +1,61 @@
+{
+  "schema_version": "ct142-external-security-result-v1",
+  "request_id": "CT142-OPTION-A-EXTERNAL-SECURITY-20260827",
+  "request_sha256": null,
+  "reviewer": {
+    "name": null,
+    "organization": null,
+    "role": null,
+    "qualification": null
+  },
+  "authorization": {
+    "authorized_by": null,
+    "authorization_ref": null,
+    "environment": null,
+    "target_digest": null,
+    "started_at": null,
+    "completed_at": null,
+    "production_side_effects_authorized": false,
+    "financial_provider_calls_authorized": false
+  },
+  "decision": null,
+  "scope_dispositions": [
+    {"id": "tenant_isolation", "status": null, "evidence_refs": [], "notes": null},
+    {"id": "owner_member_role_authorization", "status": null, "evidence_refs": [], "notes": null},
+    {"id": "invitation_and_membership_lifecycle", "status": null, "evidence_refs": [], "notes": null},
+    {"id": "personal_token_and_oauth_token_lifecycle", "status": null, "evidence_refs": [], "notes": null},
+    {"id": "webhook_authentication_and_replay", "status": null, "evidence_refs": [], "notes": null},
+    {"id": "origin_and_cross_site_request_boundary", "status": null, "evidence_refs": [], "notes": null},
+    {"id": "replay_and_enumeration_resistance", "status": null, "evidence_refs": [], "notes": null},
+    {"id": "paid_to_free_downgrade_authorization", "status": null, "evidence_refs": [], "notes": null},
+    {"id": "firestore_authorization_boundary", "status": null, "evidence_refs": [], "notes": null}
+  ],
+  "finding_counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "informational": 0
+  },
+  "findings": [],
+  "redacted_evidence_digest": {
+    "algorithm": "sha256",
+    "value": null,
+    "manifest_ref": null
+  },
+  "limitations": [],
+  "attestations": {
+    "explicit_authorization_held": false,
+    "only_named_targets_used": false,
+    "no_unapproved_production_side_effects": false,
+    "no_financial_provider_calls": false,
+    "evidence_contains_no_raw_credentials_or_private_records": false,
+    "every_required_scope_dispositioned": false
+  },
+  "signature": {
+    "signer": null,
+    "signed_at": null,
+    "scheme": null,
+    "value": null
+  }
+}

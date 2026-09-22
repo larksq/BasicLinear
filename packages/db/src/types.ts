@@ -1,4 +1,4 @@
-import type { IssueRichTextDocument, IssueViewState } from '@openlinear/domain';
+import type { IssueRichTextDocument, IssueViewState } from '@basiclinear/domain';
 
 export interface DbUser {
   id: string;

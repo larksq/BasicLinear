@@ -1,6 +1,12 @@
 {
-  "name": "openlinear",
+  "name": "basiclinear",
   "version": "0.1.0",
+  "description": "Open-source project management with projects, milestones, issues, and boards. Run locally with SQLite or collaborate online, with REST API and MCP access.",
+  "homepage": "https://basiclinear.qiaosun.me",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larksq/basiclinear.git"
+  },
   "license": "AGPL-3.0-only",
   "private": true,
   "type": "module",
@@ -13,25 +19,41 @@
     "packages/*",
     "ops/cli"
   ],
+  "overrides": {
+    "gaxios": {
+      "uuid": "11.1.1"
+    }
+  },
   "scripts": {
-    "build": "node scripts/clean-build-output.mjs && npm run build -w @openlinear/domain && npm run build -w @openlinear/contracts && npm run build -w @openlinear/db && npm run build -w @openlinear/ui && npm run build -w @openlinear/test-fixtures && npm run build -w @openlinear/api && npm run build -w @openlinear/operator && npm run build -w @openlinear/web",
+    "build": "node scripts/clean-build-output.mjs && npm run build -w @basiclinear/domain && npm run build -w @basiclinear/contracts && npm run build -w @basiclinear/db && npm run build -w @basiclinear/ui && npm run build -w @basiclinear/test-fixtures && npm run build -w @basiclinear/hosted && npm run build -w @basiclinear/api && npm run build -w @basiclinear/hosted-service && npm run build -w @basiclinear/operator && npm run build -w @basiclinear/web",
+    "build:vercel:development": "node scripts/validate-hosted-environments.mjs --build development && npm run build:hosted:vercel -w @basiclinear/web",
+    "build:vercel:production": "node scripts/validate-hosted-environments.mjs --build production && npm run build:hosted:vercel -w @basiclinear/web",
     "start": "node apps/api/dist/index.js",
-    "dev:api": "npm run dev -w @openlinear/api",
-    "dev:web": "npm run dev -w @openlinear/web",
+    "start:hosted": "node apps/hosted-service/dist/index.js",
+    "dev:api": "npm run dev -w @basiclinear/api",
+    "dev:web": "npm run dev -w @basiclinear/web",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "test": "vitest run --config vitest.config.ts",
+    "test:hosted-rules": "firebase emulators:exec --project demo-basiclinear --only firestore \"npx vitest run packages/hosted/tests/firestore-rules.emulator.test.ts --config vitest.firestore.config.ts\"",
+    "test:hosted-transactions": "firebase emulators:exec --project demo-basiclinear --only firestore \"npx vitest run apps/hosted-service/tests/firestore-collaboration.emulator.test.ts --config vitest.firestore.config.ts\"",
     "test:release-audit": "node --test scripts/tests/audit-public-release.test.mjs",
+    "test:secret-audit": "node --test scripts/tests/audit-secrets.test.mjs",
+    "audit:secrets": "node scripts/audit-secrets.mjs",
     "prepare:release-provenance": "node scripts/prepare-release-provenance.mjs",
     "prepare:third-party-notices": "node scripts/prepare-third-party-notices.mjs",
     "audit:release": "node scripts/audit-public-release.mjs",
+    "audit:hosted-runtime": "npm audit --omit=dev --omit=optional",
     "visual:fixture": "node scripts/serve-visual-fixture.mjs",
-    "operator": "npm run start -w @openlinear/operator --",
-    "health": "npm run start -w @openlinear/operator -- health"
+    "operator": "npm run start -w @basiclinear/operator --",
+    "health": "npm run start -w @basiclinear/operator -- health"
   },
   "devDependencies": {
+    "@firebase/rules-unit-testing": "5.0.2",
     "@types/node": "24.13.3",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.4",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
     "tsx": "4.23.12",
     "typescript": "7.0.2",
     "vitest": "4.1.11"

@@ -1,0 +1,561 @@
+{
+  "schema_version": "1.0",
+  "stage": "implementation.checkpoint",
+  "status": "output_done_review_passed",
+  "issue": {
+    "plan_id": "I-204",
+    "local_issue_id": "CT-136",
+    "stable_id": "ffae9729-d827-4d3e-ac20-6df3d95b0687",
+    "milestone": "S3 — Implementation",
+    "accepted": true,
+    "blocked": false,
+    "requirement_refs": ["R-205", "R-206", "R-215", "R-216"],
+    "acceptance_refs": ["P-T204"],
+    "outcome_refs": ["O-202", "O-204"]
+  },
+  "task_readback": {
+    "revision": 15,
+    "status": "Done",
+    "milestone": "S3 — Implementation",
+    "dependency_readback": [{"issue":"CT-135","status":"Done","revision":7}],
+    "projection": "disabled_not_synced",
+    "start_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T05-49-01-637Z-172176d5-5584-4ccd-bce2-07986c8d6ef1.json",
+    "start_backup_sha256": "40ee367bc1eb01d532be24c82d5cfd595bc549e39b2fc8807d4250e9110837b7",
+    "output_checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T06-36-52-441Z-9d04e71f-5de2-4e82-b899-e500bf3e33b1.json",
+    "output_checkpoint_backup_sha256": "6d62fc08efadb14e9ab9973e7ee83fc79c8f702d2f944aea6a8b6df685257609",
+    "review1_checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T07-00-08-527Z-d264b3c7-0d21-4e83-96ef-498dc8c48edd.json",
+    "review1_checkpoint_backup_sha256": "fdf6cc4b24864a293d4d7851b7271ca52180421758ccd866c45fb852c155202f",
+    "remediation_checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T07-10-27-846Z-b1bc46ee-ceec-4490-94df-7e0cdde352e3.json",
+    "remediation_checkpoint_backup_sha256": "86c01fc2ff8cef5991ae0827b2a10ef0321c42a8792fff6a39493aeeacf9d5c5",
+    "review2_checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T07-33-41-563Z-ee3270dd-5936-42fc-957c-ce2b69db1f06.json",
+    "review2_checkpoint_backup_sha256": "749b4a96778aae2141049d497acced7e951c7d0ac9ad9f939586a7162d8f0e52",
+    "review2_remediation_checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T07-46-03-260Z-5638fc6e-73df-48ec-86be-ca812d54fd73.json",
+    "review2_remediation_checkpoint_backup_sha256": "bc3ada4820978ca0d2c0ce01477027f5d6d88572cb9587dc16c46147f24cf75c",
+    "review3_checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T08-03-07-522Z-b975aa76-43d1-48b3-a65d-5d77d119378f.json",
+    "review3_checkpoint_backup_sha256": "4a5db4a8ffe06d401849dbe81be2bbb2826b5bfcd33175bedaf6f27e29945350",
+    "review3_remediation_checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T08-16-36-315Z-c5d1e67e-d24c-4b00-8181-80e1ffa47a36.json",
+    "review3_remediation_checkpoint_backup_sha256": "091da8e45049831653976cf034d443f95fbbe7b06ccc4afef367e36ea3471d8a",
+    "review4_checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T08-26-45-665Z-0183f130-c004-4409-bc74-a39ea16d2be7.json",
+    "review4_checkpoint_backup_sha256": "0c50a861f88787849994e576242f675eac7e8fe3d7f8969f2139d99ce603cb10",
+    "review4_remediation_checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T08-33-40-323Z-301c0640-f677-41f3-a4f8-414086554b16.json",
+    "review4_remediation_checkpoint_backup_sha256": "2e48ba4d7f97c07f8654ee15a2d8d533dfc193088a6749932de26a33bd99bb18",
+    "review5_checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T08-42-38-490Z-bcf1aa4f-8058-473e-9e88-078599bd9ad1.json",
+    "review5_checkpoint_backup_sha256": "1115f87dad49b666afb8efcf4716204cf7adcebfb474e9c80c302d4e7eeebc70",
+    "review5_remediation_checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T08-57-01-493Z-8c401577-b4d8-422d-9ff6-13c9e848033f.json",
+    "review5_remediation_checkpoint_backup_sha256": "afe575f44ea1ee015f9e64932cd5f278be3a5cd3cd53f586d63442172a302188",
+    "done_checkpoint_backup": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T09-09-30-227Z-acce3564-9bca-46e5-8226-b245033fee02.json",
+    "done_checkpoint_backup_sha256": "7bb614a75d68bf14ad9b993a8b1e0ded5faa57939c7bef49ade6e3edff29e0e1"
+  },
+  "entry": {
+    "operating_profile": "project-local-v0.8",
+    "authority": "current user goal plus fresh project-local CT-136 and completed CT-135 readback",
+    "planning_validation": {
+      "valid": true,
+      "warning_boundary": "accepted outcome-baseline exception authorizes implementation only"
+    },
+    "linear_projection": "disabled_not_synced",
+    "linear_only_guard_applicable": false,
+    "linear_only_guard_reason": "The installed implementation-entry guard requires linear-only-v0.6, while this governed project uses project-local-v0.8. It was not represented as authority."
+  },
+  "sessions": [
+    {
+      "session_id": "CT-136-S1",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating",
+      "allowed_paths": [
+        ".env.example",
+        "firestore.rules",
+        "packages/hosted/",
+        "apps/hosted-service/",
+        "apps/web/src/hosted-api.ts",
+        "apps/web/src/hosted-app.tsx",
+        "apps/web/src/hosted.css",
+        "apps/web/tests/",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/"
+      ],
+      "outputs": [
+        ".env.example",
+        "apps/hosted-service/src/hosted-config.ts",
+        "apps/hosted-service/src/index.ts",
+        "apps/hosted-service/tests/hosted-config.test.ts",
+        "apps/web/src/hosted-api.ts",
+        "apps/web/src/hosted-app.tsx",
+        "apps/web/src/hosted.css",
+        "apps/web/tests/hosted-invitation.test.ts",
+        "firestore.rules",
+        "packages/hosted/src/firebase-invitation-repository.ts",
+        "packages/hosted/src/hosted-http.ts",
+        "packages/hosted/src/index.ts",
+        "packages/hosted/src/invitation-service.ts",
+        "packages/hosted/tests/firebase-invitation-repository.test.ts",
+        "packages/hosted/tests/firestore-rules.emulator.test.ts",
+        "packages/hosted/tests/hosted-http.test.ts",
+        "packages/hosted/tests/invitation-service.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/invitation-membership-contract.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/review.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/checkpoint.json"
+      ]
+    },
+    {
+      "session_id": "CT-136-S2",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating",
+      "input_refs": [
+        "Independent Review 1 FAIL from /root/ct136_independent_review",
+        "project-local CT-136 In Progress readback revision 5"
+      ],
+      "allowed_paths": [
+        "apps/web/src/hosted-app.tsx",
+        "apps/web/tests/hosted-invitation.test.ts",
+        "packages/hosted/src/invitation-service.ts",
+        "packages/hosted/src/outcome-report.ts",
+        "packages/hosted/tests/invitation-service.test.ts",
+        "packages/hosted/tests/measurement.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/"
+      ],
+      "outputs": [
+        "apps/web/src/hosted-app.tsx",
+        "apps/web/tests/hosted-invitation.test.ts",
+        "packages/hosted/src/invitation-service.ts",
+        "packages/hosted/src/outcome-report.ts",
+        "packages/hosted/tests/invitation-service.test.ts",
+        "packages/hosted/tests/measurement.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/invitation-membership-contract.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/review.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request.json"
+      ]
+    },
+    {
+      "session_id": "CT-136-S3",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating",
+      "input_refs": [
+        "Independent Review 2 FAIL from /root/ct136_independent_review",
+        "project-local CT-136 In Progress readback revision 7"
+      ],
+      "allowed_paths": [
+        "packages/hosted/src/invitation-service.ts",
+        "packages/hosted/tests/invitation-service.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/"
+      ],
+      "outputs": [
+        "packages/hosted/src/invitation-service.ts",
+        "packages/hosted/tests/invitation-service.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/invitation-membership-contract.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/review.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request-2.json"
+      ]
+    },
+    {
+      "session_id": "CT-136-S4",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating",
+      "input_refs": [
+        "Independent Review 3 FAIL from /root/ct136_independent_review",
+        "project-local CT-136 In Progress readback revision 9"
+      ],
+      "allowed_paths": [
+        "packages/hosted/src/invitation-service.ts",
+        "packages/hosted/tests/invitation-service.test.ts",
+        "packages/hosted/tests/hosted-http.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/"
+      ],
+      "outputs": [
+        "packages/hosted/src/invitation-service.ts",
+        "packages/hosted/tests/invitation-service.test.ts",
+        "packages/hosted/tests/hosted-http.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/invitation-membership-contract.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/review.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request-3.json"
+      ]
+    },
+    {
+      "session_id": "CT-136-S5",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating",
+      "input_refs": [
+        "Independent Review 4 FAIL from /root/ct136_independent_review",
+        "project-local CT-136 In Progress readback revision 11"
+      ],
+      "allowed_paths": [
+        "packages/hosted/src/invitation-service.ts",
+        "packages/hosted/tests/invitation-service.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/"
+      ],
+      "outputs": [
+        "packages/hosted/src/invitation-service.ts",
+        "packages/hosted/tests/invitation-service.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/invitation-membership-contract.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/review.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request-4.json"
+      ]
+    },
+    {
+      "session_id": "CT-136-S6",
+      "actor_id": "codex-primary",
+      "mode": "code_mutating",
+      "input_refs": [
+        "Independent Review 5 FAIL from /root/ct136_independent_review",
+        "project-local CT-136 In Progress readback revision 13"
+      ],
+      "allowed_paths": [
+        "packages/hosted/src/invitation-service.ts",
+        "packages/hosted/tests/invitation-service.test.ts",
+        "packages/hosted/tests/firestore-rules.emulator.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/"
+      ],
+      "outputs": [
+        "packages/hosted/src/invitation-service.ts",
+        "packages/hosted/tests/invitation-service.test.ts",
+        "packages/hosted/tests/firestore-rules.emulator.test.ts",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/invitation-membership-contract.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/review.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request-5.json"
+      ]
+    },
+    {
+      "session_id": "CT-136-S7",
+      "actor_id": "codex-primary",
+      "mode": "docs_only",
+      "input_refs": [
+        "Independent Review 6 PASS from /root/ct136_independent_review",
+        "project-local CT-136 In Progress readback revision 14"
+      ],
+      "allowed_paths": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/"
+      ],
+      "outputs": [
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/checkpoint.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/review.md",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request-6.json",
+        "docs/product/versions/v0.2.0/30-implementation/CT-136/handoff.json"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "CT-136-C1",
+      "command": "npx vitest run packages/hosted/tests/invitation-service.test.ts packages/hosted/tests/hosted-http.test.ts packages/hosted/tests/firebase-invitation-repository.test.ts apps/hosted-service/tests/hosted-config.test.ts apps/web/tests/hosted-invitation.test.ts apps/web/tests/hosted-foundation.test.ts --config vitest.config.ts",
+      "status": "passed",
+      "result": "6 files passed; 35 tests passed."
+    },
+    {
+      "check_id": "CT-136-C2",
+      "command": "npm run test:hosted-rules",
+      "status": "passed",
+      "result": "Official Firestore emulator: 1 file passed; 6 scenario groups passed; emulator shut down cleanly."
+    },
+    {
+      "check_id": "CT-136-C3",
+      "command": "npm test",
+      "status": "passed",
+      "result": "83 files passed; 550 tests passed."
+    },
+    {
+      "check_id": "CT-136-C4",
+      "command": "npm run typecheck",
+      "status": "passed",
+      "result": "All 10 workspace typechecks passed."
+    },
+    {
+      "check_id": "CT-136-C5",
+      "command": "npm run build",
+      "status": "passed",
+      "result": "All workspaces and the local/hosted Vite production bundle built successfully."
+    },
+    {
+      "check_id": "CT-136-C6",
+      "command": "hosted.html generated-asset resolution probe",
+      "status": "passed",
+      "result": "All 7 absolute hosted bundle asset references resolve."
+    },
+    {
+      "check_id": "CT-136-C7",
+      "command": "npm run audit:hosted-runtime",
+      "status": "passed",
+      "result": "Registry-backed supported hosted-runtime audit reports 0 vulnerabilities."
+    },
+    {
+      "check_id": "CT-136-C8",
+      "command": "git diff --check, JSON validation, and prohibited-capability scan",
+      "status": "passed",
+      "result": "No whitespace or JSON errors; bounded hosted UI/service scans found no prohibited product capability or raw-secret URL/evidence pattern."
+    },
+    {
+      "check_id": "CT-136-C9",
+      "command": "standing-authorized Independent Review 1 by /root/ct136_independent_review",
+      "status": "failed",
+      "result": "45/45 hashes matched before/after. Two P1 and two P2 findings: wrong-account/new-link idempotency collision; resend/G-202 reconciliation failure; temporal/idempotency trusted-record integrity gaps; incomplete direct-consumer manifest."
+    },
+    {
+      "check_id": "CT-136-C10",
+      "command": "remediated targeted 7-file invitation and outcome suite",
+      "status": "passed",
+      "result": "7 files passed; 54 tests passed, including all four Review 1 counterexamples."
+    },
+    {
+      "check_id": "CT-136-C11",
+      "command": "npm run test:hosted-rules",
+      "status": "passed",
+      "result": "Official Firestore emulator after remediation: 1 file and 6 scenario groups passed; clean shutdown."
+    },
+    {
+      "check_id": "CT-136-C12",
+      "command": "npm test",
+      "status": "passed",
+      "result": "Remediated full suite: 83 files passed; 554 tests passed."
+    },
+    {
+      "check_id": "CT-136-C13",
+      "command": "npm run typecheck",
+      "status": "passed",
+      "result": "All 10 workspace typechecks passed after remediation."
+    },
+    {
+      "check_id": "CT-136-C14",
+      "command": "npm run build and hosted.html generated-asset resolution probe",
+      "status": "passed",
+      "result": "Every workspace built and all 7 hosted references resolve after remediation."
+    },
+    {
+      "check_id": "CT-136-C15",
+      "command": "npm run audit:hosted-runtime",
+      "status": "passed",
+      "result": "Registry-backed supported hosted-runtime audit reports 0 vulnerabilities after remediation."
+    },
+    {
+      "check_id": "CT-136-C16",
+      "command": "git diff --check, JSON validation, and prohibited-capability scan",
+      "status": "passed",
+      "result": "No whitespace or JSON errors and no prohibited product capability found after remediation."
+    },
+    {
+      "check_id": "CT-136-C17",
+      "command": "standing-authorized Independent Review 2 by /root/ct136_independent_review",
+      "status": "failed",
+      "result": "47/47 hashes matched before/after and all required gates passed. P1 transaction-stale acceptance time could activate a seat with invalid lifecycle timestamps; P2 superseded-token cross-record rebinding could disclose foreign preview facts. All four Review 1 findings remained closed."
+    },
+    {
+      "check_id": "CT-136-C18",
+      "command": "remediated targeted 7-file invitation and outcome suite",
+      "status": "passed",
+      "result": "7 files passed; 57 tests passed, including regressed-time, transaction-retry, and cross-workspace token-binding counterexamples."
+    },
+    {
+      "check_id": "CT-136-C19",
+      "command": "npm run test:hosted-rules",
+      "status": "passed",
+      "result": "Official Firestore emulator after Review 2 remediation: 1 file and 6 scenario groups passed; clean shutdown."
+    },
+    {
+      "check_id": "CT-136-C20",
+      "command": "npm test",
+      "status": "passed",
+      "result": "Review 2 remediated full suite: 83 files passed; 557 tests passed."
+    },
+    {
+      "check_id": "CT-136-C21",
+      "command": "npm run typecheck",
+      "status": "passed",
+      "result": "All 10 workspace typechecks passed after Review 2 remediation."
+    },
+    {
+      "check_id": "CT-136-C22",
+      "command": "npm run build and hosted.html generated-reference resolution probe",
+      "status": "passed",
+      "result": "Every workspace built and all 7 hosted HTML references resolve after Review 2 remediation."
+    },
+    {
+      "check_id": "CT-136-C23",
+      "command": "npm run audit:hosted-runtime",
+      "status": "passed",
+      "result": "Registry-backed supported hosted-runtime audit reports 0 vulnerabilities after Review 2 remediation."
+    },
+    {
+      "check_id": "CT-136-C24",
+      "command": "git diff --check, JSON, raw-secret, and prohibited-capability scans",
+      "status": "passed",
+      "result": "No whitespace or JSON error, credential material, or prohibited executable capability found after Review 2 remediation."
+    },
+    {
+      "check_id": "CT-136-C25",
+      "command": "standing-authorized Independent Review 3 by /root/ct136_independent_review",
+      "status": "failed",
+      "result": "48/48 hashes matched before/after and all required gates passed. All six earlier findings remained closed and the 11-case token lifecycle matrix passed; one P2 pre-bootstrap create-time lifecycle ordering defect remained."
+    },
+    {
+      "check_id": "CT-136-C26",
+      "command": "Review 3 remediated targeted 7-file invitation and outcome suite",
+      "status": "passed",
+      "result": "7 files passed; 59 tests passed, including authoritative bootstrap-clock and create/resend/revoke owner-removal race regressions."
+    },
+    {
+      "check_id": "CT-136-C27",
+      "command": "npm run test:hosted-rules",
+      "status": "passed",
+      "result": "Official Firestore emulator after Review 3 remediation: 1 file and 6 scenario groups passed; clean shutdown."
+    },
+    {
+      "check_id": "CT-136-C28",
+      "command": "npm test",
+      "status": "passed",
+      "result": "Review 3 remediated full suite: 83 files passed; 559 tests passed."
+    },
+    {
+      "check_id": "CT-136-C29",
+      "command": "npm run typecheck",
+      "status": "passed",
+      "result": "All 10 workspace typechecks passed after Review 3 remediation."
+    },
+    {
+      "check_id": "CT-136-C30",
+      "command": "npm run build and hosted.html generated-reference resolution probe",
+      "status": "passed",
+      "result": "Every workspace built and all 7 hosted HTML references resolve after Review 3 remediation."
+    },
+    {
+      "check_id": "CT-136-C31",
+      "command": "npm run audit:hosted-runtime",
+      "status": "passed",
+      "result": "Registry-backed supported hosted-runtime audit reports 0 vulnerabilities after Review 3 remediation."
+    },
+    {
+      "check_id": "CT-136-C32",
+      "command": "git diff --check, JSON, raw-secret, and prohibited-capability scans",
+      "status": "passed",
+      "result": "No whitespace or JSON error, credential material, or prohibited executable capability found after Review 3 remediation."
+    },
+    {
+      "check_id": "CT-136-C33",
+      "command": "standing-authorized Independent Review 4 by /root/ct136_independent_review",
+      "status": "failed",
+      "result": "49/49 hashes matched before/after and all required gates passed. All seven historical findings remained closed; one P2 create-replay path returned a raw secret after clock regression or current-token HMAC divergence."
+    },
+    {
+      "check_id": "CT-136-C34",
+      "command": "Review 4 remediated targeted 7-file invitation and outcome suite",
+      "status": "passed",
+      "result": "7 files passed; 62 tests passed, including create replay-time, create replay-token, and resend/revoke replay-ledger regressions."
+    },
+    {
+      "check_id": "CT-136-C35",
+      "command": "npm run test:hosted-rules",
+      "status": "passed",
+      "result": "Official Firestore emulator after Review 4 remediation: 1 file and 6 scenario groups passed; clean shutdown."
+    },
+    {
+      "check_id": "CT-136-C36",
+      "command": "npm test",
+      "status": "passed",
+      "result": "Review 4 remediated full suite: 83 files passed; 562 tests passed."
+    },
+    {
+      "check_id": "CT-136-C37",
+      "command": "npm run typecheck",
+      "status": "passed",
+      "result": "All 10 workspace typechecks passed after Review 4 remediation."
+    },
+    {
+      "check_id": "CT-136-C38",
+      "command": "npm run build and hosted.html generated-reference resolution probe",
+      "status": "passed",
+      "result": "Every workspace built and all 7 hosted HTML references resolve after Review 4 remediation."
+    },
+    {
+      "check_id": "CT-136-C39",
+      "command": "npm run audit:hosted-runtime",
+      "status": "passed",
+      "result": "Registry-backed supported hosted-runtime audit reports 0 vulnerabilities after Review 4 remediation."
+    },
+    {
+      "check_id": "CT-136-C40",
+      "command": "git diff --check, JSON, raw-secret, and prohibited-capability scans",
+      "status": "passed",
+      "result": "No whitespace or JSON error, credential material, or prohibited executable capability found after Review 4 remediation."
+    },
+    {
+      "check_id": "CT-136-C41",
+      "command": "standing-authorized Independent Review 5 by /root/ct136_independent_review",
+      "status": "failed",
+      "result": "50/50 hashes matched before/after and all required gates passed. All eight historical findings remained closed; one P2 accepted-idempotency timestamp could contradict the actual acceptance lifecycle and still replay successfully."
+    },
+    {
+      "check_id": "CT-136-C42",
+      "command": "Review 5 remediated targeted 7-file invitation and outcome suite",
+      "status": "passed",
+      "result": "7 files passed; 65 tests passed, including bound accepted-idempotency timestamp, authentic lifecycle contradiction, and all non-success acceptance replay regressions."
+    },
+    {
+      "check_id": "CT-136-C43",
+      "command": "npm run test:hosted-rules",
+      "status": "passed",
+      "result": "Official Firestore emulator after Review 5 remediation: 1 file and 6 scenario groups passed; clean shutdown."
+    },
+    {
+      "check_id": "CT-136-C44",
+      "command": "npm test",
+      "status": "passed",
+      "result": "Review 5 remediated full suite: 83 files passed; 565 tests passed."
+    },
+    {
+      "check_id": "CT-136-C45",
+      "command": "npm run typecheck",
+      "status": "passed",
+      "result": "All 10 workspace typechecks passed after Review 5 remediation."
+    },
+    {
+      "check_id": "CT-136-C46",
+      "command": "npm run build and hosted.html generated-reference resolution probe",
+      "status": "passed",
+      "result": "Every workspace built and all 7 hosted HTML references resolve after Review 5 remediation."
+    },
+    {
+      "check_id": "CT-136-C47",
+      "command": "npm run audit:hosted-runtime",
+      "status": "passed",
+      "result": "Registry-backed supported hosted-runtime audit reports 0 vulnerabilities after Review 5 remediation."
+    },
+    {
+      "check_id": "CT-136-C48",
+      "command": "git diff --check, JSON, raw-secret, and prohibited-capability scans",
+      "status": "passed",
+      "result": "No whitespace or JSON error, credential material, or prohibited executable capability found after Review 5 remediation."
+    },
+    {
+      "check_id": "CT-136-C49",
+      "command": "standing-authorized Independent Review 6 by /root/ct136_independent_review",
+      "status": "passed",
+      "result": "51/51 hashes matched before/after; focused 7/65, emulator 1/6, full 83/565, 10 typechecks, build/7 references, runtime audit 0, 40/40 idempotency fields, 6/6 acceptance outcomes, all nine historical findings, dependencies, privacy, O-202/G-202, UI/accessibility, exclusions, and manifest completeness passed with no actionable P0-P3 finding."
+    }
+  ],
+  "output": {
+    "status": "done",
+    "summary": "Owners can safely create, inspect, resend, and revoke seven-day email-bound invitations; valid Google acceptance activates one exact-workspace member once while pending invitations add no active seat."
+  },
+  "quality": {
+    "automated_checks": "passed",
+    "independent_review": "review1_failed_review2_failed_review3_failed_review4_failed_review5_failed_remediated_review6_passed",
+    "issue_status": "Done"
+  },
+  "outcomes": [
+    {"outcome_id":"O-202","status":"baseline_needed"},
+    {"outcome_id":"O-204","status":"baseline_needed"}
+  ],
+  "scope_exclusions": [
+    "assignment and comments are CT-137",
+    "subscription quantity and billing are CT-138",
+    "REST token and export flows are CT-139",
+    "MCP and the reusable PM skill are CT-140",
+    "notifications, custom roles, SSO, and SCIM are excluded",
+    "agents, code review, repositories, and pull requests remain prohibited"
+  ],
+  "blockers": [],
+  "next": {
+    "action": "fresh-read CT-137 and begin the bounded single-assignee task and durable-comment implementation slice"
+  }
+}

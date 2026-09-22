@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import type { IssueViewState } from '@openlinear/contracts';
+import type { IssueViewState } from '@basiclinear/contracts';
 import {
   contextualMilestoneId,
   milestoneIssueCountLabel,

@@ -1,0 +1,383 @@
+{
+  "schema_version": "1.0",
+  "stage": "implementation.independent-review-request",
+  "status": "dispatched",
+  "review_round": 1,
+  "prepared_at": "2026-08-25T18:36:00.000Z",
+  "authorized_at": "2026-08-25T04:22:18.000Z",
+  "dispatched_at": "2026-08-25T18:36:00.000Z",
+  "authorization": {
+    "authorized_by": "user",
+    "scope": [
+      "CT-134",
+      "CT-135",
+      "CT-136",
+      "CT-137",
+      "CT-138",
+      "CT-139",
+      "CT-140",
+      "CT-141",
+      "CT-142"
+    ],
+    "standing": true
+  },
+  "issue": {
+    "identifier": "CT-139",
+    "stable_id": "a9a28433-589a-4a2d-9af8-7e2800f1ba44",
+    "revision": 4,
+    "status": "In Progress",
+    "milestone": "S3 — Implementation",
+    "plan_id": "I-207",
+    "requirements": [
+      "R-211",
+      "R-212",
+      "R-215",
+      "R-216",
+      "R-218",
+      "R-219"
+    ],
+    "acceptance": [
+      "P-T207"
+    ],
+    "outcomes": [
+      "O-204"
+    ]
+  },
+  "authority": {
+    "profile": "project-local-v0.8",
+    "task_store": ".control-tower/tasks-v0.8.sqlite3",
+    "projection": "disabled_not_synced",
+    "dependencies": [
+      {
+        "identifier": "CT-135",
+        "status": "Done",
+        "revision": 7
+      },
+      {
+        "identifier": "CT-137",
+        "status": "Done",
+        "revision": 9
+      },
+      {
+        "identifier": "CT-138",
+        "status": "Done",
+        "revision": 19,
+        "note": "accepted entitlement and byte-identical registry-audit input"
+      }
+    ],
+    "backup_checksum_note": "Each sha256 is the export package's embedded semantic checksum; raw_file_sha256 hashes the serialized JSON bytes.",
+    "backups": [
+      {
+        "kind": "start",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T13-59-54-393Z-4fa903fe-74e7-4433-8603-18d9df2cf1c3.json",
+        "sha256": "182e6b2218d08c23470d12c1ae3a623ef69c882182948de9f9efd191078d5432",
+        "raw_file_sha256": "c845c44a9be1a523de7b321f2f4ba91c148777749a12c07e12f3133c02c11f0d"
+      },
+      {
+        "kind": "ct138_completion_input",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T17-24-37-423Z-e99c1933-05d4-42ab-9eb5-6eee41a6fb39.json",
+        "sha256": "28a609d442f32153c15b850191afad2dafa1470c07d2fb0761e4dea9e728f24a",
+        "raw_file_sha256": "3e64df642859cff4d693353427ba56a4086e629d861532a681deab2f09a6381b"
+      },
+      {
+        "kind": "review1_dispatch",
+        "path": ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T18-33-29-332Z-dc42021a-126c-4bc1-b46e-9c79922d66cf.json",
+        "sha256": "98891ae009c65282f0d73214287fc573011b9395badaea9e2b84a43fbbec3568",
+        "raw_file_sha256": "7de14f524418df25ccaddb37437e4cbcb6cc691ca30d0b499b888b794c9d8b5b"
+      }
+    ]
+  },
+  "independence": {
+    "required": true,
+    "primary_actor_id": "codex-primary",
+    "reviewer_actor_id": "ct139-independent-review",
+    "reviewer_must_be_distinct": true,
+    "mode": "read_only",
+    "prohibited_actions": [
+      "editing any file",
+      "mutating Control Tower",
+      "creating a commit",
+      "changing Firebase, Stripe, deployment, or other external state"
+    ],
+    "dispatch_state": "dispatched"
+  },
+  "candidate": {
+    "summary": "Bounded product-management REST v1, active-owner personal-token lifecycle, projects/milestones, canonical export, privacy-safe audit, exact Firestore/HTTP boundaries, and owner web controls; MCP/OAuth and all prohibited product capabilities remain absent.",
+    "intentionally_unsealed_inputs": {
+      "files": [
+        "this Review 1 request file",
+        ".control-tower/tasks-v0.8.sqlite3 and uncited historical backups",
+        "apps/web/index.html, apps/web/src/main.tsx, and the local-only transitive entry graph",
+        "generated dist, coverage, emulator log, and node_modules files",
+        "live Firebase/Stripe resources, credentials, deployment state, and network services"
+      ],
+      "reason": "The request cannot hash itself; the mutable CT store is attested by fresh API readback plus sealed semantic/raw backups; hosted output has a separately verified isolated graph; generated files derive from sealed inputs; and live/provider/deployment mutation is unauthorized."
+    },
+    "sealed_file_count": 156,
+    "sha256": {
+      ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T13-59-54-393Z-4fa903fe-74e7-4433-8603-18d9df2cf1c3.json": "c845c44a9be1a523de7b321f2f4ba91c148777749a12c07e12f3133c02c11f0d",
+      ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T16-49-18-355Z-83cc0728-400d-4498-9d4c-7f1e24ec79fc.json": "5653090791cf99bd8cfb0881a00da2df72768884b551d7e590aa49e9476005a6",
+      ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T16-50-44-271Z-d9fb6855-090a-4e61-89a3-32207b9ecefc.json": "d8d6eea3b231acb08dbc5eb7e072fb845f00608c207bb94eb81855d5ac992b39",
+      ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T17-04-32-440Z-962a3e92-1713-493a-8dfe-efb2e053dcda.json": "94e6941b90e279290431c18355db9221d3fd2454c525ddf54a6dd519f3712ab1",
+      ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T17-07-00-057Z-9c15da54-47a5-4923-919c-b731e3c24ff8.json": "29926777ff6ba1358b11cb9b4b0695eaf118884ac4c0035de515c5c42b48038f",
+      ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T17-24-37-423Z-e99c1933-05d4-42ab-9eb5-6eee41a6fb39.json": "3e64df642859cff4d693353427ba56a4086e629d861532a681deab2f09a6381b",
+      ".control-tower/backups/tasks-v0.8-before-issue-update-2026-08-25T18-33-29-332Z-dc42021a-126c-4bc1-b46e-9c79922d66cf.json": "7de14f524418df25ccaddb37437e4cbcb6cc691ca30d0b499b888b794c9d8b5b",
+      ".control-tower/request-issue-get-139.json": "b2dd0f0060e47a8ec7dab2a9bf8a8819509cd169862d055cb46e67f024fbc937",
+      ".control-tower/request-update-issue-138-review6-fail.json": "2a1385ec7e95444108c206008d1210edb65eb1bb950691ebe34da102f1476479",
+      ".control-tower/request-update-issue-138-review7-dispatch.json": "eaa4ed14a2664da8641c38b18926e88fbed71445cd8d8da667df121d1524192d",
+      ".control-tower/request-update-issue-138-review7-fail.json": "a1b555276f88278651d6f37b2163970baa3646365c1e7b8a79285694fe52a921",
+      ".control-tower/request-update-issue-138-review8-dispatch.json": "4a2c4afc4057d06a4cd6db7113352bcce86aed7e9a2fe6be99defeb95e680875",
+      ".control-tower/request-update-issue-139-review1-dispatch.json": "be1636b68d0dd029cbfc067157eac59c910dfecc0b3a5d30d8165c2ae3dae147",
+      ".control-tower/request-update-issue-139-start.json": "f7f1406fcee9991da3eae058ebbc307105ee7ea8ea27f27b88c97d00c38ee0bc",
+      ".env.example": "30ff78bff563a87a610edd8c32fb7cbefeb6f06e231219280b14b7f65c9d3c46",
+      ".npmrc": "857e18055c0f5d75719d253033954c10511c4b16ae5bd68bc45bb75d93a411bc",
+      "apps/hosted-service/package.json": "07c581a62999b38788f43b2dea95aa0fe474d507c24fbf856bf8b8394bb40603",
+      "apps/hosted-service/src/firebase-identity.ts": "343a52a38eb928c13e9c814e43c2cafad9b52eaee0a3aeab459e2a3424b99df8",
+      "apps/hosted-service/src/hosted-config.ts": "c958190e3aa9df155d436eb5f2546e22053791236709ff5d8fdbfe7fbd806883",
+      "apps/hosted-service/src/index.ts": "117a751953ecc0fe790bde5d4fe516ce3a66e6a82d0f637ec5b4ee14cb2709b0",
+      "apps/hosted-service/src/stripe-billing.ts": "0996feb49f7fde8c8013a6d6259b5ef431ba7b74a3c7d865cccea60a922ad073",
+      "apps/hosted-service/tests/firebase-identity.test.ts": "535da7ba21e3df87e203b5487bfa24cba7491715c986ec5f33da6988a86ec947",
+      "apps/hosted-service/tests/hosted-config.test.ts": "7ea5b24087c609df3c454d6f428f4126cb551f61bfeed912131a0f4123ef254f",
+      "apps/hosted-service/tests/stripe-billing.test.ts": "8ccb6586b076ee26ea19eeaa33005977a8e67383b4a625507412816a35655932",
+      "apps/hosted-service/tsconfig.json": "da8e5fc294f2cc905f61b463c3e663497ed45bb51e637d406901b597a5cfbc23",
+      "apps/web/hosted.html": "310362c5e2fc5a142404693dd6f547a04e07d49a70eaf789340513017e6eb781",
+      "apps/web/package.json": "b126a82326fd95c4c740d8f9924d9a3318f95fe1770dfd88621fbe428ef515d6",
+      "apps/web/public/favicon.svg": "e20e5b6aef8e5d5adf0051059838a750a49516ec5cd2063ffff9147c75a22ba1",
+      "apps/web/public/theme-bootstrap.js": "921e98da5ed6e0d060da2b744a62eb3a055c9a427e99968fd211279c78694a81",
+      "apps/web/src/hosted-api.ts": "82967829dfcbc747953802bb55a3cd1e375676ad4afed2a3d40f28071eb92bb7",
+      "apps/web/src/hosted-app.tsx": "1048667064879ccd45bfb629bf794d2da3e729bb6b2b9da2aa86f304363b4f36",
+      "apps/web/src/hosted-auth.ts": "cc3ede863d73398332120d54beb95a5ee77b3f413af72c51349706643517ded3",
+      "apps/web/src/hosted-main.tsx": "35432f3101e555e3117f5f9530c1badf3da566912a5c9eb989232df414546458",
+      "apps/web/src/hosted.css": "3c78d12b7cd4ce8520361a77ae8240b43a7d4f7f6a243f9b61cbbf823ad97655",
+      "apps/web/tests/hosted-automation.test.ts": "9ef581bbfd7e56927cac6c4ef976ca4eba4b1d6333a495cb8995a049eeedaa3e",
+      "apps/web/tests/hosted-billing.test.ts": "19fbfc7b987bee84abd84a2695f6bb6890c4dc1fb0b170a26c546e42e62d9909",
+      "apps/web/tests/hosted-collaboration.test.ts": "0a14a56207e4a7ae7821e65ffa1e0928b300494398d7c2cf7d2ee85fdeb0765b",
+      "apps/web/tests/hosted-foundation.test.ts": "f3184a1e47dfcc8eac21fb9eb8964f3f4e0f1c28ba94982d8374d1e9b492c93a",
+      "apps/web/tests/hosted-invitation.test.ts": "86e384a192cbb858f440a6a4647c2398949ed18e7e97b3ffc9211e0e71d46d5a",
+      "apps/web/tsconfig.json": "e52c0e1dc66fb530eeac544f441d486db80a97b5bb7e9780e99bb3bcb5342043",
+      "apps/web/vite.config.ts": "bff34c4db37de6bb9204fd422e3539bae89bf58542d3a0243e53aaa67637c3a2",
+      "docs/product/versions/v0.2.0/20-planning/README.md": "151599f3b515879f6670e5f1c18f0d1514fad7ef2cc3339549505af75aba1597",
+      "docs/product/versions/v0.2.0/20-planning/acceptance-criteria.md": "100b70b6d844d9ef7d6dd21f8dcef35db4eb0c2a6c45b9925f68634f1ee173c3",
+      "docs/product/versions/v0.2.0/20-planning/architecture.md": "1306b2ba5f0e69720bace76ffb353d39c110289888c86225511a203e786675bf",
+      "docs/product/versions/v0.2.0/20-planning/backlog.md": "0347bb2d8f3b42a385260b0d32fdd6f5d8e900c2028ae431f9a56a968ad71eef",
+      "docs/product/versions/v0.2.0/20-planning/combined-release-gates.md": "d02b8bef1d599cfdabf97287c1cdc951ce29bd1c28e683928fb4e1bb8785f97d",
+      "docs/product/versions/v0.2.0/20-planning/critical-qa.md": "cbd7a443054d27b5b602eaf7cfd37e311edc612e229829ea48ebaf9d8f2ab4cd",
+      "docs/product/versions/v0.2.0/20-planning/handoff.md": "cdeab245336fa2a70e23d550b3fdeda5c445e0f79dfbdd050bc1478eef35c447",
+      "docs/product/versions/v0.2.0/20-planning/planning-package.json": "4dbf36c44d7f7520a359e89e22859204c2443fc54b3d40c6651f9af67ee2a016",
+      "docs/product/versions/v0.2.0/20-planning/prd.md": "327d9c773e482373af01ebc2dda06d6115497d340a733a49421857baf584f612",
+      "docs/product/versions/v0.2.0/20-planning/quality-review.md": "bd83012ea2d2df909476c386b1384aaddafea9cc40bd443a4051312c1e4fc900",
+      "docs/product/versions/v0.2.0/20-planning/risk-analysis.md": "625559b99705320744227bbb8239ab22142d98eb06c24311843321a98b6ba975",
+      "docs/product/versions/v0.2.0/20-planning/sprint-plan.md": "4a094a0deb50340e9ccf7ece3cb3e0a5b1a0bc75a02c527c1e6e970177f60ce6",
+      "docs/product/versions/v0.2.0/20-planning/ux-design.md": "aaccdea9554378a9f89c6c833762ecebee2b8925373f911c13ef6d043e340190",
+      "docs/product/versions/v0.2.0/30-implementation/CT-133/checkpoint.json": "cf27f9509ee20c6e10521e56736f56a5266f568b519adca6727356a902303a5a",
+      "docs/product/versions/v0.2.0/30-implementation/CT-133/handoff.json": "573e09cf559f323890252fcc8a95325bc2678f02e7a1770964e782d05500acfe",
+      "docs/product/versions/v0.2.0/30-implementation/CT-133/measurement-contract.md": "3b20fec47c572ba7035e0d6b8dfdb9286c1f05c4fdf3003e50c3a97036797179",
+      "docs/product/versions/v0.2.0/30-implementation/CT-133/review.md": "27f3833ef4a9f09d83d684193147ca41ef0430e8d56f06e6f8beb9c42ead5488",
+      "docs/product/versions/v0.2.0/30-implementation/CT-134/checkpoint.json": "5560188f00762b7e32312ebe3ac77db8c85b54391723dcab2a6bf43855a47fc5",
+      "docs/product/versions/v0.2.0/30-implementation/CT-134/handoff.json": "aab89839301bd7c39cf6a3dcc6113b1899b17655a3a7189d9d3323cefb864fd7",
+      "docs/product/versions/v0.2.0/30-implementation/CT-134/hosting-bootstrap-contract.md": "f12cf144e528ba69ad112757e917553d4636fc0c7d3603618d28ed5b42b054d0",
+      "docs/product/versions/v0.2.0/30-implementation/CT-134/review-request.json": "095ba5ee02d1bcbb35a52219902d920fa81108dd061534fd950a05b52f5a5101",
+      "docs/product/versions/v0.2.0/30-implementation/CT-134/review.md": "130aeef48046730db35ea3cd64e2c710f13fb1082143123cd4bfec5938255e98",
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/checkpoint.json": "21e91c073ba4047ff186cf9485cf5cdb76d9f32209102e985c28ed7410a5fd7b",
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/handoff.json": "54b92168b336d48904f0a9310b9eee7b5d411d65a80848e0d0a0e457ad01dbca",
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/review-request-2.json": "480fa42a521e3c7bf719720829665cd79088648de0ae22b897ef9c054ee8379e",
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/review-request.json": "7bba5c46d4ef1e467edf4a189ff7a33409b4ace1bb1ef791c4a6844043ef964d",
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/review.md": "c8fb98f241fc393cba367d14d750cfaa92ded1eaa32ea9472d92ab7a714833f0",
+      "docs/product/versions/v0.2.0/30-implementation/CT-135/workspace-authorization-contract.md": "a94fb7aa798d8948836a2e112fe5330dd3decd5b1b6d3cb20801af6d256919c7",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/checkpoint.json": "0b6900978336185b133c47a715cdbb6085c28645e5f7559579b38824a7645372",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/handoff.json": "8b52798c2fa3090ab8e02b8134426612b01ca8c3a24dd160b416dd4d63622456",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/invitation-membership-contract.md": "342ef232bf2d8b4a75737ac8c82aa8a9f219b860c52c7bbd870a6f81826c4728",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request-2.json": "aeef8f6e49c6cef32705af185aa450e0d9aabfc3354e9d73312417b378974dc6",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request-3.json": "fa8861129bc3fcf9b30d4f49c2218c448e8ef161be345a207d7a7e2f7ee2dee2",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request-4.json": "f790bad274fa6e971f9e040a340da61eb65a6ee65a3615ff27812d738c57a3f8",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request-5.json": "e618cf48c21756ac4339bdcfc2237dabc2c4cd4991878758978c41a2ed36c1c4",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request-6.json": "e04b9b9f117862df580ce7e96cc13542896f254d7ba33e962b22a09e5bbe4e35",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review-request.json": "6a4047e8373eadf14f8c5b9e3e43bad2cf0f3f82ec87adb7a52dab2f57235129",
+      "docs/product/versions/v0.2.0/30-implementation/CT-136/review.md": "e05049855e55503ff41532f02a95e16b2a6fa478c3a9e0e1e0700c8673d62d58",
+      "docs/product/versions/v0.2.0/30-implementation/CT-137/checkpoint.json": "4be23e570f54d70c8c89df5b434f6df533af13750240d705a8a299035cc22868",
+      "docs/product/versions/v0.2.0/30-implementation/CT-137/collaboration-contract.md": "c8ff5b1427b87160d166017b5048fc8bfc79744d5bef82e7b18589a58f7e045e",
+      "docs/product/versions/v0.2.0/30-implementation/CT-137/handoff.json": "06c6b9140e1207c3592dea5181d30c7ff3d141a0b562d97994ef6633a293ea3d",
+      "docs/product/versions/v0.2.0/30-implementation/CT-137/review-request-2.json": "953e0e40fb007c24aa07bd7fb06c446d47386f63e16ad322c6f88c7d76818d27",
+      "docs/product/versions/v0.2.0/30-implementation/CT-137/review-request-3.json": "c3b39a36597add3535eeb590b3ef3c1ca0a68e1fce6480f58828ba4e0f5a6d01",
+      "docs/product/versions/v0.2.0/30-implementation/CT-137/review-request-4.json": "ae6d736e8c1528425bc0f560a581dbefc36570cd79cfa241e27f256e3dbc44bf",
+      "docs/product/versions/v0.2.0/30-implementation/CT-137/review-request.json": "f7bff69a71fcb6e5956da273b61e2392c4d372d53fc97e05a3f4388633cc1347",
+      "docs/product/versions/v0.2.0/30-implementation/CT-137/review.md": "90f8f6ef10711cab36d9b82c8339b19ea4ebdd949ef177c45b9e99565bcd582f",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/billing-entitlement-contract.md": "a97d0c69342766f48a9c19d2dde3b9bea6ad89fb9af348998897d023615146e4",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/checkpoint.json": "3cae3afce5c094e24fdc71f4b1b0fdd97548aef2322032180f958d13c89ac823",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/handoff.json": "26a26b4e63efa92bf7e75dd623351b24102c07cdb8469e280b796df4e50c003b",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review-request-2.json": "7646e9a65e9d25570fb0a0d27228ea56aaddceb67f70a752500504067151913e",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review-request-3.json": "a9560917abbd9c579c6ee84d6e5c61435d1a9f90c90852ff0c6f8166e006f3b1",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review-request-4.json": "6bae4c71ec9cccd642d11be41ac718360cb34fe38bf2359f416b95a1f3addd0f",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review-request-5.json": "4bfc7b199382a27ae70513e6b7857996cb1b2f88e05405b866ceeee4e99dc0da",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review-request-6.json": "1c1c5fea35c5315b78d08199f637795ff9b8f5b2bc3d728fc513fdd4bc37b5cd",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review-request-7.json": "449089ccd773f4241805070c524f6bc036f2e26b1410690eb0ce149c5c17a34e",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review-request-8.json": "6503e5b60fa35471e1cb39f57bd4be5812cd9a1fbfb5a29df372753d67260027",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review-request.json": "090da4fb0f3cd152f403e85ae84e5542e5aa10f858890e5c65c3911ee026c52d",
+      "docs/product/versions/v0.2.0/30-implementation/CT-138/review.md": "2833c1def2925c618e84b6aa1c0fe434ff111489cb3ea6f2a56379b3f3dd687e",
+      "docs/product/versions/v0.2.0/30-implementation/CT-139/checkpoint.json": "a00a8a7f05b981d38c803415f942aea96e28e5cd7be5d54d0b486ced0536ccec",
+      "docs/product/versions/v0.2.0/30-implementation/CT-139/rest-token-export-contract.md": "993447459e1cc096560276ea4b7cc584f93b27a446b706988fc094e27f1f734e",
+      "docs/product/versions/v0.2.0/30-implementation/CT-139/review.md": "0e26c8cb86500ce3f0b5d24a0555f70fa9297c4b2adcf60e6cbe436e34e99f12",
+      "firebase.json": "745ee50dfa4a07ee72c618e8caf9ef105f6c53898960433dd249ec4d60cb5ce9",
+      "firestore.rules": "9a057220d458ad88027df394539630b01841269fdf190d585e164f1d95e5590b",
+      "package-lock.json": "52151246dce9e40f5c035e8d84af45cc4b457042e5cefb2a046d3ba644873fbe",
+      "package.json": "31a18c4b3728178d9bfd46324206389e155abc9e7f198a407ef1a0974bc566d2",
+      "packages/config/package.json": "320d382ea1ff63e60ccd1462144a58dd35726da6ddfc123fc0703d65a20c16fe",
+      "packages/config/tests/foundation-static.test.ts": "569fe31bd9b3047ed5ae2d9628f05227d001313c63b3f9446f58c4705c7d0da3",
+      "packages/config/tsconfig.json": "1b6ecef48f5521687b1e5e9b2c05525ed9ca325172b68151c13a6ebbc1d69caa",
+      "packages/config/typescript.json": "adc032271697d49f7556295ef0f7ca42ff6bb5cfc0d0a6e55522bf1b51982c76",
+      "packages/hosted/package.json": "2e23835430a5316fc4e803ae1f1ebb8d2e37fae18a807a5a51e1c09a86564c76",
+      "packages/hosted/src/billing-service.ts": "eb94a2dbe96f1b8921379e5f7574f456da2ab35593850a231a8a5edd16b5a460",
+      "packages/hosted/src/collaboration-service.ts": "29ff903662f34e511e4dde4443b3e657779b9abef51f21979edd90598b8df0b6",
+      "packages/hosted/src/firebase-billing-repository.ts": "03f0b4a75444708d7384143d63c6f085a5a4c572f549c6841ef4f44769fc17d1",
+      "packages/hosted/src/firebase-collaboration-repository.ts": "b2060aaa1901772a631cc5c0c1dbd7ce4917bf53c23b6728c87837a9d958c373",
+      "packages/hosted/src/firebase-invitation-repository.ts": "45709cedeb078148a4fca989b361679f126ed973e4c286953e98b0e23076b7e6",
+      "packages/hosted/src/firebase-owner-bootstrap.ts": "7d712eaf93d6b28b0e93f37677ab54c0c036eeb43a0cc1c8a7c9a8a4c7499a92",
+      "packages/hosted/src/firebase-workspace-authorization.ts": "d572ad34873cdf8e6d11fbf163a22b7a35cadaf0db380b08c247d80a55558b3e",
+      "packages/hosted/src/hosted-http.ts": "27c743f253e154632c9aa33f5a899284d354b53da6f3d5ce6649de7939617ae9",
+      "packages/hosted/src/index.ts": "31a99715be2571d161af3b68b6110353cb888fc3e80033f9de35dc4828aa1092",
+      "packages/hosted/src/invitation-service.ts": "e0a954c0cea888bdf082d586d37d5bacad3e24ca93657537db279453f53a476d",
+      "packages/hosted/src/measurement-contract.ts": "02b9dcc7e8cb696d96b9abf1b9703be8130410797d6d5cfa0470d07b18933928",
+      "packages/hosted/src/outcome-report.ts": "3a821e489d0d8b45a3ed1692a4ec196d19ae205289a781ebc2c09b9a8882d854",
+      "packages/hosted/src/owner-bootstrap.ts": "37bd722ca408c2ca52833c0b9be19175dc7da76ef2b384e250c6b34c76135bc9",
+      "packages/hosted/src/personal-token-service.ts": "068e785ce35dd3a453bfe7be7924cf347853bba267873dcbdcb983e4bc694396",
+      "packages/hosted/src/project-management-service.ts": "cc15a11c7e189dff440e96205c07992a853cb950a644575d7a185829c4234bb0",
+      "packages/hosted/src/rest-api.ts": "f0441289e79eb6dab4a03e72968cc59946d4c3a5f5d99c8faca36583630cb2d3",
+      "packages/hosted/src/workspace-authorization.ts": "933a52389198330bc1fe640f4c4adaec9eb876210409817fade3b644b3b6ec14",
+      "packages/hosted/tests/automation-http.test.ts": "05ff3db9be761f9fa2543b1c51aa26c29ebb43c379011cad79cab57bbc1c1563",
+      "packages/hosted/tests/billing-entitlement-integration.test.ts": "6c2f10bc196aef87d7068e1c06641ee3b55ac8dc8d15dc0353a623be81e0607d",
+      "packages/hosted/tests/billing-http.test.ts": "02a9e32539f0925cee6fe7f6ab910d8e60e09a3ee459fb50f5114c070f729f7c",
+      "packages/hosted/tests/billing-service.test.ts": "e5d7547ac7af9f5bf98b6eb9fcf05167c0ea336dbfb8d3d66178af984631e87b",
+      "packages/hosted/tests/collaboration-http.test.ts": "7d18526315f55b386831546b9b94ffa96f516daec6a5d3bf358206f3ff4787a5",
+      "packages/hosted/tests/collaboration-service.test.ts": "8bff9ccfc8335f49b784f2c3ae285d1631c81918cec5e73e367d6f494a484f6a",
+      "packages/hosted/tests/firebase-billing-repository.test.ts": "b5c679a371d0fce21c2f97bb8a4270365e4ba6114359317bcc49f20c3aa4465f",
+      "packages/hosted/tests/firebase-collaboration-repository.test.ts": "946892cdfd5f0c8413c4dbd2995a493bc9f824ad335960f669c2e5e1d46e50ab",
+      "packages/hosted/tests/firebase-invitation-repository.test.ts": "4c5405dd98dd7146d0cef7f52bc6791fec1028d6fe67d0db5da7dcda7f1d2a86",
+      "packages/hosted/tests/firestore-rules.emulator.test.ts": "c0620feff537dd3a687074cb7e461457353f1c9f7407a0f77564c7c06616339c",
+      "packages/hosted/tests/fixtures/entitlement.ts": "5ef4bc088e639369638be215d972ce23247c5d8a2cd47c75afd327da4b41c443",
+      "packages/hosted/tests/hosted-http.test.ts": "b3e82813f1a07814fbf20d37b7afdc6f8e0ad009e654bc6af6228a1dec3a592c",
+      "packages/hosted/tests/invitation-service.test.ts": "967c9ffeb331df6fd7ff4bfeec03ceed22af733023117a104d28a043f0f92ed1",
+      "packages/hosted/tests/measurement.test.ts": "b179a9bc9e22f42227f9b95ff73108a42e523fed86c29e593c7aed4671628aeb",
+      "packages/hosted/tests/owner-bootstrap.test.ts": "f33967b9fb545d6fd14fbe79eccb4f413adfe5643446e86c6688a281b2b9ce95",
+      "packages/hosted/tests/personal-token-service.test.ts": "a2b2fe4bd9364c22cbf1e601fd4211b15ce699500e6693025da49cf284285bf0",
+      "packages/hosted/tests/project-management-service.test.ts": "f16e3d446ecf13aa2b3bcc6ed16e6b798b7cb72d87920a08c6a9fc041b767ed6",
+      "packages/hosted/tests/rest-api.test.ts": "4e4c202e336089e4a277aaf875de84f26f8caf2a63a8debc007a925be047337c",
+      "packages/hosted/tests/workspace-authorization.test.ts": "97ec7b869b0e15435a89b82ed3dac10f1308f18d4bad4b76602fced59e9e85cb",
+      "packages/hosted/tsconfig.json": "bb8199c5c0897eb869517fd5dd95d1dc377e9222804b969aa06c851a6e8ef14e",
+      "packages/ui/package.json": "4594421e1498f9b1dc7c835a3cba318c22e95b2cda8186536bafba1fd84c42cf",
+      "packages/ui/src/index.ts": "acbe821b7be2bf0de8fb21ea8255cf3aa838404348579a3efa85c7ba2728d4ca",
+      "packages/ui/src/tokens.css": "00961d40141953883f8c20602a880fb4ba2b85148186112671407aadd76fe4fd",
+      "packages/ui/tsconfig.json": "8ad8b8a1fe13988d6e86d76a7dd1b841f69a867359f6679c1911b8abbc992e52",
+      "scripts/clean-build-output.mjs": "62c7875e070afa767ac00f2d62850e90bec7e84dd21719a1c1e4a0093691ee4f",
+      "tsconfig.json": "adc032271697d49f7556295ef0f7ca42ff6bb5cfc0d0a6e55522bf1b51982c76",
+      "vitest.config.ts": "487d9f14b343f3af43ef2298eee1b6e80b0746d5228dd2ea6c8c11042ef8bd32",
+      "vitest.firestore.config.ts": "d3679907aa3d271f218c85395f82eb3125e13288fda501432214caadc3f46186"
+    }
+  },
+  "audit_evidence_boundary": {
+    "fresh_registry_audit_claim": false,
+    "current_offline_result": "0 vulnerabilities",
+    "current_dependency_tree": "npm ls --omit=dev --omit=optional --all exits 0",
+    "inherited_registry_result": "CT-138 Independent Review 8 reports registry-backed supported-runtime audit 0 vulnerabilities.",
+    "exact_input_identity": {
+      ".npmrc": "857e18055c0f5d75719d253033954c10511c4b16ae5bd68bc45bb75d93a411bc",
+      "package-lock.json": "52151246dce9e40f5c035e8d84af45cc4b457042e5cefb2a046d3ba644873fbe",
+      "package.json": "31a18c4b3728178d9bfd46324206389e155abc9e7f198a407ef1a0974bc566d2",
+      "apps/hosted-service/package.json": "07c581a62999b38788f43b2dea95aa0fe474d507c24fbf856bf8b8394bb40603",
+      "packages/hosted/package.json": "2e23835430a5316fc4e803ae1f1ebb8d2e37fae18a807a5a51e1c09a86564c76",
+      "apps/web/package.json": "b126a82326fd95c4c740d8f9924d9a3318f95fe1770dfd88621fbe428ef515d6"
+    },
+    "instruction": "Verify exact identity against the sealed CT-138 Review 8 evidence. Attempt a fresh online audit only if policy permits; do not circumvent a denial and do not convert the inherited byte-identical result into a fresh-online claim."
+  },
+  "required_checks": [
+    {
+      "check": "initial and final candidate integrity",
+      "expected": "156/156 exact SHA-256 entries before and after; all three semantic/raw backup pairs exact"
+    },
+    {
+      "check": "fresh Control Tower API readback",
+      "expected": "CT-139 revision 4 In Progress on shared S3; CT-135 r7, CT-137 r9, CT-138 r19 Done; projection disabled/not_synced"
+    },
+    {
+      "command": "npx vitest run packages/hosted/tests/project-management-service.test.ts packages/hosted/tests/personal-token-service.test.ts packages/hosted/tests/rest-api.test.ts packages/hosted/tests/automation-http.test.ts packages/hosted/tests/collaboration-service.test.ts packages/hosted/tests/invitation-service.test.ts packages/hosted/tests/billing-service.test.ts apps/hosted-service/tests/hosted-config.test.ts apps/web/tests/hosted-automation.test.ts",
+      "expected": "9 files / 81 tests pass"
+    },
+    {
+      "command": "npm run test:hosted-rules",
+      "expected": "official Firestore emulator 1 file / 6 groups pass and all emulators stop cleanly; a restricted loopback EPERM may be followed by an authorized local rerun"
+    },
+    {
+      "command": "npm test",
+      "expected": "98 files / 651 tests pass"
+    },
+    {
+      "command": "npm run typecheck",
+      "expected": "all 11 workspace typechecks pass"
+    },
+    {
+      "command": "npm run build",
+      "expected": "all packages build; local graph 1,953 modules; isolated hosted graph 30 modules; hosted.html resolves exactly favicon, hosted JS, and hosted CSS with no local/editor/modulepreload dependency"
+    },
+    {
+      "command": "npm ls --omit=dev --omit=optional --all",
+      "expected": "exit 0"
+    },
+    {
+      "command": "npm audit --offline --omit=dev --omit=optional",
+      "expected": "0 vulnerabilities; apply the separate inherited-online evidence instruction above"
+    },
+    {
+      "command": "git diff --check",
+      "expected": "exit 0"
+    },
+    {
+      "check": "JSON and OpenAPI closure",
+      "expected": "all CT-139 JSON parses; OpenAPI is 3.1.1; every local $ref resolves; runtime success/error/status/ETag behavior matches the document"
+    },
+    {
+      "check": "scope and privacy scan",
+      "expected": "no raw credential or private ledger exposure; no MCP/OAuth, autonomous agent, code-review, repository, pull-request, billing-purchase, sync, deployment, or outcome overclaim"
+    }
+  ],
+  "adversarial_review_questions": [
+    "Does every declared OpenAPI request, response, error, success/replay status, security scope, idempotency header, revision precondition, ETag, and cursor shape match actual handler behavior, including unsupported methods and unknown routes?",
+    "Can malformed JSON, unknown/duplicate query fields, wrong content types, duplicate headers, oversized or chunked bodies, encoded path variants, hostile Origin, or missing/invalid bearer credentials change state, reveal private input, or bypass stable no-store/nosniff errors?",
+    "Do all 15 personal-token scopes map to the exact workspace action and route, with owner/member/removed-user, read/write, Free/Pro, cross-workspace, and wrong-target combinations denied or allowed exactly as specified?",
+    "Do malformed raw tokens, missing IDs, wrong digest, wrong workspace, wrong audience, expiry boundary, future lifecycle timestamps, revocation, creator removal, creator role changes, restart, concurrent last-use/revoke, and every stored token field fail closed without raw-token or record-existence disclosure?",
+    "Mutate every stored token and token-idempotency field independently, including schemaVersion, IDs, workspace/creator, name/prefix/scopes/audience/digest/duration, all timestamps, revision/outcome, request digest, operation, and HMAC binding. Are all changes detected with unchanged storage and generic errors?",
+    "Can one create/revoke idempotency key be reused for another operation, user, workspace, token, payload, or later lifecycle? Does a create replay never reveal the raw token, and does a later changed state fail closed without duplication?",
+    "Does token.use evidence contain only opaque actor reference, source rest, workspace, time, request ID, entity/revisions, and hashed last-used change, while all PM/invitation/comment/member mutations preserve correct source/action/field-level audit semantics?",
+    "Can cursors be forged, truncated, extended, replayed after anchor removal, reused across workspace/resource/parent/page size, or used with duplicate/unknown query keys? Can all 1,001 authorized records be enumerated once without omissions or duplicates?",
+    "Do project/milestone create/update records enforce exact schemas, valid parent links, future chronology, optimistic revision, HMAC idempotency, transaction-time membership, Free downgrade, member/owner semantics, and privacy-safe conflicts?",
+    "Does the full REST matrix for workspace/project/milestone/issue/assignee/comment/member/invitation/billing/export use the accepted CT-135 through CT-138 services rather than weaker reimplemented authorization or entitlement logic?",
+    "Does canonical export include exactly workspace, active/removed memberships, sanitized invitations, projects, milestones, issues, and comments/tombstones; preserve parent relationships and deterministic order; round-trip; and reproduce the inner-data SHA-256 independently?",
+    "Can malformed/future/orphan/cross-workspace workspace, membership, invitation, project, milestone, issue, or comment records be exported? Does any raw token, digest, idempotency, event/audit, billing/provider, server secret, local SQLite, or foreign-workspace value appear?",
+    "Do direct Firestore rules allow only exact active-member project/milestone gets while denying their collection lists, all direct writes, issues/comments, personal tokens, PM/token idempotency, invitation/billing ledgers, events, and audits—including malformed same-workspace records with extra private fields?",
+    "Are all six hosted HMAC secret values required, bounded, pairwise distinct, server-only, and absent from VITE/browser output? Does rotating only the cursor secret affect cursors rather than stored product data?",
+    "Does the owner web flow default to least-privilege read scopes, expose every scope explicitly, show raw token once, handle copy/download failure, display prefix/audience/scopes/last-use/expiry/active-expired-revoked status, confirm revoke, and download the versioned canonical export accessibly?",
+    "Is the 156-file seal complete for every direct runtime, build, hosted UI, Firestore, config, test, planning, dependency/audit, CT backup, and evidence input? Can any unsealed workspace-owned input change hosted output, required checks, or reviewed behavior?",
+    "Did the candidate add or market autonomous agents, code review, repositories, pull requests, MCP transport, OAuth, billing purchase, deployment, public activation, or local/cloud synchronization, or overclaim P-T207/O-204/legal/privacy/security/release status?"
+  ],
+  "decision_contract": {
+    "finding_scale": [
+      "P0 critical",
+      "P1 high",
+      "P2 medium",
+      "P3 low"
+    ],
+    "pass": "All required checks and adversarial boundaries pass, both seals and all backup pairs remain exact, and there is no P0-P3 finding.",
+    "fail": "Any reproducible P0-P3 implementation, privacy, security, behavior-contract, evidence, dependency-manifest, or scope defect.",
+    "on_fail": "Return a severity-ranked report with exact evidence and bounded remediation; CT-139 remains In Progress and must be resealed for a new independent review.",
+    "on_pass": "Return a formal PASS with severity totals. Do not mutate CT; the primary agent may record the review and perform a revision-checked Done update/readback."
+  },
+  "prohibited_claims": [
+    "P-T207 qualified",
+    "O-204 achieved",
+    "fresh online audit completed",
+    "public API activated",
+    "MCP or OAuth delivered",
+    "production deployed",
+    "live provider or credential resources changed",
+    "release accepted",
+    "legal, privacy, or security approved"
+  ]
+}

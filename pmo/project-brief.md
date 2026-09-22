@@ -9,11 +9,11 @@ research_basis: "live-web-and-confirmed-input"
 
 ## Executive summary
 
-OpenLinear is a clean-room, free, self-hostable project-management product centered on projects, issues, and milestones. Its first release aims to reproduce the reference product's operational quality: dense but legible information, fast keyboard workflows, persistent context, predictable editing, and strong progress visibility. The repository uses Control Tower local v0.8 as the sole work ledger. Linear is evidence for product research only and is not a project authority, API dependency, or synchronization target.
+BasicLinear is a clean-room, free, self-hostable project-management product centered on projects, issues, and milestones. Its first release aims to reproduce the reference product's operational quality: dense but legible information, fast keyboard workflows, persistent context, predictable editing, and strong progress visibility. The repository uses Control Tower local v0.8 as the sole work ledger. Linear is evidence for product research only and is not a project authority, API dependency, or synchronization target.
 
 ## Problem
 
-Product and engineering teams can value Linear's speed and interaction model while still needing open source, self-hosting, data control, extensibility, or a no-license-cost core. Existing open-source products cover large portions of project management, but a sponsor seeking Linear-level interaction fidelity cannot assume that feature breadth translates into the same day-to-day speed or visual discipline. The project must therefore solve both functional replacement and experience parity without copying proprietary code, assets, brand, or private data.
+Product and engineering teams can value Linear's speed and interaction model while still needing open source, self-hosting, data control, extensibility, or a no-license-cost core. Existing open-source products cover large portions of project management, but a maintainer seeking Linear-level interaction fidelity cannot assume that feature breadth translates into the same day-to-day speed or visual discipline. The project must therefore solve both functional replacement and experience parity without copying proprietary code, assets, brand, or private data.
 
 ## Opportunity
 
@@ -23,7 +23,7 @@ The opportunity is a deliberately narrow alternative that treats ergonomics as p
 
 The supported v0.1 user is one technically capable owner in one workspace and one team. The owner already understands issue trackers, manages multiple projects, and performs planning, issue execution, review, deployment, backup, and restore. CT-77 intentionally tests this narrow product decision against evidence spanning professional and personal software work, work management, ITSM, DevOps, predictive, hybrid, agile, and cross-industry projects. It does not claim that all survey respondents are prospective users.
 
-The sponsor is the initial product owner and outcome authority. A legal or qualified brand reviewer owns public identity and clean-room release clearance. Security reviewers own workspace isolation and authentication gates. Testers own independent functional, visual, accessibility, recovery, and migration evidence.
+The maintainer is the initial product owner and outcome authority. The public identity, license, provenance, and clean-room boundary are verified by the technical release audit. Security and test work provide repeatable workspace-isolation, authentication, functional, visual, accessibility, recovery, and migration evidence.
 
 ## Outcomes
 
@@ -43,9 +43,9 @@ Mission: Reproduce Linear's core project, issue, and milestone management experi
 
 Primary user: One technical project owner who values Linear's speed and interaction model but requires a free, self-hostable, open-source system.
 
-First outcome: The owner can self-host OpenLinear and complete the defined core project, issue, milestone, find/focus, and recovery workflows with no critical product failure and near-reference interaction efficiency.
+First outcome: The owner can self-host BasicLinear and complete the defined core project, issue, milestone, find/focus, and recovery workflows with no critical product failure and near-reference interaction efficiency.
 
-The sponsor also confirmed that all milestones and issues must be tracked in Control Tower without the Linear API or MCP integration. Existing authenticated Chrome and Google sessions may support authorized research and setup, but account access does not grant permission for unrelated provider writes or public disclosure of private data.
+The maintainer also confirmed that all milestones and issues must be tracked in Control Tower without the Linear API or MCP integration. Existing authenticated Chrome and Google sessions may support authorized research and setup, but account access does not grant permission for unrelated provider writes or public disclosure of private data.
 
 ## Evidence and sources
 
